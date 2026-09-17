@@ -1,0 +1,1566 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.abcurr-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #071a35;
+  font-family: "DM Sans", sans-serif;
+}
+
+.abcurr-page *,
+.abcurr-page *::before,
+.abcurr-page *::after {
+  box-sizing: border-box;
+}
+
+.abcurr-page p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.72;
+  color: #607080;
+}
+
+.abcurr-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abcurr-hero {
+  position: relative;
+
+  min-height: 620px;
+
+  padding: 40px 5%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(139,211,242,0.18),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #06152c,
+      #0a2d52
+    );
+}
+
+.abcurr-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  right: -210px;
+  top: -220px;
+
+  border: 1px solid rgba(230,195,106,0.24);
+
+  border-radius: 50%;
+}
+
+.abcurr-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  left: -100px;
+  bottom: -80px;
+
+  border: 1px solid rgba(139,211,242,0.18);
+
+  border-radius: 50%;
+}
+
+.abcurr-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.18fr 0.90fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.abcurr-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 19px;
+
+  color: rgba(255,255,255,0.45);
+
+  font-size: 11px;
+}
+
+.abcurr-breadcrumb a {
+  color: rgba(255,255,255,0.8);
+}
+
+.abcurr-breadcrumb strong {
+  color: #e6c36a;
+}
+
+.abcurr-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: #e6c36a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.abcurr-eyebrow::before {
+  content: "";
+
+  width: 27px;
+  height: 2px;
+
+  background: #e6c36a;
+}
+
+.abcurr-hero-content h1 {
+  max-width: 750px;
+
+  margin: 0 0 17px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 3vw, 60px);
+
+  line-height: 1.04;
+
+  letter-spacing: -1.5px;
+}
+
+.abcurr-hero-content h1 span {
+  color: #8bd3f2;
+}
+
+.abcurr-hero-content > p {
+  max-width: 600px;
+
+  margin-bottom: 23px;
+
+  color: rgba(255,255,255,0.65);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.abcurr-hero-buttons {
+  display: flex;
+  gap: 12px;
+
+  margin-bottom: 24px;
+}
+
+.abcurr-btn {
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-btn.primary {
+  background: #e6c36a;
+  color: #071a35;
+}
+
+.abcurr-btn.primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(230,195,106,0.25);
+}
+
+.abcurr-btn.secondary {
+  border: 1px solid rgba(255,255,255,0.27);
+
+  color: #ffffff;
+}
+
+.abcurr-btn.secondary:hover {
+  background: #ffffff;
+  color: #071a35;
+}
+
+
+/* =========================================================
+   HERO POINTS
+========================================================= */
+
+.abcurr-hero-points {
+  display: flex;
+  gap: 20px;
+}
+
+.abcurr-hero-points div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.abcurr-hero-points svg {
+  color: #e6c36a;
+  font-size: 10px;
+}
+
+.abcurr-hero-points span {
+  color: rgba(255,255,255,0.55);
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.abcurr-hero-visual {
+  position: relative;
+
+  min-height: 435px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abcurr-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(139,211,242,0.17);
+}
+
+.orbit-one {
+  width: 365px;
+  height: 365px;
+}
+
+.orbit-two {
+  width: 285px;
+  height: 285px;
+
+  border-style: dashed;
+
+  border-color: rgba(230,195,106,0.18);
+}
+
+
+/* =========================================================
+   CURRICULUM CARD
+========================================================= */
+
+.abcurr-curriculum-card {
+  position: relative;
+  z-index: 3;
+
+  width: 335px;
+  min-height: 390px;
+
+  padding: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f2f7f9
+    );
+
+  border-radius: 23px;
+
+  box-shadow:
+    0 30px 65px rgba(0,0,0,0.27);
+
+  transform: rotate(2deg);
+}
+
+.abcurr-curriculum-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -20px;
+  top: -20px;
+
+  border-radius: 50%;
+
+  background: rgba(230,195,106,0.13);
+}
+
+.abcurr-curriculum-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 78px;
+
+  background: #e6c36a;
+
+  border-radius: 20px 0 0 0;
+}
+
+.abcurr-card-header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.abcurr-card-header span {
+  color: #667687;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.abcurr-card-header strong {
+  color: #e0b94e;
+
+  font-size: 11px;
+}
+
+.abcurr-card-icon {
+  width: 60px;
+  height: 60px;
+
+  margin-bottom: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+
+  color: #e6c36a;
+
+  border-radius: 14px;
+
+  font-size: 25px;
+
+  box-shadow:
+    8px 8px 0 #8bd3f2;
+}
+
+.abcurr-card-small {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0d8cc8;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+.abcurr-curriculum-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 9px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  line-height: 1.1;
+}
+
+.abcurr-curriculum-card h3 span {
+  color: #0d8cc8;
+}
+
+.abcurr-curriculum-card p {
+  margin-bottom: 18px;
+}
+
+.abcurr-card-line {
+  height: 5px;
+
+  overflow: hidden;
+
+  margin-bottom: 17px;
+
+  background: #dce4e9;
+
+  border-radius: 10px;
+}
+
+.abcurr-card-line span {
+  display: block;
+
+  width: 88%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #0d8cc8,
+      #e6c36a
+    );
+
+  border-radius: inherit;
+}
+
+.abcurr-card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.abcurr-card-bottom span {
+  color: #7b8793;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.abcurr-floating-card {
+  position: absolute;
+
+  right: 0;
+  bottom: 38px;
+
+  z-index: 5;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.2);
+}
+
+.abcurr-floating-card > svg {
+  color: #e0b94e;
+
+  font-size: 18px;
+}
+
+.abcurr-floating-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.abcurr-floating-card strong {
+  color: #071a35;
+
+  font-size: 10px;
+}
+
+.abcurr-floating-card span {
+  color: #7b8793;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abcurr-intro {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 45px 5%;
+
+  display: grid;
+
+  grid-template-columns: 65px 1fr 1fr;
+
+  gap: 35px;
+}
+
+.abcurr-intro::after {
+  content: "";
+
+  position: absolute;
+
+  right: 5%;
+  bottom: 0;
+
+  width: 90px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #e6c36a
+    );
+}
+
+.abcurr-intro-number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.abcurr-intro-number strong {
+  color: #e0b94e;
+
+  font-size: 20px;
+}
+
+.abcurr-intro-number span {
+  width: 1px;
+  height: 50px;
+
+  background: #dbe3e8;
+}
+
+.abcurr-intro-heading > span,
+.abcurr-section-head span,
+.abcurr-learning-content > span,
+.abcurr-pillars-heading > span,
+.abcurr-cta-inner > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: #0d8cc8;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abcurr-intro-heading > span::before,
+.abcurr-section-head span::before,
+.abcurr-learning-content > span::before,
+.abcurr-pillars-heading > span::before {
+  content: "";
+
+  width: 20px;
+  height: 2px;
+
+  background: #e6c36a;
+}
+
+.abcurr-intro-heading h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+
+  line-height: 1.12;
+}
+
+
+/* =========================================================
+   AREAS
+========================================================= */
+
+.abcurr-areas {
+  position: relative;
+
+  padding: 45px 5%;
+
+  overflow: hidden;
+
+  background: #f5f8fa;
+}
+
+.abcurr-areas::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -130px;
+  top: 30px;
+
+  border: 1px solid rgba(13,140,200,0.12);
+
+  border-radius: 50%;
+}
+
+.abcurr-areas::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  left: -35px;
+  bottom: 40px;
+
+  background: rgba(230,195,106,0.1);
+
+  border-radius: 50%;
+}
+
+.abcurr-section-head {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: 0 auto 27px;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+}
+
+.abcurr-section-head h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+
+  line-height: 1.1;
+}
+
+.abcurr-section-head > p {
+  max-width: 390px;
+}
+
+
+/* =========================================================
+   AREA GRID
+========================================================= */
+
+.abcurr-area-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.abcurr-area-card {
+  position: relative;
+
+  min-height: 235px;
+
+  padding: 22px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e0e7ed;
+
+  border-radius: 14px;
+
+  transition: 0.35s ease;
+}
+
+.abcurr-area-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #0d8cc8,
+      #e6c36a
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: 0.35s ease;
+}
+
+.abcurr-area-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 115px;
+  height: 115px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border: 1px solid rgba(13,140,200,0.1);
+
+  border-radius: 50%;
+
+  transition: 0.35s ease;
+}
+
+.abcurr-area-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(13,140,200,0.22);
+
+  box-shadow:
+    0 18px 40px rgba(7,26,53,0.09);
+}
+
+.abcurr-area-card:hover::before {
+  transform: scaleX(1);
+}
+
+.abcurr-area-card:hover::after {
+  transform: scale(1.3);
+}
+
+.abcurr-area-number {
+  position: absolute;
+
+  right: 18px;
+  top: 16px;
+
+  color: #cbd4dc;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.abcurr-area-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+
+  color: #e6c36a;
+
+  border-radius: 11px;
+
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-area-card:hover .abcurr-area-icon {
+  background: #0d8cc8;
+
+  color: #ffffff;
+
+  transform: rotate(-5deg);
+}
+
+.abcurr-area-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 7px;
+
+  color: #071a35;
+
+  font-size: 18px;
+}
+
+.abcurr-area-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.abcurr-area-arrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  color: #0d8cc8;
+
+  font-size: 11px;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-area-card:hover .abcurr-area-arrow {
+  transform: translateX(5px);
+
+  color: #e0b94e;
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.abcurr-learning {
+  position: relative;
+
+  padding: 45px 5%;
+
+  background: #071a35;
+
+  overflow: hidden;
+}
+
+.abcurr-learning::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  left: -160px;
+  bottom: -180px;
+
+  border: 1px solid rgba(139,211,242,0.12);
+
+  border-radius: 50%;
+}
+
+.abcurr-learning::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  right: 10%;
+  top: 50px;
+
+  background: #e6c36a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    23px 22px 0 rgba(139,211,242,0.35),
+    -23px 22px 0 rgba(230,195,106,0.25);
+}
+
+.abcurr-learning-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.abcurr-learning-content > span {
+  color: #8bd3f2;
+}
+
+.abcurr-learning-content h2 {
+  margin: 0 0 12px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 43px;
+
+  line-height: 1.08;
+}
+
+.abcurr-learning-content h2 strong {
+  color: #8bd3f2;
+}
+
+.abcurr-learning-content p {
+  max-width: 510px;
+
+  margin-bottom: 18px;
+
+  color: rgba(255,255,255,0.6);
+}
+
+.abcurr-text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #e6c36a;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.abcurr-text-link svg {
+  transition: 0.3s ease;
+}
+
+.abcurr-text-link:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.abcurr-feature-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 11px;
+}
+
+.abcurr-feature {
+  position: relative;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  background: rgba(255,255,255,0.035);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 10px;
+
+  color: rgba(255,255,255,0.76);
+
+  font-size: 12px;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-feature::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 2px;
+  height: 0;
+
+  background: #e6c36a;
+
+  transform: translateY(-50%);
+
+  transition: 0.3s ease;
+}
+
+.abcurr-feature:hover {
+  background: rgba(255,255,255,0.07);
+
+  transform: translateY(-3px);
+}
+
+.abcurr-feature:hover::before {
+  height: 28px;
+}
+
+.abcurr-feature-check {
+  width: 27px;
+  height: 27px;
+
+  flex: 0 0 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(139,211,242,0.1);
+
+  color: #8bd3f2;
+
+  border-radius: 7px;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   PILLARS
+========================================================= */
+
+.abcurr-pillars {
+  padding: 45px 5%;
+
+  background: #ffffff;
+}
+
+.abcurr-pillars-heading {
+  max-width: 1200px;
+
+  margin: 0 auto 27px;
+
+  text-align: center;
+}
+
+.abcurr-pillars-heading > span {
+  justify-content: center;
+}
+
+.abcurr-pillars-heading h2 {
+  margin: 0 0 6px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+}
+
+.abcurr-pillars-heading p {
+  margin: 0;
+}
+
+.abcurr-pillar-grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 13px;
+}
+
+.abcurr-pillar-card {
+  position: relative;
+
+  min-height: 190px;
+
+  padding: 20px;
+
+  overflow: hidden;
+
+  background: #f5f8fa;
+
+  border: 1px solid #e0e7ed;
+
+  border-radius: 13px;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-pillar-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 85px;
+  height: 85px;
+
+  right: -35px;
+  top: -35px;
+
+  border: 1px solid #d6e0e7;
+
+  border-radius: 50%;
+}
+
+.abcurr-pillar-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #0d8cc8,
+      #e6c36a
+    );
+
+  transition: 0.3s ease;
+}
+
+.abcurr-pillar-card:hover {
+  transform: translateY(-5px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 35px rgba(7,26,53,0.08);
+}
+
+.abcurr-pillar-card:hover::after {
+  width: 100%;
+}
+
+.abcurr-pillar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 13px;
+}
+
+.abcurr-pillar-top span {
+  color: #e0b94e;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.abcurr-pillar-top svg {
+  color: #0d8cc8;
+
+  font-size: 18px;
+}
+
+.abcurr-pillar-card h3 {
+  margin: 0 0 6px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+}
+
+.abcurr-pillar-card p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abcurr-cta {
+  position: relative;
+
+  padding: 45px 5%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a2d52
+    );
+}
+
+.abcurr-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  left: -180px;
+  top: -190px;
+
+  border: 1px solid rgba(230,195,106,0.2);
+
+  border-radius: 50%;
+}
+
+.abcurr-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -120px;
+  bottom: -120px;
+
+  border: 1px solid rgba(139,211,242,0.16);
+
+  border-radius: 50%;
+}
+
+.abcurr-cta-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 750px;
+
+  margin: auto;
+}
+
+.abcurr-cta-inner > span {
+  color: #e6c36a;
+}
+
+.abcurr-cta-inner h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 42px;
+
+  line-height: 1.1;
+}
+
+.abcurr-cta-inner h2 strong {
+  color: #8bd3f2;
+}
+
+.abcurr-cta-inner p {
+  max-width: 600px;
+
+  margin: 0 auto 20px;
+
+  color: rgba(255,255,255,0.6);
+}
+
+.abcurr-cta-btn {
+  min-height: 46px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  background: #e6c36a;
+
+  color: #071a35;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abcurr-cta-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(230,195,106,0.25);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .abcurr-hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .abcurr-hero-content {
+    text-align: center;
+  }
+
+  .abcurr-breadcrumb,
+  .abcurr-eyebrow {
+    justify-content: center;
+  }
+
+  .abcurr-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .abcurr-hero-buttons,
+  .abcurr-hero-points {
+    justify-content: center;
+  }
+
+  .abcurr-hero-visual {
+    min-height: 390px;
+  }
+
+  .abcurr-area-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abcurr-pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abcurr-learning-inner {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE TABLET
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abcurr-hero {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .abcurr-intro {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .abcurr-intro-number {
+    flex-direction: row;
+  }
+
+  .abcurr-intro-number span {
+    width: 45px;
+    height: 1px;
+  }
+
+  .abcurr-section-head {
+    display: block;
+  }
+
+  .abcurr-section-head > p {
+    margin-top: 10px;
+  }
+
+  .abcurr-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .abcurr-areas,
+  .abcurr-learning,
+  .abcurr-pillars,
+  .abcurr-cta {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .abcurr-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .abcurr-hero-buttons {
+    flex-direction: column;
+  }
+
+  .abcurr-btn {
+    width: 100%;
+  }
+
+  .abcurr-hero-points {
+    flex-wrap: wrap;
+
+    gap: 10px 15px;
+  }
+
+  .abcurr-hero-visual {
+    min-height: 350px;
+  }
+
+  .abcurr-orbit.orbit-one {
+    width: 285px;
+    height: 285px;
+  }
+
+  .abcurr-orbit.orbit-two {
+    width: 225px;
+    height: 225px;
+  }
+
+  .abcurr-curriculum-card {
+    width: 275px;
+    min-height: 350px;
+
+    padding: 22px;
+  }
+
+  .abcurr-floating-card {
+    right: 0;
+    bottom: 5px;
+  }
+
+  .abcurr-area-grid,
+  .abcurr-pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abcurr-intro-heading h2,
+  .abcurr-section-head h2,
+  .abcurr-pillars-heading h2 {
+    font-size: 32px;
+  }
+
+  .abcurr-learning-content h2,
+  .abcurr-cta-inner h2 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .abcurr-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .abcurr-curriculum-card {
+    width: 255px;
+  }
+
+  .abcurr-floating-card {
+    transform: scale(0.88);
+    transform-origin: right bottom;
+  }
+
+}

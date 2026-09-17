@@ -1,0 +1,935 @@
+/* =========================================================
+   INQUIRY MODAL - RESPONSIVE + NO HORIZONTAL SCROLL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.abinq-overlay {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(3, 13, 29, 0.74);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  z-index: 99999;
+
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.abinq-modal {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  max-width: 610px;
+
+  max-height: calc(100% - 40px);
+
+  margin: 0 auto;
+
+  padding: 30px;
+
+  border: 1px solid rgba(224, 194, 126, 0.55);
+  border-radius: 23px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35);
+
+  overflow-x: hidden !important;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: #0877a9 transparent;
+}
+
+
+/* =========================================================
+   MODAL SCROLLBAR
+   ========================================================= */
+
+.abinq-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.abinq-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.abinq-modal::-webkit-scrollbar-thumb {
+  background: #0877a9;
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   CLOSE
+   ========================================================= */
+
+.abinq-close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #dce5ec;
+  border-radius: 50%;
+
+  background: #ffffff;
+  color: #071a35;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition: 0.25s ease;
+}
+
+.abinq-close:hover {
+  background: #071a35;
+  color: #ffffff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   TOP
+   ========================================================= */
+
+.abinq-top {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding-right: 50px;
+}
+
+.abinq-badge {
+  width: 58px;
+  height: 58px;
+
+  flex: 0 0 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: linear-gradient(
+    135deg,
+    #071a35,
+    #0877a9
+  );
+
+  color: #e0c27e;
+
+  font-size: 25px;
+}
+
+.abinq-small-title {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #0877a9;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.abinq-top h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 29px;
+  line-height: 1.12;
+
+  font-weight: 800;
+
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.abinq-description {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 17px 0 21px;
+
+  color: #52677b;
+
+  font-size: 15px;
+  line-height: 1.65;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.abinq-form {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   ROW
+   ========================================================= */
+
+.abinq-row {
+  width: 100%;
+  max-width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   FIELD
+   ========================================================= */
+
+.abinq-field {
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.abinq-field > svg {
+  position: absolute;
+
+  left: 15px;
+  top: 50%;
+
+  color: #0877a9;
+
+  font-size: 16px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.abinq-textarea-field > svg {
+  top: 17px;
+
+  transform: none;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.abinq-field input,
+.abinq-field select,
+.abinq-field textarea {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d5e1e9;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fafdff;
+
+  color: #071a35;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.25s ease;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+   ========================================================= */
+
+.abinq-field input,
+.abinq-field select {
+  height: 51px;
+
+  padding: 0 14px 0 44px;
+}
+
+
+/* =========================================================
+   TEXTAREA
+   ========================================================= */
+
+.abinq-field textarea {
+  min-height: 90px;
+
+  padding: 13px 14px 13px 44px;
+
+  line-height: 1.5;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.abinq-field input::placeholder,
+.abinq-field textarea::placeholder {
+  color: #8296a8;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.abinq-field input:focus,
+.abinq-field select:focus,
+.abinq-field textarea:focus {
+  border-color: #0877a9;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 119, 169, 0.10);
+}
+
+
+/* =========================================================
+   SUBMIT
+   ========================================================= */
+
+.abinq-submit {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 3px;
+
+  padding: 10px 16px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #071a35,
+    #0877a9
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.abinq-submit svg {
+  color: #e0c27e;
+}
+
+.abinq-submit:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.abinq-footer {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 15px;
+}
+
+.abinq-footer span {
+  flex: 1;
+
+  min-width: 10px;
+
+  height: 1px;
+
+  background: #e0e8ee;
+}
+
+.abinq-footer p {
+  margin: 0;
+
+  color: #7b90a2;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   SUCCESS
+   ========================================================= */
+
+.abinq-success {
+  width: 100%;
+
+  padding: 35px 10px 20px;
+
+  text-align: center;
+}
+
+.abinq-success-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e9f8f0;
+
+  color: #16804d;
+
+  font-size: 38px;
+}
+
+.abinq-success h3 {
+  margin: 0 0 8px;
+
+  color: #071a35;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.abinq-success p {
+  max-width: 430px;
+
+  margin: 0 auto;
+
+  color: #5d7184;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ERROR OVERLAY
+   ========================================================= */
+
+.abinq-error-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 30;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  border-radius: inherit;
+
+  background: rgba(7, 26, 53, 0.55);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  overflow: hidden;
+}
+
+.abinq-error-box {
+  position: relative;
+
+  width: 100%;
+  max-width: 380px;
+
+  padding: 28px 23px 23px;
+
+  border: 1px solid #f1d0d0;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(7, 26, 53, 0.25);
+}
+
+.abinq-error-close {
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f8fafc;
+
+  color: #64748b;
+
+  cursor: pointer;
+}
+
+.abinq-error-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2f2;
+
+  color: #d83a3a;
+
+  font-size: 27px;
+}
+
+.abinq-error-box h3 {
+  margin: 0 0 8px;
+
+  color: #071a35;
+
+  font-size: 21px;
+
+  font-weight: 800;
+}
+
+.abinq-error-box p {
+  margin: 0 auto 19px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+}
+
+.abinq-error-btn {
+  width: 100%;
+
+  min-height: 44px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .abinq-overlay {
+    padding: 15px;
+
+    overflow: hidden !important;
+  }
+
+  .abinq-modal {
+    width: 100%;
+    max-width: 560px;
+
+    max-height: calc(100% - 30px);
+
+    padding: 27px;
+
+    border-radius: 21px;
+  }
+
+  .abinq-top h2 {
+    font-size: 27px;
+  }
+
+  .abinq-description {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+  .abinq-overlay {
+    padding: 10px;
+
+    overflow: hidden !important;
+  }
+
+  .abinq-modal {
+    width: 100%;
+    max-width: 430px;
+
+    max-height: calc(100% - 20px);
+
+    padding: 22px 17px;
+
+    border-radius: 19px;
+
+    overflow-x: hidden !important;
+    overflow-y: auto;
+  }
+
+  /* HEADER */
+
+  .abinq-top {
+    width: 100%;
+
+    gap: 11px;
+
+    padding-right: 42px;
+  }
+
+  .abinq-badge {
+    width: 51px;
+    height: 51px;
+
+    flex: 0 0 51px;
+
+    border-radius: 13px;
+
+    font-size: 21px;
+  }
+
+  .abinq-small-title {
+    margin-bottom: 4px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+  }
+
+  .abinq-top h2 {
+    font-size: 24px;
+
+    line-height: 1.1;
+  }
+
+  .abinq-close {
+    top: 12px;
+    right: 12px;
+
+    width: 35px;
+    height: 35px;
+
+    font-size: 14px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .abinq-description {
+    margin: 15px 0 18px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+  }
+
+
+  /* ONE COLUMN */
+
+  .abinq-row {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+
+  /* INPUTS */
+
+  .abinq-field input,
+  .abinq-field select {
+    height: 50px;
+
+    font-size: 14px;
+
+    padding-left: 43px;
+  }
+
+  .abinq-field textarea {
+    min-height: 90px;
+
+    font-size: 14px;
+
+    padding-left: 43px;
+  }
+
+
+  /* BUTTON */
+
+  .abinq-submit {
+    min-height: 50px;
+
+    font-size: 14px;
+  }
+
+
+  /* FOOTER */
+
+  .abinq-footer {
+    margin-top: 13px;
+  }
+
+  .abinq-footer p {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .abinq-overlay {
+    padding: 6px;
+
+    overflow: hidden !important;
+  }
+
+  .abinq-modal {
+    width: 100%;
+    max-width: 360px;
+
+    max-height: calc(100% - 12px);
+
+    padding: 19px 14px;
+
+    border-radius: 17px;
+  }
+
+  .abinq-top {
+    gap: 9px;
+
+    padding-right: 39px;
+  }
+
+  .abinq-badge {
+    width: 46px;
+    height: 46px;
+
+    flex-basis: 46px;
+
+    font-size: 19px;
+  }
+
+  .abinq-small-title {
+    font-size: 8.5px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .abinq-top h2 {
+    font-size: 21px;
+  }
+
+  .abinq-description {
+    font-size: 13px;
+  }
+
+  .abinq-field input,
+  .abinq-field select {
+    height: 48px;
+
+    font-size: 13.5px;
+  }
+
+  .abinq-field textarea {
+    min-height: 85px;
+
+    font-size: 13.5px;
+  }
+
+  .abinq-submit {
+    min-height: 48px;
+
+    font-size: 13.5px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+   ========================================================= */
+
+@media (max-width: 330px) {
+
+  .abinq-overlay {
+    padding: 4px;
+  }
+
+  .abinq-modal {
+    max-width: 322px;
+
+    padding: 17px 12px;
+  }
+
+  .abinq-top h2 {
+    font-size: 20px;
+  }
+
+  .abinq-description {
+    font-size: 12.5px;
+  }
+
+  .abinq-field input,
+  .abinq-field select,
+  .abinq-field textarea {
+    font-size: 13px;
+  }
+}

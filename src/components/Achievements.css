@@ -1,0 +1,728 @@
+/* =========================================================
+   PREMIUM ACHIEVEMENTS SECTION
+========================================================= */
+
+.premiumAchievementSection {
+  position: relative;
+  width: 100%;
+  padding: 42px 0 78px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(8, 119, 169, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(214, 179, 106, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbfd 0%,
+      #ffffff 50%,
+      #f5f9fb 100%
+    );
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.premiumAchievementGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.premiumAchievementGlowOne {
+  width: 280px;
+  height: 280px;
+  top: -130px;
+  left: -110px;
+  background: rgba(8, 119, 169, 0.08);
+}
+
+.premiumAchievementGlowTwo {
+  width: 300px;
+  height: 300px;
+  right: -130px;
+  bottom: -150px;
+  background: rgba(214, 179, 106, 0.09);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.premiumAchievementContainer {
+  position: relative;
+  z-index: 2;
+  width: min(1380px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.premiumAchievementHeading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.premiumAchievementLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+
+  color: #0877a9;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 12px;
+}
+
+.premiumAchievementLabel span {
+  width: 34px;
+  height: 2px;
+  display: block;
+  background: #d6b36a;
+}
+
+
+/* H2 - slightly smaller */
+
+.premiumAchievementHeading h2 {
+  margin: 0;
+  color: #071a35;
+  font-size: 45px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+
+/* P - bigger */
+
+.premiumAchievementHeading p {
+  margin: 12px 0 0;
+  color: #506477;
+  font-size: 19px;
+  line-height: 1.6;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   JOURNEY HEADING
+========================================================= */
+
+.premiumAchievementJourney {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.premiumAchievementJourneyLine {
+  flex: 1;
+  max-width: 170px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(8, 119, 169, 0.35),
+    transparent
+  );
+}
+
+.premiumAchievementJourney > div {
+  text-align: center;
+}
+
+.premiumAchievementJourney small {
+  display: block;
+  margin-bottom: 4px;
+
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.premiumAchievementJourney strong {
+  display: block;
+  color: #071a35;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.premiumAchievementGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.premiumAchievementCard {
+  position: relative;
+  min-height: 255px;
+  height: 255px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 25px 18px 20px;
+
+  background: #ffffff;
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px rgba(7, 26, 53, 0.07),
+    0 3px 8px rgba(7, 26, 53, 0.04);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.premiumAchievementCard:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(8, 119, 169, 0.25);
+
+  box-shadow:
+    0 20px 40px rgba(7, 26, 53, 0.11),
+    0 5px 14px rgba(8, 119, 169, 0.08);
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.premiumAchievementTopLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #0877a9,
+    #d6b36a,
+    #0877a9
+  );
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.premiumAchievementIcon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 13px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(8, 119, 169, 0.1),
+    rgba(214, 179, 106, 0.13)
+  );
+
+  border: 1px solid rgba(214, 179, 106, 0.28);
+
+  color: #0877a9;
+
+  font-size: 22px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.premiumAchievementCard:hover .premiumAchievementIcon {
+  transform: translateY(-2px) scale(1.05);
+
+  background: linear-gradient(
+    145deg,
+    rgba(8, 119, 169, 0.15),
+    rgba(214, 179, 106, 0.18)
+  );
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.premiumAchievementNumber {
+  color: #071a35;
+
+  font-size: 38px;
+  line-height: 1;
+  font-weight: 900;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 9px;
+}
+
+.premiumAchievementNumber span {
+  color: #0877a9;
+  font-size: 24px;
+  margin-left: 2px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.premiumAchievementCard h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.premiumAchievementCard p {
+  margin: 6px 0 0;
+
+  color: #657789;
+
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BOTTOM DOTS
+========================================================= */
+
+.premiumAchievementBottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: auto;
+  padding-top: 13px;
+}
+
+.premiumAchievementBottom span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d6b36a;
+}
+
+.premiumAchievementBottom span:nth-child(2) {
+  width: 24px;
+  border-radius: 10px;
+  background: #0877a9;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.premiumAchievementCTA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  margin-top: 30px;
+  padding: 21px 24px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    135deg,
+    #071a35,
+    #0a2a4d
+  );
+
+  box-shadow: 0 14px 30px rgba(7, 26, 53, 0.14);
+}
+
+.premiumAchievementCTAText span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #d6b36a;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.premiumAchievementCTAText h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 19px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.premiumAchievementButton {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 46px;
+  padding: 0 20px;
+
+  border: 1px solid rgba(214, 179, 106, 0.45);
+  border-radius: 9px;
+
+  background: #d6b36a;
+  color: #071a35;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.premiumAchievementButton svg {
+  font-size: 13px;
+  transition: transform 0.25s ease;
+}
+
+.premiumAchievementButton:hover {
+  transform: translateY(-2px);
+
+  background: #e2c784;
+
+  box-shadow: 0 8px 20px rgba(214, 179, 106, 0.22);
+}
+
+.premiumAchievementButton:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+  .premiumAchievementGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .premiumAchievementHeading h2 {
+    font-size: 34px;
+  }
+
+  .premiumAchievementHeading p {
+    font-size: 18px;
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   TABLET SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+  .premiumAchievementSection {
+    padding: 58px 0 62px;
+  }
+
+  .premiumAchievementContainer {
+    width: min(94%, 680px);
+  }
+
+  .premiumAchievementHeading {
+    margin-bottom: 32px;
+  }
+
+  .premiumAchievementHeading h2 {
+    font-size: 32px;
+    white-space: normal;
+  }
+
+  .premiumAchievementHeading p {
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: normal;
+  }
+
+  .premiumAchievementGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .premiumAchievementCard {
+    height: 250px;
+    min-height: 250px;
+  }
+
+  .premiumAchievementCTA {
+    padding: 20px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .premiumAchievementSection {
+    padding: 48px 0 52px;
+  }
+
+  .premiumAchievementContainer {
+    width: 92%;
+  }
+
+  .premiumAchievementHeading {
+    margin-bottom: 27px;
+  }
+
+  .premiumAchievementLabel {
+    gap: 8px;
+
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .premiumAchievementLabel span {
+    width: 24px;
+  }
+
+  /* Smaller H2 */
+
+  .premiumAchievementHeading h2 {
+    font-size: 27px;
+    line-height: 1.25;
+    white-space: normal;
+  }
+
+  /* Bigger P */
+
+  .premiumAchievementHeading p {
+    max-width: 95%;
+    margin: 10px auto 0;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    white-space: normal;
+  }
+
+  .premiumAchievementJourney {
+    gap: 10px;
+    margin-bottom: 23px;
+  }
+
+  .premiumAchievementJourneyLine {
+    max-width: 55px;
+  }
+
+  .premiumAchievementJourney small {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .premiumAchievementJourney strong {
+    font-size: 15px;
+  }
+
+  .premiumAchievementGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .premiumAchievementCard {
+    width: 100%;
+    height: 235px;
+    min-height: 235px;
+
+    padding: 22px 16px 18px;
+
+    border-radius: 16px;
+  }
+
+  .premiumAchievementIcon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 11px;
+
+    font-size: 20px;
+  }
+
+  .premiumAchievementNumber {
+    font-size: 36px;
+    margin-bottom: 7px;
+  }
+
+  .premiumAchievementNumber span {
+    font-size: 22px;
+  }
+
+  .premiumAchievementCard h3 {
+    font-size: 18px;
+  }
+
+  .premiumAchievementCard p {
+    font-size: 15px;
+  }
+
+  .premiumAchievementCTA {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+
+    margin-top: 23px;
+    padding: 20px 17px;
+
+    gap: 16px;
+  }
+
+  .premiumAchievementCTAText span {
+    font-size: 10px;
+  }
+
+  .premiumAchievementCTAText h3 {
+    font-size: 17px;
+  }
+
+  .premiumAchievementButton {
+    width: 100%;
+    min-height: 47px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .premiumAchievementHeading h2 {
+    font-size: 24px;
+  }
+
+  .premiumAchievementHeading p {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  .premiumAchievementJourney strong {
+    font-size: 14px;
+  }
+
+  .premiumAchievementCard {
+    height: 230px;
+    min-height: 230px;
+  }
+
+  .premiumAchievementNumber {
+    font-size: 34px;
+  }
+
+  .premiumAchievementCard h3 {
+    font-size: 17px;
+  }
+
+  .premiumAchievementCard p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+  .premiumAchievementContainer {
+    width: 94%;
+  }
+
+  .premiumAchievementHeading h2 {
+    font-size: 22px;
+  }
+
+  .premiumAchievementHeading p {
+    font-size: 16px;
+  }
+
+  .premiumAchievementJourneyLine {
+    max-width: 30px;
+  }
+
+  .premiumAchievementJourney strong {
+    font-size: 13px;
+  }
+}

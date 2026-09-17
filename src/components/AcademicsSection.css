@@ -1,0 +1,1439 @@
+
+
+.academicShowcase {
+  width: 100%;
+  padding: 40px 0;
+  background:
+    radial-gradient(
+      circle at 5% 20%,
+      rgba(8, 119, 169, 0.05),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 95% 80%,
+      rgba(214, 179, 106, 0.08),
+      transparent 30%
+    ),
+    #f8fafc;
+  overflow: hidden;
+}
+
+.academicShowcaseContainer {
+  width: min(1380px, 92%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+
+  gap: 75px;
+  align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.academicShowcaseContent {
+  width: 100%;
+  min-width: 0;
+  padding-left: 5px;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.academicSectionLabel {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-bottom: 18px;
+}
+
+.academicSectionLabel span {
+  width: 52px;
+  height: 3px;
+
+  flex-shrink: 0;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+.academicSectionLabel p {
+  margin: 0;
+
+  color: #0877a9;
+
+  font-size: 14px;
+  line-height: 1.2;
+
+  font-weight: 900;
+  letter-spacing: 2.4px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.academicShowcaseContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 45px;
+  line-height: 1.1;
+
+  font-weight: 900;
+  letter-spacing: -1.8px;
+}
+
+.academicShowcaseContent h2 span {
+  color: #0877a9;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.academicShowcaseIntro {
+  max-width: 760px;
+
+  margin: 21px 0 32px;
+
+  color: #596779;
+
+  font-size: 19px;
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   FEATURE LIST
+========================================================= */
+
+.academicFeatureList {
+  width: 100%;
+
+  border-top: 1px solid #dce3ea;
+}
+
+.academicFeatureItem {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    40px
+    54px
+    1fr;
+
+  align-items: center;
+
+  gap: 17px;
+
+  min-height: 106px;
+
+  padding: 17px 7px;
+
+  border-bottom: 1px solid #dce3ea;
+
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.academicFeatureItem:hover {
+  background: rgba(255, 255, 255, 0.9);
+
+  padding-left: 17px;
+  padding-right: 17px;
+
+  transform: translateX(5px);
+
+  box-shadow:
+    0 12px 32px rgba(7, 26, 53, 0.07);
+}
+
+
+/* =========================================================
+   FEATURE NUMBER
+========================================================= */
+
+.academicFeatureNumber {
+  color: #a5b0bd;
+
+  font-size: 14px;
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FEATURE ICON
+========================================================= */
+
+.academicFeatureIcon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0b3158
+    );
+
+  color: #e0c27e;
+
+  font-size: 20px;
+
+  box-shadow:
+    0 9px 22px rgba(7, 26, 53, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.academicFeatureItem:hover .academicFeatureIcon {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      145deg,
+      #0877a9,
+      #075d83
+    );
+}
+
+
+/* =========================================================
+   FEATURE INFORMATION
+========================================================= */
+
+.academicFeatureInfo {
+  min-width: 0;
+}
+
+.academicFeatureInfo h3 {
+  margin: 0 0 6px;
+
+  color: #071a35;
+
+  font-size: 20px;
+  line-height: 1.25;
+
+  font-weight: 850;
+}
+
+.academicFeatureInfo p {
+  margin: 0;
+
+  color: #687688;
+
+  font-size: 15px;
+  line-height: 1.55;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   RIGHT IMAGE AREA
+========================================================= */
+
+.academicShowcaseVisual {
+  position: relative;
+
+  width: 100%;
+  min-height: 590px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================================
+   IMAGE FRAME
+========================================================= */
+
+.academicImageFrame {
+  position: relative;
+
+  width: 91%;
+  height: 520px;
+
+  overflow: visible;
+
+  border-radius: 18px 78px 18px 78px;
+
+  background: #071a35;
+
+  box-shadow:
+    0 30px 65px rgba(7, 26, 53, 0.20);
+}
+
+.academicImageFrame img {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 18px 78px 18px 78px;
+
+  z-index: 2;
+
+  transition:
+    transform 0.65s ease;
+}
+
+.academicImageFrame:hover img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   GOLD IMAGE BORDER
+========================================================= */
+
+.academicImageGoldBorder {
+  position: absolute;
+
+  top: 18px;
+  left: 18px;
+
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid #d6b36a;
+
+  border-radius: 18px 78px 18px 78px;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE SHADE
+========================================================= */
+
+.academicImageShade {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 18px 78px 18px 78px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.02) 20%,
+      rgba(7, 26, 53, 0.12) 40%,
+      rgba(7, 26, 53, 0.86) 100%
+    );
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE CONTENT
+========================================================= */
+
+.academicImageContent {
+  position: absolute;
+
+  left: 34px;
+  bottom: 34px;
+
+  z-index: 4;
+
+  color: #ffffff;
+}
+
+.academicImageContent span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #e0c27e;
+
+  font-size: 12px;
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+}
+
+.academicImageContent h3 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.08;
+
+  font-weight: 900;
+
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   FLOATING BADGE
+========================================================= */
+
+.academicFloatingBadge {
+  position: absolute;
+
+  right: -12px;
+  top: 72px;
+
+  width: 238px;
+  min-height: 88px;
+
+  padding: 15px 18px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border: 1px solid rgba(214, 179, 106, 0.7);
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 20px 42px rgba(7, 26, 53, 0.17);
+
+  z-index: 7;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.academicFloatingBadge:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   BADGE ICON
+========================================================= */
+
+.academicBadgeIcon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 11px;
+
+  background: #071a35;
+
+  color: #e0c27e;
+
+  font-size: 20px;
+}
+
+.academicFloatingBadge strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  font-weight: 850;
+}
+
+.academicFloatingBadge span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #748092;
+
+  font-size: 12px;
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDE NUMBER
+========================================================= */
+
+.academicSideNumber {
+  position: absolute;
+
+  left: 0;
+  bottom: 20px;
+
+  color: #d6b36a;
+
+  font-size: 94px;
+  line-height: 1;
+
+  font-weight: 900;
+
+  opacity: 0.22;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOTTOM AREA
+========================================================= */
+
+.academicShowcaseBottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 30px;
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+========================================================= */
+
+.academicBottomText {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 0;
+}
+
+.academicBottomIcon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eaf5f9;
+
+  color: #0877a9;
+
+  font-size: 18px;
+}
+
+.academicBottomText strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 16px;
+  line-height: 1.25;
+
+  font-weight: 850;
+}
+
+.academicBottomText span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7b8795;
+
+  font-size: 12px;
+  line-height: 1.3;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.academicExploreBtn {
+  min-height: 55px;
+
+  padding: 0 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a3158
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 16px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 12px 28px rgba(7, 26, 53, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.academicExploreBtn svg {
+  color: #e0c27e;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.academicExploreBtn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9,
+      #075d83
+    );
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 32px rgba(8, 119, 169, 0.22);
+}
+
+.academicExploreBtn:hover svg {
+  transform: translateX(5px);
+}
+
+.academicExploreBtn:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   1250px
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .academicShowcase {
+    padding: 72px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 93%;
+    gap: 55px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: 46px;
+  }
+
+  .academicShowcaseIntro {
+    font-size: 18px;
+  }
+
+  .academicImageFrame {
+    width: 89%;
+    height: 500px;
+  }
+
+  .academicFloatingBadge {
+    right: -5px;
+  }
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .academicShowcaseContainer {
+    grid-template-columns: 1fr 0.92fr;
+
+    gap: 42px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: 42px;
+  }
+
+  .academicShowcaseIntro {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .academicFeatureItem {
+    grid-template-columns:
+      34px
+      50px
+      1fr;
+
+    gap: 13px;
+  }
+
+  .academicFeatureInfo h3 {
+    font-size: 19px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 14px;
+  }
+
+  .academicShowcaseVisual {
+    min-height: 530px;
+  }
+
+  .academicImageFrame {
+    height: 470px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 34px;
+  }
+
+  .academicFloatingBadge {
+    width: 215px;
+  }
+}
+
+
+/* =========================================================
+   1000px TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .academicShowcase {
+    padding: 70px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  /* CONTENT FIRST */
+
+  .academicShowcaseContent {
+    order: 1;
+    padding-left: 0;
+  }
+
+  /* IMAGE SECOND */
+
+  .academicShowcaseVisual {
+    order: 2;
+
+    min-height: 520px;
+  }
+
+  .academicImageFrame {
+    width: 76%;
+    height: 490px;
+  }
+
+  .academicFloatingBadge {
+    right: 7%;
+    top: 55px;
+  }
+
+  .academicSideNumber {
+    left: 7%;
+    bottom: 5px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: 47px;
+  }
+
+  .academicShowcaseIntro {
+    max-width: 900px;
+
+    font-size: 19px;
+  }
+
+  .academicFeatureItem {
+    min-height: 112px;
+  }
+
+  .academicFeatureInfo h3 {
+    font-size: 21px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .academicShowcase {
+    padding: 60px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 91%;
+    gap: 48px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: clamp(36px, 6vw, 46px);
+  }
+
+  .academicShowcaseIntro {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .academicShowcaseVisual {
+    min-height: 460px;
+  }
+
+  .academicImageFrame {
+    width: 78%;
+    height: 430px;
+
+    border-radius: 17px 65px 17px 65px;
+  }
+
+  .academicImageFrame img {
+    border-radius: 17px 65px 17px 65px;
+  }
+
+  .academicImageGoldBorder {
+    border-radius: 17px 65px 17px 65px;
+  }
+
+  .academicImageContent {
+    left: 28px;
+    bottom: 28px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 32px;
+  }
+
+  .academicFloatingBadge {
+    right: 4%;
+    top: 45px;
+  }
+
+  .academicFeatureItem {
+    min-height: 110px;
+  }
+
+  .academicShowcaseBottom {
+    gap: 18px;
+  }
+}
+
+
+/* =========================================================
+   700px MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .academicShowcase {
+    padding: 55px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 91%;
+    gap: 42px;
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .academicSectionLabel {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .academicSectionLabel span {
+    width: 38px;
+    height: 2px;
+  }
+
+  .academicSectionLabel p {
+    font-size: 12px;
+    letter-spacing: 1.7px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: clamp(30px, 7.2vw, 39px);
+
+    line-height: 1.12;
+
+    letter-spacing: -1px;
+  }
+
+  .academicShowcaseIntro {
+    margin: 17px 0 27px;
+
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+
+  /* -----------------------------------------
+     FEATURES
+  ----------------------------------------- */
+
+  .academicFeatureItem {
+    grid-template-columns:
+      29px
+      45px
+      1fr;
+
+    gap: 10px;
+
+    min-height: 115px;
+
+    padding: 16px 0;
+  }
+
+  .academicFeatureItem:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+
+    transform: translateX(2px);
+  }
+
+  .academicFeatureNumber {
+    font-size: 12px;
+  }
+
+  .academicFeatureIcon {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 11px;
+
+    font-size: 17px;
+  }
+
+  .academicFeatureInfo h3 {
+    margin-bottom: 5px;
+
+    font-size: 18px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+
+  /* -----------------------------------------
+     IMAGE
+  ----------------------------------------- */
+
+  .academicShowcaseVisual {
+    min-height: 390px;
+  }
+
+  .academicImageFrame {
+    width: 80%;
+    height: 370px;
+
+    border-radius: 15px 52px 15px 52px;
+  }
+
+  .academicImageFrame img {
+    border-radius: 15px 52px 15px 52px;
+  }
+
+  .academicImageGoldBorder {
+    top: 12px;
+    left: 12px;
+
+    border-radius: 15px 52px 15px 52px;
+  }
+
+  .academicImageShade {
+    border-radius: 15px 52px 15px 52px;
+  }
+
+  .academicImageContent {
+    left: 20px;
+    bottom: 20px;
+  }
+
+  .academicImageContent span {
+    margin-bottom: 7px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 28px;
+  }
+
+
+  /* -----------------------------------------
+     FLOATING BADGE
+  ----------------------------------------- */
+
+  .academicFloatingBadge {
+    right: 0;
+    top: 42px;
+
+    width: 190px;
+
+    min-height: 76px;
+
+    padding: 11px 13px;
+
+    gap: 10px;
+  }
+
+  .academicBadgeIcon {
+    width: 43px;
+    height: 43px;
+
+    font-size: 17px;
+  }
+
+  .academicFloatingBadge strong {
+    font-size: 14px;
+  }
+
+  .academicFloatingBadge span {
+    font-size: 11px;
+  }
+
+  .academicSideNumber {
+    left: 2%;
+    bottom: 2px;
+
+    font-size: 67px;
+  }
+
+
+  /* -----------------------------------------
+     BOTTOM
+  ----------------------------------------- */
+
+  .academicShowcaseBottom {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 18px;
+
+    margin-top: 25px;
+  }
+
+  .academicBottomText {
+    justify-content: flex-start;
+  }
+
+  .academicBottomIcon {
+    width: 45px;
+    height: 45px;
+
+    font-size: 17px;
+  }
+
+  .academicBottomText strong {
+    font-size: 15px;
+  }
+
+  .academicBottomText span {
+    font-size: 11px;
+  }
+
+  .academicExploreBtn {
+    width: 100%;
+
+    min-height: 57px;
+
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   500px
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .academicShowcase {
+    padding: 50px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 92%;
+    gap: 38px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: clamp(28px, 7.3vw, 35px);
+  }
+
+  .academicShowcaseIntro {
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .academicShowcaseVisual {
+    min-height: 350px;
+  }
+
+  .academicImageFrame {
+    width: 81%;
+    height: 335px;
+  }
+
+  .academicFloatingBadge {
+    width: 178px;
+    top: 34px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 25px;
+  }
+
+  .academicFeatureItem {
+    grid-template-columns:
+      25px
+      42px
+      1fr;
+
+    gap: 9px;
+
+    min-height: 118px;
+  }
+
+  .academicFeatureIcon {
+    width: 41px;
+    height: 41px;
+
+    font-size: 16px;
+  }
+
+  .academicFeatureInfo h3 {
+    font-size: 17px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   430px SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .academicShowcase {
+    padding: 45px 0;
+  }
+
+  .academicShowcaseContainer {
+    width: 92%;
+    gap: 35px;
+  }
+
+  .academicSectionLabel p {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: clamp(25px, 7.4vw, 32px);
+
+    letter-spacing: -0.8px;
+  }
+
+  .academicShowcaseIntro {
+    margin: 15px 0 23px;
+
+    font-size: 16px;
+  }
+
+
+  /* IMAGE */
+
+  .academicShowcaseVisual {
+    min-height: 325px;
+  }
+
+  .academicImageFrame {
+    width: 82%;
+    height: 305px;
+
+    border-radius: 14px 48px 14px 48px;
+  }
+
+  .academicImageFrame img {
+    border-radius: 14px 48px 14px 48px;
+  }
+
+  .academicImageGoldBorder {
+    top: 10px;
+    left: 10px;
+
+    border-radius: 14px 48px 14px 48px;
+  }
+
+  .academicImageShade {
+    border-radius: 14px 48px 14px 48px;
+  }
+
+  .academicImageContent {
+    left: 17px;
+    bottom: 18px;
+  }
+
+  .academicImageContent span {
+    font-size: 9px;
+    letter-spacing: 1.7px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 23px;
+  }
+
+
+  /* BADGE */
+
+  .academicFloatingBadge {
+    width: 165px;
+
+    top: 28px;
+    right: -2px;
+
+    padding: 10px 11px;
+  }
+
+  .academicBadgeIcon {
+    width: 38px;
+    height: 38px;
+
+    font-size: 15px;
+  }
+
+  .academicFloatingBadge strong {
+    font-size: 13px;
+  }
+
+  .academicFloatingBadge span {
+    font-size: 10px;
+  }
+
+  .academicSideNumber {
+    left: 0;
+
+    font-size: 60px;
+  }
+
+
+  /* FEATURES */
+
+  .academicFeatureItem {
+    grid-template-columns:
+      23px
+      40px
+      1fr;
+
+    gap: 8px;
+
+    min-height: 120px;
+
+    padding: 15px 0;
+  }
+
+  .academicFeatureNumber {
+    font-size: 11px;
+  }
+
+  .academicFeatureIcon {
+    width: 39px;
+    height: 39px;
+
+    font-size: 15px;
+  }
+
+  .academicFeatureInfo h3 {
+    font-size: 16px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 13px;
+    line-height: 1.48;
+  }
+
+  .academicBottomIcon {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .academicShowcaseContainer {
+    width: 93%;
+  }
+
+  .academicShowcaseContent h2 {
+    font-size: 24px;
+  }
+
+  .academicShowcaseIntro {
+    font-size: 15px;
+  }
+
+  .academicFeatureItem {
+    grid-template-columns:
+      21px
+      38px
+      1fr;
+
+    gap: 7px;
+
+    min-height: 122px;
+  }
+
+  .academicFeatureIcon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 14px;
+  }
+
+  .academicFeatureInfo h3 {
+    font-size: 15px;
+  }
+
+  .academicFeatureInfo p {
+    font-size: 12.5px;
+  }
+
+  .academicFloatingBadge {
+    width: 150px;
+  }
+
+  .academicFloatingBadge strong {
+    font-size: 12px;
+  }
+
+  .academicFloatingBadge span {
+    font-size: 9px;
+  }
+
+  .academicImageContent h3 {
+    font-size: 21px;
+  }
+
+  .academicExploreBtn {
+    min-height: 55px;
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .academicImageFrame img,
+  .academicFeatureItem,
+  .academicFeatureIcon,
+  .academicFloatingBadge,
+  .academicExploreBtn,
+  .academicExploreBtn svg {
+    transition: none;
+  }
+}

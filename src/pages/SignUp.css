@@ -1,0 +1,1319 @@
+/* =========================================================
+   ABPS SIGNUP PAGE
+   PREMIUM EMERALD • IVORY • ROSE GOLD THEME
+   ========================================================= */
+
+.abpssignup-page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 55px 22px;
+  box-sizing: border-box;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(47, 107, 79, 0.12),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 88%,
+      rgba(199, 154, 120, 0.16),
+      transparent 30%
+    ),
+    #f7f5ef;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.abpssignup-background {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 75% 15%,
+      rgba(47, 107, 79, 0.05),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(199, 154, 120, 0.08),
+      transparent 28%
+    );
+}
+
+.abpssignup-background::before {
+  content: "";
+
+  position: absolute;
+
+  width: 480px;
+  height: 480px;
+
+  top: -280px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(47, 107, 79, 0.12);
+
+  box-shadow:
+    0 0 0 30px rgba(47, 107, 79, 0.025),
+    0 0 0 65px rgba(47, 107, 79, 0.018);
+}
+
+.abpssignup-background::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  bottom: -250px;
+  left: -170px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 154, 120, 0.18);
+
+  box-shadow:
+    0 0 0 30px rgba(199, 154, 120, 0.025),
+    0 0 0 65px rgba(199, 154, 120, 0.018);
+}
+
+
+/* =========================================================
+   MAIN WRAPPER
+   ========================================================= */
+
+.abpssignup-wrapper {
+  width: min(1160px, 100%);
+  min-height: 650px;
+
+  position: relative;
+  z-index: 5;
+
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+
+  overflow: hidden;
+
+  background: #fffdf9;
+
+  border: 1px solid rgba(18, 55, 42, 0.09);
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 35px 90px rgba(18, 55, 42, 0.14),
+    0 10px 30px rgba(18, 55, 42, 0.06);
+}
+
+
+/* =========================================================
+   LEFT INFORMATION SECTION
+   ========================================================= */
+
+.abpssignup-info {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 56px 48px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(199, 154, 120, 0.20),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #102e23 0%,
+      #12372a 48%,
+      #285d45 100%
+    );
+}
+
+.abpssignup-info::before {
+  content: "";
+
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  right: -225px;
+  top: -210px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(199, 154, 120, 0.23);
+
+  box-shadow:
+    0 0 0 25px rgba(199, 154, 120, 0.025),
+    0 0 0 55px rgba(199, 154, 120, 0.018);
+}
+
+.abpssignup-info::after {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  left: -215px;
+  bottom: -215px;
+
+  border-radius: 50%;
+
+  border: 45px solid rgba(255, 255, 255, 0.035);
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.abpssignup-logo {
+  width: 63px;
+  height: 63px;
+
+  margin-bottom: 36px;
+
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #d7b091,
+      #bd8d6d
+    );
+
+  color: #12372a;
+
+  font-size: 21px;
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.abpssignup-eyebrow {
+  position: relative;
+  z-index: 3;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 17px;
+
+  color: #d8b79c;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 2.3px;
+
+  text-transform: uppercase;
+}
+
+.abpssignup-eyebrow::before {
+  content: "";
+
+  width: 27px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #d8b79c;
+}
+
+
+/* =========================================================
+   LEFT HEADING
+   ========================================================= */
+
+.abpssignup-info h1 {
+  position: relative;
+  z-index: 3;
+
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(36px, 4vw, 54px);
+
+  line-height: 1.06;
+
+  font-weight: 900;
+
+  letter-spacing: -1.3px;
+}
+
+.abpssignup-info h1 span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #d6ad8d;
+}
+
+
+/* =========================================================
+   LEFT DESCRIPTION
+   ========================================================= */
+
+.abpssignup-info > p {
+  position: relative;
+  z-index: 3;
+
+  max-width: 450px;
+
+  margin: 22px 0 35px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   BENEFITS
+   ========================================================= */
+
+.abpssignup-benefits {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.abpssignup-benefit {
+  min-height: 48px;
+
+  padding: 8px 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-sizing: border-box;
+
+  color: rgba(255, 255, 255, 0.94);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  border: 1px solid rgba(255, 255, 255, 0.085);
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.abpssignup-benefit:hover {
+  transform: translateX(5px);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: rgba(214, 173, 141, 0.35);
+}
+
+.abpssignup-benefit svg {
+  width: 29px;
+  height: 29px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+
+  color: #ffffff;
+
+  background: #b98a6b;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   RIGHT CARD
+   ========================================================= */
+
+.abpssignup-card {
+  position: relative;
+
+  padding: 50px 58px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(47, 107, 79, 0.055),
+      transparent 30%
+    ),
+    #fffdf9;
+}
+
+.abpssignup-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #12372a 0%,
+      #2f6b4f 55%,
+      #c79a78 100%
+    );
+}
+
+
+/* =========================================================
+   FORM HEADER
+   ========================================================= */
+
+.abpssignup-card-head {
+  margin-bottom: 25px;
+}
+
+.abpssignup-card-head span {
+  display: inline-block;
+
+  margin-bottom: 5px;
+
+  color: #2f6b4f;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.abpssignup-card-head h2 {
+  margin: 5px 0 8px;
+
+  color: #12372a;
+
+  font-size: 34px;
+
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  letter-spacing: -0.6px;
+}
+
+.abpssignup-card-head p {
+  margin: 0;
+
+  color: #737b75;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.abpssignup-form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 17px;
+}
+
+.abpssignup-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.abpssignup-field label {
+  color: #263d32;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.abpssignup-input {
+  height: 51px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  background: #faf8f3;
+
+  border: 1px solid #dedbd2;
+
+  border-radius: 11px;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.abpssignup-input:hover {
+  border-color: #c9b6a8;
+}
+
+.abpssignup-input:focus-within {
+  background: #ffffff;
+
+  border-color: #2f6b4f;
+
+  box-shadow:
+    0 0 0 4px rgba(47, 107, 79, 0.08),
+    0 8px 20px rgba(47, 107, 79, 0.07);
+
+  transform: translateY(-1px);
+}
+
+.abpssignup-input > svg {
+  flex-shrink: 0;
+
+  color: #2f6b4f;
+
+  font-size: 16px;
+}
+
+.abpssignup-input input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #17372a;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 650;
+}
+
+.abpssignup-input input::placeholder {
+  color: #9b9d98;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   PASSWORD EYE
+   ========================================================= */
+
+.abpssignup-eye {
+  width: 31px;
+  height: 34px;
+
+  padding: 0;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #7d837f;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.abpssignup-eye:hover {
+  color: #2f6b4f;
+
+  background: #edf4ef;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+   ========================================================= */
+
+.abpssignup-submit {
+  grid-column: 1 / -1;
+
+  min-height: 53px;
+
+  margin-top: 4px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #c79a78,
+      #d7b091
+    );
+
+  color: #17372a;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(199, 154, 120, 0.22);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.abpssignup-submit:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #12372a,
+      #285d45
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 14px 30px rgba(18, 55, 42, 0.23);
+}
+
+.abpssignup-submit:active {
+  transform: translateY(0);
+}
+
+.abpssignup-submit svg {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+   ========================================================= */
+
+.abpssignup-login {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  font-size: 14px;
+}
+
+.abpssignup-login span {
+  color: #7a817d;
+}
+
+.abpssignup-login a {
+  color: #2f6b4f;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.abpssignup-login a:hover {
+  color: #12372a;
+}
+
+
+/* =========================================================
+   BACK LINK
+   ========================================================= */
+
+.abpssignup-back {
+  width: fit-content;
+
+  margin: 16px auto 0;
+
+  color: #858b87;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.abpssignup-back:hover {
+  color: #2f6b4f;
+}
+
+
+/* =========================================================
+   POPUP OVERLAY
+   ========================================================= */
+
+.abpssignup-popup-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 20000;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(10, 29, 21, 0.64);
+
+  backdrop-filter: blur(9px);
+}
+
+
+/* =========================================================
+   POPUP
+   ========================================================= */
+
+.abpssignup-popup {
+  width: min(430px, 100%);
+
+  padding: 38px 32px 31px;
+
+  box-sizing: border-box;
+
+  position: relative;
+
+  text-align: center;
+
+  background: #fffdf9;
+
+  border: 1px solid rgba(18, 55, 42, 0.09);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.24);
+
+  animation: abpssignupPopupIn 0.28s ease;
+}
+
+@keyframes abpssignupPopupIn {
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.92)
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   POPUP CLOSE
+   ========================================================= */
+
+.abpssignup-popup-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  width: 35px;
+  height: 35px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f1eee8;
+
+  color: #737a75;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.abpssignup-popup-close:hover {
+  background: #12372a;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   POPUP ICON
+   ========================================================= */
+
+.abpssignup-popup-icon {
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 29px;
+}
+
+.abpssignup-popup-error .abpssignup-popup-icon {
+  color: #a9473d;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff4f1,
+      #fbe7e3
+    );
+
+  box-shadow:
+    0 8px 25px rgba(169, 71, 61, 0.10);
+}
+
+.abpssignup-popup-success .abpssignup-popup-icon {
+  color: #2f6b4f;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eff8f1,
+      #e2f1e6
+    );
+
+  box-shadow:
+    0 8px 25px rgba(47, 107, 79, 0.11);
+}
+
+
+/* =========================================================
+   POPUP TEXT
+   ========================================================= */
+
+.abpssignup-popup h3 {
+  margin: 0 0 10px;
+
+  color: #12372a;
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+.abpssignup-popup p {
+  max-width: 350px;
+
+  margin: 0 auto;
+
+  color: #737b75;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   POPUP BUTTON
+   ========================================================= */
+
+.abpssignup-popup-btn {
+  min-width: 200px;
+
+  min-height: 47px;
+
+  margin-top: 24px;
+
+  padding: 0 20px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #12372a,
+      #285d45
+    );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.abpssignup-popup-btn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #2f6b4f,
+      #3d795b
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(47, 107, 79, 0.20);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .abpssignup-page {
+    padding: 38px 18px;
+  }
+
+  .abpssignup-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .abpssignup-info {
+    padding: 45px 34px;
+  }
+
+  .abpssignup-card {
+    padding: 42px 34px;
+  }
+
+  .abpssignup-info h1 {
+    font-size: 40px;
+  }
+
+  .abpssignup-card-head h2 {
+    font-size: 30px;
+  }
+
+  .abpssignup-benefit {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  .abpssignup-wrapper {
+    grid-template-columns: 1fr;
+
+    max-width: 660px;
+  }
+
+  .abpssignup-info {
+    padding: 42px 38px;
+  }
+
+  .abpssignup-info h1 {
+    max-width: 600px;
+
+    font-size: 43px;
+  }
+
+  .abpssignup-info > p {
+    max-width: 600px;
+  }
+
+  .abpssignup-benefits {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 11px;
+  }
+
+  .abpssignup-card {
+    padding: 44px 38px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .abpssignup-page {
+    min-height: 100vh;
+
+    padding: 18px 11px;
+
+    align-items: flex-start;
+  }
+
+  .abpssignup-wrapper {
+    width: 100%;
+
+    max-width: 510px;
+
+    border-radius: 21px;
+  }
+
+
+  /* ---------- LEFT ---------- */
+
+  .abpssignup-info {
+    padding: 32px 23px 30px;
+  }
+
+  .abpssignup-info::before {
+    width: 290px;
+    height: 290px;
+  }
+
+  .abpssignup-logo {
+    width: 53px;
+    height: 53px;
+
+    margin-bottom: 24px;
+
+    border-radius: 15px;
+
+    font-size: 18px;
+  }
+
+  .abpssignup-eyebrow {
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+  .abpssignup-eyebrow::before {
+    width: 20px;
+  }
+
+  .abpssignup-info h1 {
+    font-size: 32px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.7px;
+  }
+
+  .abpssignup-info > p {
+    margin: 16px 0 24px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .abpssignup-benefits {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .abpssignup-benefit {
+    min-height: 44px;
+
+    padding: 7px 10px;
+
+    font-size: 13px;
+  }
+
+  .abpssignup-benefit svg {
+    width: 27px;
+    height: 27px;
+  }
+
+
+  /* ---------- RIGHT ---------- */
+
+  .abpssignup-card {
+    padding: 32px 22px 30px;
+  }
+
+  .abpssignup-card-head {
+    margin-bottom: 21px;
+  }
+
+  .abpssignup-card-head span {
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .abpssignup-card-head h2 {
+    margin-top: 6px;
+
+    font-size: 28px;
+  }
+
+  .abpssignup-card-head p {
+    font-size: 14px;
+  }
+
+  .abpssignup-form {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  .abpssignup-field label {
+    font-size: 13px;
+  }
+
+  .abpssignup-input {
+    height: 50px;
+  }
+
+  .abpssignup-submit {
+    grid-column: auto;
+
+    min-height: 52px;
+
+    font-size: 14px;
+  }
+
+  .abpssignup-login {
+    margin-top: 18px;
+
+    font-size: 13px;
+  }
+
+  .abpssignup-back {
+    font-size: 12px;
+  }
+
+
+  /* ---------- POPUP ---------- */
+
+  .abpssignup-popup-overlay {
+    padding: 14px;
+  }
+
+  .abpssignup-popup {
+    padding: 34px 21px 27px;
+
+    border-radius: 20px;
+  }
+
+  .abpssignup-popup-icon {
+    width: 60px;
+    height: 60px;
+
+    font-size: 26px;
+  }
+
+  .abpssignup-popup h3 {
+    font-size: 21px;
+  }
+
+  .abpssignup-popup p {
+    font-size: 14px;
+  }
+
+  .abpssignup-popup-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .abpssignup-page {
+    padding: 11px 8px;
+  }
+
+  .abpssignup-wrapper {
+    border-radius: 18px;
+  }
+
+  .abpssignup-info {
+    padding: 28px 18px;
+  }
+
+  .abpssignup-card {
+    padding: 28px 17px;
+  }
+
+  .abpssignup-info h1 {
+    font-size: 28px;
+  }
+
+  .abpssignup-info > p {
+    font-size: 13px;
+  }
+
+  .abpssignup-card-head h2 {
+    font-size: 25px;
+  }
+
+  .abpssignup-input {
+    height: 48px;
+  }
+
+  .abpssignup-submit {
+    min-height: 49px;
+  }
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+   ========================================================= */
+
+.abpssignup-submit:focus-visible,
+.abpssignup-eye:focus-visible,
+.abpssignup-popup-close:focus-visible,
+.abpssignup-popup-btn:focus-visible,
+.abpssignup-login a:focus-visible,
+.abpssignup-back:focus-visible {
+  outline: 3px solid rgba(47, 107, 79, 0.25);
+
+  outline-offset: 3px;
+}

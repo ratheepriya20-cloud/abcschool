@@ -1,0 +1,1047 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+.abeligibility-page {
+  --abe-navy: #071a35;
+  --abe-navy2: #0d2b50;
+  --abe-sky: #0877a9;
+  --abe-skyLight: #e4f5fa;
+  --abe-gold: #c9a86a;
+  --abe-goldLight: #ead8ae;
+  --abe-cream: #f8f4ea;
+  --abe-white: #ffffff;
+  --abe-text: #26364a;
+  --abe-muted: #697789;
+
+  font-family: "Inter", sans-serif;
+
+  color: var(--abe-text);
+
+  background: var(--abe-white);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abeligibility-hero {
+  min-height: 420px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 55px 40px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 25%,
+      rgba(8,119,169,0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(201,168,106,0.17),
+      transparent 30%
+    ),
+    var(--abe-navy);
+}
+
+.abeligibility-pattern {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+}
+
+.abeligibility-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(10px);
+}
+
+.abeligibility-glowOne {
+  width: 250px;
+  height: 250px;
+
+  top: -100px;
+  left: -70px;
+
+  background: rgba(8,119,169,0.12);
+}
+
+.abeligibility-glowTwo {
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  bottom: -130px;
+
+  background: rgba(201,168,106,0.10);
+}
+
+.abeligibility-heroContent {
+  width: min(900px, 100%);
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+.abeligibility-eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  color: var(--abe-goldLight);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.abeligibility-eyebrow span {
+  width: 45px;
+  height: 1px;
+
+  background: var(--abe-gold);
+}
+
+.abeligibility-eyebrow svg {
+  font-size: 15px;
+}
+
+.abeligibility-hero h1 {
+  margin: 20px 0 16px;
+
+  color: white;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(42px, 5.5vw, 62px);
+
+  line-height: 1.05;
+
+  font-weight: 600;
+}
+
+.abeligibility-hero h1 strong {
+  display: inline;
+  margin-left: 9px;
+
+  color: var(--abe-goldLight);
+
+  font-weight: 600;
+}
+
+.abeligibility-hero p {
+  max-width: 680px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.75);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.abeligibility-heroTags {
+  margin-top: 28px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+}
+
+.abeligibility-heroTags span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.abeligibility-heroTags svg {
+  color: var(--abe-gold);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abeligibility-intro {
+  max-width: 1180px;
+
+  margin: auto;
+
+  padding: 42px 40px;
+
+  display: grid;
+
+  grid-template-columns: 110px 1fr;
+
+  gap: 35px;
+}
+
+.abeligibility-introNumber {
+  border-right: 1px solid #ddd;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: flex-start;
+}
+
+.abeligibility-introNumber strong {
+  color: var(--abe-gold);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 44px;
+}
+
+.abeligibility-introNumber span {
+  color: var(--abe-sky);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  writing-mode: vertical-rl;
+
+  margin-top: 7px;
+}
+
+.abeligibility-smallTitle {
+  color: var(--abe-sky);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.abeligibility-introContent h2 {
+  margin: 8px 0 12px;
+
+  color: var(--abe-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+}
+
+.abeligibility-introContent h2 strong {
+  color: var(--abe-sky);
+
+  margin-left: 10px;
+}
+
+.abeligibility-introContent p {
+  max-width: 950px;
+
+  margin: 0;
+
+  color: var(--abe-muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   GENERAL REQUIREMENTS
+========================================================= */
+
+.abeligibility-requirements {
+  padding: 42px 40px 45px;
+
+  background: var(--abe-cream);
+}
+
+.abeligibility-heading {
+  max-width: 1180px;
+
+  margin: 0 auto 28px;
+
+  text-align: center;
+}
+
+.abeligibility-heading > span {
+  color: var(--abe-sky);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.abeligibility-heading h2 {
+  margin: 8px 0 10px;
+
+  color: var(--abe-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+
+  line-height: 1.15;
+}
+
+.abeligibility-heading h2 strong {
+  color: var(--abe-sky);
+
+  margin-left: 10px;
+}
+
+.abeligibility-heading p {
+  margin: 0;
+
+  color: var(--abe-muted);
+
+  font-size: 16px;
+}
+
+.abeligibility-requirementGrid {
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.abeligibility-requirementCard {
+  padding: 20px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  background: white;
+
+  border: 1px solid rgba(7,26,53,0.07);
+
+  transition: .3s ease;
+}
+
+.abeligibility-requirementCard:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(7,26,53,0.09);
+}
+
+.abeligibility-requirementIcon {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--abe-navy);
+
+  color: var(--abe-goldLight);
+
+  font-size: 16px;
+}
+
+.abeligibility-requirementCard h3 {
+  margin: 2px 0 6px;
+
+  color: var(--abe-navy);
+
+  font-size: 14px;
+}
+
+.abeligibility-requirementCard p {
+  margin: 0;
+
+  color: var(--abe-muted);
+
+  font-size: 15.5px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LEVELS
+========================================================= */
+
+.abeligibility-levels {
+  padding: 42px 40px 45px;
+
+  background: white;
+}
+
+.abeligibility-levelGrid {
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 17px;
+}
+
+.abeligibility-levelCard {
+  min-height: 350px;
+
+  padding: 23px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--abe-white);
+
+  border: 1px solid rgba(7,26,53,0.08);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease;
+}
+
+.abeligibility-levelCard::after {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background: var(--abe-skyLight);
+
+  transition: .3s ease;
+}
+
+.abeligibility-levelCard:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(8,119,169,.20);
+
+  box-shadow:
+    0 18px 40px rgba(7,26,53,.10);
+}
+
+.abeligibility-levelCard:hover::after {
+  transform: scale(1.35);
+}
+
+.abeligibility-levelTop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.abeligibility-levelNumber {
+  color: var(--abe-gold);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 35px;
+  margin-top: -20px;
+}
+
+.abeligibility-levelIcon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--abe-navy);
+
+  color: white;
+
+  font-size: 18px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.abeligibility-levelLabel {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--abe-sky);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.abeligibility-levelCard h3 {
+  margin: 7px 0;
+
+  color: var(--abe-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+}
+
+.abeligibility-levelLine {
+  width: 38px;
+  height: 2px;
+
+  margin: 9px 0 12px;
+
+  background: var(--abe-gold);
+}
+
+.abeligibility-levelDescription {
+  margin: 0 0 15px;
+
+  color: var(--abe-muted);
+
+  font-size: 15.5px;
+
+  line-height: 1.7;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.abeligibility-points {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.abeligibility-points span {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 7px;
+
+  color: var(--abe-text);
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+.abeligibility-points svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: var(--abe-sky);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.abeligibility-note {
+  max-width: 1180px;
+
+  margin: auto;
+
+  padding: 35px 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  border-top: 1px solid #eee;
+}
+
+.abeligibility-noteIcon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--abe-skyLight);
+
+  color: var(--abe-sky);
+
+  font-size: 30px;
+}
+
+.abeligibility-noteContent {
+  flex: 1;
+}
+
+.abeligibility-noteContent > span {
+  color: var(--abe-sky);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.abeligibility-noteContent h2 {
+  margin: 5px 0;
+
+  color: var(--abe-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 27px;
+}
+
+.abeligibility-noteContent h2 strong {
+  color: var(--abe-sky);
+
+  margin-left: 8px;
+}
+
+.abeligibility-noteContent p {
+  margin: 0;
+
+  color: var(--abe-muted);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+.abeligibility-noteBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 13px 18px;
+
+  background: var(--abe-navy);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition: .3s ease;
+}
+
+.abeligibility-noteBtn:hover {
+  background: var(--abe-sky);
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abeligibility-cta {
+  padding: 55px 40px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 40%,
+      rgba(8,119,169,.25),
+      transparent 30%
+    ),
+    var(--abe-navy);
+}
+
+.abeligibility-ctaContent {
+  max-width: 780px;
+
+  margin: auto;
+}
+
+.abeligibility-ctaContent > span {
+  color: var(--abe-goldLight);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.abeligibility-ctaContent h2 {
+  margin: 10px 0 12px;
+
+  color: white;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 42px;
+
+  line-height: 1.15;
+}
+
+.abeligibility-ctaContent h2 strong {
+  color: var(--abe-goldLight);
+
+  margin-left: 9px;
+}
+
+.abeligibility-ctaContent p {
+  max-width: 750px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,.68);
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.abeligibility-ctaButtons {
+  margin-top: 25px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.abeligibility-applyBtn,
+.abeligibility-contactBtn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 21px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition: .3s ease;
+}
+
+.abeligibility-applyBtn {
+  background: var(--abe-gold);
+
+  color: var(--abe-navy);
+}
+
+.abeligibility-applyBtn:hover {
+  background: white;
+
+  transform: translateY(-2px);
+}
+
+.abeligibility-contactBtn {
+  border: 1px solid rgba(255,255,255,.25);
+
+  color: white;
+
+  background: rgba(255,255,255,.05);
+}
+
+.abeligibility-contactBtn:hover {
+  background: rgba(255,255,255,.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .abeligibility-requirementGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abeligibility-levelGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .abeligibility-hero {
+    min-height: 450px;
+margin-top: 30px;
+    padding: 45px 22px;
+  }
+
+  .abeligibility-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+  }
+
+  .abeligibility-eyebrow span {
+    width: 25px;
+  }
+
+  .abeligibility-hero h1 {
+    font-size: 40px;
+  }
+
+  .abeligibility-hero p {
+    font-size: 13px;
+  }
+
+  .abeligibility-heroTags {
+    gap: 12px;
+  }
+
+  .abeligibility-heroTags span {
+    font-size: 10px;
+  }
+
+
+  .abeligibility-intro {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    padding: 35px 22px;
+  }
+
+  .abeligibility-introNumber {
+    border-right: 0;
+
+    border-bottom: 1px solid #ddd;
+
+    padding-bottom: 12px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 12px;
+  }
+
+  .abeligibility-introNumber strong {
+    font-size: 32px;
+  }
+
+  .abeligibility-introNumber span {
+    writing-mode: horizontal-tb;
+
+    margin: 0;
+  }
+
+  .abeligibility-introContent h2 {
+    font-size: 31px;
+  }
+
+  .abeligibility-introContent h2 strong {
+    display: block;
+
+    margin: 3px 0 0;
+  }
+
+
+  .abeligibility-requirements {
+    padding: 35px 18px 40px;
+  }
+
+  .abeligibility-heading h2 {
+    font-size: 31px;
+  }
+
+  .abeligibility-heading h2 strong {
+    display: block;
+
+    margin: 3px 0 0;
+  }
+
+  .abeligibility-requirementGrid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  .abeligibility-levels {
+    padding: 35px 18px 40px;
+  }
+
+  .abeligibility-levelGrid {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+  .abeligibility-levelCard {
+    min-height: auto;
+  }
+
+
+  .abeligibility-note {
+    padding: 30px 20px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .abeligibility-noteContent h2 {
+    font-size: 27px;
+  }
+
+  .abeligibility-noteContent h2 strong {
+    display: block;
+
+    margin: 3px 0 0;
+  }
+
+  .abeligibility-noteBtn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .abeligibility-cta {
+    padding: 45px 22px;
+  }
+
+  .abeligibility-ctaContent h2 {
+    font-size: 34px;
+  }
+
+  .abeligibility-ctaContent h2 strong {
+    display: block;
+
+    margin: 3px 0 0;
+  }
+
+  .abeligibility-ctaButtons {
+    flex-direction: column;
+  }
+
+  .abeligibility-applyBtn,
+  .abeligibility-contactBtn {
+    width: 100%;
+  }
+
+}

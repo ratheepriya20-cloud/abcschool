@@ -1,0 +1,1912 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.abpros-page {
+  width: 100%;
+  margin-top: 40px;
+  overflow: hidden;
+
+  background: #ffffff;
+  color: #071a35;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.abpros-page *,
+.abpros-page *::before,
+.abpros-page *::after {
+  box-sizing: border-box;
+}
+
+.abpros-page p {
+  margin: 0;
+
+  color: #607080;
+
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.abpros-page a {
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abpros-hero {
+  position: relative;
+margin-top: 20px;
+  min-height: 550px;
+
+  padding: 40px 5%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(139,211,242,0.18),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #06152c,
+      #0a2d52
+    );
+}
+
+.abpros-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -260px;
+  top: -250px;
+
+  border: 1px solid rgba(230,195,106,0.2);
+
+  border-radius: 50%;
+}
+
+.abpros-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  left: 8%;
+  bottom: 14%;
+
+  background: #e6c36a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    25px 17px 0 rgba(139,211,242,0.35),
+    50px -10px 0 rgba(230,195,106,0.2);
+}
+
+.abpros-hero-inner {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 0.85fr;
+
+  align-items: center;
+
+  gap: 65px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.abpros-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 17px;
+
+  color: rgba(255,255,255,0.42);
+
+  font-size: 10px;
+}
+
+.abpros-breadcrumb a {
+  color: rgba(255,255,255,0.72);
+}
+
+.abpros-breadcrumb strong {
+  color: #e6c36a;
+}
+
+.abpros-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: #e6c36a;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+.abpros-eyebrow::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  background: #e6c36a;
+}
+
+.abpros-hero-content h1 {
+  margin: 0 0 17px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5.2vw, 69px);
+
+  line-height: 1.03;
+
+  letter-spacing: -1.4px;
+}
+
+.abpros-hero-content h1 span {
+  color: #8bd3f2;
+}
+
+.abpros-hero-content > p {
+  max-width: 590px;
+
+  margin-bottom: 23px;
+
+  color: rgba(255,255,255,0.62);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.abpros-hero-buttons {
+  display: flex;
+
+  gap: 11px;
+
+  margin-bottom: 24px;
+}
+
+.abpros-primary-btn,
+.abpros-secondary-btn {
+  min-height: 45px;
+
+  padding: 0 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abpros-primary-btn {
+  background: #e6c36a;
+
+  color: #071a35;
+}
+
+.abpros-primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 13px 30px rgba(230,195,106,0.25);
+}
+
+.abpros-secondary-btn {
+  color: #ffffff;
+
+  border: 1px solid rgba(255,255,255,0.23);
+}
+
+.abpros-secondary-btn:hover {
+  background: #ffffff;
+
+  color: #071a35;
+}
+
+
+/* =========================================================
+   HERO META
+========================================================= */
+
+.abpros-hero-meta {
+  display: flex;
+
+  gap: 25px;
+}
+
+.abpros-hero-meta div {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+}
+
+.abpros-hero-meta strong {
+  color: #e6c36a;
+
+  font-size: 12px;
+}
+
+.abpros-hero-meta span {
+  color: rgba(255,255,255,0.48);
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   BROCHURE
+========================================================= */
+
+.abpros-brochure-wrap {
+  position: relative;
+
+  min-height: 425px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abpros-brochure-wrap::before {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  border: 1px dashed rgba(139,211,242,0.18);
+
+  border-radius: 50%;
+}
+
+.abpros-brochure-back {
+  position: absolute;
+
+  width: 280px;
+  height: 355px;
+
+  background: #d7e3e8;
+
+  border-radius: 7px;
+
+  transform: rotate(-7deg) translate(-18px, 4px);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.16);
+}
+
+.abpros-brochure {
+  position: relative;
+  z-index: 3;
+
+  width: 280px;
+  height: 355px;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f1f5f6
+    );
+
+  border-radius: 7px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 28px 55px rgba(0,0,0,0.28);
+
+  transform: rotate(4deg);
+
+  transition: 0.4s ease;
+}
+
+.abpros-brochure:hover {
+  transform: rotate(0deg) translateY(-7px);
+}
+
+.abpros-brochure::before {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: -80px;
+  top: 60px;
+
+  border: 1px solid rgba(13,140,200,0.12);
+
+  border-radius: 50%;
+}
+
+.abpros-brochure::after {
+  content: "";
+
+  position: absolute;
+
+  width: 4px;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  background:
+    linear-gradient(
+      #071a35,
+      #0d8cc8,
+      #e6c36a
+    );
+}
+
+.abpros-brochure-top {
+  position: relative;
+  z-index: 2;
+
+  height: 60px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #071a35;
+
+  color: #ffffff;
+}
+
+.abpros-brochure-top span {
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.abpros-brochure-logo {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #e6c36a;
+
+  border: 1px solid rgba(230,195,106,0.4);
+
+  border-radius: 50%;
+
+  font-size: 14px;
+}
+
+.abpros-brochure-center {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+
+  padding: 35px 20px;
+
+  text-align: center;
+}
+
+.abpros-brochure-center small {
+  color: #0d8cc8;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpros-brochure-center h2 {
+  margin: 9px 0 12px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 34px;
+
+  line-height: 1;
+}
+
+.abpros-brochure-line {
+  width: 55px;
+  height: 2px;
+
+  margin: auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #e6c36a
+    );
+}
+
+.abpros-brochure-center p {
+  margin-top: 18px;
+
+  color: #657580;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+}
+
+.abpros-brochure-bottom {
+  height: 52px;
+
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #e0e7eb;
+}
+
+.abpros-brochure-bottom span {
+  color: #7d8992;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+.abpros-brochure-bottom span:last-child {
+  color: #c79e35;
+}
+
+
+/* =========================================================
+   DOWNLOAD CARD
+========================================================= */
+
+.abpros-download-card {
+  position: absolute;
+
+  z-index: 5;
+
+  right: -8px;
+  bottom: 32px;
+
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 15px 30px rgba(0,0,0,0.2);
+}
+
+.abpros-download-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf7fb;
+
+  color: #0d8cc8;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+}
+
+.abpros-download-card div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.abpros-download-card strong {
+  color: #071a35;
+
+  font-size: 10px;
+}
+
+.abpros-download-card span {
+  margin-top: 2px;
+
+  color: #7b8792;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.abpros-overview {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 45px 5%;
+
+  display: grid;
+
+  grid-template-columns: 65px 1fr 1fr;
+
+  gap: 35px;
+}
+
+.abpros-overview::after {
+  content: "";
+
+  position: absolute;
+
+  right: 5%;
+  bottom: 0;
+
+  width: 90px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #e6c36a
+    );
+}
+
+.abpros-overview-number {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.abpros-overview-number span {
+  color: #e0b94e;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.abpros-overview-number i {
+  width: 1px;
+  height: 50px;
+
+  background: #dce4e9;
+}
+
+.abpros-overview-heading > span,
+.abpros-section-heading span,
+.abpros-academic-content > span,
+.abpros-facilities-heading > span,
+.abpros-life-heading > span,
+.abpros-message-content > span,
+.abpros-cta-inner > span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+
+  color: #0d8cc8;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpros-overview-heading > span::before,
+.abpros-section-heading span::before,
+.abpros-academic-content > span::before,
+.abpros-facilities-heading > span::before,
+.abpros-life-heading > span::before,
+.abpros-message-content > span::before {
+  content: "";
+
+  width: 20px;
+  height: 2px;
+
+  background: #e6c36a;
+}
+
+.abpros-overview-heading h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 38px;
+
+  line-height: 1.12;
+}
+
+.abpros-overview-heading h2 em {
+  color: #0d8cc8;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.abpros-highlights {
+  position: relative;
+
+  padding: 45px 5%;
+
+  background: #f5f8fa;
+
+  overflow: hidden;
+}
+
+.abpros-highlights::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -150px;
+  top: -100px;
+
+  border: 1px solid rgba(13,140,200,0.1);
+
+  border-radius: 50%;
+}
+
+.abpros-highlights::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  left: -30px;
+  bottom: 60px;
+
+  background: rgba(230,195,106,0.1);
+
+  border-radius: 50%;
+}
+
+.abpros-section-heading {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: 0 auto 28px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+.abpros-section-heading h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 38px;
+
+  line-height: 1.08;
+}
+
+.abpros-section-heading > p {
+  max-width: 400px;
+}
+
+
+/* =========================================================
+   HIGHLIGHT CARDS
+========================================================= */
+
+.abpros-highlight-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.abpros-highlight-card {
+  position: relative;
+
+  min-height: 245px;
+
+  padding: 23px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7ec;
+
+  border-radius: 14px;
+
+  transition: 0.35s ease;
+}
+
+.abpros-highlight-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #0d8cc8,
+      #e6c36a
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: 0.35s ease;
+}
+
+.abpros-highlight-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -45px;
+  bottom: -45px;
+
+  border: 1px solid rgba(13,140,200,0.1);
+
+  border-radius: 50%;
+}
+
+.abpros-highlight-card:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 40px rgba(7,26,53,0.09);
+}
+
+.abpros-highlight-card:hover::before {
+  transform: scaleX(1);
+}
+
+.abpros-highlight-number {
+  position: absolute;
+
+  top: 17px;
+  right: 18px;
+
+  color: #ccd5dc;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.abpros-highlight-icon {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+
+  color: #e6c36a;
+
+  border-radius: 10px;
+
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.abpros-highlight-card:hover .abpros-highlight-icon {
+  background: #0d8cc8;
+
+  color: #ffffff;
+
+  transform: rotate(-5deg);
+}
+
+.abpros-highlight-card h3 {
+  margin: 0 0 7px;
+
+  color: #071a35;
+
+  font-size: 18px;
+}
+
+.abpros-highlight-card p {
+  max-width: 300px;
+}
+
+.abpros-highlight-arrow {
+  position: absolute;
+
+  right: 20px;
+  bottom: 18px;
+
+  color: #0d8cc8;
+
+  font-size: 11px;
+
+  transition: 0.3s ease;
+}
+
+.abpros-highlight-card:hover .abpros-highlight-arrow {
+  color: #e0b94e;
+
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ACADEMIC
+========================================================= */
+
+.abpros-academic {
+  position: relative;
+
+  padding: 45px 5%;
+
+  background: #071a35;
+
+  overflow: hidden;
+}
+
+.abpros-academic::before {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  left: -190px;
+  bottom: -200px;
+
+  border: 1px solid rgba(139,211,242,0.12);
+
+  border-radius: 50%;
+}
+
+.abpros-academic::after {
+  content: "";
+
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  right: 8%;
+  top: 50px;
+
+  background: #e6c36a;
+
+  border-radius: 50%;
+
+  box-shadow:
+    25px 20px 0 rgba(139,211,242,0.25),
+    -22px 27px 0 rgba(230,195,106,0.2);
+}
+
+.abpros-academic-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.abpros-academic-content > span {
+  color: #e6c36a;
+}
+
+.abpros-academic-content h2 {
+  margin: 0 0 13px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 41px;
+
+  line-height: 1.08;
+}
+
+.abpros-academic-content h2 strong {
+  color: #8bd3f2;
+}
+
+.abpros-academic-content > p {
+  max-width: 500px;
+
+  margin-bottom: 20px;
+
+  color: rgba(255,255,255,0.57);
+}
+
+.abpros-academic-btn {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  background: #e6c36a;
+
+  color: #071a35;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abpros-academic-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   ACADEMIC CARDS
+========================================================= */
+
+.abpros-academic-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 11px;
+}
+
+.abpros-academic-card {
+  position: relative;
+
+  padding: 19px;
+
+  background: rgba(255,255,255,0.045);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 11px;
+
+  transition: 0.3s ease;
+}
+
+.abpros-academic-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 2px;
+  height: 0;
+
+  background: #e6c36a;
+
+  transform: translateY(-50%);
+
+  transition: 0.3s ease;
+}
+
+.abpros-academic-card:hover {
+  background: rgba(255,255,255,0.075);
+
+  transform: translateY(-4px);
+}
+
+.abpros-academic-card:hover::before {
+  height: 35px;
+}
+
+.abpros-academic-icon {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(139,211,242,0.1);
+
+  color: #8bd3f2;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+.abpros-academic-card h3 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+}
+
+.abpros-academic-card p {
+  color: rgba(255,255,255,0.49);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+.abpros-facilities {
+  padding: 45px 5%;
+
+  background: #ffffff;
+}
+
+.abpros-facilities-inner {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.abpros-facilities-heading h2 {
+  margin: 0 0 11px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+
+  line-height: 1.08;
+}
+
+.abpros-facilities-heading h2 em {
+  color: #0d8cc8;
+
+  font-style: normal;
+}
+
+.abpros-facilities-heading p {
+  max-width: 490px;
+}
+
+.abpros-facilities-list {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+.abpros-facility {
+  position: relative;
+
+  min-height: 58px;
+
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  background: #f5f8fa;
+
+  border: 1px solid #e1e8ed;
+
+  border-radius: 9px;
+
+  transition: 0.3s ease;
+}
+
+.abpros-facility::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background: #e6c36a;
+
+  transition: 0.3s ease;
+}
+
+.abpros-facility:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(7,26,53,0.07);
+}
+
+.abpros-facility:hover::after {
+  width: 100%;
+}
+
+.abpros-facility > span {
+  color: #0d8cc8;
+
+  font-size: 12px;
+}
+
+.abpros-facility p {
+  color: #526272;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   STUDENT LIFE
+========================================================= */
+
+.abpros-life {
+  position: relative;
+
+  padding: 45px 5%;
+
+  background: #f5f8fa;
+
+  overflow: hidden;
+}
+
+.abpros-life::before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  right: -120px;
+  bottom: -130px;
+
+  border: 1px solid rgba(13,140,200,0.1);
+
+  border-radius: 50%;
+}
+
+.abpros-life-heading {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: 0 auto 28px;
+
+  text-align: center;
+}
+
+.abpros-life-heading > span {
+  justify-content: center;
+}
+
+.abpros-life-heading h2 {
+  margin: 0 0 7px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+}
+
+.abpros-life-heading h2 em {
+  color: #0d8cc8;
+
+  font-style: normal;
+}
+
+.abpros-life-heading p {
+  max-width: 570px;
+
+  margin: auto;
+}
+
+.abpros-life-grid {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 13px;
+}
+
+.abpros-life-card {
+  position: relative;
+
+  min-height: 185px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #dfe7ec;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  transition: 0.35s ease;
+}
+
+.abpros-life-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 16px 35px rgba(7,26,53,0.08);
+}
+
+.abpros-life-number {
+  color: #d4dde2;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.abpros-life-line {
+  width: 35px;
+  height: 2px;
+
+  margin: 19px 0 13px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #e6c36a
+    );
+}
+
+.abpros-life-card h3 {
+  margin: 0 0 6px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 23px;
+}
+
+.abpros-life-card p {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.abpros-message {
+  padding: 40px 5%;
+
+  background: #ffffff;
+}
+
+.abpros-message-inner {
+  position: relative;
+
+  max-width: 1200px;
+
+  min-height: 145px;
+
+  margin: auto;
+
+  padding: 25px 30px;
+
+  display: grid;
+
+  grid-template-columns: 60px 1fr 60px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a2d52
+    );
+
+  border-radius: 15px;
+}
+
+.abpros-message-inner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  right: -120px;
+  top: -150px;
+
+  border: 1px solid rgba(139,211,242,0.14);
+
+  border-radius: 50%;
+}
+
+.abpros-message-inner::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      #e6c36a,
+      #8bd3f2
+    );
+}
+
+.abpros-quote-icon {
+  position: relative;
+  z-index: 2;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(230,195,106,0.12);
+
+  color: #e6c36a;
+
+  border-radius: 12px;
+
+  font-size: 20px;
+}
+
+.abpros-message-content {
+  position: relative;
+  z-index: 2;
+}
+
+.abpros-message-content > span {
+  color: #e6c36a;
+}
+
+.abpros-message-content h2 {
+  margin: 3px 0 6px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+}
+
+.abpros-message-content h2 strong {
+  color: #8bd3f2;
+}
+
+.abpros-message-content p {
+  color: rgba(255,255,255,0.54);
+
+  font-size: 12px;
+}
+
+.abpros-message-mark {
+  position: relative;
+  z-index: 2;
+
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8bd3f2;
+
+  border: 1px solid rgba(139,211,242,0.2);
+
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abpros-cta {
+  position: relative;
+
+  padding: 45px 5%;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #06152c,
+      #0a2d52
+    );
+}
+
+.abpros-cta-circle {
+  position: absolute;
+
+  border: 1px solid rgba(255,255,255,0.09);
+
+  border-radius: 50%;
+}
+
+.cta-one {
+  width: 330px;
+  height: 330px;
+
+  left: -165px;
+  top: -170px;
+
+  border-color: rgba(230,195,106,0.16);
+}
+
+.cta-two {
+  width: 250px;
+  height: 250px;
+
+  right: -125px;
+  bottom: -150px;
+
+  border-color: rgba(139,211,242,0.14);
+}
+
+.abpros-cta-inner {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+
+  margin: auto;
+}
+
+.abpros-cta-inner > span {
+  justify-content: center;
+
+  color: #e6c36a;
+}
+
+.abpros-cta-inner h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 42px;
+
+  line-height: 1.08;
+}
+
+.abpros-cta-inner h2 strong {
+  color: #8bd3f2;
+}
+
+.abpros-cta-inner p {
+  max-width: 600px;
+
+  margin: 0 auto 20px;
+
+  color: rgba(255,255,255,0.56);
+}
+
+.abpros-cta-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.abpros-cta-primary,
+.abpros-cta-secondary {
+  min-height: 45px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 7px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abpros-cta-primary {
+  background: #e6c36a;
+
+  color: #071a35;
+}
+
+.abpros-cta-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 13px 30px rgba(230,195,106,0.25);
+}
+
+.abpros-cta-secondary {
+  color: #ffffff;
+
+  border: 1px solid rgba(255,255,255,0.22);
+}
+
+.abpros-cta-secondary:hover {
+  background: #ffffff;
+
+  color: #071a35;
+}
+
+
+/* =========================================================
+   1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .abpros-hero-inner {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    text-align: center;
+  }
+
+  .abpros-breadcrumb,
+  .abpros-eyebrow {
+    justify-content: center;
+  }
+
+  .abpros-hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .abpros-hero-buttons,
+  .abpros-hero-meta {
+    justify-content: center;
+  }
+
+  .abpros-highlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abpros-academic-inner,
+  .abpros-facilities-inner {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .abpros-life-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   700px
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abpros-overview {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .abpros-overview-number {
+    flex-direction: row;
+  }
+
+  .abpros-overview-number i {
+    width: 45px;
+    height: 1px;
+  }
+
+  .abpros-section-heading {
+    display: block;
+  }
+
+  .abpros-section-heading > p {
+    margin-top: 11px;
+  }
+
+  .abpros-facilities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .abpros-message-inner {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .abpros-message-mark {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   550px
+========================================================= */
+
+@media (max-width: 550px) {
+
+  .abpros-hero {
+    min-height: auto;
+
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .abpros-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .abpros-hero-buttons {
+    flex-direction: column;
+  }
+
+  .abpros-primary-btn,
+  .abpros-secondary-btn {
+    width: 100%;
+  }
+
+  .abpros-hero-meta {
+    gap: 16px;
+  }
+
+  .abpros-brochure-wrap {
+    min-height: 365px;
+  }
+
+  .abpros-brochure-wrap::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .abpros-brochure {
+    width: 250px;
+    height: 320px;
+  }
+
+  .abpros-brochure-back {
+    width: 250px;
+    height: 320px;
+  }
+
+  .abpros-download-card {
+    right: 0;
+    bottom: 2px;
+  }
+
+  .abpros-highlight-grid,
+  .abpros-academic-grid,
+  .abpros-life-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abpros-overview-heading h2,
+  .abpros-section-heading h2,
+  .abpros-facilities-heading h2,
+  .abpros-life-heading h2 {
+    font-size: 32px;
+  }
+
+  .abpros-academic-content h2 {
+    font-size: 34px;
+  }
+
+  .abpros-cta-inner h2 {
+    font-size: 34px;
+  }
+
+  .abpros-cta-buttons {
+    flex-direction: column;
+  }
+
+  .abpros-cta-primary,
+  .abpros-cta-secondary {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .abpros-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .abpros-brochure {
+    width: 235px;
+    height: 300px;
+  }
+
+  .abpros-brochure-back {
+    width: 235px;
+    height: 300px;
+  }
+
+  .abpros-brochure-center h2 {
+    font-size: 29px;
+  }
+
+  .abpros-download-card {
+    transform: scale(0.88);
+
+    transform-origin: right bottom;
+  }
+
+}

@@ -1,0 +1,613 @@
+/* =========================================================
+   STUDENT LIFE
+   NAVY + SKY BLUE + GOLD
+========================================================= */
+
+.studentLifeSection {
+  position: relative;
+
+  width: 100%;
+
+  padding: 85px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #06172c,
+      #071f3c 55%,
+      #082b4d
+    );
+
+  color: #ffffff;
+}
+
+
+.studentLifeGlow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(35px);
+}
+
+
+.studentLifeGlowOne {
+  width: 300px;
+  height: 300px;
+
+  right: -130px;
+  top: -130px;
+
+  background: rgba(56, 189, 248, 0.10);
+}
+
+
+.studentLifeGlowTwo {
+  width: 250px;
+  height: 250px;
+
+  left: -130px;
+  bottom: -140px;
+
+  background: rgba(242, 193, 78, 0.07);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.studentLifeContainer {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 92%);
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.studentLifeHeading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 35px;
+}
+
+
+.studentLifeLabel {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: #7dd3fc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.studentLifeLabel::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  background: #f2c14e;
+}
+
+
+.studentLifeHeading h2 {
+  margin: 0;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(40px, 4vw, 54px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1.4px;
+}
+
+
+.studentLifeHeading h2 span {
+  display: block;
+
+  color: #f2c14e;
+}
+
+
+.studentLifeHeading > p {
+  max-width: 370px;
+
+  margin: 0 0 3px;
+
+  color: #9db2c7;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.studentLifeGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.studentLifeCard {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(125, 211, 252, 0.13);
+
+  border-radius: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.studentLifeCard:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(125, 211, 252, 0.38);
+
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.studentLifeImage {
+  position: relative;
+
+  width: 100%;
+  height: 225px;
+
+  overflow: hidden;
+}
+
+
+.studentLifeImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.studentLifeCard:hover .studentLifeImage img {
+  transform: scale(1.08);
+}
+
+
+.studentLifeImageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 20, 38, 0.05),
+      rgba(4, 20, 38, 0.65)
+    );
+}
+
+
+.studentLifeTag {
+  position: absolute;
+
+  left: 12px;
+  bottom: 12px;
+
+  padding: 5px 8px;
+
+  border: 1px solid rgba(242, 193, 78, 0.4);
+
+  border-radius: 5px;
+
+  background: rgba(7, 26, 53, 0.75);
+
+  color: #f2c14e;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(6px);
+}
+
+
+.studentLifeNumber {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.studentLifeCardContent {
+  position: relative;
+
+  min-height: 125px;
+
+  padding: 17px;
+}
+
+
+.studentLifeCardContent h3 {
+  margin: 0 0 7px;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+}
+
+
+.studentLifeCardContent p {
+  max-width: 220px;
+
+  margin: 0;
+
+  color: #91a7bc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.65;
+}
+
+
+.studentLifeCardArrow {
+  position: absolute;
+
+  right: 16px;
+  bottom: 17px;
+
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(242, 193, 78, 0.3);
+
+  border-radius: 50%;
+
+  color: #f2c14e;
+
+  font-size: 13px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+
+.studentLifeCard:hover .studentLifeCardArrow {
+  transform: translate(3px, -3px);
+
+  background: #f2c14e;
+
+  color: #071a35;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.studentLifeCTA {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 23px;
+
+  padding: 20px 22px;
+
+  border: 1px solid rgba(125, 211, 252, 0.14);
+
+  border-radius: 11px;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+}
+
+
+.studentLifeCTAText span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #7dd3fc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.studentLifeCTAText strong {
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.studentLifeCTA button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 44px;
+
+  padding: 0 19px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #f2c14e;
+
+  color: #071a35;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.studentLifeCTA button span {
+  font-size: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.studentLifeCTA button:hover {
+  transform: translateY(-3px);
+
+  background: #ffd76b;
+
+  box-shadow:
+    0 10px 25px rgba(242, 193, 78, 0.18);
+}
+
+
+.studentLifeCTA button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .studentLifeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .studentLifeImage {
+    height: 250px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .studentLifeSection {
+    padding: 65px 0;
+  }
+
+  .studentLifeHeading {
+    display: block;
+
+    text-align: center;
+
+    margin-bottom: 28px;
+  }
+
+  .studentLifeLabel {
+    justify-content: center;
+  }
+
+  .studentLifeHeading h2 {
+    font-size: 37px;
+  }
+
+  .studentLifeHeading > p {
+    max-width: 500px;
+
+    margin: 15px auto 0;
+
+    font-size: 11px;
+  }
+
+  .studentLifeGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 9px;
+  }
+
+  .studentLifeImage {
+    height: 200px;
+  }
+
+  .studentLifeCardContent {
+    min-height: 120px;
+
+    padding: 13px;
+  }
+
+  .studentLifeCardContent h3 {
+    font-size: 17px;
+  }
+
+  .studentLifeCardContent p {
+    font-size: 7px;
+  }
+
+  .studentLifeCTA {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .studentLifeCTA button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .studentLifeSection {
+    padding: 52px 0;
+  }
+
+  .studentLifeHeading h2 {
+    font-size: 32px;
+  }
+
+  .studentLifeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .studentLifeImage {
+    height: 230px;
+  }
+
+  .studentLifeCardContent {
+    min-height: 105px;
+  }
+
+  .studentLifeCTA {
+    padding: 17px;
+  }
+
+  .studentLifeCTAText strong {
+    font-size: 16px;
+  }
+}

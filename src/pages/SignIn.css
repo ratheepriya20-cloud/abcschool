@@ -1,0 +1,437 @@
+.abpssignin-page {
+  min-height: 100vh;
+  padding: 50px 20px;
+  background: #f5f8fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.abpssignin-glow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(8, 119, 169, 0.13), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(214, 179, 106, 0.17), transparent 32%);
+}
+
+.abpssignin-wrapper {
+  width: min(510px, 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.abpssignin-card {
+  background: #ffffff;
+  border-radius: 23px;
+  padding: 42px 45px;
+  box-shadow: 0 25px 65px rgba(7, 26, 53, 0.13);
+  border: 1px solid rgba(7, 26, 53, 0.08);
+}
+
+.abpssignin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.abpssignin-logo {
+  width: 51px;
+  height: 51px;
+  border-radius: 13px;
+  background: #071a35;
+  border: 2px solid #d6b36a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.abpssignin-brand div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.abpssignin-brand strong {
+  color: #071a35;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.7px;
+}
+
+.abpssignin-brand span {
+  color: #0877a9;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.abpssignin-heading {
+  margin-bottom: 27px;
+}
+
+.abpssignin-heading > span {
+  color: #0877a9;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.abpssignin-heading h1 {
+  margin: 7px 0 8px;
+  color: #071a35;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.abpssignin-heading p {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.abpssignin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.abpssignin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.abpssignin-field label {
+  color: #071a35;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.abpssignin-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.abpssignin-forgot {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #0877a9;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.abpssignin-forgot:hover {
+  color: #071a35;
+}
+
+.abpssignin-input {
+  height: 50px;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  background: #f8fafc;
+  border: 1px solid #dce4eb;
+  border-radius: 9px;
+  transition: 0.25s ease;
+}
+
+.abpssignin-input:focus-within {
+  background: #ffffff;
+  border-color: #0877a9;
+  box-shadow: 0 0 0 3px rgba(8, 119, 169, 0.09);
+}
+
+.abpssignin-input > svg {
+  color: #0877a9;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.abpssignin-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #071a35;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.abpssignin-input input::placeholder {
+  color: #9aa5b1;
+  font-weight: 500;
+}
+
+.abpssignin-eye {
+  width: 27px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #718096;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.abpssignin-eye:hover {
+  color: #0877a9;
+}
+
+.abpssignin-submit {
+  min-height: 51px;
+  margin-top: 3px;
+  border: none;
+  border-radius: 9px;
+  background: #d6b36a;
+  color: #071a35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.abpssignin-submit:hover {
+  background: #071a35;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(7, 26, 53, 0.15);
+}
+
+.abpssignin-submit svg {
+  font-size: 11px;
+}
+
+.abpssignin-divider {
+  margin: 28px 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.abpssignin-divider::before,
+.abpssignin-divider::after {
+  content: "";
+  height: 1px;
+  background: #e4e9ee;
+  flex: 1;
+}
+
+.abpssignin-divider span {
+  color: #9aa5b1;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+.abpssignin-create {
+  min-height: 47px;
+  border: 1px solid #0877a9;
+  border-radius: 9px;
+  color: #0877a9;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 13px;
+  font-weight: 850;
+  transition: 0.25s ease;
+}
+
+.abpssignin-create:hover {
+  background: #0877a9;
+  color: #ffffff;
+}
+
+.abpssignin-create svg {
+  font-size: 10px;
+}
+
+.abpssignin-back {
+  display: block;
+  width: fit-content;
+  margin: 19px auto 0;
+  color: #718096;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.abpssignin-back:hover {
+  color: #0877a9;
+}
+
+.abpssignin-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20000;
+  padding: 20px;
+  background: rgba(7, 26, 53, 0.58);
+  backdrop-filter: blur(7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abpssignin-popup {
+  width: min(420px, 100%);
+  padding: 34px 30px 30px;
+  border-radius: 18px;
+  background: #ffffff;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+  animation: abpssigninPopupIn 0.25s ease;
+}
+
+@keyframes abpssigninPopupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.abpssignin-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: #f1f5f8;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.abpssignin-popup-close:hover {
+  background: #071a35;
+  color: #ffffff;
+}
+
+.abpssignin-popup-icon {
+  width: 59px;
+  height: 59px;
+  margin: 0 auto 17px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.abpssignin-popup-error .abpssignin-popup-icon {
+  color: #c0392b;
+  background: #fff0ee;
+}
+
+.abpssignin-popup-success .abpssignin-popup-icon {
+  color: #0877a9;
+  background: #eaf7fb;
+}
+
+.abpssignin-popup h2 {
+  margin: 0 0 9px;
+  color: #071a35;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.abpssignin-popup p {
+  max-width: 340px;
+  margin: 0 auto;
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.abpssignin-popup-btn {
+  min-height: 44px;
+  min-width: 190px;
+  margin-top: 22px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 8px;
+  background: #071a35;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.abpssignin-popup-btn:hover {
+  background: #0877a9;
+}
+
+@media (max-width: 600px) {
+  .abpssignin-page {
+    padding: 25px 14px;
+  }
+
+  .abpssignin-card {
+    padding: 31px 23px;
+    border-radius: 18px;
+  }
+
+  .abpssignin-brand {
+    margin-bottom: 28px;
+  }
+
+  .abpssignin-heading h1 {
+    font-size: 31px;
+  }
+
+  .abpssignin-heading p {
+    font-size: 13px;
+  }
+
+  .abpssignin-popup {
+    padding: 30px 22px 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .abpssignin-card {
+    padding: 27px 17px;
+  }
+
+  .abpssignin-label-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

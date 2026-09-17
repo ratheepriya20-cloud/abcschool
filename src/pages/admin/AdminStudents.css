@@ -1,0 +1,241 @@
+.adminStudentsPage {
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #071a35;
+}
+
+.adminStudentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.adminStudentsEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0877a9;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.adminStudentsHeader h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.adminStudentsHeader p {
+  color: #64748b;
+  font-size: 17px;
+  margin: 10px 0 0;
+}
+
+.adminStudentsEdit,
+.adminStudentsSave {
+  border: 0;
+  background: #071a35;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.adminStudentsEdit:hover,
+.adminStudentsSave:hover {
+  background: #0877a9;
+}
+
+.adminStudentProfile {
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 22px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: auto 1fr 2fr;
+  align-items: center;
+  gap: 28px;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.07);
+}
+
+.adminStudentAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  background: #eef8fc;
+  color: #0877a9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 37px;
+}
+
+.adminStudentMainInfo span {
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.adminStudentMainInfo h2 {
+  font-size: 28px;
+  margin: 7px 0;
+}
+
+.adminStudentMainInfo p {
+  margin: 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.adminStudentDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.adminStudentDetails div {
+  background: #f8fbfd;
+  border: 1px solid #e4ebf0;
+  border-radius: 13px;
+  padding: 15px;
+}
+
+.adminStudentDetails span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.adminStudentDetails strong {
+  font-size: 15px;
+}
+
+.adminStudentsFormCard {
+  position: relative;
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.adminStudentsClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+.adminStudentsFormCard h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.adminStudentsFormCard > p {
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.adminStudentsFormCard form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.adminStudentsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.adminStudentsGrid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.adminStudentsGrid input {
+  padding: 13px;
+  border: 1px solid #cbd8e3;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+.adminStudentsSave {
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  .adminStudentProfile {
+    grid-template-columns: auto 1fr;
+  }
+
+  .adminStudentDetails {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .adminStudentsPage {
+    padding: 20px 15px;
+  }
+
+  .adminStudentsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adminStudentsHeader h1 {
+    font-size: 30px;
+  }
+
+  .adminStudentsEdit {
+    width: 100%;
+  }
+
+  .adminStudentProfile {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 25px 18px;
+  }
+
+  .adminStudentAvatar {
+    margin: auto;
+  }
+
+  .adminStudentDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .adminStudentsFormCard {
+    padding: 24px 18px;
+  }
+
+  .adminStudentsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adminStudentsSave {
+    width: 100%;
+  }
+}

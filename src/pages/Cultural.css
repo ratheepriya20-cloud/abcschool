@@ -1,0 +1,1763 @@
+/* =========================================================
+   AB PUBLIC SCHOOL - CULTURAL PAGE
+   PREMIUM LIGHT THEME
+========================================================= */
+
+.abcultural-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #071a35;
+}
+
+.abcultural-page main {
+  width: 100%;
+}
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.abcultural-container {
+  width: min(1240px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abcultural-hero {
+  position: relative;
+  min-height: 450px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 105px 24px 70px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(8, 119, 169, 0.13),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 88% 75%,
+      rgba(214, 179, 106, 0.16),
+      transparent 31%
+    ),
+    linear-gradient(
+      135deg,
+      #f5fafc 0%,
+      #ffffff 48%,
+      #f8fbfc 100%
+    );
+
+  border-bottom: 1px solid rgba(7, 26, 53, 0.08);
+}
+
+.abcultural-heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.05)
+    );
+
+  pointer-events: none;
+}
+
+.abcultural-heroGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.abcultural-glowOne {
+  width: 250px;
+  height: 250px;
+
+  top: -120px;
+  left: -70px;
+
+  border: 1px solid rgba(8, 119, 169, 0.15);
+}
+
+.abcultural-glowTwo {
+  width: 320px;
+  height: 320px;
+
+  right: -150px;
+  bottom: -190px;
+
+  border: 1px solid rgba(214, 179, 106, 0.18);
+}
+
+.abcultural-heroContent {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 920px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.abcultural-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+  margin-bottom: 18px;
+
+  color: #0877a9;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+}
+
+.abcultural-eyebrowLine {
+  width: 45px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.abcultural-hero h1 {
+  margin: 0 auto;
+
+  max-width: 850px;
+
+  font-size: clamp(40px, 5.3vw, 66px);
+  line-height: 1.06;
+
+  font-weight: 800;
+  letter-spacing: -1.7px;
+
+  color: #071a35;
+}
+
+.abcultural-hero h1 span {
+  display: block;
+  color: #0877a9;
+}
+
+.abcultural-heroContent > p {
+  max-width: 720px;
+
+  margin: 21px auto 0;
+
+  color: #596b7e;
+
+  font-size: 18px;
+  line-height: 1.72;
+  font-weight: 500;
+}
+
+/* =========================================================
+   HERO BOTTOM
+========================================================= */
+
+.abcultural-heroBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+.abcultural-heroLine {
+  width: 55px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+.abcultural-heroBottom span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #0877a9;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.abcultural-heroBottom svg {
+  color: #d6b36a;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abcultural-intro {
+  width: 100%;
+
+  padding: 72px 0;
+
+  background: #ffffff;
+}
+
+.abcultural-introGrid {
+  display: grid;
+
+  grid-template-columns: 210px minmax(0, 1fr);
+
+  gap: 65px;
+
+  align-items: start;
+}
+
+/* =========================================================
+   INTRO LABEL
+========================================================= */
+
+.abcultural-introLabel {
+  position: sticky;
+  top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 11px;
+}
+
+.abcultural-introLabel > span {
+  font-size: 48px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: rgba(8, 119, 169, 0.15);
+}
+
+.abcultural-introLabel > div {
+  width: 45px;
+  height: 3px;
+
+  background: #d6b36a;
+
+  border-radius: 20px;
+}
+
+.abcultural-introLabel p {
+  margin: 0;
+
+  color: #0877a9;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.abcultural-smallLabel {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #0877a9;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abcultural-introContent h2 {
+  margin: 0;
+
+  max-width: 700px;
+
+  color: #071a35;
+
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.12;
+
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.abcultural-introContent h2 span {
+  color: #0877a9;
+}
+
+.abcultural-introContent > p {
+  max-width: 760px;
+
+  margin: 18px 0 0;
+
+  color: #617286;
+
+  font-size: 17px;
+  line-height: 1.75;
+  font-weight: 500;
+}
+
+/* =========================================================
+   INTRO FEATURES
+========================================================= */
+
+.abcultural-introFeatures {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 27px;
+}
+
+.abcultural-introFeatures > div {
+  min-height: 72px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 15px;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 12px;
+
+  background: #f8fbfc;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.abcultural-introFeatures > div:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(8, 119, 169, 0.2);
+
+  box-shadow: 0 10px 25px rgba(7, 26, 53, 0.07);
+}
+
+.abcultural-introFeatures svg {
+  flex-shrink: 0;
+
+  font-size: 20px;
+
+  color: #0877a9;
+}
+
+.abcultural-introFeatures span {
+  color: #071a35;
+
+  font-size: 14px;
+  line-height: 1.3;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   CULTURAL ACTIVITIES SECTION
+========================================================= */
+
+.abcultural-activities {
+  width: 100%;
+
+  padding: 78px 0 85px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fafc 0%,
+      #ffffff 100%
+    );
+}
+
+/* =========================================================
+   SECTION HEADER
+   CENTERED LIKE GALLERY + EVENTS
+========================================================= */
+
+.abcultural-sectionHeader {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  margin-bottom: 42px;
+}
+
+.abcultural-sectionHeader > div {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.abcultural-sectionHeader .abcultural-smallLabel {
+  margin-bottom: 9px;
+}
+
+.abcultural-sectionHeader h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.12;
+
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.abcultural-sectionHeader h2 span {
+  color: #0877a9;
+}
+
+.abcultural-sectionHeader > p {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 14px auto 0;
+
+  text-align: center;
+
+  color: #617286;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   CULTURAL LIST
+========================================================= */
+
+.abcultural-list {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+/* =========================================================
+   CULTURAL CARD
+========================================================= */
+
+.abcultural-card {
+  width: 100%;
+  min-height: 370px;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(7, 26, 53, 0.07);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.abcultural-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 45px rgba(7, 26, 53, 0.12);
+}
+
+/* =========================================================
+   REVERSE CARD
+========================================================= */
+
+.abcultural-cardReverse .abcultural-imageBox {
+  order: 2;
+}
+
+.abcultural-cardReverse .abcultural-cardContent {
+  order: 1;
+}
+
+/* =========================================================
+   IMAGE BOX
+========================================================= */
+
+.abcultural-imageBox {
+  position: relative;
+
+  width: 100%;
+  min-height: 370px;
+
+  overflow: hidden;
+
+  background: #eaf2f5;
+}
+
+.abcultural-imageBox img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.65s ease;
+}
+
+.abcultural-card:hover .abcultural-imageBox img {
+  transform: scale(1.06);
+}
+
+.abcultural-imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(7, 26, 53, 0.1),
+      rgba(7, 26, 53, 0.65)
+    );
+}
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.abcultural-cardNumber {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.abcultural-imageIcon {
+  position: absolute;
+
+  right: 24px;
+  bottom: 24px;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  color: #0877a9;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.abcultural-cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 38px 42px;
+}
+
+.abcultural-cardSubtitle {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #0877a9;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.abcultural-cardContent h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.15;
+
+  font-weight: 800;
+}
+
+.abcultural-cardDivider {
+  width: 48px;
+  height: 3px;
+
+  margin: 16px 0;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+.abcultural-cardContent > p {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #617286;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.abcultural-points {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 10px 18px;
+
+  margin-top: 22px;
+}
+
+.abcultural-points > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.abcultural-points svg {
+  flex-shrink: 0;
+
+  font-size: 12px;
+
+  color: #d6b36a;
+}
+
+.abcultural-points span {
+  color: #263b51;
+
+  font-size: 14px;
+  line-height: 1.35;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.abcultural-benefits {
+  width: 100%;
+
+  padding: 82px 0;
+
+  background: #ffffff;
+}
+
+.abcultural-benefitsGrid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.abcultural-benefitsContent h2 {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.12;
+
+  font-weight: 800;
+}
+
+.abcultural-benefitsContent h2 span {
+  color: #0877a9;
+}
+
+.abcultural-benefitsContent > p {
+  max-width: 680px;
+
+  margin: 17px 0 0;
+
+  color: #617286;
+
+  font-size: 17px;
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   BENEFIT LIST
+========================================================= */
+
+.abcultural-benefitList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+
+  margin-top: 30px;
+}
+
+.abcultural-benefitList > div {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.abcultural-benefitIcon {
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #edf7fa;
+
+  color: #0877a9;
+
+  font-size: 18px;
+}
+
+.abcultural-benefitList h4 {
+  margin: 0 0 4px;
+
+  color: #071a35;
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.abcultural-benefitList p {
+  max-width: 560px;
+
+  margin: 0;
+
+  color: #6a7a8c;
+
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   BENEFIT VISUAL
+========================================================= */
+
+.abcultural-benefitVisual {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  padding: 24px;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(214, 179, 106, 0.2),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0b2b4c
+    );
+
+  box-shadow:
+    0 20px 45px rgba(7, 26, 53, 0.16);
+}
+
+.abcultural-visualCard {
+  min-height: 105px;
+
+  display: grid;
+
+  grid-template-columns: 52px 1fr;
+
+  grid-template-rows: auto auto;
+
+  column-gap: 15px;
+
+  align-items: center;
+
+  padding: 18px;
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.abcultural-visualCard svg {
+  grid-row: span 2;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px;
+
+  border-radius: 13px;
+
+  background: rgba(214, 179, 106, 0.14);
+
+  color: #e0c27e;
+
+  font-size: 20px;
+}
+
+.abcultural-visualCard strong {
+  color: #ffffff;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+.abcultural-visualCard span {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.abcultural-stats {
+  width: 100%;
+
+  padding: 0 0 78px;
+
+  background: #ffffff;
+}
+
+.abcultural-statsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: #f8fbfc;
+}
+
+.abcultural-statsGrid > div {
+  position: relative;
+
+  min-height: 140px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 20px;
+}
+
+.abcultural-statsGrid > div:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  top: 28px;
+  right: 0;
+
+  width: 1px;
+  height: calc(100% - 56px);
+
+  background: rgba(7, 26, 53, 0.1);
+}
+
+.abcultural-statsGrid strong {
+  color: #0877a9;
+
+  font-size: 38px;
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.abcultural-statsGrid span {
+  margin-top: 9px;
+
+  color: #596b7e;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.abcultural-quote {
+  width: 100%;
+
+  padding: 75px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fafc,
+      #ffffff
+    );
+}
+
+.abcultural-quoteBox {
+  position: relative;
+
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  padding: 45px 55px;
+
+  text-align: center;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(7, 26, 53, 0.07);
+}
+
+.abcultural-quoteMark {
+  display: block;
+
+  margin-bottom: 2px;
+
+  color: #d6b36a;
+
+  font-family: Georgia, serif;
+
+  font-size: 72px;
+  line-height: 0.7;
+}
+
+.abcultural-quoteBox p {
+  max-width: 780px;
+
+  margin: 15px auto 0;
+
+  color: #263b51;
+
+  font-size: clamp(20px, 2.4vw, 28px);
+  line-height: 1.55;
+
+  font-weight: 600;
+}
+
+.abcultural-quoteLine {
+  width: 55px;
+  height: 3px;
+
+  margin: 23px auto 12px;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+.abcultural-quoteBox > span:last-child {
+  color: #0877a9;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abcultural-cta {
+  width: 100%;
+
+  padding: 75px 0 85px;
+
+  background: #ffffff;
+}
+
+.abcultural-ctaBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding: 40px 45px;
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(214, 179, 106, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a3152
+    );
+
+  box-shadow:
+    0 18px 45px rgba(7, 26, 53, 0.16);
+}
+
+.abcultural-ctaBox > div {
+  max-width: 760px;
+}
+
+.abcultural-ctaBox .abcultural-smallLabel {
+  color: #e0c27e;
+}
+
+.abcultural-ctaBox h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.abcultural-ctaBox h2 span {
+  color: #e0c27e;
+}
+
+.abcultural-ctaBox p {
+  max-width: 680px;
+
+  margin: 14px 0 0;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 16px;
+  line-height: 1.65;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.abcultural-ctaBtn {
+  flex-shrink: 0;
+
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 14px 22px;
+
+  border: 1px solid #e0c27e;
+  border-radius: 10px;
+
+  background: #e0c27e;
+  color: #071a35;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.abcultural-ctaBtn:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.abcultural-ctaBtn svg {
+  font-size: 14px;
+
+  transition: transform 0.25s ease;
+}
+
+.abcultural-ctaBtn:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .abcultural-container {
+    width: min(100% - 40px, 900px);
+  }
+
+  .abcultural-hero {
+    min-height: 420px;
+  }
+
+  .abcultural-introGrid {
+    grid-template-columns: 150px minmax(0, 1fr);
+
+    gap: 40px;
+  }
+
+  .abcultural-benefitsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .abcultural-benefitVisual {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .abcultural-cardContent {
+    padding: 32px;
+  }
+
+  .abcultural-statsGrid strong {
+    font-size: 34px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abcultural-container {
+    width: calc(100% - 30px);
+  }
+
+  /* HERO */
+
+  .abcultural-hero {
+    min-height: 400px;
+
+    padding: 100px 16px 55px;
+  }
+
+  .abcultural-eyebrow {
+    gap: 9px;
+
+    font-size: 11px;
+    letter-spacing: 1.8px;
+  }
+
+  .abcultural-eyebrowLine {
+    width: 28px;
+  }
+
+  .abcultural-hero h1 {
+    font-size: 39px;
+    line-height: 1.1;
+
+    letter-spacing: -0.8px;
+  }
+
+  .abcultural-heroContent > p {
+    margin-top: 17px;
+
+    font-size: 16px;
+    line-height: 1.62;
+  }
+
+  .abcultural-heroBottom {
+    gap: 9px;
+
+    margin-top: 22px;
+  }
+
+  .abcultural-heroLine {
+    width: 27px;
+  }
+
+  .abcultural-heroBottom span {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  /* INTRO */
+
+  .abcultural-intro {
+    padding: 55px 0;
+  }
+
+  .abcultural-introGrid {
+    display: block;
+  }
+
+  .abcultural-introLabel {
+    position: static;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+  }
+
+  .abcultural-introLabel > span {
+    font-size: 38px;
+  }
+
+  .abcultural-introLabel > div {
+    width: 38px;
+  }
+
+  .abcultural-introLabel p {
+    font-size: 11px;
+  }
+
+  .abcultural-introContent {
+    text-align: center;
+  }
+
+  .abcultural-introContent .abcultural-smallLabel {
+    margin-bottom: 8px;
+  }
+
+  .abcultural-introContent h2 {
+    font-size: 34px;
+  }
+
+  .abcultural-introContent > p {
+    margin: 15px auto 0;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .abcultural-introFeatures {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 24px;
+  }
+
+  .abcultural-introFeatures > div {
+    justify-content: center;
+  }
+
+  /* ACTIVITIES */
+
+  .abcultural-activities {
+    padding: 58px 0 65px;
+  }
+
+  .abcultural-sectionHeader {
+    margin-bottom: 30px;
+  }
+
+  .abcultural-smallLabel {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+  }
+
+  .abcultural-sectionHeader h2 {
+    font-size: 34px;
+  }
+
+  .abcultural-sectionHeader > p {
+    margin-top: 12px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* CARDS */
+
+  .abcultural-list {
+    gap: 18px;
+  }
+
+  .abcultural-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 0;
+
+    border-radius: 17px;
+  }
+
+  .abcultural-cardReverse .abcultural-imageBox {
+    order: 1;
+  }
+
+  .abcultural-cardReverse .abcultural-cardContent {
+    order: 2;
+  }
+
+  .abcultural-imageBox {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .abcultural-cardNumber {
+    top: 15px;
+    left: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    font-size: 13px;
+  }
+
+  .abcultural-imageIcon {
+    right: 15px;
+    bottom: 15px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+  }
+
+  .abcultural-cardContent {
+    padding: 26px 22px 28px;
+  }
+
+  .abcultural-cardSubtitle {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .abcultural-cardContent h3 {
+    font-size: 29px;
+  }
+
+  .abcultural-cardDivider {
+    margin: 13px 0;
+  }
+
+  .abcultural-cardContent > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .abcultural-points {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    margin-top: 19px;
+  }
+
+  .abcultural-points span {
+    font-size: 14px;
+  }
+
+  /* BENEFITS */
+
+  .abcultural-benefits {
+    padding: 62px 0;
+  }
+
+  .abcultural-benefitsContent {
+    text-align: center;
+  }
+
+  .abcultural-benefitsContent h2 {
+    font-size: 34px;
+  }
+
+  .abcultural-benefitsContent > p {
+    margin: 15px auto 0;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .abcultural-benefitList {
+    margin-top: 27px;
+
+    text-align: left;
+  }
+
+  .abcultural-benefitList > div {
+    gap: 12px;
+  }
+
+  .abcultural-benefitIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .abcultural-benefitList h4 {
+    font-size: 17px;
+  }
+
+  .abcultural-benefitList p {
+    font-size: 13px;
+  }
+
+  /* VISUAL */
+
+  .abcultural-benefitVisual {
+    gap: 11px;
+
+    padding: 15px;
+
+    border-radius: 18px;
+  }
+
+  .abcultural-visualCard {
+    min-height: 88px;
+
+    padding: 14px;
+
+    grid-template-columns: 45px 1fr;
+
+    column-gap: 12px;
+  }
+
+  .abcultural-visualCard svg {
+    width: 45px;
+    height: 45px;
+
+    padding: 12px;
+  }
+
+  .abcultural-visualCard strong {
+    font-size: 17px;
+  }
+
+  .abcultural-visualCard span {
+    font-size: 13px;
+  }
+
+  /* STATS */
+
+  .abcultural-stats {
+    padding-bottom: 60px;
+  }
+
+  .abcultural-statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+
+    border-radius: 15px;
+  }
+
+  .abcultural-statsGrid > div {
+    min-height: 115px;
+
+    padding: 16px;
+  }
+
+  .abcultural-statsGrid > div:nth-child(2)::after {
+    display: none;
+  }
+
+  .abcultural-statsGrid > div:nth-child(1)::after,
+  .abcultural-statsGrid > div:nth-child(3)::after {
+    top: 20px;
+    height: calc(100% - 40px);
+  }
+
+  .abcultural-statsGrid > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(7, 26, 53, 0.1);
+  }
+
+  .abcultural-statsGrid strong {
+    font-size: 31px;
+  }
+
+  .abcultural-statsGrid span {
+    margin-top: 7px;
+
+    font-size: 12px;
+  }
+
+  /* QUOTE */
+
+  .abcultural-quote {
+    padding: 58px 0;
+  }
+
+  .abcultural-quoteBox {
+    padding: 34px 20px;
+
+    border-radius: 17px;
+  }
+
+  .abcultural-quoteMark {
+    font-size: 58px;
+  }
+
+  .abcultural-quoteBox p {
+    margin-top: 12px;
+
+    font-size: 19px;
+    line-height: 1.55;
+  }
+
+  /* CTA */
+
+  .abcultural-cta {
+    padding: 60px 0 68px;
+  }
+
+  .abcultural-ctaBox {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 32px 22px;
+
+    text-align: center;
+
+    border-radius: 18px;
+  }
+
+  .abcultural-ctaBox h2 {
+    font-size: 34px;
+  }
+
+  .abcultural-ctaBox p {
+    margin: 12px auto 0;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .abcultural-ctaBtn {
+    width: 100%;
+
+    min-height: 52px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .abcultural-container {
+    width: calc(100% - 24px);
+  }
+
+  .abcultural-hero {
+    min-height: 385px;
+
+    padding: 95px 13px 48px;
+  }
+
+  .abcultural-hero h1 {
+    font-size: 35px;
+  }
+
+  .abcultural-heroContent > p {
+    font-size: 15px;
+  }
+
+  .abcultural-heroBottom span {
+    font-size: 8px;
+  }
+
+  .abcultural-introContent h2,
+  .abcultural-sectionHeader h2,
+  .abcultural-benefitsContent h2 {
+    font-size: 30px;
+  }
+
+  .abcultural-cardContent h3 {
+    font-size: 26px;
+  }
+
+  .abcultural-imageBox {
+    height: 225px;
+    min-height: 225px;
+  }
+
+  .abcultural-cardContent {
+    padding: 23px 18px 25px;
+  }
+
+  .abcultural-statsGrid strong {
+    font-size: 28px;
+  }
+
+  .abcultural-statsGrid span {
+    font-size: 11px;
+  }
+
+  .abcultural-quoteBox p {
+    font-size: 18px;
+  }
+
+  .abcultural-ctaBox h2 {
+    font-size: 30px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.abcultural-ctaBtn:focus-visible {
+  outline: 3px solid rgba(8, 119, 169, 0.3);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .abcultural-card,
+  .abcultural-imageBox img,
+  .abcultural-introFeatures > div,
+  .abcultural-ctaBtn,
+  .abcultural-ctaBtn svg {
+    transition: none;
+  }
+}

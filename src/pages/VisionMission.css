@@ -1,0 +1,1119 @@
+
+
+.vmPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f5ed;
+  color: #071a35;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+
+.vmHero {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0px 65px;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(65, 174, 220, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 70%, rgba(212, 176, 102, 0.15), transparent 30%),
+    #071a35;
+}
+
+.vmHero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(220, 190, 125, 0.18);
+  border-radius: 50%;
+  top: -230px;
+  left: -120px;
+}
+
+.vmHero::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid rgba(90, 190, 225, 0.14);
+  border-radius: 50%;
+  right: -130px;
+  bottom: -190px;
+}
+
+.vmHeroInner {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+}
+
+.vmHeroEyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #e4c77f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.vmHero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1.02;
+  letter-spacing: -1.8px;
+}
+
+.vmHero h1 span {
+  display: inline;
+  margin-left: 8px;
+  margin-top: 7px;
+  color: #69c5e8;
+}
+
+.vmHeroInner p {
+  max-width: 740px;
+  margin: 25px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.vmHeroDivider {
+  width: 75px;
+  height: 2px;
+  margin: 28px auto 0;
+  background: #d8b76a;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.vmMain {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.vmIntro {
+  max-width: 1000px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.vmIntro > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #1685b5;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.vmIntro h2 {
+  margin: 0;
+  color: #071a35;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 4vw, 50px);
+  line-height: 1.12;
+}
+
+.vmIntro h2 strong {
+  display: inline;
+  margin-left: 8px;
+  margin-top: 5px;
+  color: #0877a9;
+}
+
+.vmIntro p {
+  max-width: 760px;
+  margin: 13px auto 0;
+  color: #526275;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   VISION / MISSION CARDS
+===================================================== */
+
+.vmCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.vmCard {
+  position: relative;
+  min-height: 330px;
+  padding: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(7, 26, 53, 0.08);
+  transition: 0.35s ease;
+}
+
+.vmCard:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 55px rgba(7, 26, 53, 0.13);
+}
+
+.vmVisionCard {
+  border-top: 4px solid #0877a9;
+}
+
+.vmMissionCard {
+  border-top: 4px solid #d4b066;
+}
+
+.vmCardNumber {
+  position: absolute;
+  top: 22px;
+  right: 27px;
+  color: rgba(7, 26, 53, 0.08);
+  font-family: "Playfair Display", serif;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.vmCardIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-radius: 13px;
+  background: #071a35;
+  color: #e4c77f;
+  font-size: 25px;
+}
+
+.vmCardLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: #1685b5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vmMissionCard .vmCardLabel {
+  color: #ad8539;
+}
+
+.vmCard h3 {
+  max-width: 700px;
+  margin: 0;
+  color: #071a35;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.vmCard h3 em {
+  display:inline;
+  margin-left: 8px;
+  margin-top: 3px;
+  color: #0877a9;
+  font-style: normal;
+}
+
+.vmMissionCard h3 em {
+  color: #b58a3c;
+}
+
+.vmCard p {
+  max-width: 520px;
+  margin: 15px 0 20px;
+  color: #59697b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.vmCardLine {
+  width: 100%;
+  height: 1px;
+  background: #e7e3da;
+}
+
+.vmCardBottom {
+  display: block;
+  margin-top: 18px;
+  color: #071a35;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   VALUES
+===================================================== */
+
+.vmValues {
+  margin-top: 59px;
+}
+
+.vmValuesHeading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.vmValuesHeading > span {
+  color: #1685b5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.vmValuesHeading h2 {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+}
+
+.vmValuesHeading strong {
+  color: #0877a9;
+}
+
+.vmValuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.vmValueItem {
+  padding: 27px 22px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #ebe5d9;
+  transition: 0.3s ease;
+}
+
+.vmValueItem:hover {
+  transform: translateY(-5px);
+  border-color: #d5b66f;
+}
+
+.vmValueItem b {
+  color: #d0ad5e;
+  font-size: 15px;
+}
+
+.vmValueItem h3 {
+  margin: 12px 0 8px;
+  color: #071a35;
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.vmValueItem p {
+  margin: 0;
+  color: #657386;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.vmCTA {
+  margin-top: 80px;
+  padding: 30px 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  border-radius: 18px;
+  background: #071a35;
+}
+
+.vmCTAText span,
+.vmCTA > div > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #e1bf72;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.vmCTA h3 {
+  margin: 0;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.vmCTA h3 strong {
+  margin-left: 6px;
+  color: #69c5e8;
+}
+
+.vmCTA button {
+  flex-shrink: 0;
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #d8b76a;
+  color: #071a35;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.vmCTA button:hover {
+  background: #f0d895;
+  transform: translateY(-2px);
+}
+
+.vmCTA button span {
+  margin-left: 8px;
+}
+
+
+
+@media (max-width: 1100px) {
+
+  .vmMain {
+    width: 92%;
+    padding: 55px 0;
+  }
+
+  .vmHero {
+    min-height: 430px;
+    padding: 65px 20px;
+  }
+
+  .vmHero h1 {
+    font-size: 58px;
+  }
+
+  .vmHeroInner p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .vmIntro h2 {
+    font-size: 43px;
+  }
+
+  .vmIntro p {
+    font-size: 17px;
+  }
+
+  .vmCard h3 {
+    font-size: 32px;
+  }
+
+  .vmCard p {
+    font-size: 16px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 24px;
+  }
+
+  .vmValueItem p {
+    font-size: 15px;
+  }
+
+  .vmCTA h3 {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================
+   900px
+========================= */
+
+@media (max-width: 900px) {
+
+  .vmHero h1 {
+    font-size: 52px;
+  }
+
+  .vmCards {
+    grid-template-columns: 1fr;
+  }
+
+  .vmValuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vmCTA {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+  }
+
+  .vmCTA button {
+    min-width: 190px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  .vmHero {
+    min-height: 450px;
+    padding: 70px 18px;
+  }
+
+  .vmHeroInner {
+    width: 100%;
+  }
+
+  .vmHeroEyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .vmHero h1 {
+    font-size: 47px;
+    line-height: 1.08;
+  }
+
+  .vmHero h1 span {
+    margin-left: 5px;
+  }
+
+  .vmHeroInner p {
+    width: 95%;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .vmMain {
+    width: 92%;
+    padding: 55px 0;
+  }
+
+  .vmIntro > span {
+    font-size: 12px;
+  }
+
+  .vmIntro h2 {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .vmIntro p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .vmCard {
+    min-height: auto;
+    padding: 30px 25px;
+  }
+
+  .vmCardIcon {
+    width: 52px;
+    height: 52px;
+    font-size: 27px;
+  }
+
+  .vmCardLabel {
+    font-size: 13px;
+  }
+
+  .vmCard h3 {
+    font-size: 31px;
+  }
+
+  .vmCard p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .vmCardBottom {
+    font-size: 13px;
+  }
+
+  .vmValuesHeading > span {
+    font-size: 12px;
+  }
+
+  .vmValuesHeading h2 {
+    font-size: 34px;
+  }
+
+  .vmValueItem {
+    padding: 25px 20px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 24px;
+  }
+
+  .vmValueItem p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .vmCTA {
+    margin-top: 55px;
+    padding: 30px 22px;
+  }
+
+  .vmCTA h3 {
+    font-size: 27px;
+  }
+
+  .vmCTA > div > span {
+    font-size: 11px;
+  }
+
+  .vmCTA button {
+    width: 100%;
+    max-width: 240px;
+    min-height: 48px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .vmHero {
+    min-height: 440px;
+    padding: 65px 15px;
+  }
+
+  .vmHeroEyebrow {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+
+  .vmHero h1 {
+    font-size: 43px;
+  }
+
+  .vmHero h1 span {
+    display: inline;
+    white-space: nowrap;
+  }
+
+  .vmHeroInner p {
+    width: 96%;
+    font-size: 17px;
+  }
+
+  .vmMain {
+    width: 94%;
+    padding: 48px 0;
+  }
+
+  .vmIntro h2 {
+    font-size: 35px;
+  }
+
+  .vmIntro p {
+    font-size: 16px;
+  }
+
+  .vmCard {
+    padding: 27px 22px;
+  }
+
+  .vmCard h3 {
+    font-size: 29px;
+  }
+
+  .vmCard p {
+    font-size: 16px;
+  }
+
+  .vmValuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .vmValuesHeading h2 {
+    font-size: 32px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 24px;
+  }
+
+  .vmValueItem p {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================
+   480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .vmHero {
+    min-height: 430px;
+    padding: 60px 12px;
+  }
+
+  .vmHeroEyebrow {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .vmHero h1 {
+    font-size: 39px;
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+  }
+
+  .vmHero h1 span {
+    margin-left: 4px;
+    white-space: nowrap;
+  }
+
+  .vmHeroInner p {
+    width: 97%;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .vmHeroDivider {
+    margin-top: 24px;
+  }
+
+
+  .vmMain {
+    width: 94%;
+    padding: 48px 0;
+  }
+
+
+  /* INTRO */
+
+  .vmIntro {
+    margin-bottom: 35px;
+  }
+
+  .vmIntro > span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .vmIntro h2 {
+    font-size: 32px;
+  }
+
+  .vmIntro p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+
+  /* CARDS */
+
+  .vmCard {
+    padding: 25px 19px;
+    border-radius: 17px;
+  }
+
+  .vmCardNumber {
+    font-size: 48px;
+    right: 20px;
+  }
+
+  .vmCardIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .vmCardLabel {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .vmCard h3 {
+    font-size: 27px;
+    line-height: 1.12;
+  }
+
+  .vmCard h3 em {
+    margin-left: 5px;
+  }
+
+  .vmCard p {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .vmCardBottom {
+    font-size: 12px;
+  }
+
+
+  /* VALUES */
+
+  .vmValues {
+    margin-top: 50px;
+  }
+
+  .vmValuesHeading {
+    margin-bottom: 28px;
+  }
+
+  .vmValuesHeading > span {
+    font-size: 11px;
+  }
+
+  .vmValuesHeading h2 {
+    font-size: 30px;
+  }
+
+  .vmValueItem {
+    padding: 23px 19px;
+  }
+
+  .vmValueItem b {
+    font-size: 16px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 23px;
+  }
+
+  .vmValueItem p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+
+  /* CTA */
+
+  .vmCTA {
+    margin-top: 48px;
+    padding: 27px 18px;
+    border-radius: 16px;
+    gap: 18px;
+  }
+
+  .vmCTAText span,
+  .vmCTA > div > span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .vmCTA h3 {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .vmCTA h3 strong {
+    margin-left: 4px;
+  }
+
+  .vmCTA button {
+    width: 100%;
+    max-width: 100%;
+    min-height: 49px;
+    font-size: 14px;
+  }
+}
+
+
+/* =========================
+   412px
+========================= */
+
+@media (max-width: 412px) {
+
+  .vmHero {
+    min-height: 420px;
+    padding: 58px 10px;
+  }
+
+  .vmHero h1 {
+    font-size: 36px;
+  }
+
+  .vmHeroInner p {
+    font-size: 16px;
+  }
+
+  .vmIntro h2 {
+    font-size: 30px;
+  }
+
+  .vmIntro p {
+    font-size: 15.5px;
+  }
+
+  .vmCard h3 {
+    font-size: 25px;
+  }
+
+  .vmCard p {
+    font-size: 15px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 22px;
+  }
+
+  .vmValueItem p {
+    font-size: 14.5px;
+  }
+
+  .vmCTA h3 {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================
+   390px
+========================= */
+
+@media (max-width: 390px) {
+
+  .vmHero h1 {
+    font-size: 34px;
+  }
+
+  .vmHeroInner p {
+    font-size: 15.5px;
+  }
+
+  .vmIntro h2 {
+    font-size: 28px;
+  }
+
+  .vmIntro p {
+    font-size: 15px;
+  }
+
+  .vmCard {
+    padding: 23px 17px;
+  }
+
+  .vmCard h3 {
+    font-size: 24px;
+  }
+
+  .vmCard p {
+    font-size: 14.5px;
+  }
+
+  .vmValuesHeading h2 {
+    font-size: 28px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 21px;
+  }
+
+  .vmValueItem p {
+    font-size: 14px;
+  }
+
+  .vmCTA h3 {
+    font-size: 22px;
+  }
+}
+
+
+/* =========================
+   360px
+========================= */
+
+@media (max-width: 360px) {
+
+  .vmHero {
+    min-height: 410px;
+    padding: 55px 8px;
+  }
+
+  .vmHero h1 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .vmHero h1 span {
+    margin-left: 3px;
+    white-space: nowrap;
+  }
+
+  .vmHeroInner p {
+    width: 97%;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .vmMain {
+    width: 95%;
+    padding: 44px 0;
+  }
+
+  .vmIntro h2 {
+    font-size: 27px;
+  }
+
+  .vmIntro p {
+    font-size: 14.5px;
+  }
+
+  .vmCard {
+    padding: 22px 16px;
+  }
+
+  .vmCardIcon {
+    width: 47px;
+    height: 47px;
+  }
+
+  .vmCard h3 {
+    font-size: 23px;
+  }
+
+  .vmCard p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .vmValueItem {
+    padding: 21px 16px;
+  }
+
+  .vmValueItem b {
+    font-size: 15px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 20px;
+  }
+
+  .vmValueItem p {
+    font-size: 13.5px;
+  }
+
+  .vmCTA {
+    padding: 24px 15px;
+  }
+
+  .vmCTA h3 {
+    font-size: 21px;
+  }
+
+  .vmCTA button {
+    min-height: 47px;
+    font-size: 13px;
+  }
+}
+
+
+/* =========================
+   320px
+========================= */
+
+@media (max-width: 320px) {
+
+  .vmHero h1 {
+    font-size: 29px;
+  }
+
+  .vmHeroInner p {
+    font-size: 14px;
+  }
+
+  .vmIntro h2 {
+    font-size: 25px;
+  }
+
+  .vmIntro p {
+    font-size: 14px;
+  }
+
+  .vmCard h3 {
+    font-size: 21px;
+  }
+
+  .vmCard p {
+    font-size: 13px;
+  }
+
+  .vmValueItem h3 {
+    font-size: 19px;
+  }
+
+  .vmValueItem p {
+    font-size: 12.5px;
+  }
+
+  .vmCTA h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.vmPage,
+.vmPage * {
+  box-sizing: border-box;
+}
+
+.vmPage {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.vmPage img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* H2 / SPAN INLINE */
+
+.vmHero h1 span,
+.vmIntro h2 strong,
+.vmCard h3 em,
+.vmCTA h3 strong {
+  display: inline;
+}
+
+
+/* CTA / BUTTON TEXT */
+
+.vmCTA button {
+  white-space: nowrap;
+}
+

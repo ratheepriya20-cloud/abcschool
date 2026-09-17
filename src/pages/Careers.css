@@ -1,0 +1,1653 @@
+/* =========================================================
+   AB PUBLIC SCHOOL - CAREER PAGE
+   RESPONSIVE + FIXED NAVBAR SAFE
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.abcareer-page {
+  width: 100%;
+  min-width: 0;
+  margin-top: 70px;
+  overflow: hidden;
+  background: #ffffff;
+  color: #071a35;
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abcareer-hero {
+  position: relative;
+  width: 100%;
+  min-height: 470px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 75px 6%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(7, 26, 53, 0.97),
+      rgba(8, 119, 169, 0.72)
+    ),
+    url("../assets/school-campus.jpg") center/cover no-repeat;
+
+  overflow: hidden;
+}
+
+
+/* Decorative circle */
+
+.abcareer-hero::before {
+  content: "";
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -150px;
+  top: -170px;
+
+  border: 1px solid rgba(224, 194, 126, 0.4);
+  border-radius: 50%;
+}
+
+
+/* Decorative circle */
+
+.abcareer-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  left: -120px;
+  bottom: -120px;
+
+  border: 1px solid rgba(224, 194, 126, 0.3);
+  border-radius: 50%;
+}
+
+
+/* Overlay */
+
+.abcareer-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 53, 0.96),
+      rgba(7, 26, 53, 0.75),
+      rgba(8, 119, 169, 0.35)
+    );
+}
+
+
+/* Hero Content */
+
+.abcareer-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+  color: #ffffff;
+}
+
+
+/* Eyebrow */
+
+.abcareer-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 9px 17px;
+  margin-bottom: 19px;
+
+  border: 1px solid rgba(224, 194, 126, 0.65);
+  border-radius: 30px;
+
+  color: #e0c27e;
+  background: rgba(255, 255, 255, 0.05);
+
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+
+/* Hero Heading */
+
+.abcareer-hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(3rem, 5vw, 4.7rem);
+  line-height: 1.05;
+
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.abcareer-hero-content h1 span {
+  color: #e0c27e;
+}
+
+
+/* Hero Paragraph */
+
+.abcareer-hero-content p {
+  max-width: 700px;
+
+  margin: 21px auto 28px;
+
+  color: #edf7fb;
+
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+
+/* Hero Button */
+
+.abcareer-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 50px;
+  padding: 0 25px;
+
+  border-radius: 8px;
+
+  background: #e0c27e;
+  color: #071a35;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+  font-weight: 900;
+
+  transition: 0.3s ease;
+}
+
+.abcareer-hero-btn:hover {
+  background: #ffffff;
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   COMMON SECTION
+========================================================= */
+
+.abcareer-intro {
+  padding: 80px 6%;
+  background: #ffffff;
+}
+
+
+.abcareer-section-heading {
+  width: 100%;
+  max-width: 780px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+
+.abcareer-section-heading span,
+.abcareer-application-heading span,
+.abcareer-values-content > span {
+  display: inline-block;
+
+  color: #0877a9;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  letter-spacing: 1.8px;
+}
+
+
+.abcareer-section-heading h2,
+.abcareer-application-heading h2 {
+  margin: 11px 0 15px;
+
+  color: #071a35;
+
+  font-size: clamp(2.25rem, 3.5vw, 3.1rem);
+  line-height: 1.12;
+
+  font-weight: 900;
+}
+
+
+.abcareer-section-heading p,
+.abcareer-application-heading p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #657687;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.abcareer-benefit-grid {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+.abcareer-benefit-card {
+  min-height: 225px;
+
+  padding: 27px 21px;
+
+  border: 1px solid #e2ebf0;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 8px 25px rgba(7, 26, 53, 0.06);
+
+  transition: 0.3s ease;
+}
+
+
+.abcareer-benefit-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #b9d7e4;
+
+  box-shadow: 0 16px 35px rgba(7, 26, 53, 0.1);
+}
+
+
+.abcareer-benefit-icon {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eef8fc;
+  color: #0877a9;
+
+  font-size: 1.45rem;
+}
+
+
+.abcareer-benefit-card h3 {
+  margin: 0 0 10px;
+
+  color: #071a35;
+
+  font-size: 1.18rem;
+  font-weight: 900;
+}
+
+
+.abcareer-benefit-card p {
+  margin: 0;
+
+  color: #697b8b;
+
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   OPENINGS
+========================================================= */
+
+.abcareer-openings {
+  padding: 80px 6%;
+  background: #f5f9fc;
+}
+
+
+.abcareer-job-grid {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.abcareer-job-card {
+  padding: 25px;
+
+  border: 1px solid #dfe9ef;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow: 0 8px 25px rgba(7, 26, 53, 0.06);
+
+  transition: 0.3s ease;
+}
+
+
+.abcareer-job-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #0877a9;
+
+  box-shadow: 0 17px 35px rgba(7, 26, 53, 0.11);
+}
+
+
+.abcareer-job-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+}
+
+
+.abcareer-job-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  background: #071a35;
+  color: #e0c27e;
+
+  font-size: 1.25rem;
+}
+
+
+.abcareer-job-type {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: #eef8fc;
+  color: #0877a9;
+
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+
+.abcareer-job-card h3 {
+  margin: 18px 0 6px;
+
+  color: #071a35;
+
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+
+.abcareer-department {
+  margin: 0;
+
+  color: #0877a9;
+
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+
+.abcareer-job-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin: 18px 0;
+  padding: 14px 0;
+
+  border-top: 1px solid #e7edf1;
+  border-bottom: 1px solid #e7edf1;
+}
+
+
+.abcareer-job-info span {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #647586;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+
+.abcareer-job-info svg {
+  flex-shrink: 0;
+  color: #0877a9;
+}
+
+
+.abcareer-apply-btn {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #071a35;
+  color: #ffffff;
+
+  font-size: 0.98rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.abcareer-apply-btn:hover {
+  background: #0877a9;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.abcareer-values {
+  width: 100%;
+  max-width: 1280px;
+
+  margin: auto;
+
+  padding: 85px 6%;
+
+  display: grid;
+
+  grid-template-columns: 1.35fr 0.75fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+
+.abcareer-values-content h2 {
+  max-width: 650px;
+
+  margin: 10px 0 16px;
+
+  color: #071a35;
+
+  font-size: clamp(2.25rem, 3.5vw, 3.1rem);
+  line-height: 1.12;
+
+  font-weight: 900;
+}
+
+
+.abcareer-values-content h2 strong {
+  color: #0877a9;
+}
+
+
+.abcareer-values-content > p {
+  max-width: 650px;
+
+  margin: 0 0 27px;
+
+  color: #637587;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+
+.abcareer-check-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 14px 25px;
+}
+
+
+.abcareer-check-list div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: #263c52;
+
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+
+.abcareer-check-list svg {
+  flex-shrink: 0;
+  color: #0877a9;
+}
+
+
+.abcareer-values-card {
+  padding: 40px 29px;
+
+  border-radius: 19px;
+
+  background: linear-gradient(
+    145deg,
+    #071a35,
+    #0877a9
+  );
+
+  color: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 20px 45px rgba(7, 26, 53, 0.18);
+}
+
+
+.abcareer-values-card-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(224, 194, 126, 0.4);
+
+  border-radius: 50%;
+
+  color: #e0c27e;
+
+  font-size: 1.8rem;
+
+  background: rgba(224, 194, 126, 0.1);
+}
+
+
+.abcareer-values-card h3 {
+  margin: 0 0 12px;
+
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+
+.abcareer-values-card p {
+  max-width: 310px;
+
+  margin: 0 auto 19px;
+
+  color: #edf7fb;
+
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+
+.abcareer-values-card > span {
+  color: #e0c27e;
+
+  font-size: 0.98rem;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   APPLICATION
+========================================================= */
+
+.abcareer-application {
+  padding: 80px 6%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f4f9fc,
+      #ffffff
+    );
+}
+
+
+.abcareer-application-heading {
+  max-width: 750px;
+
+  margin: 0 auto 38px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.abcareer-form {
+  width: 100%;
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 29px;
+
+  border: 1px solid #dce7ed;
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow: 0 15px 45px rgba(7, 26, 53, 0.09);
+}
+
+
+.abcareer-form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px 20px;
+}
+
+
+.abcareer-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  min-width: 0;
+}
+
+
+.abcareer-full-field {
+  grid-column: 1 / -1;
+}
+
+
+.abcareer-field label {
+  color: #071a35;
+
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+
+.abcareer-field input,
+.abcareer-field select,
+.abcareer-field textarea {
+  width: 100%;
+  max-width: 100%;
+
+  border: 1px solid #d7e2e8;
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #fbfdff;
+  color: #071a35;
+
+  font-family: inherit;
+
+  font-size: 0.96rem;
+
+  transition: 0.25s ease;
+}
+
+
+.abcareer-field input,
+.abcareer-field select {
+  height: 45px;
+
+  padding: 0 13px;
+}
+
+
+.abcareer-field textarea {
+  min-height: 95px;
+
+  padding: 11px 13px;
+
+  resize: vertical;
+}
+
+
+.abcareer-field input::placeholder,
+.abcareer-field textarea::placeholder {
+  color: #9aa8b3;
+}
+
+
+.abcareer-field input:focus,
+.abcareer-field select:focus,
+.abcareer-field textarea:focus {
+  border-color: #0877a9;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(8, 119, 169, 0.08);
+}
+
+
+.abcareer-field small {
+  color: #d93636;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   RESUME
+========================================================= */
+
+.abcareer-resume-box {
+  margin-top: 19px;
+
+  padding: 13px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border: 1px dashed #b9cbd5;
+  border-radius: 8px;
+
+  background: #f7fbfd;
+}
+
+
+.abcareer-resume-box > svg {
+  flex-shrink: 0;
+
+  color: #0877a9;
+
+  font-size: 1.4rem;
+}
+
+
+.abcareer-resume-box strong {
+  color: #071a35;
+
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+
+.abcareer-resume-box p {
+  margin: 3px 0 0;
+
+  color: #748493;
+
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.abcareer-submit-btn {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9,
+      #071a35
+    );
+
+  color: #ffffff;
+
+  font-size: 0.98rem;
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.abcareer-submit-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(7, 26, 53, 0.18);
+}
+
+
+/* =========================================================
+   SUCCESS POPUP
+========================================================= */
+
+.abcareer-popup-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px;
+
+  background: rgba(4, 17, 34, 0.72);
+
+  backdrop-filter: blur(6px);
+}
+
+
+.abcareer-success-popup {
+  position: relative;
+
+  width: min(420px, 100%);
+
+  padding: 32px 27px 26px;
+
+  border: 1px solid #e0e9ee;
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.25);
+
+  animation: abcareerPopup 0.3s ease;
+}
+
+
+@keyframes abcareerPopup {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.abcareer-popup-close {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+  border-radius: 50%;
+
+  background: #f1f5f7;
+  color: #657686;
+
+  cursor: pointer;
+}
+
+
+.abcareer-success-icon {
+  width: 66px;
+  height: 66px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eef8fc;
+  color: #0877a9;
+
+  font-size: 2.4rem;
+}
+
+
+.abcareer-success-popup h2 {
+  margin: 0 0 10px;
+
+  color: #071a35;
+
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+
+.abcareer-success-popup > p {
+  margin: 0 auto 18px;
+
+  color: #697a89;
+
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+
+.abcareer-selected-job {
+  padding: 12px;
+
+  margin-bottom: 18px;
+
+  border-radius: 8px;
+
+  background: #f4f9fc;
+}
+
+
+.abcareer-selected-job span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7a8995;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+
+.abcareer-selected-job strong {
+  color: #0877a9;
+
+  font-size: 0.95rem;
+}
+
+
+.abcareer-popup-btn {
+  min-width: 125px;
+  height: 41px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #071a35;
+  color: #ffffff;
+
+  font-size: 0.9rem;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .abcareer-benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abcareer-job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abcareer-values {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .abcareer-values-card {
+    width: 100%;
+    max-width: 500px;
+
+    margin: auto;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abcareer-page {
+    margin-top: 70px;
+  }
+
+  .abcareer-hero {
+    min-height: 450px;
+
+    padding:
+      70px 5%;
+  }
+
+  .abcareer-hero-content h1 {
+    font-size: 3.4rem;
+  }
+
+  .abcareer-hero-content p {
+    font-size: 1.04rem;
+  }
+
+  .abcareer-intro,
+  .abcareer-openings,
+  .abcareer-application {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .abcareer-values {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abcareer-page {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 70px;
+  }
+
+
+  .abcareer-hero {
+    width: 100%;
+
+    min-height: 430px;
+
+    padding:
+      65px 18px;
+  }
+
+
+  .abcareer-hero-content {
+    width: 100%;
+  }
+
+
+  .abcareer-hero-content h1 {
+    font-size: 2.65rem;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.5px;
+  }
+
+
+  .abcareer-hero-content p {
+    max-width: 600px;
+
+    margin:
+      18px auto 25px;
+
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+
+  .abcareer-eyebrow {
+    padding: 8px 14px;
+
+    margin-bottom: 17px;
+
+    font-size: 0.78rem;
+
+    letter-spacing: 1.3px;
+  }
+
+
+  .abcareer-hero-btn {
+    min-height: 49px;
+
+    padding: 0 22px;
+
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-intro,
+  .abcareer-openings,
+  .abcareer-application {
+    padding:
+      65px 17px;
+  }
+
+
+  .abcareer-values {
+    padding:
+      65px 17px;
+  }
+
+
+  .abcareer-section-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .abcareer-section-heading span,
+  .abcareer-application-heading span,
+  .abcareer-values-content > span {
+    font-size: 0.82rem;
+  }
+
+
+  .abcareer-section-heading h2,
+  .abcareer-application-heading h2,
+  .abcareer-values-content h2 {
+    font-size: 2.15rem;
+
+    line-height: 1.15;
+  }
+
+
+  .abcareer-section-heading p,
+  .abcareer-application-heading p {
+    font-size: 1rem;
+
+    line-height: 1.65;
+  }
+
+
+  .abcareer-benefit-grid,
+  .abcareer-job-grid {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+  }
+
+
+  .abcareer-benefit-card {
+    min-height: auto;
+
+    padding: 25px 20px;
+  }
+
+
+  .abcareer-benefit-card h3 {
+    font-size: 1.2rem;
+  }
+
+
+  .abcareer-benefit-card p {
+    font-size: 0.98rem;
+  }
+
+
+  .abcareer-job-card {
+    padding: 23px 20px;
+  }
+
+
+  .abcareer-job-card h3 {
+    font-size: 1.27rem;
+  }
+
+
+  .abcareer-department {
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-job-info span {
+    font-size: 0.94rem;
+  }
+
+
+  .abcareer-apply-btn {
+    min-height: 47px;
+
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-check-list {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  .abcareer-check-list div {
+    font-size: 0.98rem;
+  }
+
+
+  .abcareer-values-card {
+    padding: 35px 23px;
+  }
+
+
+  .abcareer-values-card h3 {
+    font-size: 1.5rem;
+  }
+
+
+  .abcareer-values-card p {
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-form {
+    padding: 23px 18px;
+
+    border-radius: 14px;
+  }
+
+
+  .abcareer-form-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .abcareer-full-field {
+    grid-column: auto;
+  }
+
+
+  .abcareer-field label {
+    font-size: 0.92rem;
+  }
+
+
+  .abcareer-field input,
+  .abcareer-field select,
+  .abcareer-field textarea {
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-field input,
+  .abcareer-field select {
+    height: 46px;
+
+    padding:
+      0 12px;
+  }
+
+
+  .abcareer-field textarea {
+    min-height: 95px;
+
+    padding:
+      11px 12px;
+  }
+
+
+  .abcareer-resume-box {
+    align-items: flex-start;
+
+    padding: 13px;
+  }
+
+
+  .abcareer-resume-box strong {
+    font-size: 0.92rem;
+  }
+
+
+  .abcareer-resume-box p {
+    font-size: 0.76rem;
+  }
+
+
+  .abcareer-submit-btn {
+    height: 48px;
+
+    font-size: 0.96rem;
+  }
+
+
+  .abcareer-success-popup {
+    padding:
+      30px 20px 23px;
+  }
+
+
+  .abcareer-success-popup h2 {
+    font-size: 1.55rem;
+  }
+
+
+  .abcareer-success-popup > p {
+    font-size: 0.92rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .abcareer-page {
+    margin-top: 70px;
+  }
+
+
+  .abcareer-hero {
+    min-height: 415px;
+
+    padding:
+      55px 15px;
+  }
+
+
+  .abcareer-hero-content h1 {
+    font-size: 2.3rem;
+
+    line-height: 1.08;
+  }
+
+
+  .abcareer-hero-content p {
+    font-size: 0.96rem;
+
+    line-height: 1.55;
+  }
+
+
+  .abcareer-eyebrow {
+    padding: 7px 12px;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 1.1px;
+  }
+
+
+  .abcareer-hero-btn {
+    width: 100%;
+
+    min-height: 47px;
+
+    font-size: 0.94rem;
+  }
+
+
+  .abcareer-intro,
+  .abcareer-openings,
+  .abcareer-application {
+    padding:
+      55px 14px;
+  }
+
+
+  .abcareer-values {
+    padding:
+      55px 14px;
+  }
+
+
+  .abcareer-section-heading h2,
+  .abcareer-application-heading h2,
+  .abcareer-values-content h2 {
+    font-size: 1.95rem;
+  }
+
+
+  .abcareer-section-heading p,
+  .abcareer-application-heading p {
+    font-size: 0.95rem;
+  }
+
+
+  .abcareer-benefit-card {
+    padding: 23px 17px;
+  }
+
+
+  .abcareer-benefit-card h3 {
+    font-size: 1.14rem;
+  }
+
+
+  .abcareer-benefit-card p {
+    font-size: 0.95rem;
+  }
+
+
+  .abcareer-job-card {
+    padding: 21px 17px;
+  }
+
+
+  .abcareer-job-card h3 {
+    font-size: 1.2rem;
+  }
+
+
+  .abcareer-job-info span {
+    font-size: 0.91rem;
+  }
+
+
+  .abcareer-values-card {
+    padding:
+      32px 18px;
+  }
+
+
+  .abcareer-form {
+    padding:
+      20px 14px;
+  }
+
+
+  .abcareer-field label {
+    font-size: 0.9rem;
+  }
+
+
+  .abcareer-field input,
+  .abcareer-field select {
+    height: 45px;
+
+    font-size: 0.94rem;
+  }
+
+
+  .abcareer-field textarea {
+    min-height: 90px;
+
+    font-size: 0.94rem;
+  }
+
+
+  .abcareer-submit-btn {
+    height: 46px;
+
+    font-size: 0.94rem;
+  }
+
+
+  .abcareer-popup-overlay {
+    padding: 14px;
+  }
+
+
+  .abcareer-success-popup {
+    width: 100%;
+
+    padding:
+      28px 17px 21px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .abcareer-page {
+    margin-top: 70px;
+  }
+
+
+  .abcareer-hero {
+    padding:
+      50px 13px;
+  }
+
+
+  .abcareer-hero-content h1 {
+    font-size: 2.05rem;
+  }
+
+
+  .abcareer-hero-content p {
+    font-size: 0.92rem;
+  }
+
+
+  .abcareer-section-heading h2,
+  .abcareer-application-heading h2,
+  .abcareer-values-content h2 {
+    font-size: 1.8rem;
+  }
+
+
+  .abcareer-intro,
+  .abcareer-openings,
+  .abcareer-application,
+  .abcareer-values {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .abcareer-form {
+    padding:
+      18px 12px;
+  }
+}

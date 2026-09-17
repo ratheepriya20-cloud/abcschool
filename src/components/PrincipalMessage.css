@@ -1,0 +1,1045 @@
+/* =========================================================
+   ELITE PRINCIPAL MESSAGE
+========================================================= */
+
+.elitePrincipalSection {
+  width: 100%;
+  padding: 12px 0;
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(8, 119, 169, 0.08),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(214, 179, 106, 0.10),
+      transparent 28%
+    ),
+    #f8fafc;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.elitePrincipalContainer {
+  width: min(1280px, 92%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 0.90fr 1.15fr;
+
+  align-items: center;
+
+  gap: 85px;
+}
+
+
+/* =========================================================
+   LEFT VISUAL
+========================================================= */
+
+.elitePrincipalVisual {
+  position: relative;
+
+  height: 570px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* NAVY BACK PANEL */
+
+.elitePrincipalNavyPanel {
+  position: absolute;
+
+  left: 0;
+  top: 32px;
+
+  width: 76%;
+  height: 88%;
+
+  border-radius: 12px 35px 12px 35px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0a2948
+    );
+
+  box-shadow:
+    0 25px 55px rgba(7, 26, 53, 0.16);
+}
+
+
+/* GOLD DECORATION */
+
+.elitePrincipalNavyPanel::before {
+  content: "";
+
+  position: absolute;
+
+  top: 30px;
+  left: 30px;
+
+  width: 85px;
+  height: 85px;
+
+  border-top: 2px solid rgba(214, 179, 106, 0.6);
+  border-left: 1px solid rgba(214, 179, 106, 0.6);
+}
+
+
+.elitePrincipalNavyPanel::after {
+  content: "";
+
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 65px;
+  height: 65px;
+
+  border-right: 2px solid rgba(214, 179, 106, 0.5);
+  border-bottom: 1px solid rgba(214, 179, 106, 0.5);
+}
+
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
+.elitePrincipalPortrait {
+  position: absolute;
+
+  width: 390px;
+  height: 480px;
+
+  left: 65px;
+  top: 35px;
+
+  overflow: hidden;
+
+  border-radius: 12px 42px 12px 42px;
+
+  background: #ffffff;
+
+  border: 7px solid #ffffff;
+
+  z-index: 2;
+
+  box-shadow:
+    0 25px 50px rgba(7, 26, 53, 0.24);
+}
+
+.elitePrincipalPortrait img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.elitePrincipalPortrait:hover img {
+  transform: scale(1.035);
+}
+
+
+/* IMAGE OVERLAY */
+
+.elitePrincipalPortraitOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(7, 26, 53, 0.25)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GOLD FRAME
+========================================================= */
+
+.elitePrincipalGoldFrame {
+  position: absolute;
+
+  width: 390px;
+  height: 480px;
+
+  left: 82px;
+  top: 52px;
+
+  border: 1.5px solid #d6b36a;
+
+  border-radius: 5px;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   VERTICAL TEXT
+========================================================= */
+
+.elitePrincipalVerticalText {
+  position: absolute;
+
+  right: 8px;
+  top: 160px;
+
+  color: #0877a9;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+
+  writing-mode: vertical-rl;
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   IDENTITY CARD
+========================================================= */
+
+.elitePrincipalIdentityCard {
+  position: absolute;
+
+  left: 18px;
+  bottom: 23px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  min-width: 285px;
+
+  padding: 15px 19px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-left: 4px solid #d6b36a;
+
+  box-shadow:
+    0 18px 35px rgba(7, 26, 53, 0.20);
+}
+
+.elitePrincipalIdentityIcon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #071a35;
+
+  color: #d6b36a;
+
+  font-size: 18px;
+}
+
+.elitePrincipalIdentityCard span {
+  display: block;
+
+  color: #0877a9;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+
+  margin-bottom: 4px;
+}
+
+.elitePrincipalIdentityCard strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   AWARD BADGE
+========================================================= */
+
+.elitePrincipalAward {
+  position: absolute;
+
+  right: 7px;
+  top: 60px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 14px;
+
+  background: #d6b36a;
+
+  color: #071a35;
+
+  box-shadow:
+    0 12px 25px rgba(7, 26, 53, 0.18);
+}
+
+.elitePrincipalAward svg {
+  font-size: 18px;
+}
+
+.elitePrincipalAward span {
+  font-size: 9px;
+  font-weight: 900;
+
+  line-height: 1.4;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
+.elitePrincipalContent {
+  position: relative;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.elitePrincipalEyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #0877a9;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 2.5px;
+
+  margin-bottom: 15px;
+}
+
+.elitePrincipalEyebrow span {
+  width: 31px;
+  height: 2px;
+
+  background: #d6b36a;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.elitePrincipalContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 45px;
+  line-height: 1.08;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+.elitePrincipalContent h2 em {
+  display: inline;
+  margin-left: 8px;
+
+  color: #0877a9;
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   HEADING LINE
+========================================================= */
+
+.elitePrincipalHeadingLine {
+  width: 75px;
+  height: 3px;
+
+  margin: 19px 0 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d6b36a,
+      #0877a9
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.elitePrincipalIntro {
+  max-width: 710px;
+
+  margin: 0 0 22px;
+
+  color: #4c6174;
+
+  font-size: 19px;
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.elitePrincipalQuote {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  max-width: 760px;
+
+  padding: 22px 23px;
+
+  margin-bottom: 21px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+
+  border-left: 4px solid #d6b36a;
+
+  box-shadow:
+    0 14px 32px rgba(7, 26, 53, 0.07);
+}
+
+.elitePrincipalQuoteMark {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #071a35;
+
+  color: #d6b36a;
+
+  font-size: 17px;
+}
+
+.elitePrincipalQuote p {
+  margin: 0;
+
+  color: #20384d;
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  font-weight: 650;
+}
+
+.elitePrincipalQuoteLine {
+  width: 38px;
+  height: 2px;
+
+  margin: 12px 0 6px;
+
+  background: #d6b36a;
+}
+
+.elitePrincipalQuote span {
+  color: #0877a9;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MAIN MESSAGE
+========================================================= */
+
+.elitePrincipalMessage {
+  max-width: 730px;
+
+  margin: 0 0 27px;
+
+  color: #617486;
+
+  font-size: 17px;
+  line-height: 1.75;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.elitePrincipalBottom {
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+/* SIGNATURE */
+
+.elitePrincipalSignature {
+  min-width: 215px;
+}
+
+.elitePrincipalSignatureLine {
+  width: 45px;
+  height: 2px;
+
+  margin-bottom: 9px;
+
+  background: #d6b36a;
+}
+
+.elitePrincipalSignature strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  margin-bottom: 4px;
+}
+
+.elitePrincipalSignature span {
+  display: block;
+
+  color: #0877a9;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.elitePrincipalButton {
+  min-height: 51px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  padding: 0 23px;
+
+  border: 1px solid #071a35;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  border-radius: 3px;
+
+  font-family: inherit;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(7, 26, 53, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.elitePrincipalButton svg {
+  color: #d6b36a;
+
+  font-size: 13px;
+
+  transition: transform 0.25s ease;
+}
+
+.elitePrincipalButton:hover {
+  transform: translateY(-3px);
+
+  background: #0877a9;
+
+  border-color: #0877a9;
+
+  box-shadow:
+    0 14px 30px rgba(8, 119, 169, 0.20);
+}
+
+.elitePrincipalButton:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+  .elitePrincipalContainer {
+    gap: 50px;
+  }
+
+  .elitePrincipalVisual {
+    height: 500px;
+  }
+
+  .elitePrincipalPortrait,
+  .elitePrincipalGoldFrame {
+    width: 330px;
+    height: 420px;
+  }
+
+  .elitePrincipalPortrait {
+    left: 45px;
+  }
+
+  .elitePrincipalGoldFrame {
+    left: 60px;
+  }
+
+  .elitePrincipalContent h2 {
+    font-size: 43px;
+  }
+
+  .elitePrincipalIntro {
+    font-size: 18px;
+  }
+
+  .elitePrincipalQuote p {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .elitePrincipalSection {
+    padding: 65px 0;
+  }
+
+  .elitePrincipalContainer {
+    width: min(94%, 720px);
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .elitePrincipalVisual {
+    height: 485px;
+  }
+
+  .elitePrincipalPortrait,
+  .elitePrincipalGoldFrame {
+    width: 335px;
+    height: 420px;
+  }
+
+  .elitePrincipalPortrait {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .elitePrincipalGoldFrame {
+    left: calc(50% + 17px);
+    transform: translateX(-50%);
+  }
+
+  .elitePrincipalContent {
+    text-align: center;
+  }
+
+  .elitePrincipalEyebrow {
+    justify-content: center;
+  }
+
+  .elitePrincipalHeadingLine {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .elitePrincipalIntro,
+  .elitePrincipalMessage {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .elitePrincipalQuote {
+    text-align: left;
+  }
+
+  .elitePrincipalBottom {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .elitePrincipalSection {
+    padding: 50px 0 55px;
+  }
+
+  .elitePrincipalContainer {
+    width: 92%;
+
+    gap: 46px;
+  }
+
+
+  /* VISUAL */
+
+  .elitePrincipalVisual {
+    height: 395px;
+  }
+
+  .elitePrincipalNavyPanel {
+    top: 18px;
+
+    width: 82%;
+    height: 88%;
+  }
+
+  .elitePrincipalPortrait,
+  .elitePrincipalGoldFrame {
+    width: 265px;
+    height: 335px;
+  }
+
+  .elitePrincipalPortrait {
+    top: 27px;
+    left: 50%;
+  }
+
+  .elitePrincipalGoldFrame {
+    top: 40px;
+    left: calc(50% + 13px);
+  }
+
+
+  /* HIDE VERTICAL TEXT */
+
+  .elitePrincipalVerticalText {
+    display: none;
+  }
+
+
+  /* IDENTITY */
+
+  .elitePrincipalIdentityCard {
+    left: 50%;
+    bottom: 3px;
+
+    min-width: 245px;
+
+    padding: 12px 14px;
+
+    transform: translateX(-50%);
+  }
+
+  .elitePrincipalIdentityIcon {
+    width: 39px;
+    height: 39px;
+
+    font-size: 16px;
+  }
+
+  .elitePrincipalIdentityCard span {
+    font-size: 9px;
+  }
+
+  .elitePrincipalIdentityCard strong {
+    font-size: 12px;
+  }
+
+
+  /* AWARD */
+
+  .elitePrincipalAward {
+    right: 0;
+    top: 27px;
+
+    padding: 8px 10px;
+  }
+
+  .elitePrincipalAward svg {
+    font-size: 15px;
+  }
+
+  .elitePrincipalAward span {
+    font-size: 8px;
+  }
+
+
+  /* EYEBROW */
+
+  .elitePrincipalEyebrow {
+    gap: 8px;
+
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 12px;
+  }
+
+  .elitePrincipalEyebrow span {
+    width: 22px;
+  }
+
+
+  /* HEADING */
+
+  .elitePrincipalContent h2 {
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.6px;
+  }
+
+
+  /* INTRO */
+
+  .elitePrincipalIntro {
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    margin-bottom: 20px;
+  }
+
+
+  /* QUOTE */
+
+  .elitePrincipalQuote {
+    gap: 12px;
+
+    padding: 17px 14px;
+
+    margin-bottom: 19px;
+  }
+
+  .elitePrincipalQuoteMark {
+    width: 35px;
+    height: 35px;
+
+    font-size: 13px;
+  }
+
+  .elitePrincipalQuote p {
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+
+  /* MESSAGE */
+
+  .elitePrincipalMessage {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+  }
+
+
+  /* BOTTOM */
+
+  .elitePrincipalBottom {
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .elitePrincipalSignature {
+    min-width: 0;
+  }
+
+  .elitePrincipalSignature strong {
+    font-size: 16px;
+  }
+
+  .elitePrincipalSignature span {
+    font-size: 12px;
+  }
+
+
+  /* BUTTON */
+
+  .elitePrincipalButton {
+    width: 100%;
+
+    min-height: 50px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .elitePrincipalSection {
+    padding: 45px 0 50px;
+  }
+
+  .elitePrincipalVisual {
+    height: 365px;
+  }
+
+  .elitePrincipalPortrait,
+  .elitePrincipalGoldFrame {
+    width: 235px;
+    height: 300px;
+  }
+
+  .elitePrincipalPortrait {
+    top: 25px;
+  }
+
+  .elitePrincipalGoldFrame {
+    top: 38px;
+  }
+
+  .elitePrincipalIdentityCard {
+    min-width: 220px;
+
+    padding: 10px 12px;
+  }
+
+  .elitePrincipalIdentityIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .elitePrincipalIdentityCard strong {
+    font-size: 11px;
+  }
+
+  .elitePrincipalContent h2 {
+    font-size: 30px;
+  }
+
+  .elitePrincipalIntro {
+    font-size: 17px;
+  }
+
+  .elitePrincipalQuote p {
+    font-size: 15.5px;
+  }
+
+  .elitePrincipalMessage {
+    font-size: 15.5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .elitePrincipalVisual {
+    height: 340px;
+  }
+
+  .elitePrincipalPortrait,
+  .elitePrincipalGoldFrame {
+    width: 215px;
+    height: 280px;
+  }
+
+  .elitePrincipalIdentityCard {
+    min-width: 205px;
+  }
+
+  .elitePrincipalContent h2 {
+    font-size: 27px;
+  }
+
+  .elitePrincipalIntro {
+    font-size: 16px;
+  }
+
+  .elitePrincipalQuote p {
+    font-size: 15px;
+  }
+}

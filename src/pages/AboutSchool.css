@@ -1,0 +1,2175 @@
+
+
+.aboutSchoolPage {
+  width: 100%;
+  min-height: 100vh;
+margin-top: 40px;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  color: #071a35;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.aboutContainer {
+  width: min(1160px, 92%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.aboutSchoolHero {
+  position: relative;
+
+  width: 100%;
+  min-height: 370px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(3, 19, 41, 0.97),
+      rgba(5, 45, 72, 0.92)
+    ),
+    url("../assets/school-hero-3.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+
+.aboutHeroOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(125, 211, 252, 0.13),
+      transparent 42%
+    );
+}
+
+
+.aboutHeroGlow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+.aboutHeroGlowOne {
+  width: 250px;
+  height: 250px;
+
+  left: -90px;
+  top: -90px;
+
+  background:
+    rgba(125, 211, 252, 0.10);
+}
+
+
+.aboutHeroGlowTwo {
+  width: 230px;
+  height: 230px;
+
+  right: -70px;
+  bottom: -80px;
+
+  background:
+    rgba(242, 193, 78, 0.09);
+}
+
+
+
+.aboutHeroContent {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(850px, 92%);
+
+  padding: 80px 0;
+
+  text-align: center;
+}
+
+
+.aboutHeroEyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-bottom: 23px;
+}
+
+
+.aboutHeroEyebrow > span:not(.aboutHeroLine) {
+  color: #7dd3fc;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.3px;
+
+  white-space: nowrap;
+}
+
+
+.aboutHeroLine {
+  width: 54px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #f2c14e
+    );
+}
+
+
+.aboutHeroLineRight {
+  background:
+    linear-gradient(
+      90deg,
+      #f2c14e,
+      transparent
+    );
+}
+
+
+.aboutHeroContent h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:48px;
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+
+.aboutHeroContent h1 span {
+  display: inline;
+  margin-left: 9px;
+
+  margin-top: 4px;
+
+  color: #f2c14e;
+}
+
+
+.aboutHeroContent p {
+  max-width: 660px;
+
+  margin: 24px auto 0;
+
+  color: #cbdbe6;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+.aboutHeroAccent {
+  width: 85px;
+  height: 3px;
+
+  margin: 24px auto 0;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7dd3fc,
+      #f2c14e
+    );
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.aboutIntro {
+  padding: 45px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7fafc
+    );
+}
+
+
+.aboutIntroGrid {
+  display: grid;
+
+  grid-template-columns:
+    0.90fr
+    1.05fr;
+
+  align-items: center;
+
+  gap: 80px;
+}
+
+
+/* =========================================================
+   INTRO IMAGE
+========================================================= */
+
+.aboutIntroImage {
+  position: relative;
+
+  min-height: 500px;
+
+  padding: 0 25px 25px 0;
+}
+
+
+.aboutIntroImage img {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 475px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 20px 50px rgba(7, 26, 53, 0.15);
+}
+
+
+.aboutImageFrame {
+  position: absolute;
+
+  z-index: 1;
+
+  right: 0;
+  bottom: 0;
+
+  width: 90%;
+
+  height: 90%;
+
+  border:
+    2px solid #f2c14e;
+
+  border-radius: 16px;
+}
+
+
+.aboutImageBadge {
+  position: absolute;
+
+  z-index: 4;
+
+  left: -27px;
+  bottom: 45px;
+
+  width: 135px;
+  height: 135px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    5px solid #ffffff;
+
+  border-radius: 50%;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 35px rgba(7, 26, 53, 0.22);
+}
+
+
+.aboutImageBadge strong {
+  color: #f2c14e;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 33px;
+
+  line-height: 1;
+}
+
+
+.aboutImageBadge span {
+  margin-top: 6px;
+
+  color: #d5e2ea;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  line-height: 1.35;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COMMON LABEL
+========================================================= */
+
+.aboutSectionLabel {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 13px;
+
+  color: #0877a9;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+}
+
+
+.aboutSectionLabel::before {
+  content: "";
+
+  width: 27px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #f2c14e;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.aboutIntroContent h2,
+.aboutSectionHeading h2,
+.aboutWhyContent h2,
+.aboutValuesHeader h2,
+.communityContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(30px, 3.6vw, 45px);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.3px;
+}
+
+
+.aboutIntroContent h2 span,
+.aboutSectionHeading h2 span,
+.aboutWhyContent h2 span,
+.aboutValuesHeader h2 span,
+.communityContent h2 span {
+  display: inline;
+margin-left: 9px;
+  color: #0877a9;
+}
+
+
+.aboutIntroContent p {
+  margin: 10px 0 0;
+
+  color: #627687;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+
+.aboutIntroContent .aboutLead {
+  margin-top: 23px;
+
+  color: #3f5669;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.aboutPrimaryBtn,
+.aboutOutlineBtn,
+.aboutCTAPrimary,
+.aboutCTASecondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 27px;
+
+  padding: 13px 21px;
+
+  border-radius: 7px;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.aboutPrimaryBtn {
+  border: none;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(7, 26, 53, 0.15);
+}
+
+
+.aboutPrimaryBtn:hover {
+  transform: translateY(-3px);
+
+  background: #0877a9;
+
+  box-shadow:
+    0 12px 25px rgba(8, 119, 169, 0.2);
+}
+
+
+.aboutPrimaryBtn span,
+.aboutOutlineBtn span,
+.aboutCTAPrimary span {
+  color: #f2c14e;
+
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.aboutStats {
+  padding: 10px 0;
+
+  background: #071a35;
+}
+
+
+.aboutStatsGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+}
+
+
+.aboutStatCard {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 105px;
+
+  text-align: center;
+}
+
+
+.aboutStatCard:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  top: 15px;
+
+  width: 1px;
+  height: 75px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.aboutStatCard strong {
+  color: #f2c14e;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+}
+
+
+.aboutStatCard span {
+  margin-top: 8px;
+
+  color: #c3d4df;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   MISSION
+========================================================= */
+
+.aboutMission {
+  padding: 45px 0;
+
+  background: #ffffff;
+}
+
+
+.aboutSectionHeading {
+  max-width: 800px;
+
+  margin-bottom: 42px;
+}
+
+
+.aboutSectionHeading > p {
+  max-width: 600px;
+
+  margin: 20px 0 0;
+
+  color: #697d8d;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+.missionGrid {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap: 20px;
+}
+
+
+.missionCard {
+  position: relative;
+
+  min-height: 265px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  box-sizing: border-box;
+}
+
+
+.missionCardDark {
+  background: #071a35;
+
+  color: #ffffff;
+}
+
+
+.missionCardLight {
+  border:
+    1px solid rgba(7, 26, 53, 0.08);
+
+  background:
+    #f3f8fb;
+
+  color: #071a35;
+}
+
+
+.missionNumber {
+  position: absolute;
+
+  top: 25px;
+  right: 28px;
+
+  color: #f2c14e;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 24px;
+
+  font-weight: 700;
+}
+
+
+.missionContent {
+  max-width: 470px;
+
+  padding-top: 25px;
+}
+
+
+.missionContent > span {
+  color: #7dd3fc;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+
+.missionCardLight .missionContent > span {
+  color: #0877a9;
+}
+
+
+.missionContent h3 {
+  margin: 11px 0 12px;
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 29px;
+
+  line-height: 1.2;
+}
+
+
+.missionContent p {
+  margin: 0;
+
+  color: #b9cad5;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+.missionCardLight .missionContent p {
+  color: #607486;
+}
+
+
+.missionArrow {
+  position: absolute;
+
+  right: 27px;
+  bottom: 24px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(242, 193, 78, 0.12);
+
+  color: #f2c14e;
+
+  font-size: 25px;
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
+
+.aboutWhy {
+  padding: 50px 0;
+
+  background:
+    #f5f9fb;
+}
+
+
+.aboutWhyGrid {
+  display: grid;
+
+  grid-template-columns:
+    0.90fr
+    1.10fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+.aboutWhyVisual {
+  position: relative;
+
+  padding: 0 20px 20px 0;
+}
+
+
+.aboutWhyVisual img {
+  width: 100%;
+  height: 480px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 45px rgba(7, 26, 53, 0.15);
+}
+
+
+.whyFloatingCard {
+  position: absolute;
+
+  right: -30px;
+  bottom: 2px;
+
+  width: 175px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+
+  background: #071a35;
+
+  box-shadow:
+    0 18px 40px rgba(7, 26, 53, 0.23);
+}
+
+
+.whyFloatingCard span {
+  color: #7dd3fc;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.whyFloatingCard strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 24px;
+
+  line-height: 1.05;
+}
+
+
+.whyFloatingCard div {
+  margin-top: 13px;
+
+  color: #f2c14e;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+.aboutWhyContent > p {
+  max-width: 550px;
+
+  margin: 20px 0 20px;
+
+  color: #637788;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+
+.whyPoints {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.whyPoint {
+  display: grid;
+
+  grid-template-columns: 43px 1fr;
+
+  gap: 15px;
+
+  align-items: start;
+}
+
+
+.whyIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(125, 211, 252, 0.14);
+
+  color: #0877a9;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.whyPoint h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+}
+
+
+.whyPoint p {
+  margin: 5px 0 0;
+
+  color: #718393;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.aboutValues {
+  padding: 40px 0;
+
+  background: #ffffff;
+}
+
+
+.aboutValuesHeader {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-bottom: 38px;
+}
+
+
+.aboutValuesHeader > p {
+  max-width: 410px;
+
+  margin: 0;
+
+  color: #697d8d;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+.valuesGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+
+.valueCard {
+  position: relative;
+
+  min-height: 25px;
+
+  padding: 20px;
+
+  border:
+    1px solid rgba(7, 26, 53, 0.08);
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f5f9fb
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.valueCard:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(125, 211, 252, 0.4);
+
+  box-shadow:
+    0 18px 38px rgba(7, 26, 53, 0.09);
+}
+
+
+.valueTop {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+.valueTop > span {
+  color: #f2c14e;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 27px;
+
+  font-weight: 700;
+}
+
+
+.valueTop > div {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(125, 211, 252, 0.12);
+
+  color: #0877a9;
+
+  font-size: 20px;
+}
+
+
+.valueCard h3 {
+  margin: 25px 0 10px;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 24px;
+}
+
+
+.valueCard p {
+  margin: 0;
+
+  color: #6a7d8c;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+
+
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.aboutCommunity {
+  padding: 40px 0;
+
+  background: #ffffff;
+}
+
+
+.communityGrid {
+  display: grid;
+
+  grid-template-columns:
+    0.9fr
+    1.1fr;
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+
+.communityContent > p {
+  max-width: 500px;
+
+  margin: 21px 0 0;
+
+  color: #647888;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+
+.aboutOutlineBtn {
+  border:
+    1px solid #071a35;
+
+  background: transparent;
+
+  color: #071a35;
+}
+
+
+.aboutOutlineBtn:hover {
+  transform: translateY(-3px);
+
+  background: #071a35;
+
+  color: #ffffff;
+}
+
+
+.communityImage {
+  position: relative;
+}
+
+
+.communityImage img {
+  width: 100%;
+  height: 390px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 18px 40px rgba(7, 26, 53, 0.14);
+}
+
+
+.communityImageLabel {
+  position: absolute;
+
+  left: 22px;
+  bottom: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding: 15px 18px;
+
+  border-radius: 8px;
+
+  background:
+    rgba(7, 26, 53, 0.91);
+
+  backdrop-filter: blur(8px);
+}
+
+
+.communityImageLabel strong {
+  color: #f2c14e;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 1.3px;
+}
+
+
+.communityImageLabel span {
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.aboutCTA {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 40px 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #04172f,
+      #073d5b
+    );
+}
+
+
+.aboutCTAGlow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -130px;
+  top: -180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(125, 211, 252, 0.07);
+
+  filter: blur(30px);
+}
+
+
+.aboutCTAContent {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+.aboutCTAContent > span {
+  color: #7dd3fc;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.aboutCTAContent h2 {
+  margin: 16px 0 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(35px, 4vw, 50px);
+
+  line-height: 1.08;
+}
+
+
+.aboutCTAContent h2 strong {
+  display: inline;
+
+  margin-left: 9px;
+
+  color: #f2c14e;
+
+  font-weight: 700;
+}
+
+
+.aboutCTAContent > p {
+  max-width: 620px;
+
+  margin: 20px auto 0;
+
+  color: #c1d3de;
+
+  font-family:
+    "Inter",
+    sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+.aboutCTAActions {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 27px;
+}
+
+
+.aboutCTAPrimary,
+.aboutCTASecondary {
+  margin-top: 0;
+}
+
+
+.aboutCTAPrimary {
+  border: none;
+
+  background: #f2c14e;
+
+  color: #071a35;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.aboutCTAPrimary:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+}
+
+
+.aboutCTASecondary {
+  border:
+    1px solid rgba(255, 255, 255, 0.28);
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+
+.aboutCTASecondary:hover {
+  transform: translateY(-3px);
+
+  border-color: #7dd3fc;
+
+  background: rgba(125, 211, 252, 0.08);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 1100px) {
+   .aboutHeroContent p {
+    width: 90%;
+    font-size: 25px !important;
+    line-height: 1.75;
+  }
+  
+  .aboutLead {font-size: 17px !important;}
+  .aboutIntroContent p{ font-size: 18px !important;}
+  .aboutSectionHeading p{
+    font-size: 22px !important;
+  }
+  .aboutSectionLabel{font-size: 14px !important;}
+  .missionContent p{
+    font-size: 19px !important;
+  }
+  .aboutWhyContent p{
+    font-size: 22px !important;
+  }
+  .valueTop span{font-size: 30px !important;}
+  .valueCard h3{font-size: 25px !important;}
+  .valueCard p{font-size: 20px !important;}
+  .aboutValuesHeader p{
+    font-size: 20px;
+  }
+  .valueCard p{font-size: 20px;}
+  .communityContent p{font-size: 20px !important;}
+  .aboutCTAContent p{
+    font-size: 22px !important;
+  }
+  .aboutSectionLabel{
+    font-size: 13px;
+  }
+  .aboutValuesHeader h2{
+    font-size: 45px;
+  }
+  .aboutSectionLabel{
+    font-size: 14px;
+  }
+  .communityContent h2{
+    font-size: 40px;
+  }
+  .aboutStatCard strong{font-size: 40px !important;}
+    .aboutStatCard span{font-size: 16px !important;}
+
+}
+  
+
+@media (max-width: 950px) {
+
+  .aboutIntroGrid,
+  .aboutWhyGrid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .aboutIntroImage {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+
+  .aboutWhyVisual {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    width: 100%;
+  }
+
+
+  .principalGrid,
+  .communityGrid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .principalImage {
+    max-width: 580px;
+
+    width: 100%;
+
+    margin: 0 auto;
+  }
+
+
+  .communityImage {
+    width: 100%;
+  }
+
+
+  .valuesGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .aboutValuesHeader {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .aboutContainer {
+    width: 91%;
+  }
+
+
+  /* HERO */
+
+  .aboutSchoolHero {
+    min-height: 430px;
+  }
+
+
+  .aboutHeroContent {
+    padding: 60px 0;
+  }
+
+
+  .aboutHeroEyebrow {
+    gap: 8px;
+  }
+
+
+  .aboutHeroLine {
+    width: 27px;
+  }
+
+
+  .aboutHeroEyebrow > span:not(.aboutHeroLine) {
+    font-size: 8px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  .aboutHeroContent h1 {
+    font-size: 43px;
+
+    line-height: 1.06;
+
+    letter-spacing: -1px;
+  }
+
+
+  .aboutHeroContent h1 span {
+    margin-top: 5px;
+  }
+
+
+  .aboutHeroContent p {
+    margin-top: 19px;
+
+    font-size: 11.5px;
+
+    line-height: 1.75;
+  }
+
+
+  /* INTRO */
+
+  .aboutIntro,
+  .aboutMission,
+  .aboutWhy,
+  .aboutValues,
+  .aboutPrincipal,
+  .aboutCommunity {
+    padding: 65px 0;
+  }
+
+
+  .aboutIntroGrid,
+  .aboutWhyGrid,
+  .principalGrid,
+  .communityGrid {
+    gap: 42px;
+  }
+
+
+  .aboutIntroImage {
+    min-height: auto;
+
+    padding: 0 13px 13px 0;
+  }
+
+
+  .aboutIntroImage img {
+    height: 350px;
+  }
+
+
+  .aboutImageFrame {
+    width: 88%;
+    height: 88%;
+  }
+
+
+  .aboutImageBadge {
+    left: -7px;
+    bottom: 27px;
+
+    width: 100px;
+    height: 100px;
+
+    border-width: 4px;
+  }
+
+
+  .aboutImageBadge strong {
+    font-size: 26px;
+  }
+
+
+  .aboutImageBadge span {
+    font-size: 7px;
+  }
+
+
+  .aboutSectionLabel {
+    font-size: 8.5px;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  .aboutIntroContent h2,
+  .aboutSectionHeading h2,
+  .aboutWhyContent h2,
+  .aboutValuesHeader h2,
+  .communityContent h2 {
+    font-size: 35px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .aboutIntroContent p,
+  .aboutIntroContent .aboutLead {
+    font-size: 11.5px;
+
+    line-height: 1.8;
+  }
+
+
+  /* STATS */
+
+  .aboutStats {
+    padding: 20px 0;
+  }
+
+
+  .aboutStatsGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .aboutStatCard {
+    min-height: 95px;
+  }
+
+
+  .aboutStatCard strong {
+    font-size: 31px;
+  }
+
+
+  .aboutStatCard span {
+    font-size: 8px;
+  }
+
+
+  .aboutStatCard:nth-child(2)::after {
+    display: none;
+  }
+
+
+  /* MISSION */
+
+  .aboutSectionHeading {
+    margin-bottom: 28px;
+  }
+
+
+  .aboutSectionHeading > p {
+    margin-top: 16px;
+
+    font-size: 11.5px;
+  }
+
+
+  .missionGrid {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+
+  .missionCard {
+    min-height: 245px;
+
+    padding: 24px;
+  }
+
+
+  .missionContent {
+    padding-top: 31px;
+  }
+
+
+  .missionContent h3 {
+    font-size: 24px;
+  }
+
+
+  .missionContent p {
+    font-size: 11px;
+  }
+
+
+  /* WHY */
+
+  .aboutWhyVisual {
+    padding: 0 12px 12px 0;
+  }
+
+
+  .aboutWhyVisual img {
+    height: 350px;
+  }
+
+
+  .whyFloatingCard {
+    right: -2px;
+    bottom: 17px;
+
+    width: 145px;
+
+    padding: 16px;
+  }
+
+
+  .whyFloatingCard strong {
+    font-size: 21px;
+  }
+
+
+  .whyFloatingCard div {
+    font-size: 7px;
+  }
+
+
+  .aboutWhyContent > p {
+    font-size: 11.5px;
+  }
+
+
+  .whyPoint {
+    grid-template-columns: 38px 1fr;
+
+    gap: 12px;
+  }
+
+
+  .whyIcon {
+    width: 37px;
+    height: 37px;
+
+    font-size: 8px;
+  }
+
+
+  .whyPoint h3 {
+    font-size: 17px;
+  }
+
+
+  .whyPoint p {
+    font-size: 10px;
+  }
+
+
+  /* VALUES */
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+
+  .valueCard {
+    min-height: 220px;
+
+    padding: 21px;
+  }
+
+
+  .valueCard h3 {
+    margin-top: 35px;
+
+    font-size: 22px;
+  }
+
+
+  .valueCard p {
+    font-size: 10.5px;
+  }
+
+
+  /* PRINCIPAL */
+
+  .principalImage {
+    padding: 0 10px 10px 0;
+  }
+
+
+  .principalImage img {
+    height: 330px;
+  }
+
+
+  .principalContent blockquote {
+    font-size: 25px;
+
+    line-height: 1.35;
+  }
+
+
+  .principalContent > p {
+    font-size: 19px;
+  }
+
+
+  /* COMMUNITY */
+
+  .communityContent > p {
+    font-size: 11.5px;
+  }
+
+
+  .communityImage img {
+    height: 300px;
+  }
+
+
+  .communityImageLabel {
+    left: 14px;
+    bottom: 14px;
+
+    padding: 12px 14px;
+  }
+
+
+  .communityImageLabel span {
+    font-size: 13px;
+  }
+
+
+  /* CTA */
+
+  .aboutCTA {
+    padding: 65px 0;
+  }
+
+
+  .aboutCTAContent h2 {
+    font-size: 38px;
+
+    line-height: 1.08;
+  }
+
+
+  .aboutCTAContent h2 strong {
+    display: block;
+
+    margin: 3px 0 0;
+  }
+
+
+  .aboutCTAContent > p {
+    font-size: 11.5px;
+  }
+
+
+  .aboutCTAActions {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .aboutCTAPrimary,
+  .aboutCTASecondary {
+    width: 90%;
+
+    margin: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .aboutHeroContent h1 {
+    font-size: 24px;
+  }
+   .aboutHeroContent h1 span{
+    display: inline;
+  }
+
+
+  .aboutHeroContent p {
+    font-size: 20px;
+  }
+
+
+  .aboutIntroImage img {
+    height: 310px;
+  }
+
+
+  .aboutIntroContent h2,
+  .aboutSectionHeading h2,
+  .aboutWhyContent h2,
+  .aboutValuesHeader h2,
+  .communityContent h2 {
+    font-size: 28px;
+  }
+
+
+  .aboutImageBadge {
+    width: 88px;
+    height: 88px;
+  }
+
+
+  .aboutImageBadge strong {
+    font-size: 25px;
+  }
+
+
+  .aboutImageBadge span {
+    font-size: 9.5px;
+  }
+
+
+  .aboutStatCard strong {
+    font-size: 20px;
+  }
+
+
+  .aboutStatCard span {
+    font-size: 15px;
+  }
+.aboutIntroContent p{
+  font-size: 17px;
+}
+.aboutLead{
+  font-size: 16px !important;
+}
+  .missionContent h3 {
+    font-size: 22px;
+  }
+  .missionContent p {
+    font-size: 20px;
+  }
+  .aboutSectionHeading h2{
+    font-size: 20.5px;
+  }
+  .aboutSectionHeading p{
+    font-size: 22px;
+  }
+
+
+  .aboutWhyVisual img {
+    height: 310px;
+  }
+
+
+  .principalImage img {
+    height: 290px;
+  }
+  .whyFloatingCard div{
+    font-size: 12px;
+  }
+.aboutWhyContent p{
+  font-size: 19px;
+}
+.whyIcon{ 
+  font-size: 16px;
+}
+.whyIcon h3{
+  font-size: 19px;
+}
+.aboutSectionLabel{
+  font-size: 13px;
+}
+.aboutValuesHeader h2{
+  font-size: 35px;
+}
+.aboutSectionHeading h2 {
+  font-size: 29px;
+}
+.aboutValuesHeader p{
+  font-size: 20px;
+}
+.valueTop span{
+  font-size: 28px;
+}
+.valueTop h3{
+  font-size: 29px !important;
+}
+.communityContent p{
+  font-size: 20px;
+}
+.communityImageLabel strong{
+  font-size: 14px;
+}
+.communityImageLabel span{
+  font-size: 14px;
+}
+.aboutCTAContent span{
+  font-size: 12px;
+}
+
+
+  .principalContent blockquote {
+    font-size: 24px;
+  }
+
+
+  .communityImage img {
+    height: 270px;
+  }
+
+
+  .aboutCTAContent h2 {
+    font-size: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+
+  .aboutPrimaryBtn,
+  .aboutOutlineBtn,
+  .aboutCTAPrimary,
+  .aboutCTASecondary,
+  .valueCard {
+    transition: none;
+  }
+
+}

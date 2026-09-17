@@ -1,0 +1,658 @@
+
+.abmodal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(3, 15, 31, 0.68);
+  backdrop-filter: blur(7px);
+  overflow-y: auto;
+}
+
+.abmodal-box {
+  width: 100%;
+  max-width: 560px;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 34px;
+  border: 1px solid #e4d2a5;
+  border-radius: 24px;
+  background: #ffffff;
+  color: #071a35;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  animation: abmodalAppear 0.22s ease;
+}
+
+@keyframes abmodalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.abmodal-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.abmodal-box::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #b8c8d5;
+}
+
+.abmodal-close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dce6ed;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #071a35;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.abmodal-close:hover {
+  background: #071a35;
+  border-color: #071a35;
+  color: #ffffff;
+  transform: rotate(5deg);
+}
+
+.abmodal-icon {
+  width: 62px;
+  height: 62px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 17px;
+  font-size: 27px;
+}
+
+.abmodal-icon-book {
+  background: #edf7fb;
+  color: #0877a9;
+}
+
+.abmodal-icon-notice {
+  background: #fff7e5;
+  color: #a87817;
+}
+
+.abmodal-icon-event {
+  background: #eef4fb;
+  color: #0877a9;
+}
+
+.abmodal-icon-help {
+  background: #fff7e5;
+  color: #a87817;
+}
+
+.abmodal-icon-payment {
+  background: #edf7fb;
+  color: #0877a9;
+}
+
+.abmodal-label {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.abmodal-box h2 {
+  margin: 0 45px 20px 0;
+  color: #071a35;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.abmodal-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 19px;
+}
+
+.abmodal-details > div {
+  padding: 14px;
+  border: 1px solid #e5edf3;
+  border-radius: 13px;
+  background: #f9fbfc;
+}
+
+.abmodal-details span {
+  display: block;
+  margin-bottom: 5px;
+  color: #718195;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.abmodal-details strong {
+  display: block;
+  color: #071a35;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.abmodal-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  margin: 18px 0;
+  border-radius: 14px;
+}
+
+.abmodal-message > svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.abmodal-message div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abmodal-message strong {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.abmodal-message span {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.abmodal-success {
+  background: #edf8f1;
+  color: #267546;
+}
+
+.abmodal-warning {
+  background: #fff6e3;
+  color: #9b6a0d;
+}
+
+.abmodal-primary-button {
+  width: 100%;
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #071a35;
+  border-radius: 12px;
+  background: #071a35;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.abmodal-primary-button:hover:not(:disabled) {
+  border-color: #0877a9;
+  background: #0877a9;
+}
+
+.abmodal-primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.abmodal-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 17px;
+  padding: 9px 13px;
+  border-radius: 20px;
+  background: #eef7fb;
+  color: #0877a9;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.abmodal-description {
+  margin: 0 0 18px;
+  color: #647589;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.abmodal-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 15px;
+  background: #f7fafc;
+}
+
+.abmodal-event-details div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #071a35;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.abmodal-event-details svg {
+  width: 20px;
+  color: #0877a9;
+}
+
+.abmodal-help-box {
+  max-width: 520px;
+}
+
+.abmodal-help-options {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.abmodal-help-options a {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid #e2eaf0;
+  border-radius: 15px;
+  background: #ffffff;
+  color: #071a35;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.abmodal-help-options a:hover {
+  border-color: #d6b36a;
+  background: #fffaf0;
+  transform: translateX(3px);
+}
+
+.abmodal-help-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #edf7fb;
+  color: #0877a9;
+  font-size: 18px;
+}
+
+.abmodal-help-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abmodal-help-content strong {
+  color: #071a35;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.abmodal-help-content span {
+  color: #6b7c8f;
+  font-size: 14px;
+}
+
+.abmodal-help-arrow {
+  color: #0877a9;
+}
+
+.abmodal-payment-box {
+  max-width: 570px;
+}
+
+.abmodal-payment-secure {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 15px;
+  padding: 11px 13px;
+  border: 1px solid #d9ecdf;
+  border-radius: 11px;
+  background: #f0faf3;
+  color: #267546;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.abmodal-payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.abmodal-payment-method {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 18px;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  border: 1px solid #e0e9ef;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: left;
+  color: #071a35;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.abmodal-payment-method:hover {
+  border-color: #9cc8da;
+  background: #f8fcfe;
+}
+
+.abmodal-payment-method-active {
+  border-color: #0877a9;
+  background: #edf7fb;
+  box-shadow: 0 0 0 2px rgba(8, 119, 169, 0.08);
+}
+
+.abmodal-payment-method-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eef5f9;
+  color: #0877a9;
+  font-size: 19px;
+}
+
+.abmodal-payment-method-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abmodal-payment-method-info strong {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.abmodal-payment-method-info span {
+  color: #718195;
+  font-size: 13px;
+}
+
+.abmodal-payment-method > svg:last-child {
+  color: #0877a9;
+}
+
+.abmodal-upi-field {
+  margin: 4px 0 15px;
+}
+
+.abmodal-upi-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #071a35;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.abmodal-upi-field input {
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d8e3ea;
+  border-radius: 11px;
+  outline: none;
+  color: #071a35;
+  background: #ffffff;
+  font-size: 15px;
+}
+
+.abmodal-upi-field input:focus {
+  border-color: #0877a9;
+  box-shadow: 0 0 0 3px rgba(8, 119, 169, 0.1);
+}
+
+.abmodal-payment-success {
+  text-align: center;
+}
+
+.abmodal-payment-success-icon {
+  width: 75px;
+  height: 75px;
+  margin: 5px auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e8f7ed;
+  color: #267546;
+  font-size: 32px;
+}
+
+.abmodal-payment-success .abmodal-label {
+  margin-bottom: 8px;
+}
+
+.abmodal-payment-success h2 {
+  margin-right: 0;
+}
+
+.abmodal-receipt-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 20px 0;
+  padding: 15px 17px;
+  border: 1px solid #dce9e1;
+  border-radius: 13px;
+  background: #f5fbf7;
+}
+
+.abmodal-receipt-status span {
+  color: #65778a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.abmodal-receipt-status strong {
+  color: #267546;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.abmodal-processing {
+  padding: 25px 5px 8px;
+  text-align: center;
+}
+
+.abmodal-loader {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 20px;
+  border: 4px solid #dceaf1;
+  border-top-color: #0877a9;
+  border-radius: 50%;
+  animation: abmodalSpin 0.8s linear infinite;
+}
+
+@keyframes abmodalSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.abmodal-processing h3 {
+  margin: 0 0 8px;
+  color: #071a35;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.abmodal-processing p {
+  margin: 0;
+  color: #6a7b8d;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+  .abmodal-overlay {
+    padding: 14px;
+    align-items: center;
+  }
+
+  .abmodal-box {
+    max-height: 94vh;
+    padding: 26px 20px 21px;
+    border-radius: 20px;
+  }
+
+  .abmodal-close {
+    top: 13px;
+    right: 13px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .abmodal-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    font-size: 23px;
+  }
+
+  .abmodal-box h2 {
+    margin-bottom: 17px;
+    font-size: 24px;
+  }
+
+  .abmodal-details {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .abmodal-details > div {
+    padding: 12px;
+  }
+
+  .abmodal-description {
+    font-size: 15px;
+  }
+
+  .abmodal-primary-button {
+    min-height: 49px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .abmodal-overlay {
+    padding: 9px;
+  }
+
+  .abmodal-box {
+    padding: 24px 15px 17px;
+    border-radius: 17px;
+  }
+
+  .abmodal-box h2 {
+    font-size: 22px;
+  }
+
+  .abmodal-label {
+    font-size: 11px;
+  }
+
+  .abmodal-message {
+    padding: 12px;
+  }
+
+  .abmodal-message strong {
+    font-size: 14px;
+  }
+
+  .abmodal-message span {
+    font-size: 13px;
+  }
+
+  .abmodal-event-details {
+    padding: 13px;
+  }
+
+  .abmodal-event-details div {
+    font-size: 14px;
+  }
+
+  .abmodal-help-options a {
+    grid-template-columns: 42px minmax(0, 1fr) 17px;
+    padding: 11px;
+  }
+
+  .abmodal-help-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .abmodal-help-content strong {
+    font-size: 14px;
+  }
+
+  .abmodal-help-content span {
+    font-size: 12px;
+  }
+
+  .abmodal-payment-method {
+    grid-template-columns: 43px minmax(0, 1fr) 15px;
+    gap: 9px;
+    padding: 11px;
+  }
+
+  .abmodal-payment-method-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .abmodal-payment-method-info strong {
+    font-size: 14px;
+  }
+
+  .abmodal-payment-method-info span {
+    font-size: 12px;
+  }
+}
+

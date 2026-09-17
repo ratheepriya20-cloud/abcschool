@@ -1,0 +1,2172 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+/* =========================================================
+   TEACHERS PAGE — ROOT
+========================================================= */
+
+:root {
+  --teacher-navy: #071a35;
+  --teacher-navy-2: #0d2d52;
+  --teacher-blue: #2999df;
+  --teacher-blue-light: #eaf6ff;
+
+  --teacher-gold: #d6a72b;
+  --teacher-gold-light: #fff7dd;
+
+  --teacher-white: #ffffff;
+  --teacher-cream: #fbfaf5;
+  --teacher-bg: #f5f8fc;
+
+  --teacher-text: #18253a;
+  --teacher-muted: #68778c;
+  --teacher-border: #e2e8f0;
+
+  --teacher-shadow:
+    0 18px 45px rgba(7, 26, 53, 0.09);
+
+  --teacher-shadow-hover:
+    0 25px 60px rgba(7, 26, 53, 0.15);
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.abteachers-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+margin-top: 60px;
+  background: var(--teacher-white);
+  color: var(--teacher-text);
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.abteachers-page *,
+.abteachers-page *::before,
+.abteachers-page *::after {
+  box-sizing: border-box;
+}
+
+.abteachers-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.abteachers-page p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 400;
+
+  color: var(--teacher-muted);
+}
+
+.abteachers-page h1,
+.abteachers-page h2,
+.abteachers-page h3 {
+  margin-top: 0;
+}
+
+.abteachers-page a {
+  text-decoration: none;
+}
+
+.abteachers-page button,
+.abteachers-page input {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abteachers-hero {
+  position: relative;
+  min-height: 590px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 40px 0 45px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 7% 18%,
+      rgba(41, 153, 223, 0.13),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 93% 82%,
+      rgba(214, 167, 43, 0.13),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #f7fbff 0%,
+      #ffffff 55%,
+      #f3f9ff 100%
+    );
+}
+
+.abteachers-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  left: -200px;
+  top: -190px;
+
+  border: 1px solid rgba(41, 153, 223, 0.13);
+  border-radius: 50%;
+}
+
+.abteachers-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  right: -150px;
+  bottom: -160px;
+
+  border: 1px solid rgba(214, 167, 43, 0.16);
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   HERO ORBITS / DOTS
+========================================================= */
+
+.abteachers-hero-orbit {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.abteachers-orbit-one {
+  width: 100px;
+  height: 100px;
+
+  left: 5%;
+  bottom: 10%;
+
+  border: 1px dashed rgba(41, 153, 223, 0.22);
+}
+
+.abteachers-orbit-two {
+  width: 55px;
+  height: 55px;
+
+  right: 13%;
+  top: 12%;
+
+  border: 1px dashed rgba(214, 167, 43, 0.3);
+}
+
+.abteachers-hero-dot {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+}
+
+.abteachers-dot-one {
+  left: 11%;
+  top: 25%;
+
+  background: var(--teacher-gold);
+}
+
+.abteachers-dot-two {
+  right: 8%;
+  bottom: 27%;
+
+  background: var(--teacher-blue);
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.abteachers-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.abteachers-breadcrumb a {
+  color: var(--teacher-blue);
+
+  transition: color 0.2s ease;
+}
+
+.abteachers-breadcrumb a:hover {
+  color: var(--teacher-navy);
+}
+
+.abteachers-breadcrumb span {
+  color: #9aa6b5;
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.abteachers-hero-grid {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 0.88fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.abteachers-hero-content {
+  max-width: 680px;
+}
+
+.abteachers-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 16px;
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  background: var(--teacher-gold-light);
+  color: #997510;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.abteachers-eyebrow::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--teacher-gold);
+}
+
+.abteachers-hero h1 {
+  max-width: 700px;
+
+  margin: 0 0 18px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(48px, 5.5vw, 70px);
+  line-height: 1.04;
+  letter-spacing: -1.8px;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-hero h1 span {
+  color: var(--teacher-blue);
+}
+
+.abteachers-hero-content > p {
+  max-width: 640px;
+
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.abteachers-hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.abteachers-btn-primary,
+.abteachers-btn-outline {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 22px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.abteachers-btn-primary {
+  color: var(--teacher-white);
+  background: var(--teacher-navy);
+
+  box-shadow:
+    0 10px 25px rgba(7, 26, 53, 0.18);
+}
+
+.abteachers-btn-primary:hover {
+  transform: translateY(-3px);
+
+  background: var(--teacher-blue);
+
+  box-shadow:
+    0 14px 30px rgba(41, 153, 223, 0.22);
+}
+
+.abteachers-btn-outline {
+  color: var(--teacher-navy);
+
+  background: var(--teacher-white);
+
+  border: 1px solid var(--teacher-border);
+}
+
+.abteachers-btn-outline:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--teacher-gold);
+  background: var(--teacher-gold-light);
+}
+
+
+/* =========================================================
+   HERO POINTS
+========================================================= */
+
+.abteachers-hero-points {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 10px 22px;
+}
+
+.abteachers-hero-points span {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-hero-points svg {
+  font-size: 15px;
+  color: var(--teacher-gold);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.abteachers-hero-visual {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 490px;
+}
+
+
+/* =========================================================
+   MAIN TEACHER CARD
+========================================================= */
+
+.abteachers-main-teacher-card {
+  position: relative;
+
+  width: min(100%, 405px);
+
+  padding: 11px;
+
+  border-radius: 27px;
+
+  background: var(--teacher-white);
+
+  box-shadow: var(--teacher-shadow);
+
+  transform: rotate(1deg);
+
+  z-index: 2;
+}
+
+.abteachers-main-teacher-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -9px;
+
+  border-radius: 31px;
+
+  border: 1px solid rgba(214, 167, 43, 0.35);
+
+  z-index: -1;
+}
+
+.abteachers-image-wrap {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+}
+
+.abteachers-image-wrap img {
+  width: 100%;
+  height: 390px;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition: transform 0.6s ease;
+}
+
+.abteachers-main-teacher-card:hover
+.abteachers-image-wrap img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   IMAGE BADGE
+========================================================= */
+
+.abteachers-image-badge {
+  position: absolute;
+
+  left: 14px;
+  bottom: 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: var(--teacher-navy);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  backdrop-filter: blur(8px);
+}
+
+.abteachers-image-badge svg {
+  color: var(--teacher-gold);
+}
+
+
+/* =========================================================
+   VISUAL INFO
+========================================================= */
+
+.abteachers-visual-info {
+  padding: 17px 10px 7px;
+}
+
+.abteachers-visual-info small {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--teacher-gold);
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.abteachers-visual-info h3 {
+  margin: 0 0 5px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+  line-height: 1.2;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-visual-info p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FLOATING CARD
+========================================================= */
+
+.abteachers-floating-card {
+  position: absolute;
+
+  left: -12px;
+  top: 65px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 15px;
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  box-shadow:
+    0 15px 35px rgba(7, 26, 53, 0.13);
+
+  animation: teacherFloat 4s ease-in-out infinite;
+}
+
+.abteachers-floating-card > svg {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  color: var(--teacher-blue);
+
+  background: var(--teacher-blue-light);
+}
+
+.abteachers-floating-card strong {
+  display: block;
+
+  color: var(--teacher-navy);
+
+  font-size: 17px;
+  line-height: 1;
+}
+
+.abteachers-floating-card span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--teacher-muted);
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.abteachers-floating-mini {
+  position: absolute;
+
+  right: -12px;
+  bottom: 75px;
+
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 13px;
+
+  border-radius: 10px;
+
+  color: var(--teacher-navy);
+
+  background: var(--teacher-white);
+
+  border: 1px solid var(--teacher-border);
+
+  box-shadow:
+    0 12px 30px rgba(7, 26, 53, 0.11);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  animation: teacherFloat 4s ease-in-out infinite 1s;
+}
+
+.abteachers-floating-mini svg {
+  color: var(--teacher-gold);
+}
+
+@keyframes teacherFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abteachers-intro {
+  padding: 42px 0;
+
+  background: var(--teacher-white);
+}
+
+.abteachers-intro-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+.abteachers-section-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--teacher-gold);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.abteachers-intro h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(34px, 4vw, 47px);
+  line-height: 1.12;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-intro-copy {
+  position: relative;
+
+  padding-left: 27px;
+}
+
+.abteachers-intro-copy::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 2px;
+
+  width: 4px;
+  height: calc(100% - 4px);
+
+  border-radius: 5px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      var(--teacher-blue),
+      var(--teacher-gold)
+    );
+}
+
+.abteachers-intro-copy p {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.abteachers-intro-copy p + p {
+  margin-top: 13px;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.abteachers-stats {
+  padding: 0 0 42px;
+
+  background: var(--teacher-white);
+}
+
+.abteachers-stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.abteachers-stat {
+  position: relative;
+
+  padding: 21px 15px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7fbff
+    );
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.abteachers-stat::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  right: -35px;
+  bottom: -35px;
+
+  border-radius: 50%;
+
+  background: var(--teacher-blue-light);
+}
+
+.abteachers-stat:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--teacher-shadow);
+}
+
+.abteachers-stat svg {
+  position: relative;
+  z-index: 1;
+
+  margin-bottom: 8px;
+
+  font-size: 22px;
+
+  color: var(--teacher-blue);
+}
+
+.abteachers-stat:nth-child(2) svg,
+.abteachers-stat:nth-child(4) svg {
+  color: var(--teacher-gold);
+}
+
+.abteachers-stat strong {
+  position: relative;
+  z-index: 1;
+
+  display: block;
+
+  margin-bottom: 3px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-stat span {
+  position: relative;
+  z-index: 1;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: var(--teacher-muted);
+}
+
+
+/* =========================================================
+   FACULTY SECTION
+========================================================= */
+
+.abteachers-faculty {
+  padding: 42px 0 45px;
+
+  background: var(--teacher-bg);
+}
+
+.abteachers-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 25px;
+}
+
+.abteachers-section-header > div {
+  max-width: 650px;
+}
+
+.abteachers-section-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(34px, 4vw, 47px);
+  line-height: 1.1;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-section-header h2 span {
+  color: var(--teacher-blue);
+}
+
+.abteachers-section-header > p {
+  max-width: 510px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.abteachers-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 24px;
+  padding: 12px;
+
+  background: var(--teacher-white);
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 14px;
+
+  box-shadow:
+    0 7px 25px rgba(7, 26, 53, 0.04);
+}
+
+
+/* =========================================================
+   DEPARTMENTS
+========================================================= */
+
+.abteachers-departments {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.abteachers-departments button {
+  padding: 9px 12px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: var(--teacher-muted);
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: 0.25s ease;
+}
+
+.abteachers-departments button:hover {
+  color: var(--teacher-navy);
+
+  background: var(--teacher-blue-light);
+}
+
+.abteachers-departments button.active {
+  color: var(--teacher-white);
+
+  background: var(--teacher-navy);
+
+  box-shadow:
+    0 6px 15px rgba(7, 26, 53, 0.15);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.abteachers-search {
+  flex-shrink: 0;
+
+  width: 220px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 9px;
+
+  background: var(--teacher-bg);
+}
+
+.abteachers-search svg {
+  flex-shrink: 0;
+
+  color: var(--teacher-blue);
+}
+
+.abteachers-search input {
+  width: 100%;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: var(--teacher-navy);
+
+  font-size: 13px;
+}
+
+.abteachers-search input::placeholder {
+  color: #98a5b5;
+}
+
+
+/* =========================================================
+   TEACHER GRID
+========================================================= */
+
+.abteachers-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   TEACHER CARD
+========================================================= */
+
+.abteachers-card {
+  overflow: hidden;
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 17px;
+
+  background: var(--teacher-white);
+
+  box-shadow:
+    0 8px 25px rgba(7, 26, 53, 0.055);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.abteachers-card:hover {
+  transform: translateY(-8px);
+
+  border-color:
+    rgba(41, 153, 223, 0.35);
+
+  box-shadow:
+    var(--teacher-shadow-hover);
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.abteachers-card-image {
+  position: relative;
+
+  height: 250px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #edf5fb,
+      #dfeaf4
+    );
+}
+
+.abteachers-card-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(7, 26, 53, 0.35),
+      transparent 45%
+    );
+}
+
+.abteachers-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition:
+    transform 0.55s ease;
+}
+
+.abteachers-card:hover
+.abteachers-card-image img {
+  transform: scale(1.07);
+}
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+.abteachers-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--teacher-navy),
+      var(--teacher-navy-2)
+    );
+}
+
+.abteachers-image-fallback::before {
+  content: "AB PUBLIC SCHOOL";
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.abteachers-card-number {
+  position: absolute;
+
+  left: 12px;
+  top: 12px;
+
+  z-index: 3;
+
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: rgba(7, 26, 53, 0.88);
+
+  color: var(--teacher-white);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SUBJECT
+========================================================= */
+
+.abteachers-subject {
+  position: absolute;
+
+  right: 12px;
+  bottom: 12px;
+
+  z-index: 3;
+
+  padding: 7px 9px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  color: var(--teacher-navy);
+
+  font-size: 10px;
+  font-weight: 800;
+
+  backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.abteachers-card-content {
+  padding: 18px;
+}
+
+.abteachers-role {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--teacher-blue);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  line-height: 1.4;
+}
+
+.abteachers-card-content h3 {
+  margin: 0 0 9px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 21px;
+  line-height: 1.15;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-card-content > p {
+  margin-bottom: 15px;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: var(--teacher-muted);
+}
+
+
+/* =========================================================
+   DETAILS
+========================================================= */
+
+.abteachers-details {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  padding: 13px 0;
+
+  border-top: 1px solid var(--teacher-border);
+}
+
+.abteachers-details > div {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 7px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: var(--teacher-muted);
+}
+
+.abteachers-details svg {
+  flex-shrink: 0;
+
+  color: var(--teacher-gold);
+
+  font-size: 13px;
+}
+
+.abteachers-details span {
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+========================================================= */
+
+.abteachers-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 12px;
+
+  border-top: 1px solid var(--teacher-border);
+}
+
+.abteachers-card-footer > span {
+  font-size: 11px;
+  font-weight: 800;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-card-footer a {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 8px;
+
+  color: var(--teacher-blue);
+
+  background: var(--teacher-blue-light);
+
+  transition: 0.25s ease;
+}
+
+.abteachers-card-footer a:hover {
+  color: var(--teacher-white);
+
+  background: var(--teacher-navy);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.abteachers-empty {
+  grid-column: 1 / -1;
+
+  padding: 45px 20px;
+
+  text-align: center;
+
+  border: 1px dashed #cbd5e1;
+  border-radius: 16px;
+
+  background: var(--teacher-white);
+}
+
+.abteachers-empty > svg {
+  margin-bottom: 10px;
+
+  font-size: 32px;
+
+  color: var(--teacher-blue);
+}
+
+.abteachers-empty h3 {
+  margin: 0 0 7px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-empty p {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TEACHING APPROACH
+========================================================= */
+
+.abteachers-approach {
+  padding: 45px 0;
+
+  background: var(--teacher-white);
+}
+
+.abteachers-approach-grid {
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 60px;
+}
+
+.abteachers-approach-content h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(34px, 4vw, 47px);
+  line-height: 1.1;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-approach-content h2 span {
+  color: var(--teacher-blue);
+}
+
+.abteachers-approach-content > p {
+  max-width: 570px;
+
+  margin: 13px 0 22px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   APPROACH LIST
+========================================================= */
+
+.abteachers-approach-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.abteachers-approach-list > div {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 13px;
+
+  border: 1px solid var(--teacher-border);
+  border-radius: 12px;
+
+  background: var(--teacher-bg);
+
+  transition: 0.25s ease;
+}
+
+.abteachers-approach-list > div:hover {
+  transform: translateX(5px);
+
+  border-color:
+    rgba(41, 153, 223, 0.25);
+
+  background: var(--teacher-blue-light);
+}
+
+.abteachers-approach-list > div > span {
+  flex-shrink: 0;
+
+  width: 35px;
+  height: 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: var(--teacher-navy);
+
+  background: var(--teacher-gold-light);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.abteachers-approach-list h3 {
+  margin: 0 0 3px;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  color: var(--teacher-navy);
+}
+
+.abteachers-approach-list p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   APPROACH VISUAL
+========================================================= */
+
+.abteachers-approach-visual {
+  position: relative;
+
+  min-height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(41, 153, 223, 0.3),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(214, 167, 43, 0.25),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      var(--teacher-navy),
+      #0d335c
+    );
+}
+
+.abteachers-approach-visual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.abteachers-approach-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================================
+   LEARNING CARD
+========================================================= */
+
+.abteachers-learning-card {
+  position: relative;
+  z-index: 2;
+
+  width: min(82%, 390px);
+
+  padding: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.abteachers-learning-icon {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 13px;
+
+  background: var(--teacher-gold);
+
+  color: var(--teacher-navy);
+
+  font-size: 20px;
+}
+
+.abteachers-learning-card small {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #9fdcff;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.abteachers-learning-card h3 {
+  margin: 0 0 25px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+  line-height: 1.3;
+
+  color: var(--teacher-white);
+}
+
+.abteachers-progress > span {
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.abteachers-progress > strong {
+  float: right;
+
+  color: var(--teacher-white);
+
+  font-size: 13px;
+}
+
+.abteachers-progress > div {
+  clear: both;
+
+  width: 100%;
+  height: 7px;
+
+  margin-top: 9px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.abteachers-progress i {
+  display: block;
+
+  width: 92%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--teacher-blue),
+      var(--teacher-gold)
+    );
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abteachers-cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 42px 0;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(41, 153, 223, 0.24),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      var(--teacher-navy),
+      #0d3158
+    );
+}
+
+.abteachers-cta-circle {
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -120px;
+  top: -190px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.abteachers-cta-inner {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+.abteachers-cta-inner small {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #f2cf67;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.abteachers-cta-inner h2 {
+  margin: 0 0 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.08;
+
+  color: var(--teacher-white);
+}
+
+.abteachers-cta-inner p {
+  max-width: 610px;
+
+  font-size: 16px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.abteachers-cta-button {
+  flex-shrink: 0;
+
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 21px;
+
+  border-radius: 10px;
+
+  background: var(--teacher-gold);
+
+  color: var(--teacher-navy);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.16);
+
+  transition: 0.25s ease;
+}
+
+.abteachers-cta-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--teacher-white);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abteachers-container {
+    width: min(94%, 1000px);
+  }
+
+  .abteachers-hero-grid {
+    gap: 35px;
+  }
+
+  .abteachers-hero h1 {
+    font-size: 52px;
+  }
+
+  .abteachers-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .abteachers-floating-card {
+    left: -5px;
+  }
+
+  .abteachers-floating-mini {
+    right: -5px;
+  }
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abteachers-hero {
+    min-height: auto;
+  }
+
+  .abteachers-hero-grid {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .abteachers-hero-content {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    text-align: center;
+  }
+
+  .abteachers-breadcrumb {
+    justify-content: center;
+  }
+
+  .abteachers-hero-copy {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .abteachers-hero-buttons,
+  .abteachers-hero-points {
+    justify-content: center;
+  }
+
+  .abteachers-hero-visual {
+    width: min(100%, 470px);
+
+    margin: 0 auto;
+  }
+
+  .abteachers-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .abteachers-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abteachers-section-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .abteachers-controls {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .abteachers-search {
+    width: 100%;
+  }
+
+  .abteachers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abteachers-approach-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .abteachers-approach-visual {
+    min-height: 350px;
+  }
+
+  .abteachers-cta-inner {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .abteachers-container {
+    width: min(92%, 550px);
+  }
+
+  .abteachers-page p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* HERO */
+
+  .abteachers-hero {
+    padding: 35px 0 42px;
+  }
+
+  .abteachers-breadcrumb {
+    margin-bottom: 15px;
+
+    font-size: 12px;
+  }
+
+  .abteachers-eyebrow {
+    padding: 7px 12px;
+
+    font-size: 10px;
+  }
+
+  .abteachers-hero h1 {
+    margin-bottom: 15px;
+
+    font-size: 42px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .abteachers-hero-content > p {
+    font-size: 16px;
+  }
+
+  .abteachers-hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .abteachers-btn-primary,
+  .abteachers-btn-outline {
+    width: 100%;
+  }
+
+  .abteachers-hero-points {
+    gap: 8px 13px;
+  }
+
+  .abteachers-hero-points span {
+    font-size: 11px;
+  }
+
+  /* HERO IMAGE */
+
+  .abteachers-hero-visual {
+    min-height: 440px;
+  }
+
+  .abteachers-main-teacher-card {
+    width: 88%;
+  }
+
+  .abteachers-image-wrap img {
+    height: 350px;
+  }
+
+  .abteachers-floating-card {
+    left: -3px;
+    top: 45px;
+
+    padding: 10px 12px;
+  }
+
+  .abteachers-floating-mini {
+    right: -3px;
+    bottom: 50px;
+
+    padding: 9px 11px;
+  }
+
+  /* INTRO */
+
+  .abteachers-intro {
+    padding: 40px 0;
+  }
+
+  .abteachers-intro h2,
+  .abteachers-section-header h2,
+  .abteachers-approach-content h2 {
+    font-size: 34px;
+  }
+
+  .abteachers-intro-copy {
+    padding-left: 20px;
+  }
+
+  /* STATS */
+
+  .abteachers-stats {
+    padding-bottom: 40px;
+  }
+
+  .abteachers-stats-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+  .abteachers-stat {
+    padding: 18px 8px;
+  }
+
+  .abteachers-stat strong {
+    font-size: 24px;
+  }
+
+  .abteachers-stat span {
+    font-size: 11px;
+  }
+
+  /* FACULTY */
+
+  .abteachers-faculty {
+    padding: 40px 0 45px;
+  }
+
+  .abteachers-grid {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .abteachers-card-image {
+    height: 290px;
+  }
+
+  .abteachers-card-content {
+    padding: 17px;
+  }
+
+  .abteachers-card-content h3 {
+    font-size: 22px;
+  }
+
+  /* APPROACH */
+
+  .abteachers-approach {
+    padding: 40px 0;
+  }
+
+  .abteachers-approach-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .abteachers-approach-visual {
+    min-height: 320px;
+  }
+
+  .abteachers-learning-card {
+    width: 86%;
+
+    padding: 23px;
+  }
+
+  .abteachers-learning-card h3 {
+    font-size: 22px;
+  }
+
+  /* CTA */
+
+  .abteachers-cta {
+    padding: 40px 0;
+  }
+
+  .abteachers-cta-inner h2 {
+    font-size: 35px;
+  }
+
+  .abteachers-cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .abteachers-hero h1 {
+    font-size: 37px;
+  }
+
+  .abteachers-hero-points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abteachers-hero-visual {
+    min-height: 410px;
+  }
+
+  .abteachers-main-teacher-card {
+    width: 91%;
+  }
+
+  .abteachers-image-wrap img {
+    height: 320px;
+  }
+
+  .abteachers-floating-card {
+    transform: scale(0.88);
+    transform-origin: left top;
+
+    left: -12px;
+  }
+
+  .abteachers-floating-mini {
+    transform: scale(0.88);
+    transform-origin: right bottom;
+
+    right: -12px;
+  }
+
+  .abteachers-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abteachers-card-image {
+    height: 270px;
+  }
+
+  .abteachers-details {
+    grid-template-columns: 1fr;
+  }
+
+  .abteachers-cta-inner h2 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,1826 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+.abacad2-page {
+  --navy: #071a3a;
+  --navy-dark: #041126;
+  --blue: #1769aa;
+  --sky: #dff3ff;
+  --gold: #d6a93a;
+  --gold-light: #f5df9b;
+  --cream: #faf8f1;
+  --white: #ffffff;
+  --text: #172033;
+  --muted: #687286;
+  --border: #e5e9ef;
+
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.abacad2-page *,
+.abacad2-page *::before,
+.abacad2-page *::after {
+  box-sizing: border-box;
+}
+
+.abacad2-page h1,
+.abacad2-page h2,
+.abacad2-page h3,
+.abacad2-page p {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+/* HERO */
+
+.abacad2-hero {
+  width: 100%;
+  min-height: 550px;
+  padding: 38px 5%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  align-items: center;
+  gap: 28px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(214, 169, 58, 0.14),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #ffffff 55%,
+      #eef7ff 100%
+    );
+}
+
+.abacad2-hero-left {
+  width: 100%;
+  max-width: 720px;
+  min-width: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.abacad2-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+
+  color: var(--blue);
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.abacad2-eyebrow span {
+  width: 28px;
+  height: 2px;
+  flex-shrink: 0;
+  background: var(--gold);
+}
+
+.abacad2-hero h1 {
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 4.5vw, 62px);
+  line-height: 1.04;
+  letter-spacing: -1.5px;
+  font-weight: 800;
+
+  white-space: normal;
+}
+
+.abacad2-hero h1 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: var(--blue);
+  font-weight: 800;
+  white-space: normal;
+}
+
+.abacad2-hero-left > p {
+  width: 100%;
+  max-width: 650px;
+  margin: 15px 0 22px;
+  padding: 0;
+
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* HERO BUTTONS */
+
+.abacad2-hero-buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.abacad2-explore-btn,
+.abacad2-apply-btn {
+  min-height: 47px;
+  padding: 0 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  flex: 0 1 auto;
+  white-space: nowrap;
+
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.abacad2-explore-btn {
+  background: var(--navy);
+  color: #fff;
+}
+
+.abacad2-explore-btn:hover {
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.abacad2-apply-btn {
+  border: 1px solid #d8dee7;
+  color: var(--navy);
+  background: #fff;
+}
+
+.abacad2-apply-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* HERO RIGHT */
+
+.abacad2-hero-right {
+  width: 100%;
+  min-width: 0;
+  min-height: 330px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.abacad2-hero-orbit {
+  position: absolute;
+  border: 1px solid rgba(23, 105, 170, 0.12);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 300px;
+  height: 300px;
+}
+
+.orbit-two {
+  width: 395px;
+  height: 395px;
+  border-color: rgba(214, 169, 58, 0.13);
+}
+
+.abacad2-hero-circle {
+  width: 235px;
+  height: 235px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    var(--navy),
+    #0c3566
+  );
+
+  box-shadow: 0 25px 65px rgba(7, 26, 58, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  color: #fff;
+
+  position: relative;
+  z-index: 2;
+}
+
+.abacad2-hero-circle::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.abacad2-hero-circle span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.abacad2-hero-circle strong {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  color: var(--gold-light);
+}
+
+.abacad2-circle-small {
+  width: 48px;
+  height: 48px;
+
+  margin-bottom: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+
+  font-size: 20px;
+}
+
+.abacad2-stat {
+  position: absolute;
+  min-width: 90px;
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: #fff;
+  border: 1px solid #e6eaf0;
+
+  box-shadow: 0 15px 35px rgba(7, 26, 58, 0.09);
+
+  z-index: 4;
+}
+
+.abacad2-stat strong {
+  color: var(--gold);
+  font-size: 17px;
+}
+
+.abacad2-stat span {
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.abacad2-stat-one {
+  top: 28px;
+  left: 4%;
+}
+
+.abacad2-stat-two {
+  right: 2%;
+  top: 115px;
+}
+
+.abacad2-stat-three {
+  bottom: 20px;
+  left: 10%;
+}
+
+/* INTRO */
+
+.abacad2-intro {
+  width: 100%;
+  padding: 40px 6%;
+
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr) 150px;
+  gap: 28px;
+  align-items: start;
+
+  background: #fff;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.abacad2-intro-number {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  color: #dce7f1;
+}
+
+.abacad2-intro-content {
+  min-width: 0;
+}
+
+.abacad2-intro-content > span,
+.abacad2-learning-title > span,
+.abacad2-journey-content > span,
+.abacad2-cta > div > span {
+  display: block;
+
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--blue);
+}
+
+.abacad2-intro-content h2 {
+  width: 100%;
+  max-width: 850px;
+  margin: 7px 0 9px;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(31px, 3.5vw, 49px);
+  line-height: 1.07;
+  letter-spacing: -1px;
+  color: var(--navy);
+
+  white-space: normal;
+}
+
+.abacad2-intro-content h2 span,
+.abacad2-intro-content h2 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.abacad2-intro-content h2 strong {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.abacad2-intro-content p {
+  width: 100%;
+  max-width: 760px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.abacad2-intro-highlight {
+  min-width: 0;
+
+  padding-left: 18px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  border-left: 2px solid var(--gold);
+}
+
+.abacad2-intro-highlight div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.abacad2-intro-highlight strong {
+  color: var(--navy);
+  font-size: 14px;
+}
+
+.abacad2-intro-highlight svg {
+  color: var(--gold);
+  font-size: 11px;
+}
+
+/* PROGRAMS */
+
+.abacad2-programs {
+  width: 100%;
+  padding: 46px 5%;
+
+  background: linear-gradient(
+    180deg,
+    #f8fbff 0%,
+    #ffffff 100%
+  );
+}
+
+.abacad2-section-head {
+  width: 100%;
+  margin-bottom: 32px;
+
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.abacad2-section-head > div {
+  min-width: 0;
+}
+
+.abacad2-section-head > div > span {
+  display: block;
+
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: var(--blue);
+}
+
+.abacad2-section-head h2 {
+  width: 100%;
+  max-width: 760px;
+  margin: 7px 0 0;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 3.7vw, 51px);
+  line-height: 1.04;
+  letter-spacing: -1px;
+  color: var(--navy);
+
+  white-space: normal;
+}
+
+.abacad2-section-head h2 span,
+.abacad2-section-head h2 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.abacad2-section-head h2 strong {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.abacad2-section-head > p {
+  width: 100%;
+  max-width: 390px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* CARDS */
+
+.abacad2-card-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.abacad2-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 225px;
+
+  padding: 21px;
+
+  display: grid;
+  grid-template-columns: 32px 52px minmax(0, 1fr) 38px;
+  align-items: start;
+  gap: 13px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #fff;
+  border: 1px solid #e2e7ed;
+
+  text-decoration: none;
+  color: inherit;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.abacad2-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: var(--card-accent);
+}
+
+.abacad2-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+  border: 16px solid var(--card-soft);
+
+  transition: 0.4s ease;
+}
+
+.abacad2-card:hover {
+  transform: translateY(-4px);
+
+  border-color: transparent;
+
+  box-shadow: 0 20px 50px rgba(7, 26, 58, 0.1);
+}
+
+.abacad2-card:hover::after {
+  transform: scale(1.4);
+}
+
+.abacad2-blue {
+  --card-accent: #2379b8;
+  --card-soft: #dcefff;
+}
+
+.abacad2-orange {
+  --card-accent: #e58235;
+  --card-soft: #fff0df;
+}
+
+.abacad2-gold {
+  --card-accent: #d3a32d;
+  --card-soft: #f9edc7;
+}
+
+.abacad2-purple {
+  --card-accent: #7456a8;
+  --card-soft: #eee8fb;
+}
+
+.abacad2-green {
+  --card-accent: #3f8b67;
+  --card-soft: #e3f3eb;
+}
+
+.abacad2-red {
+  --card-accent: #c95656;
+  --card-soft: #fbe5e5;
+}
+
+.abacad2-card-number {
+  padding-top: 5px;
+
+  color: #aab3bf;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.abacad2-card-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+  background: var(--card-soft);
+  color: var(--card-accent);
+
+  font-size: 21px;
+
+  transition: 0.3s ease;
+}
+
+.abacad2-card-content {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.abacad2-card-subtitle {
+  display: block;
+
+  color: var(--card-accent);
+  font-size: 10px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.abacad2-card h3 {
+  margin: 7px 0 8px;
+  padding: 0;
+
+  color: var(--navy);
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  line-height: 1.08;
+}
+
+.abacad2-card p {
+  width: 100%;
+  max-width: 470px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.abacad2-card-link {
+  margin-top: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--navy);
+
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.abacad2-card-link svg {
+  color: var(--card-accent);
+}
+
+.abacad2-card-arrow {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e3e8ee;
+  border-radius: 50%;
+
+  color: var(--navy);
+  font-size: 12px;
+
+  position: relative;
+  z-index: 3;
+}
+
+.abacad2-card:hover .abacad2-card-arrow {
+  background: var(--card-accent);
+  color: #fff;
+  border-color: var(--card-accent);
+}
+
+/* LEARNING */
+
+.abacad2-learning {
+  width: 100%;
+  padding: 45px 6%;
+
+  background: var(--navy);
+  color: #fff;
+}
+
+.abacad2-learning-title {
+  margin-bottom: 30px;
+}
+
+.abacad2-learning-title > span {
+  color: var(--gold-light);
+}
+
+.abacad2-learning-title h2 {
+  width: 100%;
+  max-width: 850px;
+  margin: 8px 0 0;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 3.7vw, 51px);
+  line-height: 1.04;
+  letter-spacing: -1px;
+
+  white-space: normal;
+}
+
+.abacad2-learning-title h2 span,
+.abacad2-learning-title h2 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.abacad2-learning-title h2 strong {
+  color: var(--gold-light);
+  font-weight: 800;
+}
+
+.abacad2-learning-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.abacad2-learning-card {
+  min-width: 0;
+  padding: 19px 17px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.abacad2-learning-card:last-child {
+  border-right: none;
+}
+
+.abacad2-learning-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abacad2-learning-top > span {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.abacad2-learning-top > div {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+
+  color: var(--gold-light);
+}
+
+.abacad2-learning-card h3 {
+  margin: 11px 0 7px;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.abacad2-learning-card p {
+  margin: 0;
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.abacad2-learning-line {
+  width: 32px;
+  height: 2px;
+
+  margin-top: 18px;
+
+  background: var(--gold);
+}
+
+/* JOURNEY */
+
+.abacad2-journey {
+  width: 100%;
+  padding: 43px 5%;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(380px, 1fr);
+
+  align-items: center;
+  gap: 40px;
+
+  background: var(--cream);
+}
+
+.abacad2-journey-content {
+  min-width: 0;
+}
+
+.abacad2-journey-content h2 {
+  width: 100%;
+  max-width: 680px;
+  margin: 7px 0 13px;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(31px, 3vw, 44px);
+  line-height: 1.05;
+  letter-spacing: -0.8px;
+
+  color: var(--navy);
+
+  white-space: normal;
+}
+
+.abacad2-journey-content h2 span,
+.abacad2-journey-content h2 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.abacad2-journey-content h2 strong {
+  color: var(--gold);
+}
+
+.abacad2-journey-content p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.abacad2-journey-line {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.abacad2-journey-step {
+  min-width: 62px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.abacad2-journey-step strong {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--navy);
+  color: #fff;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.abacad2-journey-step span {
+  font-size: 9px;
+  line-height: 1;
+  font-weight: 800;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+
+  color: var(--navy);
+}
+
+.abacad2-line {
+  height: 1px;
+  flex: 1;
+  background: #d7d4ca;
+}
+
+/* CTA */
+
+.abacad2-cta {
+  width: 100%;
+  min-width: 0;
+  padding: 43px 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+
+  background: linear-gradient(
+    120deg,
+    var(--blue),
+    var(--navy)
+  );
+
+  color: #fff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.abacad2-cta > div:first-child {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.abacad2-cta > div > span {
+  color: var(--gold-light);
+}
+
+.abacad2-cta h2 {
+  width: 100%;
+  max-width: 760px;
+  margin: 7px 0 9px;
+  padding: 0;
+
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 3.7vw, 49px);
+  line-height: 1.04;
+  letter-spacing: -1px;
+
+  white-space: normal;
+}
+
+.abacad2-cta h2 span,
+.abacad2-cta h2 strong {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.abacad2-cta h2 strong {
+  color: var(--gold-light);
+}
+
+.abacad2-cta p {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.abacad2-cta-buttons {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  position: relative;
+  z-index: 2;
+}
+
+.abacad2-cta-explore,
+.abacad2-cta-apply {
+  min-height: 47px;
+  padding: 0 19px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  white-space: nowrap;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: 0.3s ease;
+}
+
+.abacad2-cta-explore {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.abacad2-cta-apply {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.abacad2-cta-explore:hover {
+  background: #fff;
+}
+
+.abacad2-cta-apply:hover {
+  background: #fff;
+  color: var(--navy);
+}
+
+/* 1100 */
+
+@media (max-width: 1100px) {
+  .abacad2-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 0.75fr);
+    gap: 20px;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .abacad2-hero h1 {
+    font-size: 49px;
+  }
+
+  .abacad2-card {
+    grid-template-columns: 29px 49px minmax(0, 1fr) 36px;
+    gap: 11px;
+    padding: 19px;
+  }
+
+  .abacad2-card h3 {
+    font-size: 22px;
+  }
+
+  .abacad2-card p {
+    font-size: 13px;
+  }
+
+  .abacad2-learning-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abacad2-learning-card:nth-child(2) {
+    border-right: none;
+  }
+
+  .abacad2-learning-card:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .abacad2-journey {
+    grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+    gap: 28px;
+  }
+
+  .abacad2-cta {
+    gap: 22px;
+  }
+}
+
+/* 850 */
+
+@media (max-width: 850px) {
+  .abacad2-hero {
+    min-height: auto;
+    grid-template-columns: 1fr 275px;
+    gap: 15px;
+    padding: 32px 4%;
+  }
+
+  .abacad2-hero h1 {
+    font-size: 43px;
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .abacad2-hero-left > p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .abacad2-hero-right {
+    min-height: 285px;
+  }
+
+  .abacad2-hero-circle {
+    width: 205px;
+    height: 205px;
+  }
+
+  .orbit-one {
+    width: 265px;
+    height: 265px;
+  }
+
+  .orbit-two {
+    width: 330px;
+    height: 330px;
+  }
+
+  .abacad2-stat {
+    transform: scale(0.88);
+  }
+
+  .abacad2-stat-one {
+    left: -4px;
+  }
+
+  .abacad2-stat-two {
+    right: -4px;
+  }
+
+  .abacad2-stat-three {
+    left: 3%;
+  }
+
+  .abacad2-intro {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 18px;
+    padding: 36px 5%;
+  }
+
+  .abacad2-intro-highlight {
+    grid-column: 2;
+
+    padding: 17px 0 0;
+
+    border-left: none;
+    border-top: 2px solid var(--gold);
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abacad2-section-head {
+    align-items: start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .abacad2-section-head > p {
+    max-width: 620px;
+  }
+
+  .abacad2-journey {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+
+  .abacad2-journey-line {
+    max-width: 700px;
+  }
+
+  .abacad2-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .abacad2-cta-buttons {
+    width: auto;
+  }
+}
+
+/* 650 */
+
+@media (max-width: 650px) {
+  .abacad2-hero {
+    grid-template-columns: 1fr;
+    padding: 27px 18px 31px;
+    gap: 10px;
+  }
+
+  .abacad2-eyebrow {
+    gap: 8px;
+    margin-bottom: 11px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .abacad2-eyebrow span {
+    width: 24px;
+  }
+
+  .abacad2-hero h1 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-size: clamp(34px, 9vw, 41px);
+    line-height: 1.03;
+    letter-spacing: -0.8px;
+  }
+
+  .abacad2-hero h1 strong {
+    display: inline;
+    margin: 0;
+  }
+
+  .abacad2-hero-left > p {
+    max-width: 100%;
+    margin: 13px 0 18px;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .abacad2-hero-buttons {
+    width: 100%;
+    gap: 7px;
+  }
+
+  .abacad2-explore-btn,
+  .abacad2-apply-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 45px;
+    padding: 0 9px;
+    font-size: 11.5px;
+    gap: 5px;
+  }
+
+  .abacad2-hero-right {
+    min-height: 265px;
+    margin-top: 3px;
+  }
+
+  .abacad2-hero-circle {
+    width: 195px;
+    height: 195px;
+  }
+
+  .abacad2-hero-circle strong {
+    font-size: 22px;
+  }
+
+  .orbit-one {
+    width: 245px;
+    height: 245px;
+  }
+
+  .orbit-two {
+    width: 300px;
+    height: 300px;
+  }
+
+  .abacad2-stat {
+    min-width: 75px;
+    padding: 7px 8px;
+  }
+
+  .abacad2-stat strong {
+    font-size: 13px;
+  }
+
+  .abacad2-stat span {
+    font-size: 8px;
+  }
+
+  .abacad2-stat-one {
+    top: 20px;
+    left: 0;
+  }
+
+  .abacad2-stat-two {
+    right: 0;
+    top: 100px;
+  }
+
+  .abacad2-stat-three {
+    bottom: 12px;
+    left: 4%;
+  }
+
+  .abacad2-intro,
+  .abacad2-programs,
+  .abacad2-learning,
+  .abacad2-journey,
+  .abacad2-cta {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .abacad2-intro {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .abacad2-intro-number {
+    font-size: 30px;
+  }
+
+  .abacad2-intro-content h2 {
+    font-size: clamp(27px, 7.7vw, 34px);
+    line-height: 1.05;
+    letter-spacing: -0.6px;
+  }
+
+  .abacad2-intro-content h2 strong {
+    margin: 0;
+  }
+
+  .abacad2-intro-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .abacad2-intro-highlight {
+    gap: 10px;
+  }
+
+  .abacad2-intro-highlight strong {
+    font-size: 13px;
+  }
+
+  .abacad2-programs {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .abacad2-section-head {
+    margin-bottom: 25px;
+  }
+
+  .abacad2-section-head h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.04;
+    letter-spacing: -0.6px;
+  }
+
+  .abacad2-section-head h2 strong {
+    margin: 0;
+  }
+
+  .abacad2-section-head > p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .abacad2-card-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .abacad2-card {
+    min-height: 210px;
+
+    grid-template-columns: 28px 48px minmax(0, 1fr) 34px;
+
+    gap: 9px;
+    padding: 18px 15px;
+  }
+
+  .abacad2-card-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .abacad2-card h3 {
+    font-size: 22px;
+    line-height: 1.08;
+  }
+
+  .abacad2-card p {
+    font-size: 13.5px;
+    line-height: 1.58;
+  }
+
+  .abacad2-card-link {
+    margin-top: 13px;
+    font-size: 10.5px;
+  }
+
+  .abacad2-card-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .abacad2-learning {
+    padding-top: 37px;
+    padding-bottom: 37px;
+  }
+
+  .abacad2-learning-title {
+    margin-bottom: 23px;
+  }
+
+  .abacad2-learning-title h2 {
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.04;
+  }
+
+  .abacad2-learning-title h2 strong {
+    margin: 0;
+  }
+
+  .abacad2-learning-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abacad2-learning-card {
+    padding: 18px 4px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .abacad2-learning-card:last-child {
+    border-bottom: none;
+  }
+
+  .abacad2-learning-card h3 {
+    font-size: 22px;
+  }
+
+  .abacad2-learning-card p {
+    font-size: 13.5px;
+  }
+
+  .abacad2-journey {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    gap: 24px;
+  }
+
+  .abacad2-journey-content h2 {
+    font-size: clamp(28px, 7.7vw, 34px);
+    line-height: 1.05;
+  }
+
+  .abacad2-journey-content h2 strong {
+    margin: 0;
+  }
+
+  .abacad2-journey-content p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .abacad2-journey-line {
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .abacad2-line {
+    width: 1px;
+    height: 23px;
+    flex: none;
+  }
+
+  .abacad2-cta {
+    padding-top: 37px;
+    padding-bottom: 37px;
+    gap: 22px;
+  }
+
+  .abacad2-cta h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.04;
+    letter-spacing: -0.6px;
+  }
+
+  .abacad2-cta h2 strong {
+    margin: 0;
+  }
+
+  .abacad2-cta p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .abacad2-cta-buttons {
+    width: 100%;
+    gap: 7px;
+  }
+
+  .abacad2-cta-explore,
+  .abacad2-cta-apply {
+    flex: 1 1 0;
+    min-width: 0;
+    min-height: 45px;
+    padding: 0 9px;
+    font-size: 11.5px;
+    gap: 5px;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 480px) {
+  .abacad2-hero {
+    padding: 25px 15px 28px;
+  }
+
+  .abacad2-hero h1 {
+    font-size: clamp(32px, 9.5vw, 38px);
+  }
+
+  .abacad2-hero-left > p {
+    font-size: 13.5px;
+  }
+
+  .abacad2-explore-btn,
+  .abacad2-apply-btn {
+    padding: 0 7px;
+    font-size: 11px;
+  }
+
+  .abacad2-hero-right {
+    min-height: 245px;
+  }
+
+  .abacad2-hero-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .abacad2-circle-small {
+    width: 41px;
+    height: 41px;
+    font-size: 17px;
+    margin-bottom: 5px;
+  }
+
+  .abacad2-hero-circle span {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .abacad2-hero-circle strong {
+    font-size: 20px;
+  }
+
+  .orbit-one {
+    width: 225px;
+    height: 225px;
+  }
+
+  .orbit-two {
+    width: 270px;
+    height: 270px;
+  }
+
+  .abacad2-stat {
+    min-width: 68px;
+    padding: 6px 7px;
+    gap: 5px;
+  }
+
+  .abacad2-stat strong {
+    font-size: 12px;
+  }
+
+  .abacad2-stat span {
+    font-size: 7px;
+  }
+
+  .abacad2-intro,
+  .abacad2-programs,
+  .abacad2-learning,
+  .abacad2-journey,
+  .abacad2-cta {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .abacad2-intro {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 11px;
+  }
+
+  .abacad2-intro-number {
+    font-size: 27px;
+  }
+
+  .abacad2-intro-content h2 {
+    font-size: clamp(26px, 8vw, 31px);
+  }
+
+  .abacad2-section-head h2 {
+    font-size: clamp(28px, 8.5vw, 34px);
+  }
+
+  .abacad2-card {
+    grid-template-columns: 25px 45px minmax(0, 1fr) 32px;
+    gap: 7px;
+    padding: 16px 12px;
+  }
+
+  .abacad2-card-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .abacad2-card-subtitle {
+    font-size: 8.5px;
+    letter-spacing: 1px;
+  }
+
+  .abacad2-card h3 {
+    font-size: 20px;
+  }
+
+  .abacad2-card p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .abacad2-card-link {
+    font-size: 9.5px;
+  }
+
+  .abacad2-card-arrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .abacad2-learning-title h2 {
+    font-size: clamp(28px, 8.5vw, 34px);
+  }
+
+  .abacad2-journey-content h2 {
+    font-size: clamp(27px, 8.5vw, 32px);
+  }
+
+  .abacad2-cta h2 {
+    font-size: clamp(28px, 8.5vw, 34px);
+  }
+}
+
+/* 380 */
+
+@media (max-width: 380px) {
+  .abacad2-hero {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .abacad2-hero h1 {
+    font-size: 32px;
+    letter-spacing: -0.5px;
+  }
+
+  .abacad2-hero-left > p {
+    font-size: 13px;
+  }
+
+  .abacad2-explore-btn,
+  .abacad2-apply-btn {
+    min-height: 44px;
+    padding: 0 5px;
+    font-size: 10.5px;
+  }
+
+  .abacad2-intro,
+  .abacad2-programs,
+  .abacad2-learning,
+  .abacad2-journey,
+  .abacad2-cta {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .abacad2-intro-content h2 {
+    font-size: 26px;
+  }
+
+  .abacad2-section-head h2 {
+    font-size: 29px;
+  }
+
+  .abacad2-learning-title h2 {
+    font-size: 29px;
+  }
+
+  .abacad2-journey-content h2 {
+    font-size: 28px;
+  }
+
+  .abacad2-cta h2 {
+    font-size: 29px;
+  }
+
+  .abacad2-card {
+    grid-template-columns: 22px 42px minmax(0, 1fr) 30px;
+    gap: 6px;
+    padding: 15px 10px;
+  }
+
+  .abacad2-card-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .abacad2-card h3 {
+    font-size: 19px;
+  }
+
+  .abacad2-card p {
+    font-size: 12.5px;
+  }
+
+  .abacad2-card-arrow {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+/* 350 */
+
+@media (max-width: 350px) {
+  .abacad2-hero h1 {
+    font-size: 30px;
+  }
+  .abacad2-hero{
+    margin-top: 70px;
+  }
+
+  .abacad2-hero-buttons {
+    gap: 5px;
+  }
+
+  .abacad2-explore-btn,
+  .abacad2-apply-btn {
+    padding: 0 4px;
+    font-size: 10px;
+  }
+
+  .abacad2-intro-content h2 {
+    font-size: 25px;
+  }
+
+  .abacad2-section-head h2,
+  .abacad2-learning-title h2,
+  .abacad2-cta h2 {
+    font-size: 28px;
+  }
+
+  .abacad2-card {
+    grid-template-columns: 20px 40px minmax(0, 1fr) 28px;
+    gap: 5px;
+    padding: 14px 9px;
+  }
+
+  .abacad2-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .abacad2-card h3 {
+    font-size: 18px;
+  }
+
+  .abacad2-card p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,207 @@
+.adminAttendancePage {
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #071a35;
+}
+
+.adminAttendanceHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.adminAttendanceEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0877a9;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.adminAttendanceHeader h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.adminAttendanceHeader p {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.adminAttendanceEdit,
+.adminAttendanceSave {
+  border: 0;
+  background: #071a35;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adminAttendanceEdit:hover,
+.adminAttendanceSave:hover {
+  background: #0877a9;
+}
+
+.adminAttendanceMain {
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 22px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.07);
+}
+
+.adminAttendanceCircle {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #0877a9 0deg,
+    #0877a9 calc(var(--attendance, 92) * 3.6deg),
+    #e8eef3 calc(var(--attendance, 92) * 3.6deg)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adminAttendanceCircle > div {
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.adminAttendanceCircle strong {
+  font-size: 42px;
+  color: #071a35;
+}
+
+.adminAttendanceCircle span {
+  color: #64748b;
+  font-weight: 700;
+}
+
+.adminAttendanceStats {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.adminAttendanceStats div {
+  background: #f8fbfd;
+  border: 1px solid #e1eaf0;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.adminAttendanceStats svg {
+  color: #0877a9;
+  font-size: 24px;
+}
+
+.adminAttendanceStats span {
+  display: block;
+  color: #64748b;
+  margin: 12px 0 7px;
+  font-size: 14px;
+}
+
+.adminAttendanceStats strong {
+  font-size: 27px;
+}
+
+.adminAttendanceForm {
+  margin-top: 25px;
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.adminAttendanceForm h2 {
+  margin: 0 0 22px;
+  font-size: 25px;
+}
+
+.adminAttendanceFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.adminAttendanceFields label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.adminAttendanceFields input {
+  border: 1px solid #cbd8e3;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+}
+
+@media (max-width: 800px) {
+  .adminAttendancePage {
+    padding: 20px 15px;
+  }
+
+  .adminAttendanceHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adminAttendanceHeader h1 {
+    font-size: 30px;
+  }
+
+  .adminAttendanceEdit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .adminAttendanceMain {
+    flex-direction: column;
+    padding: 25px 18px;
+    gap: 30px;
+  }
+
+  .adminAttendanceStats {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .adminAttendanceFields {
+    grid-template-columns: 1fr;
+  }
+
+  .adminAttendanceSave {
+    width: 100%;
+    justify-content: center;
+  }
+}

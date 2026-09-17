@@ -1,0 +1,775 @@
+/* =========================================================
+   EVENTS SECTION
+   NAVY + SKY BLUE + GOLD
+========================================================= */
+
+.schoolEventsSection {
+  position: relative;
+
+  width: 100%;
+
+  padding: 85px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f7fbfd 55%,
+      #eef8fc
+    );
+}
+
+
+.schoolEventsContainer {
+  position: relative;
+
+  z-index: 3;
+
+  width: min(1180px, 92%);
+
+  margin: auto;
+}
+
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.eventsDecor {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.eventsDecorOne {
+  width: 320px;
+  height: 320px;
+
+  right: -170px;
+  top: -150px;
+
+  border: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+
+.eventsDecorTwo {
+  width: 210px;
+  height: 210px;
+
+  left: -120px;
+  bottom: -120px;
+
+  border: 1px solid rgba(242, 193, 78, 0.16);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.eventsHeader {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 45px;
+
+  margin-bottom: 36px;
+}
+
+
+.eventsLabel {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: #0877a9;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.eventsLabel::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  background: #f2c14e;
+}
+
+
+.eventsHeader h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(40px, 4vw, 53px);
+
+  line-height: 1.05;
+
+  letter-spacing: -1.3px;
+}
+
+
+.eventsHeader h2 span {
+  display: block;
+
+  color: #0877a9;
+}
+
+
+.eventsHeaderRight {
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 20px;
+
+  max-width: 500px;
+}
+
+
+.eventsHeaderRight p {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: #708194;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* TOP BUTTON */
+
+.eventsTopButton {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 39px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dce7ef;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #071a35;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.eventsTopButton span {
+  color: #0877a9;
+
+  font-size: 13px;
+}
+
+
+.eventsTopButton:hover {
+  border-color: #f2c14e;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EVENTS GRID
+========================================================= */
+
+.eventsGrid {
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.925fr 0.925fr;
+
+  gap: 13px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.eventCard {
+  overflow: hidden;
+
+  border: 1px solid #e2eaf0;
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 25px rgba(7, 26, 53, 0.045);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+.eventCard:hover {
+  transform: translateY(-7px);
+
+  border-color: #b9dceb;
+
+  box-shadow:
+    0 17px 38px rgba(7, 26, 53, 0.10);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.eventImage {
+  position: relative;
+
+  height: 215px;
+
+  overflow: hidden;
+}
+
+
+.eventFeatured .eventImage {
+  height: 250px;
+}
+
+
+.eventImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.eventCard:hover .eventImage img {
+  transform: scale(1.07);
+}
+
+
+.eventImageOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.05),
+      rgba(7, 26, 53, 0.55)
+    );
+}
+
+
+/* CATEGORY */
+
+.eventCategory {
+  position: absolute;
+
+  left: 13px;
+  top: 13px;
+
+  padding: 6px 9px;
+
+  border-radius: 5px;
+
+  background: rgba(7, 26, 53, 0.78);
+
+  color: #f2c14e;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  backdrop-filter: blur(7px);
+}
+
+
+/* DATE */
+
+.eventDate {
+  position: absolute;
+
+  right: 13px;
+  bottom: 13px;
+
+  width: 49px;
+  height: 52px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.16);
+}
+
+
+.eventDate strong {
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1;
+}
+
+
+.eventDate span {
+  margin-top: 3px;
+
+  color: #0877a9;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.eventContent {
+  padding: 17px 18px 19px;
+}
+
+
+.eventSmallTitle {
+  color: #f0b92f;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.eventContent h3 {
+  margin: 6px 0 7px;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.15;
+}
+
+
+.eventContent p {
+  min-height: 42px;
+
+  margin: 0;
+
+  color: #7c8b9a;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+/* DETAILS BUTTON */
+
+.eventDetailsButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 13px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #0877a9;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.eventDetailsButton span {
+  color: #d3a62d;
+
+  font-size: 14px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.eventDetailsButton:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.eventsCTA {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 22px;
+
+  padding: 17px 20px;
+
+  border-radius: 11px;
+
+  background: #071a35;
+
+  box-shadow:
+    0 13px 30px rgba(7, 26, 53, 0.13);
+}
+
+
+.eventsCTALeft {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.eventsCTAIcon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(242, 193, 78, 0.4);
+
+  border-radius: 8px;
+
+  color: #f2c14e;
+
+  font-size: 15px;
+}
+
+
+.eventsCTALeft span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #7dd3fc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.eventsCTALeft strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.eventsCTA button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 41px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #f2c14e;
+
+  color: #071a35;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+.eventsCTA button span {
+  color: #071a35;
+
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+
+.eventsCTA button:hover {
+  transform: translateY(-2px);
+
+  background: #ffd76b;
+
+  box-shadow:
+    0 8px 20px rgba(242, 193, 78, 0.2);
+}
+
+
+.eventsCTA button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .eventsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .eventFeatured {
+    grid-column: span 2;
+  }
+
+  .eventFeatured .eventImage {
+    height: 270px;
+  }
+
+  .eventsHeaderRight {
+    max-width: 430px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .schoolEventsSection {
+    padding: 65px 0;
+  }
+
+  .eventsHeader {
+    display: block;
+
+    text-align: center;
+
+    margin-bottom: 28px;
+  }
+
+  .eventsLabel {
+    justify-content: center;
+  }
+
+  .eventsHeader h2 {
+    font-size: 37px;
+  }
+
+  .eventsHeaderRight {
+    display: block;
+
+    max-width: 500px;
+
+    margin: 15px auto 0;
+  }
+
+  .eventsHeaderRight p {
+    max-width: 500px;
+
+    font-size: 11px;
+  }
+
+  .eventsTopButton {
+    margin-top: 14px;
+  }
+
+  .eventsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .eventFeatured {
+    grid-column: auto;
+  }
+
+  .eventImage,
+  .eventFeatured .eventImage {
+    height: 230px;
+  }
+
+  .eventsCTA {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .eventsCTA button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .schoolEventsSection {
+    padding: 52px 0;
+  }
+
+  .eventsHeader h2 {
+    font-size: 32px;
+  }
+
+  .eventImage,
+  .eventFeatured .eventImage {
+    height: 210px;
+  }
+
+  .eventContent h3 {
+    font-size: 19px;
+  }
+
+  .eventsCTA {
+    padding: 15px;
+  }
+
+  .eventsCTALeft strong {
+    font-size: 15px;
+  }
+}

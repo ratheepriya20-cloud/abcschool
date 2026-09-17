@@ -1,0 +1,1386 @@
+ /* =========================================================
+   AB PUBLIC SCHOOL — NEW PREMIUM FOOTER
+   LARGE TYPOGRAPHY + COMPACT HEIGHT
+   RESPONSIVE DESIGN
+========================================================= */
+
+.absx-footer {
+  --absx-navy: #071a35;
+  --absx-navy-2: #0b2747;
+  --absx-navy-3: #102f50;
+  --absx-sky: #0877a9;
+  --absx-sky-light: #18a4d8;
+  --absx-gold: #d6b36a;
+  --absx-gold-light: #f0d99c;
+  --absx-white: #ffffff;
+  --absx-text: rgba(255, 255, 255, 0.78);
+
+  position: relative;
+  width: 100%;
+
+  margin-top: 45px;
+
+  overflow: hidden;
+
+  color: var(--absx-white);
+
+  background:
+    radial-gradient(
+      circle at 0% 35%,
+      rgba(8, 119, 169, 0.24),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 100% 80%,
+      rgba(214, 179, 106, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      var(--absx-navy) 0%,
+      var(--absx-navy-2) 55%,
+      #06162d 100%
+    );
+}
+
+
+/* =========================================================
+   TOP WAVE
+========================================================= */
+
+.absx-footer-wave {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 58px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.absx-footer-wave svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.absx-footer-wave path {
+  fill: #ffffff;
+}
+
+
+/* =========================================================
+   GOLD CURVE
+========================================================= */
+
+.absx-footer-main::before {
+  content: "";
+
+  position: absolute;
+
+  top: 31px;
+  left: -5%;
+
+  width: 110%;
+  height: 46px;
+
+  border-top: 2px solid rgba(214, 179, 106, 0.75);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   DECORATIVE ELEMENTS
+========================================================= */
+
+.absx-footer-star {
+  position: absolute;
+
+  z-index: 4;
+
+  color: var(--absx-gold);
+
+  opacity: 0.55;
+
+  pointer-events: none;
+
+  animation: absxStarMove 5s ease-in-out infinite;
+}
+
+.absx-footer-star-one {
+  top: 105px;
+  left: 5%;
+
+  font-size: 20px;
+}
+
+.absx-footer-star-two {
+  top: 220px;
+  right: 6%;
+
+  font-size: 16px;
+
+  animation-delay: 1s;
+}
+
+.absx-footer-star-three {
+  bottom: 65px;
+  right: 30%;
+
+  font-size: 14px;
+
+  animation-delay: 2s;
+}
+
+@keyframes absxStarMove {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(10deg);
+  }
+}
+
+
+.absx-footer-circle {
+  position: absolute;
+
+  border: 1px solid rgba(214, 179, 106, 0.11);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.absx-footer-circle-one {
+  width: 250px;
+  height: 250px;
+
+  top: 145px;
+  right: -130px;
+}
+
+.absx-footer-circle-two {
+  width: 180px;
+  height: 180px;
+
+  left: -100px;
+  bottom: 45px;
+}
+
+
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
+.absx-footer-main {
+  position: relative;
+
+  z-index: 5;
+
+  padding: 72px 0 0;
+}
+
+
+.absx-footer-container {
+  position: relative;
+
+  z-index: 6;
+
+  width: min(1200px, calc(100% - 48px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   ADMISSION CTA — NEW GLASS DESIGN
+========================================================= */
+
+.absx-footer-cta {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 32px;
+
+  padding: 17px 20px;
+
+  border: 1px solid rgba(214, 179, 106, 0.38);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.095),
+      rgba(8, 119, 169, 0.10)
+    );
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(14px);
+
+  overflow: hidden;
+}
+
+
+/* CTA GOLD ACCENT */
+
+.absx-footer-cta::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 5px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--absx-gold-light),
+      var(--absx-sky-light)
+    );
+}
+
+
+/* CTA CONTENT */
+
+.absx-footer-cta-content {
+  padding-left: 6px;
+
+  max-width: 760px;
+}
+
+
+.absx-footer-cta-label {
+  display: inline-block;
+
+  margin-bottom: 4px;
+
+  color: var(--absx-gold-light);
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.absx-footer-cta h2 {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+
+.absx-footer-cta h2 span {
+  color: var(--absx-gold-light);
+}
+
+
+.absx-footer-cta p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.73);
+
+  font-size: 15px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.absx-footer-apply-btn {
+  position: relative;
+
+  min-width: 185px;
+  min-height: 48px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  padding: 0 20px;
+
+  border: 2px solid var(--absx-gold);
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--absx-gold-light),
+      var(--absx-gold)
+    );
+
+  color: var(--absx-navy);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(214, 179, 106, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.absx-footer-apply-btn:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 30px rgba(214, 179, 106, 0.28);
+}
+
+.absx-footer-apply-btn svg {
+  font-size: 15px;
+
+  transition: transform 0.3s ease;
+}
+
+.absx-footer-apply-btn:hover svg {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.absx-footer-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.45fr
+    0.85fr
+    0.85fr
+    1.1fr;
+
+  gap: 32px;
+
+  padding-bottom: 30px;
+}
+
+
+/* =========================================================
+   BRAND SECTION
+========================================================= */
+
+.absx-footer-brand {
+  max-width: 390px;
+}
+
+
+.absx-footer-logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin: 0 0 10px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+.absx-footer-logo-box {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid var(--absx-gold);
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: var(--absx-navy);
+
+  font-size: 20px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+
+.absx-footer-logo-text {
+  display: flex;
+
+  flex-direction: column;
+}
+
+
+.absx-footer-logo-text strong {
+  color: #ffffff;
+
+  font-size: 21px;
+
+  line-height: 1.15;
+
+  font-weight: 900;
+}
+
+
+.absx-footer-logo-text small {
+  margin-top: 3px;
+
+  color: var(--absx-gold-light);
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.absx-footer-description {
+  max-width: 380px;
+
+  margin: 0;
+
+  color: var(--absx-text);
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.absx-footer-social-title {
+  margin: 12px 0 7px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 850;
+}
+
+
+.absx-footer-social {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.absx-social-btn {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(214, 179, 106, 0.5);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.absx-social-btn:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--absx-gold);
+
+  background: var(--absx-gold);
+
+  color: var(--absx-navy);
+}
+
+
+/* =========================================================
+   COLUMN HEADINGS
+========================================================= */
+
+.absx-footer-column h3,
+.absx-footer-contact h3 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 4px 0 18px;
+
+  color: #ffffff;
+
+  font-size: 19px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+}
+
+
+.absx-footer-column h3::after,
+.absx-footer-contact h3::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -7px;
+
+  width: 38px;
+
+  height: 3px;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--absx-gold),
+      var(--absx-sky)
+    );
+}
+
+
+/* =========================================================
+   LINK LIST
+========================================================= */
+
+.absx-footer-link-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.absx-footer-link-list button {
+  display: flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.73);
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.absx-footer-link-list button::before {
+  content: "›";
+
+  margin-right: 7px;
+
+  color: var(--absx-gold-light);
+
+  font-size: 19px;
+
+  font-weight: 900;
+}
+
+
+.absx-footer-link-list button:hover {
+  color: #ffffff;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   ADMIN LOGIN
+========================================================= */
+
+.absx-footer-admin {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  margin-top: 11px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(214, 179, 106, 0.55);
+
+  border-radius: 8px;
+
+  background: rgba(214, 179, 106, 0.07);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+
+.absx-footer-admin:hover {
+  transform: translateY(-2px);
+
+  background: var(--absx-gold);
+
+  color: var(--absx-navy);
+}
+
+
+.absx-footer-admin svg {
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.absx-contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+.absx-contact-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  text-decoration: none;
+}
+
+
+.absx-contact-link {
+  transition: color 0.25s ease;
+}
+
+
+.absx-contact-link:hover {
+  color: var(--absx-gold-light);
+}
+
+
+.absx-contact-icon {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 1px solid rgba(214, 179, 106, 0.4);
+
+  border-radius: 7px;
+
+  background: rgba(214, 179, 106, 0.07);
+
+  color: var(--absx-gold-light);
+
+  font-size: 13px;
+}
+
+
+.absx-contact-item p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.absx-footer-contact-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  margin-top: 11px;
+
+  padding: 0 14px;
+
+  border: 1px solid rgba(8, 119, 169, 0.65);
+
+  border-radius: 8px;
+
+  background: rgba(8, 119, 169, 0.12);
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.absx-footer-contact-btn:hover {
+  transform: translateY(-2px);
+
+  background: var(--absx-sky);
+
+  box-shadow:
+    0 9px 22px rgba(8, 119, 169, 0.25);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.absx-footer-divider {
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(214, 179, 106, 0.5),
+      rgba(255, 255, 255, 0.12),
+      rgba(214, 179, 106, 0.5),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   BOTTOM FOOTER
+========================================================= */
+
+.absx-footer-bottom {
+  min-height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+
+  padding: 10px 0 13px;
+}
+
+
+.absx-footer-bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 12px;
+
+  line-height: 1.45;
+}
+
+
+.absx-footer-bottom p strong {
+  color: var(--absx-gold-light);
+
+  font-weight: 850;
+}
+
+
+.absx-footer-legal {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+
+.absx-footer-legal button {
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+
+.absx-footer-legal button:hover {
+  color: var(--absx-gold-light);
+}
+
+
+.absx-footer-legal span {
+  color: var(--absx-gold);
+}
+
+
+/* =========================================================
+   1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .absx-footer-container {
+    width: min(920px, calc(100% - 40px));
+  }
+
+  .absx-footer-grid {
+    grid-template-columns:
+      1.25fr
+      1fr
+      1fr;
+
+    gap: 28px;
+  }
+
+  .absx-footer-brand {
+    grid-column: span 3;
+
+    max-width: 680px;
+  }
+}
+
+
+/* =========================================================
+   800px
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .absx-footer-main {
+    padding-top: 68px;
+  }
+
+  .absx-footer-cta {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    padding: 16px 18px;
+  }
+
+  .absx-footer-apply-btn {
+    width: 100%;
+  }
+
+  .absx-footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px 22px;
+  }
+
+  .absx-footer-brand {
+    grid-column: span 2;
+  }
+
+  .absx-footer-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+}
+
+
+/* =========================================================
+   600px MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .absx-footer {
+    margin-top: 35px;
+  }
+
+  .absx-footer-wave {
+    height: 47px;
+  }
+
+  .absx-footer-main {
+    padding-top: 57px;
+  }
+
+  .absx-footer-main::before {
+    top: 26px;
+
+    height: 37px;
+  }
+
+  .absx-footer-container {
+    width: calc(100% - 24px);
+  }
+
+
+  /* CTA */
+
+  .absx-footer-cta {
+    margin-bottom: 25px;
+
+    padding: 15px 16px;
+
+    border-radius: 13px;
+
+    gap: 12px;
+  }
+
+  .absx-footer-cta-label {
+    font-size: 11px;
+  }
+
+  .absx-footer-cta h2 {
+    font-size: 23px;
+
+    line-height: 1.25;
+  }
+
+  .absx-footer-cta p {
+    font-size: 14px;
+
+    line-height: 1.45;
+  }
+
+  .absx-footer-apply-btn {
+    min-height: 45px;
+
+    font-size: 14px;
+  }
+
+
+  /* GRID */
+
+  .absx-footer-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px 18px;
+
+    padding-bottom: 24px;
+  }
+
+  .absx-footer-brand {
+    grid-column: span 2;
+  }
+
+
+  /* LOGO */
+
+  .absx-footer-logo {
+    gap: 10px;
+  }
+
+  .absx-footer-logo-box {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+  }
+
+  .absx-footer-logo-text strong {
+    font-size: 20px;
+  }
+
+  .absx-footer-logo-text small {
+    font-size: 8px;
+  }
+
+  .absx-footer-description {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  /* SOCIAL */
+
+  .absx-footer-social-title {
+    font-size: 14px;
+  }
+
+  .absx-social-btn {
+    width: 37px;
+    height: 37px;
+
+    font-size: 14px;
+  }
+
+
+  /* HEADINGS */
+
+  .absx-footer-column h3,
+  .absx-footer-contact h3 {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+  }
+
+
+  /* LINKS */
+
+  .absx-footer-link-list {
+    gap: 6px;
+  }
+
+  .absx-footer-link-list button {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .absx-footer-link-list button::before {
+    font-size: 17px;
+  }
+
+
+  /* ADMIN */
+
+  .absx-footer-admin {
+    min-height: 39px;
+
+    font-size: 13px;
+  }
+
+
+  /* CONTACT */
+
+  .absx-contact-list {
+    gap: 8px;
+  }
+
+  .absx-contact-item {
+    font-size: 14px;
+
+    line-height: 1.4;
+  }
+
+  .absx-contact-icon {
+    width: 29px;
+    height: 29px;
+
+    font-size: 12px;
+  }
+
+  .absx-footer-contact-btn {
+    min-height: 39px;
+
+    font-size: 13px;
+  }
+
+
+  /* BOTTOM */
+
+  .absx-footer-bottom {
+    min-height: auto;
+
+    align-items: center;
+
+    padding: 10px 0 14px;
+
+    text-align: center;
+  }
+
+  .absx-footer-bottom p {
+    font-size: 11px;
+  }
+
+  .absx-footer-legal {
+    justify-content: center;
+
+    gap: 8px 12px;
+  }
+
+  .absx-footer-legal button {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   430px SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .absx-footer-container {
+    width: calc(100% - 18px);
+  }
+
+  .absx-footer-main {
+    padding-top: 54px;
+  }
+
+  .absx-footer-cta {
+    padding: 14px;
+  }
+
+  .absx-footer-cta h2 {
+    font-size: 21px;
+  }
+
+  .absx-footer-cta p {
+    font-size: 13px;
+  }
+
+  .absx-footer-apply-btn {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  .absx-footer-grid {
+    gap: 22px 14px;
+  }
+
+  .absx-footer-logo-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .absx-footer-logo-text strong {
+    font-size: 19px;
+  }
+
+  .absx-footer-description {
+    font-size: 13px;
+  }
+
+  .absx-footer-column h3,
+  .absx-footer-contact h3 {
+    font-size: 17px;
+  }
+
+  .absx-footer-link-list button {
+    font-size: 13px;
+  }
+
+  .absx-contact-item {
+    font-size: 13px;
+  }
+
+  .absx-social-btn {
+    width: 35px;
+    height: 35px;
+
+    font-size: 13px;
+  }
+
+  .absx-footer-bottom p,
+  .absx-footer-legal button {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .absx-footer-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .absx-footer-brand {
+    grid-column: auto;
+  }
+
+  .absx-footer-cta h2 {
+    font-size: 20px;
+  }
+
+  .absx-footer-link-list button {
+    font-size: 13px;
+  }
+
+  .absx-contact-item {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.absx-footer button:focus-visible,
+.absx-footer a:focus-visible {
+  outline: 3px solid rgba(240, 217, 156, 0.7);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (hover: none) {
+
+  .absx-footer-link-list button:hover,
+  .absx-social-btn:hover,
+  .absx-footer-admin:hover,
+  .absx-footer-contact-btn:hover,
+  .absx-footer-apply-btn:hover {
+    transform: none;
+  }
+}

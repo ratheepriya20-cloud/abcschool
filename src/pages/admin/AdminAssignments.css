@@ -1,0 +1,252 @@
+.adminAssignmentsPage {
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #071a35;
+}
+
+.adminAssignmentsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.adminAssignmentsEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0877a9;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.adminAssignmentsHeader h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.adminAssignmentsHeader p {
+  margin: 10px 0 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.adminAssignmentsAdd,
+.adminAssignmentsSubmit {
+  border: 0;
+  background: #071a35;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.adminAssignmentsAdd:hover,
+.adminAssignmentsSubmit:hover {
+  background: #0877a9;
+}
+
+.adminAssignmentsTableWrap {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.07);
+}
+
+.adminAssignmentsTable {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.adminAssignmentsTable th {
+  background: #071a35;
+  color: white;
+  padding: 17px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.adminAssignmentsTable td {
+  padding: 16px 15px;
+  border-bottom: 1px solid #e8eef3;
+  color: #475569;
+  font-size: 14px;
+}
+
+.adminAssignmentsTable tr:last-child td {
+  border-bottom: 0;
+}
+
+.adminAssignmentsTable td strong {
+  color: #071a35;
+}
+
+.adminAssignmentStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 30px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.adminAssignmentStatus.submitted {
+  color: #0877a9;
+  background: #eef8fc;
+}
+
+.adminAssignmentStatus.pending {
+  color: #9a6700;
+  background: #fff8df;
+}
+
+.adminAssignmentButtons {
+  display: flex;
+  gap: 7px;
+}
+
+.adminAssignmentButtons button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #dce6ef;
+  background: #f8fbfd;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #071a35;
+}
+
+.adminAssignmentButtons button.delete {
+  color: #b42318;
+}
+
+.adminAssignmentsOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 26, 53, 0.58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.adminAssignmentsModal {
+  position: relative;
+  width: min(650px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.adminAssignmentsClose {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  background: #f1f5f9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.adminAssignmentsModal h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.adminAssignmentsModal > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.adminAssignmentsModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.adminAssignmentsModal label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.adminAssignmentsModal input {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #cbd8e3;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+  outline: none;
+}
+
+.adminAssignmentsTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.adminAssignmentCheck {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px !important;
+  cursor: pointer;
+}
+
+.adminAssignmentCheck input {
+  width: 18px;
+  height: 18px;
+}
+
+.adminAssignmentsSubmit {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media (max-width: 700px) {
+  .adminAssignmentsPage {
+    padding: 20px 15px;
+  }
+
+  .adminAssignmentsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adminAssignmentsHeader h1 {
+    font-size: 30px;
+  }
+
+  .adminAssignmentsAdd {
+    width: 100%;
+  }
+
+  .adminAssignmentsTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .adminAssignmentsModal {
+    padding: 23px 18px;
+  }
+}

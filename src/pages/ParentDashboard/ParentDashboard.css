@@ -1,0 +1,557 @@
+
+.abparentdash-shell {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f9fc;
+  color: #071a35;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.abparentdash-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 275px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #071a35;
+  color: #ffffff;
+  box-shadow: 8px 0 30px rgba(7, 26, 53, 0.13);
+}
+
+.abparentdash-brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 25px 21px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.abparentdash-brand-logo {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0c27e;
+  border-radius: 13px;
+  background: rgba(224, 194, 126, 0.1);
+  color: #e0c27e;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.abparentdash-brand-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abparentdash-brand-text strong {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: 0.5px;
+}
+
+.abparentdash-brand-text span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.abparentdash-student-mini {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 16px 14px;
+  padding: 14px;
+  border: 1px solid rgba(224, 194, 126, 0.17);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.abparentdash-student-mini > svg {
+  flex-shrink: 0;
+  color: #e0c27e;
+  font-size: 37px;
+}
+
+.abparentdash-student-mini div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abparentdash-student-mini strong {
+  overflow: hidden;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.abparentdash-student-mini span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+}
+
+.abparentdash-sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 13px 15px;
+  scrollbar-width: none;
+}
+
+.abparentdash-sidebar-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.abparentdash-nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  margin-bottom: 5px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.abparentdash-nav-item:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.abparentdash-nav-active {
+  border-color: rgba(224, 194, 126, 0.22);
+  background: linear-gradient(
+    90deg,
+    rgba(8, 119, 169, 0.4),
+    rgba(8, 119, 169, 0.16)
+  );
+  color: #ffffff;
+}
+
+.abparentdash-nav-icon {
+  width: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8bcde5;
+  font-size: 16px;
+}
+
+.abparentdash-nav-active .abparentdash-nav-icon {
+  color: #e0c27e;
+}
+
+.abparentdash-nav-text {
+  flex: 1;
+}
+
+.abparentdash-nav-arrow {
+  color: rgba(255, 255, 255, 0.28);
+  font-size: 11px;
+}
+
+.abparentdash-nav-active .abparentdash-nav-arrow {
+  color: #e0c27e;
+}
+
+.abparentdash-sidebar-bottom {
+  padding: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.abparentdash-help-btn,
+.abparentdash-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 45px;
+  margin-bottom: 8px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.abparentdash-help-btn {
+  background: rgba(224, 194, 126, 0.1);
+  color: #e0c27e;
+  border-color: rgba(224, 194, 126, 0.14);
+}
+
+.abparentdash-help-btn:hover {
+  background: rgba(224, 194, 126, 0.18);
+}
+
+.abparentdash-logout-btn {
+  margin-bottom: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.63);
+}
+
+.abparentdash-logout-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.abparentdash-main {
+  width: calc(100% - 275px);
+  min-height: 100vh;
+  margin-left: 275px;
+  display: flex;
+  flex-direction: column;
+}
+
+.abparentdash-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 30px;
+  border-bottom: 1px solid #e5ebf0;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 5px 20px rgba(7, 26, 53, 0.05);
+  backdrop-filter: blur(12px);
+}
+
+.abparentdash-topbar-left,
+.abparentdash-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.abparentdash-back-btn,
+.abparentdash-mobile-menu-btn,
+.abparentdash-notification-btn,
+.abparentdash-top-profile {
+  border: 0;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.abparentdash-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 0 14px;
+  border: 1px solid #e1e8ee;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #071a35;
+  font-size: 14px;
+  font-weight: 750;
+  transition: 0.22s ease;
+}
+
+.abparentdash-back-btn svg {
+  color: #0877a9;
+}
+
+.abparentdash-back-btn:hover {
+  border-color: #0877a9;
+  color: #0877a9;
+}
+
+.abparentdash-mobile-menu-btn {
+  display: none;
+  width: 43px;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #071a35;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.abparentdash-notification-btn {
+  position: relative;
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e1e8ee;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #071a35;
+  font-size: 17px;
+  transition: 0.22s ease;
+}
+
+.abparentdash-notification-btn:hover {
+  border-color: #0877a9;
+  color: #0877a9;
+}
+
+.abparentdash-notification-btn span {
+  position: absolute;
+  top: -5px;
+  right: -4px;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #0877a9;
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.abparentdash-top-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 5px 9px 5px 5px;
+  border: 1px solid #e1e8ee;
+  border-radius: 13px;
+  background: #ffffff;
+  color: #071a35;
+  text-align: left;
+  transition: 0.22s ease;
+}
+
+.abparentdash-top-profile:hover {
+  border-color: rgba(8, 119, 169, 0.35);
+}
+
+.abparentdash-top-profile > svg:first-child {
+  color: #0877a9;
+  font-size: 37px;
+}
+
+.abparentdash-top-profile div {
+  min-width: 125px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.abparentdash-top-profile strong {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 800;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.abparentdash-top-profile span {
+  color: #7b8794;
+  font-size: 11px;
+}
+
+.abparentdash-top-profile > svg:last-child {
+  color: #9aa8b5;
+  font-size: 11px;
+}
+
+.abparentdash-content {
+  flex: 1;
+  width: 100%;
+  padding: 30px;
+}
+
+.abparentdash-footer {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 30px;
+  border-top: 1px solid #e4ebf0;
+  background: #ffffff;
+  color: #718096;
+  font-size: 13px;
+}
+
+.abparentdash-footer div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0877a9;
+  font-weight: 750;
+}
+
+.abparentdash-footer svg {
+  color: #d6b36a;
+  font-size: 15px;
+}
+
+.abparentdash-mobile-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 950;
+  background: rgba(7, 26, 53, 0.58);
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 1050px) {
+  .abparentdash-sidebar {
+    width: 245px;
+  }
+
+  .abparentdash-main {
+    width: calc(100% - 245px);
+    margin-left: 245px;
+  }
+
+  .abparentdash-content {
+    padding: 25px;
+  }
+
+  .abparentdash-topbar {
+    padding: 12px 25px;
+  }
+
+  .abparentdash-footer {
+    padding: 14px 25px;
+  }
+
+  .abparentdash-top-profile div {
+    min-width: 105px;
+  }
+}
+
+@media (max-width: 800px) {
+  .abparentdash-sidebar {
+    left: -285px;
+    width: 275px;
+    transition: left 0.28s ease;
+  }
+
+  .abparentdash-sidebar-open {
+    left: 0;
+  }
+
+  .abparentdash-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .abparentdash-mobile-menu-btn {
+    display: flex;
+  }
+
+  .abparentdash-topbar {
+    min-height: 70px;
+    padding: 10px 18px;
+  }
+
+  .abparentdash-content {
+    padding: 22px 18px;
+  }
+
+  .abparentdash-footer {
+    padding: 14px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .abparentdash-topbar {
+    gap: 10px;
+  }
+
+  .abparentdash-back-btn span {
+    display: none;
+  }
+
+  .abparentdash-back-btn {
+    width: 43px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .abparentdash-top-profile div,
+  .abparentdash-top-profile > svg:last-child {
+    display: none;
+  }
+
+  .abparentdash-top-profile {
+    width: 43px;
+    height: 43px;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .abparentdash-top-profile > svg:first-child {
+    font-size: 30px;
+  }
+
+  .abparentdash-topbar-right {
+    margin-left: auto;
+  }
+
+  .abparentdash-content {
+    padding: 19px 14px;
+  }
+
+  .abparentdash-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 430px) {
+  .abparentdash-topbar {
+    padding: 9px 12px;
+  }
+
+  .abparentdash-mobile-menu-btn,
+  .abparentdash-back-btn,
+  .abparentdash-notification-btn,
+  .abparentdash-top-profile {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .abparentdash-notification-btn {
+    font-size: 15px;
+  }
+
+  .abparentdash-content {
+    padding: 17px 11px;
+  }
+
+  .abparentdash-footer {
+    padding: 14px 11px;
+  }
+}
+

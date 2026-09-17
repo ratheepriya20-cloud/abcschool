@@ -1,0 +1,1258 @@
+.schoolGallery {
+  width: 100%;
+  padding: 30px 0 82px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(8, 119, 169, 0.045),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(214, 179, 106, 0.07),
+      transparent 30%
+    ),
+    #f8fafc;
+}
+
+.galleryContainer {
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.galleryHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 0;
+  margin-bottom: 42px;
+}
+
+
+/* LABEL */
+
+.galleryLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 13px;
+
+  color: #0877a9;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  letter-spacing: 2.2px;
+}
+
+.galleryLabel::before,
+.galleryLabel::after {
+  content: "";
+
+  width: 38px;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+
+/* MAIN HEADING */
+
+.galleryHeader h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 45px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  letter-spacing: -1.4px;
+
+  text-align: center;
+}
+
+.galleryHeader h2 span {
+  display: inline;
+
+  margin-left: 8px;
+
+  color: #0877a9;
+}
+
+
+/* HEADER RIGHT */
+
+.galleryHeaderRight {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 15px;
+}
+
+.galleryHeaderRight p {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: #64748b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+/* VIEW BUTTON */
+
+.galleryHeaderRight button {
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 1px solid rgba(214, 179, 106, 0.7);
+
+  border-radius: 8px;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(7, 26, 53, 0.13);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.galleryHeaderRight button span {
+  color: #e0c27e;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.galleryHeaderRight button:hover {
+  transform: translateY(-3px);
+
+  background: #0877a9;
+
+  box-shadow:
+    0 14px 28px rgba(8, 119, 169, 0.18);
+}
+
+.galleryHeaderRight button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.schoolGalleryGrid {
+  display: grid;
+
+  grid-template-columns:
+    1.35fr
+    0.82fr
+    0.82fr;
+
+  grid-template-rows:
+    205px
+    205px;
+
+  gap: 12px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   GALLERY ITEMS
+========================================================= */
+
+.schoolGalleryItem {
+  position: relative;
+
+  overflow: hidden;
+
+  min-width: 0;
+
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  background: #071a35;
+
+  box-shadow:
+    0 10px 28px rgba(7, 26, 53, 0.09);
+
+  isolation: isolate;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.galleryItem1 {
+  grid-row: span 2;
+}
+
+.schoolGalleryItem:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 42px rgba(7, 26, 53, 0.17);
+}
+
+
+/* IMAGE */
+
+.schoolGalleryItem img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.schoolGalleryItem:hover img {
+  transform: scale(1.09);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.galleryDarkOverlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 18, 36, 0.02) 25%,
+      rgba(3, 18, 36, 0.18) 45%,
+      rgba(3, 18, 36, 0.91) 100%
+    );
+
+  transition:
+    background 0.4s ease;
+}
+
+.schoolGalleryItem:hover .galleryDarkOverlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3, 18, 36, 0.05) 15%,
+      rgba(8, 119, 169, 0.12) 48%,
+      rgba(3, 18, 36, 0.94) 100%
+    );
+}
+
+
+/* =========================================================
+   TOP DECORATIVE LINE
+========================================================= */
+
+.schoolGalleryItem::before {
+  content: "";
+
+  position: absolute;
+
+  top: 15px;
+  left: 15px;
+
+  width: 38px;
+  height: 2px;
+
+  z-index: 4;
+
+  background: #e0c27e;
+
+  opacity: 0;
+
+  transform: translateX(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.schoolGalleryItem:hover::before {
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   INFO
+========================================================= */
+
+.galleryInfo {
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 17px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  z-index: 3;
+}
+
+.galleryInfo > div {
+  min-width: 0;
+}
+
+.galleryInfo span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #e0c27e;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.galleryInfo h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: -0.2px;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.galleryArrow {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  backdrop-filter: blur(8px);
+
+  color: #e0c27e;
+
+  font-size: 19px;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.schoolGalleryItem:hover .galleryArrow {
+  background: #e0c27e;
+
+  border-color: #e0c27e;
+
+  color: #071a35;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.galleryBottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-top: 14px;
+
+  padding: 20px 24px;
+
+  border: 1px solid rgba(214, 179, 106, 0.25);
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #071a35,
+      #0a3154
+    );
+
+  box-shadow:
+    0 14px 30px rgba(7, 26, 53, 0.10);
+}
+
+
+/* BOTTOM TEXT */
+
+.galleryBottomText span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #7dd3fc;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.2;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.galleryBottomText strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  line-height: 1.25;
+
+  font-weight: 600;
+}
+
+
+/* BOTTOM BUTTON */
+
+.galleryBottom button {
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #e0c27e;
+
+  color: #071a35;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.galleryBottom button span {
+  color: #071a35;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.galleryBottom button:hover {
+  transform: translateY(-3px);
+
+  background: #f0d69b;
+
+  box-shadow:
+    0 10px 25px rgba(224, 194, 126, 0.25);
+}
+
+.galleryBottom button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   1200px
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .galleryContainer {
+    width: 93%;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-columns:
+      1.25fr
+      0.875fr
+      0.875fr;
+
+    grid-template-rows:
+      195px
+      195px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 50px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   1050px
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .schoolGallery {
+    padding: 70px 0;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-columns:
+      1.2fr
+      0.9fr
+      0.9fr;
+
+    grid-template-rows:
+      185px
+      185px;
+
+    gap: 10px;
+  }
+
+  .galleryInfo {
+    left: 15px;
+    right: 15px;
+    bottom: 14px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .galleryHeader {
+    margin-bottom: 35px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 46px;
+  }
+
+  .galleryHeaderRight p {
+    max-width: 600px;
+
+    font-size: 17px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows:
+      230px
+      165px
+      165px;
+  }
+
+  .galleryItem1 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .galleryInfo h3 {
+    font-size: 21px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .schoolGallery {
+    padding: 60px 0 65px;
+  }
+
+  .galleryContainer {
+    width: 91%;
+  }
+
+  .galleryHeader {
+    margin-bottom: 32px;
+  }
+
+  .galleryLabel {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+
+  .galleryLabel::before,
+  .galleryLabel::after {
+    width: 30px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 40px;
+
+    line-height: 1.12;
+  }
+
+  .galleryHeaderRight {
+    margin-top: 14px;
+
+    gap: 17px;
+  }
+
+  .galleryHeaderRight p {
+    max-width: 600px;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+  }
+
+  .galleryHeaderRight button {
+    min-height: 47px;
+
+    padding: 0 21px;
+
+    font-size: 14px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows:
+      210px
+      150px
+      150px;
+
+    gap: 8px;
+  }
+
+  .schoolGalleryItem {
+    border-radius: 13px;
+  }
+
+  .galleryInfo {
+    left: 13px;
+    right: 13px;
+    bottom: 12px;
+
+    gap: 9px;
+  }
+
+  .galleryInfo span {
+    font-size: 12px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 19px;
+  }
+
+  .galleryArrow {
+    width: 37px;
+    height: 37px;
+
+    font-size: 18px;
+  }
+
+  .galleryBottom {
+    padding: 18px 19px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 19px;
+  }
+
+  .galleryBottom button {
+    min-height: 44px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .schoolGallery {
+    padding: 55px 0 60px;
+  }
+
+  .galleryContainer {
+    width: 91%;
+  }
+
+  .galleryHeader {
+    margin-bottom: 28px;
+  }
+
+  .galleryLabel {
+    font-size: 11px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 36px;
+  }
+
+  .galleryHeaderRight {
+    margin-top: 12px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 17px;
+
+    line-height: 1.65;
+  }
+
+  .galleryHeaderRight button {
+    width: auto;
+
+    min-width: 170px;
+
+    min-height: 46px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-rows:
+      190px
+      140px
+      140px;
+
+    gap: 7px;
+  }
+
+  .galleryInfo {
+    left: 11px;
+    right: 11px;
+    bottom: 10px;
+  }
+
+  .galleryInfo span {
+    font-size: 11px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 17px;
+  }
+
+  .galleryArrow {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  .galleryBottom {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    text-align: center;
+
+    gap: 14px;
+
+    padding: 18px;
+  }
+
+  .galleryBottom button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   540px
+========================================================= */
+
+@media (max-width: 540px) {
+
+  .galleryHeader h2 {
+    font-size: 33px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 16px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-rows:
+      180px
+      130px
+      130px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 16px;
+  }
+
+  .galleryInfo span {
+    font-size: 10px;
+  }
+
+  .galleryArrow {
+    width: 32px;
+    height: 32px;
+
+    font-size: 16px;
+  }
+
+  .galleryBottomText span {
+    font-size: 10px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .schoolGallery {
+    padding: 48px 0 52px;
+  }
+
+  .galleryContainer {
+    width: 90%;
+  }
+
+  .galleryLabel {
+    font-size: 10px;
+    letter-spacing: 1.4px;
+  }
+
+  .galleryLabel::before,
+  .galleryLabel::after {
+    width: 24px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 30px;
+  }
+
+  .galleryHeaderRight {
+    margin-top: 11px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 15.5px;
+
+    line-height: 1.6;
+  }
+
+  .galleryHeaderRight button {
+    min-height: 45px;
+
+    min-width: 160px;
+
+    font-size: 13px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows:
+      165px
+      120px
+      120px;
+
+    gap: 6px;
+  }
+
+  .schoolGalleryItem {
+    border-radius: 11px;
+  }
+
+  .galleryInfo {
+    left: 9px;
+    right: 9px;
+    bottom: 8px;
+
+    gap: 5px;
+  }
+
+  .galleryInfo span {
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 15px;
+  }
+
+  .galleryArrow {
+    width: 30px;
+    height: 30px;
+
+    font-size: 15px;
+  }
+
+  .galleryBottom {
+    margin-top: 10px;
+
+    padding: 16px 14px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 17px;
+  }
+
+  .galleryBottom button {
+    min-height: 44px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .galleryHeader h2 {
+    font-size: 28px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 15px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-rows:
+      155px
+      112px
+      112px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 14px;
+  }
+
+  .galleryInfo span {
+    font-size: 8.5px;
+  }
+
+  .galleryArrow {
+    width: 28px;
+    height: 28px;
+
+    font-size: 14px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .schoolGallery {
+    padding: 43px 0 48px;
+  }
+
+  .galleryContainer {
+    width: 89%;
+  }
+
+  .galleryHeader {
+    margin-bottom: 24px;
+  }
+
+  .galleryLabel {
+    font-size: 9px;
+  }
+
+  .galleryHeader h2 {
+    font-size: 26px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 14px;
+  }
+
+  .galleryHeaderRight button {
+    min-height: 43px;
+
+    min-width: 150px;
+
+    font-size: 12px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-rows:
+      145px
+      103px
+      103px;
+
+    gap: 5px;
+  }
+
+  .galleryInfo {
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+  }
+
+  .galleryInfo span {
+    font-size: 8px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 13px;
+  }
+
+  .galleryArrow {
+    width: 26px;
+    height: 26px;
+
+    font-size: 13px;
+  }
+
+  .galleryBottom {
+    padding: 14px 12px;
+  }
+
+  .galleryBottomText span {
+    font-size: 8px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 15px;
+  }
+
+  .galleryBottom button {
+    min-height: 42px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   330px
+========================================================= */
+
+@media (max-width: 330px) {
+
+  .galleryHeader h2 {
+    font-size: 24px;
+  }
+
+  .galleryHeaderRight p {
+    font-size: 13.5px;
+  }
+
+  .schoolGalleryGrid {
+    grid-template-rows:
+      135px
+      95px
+      95px;
+  }
+
+  .galleryInfo h3 {
+    font-size: 12px;
+  }
+
+  .galleryInfo span {
+    font-size: 7.5px;
+  }
+
+  .galleryArrow {
+    width: 24px;
+    height: 24px;
+
+    font-size: 12px;
+  }
+
+  .galleryBottomText strong {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.schoolGalleryItem:focus-visible,
+.galleryHeaderRight button:focus-visible,
+.galleryBottom button:focus-visible {
+  outline: 3px solid rgba(8, 119, 169, 0.35);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .schoolGalleryItem,
+  .schoolGalleryItem img,
+  .galleryDarkOverlay,
+  .galleryArrow,
+  .galleryHeaderRight button,
+  .galleryHeaderRight button span,
+  .galleryBottom button,
+  .galleryBottom button span {
+    transition: none;
+  }
+}

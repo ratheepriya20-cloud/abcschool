@@ -1,0 +1,1697 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap");
+
+
+
+.abpre2-page {
+  --navy: #071a35;
+  --navy-2: #0b294d;
+  --blue: #0877a9;
+  --blue-light: #e8f6fc;
+  --gold: #c9a86a;
+  --gold-light: #e0c27e;
+  --cream: #f8f4ea;
+  --white: #ffffff;
+  --text: #071a35;
+  --muted: #66758a;
+  --border: #e4e9ee;
+
+  width: 100%;
+  overflow: hidden;
+
+  background: #fff;
+  color: var(--text);
+
+  font-family: "DM Sans", sans-serif;
+}
+
+.abpre2-page *,
+.abpre2-page *::before,
+.abpre2-page *::after {
+  box-sizing: border-box;
+}
+
+.abpre2-page p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.abpre2-page a {
+  text-decoration: none;
+}
+
+.abpre2-page h1,
+.abpre2-page h2,
+.abpre2-page h3 {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   REUSABLE DECORATIVE ELEMENT
+========================================================= */
+
+.abpre2-page section {
+  position: relative;
+}
+
+.abpre2-page section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 1px;
+
+  top: 0;
+  left: 7%;
+
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+
+  opacity: 0.5;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.abpre2-hero {
+  min-height: 550px;
+margin-top: 0px;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 80% 18%,
+      rgba(8, 119, 169, 0.34),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 15% 90%,
+      rgba(201, 168, 106, 0.10),
+      transparent 28%
+    ),
+    var(--navy);
+
+  color: #fff;
+}
+
+.abpre2-hero::before {
+  display: none;
+}
+
+.abpre2-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  top: -250px;
+
+  border: 1px solid rgba(224, 194, 126, 0.18);
+
+  border-radius: 50%;
+}
+
+
+.abpre2-hero-inner {
+  width: min(1200px, 91%);
+  min-height: 620px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.15fr 0.85fr;
+
+  align-items: center;
+
+  gap: 55px;
+
+  position: relative;
+  z-index: 3;
+}
+
+
+/* =========================================================
+   HERO SHAPES
+========================================================= */
+
+.abpre2-hero-shape {
+  position: absolute;
+
+  border: 1px solid rgba(201, 168, 106, 0.18);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.abpre2-shape-one {
+  width: 600px;
+  height: 600px;
+
+  right: -330px;
+  top: -320px;
+}
+
+.abpre2-shape-two {
+  width: 380px;
+  height: 380px;
+
+  left: -270px;
+  bottom: -280px;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.abpre2-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 20px;
+
+  color: rgba(255,255,255,0.45);
+
+  font-size: 13px !important;
+}
+
+.abpre2-breadcrumb a {
+  color: rgba(255,255,255,0.62);
+
+  font-size: 13px !important;
+}
+
+.abpre2-breadcrumb strong {
+  color: var(--gold-light);
+}
+
+
+/* =========================================================
+   HERO LABEL
+========================================================= */
+
+.abpre2-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 14px;
+
+  color: var(--gold-light);
+
+  font-size: 12px !important;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.abpre2-label::before {
+  content: "";
+
+  width: 25px;
+  height: 2px;
+
+  background: var(--gold-light);
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.abpre2-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(38px, 3vw, 60px);
+
+  line-height: 1.04;
+
+  font-weight: 600;
+
+  letter-spacing: -1.5px;
+}
+
+.abpre2-hero h1 span {
+  display: inline;
+margin-left: 8px;
+  color: var(--gold-light);
+
+  font-size: inherit !important;
+}
+
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
+.abpre2-hero-left > p {
+  max-width: 650px;
+
+  margin: 24px 0 0;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.abpre2-hero-buttons {
+  margin-top: 27px;
+
+  display: flex;
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.abpre2-gold-btn,
+.abpre2-outline-btn {
+  min-height: 50px;
+
+  padding: 0 21px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border-radius: 5px;
+
+  font-size: 14px !important;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.abpre2-gold-btn {
+  background: var(--gold-light);
+
+  color: var(--navy);
+}
+
+.abpre2-gold-btn:hover {
+  background: #fff;
+
+  transform: translateY(-3px);
+}
+
+.abpre2-outline-btn {
+  border: 1px solid rgba(255,255,255,0.28);
+
+  color: #fff;
+}
+
+.abpre2-outline-btn:hover {
+  border-color: var(--gold-light);
+
+  color: var(--gold-light);
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.abpre2-trust {
+  margin-top: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.abpre2-trust-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(201,168,106,0.12);
+
+  color: var(--gold-light);
+}
+
+.abpre2-trust strong,
+.abpre2-trust span {
+  display: block;
+}
+
+.abpre2-trust strong {
+  font-size: 14px !important;
+}
+
+.abpre2-trust span {
+  margin-top: 2px;
+
+  color: rgba(255,255,255,0.43);
+
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.abpre2-hero-right {
+  min-height: 480px;
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.abpre2-main-visual {
+  width: 340px;
+  min-height: 430px;
+
+  padding: 30px;
+
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffdf8,
+      #f6f8fa
+    );
+
+  color: var(--navy);
+
+  box-shadow:
+    0 35px 80px rgba(0,0,0,0.28);
+}
+
+.abpre2-main-visual::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border: 1px solid rgba(201,168,106,0.35);
+
+  border-radius: 19px;
+
+  pointer-events: none;
+}
+
+.abpre2-visual-top {
+  position: absolute;
+
+  top: 26px;
+  left: 30px;
+  right: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--blue);
+
+  font-size: 11px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-visual-top svg {
+  color: var(--gold);
+}
+
+.abpre2-child-symbol {
+  width: 92px;
+  height: 92px;
+
+  margin-bottom: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+
+  font-size: 39px;
+
+  box-shadow:
+    0 15px 35px rgba(7,26,53,0.18);
+}
+
+.abpre2-main-visual h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 45px;
+
+  line-height: 1.02;
+
+  white-space: nowrap;
+}
+
+.abpre2-main-visual p {
+  max-width: 245px;
+
+  margin: 17px 0 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.abpre2-visual-footer {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  color: var(--blue);
+
+  font-size: 11px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-visual-footer div {
+  height: 1px;
+
+  flex: 1;
+
+  background: var(--gold);
+}
+
+
+/* =========================================================
+   FLOATING NOTE
+========================================================= */
+
+.abpre2-floating-note {
+  position: absolute;
+
+  right: -20px;
+  bottom: 38px;
+
+  padding: 13px 17px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: 8px;
+
+  background: #fff;
+
+  color: var(--navy);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.18);
+}
+
+.abpre2-floating-note > svg {
+  color: var(--blue);
+}
+
+.abpre2-floating-note strong,
+.abpre2-floating-note span {
+  display: block;
+}
+
+.abpre2-floating-note strong {
+  font-size: 14px !important;
+}
+
+.abpre2-floating-note span {
+  margin-top: 2px;
+
+  color: #78879a;
+
+  font-size: 13px !important;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abpre2-intro {
+  width: min(1200px, 91%);
+
+  margin: auto;
+
+  padding: 40px 0;
+
+  display: grid;
+
+  grid-template-columns: 40px 1fr 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+.abpre2-intro-number {
+  color: var(--gold);
+
+  font-size: 15px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-intro-heading > span,
+.abpre2-section-head > div > span,
+.abpre2-path-heading > span,
+.abpre2-final-inner > div:first-child > span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--blue);
+
+  font-size: 12px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.abpre2-intro-heading > span::after,
+.abpre2-section-head > div > span::after,
+.abpre2-final-inner > div:first-child > span::after {
+  content: "";
+
+  width: 25px;
+  height: 1px;
+
+  background: var(--gold);
+}
+
+.abpre2-intro-heading h2 {
+  margin: 10px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 45px;
+
+  line-height: 1.12;
+
+  white-space: nowrap;
+}
+
+.abpre2-intro-heading em {
+  color: var(--blue);
+margin-left: 9px;
+  font-style: normal;
+}
+
+.abpre2-intro-text {
+  padding-top: 0;
+}
+
+.abpre2-intro-text p {
+  margin: 0 0 14px;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.abpre2-experience {
+  padding: 45px 5%;
+
+  background: var(--cream);
+}
+
+.abpre2-section-head {
+  width: min(1200px, 100%);
+
+  margin: auto;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.abpre2-section-head h2 {
+  margin: 10px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 43px;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+.abpre2-section-head h2 strong {
+  color: var(--blue);
+
+  font-weight: 600;
+}
+
+.abpre2-section-head > p {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.abpre2-experience-grid {
+  width: min(1200px, 100%);
+
+  margin: 32px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.abpre2-experience-card {
+  min-height: 150px;
+
+  padding: 25px;
+
+  position: relative;
+
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 13px;
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.abpre2-experience-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 80px;
+  height: 80px;
+
+  right: -40px;
+  bottom: -40px;
+
+  border-radius: 50%;
+
+  border: 12px solid rgba(8,119,169,0.06);
+}
+
+.abpre2-experience-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 38px rgba(7,26,53,0.08);
+}
+
+.abpre2-large-card {
+  background: var(--navy);
+
+  color: #fff;
+
+  grid-row: span 1;
+}
+
+.abpre2-gold-card {
+  background: var(--blue);
+
+  color: #fff;
+}
+
+.abpre2-card-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--blue-light);
+
+  color: var(--blue);
+
+  font-size: 19px;
+}
+
+.abpre2-large-card .abpre2-card-icon,
+.abpre2-gold-card .abpre2-card-icon {
+  background: rgba(255,255,255,0.12);
+
+  color: var(--gold-light);
+}
+
+.abpre2-experience-card > span {
+  display: block;
+
+  margin-top: 17px;
+
+  color: var(--gold);
+
+  font-size: 11px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-experience-card h3 {
+  margin: 7px 0 9px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 26px;
+
+  line-height: 1.12;
+}
+
+.abpre2-experience-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.abpre2-large-card p,
+.abpre2-gold-card p {
+  color: rgba(255,255,255,0.68);
+}
+
+
+/* =========================================================
+   DEVELOPMENT
+========================================================= */
+
+.abpre2-development {
+  padding: 45px 5%;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 70px;
+
+  background: #fff;
+}
+
+.abpre2-development-left {
+  max-width: 530px;
+
+  margin-left: auto;
+}
+
+.abpre2-side-label {
+  margin-bottom: 13px;
+
+  color: var(--gold);
+
+  font-size: 13px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-development-left h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 52px;
+
+  line-height: 1.05;
+
+  white-space: nowrap;
+}
+
+.abpre2-development-left h2 span {
+  color: var(--blue);
+display: inline;
+margin-left: 8px;
+  font-size: inherit !important;
+}
+
+.abpre2-development-left > p {
+  margin: 18px 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.abpre2-text-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--blue);
+
+  font-size: 16px !important;
+
+  font-weight: 700;
+}
+
+.abpre2-text-link:hover svg {
+  transform: translateX(5px);
+}
+
+.abpre2-text-link svg {
+  transition: 0.3s ease;
+}
+
+.abpre2-development-right {
+  max-width: 650px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 13px;
+
+  margin-right: auto;
+}
+
+.abpre2-development-item {
+  padding: 20px;
+
+  display: flex;
+
+  gap: 14px;
+
+  border-radius: 11px;
+
+  background: #f8fafc;
+
+  border: 1px solid var(--border);
+
+  transition: 0.3s ease;
+}
+
+.abpre2-development-item:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(8,119,169,0.3);
+}
+
+.abpre2-development-icon {
+  width: 45px;
+  height: 45px;
+
+  min-width: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--navy);
+
+  color: var(--gold-light);
+}
+
+.abpre2-development-item h3 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+}
+
+.abpre2-development-item p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PATH
+========================================================= */
+
+.abpre2-path {
+  padding: 45px 5%;
+
+  background: var(--navy);
+
+  color: #fff;
+}
+
+.abpre2-path::before {
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+}
+
+.abpre2-path-heading {
+  width: min(900px, 100%);
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.abpre2-path-heading > span {
+  color: var(--gold-light);
+}
+
+.abpre2-path-heading h2 {
+  margin: 10px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 43px;
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+.abpre2-path-heading h2 strong {
+  color: var(--gold-light);
+
+  font-weight: 600;
+}
+
+.abpre2-path-heading p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color: rgba(255,255,255,0.62);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.abpre2-path-grid {
+  width: min(1100px, 100%);
+
+  margin: 32px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+.abpre2-path-card {
+  min-height: 330px;
+
+  padding: 25px;
+
+  position: relative;
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 13px;
+
+  background: rgba(255,255,255,0.045);
+
+  transition: 0.3s ease;
+}
+
+.abpre2-path-card:hover {
+  transform: translateY(-5px);
+
+  border-color: rgba(224,194,126,0.4);
+}
+
+.abpre2-path-featured {
+  background: var(--cream);
+
+  color: var(--navy);
+
+  border-color: var(--gold);
+}
+
+.abpre2-path-number {
+  position: absolute;
+
+  top: 20px;
+  right: 22px;
+
+  color: rgba(255,255,255,0.18);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 38px !important;
+}
+
+.abpre2-path-featured .abpre2-path-number {
+  color: rgba(7,26,53,0.1);
+}
+
+.abpre2-path-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--gold-light);
+
+  color: var(--navy);
+}
+
+.abpre2-path-card > span {
+  display: block;
+
+  margin-top: 25px;
+
+  color: var(--gold-light);
+
+  font-size: 11px !important;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpre2-path-featured > span {
+  color: var(--blue);
+}
+
+.abpre2-path-card h3 {
+  margin: 9px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 28px;
+
+  line-height: 1.08;
+}
+
+.abpre2-path-card p {
+  margin: 0;
+
+  color: rgba(255,255,255,0.57);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.abpre2-path-featured p {
+  color: var(--muted);
+}
+
+.abpre2-path-card a {
+  position: absolute;
+
+  bottom: 25px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--gold-light);
+
+  font-size: 15px !important;
+
+  font-weight: 700;
+}
+
+.abpre2-path-featured a {
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   FLOW
+========================================================= */
+
+.abpre2-flow {
+  width: min(800px, 100%);
+
+  margin: 35px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.abpre2-flow > div:not(.abpre2-flow-line) {
+  text-align: center;
+}
+
+.abpre2-flow span,
+.abpre2-flow strong {
+  display: block;
+}
+
+.abpre2-flow span {
+  color: var(--gold-light);
+
+  font-size: 15px !important;
+
+  font-weight: 800;
+}
+
+.abpre2-flow strong {
+  margin-top: 4px;
+
+  font-size: 15px !important;
+}
+
+.abpre2-flow-line {
+  width: 80px;
+  height: 1px;
+
+  margin: 0 15px;
+
+  background: rgba(255,255,255,0.18);
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.abpre2-final {
+  padding: 45px 5%;
+
+  background: var(--cream);
+}
+
+.abpre2-final-inner {
+  width: min(1100px, 100%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.abpre2-final-inner h2 {
+  margin: 10px 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 43px;
+
+  line-height: 1.08;
+
+  white-space: nowrap;
+}
+
+.abpre2-final-inner h2 strong {
+  color: var(--blue);
+
+  font-weight: 600;
+}
+
+.abpre2-final-inner p {
+  max-width: 600px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 16px;
+
+  line-height: 1.75;
+}
+
+.abpre2-final-actions {
+  display: flex;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.abpre2-final-fee,
+.abpre2-final-apply {
+  min-height: 50px;
+
+  padding: 0 19px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 5px;
+
+  font-size: 14px !important;
+
+  font-weight: 700;
+}
+
+.abpre2-final-fee {
+  border: 1px solid var(--gold);
+
+  color: var(--navy);
+}
+
+.abpre2-final-apply {
+  background: var(--navy);
+
+  color: #fff;
+}
+
+.abpre2-final-apply:hover {
+  background: var(--blue);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .abpre2-hero-inner {
+    grid-template-columns: 1fr;
+
+    padding: 65px 0;
+
+    text-align: center;
+  }
+
+  .abpre2-hero {
+    min-height: auto;
+  }
+
+  .abpre2-hero-inner {
+    min-height: auto;
+  }
+
+  .abpre2-breadcrumb,
+  .abpre2-hero-buttons,
+  .abpre2-trust {
+    justify-content: center;
+  }
+
+  .abpre2-hero-left > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .abpre2-hero-right {
+    min-height: 450px;
+  }
+
+  .abpre2-intro {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .abpre2-intro-text {
+    grid-column: 2;
+  }
+
+  .abpre2-section-head {
+    align-items: flex-start;
+  }
+
+  .abpre2-development {
+    grid-template-columns: 1fr;
+  }
+
+  .abpre2-development-left {
+    max-width: 800px;
+
+    margin: auto;
+  }
+
+  .abpre2-development-right {
+    margin: auto;
+  }
+
+  .abpre2-final-inner {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .abpre2-experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abpre2-large-card {
+    grid-row: span 1;
+  }
+
+  .abpre2-path-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .abpre2-section-head h2,
+  .abpre2-intro-heading h2,
+  .abpre2-path-heading h2,
+  .abpre2-final-inner h2 {
+    white-space: normal;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .abpre2-page p {
+    font-size: 16px;
+  }
+
+  .abpre2-hero {
+    padding-bottom: 40px;
+  }
+
+  .abpre2-hero-inner {
+    width: 92%;
+
+    padding-top: 45px;
+
+    gap: 40px;
+  }
+
+  .abpre2-hero h1 {
+    font-size: 44px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .abpre2-hero h1 span {
+    display: block;
+  }
+
+  .abpre2-hero-buttons {
+    flex-direction: column;
+  }
+
+  .abpre2-gold-btn,
+  .abpre2-outline-btn {
+    width: 100%;
+  }
+
+  .abpre2-main-visual {
+    width: 290px;
+
+    min-height: 390px;
+
+    padding: 27px;
+  }
+
+  .abpre2-main-visual h2 {
+    font-size: 40px;
+
+    white-space: nowrap;
+  }
+
+  .abpre2-floating-note {
+    right: -5px;
+  }
+
+
+  /* ================================
+     SECTIONS 40-45PX
+  ================================= */
+
+  .abpre2-intro,
+  .abpre2-experience,
+  .abpre2-development,
+  .abpre2-path,
+  .abpre2-final {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+
+  /* ================================
+     INTRO
+  ================================= */
+
+  .abpre2-intro {
+    width: 92%;
+
+    display: block;
+  }
+
+  .abpre2-intro-number {
+    margin-bottom: 15px;
+  }
+
+  .abpre2-intro-heading h2 {
+    font-size: 37px;
+
+    white-space: normal;
+  }
+
+  .abpre2-intro-text {
+    margin-top: 20px;
+  }
+
+
+  /* ================================
+     EXPERIENCE
+  ================================= */
+
+  .abpre2-section-head {
+    display: block;
+  }
+
+  .abpre2-section-head h2 {
+    font-size: 37px;
+
+    white-space: normal;
+  }
+
+  .abpre2-section-head > p {
+    margin-top: 15px;
+  }
+
+  .abpre2-experience-grid {
+    grid-template-columns: 1fr;
+
+    margin-top: 28px;
+  }
+
+  .abpre2-experience-card {
+    min-height: 215px;
+  }
+
+
+  /* ================================
+     DEVELOPMENT
+  ================================= */
+
+  .abpre2-development-left h2 {
+    font-size: 45px;
+
+    white-space: normal;
+  }
+
+  .abpre2-development-right {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ================================
+     PATH
+  ================================= */
+
+  .abpre2-path-heading h2 {
+    font-size: 37px;
+
+    white-space: normal;
+  }
+
+  .abpre2-path-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abpre2-path-card {
+    min-height: 320px;
+  }
+
+  .abpre2-flow {
+    flex-direction: column;
+
+    gap: 11px;
+  }
+
+  .abpre2-flow-line {
+    width: 1px;
+
+    height: 30px;
+
+    margin: 0;
+  }
+
+
+  /* ================================
+     FINAL
+  ================================= */
+
+  .abpre2-final-inner h2 {
+    font-size: 37px;
+
+    white-space: normal;
+  }
+
+  .abpre2-final-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+  .abpre2-final-fee,
+  .abpre2-final-apply {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .abpre2-hero h1 {
+    font-size: 39px;
+  }
+
+  .abpre2-main-visual {
+    width: 270px;
+  }
+
+  .abpre2-floating-note {
+    right: -8px;
+  }
+
+}
+

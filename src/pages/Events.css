@@ -1,0 +1,1156 @@
+/* =========================================================
+   AB PUBLIC SCHOOL - EVENTS PAGE
+   PREMIUM LIGHT THEME
+   NAVY + SKY BLUE + CHAMPAGNE GOLD
+   ========================================================= */
+
+.abevents-page {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #071a35;
+}
+
+.abevents-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.abevents-hero {
+  position: relative;
+  width: 100%;
+  min-height: 465px;
+  padding: 85px 0 55px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 8% 20%,
+      rgba(8, 119, 169, 0.13),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(214, 179, 106, 0.16),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbfd 0%,
+      #ffffff 55%,
+      #f5fafc 100%
+    );
+}
+
+.abevents-hero::before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  right: -190px;
+  top: -210px;
+  border: 1px solid rgba(8, 119, 169, 0.10);
+  border-radius: 50%;
+}
+
+.abevents-hero::after {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  left: -180px;
+  bottom: -190px;
+  border: 1px solid rgba(214, 179, 106, 0.16);
+  border-radius: 50%;
+}
+
+/* =========================================================
+   DECORATIVE ORBITS
+   ========================================================= */
+
+.abevents-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.orbit-one {
+  width: 190px;
+  height: 190px;
+  right: 7%;
+  top: 80px;
+  border: 1px dashed rgba(8, 119, 169, 0.15);
+}
+
+.orbit-two {
+  width: 120px;
+  height: 120px;
+  left: 8%;
+  bottom: 25px;
+  border: 1px dashed rgba(214, 179, 106, 0.22);
+}
+
+.abevents-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.dot-one {
+  right: 12%;
+  top: 115px;
+  background: #d6b36a;
+  box-shadow:
+    0 0 0 7px rgba(214, 179, 106, 0.10);
+}
+
+.dot-two {
+  left: 15%;
+  bottom: 75px;
+  background: #0877a9;
+  box-shadow:
+    0 0 0 7px rgba(8, 119, 169, 0.09);
+}
+
+/* =========================================================
+   BREADCRUMB
+   ========================================================= */
+
+.abevents-breadcrumb {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.abevents-breadcrumb a {
+  color: #0877a9;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.abevents-breadcrumb a:hover {
+  color: #071a35;
+}
+
+.abevents-breadcrumb span {
+  color: #a6b0ba;
+}
+
+.abevents-breadcrumb strong {
+  color: #071a35;
+}
+
+/* =========================================================
+   HERO LAYOUT
+   ========================================================= */
+
+.abevents-hero-layout {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(290px, 0.75fr);
+  align-items: center;
+  gap: 55px;
+}
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.abevents-hero-content {
+  max-width: 680px;
+}
+
+.abevents-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+.abevents-eyebrow svg {
+  color: #d6b36a;
+  font-size: 13px;
+}
+
+.abevents-hero-content h1 {
+  margin: 0;
+  color: #071a35;
+  font-size: clamp(40px, 5vw, 65px);
+  font-weight: 950;
+  line-height: 1.02;
+  letter-spacing: -1.8px;
+}
+
+.abevents-hero-content h1 span {
+  display: block;
+  color: #0877a9;
+}
+
+.abevents-hero-content p {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: #596979;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.abevents-buttons {
+  margin-top: 27px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.abevents-primary,
+.abevents-secondary {
+  min-height: 47px;
+  padding: 0 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 850;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.abevents-primary {
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0877a9
+    );
+  color: #ffffff;
+  box-shadow:
+    0 10px 25px rgba(7, 26, 53, 0.16);
+}
+
+.abevents-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 15px 30px rgba(7, 26, 53, 0.22);
+}
+
+.abevents-primary svg {
+  transition: transform 0.2s ease;
+}
+
+.abevents-primary:hover svg {
+  transform: translateX(3px);
+}
+
+.abevents-secondary {
+  background: #ffffff;
+  color: #071a35;
+  border: 1px solid rgba(7, 26, 53, 0.14);
+}
+
+.abevents-secondary:hover {
+  color: #0877a9;
+  border-color: rgba(8, 119, 169, 0.30);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO UPCOMING CARD
+   ========================================================= */
+
+.abevents-hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  justify-self: end;
+  padding: 27px;
+  background:
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0a3154
+    );
+  border: 1px solid rgba(214, 179, 106, 0.50);
+  border-radius: 22px;
+  color: #ffffff;
+  box-shadow:
+    0 22px 55px rgba(7, 26, 53, 0.20);
+  overflow: hidden;
+}
+
+.abevents-hero-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -70px;
+  top: -70px;
+  border: 1px solid rgba(214, 179, 106, 0.22);
+  border-radius: 50%;
+}
+
+.abevents-calendar-icon {
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 13px;
+  background:
+    rgba(214, 179, 106, 0.15);
+  border: 1px solid rgba(214, 179, 106, 0.35);
+  color: #e0c27e;
+  font-size: 20px;
+}
+
+.abevents-hero-card > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0c27e;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.abevents-hero-card h3 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.abevents-hero-card h3 strong {
+  color: #e0c27e;
+}
+
+.abevents-mini-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.abevents-mini-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.abevents-mini-info svg {
+  width: 15px;
+  color: #5db4d7;
+}
+
+.abevents-card-line {
+  width: 100%;
+  height: 1px;
+  margin: 20px 0 15px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(214, 179, 106, 0.65),
+      rgba(255, 255, 255, 0.08)
+    );
+}
+
+.abevents-hero-card small {
+  display: block;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   EVENTS SECTION
+   ========================================================= */
+
+.abevents-section {
+  width: 100%;
+  padding: 70px 0 75px;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7fafc 100%
+    );
+}
+
+/* =========================================================
+   EVENTS HEADING
+   IMPORTANT:
+   LABEL + H2 + P ALL CENTER
+   ========================================================= */
+
+.abevents-heading {
+  width: 100%;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.abevents-heading > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.abevents-heading > div > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+  text-align: center;
+}
+
+.abevents-heading h2 {
+  margin: 0;
+  color: #071a35;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 950;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  text-align: center;
+}
+
+.abevents-heading p {
+  width: 100%;
+  max-width: 650px;
+  margin: 13px auto 0;
+  color: #647382;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* =========================================================
+   EVENTS GRID
+   ========================================================= */
+
+.abevents-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================================
+   EVENT CARD
+   ========================================================= */
+
+.abevent-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow:
+    0 9px 28px rgba(7, 26, 53, 0.07);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.abevent-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(8, 119, 169, 0.20);
+  box-shadow:
+    0 18px 42px rgba(7, 26, 53, 0.13);
+}
+
+/* =========================================================
+   EVENT IMAGE
+   ========================================================= */
+
+.abevent-image {
+  position: relative;
+  height: 205px;
+  overflow: hidden;
+  background: #eaf2f6;
+}
+
+.abevent-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.abevent-card:hover .abevent-image img {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   DATE BADGE
+   ========================================================= */
+
+.abevent-date {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  width: 57px;
+  min-height: 63px;
+  padding: 7px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 11px;
+  box-shadow:
+    0 8px 20px rgba(7, 26, 53, 0.15);
+  text-align: center;
+}
+
+.abevent-date strong {
+  display: block;
+  color: #071a35;
+  font-size: 23px;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.abevent-date span {
+  margin-top: 4px;
+  color: #0877a9;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   CATEGORY
+   ========================================================= */
+
+.abevent-category {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 7px 11px;
+  background:
+    rgba(7, 26, 53, 0.88);
+  border: 1px solid rgba(214, 179, 106, 0.40);
+  border-radius: 8px;
+  color: #e0c27e;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  backdrop-filter: blur(7px);
+}
+
+/* =========================================================
+   EVENT BODY
+   ========================================================= */
+
+.abevent-body {
+  min-height: 255px;
+  padding: 21px 21px 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+.abevent-body h3 {
+  margin: 0;
+  color: #071a35;
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.abevent-body > p {
+  margin: 11px 0 15px;
+  color: #687786;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.abevent-details {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(7, 26, 53, 0.08);
+}
+
+.abevent-details span {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #526272;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.abevent-details svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #0877a9;
+  font-size: 13px;
+}
+
+.abevent-link {
+  margin-top: auto;
+  padding-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  color: #071a35;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.abevent-link svg {
+  color: #0877a9;
+  font-size: 12px;
+}
+
+.abevent-link:hover {
+  color: #0877a9;
+  gap: 11px;
+}
+
+/* =========================================================
+   COMMUNITY SECTION
+   ========================================================= */
+
+.abevents-community {
+  padding: 0 0 75px;
+  background: #f7fafc;
+}
+
+.abevents-community-box {
+  position: relative;
+  min-height: 155px;
+  padding: 30px 35px;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0b3152
+    );
+  border: 1px solid rgba(214, 179, 106, 0.38);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 18px 42px rgba(7, 26, 53, 0.16);
+}
+
+.abevents-community-box::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -120px;
+  top: -120px;
+  border: 1px solid rgba(214, 179, 106, 0.18);
+  border-radius: 50%;
+}
+
+.abevents-community-icon {
+  position: relative;
+  z-index: 1;
+  width: 61px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background:
+    rgba(214, 179, 106, 0.13);
+  border: 1px solid rgba(214, 179, 106, 0.35);
+  color: #e0c27e;
+  font-size: 24px;
+}
+
+.abevents-community-box > div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+}
+
+.abevents-community-box > div:nth-child(2) > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #5db4d7;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.abevents-community-box h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.abevents-community-box h2 strong {
+  color: #e0c27e;
+}
+
+.abevents-community-box p {
+  max-width: 610px;
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.abevents-community-box > a {
+  position: relative;
+  z-index: 1;
+  min-height: 44px;
+  padding: 0 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(214, 179, 106, 0.45);
+  border-radius: 9px;
+  color: #071a35;
+  background: #e0c27e;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.abevents-community-box > a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 9px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.abevents-cta {
+  padding: 75px 0;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(8, 119, 169, 0.10),
+      transparent 32%
+    ),
+    #ffffff;
+}
+
+.abevents-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.abevents-cta-inner > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #0877a9;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.7px;
+}
+
+.abevents-cta-inner h2 {
+  margin: 0;
+  color: #071a35;
+  font-size: clamp(32px, 4vw, 47px);
+  font-weight: 950;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.abevents-cta-inner h2 strong {
+  color: #0877a9;
+}
+
+.abevents-cta-inner p {
+  max-width: 600px;
+  margin: 14px auto 22px;
+  color: #647382;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.abevents-cta-inner > a {
+  min-height: 47px;
+  padding: 0 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border-radius: 10px;
+  background:
+    linear-gradient(
+      135deg,
+      #e0c27e,
+      #d6b36a
+    );
+  color: #071a35;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow:
+    0 9px 22px rgba(214, 179, 106, 0.20);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.abevents-cta-inner > a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 13px 28px rgba(214, 179, 106, 0.28);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .abevents-hero {
+    min-height: auto;
+    padding: 85px 0 50px;
+  }
+
+  .abevents-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .abevents-hero-content {
+    max-width: 760px;
+  }
+
+  .abevents-hero-card {
+    justify-self: start;
+    max-width: 420px;
+  }
+
+  .abevents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abevents-community-box {
+    grid-template-columns: 60px minmax(0, 1fr);
+  }
+
+  .abevents-community-box > a {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .abevents-container {
+    width: min(100% - 28px, 560px);
+  }
+
+  .abevents-hero {
+    padding: 82px 0 42px;
+  }
+
+  .abevents-breadcrumb {
+    margin-bottom: 22px;
+  }
+
+  .abevents-hero-content h1 {
+    font-size: clamp(37px, 10vw, 53px);
+    letter-spacing: -1.2px;
+  }
+
+  .abevents-hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .abevents-hero-card {
+    max-width: 100%;
+    padding: 23px;
+    border-radius: 18px;
+  }
+
+  .abevents-section {
+    padding: 55px 0 60px;
+  }
+
+  .abevents-heading {
+    margin-bottom: 30px;
+  }
+
+  .abevents-heading h2 {
+    font-size: 34px;
+  }
+
+  .abevents-heading p {
+    font-size: 15px;
+  }
+
+  .abevents-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .abevent-image {
+    height: 220px;
+  }
+
+  .abevent-body {
+    min-height: 0;
+  }
+
+  .abevents-community {
+    padding-bottom: 55px;
+  }
+
+  .abevents-community-box {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 27px;
+  }
+
+  .abevents-community-box > a {
+    grid-column: auto;
+    justify-self: start;
+  }
+
+  .abevents-community-box h2 {
+    font-size: 25px;
+  }
+
+  .abevents-cta {
+    padding: 60px 0;
+  }
+}
+
+/* =========================================================
+   MOBILE 500
+   ========================================================= */
+
+@media (max-width: 500px) {
+  .abevents-container {
+    width: calc(100% - 24px);
+  }
+
+  .abevents-hero {
+    padding-top: 78px;
+  }
+
+  .abevents-breadcrumb {
+    font-size: 12px;
+  }
+
+  .abevents-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .abevents-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .abevents-hero-content p {
+    margin-top: 16px;
+    font-size: 14px;
+  }
+
+  .abevents-buttons {
+    margin-top: 22px;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .abevents-primary,
+  .abevents-secondary {
+    width: 100%;
+  }
+
+  .abevents-hero-card {
+    padding: 21px;
+  }
+
+  .abevents-calendar-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 13px;
+  }
+
+  .abevents-hero-card h3 {
+    font-size: 24px;
+  }
+
+  .abevents-section {
+    padding: 48px 0 50px;
+  }
+
+  .abevents-heading h2 {
+    font-size: 31px;
+  }
+
+  .abevents-heading > div > span {
+    font-size: 10px;
+  }
+
+  .abevents-heading p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .abevent-image {
+    height: 205px;
+  }
+
+  .abevent-body {
+    padding: 19px;
+  }
+
+  .abevent-body h3 {
+    font-size: 20px;
+  }
+
+  .abevent-body > p {
+    font-size: 13px;
+  }
+
+  .abevents-community-box {
+    padding: 23px;
+    border-radius: 17px;
+  }
+
+  .abevents-community-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 21px;
+  }
+
+  .abevents-community-box h2 {
+    font-size: 23px;
+  }
+
+  .abevents-community-box p {
+    font-size: 13px;
+  }
+
+  .abevents-community-box > a {
+    width: 100%;
+  }
+
+  .abevents-cta {
+    padding: 50px 0;
+  }
+
+  .abevents-cta-inner h2 {
+    font-size: 32px;
+  }
+
+  .abevents-cta-inner p {
+    font-size: 14px;
+  }
+
+  .abevents-cta-inner > a {
+    width: 100%;
+  }
+
+  .orbit-one,
+  .orbit-two,
+  .dot-one,
+  .dot-two {
+    display: none;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .abevents-container {
+    width: calc(100% - 20px);
+  }
+
+  .abevents-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .abevents-hero-card h3 {
+    font-size: 22px;
+  }
+
+  .abevents-heading h2 {
+    font-size: 28px;
+  }
+
+  .abevent-image {
+    height: 190px;
+  }
+
+  .abevent-date {
+    width: 53px;
+    min-height: 59px;
+  }
+}

@@ -1,0 +1,792 @@
+/* =========================================================
+   GALLERY PAGE
+========================================================= */
+
+.schoolGalleryPage {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #071a35;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.galleryPageHero {
+  position: relative;
+  width: 100%;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 70px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(8, 119, 169, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(214, 179, 106, 0.14),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbfd 0%,
+      #ffffff 48%,
+      #f7fafc 100%
+    );
+
+  border-bottom: 1px solid rgba(7, 26, 53, 0.08);
+}
+
+/* Soft decorative shapes */
+
+.galleryPageHero::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  border: 1px solid rgba(8, 119, 169, 0.12);
+  top: -170px;
+  left: -110px;
+}
+
+.galleryPageHero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(214, 179, 106, 0.18);
+  right: -120px;
+  bottom: -160px;
+}
+
+.galleryPageHeroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================================================
+   HERO EYEBROW
+========================================================= */
+
+.galleryPageEyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.eyebrowLine {
+  width: 48px;
+  height: 2px;
+  display: block;
+  background: #d6b36a;
+  border-radius: 10px;
+}
+
+.eyebrowText {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #0877a9;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.galleryPageHero h1 {
+  margin: 0 auto;
+  max-width: 850px;
+
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+
+  color: #071a35;
+}
+
+.galleryPageHero h1 span {
+  color: #0877a9;
+}
+
+.galleryPageHero p {
+  max-width: 700px;
+  margin: 20px auto 0;
+
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 500;
+
+  color: #536579;
+}
+
+.galleryHeroLine {
+  width: 75px;
+  height: 4px;
+  margin: 26px auto 0;
+
+  border-radius: 20px;
+  background: #d6b36a;
+}
+
+/* =========================================================
+   GALLERY SECTION
+========================================================= */
+
+.galleryPageSection {
+  width: 100%;
+  padding: 70px 24px 80px;
+  background: #ffffff;
+}
+
+.galleryPageContainer {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADING
+   CENTERED
+========================================================= */
+
+.galleryPageHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.galleryPageHeader > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.galleryPageLabel {
+  display: block;
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+
+  color: #0877a9;
+}
+
+.galleryPageHeader h2 {
+  margin: 0;
+
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+
+  color: #071a35;
+}
+
+.galleryPageHeader h2 span {
+  color: #0877a9;
+}
+
+.galleryPageHeader > p {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 14px auto 0;
+
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.7;
+  font-weight: 500;
+
+  color: #617286;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.galleryFilters {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  margin-bottom: 34px;
+}
+
+.galleryFilter {
+  min-width: 100px;
+  padding: 11px 20px;
+
+  border: 1px solid rgba(7, 26, 53, 0.12);
+  border-radius: 50px;
+
+  background: #ffffff;
+  color: #071a35;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.galleryFilter:hover {
+  transform: translateY(-2px);
+  border-color: #0877a9;
+  color: #0877a9;
+
+  box-shadow: 0 8px 20px rgba(8, 119, 169, 0.1);
+}
+
+.galleryFilter.active {
+  border-color: #071a35;
+  background: #071a35;
+  color: #ffffff;
+
+  box-shadow: 0 8px 20px rgba(7, 26, 53, 0.16);
+}
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+
+.galleryPageGrid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+/* =========================================================
+   GALLERY CARD
+========================================================= */
+
+.galleryPageCard {
+  position: relative;
+  width: 100%;
+
+  border-radius: 18px;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+
+  box-shadow:
+    0 8px 25px rgba(7, 26, 53, 0.07);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.galleryPageCard:hover {
+  transform: translateY(-7px);
+
+  box-shadow:
+    0 18px 42px rgba(7, 26, 53, 0.14);
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.galleryPageImage {
+  position: relative;
+  width: 100%;
+  height: 285px;
+  overflow: hidden;
+
+  background: #eaf1f5;
+}
+
+.galleryPageImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+.galleryPageCard:hover .galleryPageImage img {
+  transform: scale(1.07);
+}
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.galleryImageOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7, 26, 53, 0.12),
+      transparent 35%,
+      rgba(7, 26, 53, 0.88) 100%
+    );
+
+  opacity: 0.98;
+}
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.galleryCategory {
+  align-self: flex-start;
+
+  padding: 7px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #071a35;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================================
+   IMAGE INFO
+========================================================= */
+
+.galleryImageInfo {
+  width: 100%;
+}
+
+.galleryImageInfo h3 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 800;
+
+  color: #ffffff;
+}
+
+.galleryView {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #e0c27e;
+
+  transition: transform 0.25s ease;
+}
+
+.galleryPageCard:hover .galleryView {
+  transform: translateX(5px);
+}
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.galleryLightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  background: rgba(3, 12, 25, 0.92);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.galleryClose {
+  position: fixed;
+  top: 22px;
+  right: 25px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+
+  font-size: 32px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.galleryClose:hover {
+  background: #d6b36a;
+  color: #071a35;
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   LIGHTBOX CONTENT
+========================================================= */
+
+.galleryLightboxContent {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+.galleryLightboxContent img {
+  width: 100%;
+  max-height: 68vh;
+
+  display: block;
+
+  object-fit: contain;
+
+  background: #071a35;
+}
+
+.galleryLightboxInfo {
+  padding: 20px 24px 23px;
+
+  background: #ffffff;
+}
+
+.galleryLightboxInfo span {
+  display: inline-block;
+  margin-bottom: 6px;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #0877a9;
+}
+
+.galleryLightboxInfo h3 {
+  margin: 0;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 800;
+
+  color: #071a35;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .galleryPageHero {
+    min-height: 400px;
+    padding: 95px 22px 65px;
+  }
+
+  .galleryPageSection {
+    padding: 60px 22px 70px;
+  }
+
+  .galleryPageGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .galleryPageImage {
+    height: 270px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .galleryPageHero {
+    min-height: 390px;
+    padding: 100px 18px 55px;
+  }
+
+  .galleryPageHeroContent {
+    max-width: 600px;
+  }
+
+  .galleryPageEyebrow {
+    gap: 9px;
+    margin-bottom: 15px;
+  }
+
+  .eyebrowLine {
+    width: 30px;
+  }
+
+  .eyebrowText {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .galleryPageHero h1 {
+    font-size: 38px;
+    line-height: 1.12;
+    letter-spacing: -0.8px;
+  }
+
+  .galleryPageHero p {
+    margin-top: 17px;
+
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .galleryHeroLine {
+    margin-top: 21px;
+  }
+
+  .galleryPageSection {
+    padding: 52px 16px 60px;
+  }
+
+  .galleryPageHeader {
+    margin-bottom: 27px;
+  }
+
+  .galleryPageLabel {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .galleryPageHeader h2 {
+    font-size: 32px;
+    line-height: 1.18;
+  }
+
+  .galleryPageHeader > p {
+    margin-top: 12px;
+
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .galleryFilters {
+    gap: 8px;
+    margin-bottom: 27px;
+  }
+
+  .galleryFilter {
+    min-width: auto;
+    padding: 10px 16px;
+
+    font-size: 14px;
+  }
+
+  .galleryPageGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .galleryPageImage {
+    height: 270px;
+  }
+
+  .galleryImageOverlay {
+    padding: 17px;
+  }
+
+  .galleryImageInfo h3 {
+    font-size: 23px;
+  }
+
+  .galleryView {
+    font-size: 14px;
+  }
+
+  .galleryLightbox {
+    padding: 18px;
+  }
+
+  .galleryClose {
+    top: 12px;
+    right: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 27px;
+  }
+
+  .galleryLightboxContent {
+    max-height: 88vh;
+    border-radius: 15px;
+  }
+
+  .galleryLightboxContent img {
+    max-height: 62vh;
+  }
+
+  .galleryLightboxInfo {
+    padding: 17px 18px 19px;
+  }
+
+  .galleryLightboxInfo h3 {
+    font-size: 23px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .galleryPageHero {
+    min-height: 370px;
+    padding: 95px 15px 48px;
+  }
+
+  .galleryPageHero h1 {
+    font-size: 34px;
+  }
+
+  .galleryPageHero p {
+    font-size: 15px;
+  }
+
+  .galleryPageSection {
+    padding: 45px 13px 55px;
+  }
+
+  .galleryPageHeader h2 {
+    font-size: 29px;
+  }
+
+  .galleryPageHeader > p {
+    font-size: 15px;
+  }
+
+  .galleryFilter {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .galleryPageImage {
+    height: 245px;
+  }
+
+  .galleryImageInfo h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.galleryFilter:focus-visible,
+.galleryClose:focus-visible,
+.galleryPageCard:focus-visible {
+  outline: 3px solid rgba(8, 119, 169, 0.35);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .galleryPageCard,
+  .galleryPageImage img,
+  .galleryFilter,
+  .galleryView,
+  .galleryClose {
+    transition: none;
+  }
+}

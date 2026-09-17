@@ -1,0 +1,934 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+.abact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fffdf8;
+  color: #071a35;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+.abact-hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 7% 80px;
+  background:
+    radial-gradient(
+      circle at 15% 25%,
+      rgba(68, 174, 220, 0.15),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(214, 178, 92, 0.13),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #06152c 0%, #092447 52%, #071a35 100%);
+  isolation: isolate;
+}
+
+.abact-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 45px 45px;
+  pointer-events: none;
+}
+
+.abact-heroGlow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.abact-heroGlowOne {
+  width: 280px;
+  height: 280px;
+  top: -100px;
+  left: -80px;
+  background: rgba(73, 181, 226, 0.12);
+}
+
+.abact-heroGlowTwo {
+  width: 330px;
+  height: 330px;
+  right: -120px;
+  bottom: -150px;
+  background: rgba(218, 183, 101, 0.11);
+}
+
+.abact-heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(850px, 100%);
+  text-align: center;
+}
+
+.abact-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  color: #e3c878;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.abact-eyebrow::before,
+.abact-eyebrow::after {
+  content: "";
+  width: 55px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #e3c878
+  );
+}
+
+.abact-eyebrow::after {
+  background: linear-gradient(
+    90deg,
+    #e3c878,
+    transparent
+  );
+}
+
+.abact-heroContent h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+.abact-heroContent h1 span {
+  display: block;
+  margin-top: 5px;
+  color: #70c7ea;
+}
+
+.abact-heroContent p {
+  max-width: 700px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.abact-heroLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.abact-heroLine i {
+  width: 65px;
+  height: 1px;
+  background: #dcbf73;
+}
+
+.abact-heroLine span {
+  color: #f6ead0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abact-intro {
+  width: min(1120px, 88%);
+  margin: 0 auto;
+  padding: 85px 0 55px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 70px;
+  align-items: end;
+}
+
+.abact-introHeading > span {
+  display: block;
+  margin-bottom: 12px;
+  color: #0879ad;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.abact-introHeading h2 {
+  margin: 0;
+  color: #071a35;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(35px, 4vw, 50px);
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.abact-introHeading h2 strong {
+  display: block;
+  margin-top: 3px;
+  color: #0879ad;
+  font-weight: 600;
+}
+
+.abact-intro > p {
+  margin: 0;
+  color: #586678;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   ACTIVITY GRID
+========================================================= */
+
+.abact-gridSection {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+  padding: 20px 0 90px;
+}
+
+.abact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+
+/* =========================================================
+   ACTIVITY CARD
+========================================================= */
+
+.abact-card {
+  position: relative;
+  min-height: 410px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 15px 40px rgba(7, 26, 53, 0.07);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.abact-card::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  right: -75px;
+  top: -75px;
+  border-radius: 50%;
+  background: rgba(112, 199, 234, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.abact-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(8, 121, 173, 0.25);
+  box-shadow: 0 24px 55px rgba(7, 26, 53, 0.12);
+}
+
+.abact-card:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.abact-cardTop {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abact-number {
+  color: #b49a58;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.abact-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #edf8fc;
+  border: 1px solid rgba(8, 121, 173, 0.1);
+  font-size: 25px;
+  transition: 0.3s ease;
+}
+
+.abact-card:hover .abact-icon {
+  transform: rotate(-5deg) scale(1.05);
+  background: #e3f5fb;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.abact-cardContent {
+  position: relative;
+  z-index: 2;
+  margin-top: 22px;
+}
+
+.abact-cardSubtitle {
+  display: block;
+  margin-bottom: 7px;
+  color: #0879ad;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.abact-cardContent h3 {
+  margin: 0 0 11px;
+  color: #071a35;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.abact-cardContent p {
+  margin: 0;
+  color: #697585;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   CARD ITEMS
+========================================================= */
+
+.abact-items {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.abact-items span {
+  padding: 6px 9px;
+  border: 1px solid #e9e2d1;
+  border-radius: 50px;
+  background: #fffdf7;
+  color: #536071;
+  font-size: 9px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.abact-cardBottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.abact-cardBottom span {
+  color: #071a35;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.abact-cardBottom b {
+  width: 31px;
+  height: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #071a35;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.abact-card:hover .abact-cardBottom b {
+  background: #0879ad;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DIFFERENT CARD ACCENTS
+========================================================= */
+
+.abact-card-1 {
+  border-top: 3px solid #70c7ea;
+}
+
+.abact-card-2 {
+  border-top: 3px solid #dcbf73;
+}
+
+.abact-card-3 {
+  border-top: 3px solid #0879ad;
+}
+
+.abact-card-4 {
+  border-top: 3px solid #b49a58;
+}
+
+.abact-card-5 {
+  border-top: 3px solid #70c7ea;
+}
+
+
+/* =========================================================
+   EXPERIENCE SECTION
+========================================================= */
+
+.abact-experience {
+  position: relative;
+  width: 100%;
+  padding: 75px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #09294d
+    );
+  overflow: hidden;
+}
+
+.abact-experience::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  right: -150px;
+  top: -150px;
+  border-radius: 50%;
+  border: 1px solid rgba(220, 191, 115, 0.18);
+  box-shadow:
+    0 0 0 40px rgba(220, 191, 115, 0.025),
+    0 0 0 80px rgba(220, 191, 115, 0.018);
+}
+
+.abact-experienceContent {
+  position: relative;
+  z-index: 2;
+}
+
+.abact-experienceContent > span {
+  color: #e0c473;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.abact-experienceContent h2 {
+  margin: 15px 0 17px;
+  color: #ffffff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.abact-experienceContent h2 strong {
+  display: block;
+  color: #70c7ea;
+  font-weight: 600;
+}
+
+.abact-experienceContent p {
+  max-width: 580px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.abact-stats {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.abact-stats > div {
+  min-height: 125px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+.abact-stats > div:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220, 191, 115, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.abact-stats strong {
+  color: #e2c574;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.abact-stats span {
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   QUOTE SECTION
+========================================================= */
+
+.abact-quoteSection {
+  width: min(900px, 88%);
+  margin: 0 auto;
+  padding: 95px 0;
+  text-align: center;
+}
+
+.abact-quoteMark {
+  color: #d9bd70;
+  font-family: Georgia, serif;
+  font-size: 75px;
+  line-height: 0.5;
+  opacity: 0.75;
+}
+
+.abact-quoteSection blockquote {
+  max-width: 750px;
+  margin: 25px auto 18px;
+  color: #071a35;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.abact-quoteSection > span {
+  color: #0879ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abact-cta {
+  width: min(1180px, 90%);
+  margin: 0 auto 70px;
+  padding: 45px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  border-radius: 20px;
+  background:
+    linear-gradient(
+      120deg,
+      #f4eddd,
+      #fffdf8
+    );
+  border: 1px solid #e7dcc3;
+  box-shadow: 0 15px 40px rgba(7, 26, 53, 0.06);
+}
+
+.abact-cta > div > span {
+  color: #0879ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.abact-cta h2 {
+  margin: 9px 0 0;
+  color: #071a35;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3.5vw, 43px);
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.abact-cta h2 strong {
+  display: inline-block;
+  margin-left: 9px;
+  color: #0879ad;
+  font-weight: 600;
+}
+
+.abact-cta button {
+  min-width: 185px;
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #071a35;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.abact-cta button span {
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.abact-cta button:hover {
+  background: #0879ad;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(8, 121, 173, 0.22);
+}
+
+.abact-cta button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .abact-hero {
+    min-height: 460px;
+    padding: 80px 6%;
+  }
+
+  .abact-intro {
+    width: 88%;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 70px;
+  }
+
+  .abact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abact-experience {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 65px 7%;
+  }
+
+  .abact-cta {
+    padding: 38px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abact-hero {
+    min-height: 440px;
+    padding: 70px 22px 65px;
+  }
+
+  .abact-eyebrow {
+    gap: 9px;
+    font-size: 8px;
+    letter-spacing: 1.7px;
+  }
+
+  .abact-eyebrow::before,
+  .abact-eyebrow::after {
+    width: 30px;
+  }
+
+  .abact-heroContent h1 {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+  }
+
+  .abact-heroContent p {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .abact-heroLine {
+    margin-top: 24px;
+    gap: 8px;
+  }
+
+  .abact-heroLine i {
+    width: 30px;
+  }
+
+  .abact-heroLine span {
+    font-size: 7px;
+    letter-spacing: 1.2px;
+  }
+
+
+  /* INTRO */
+
+  .abact-intro {
+    width: 88%;
+    padding: 60px 0 38px;
+    gap: 20px;
+  }
+
+  .abact-introHeading > span {
+    font-size: 9px;
+  }
+
+  .abact-introHeading h2 {
+    font-size: 36px;
+  }
+
+  .abact-intro > p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+
+  /* GRID */
+
+  .abact-gridSection {
+    width: 88%;
+    padding-bottom: 65px;
+  }
+
+  .abact-grid {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .abact-card {
+    min-height: 375px;
+    padding: 21px;
+    border-radius: 15px;
+  }
+
+  .abact-cardContent {
+    margin-top: 19px;
+  }
+
+  .abact-cardContent h3 {
+    font-size: 26px;
+  }
+
+  .abact-cardContent p {
+    font-size: 12px;
+  }
+
+  .abact-items {
+    margin-top: 17px;
+  }
+
+
+  /* EXPERIENCE */
+
+  .abact-experience {
+    padding: 60px 7%;
+    gap: 32px;
+  }
+
+  .abact-experienceContent h2 {
+    font-size: 35px;
+  }
+
+  .abact-experienceContent p {
+    font-size: 12px;
+  }
+
+  .abact-stats {
+    gap: 10px;
+  }
+
+  .abact-stats > div {
+    min-height: 105px;
+    padding: 18px;
+  }
+
+  .abact-stats strong {
+    font-size: 29px;
+  }
+
+
+  /* QUOTE */
+
+  .abact-quoteSection {
+    padding: 70px 0;
+  }
+
+  .abact-quoteMark {
+    font-size: 60px;
+  }
+
+  .abact-quoteSection blockquote {
+    font-size: 25px;
+    line-height: 1.35;
+  }
+
+
+  /* CTA */
+
+  .abact-cta {
+    width: 88%;
+    margin-bottom: 45px;
+    padding: 30px 23px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    border-radius: 16px;
+  }
+
+  .abact-cta h2 {
+    font-size: 32px;
+  }
+
+  .abact-cta h2 strong {
+    display: block;
+    margin-left: 0;
+    margin-top: 3px;
+  }
+
+  .abact-cta button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .abact-hero {
+    min-height: 410px;
+    padding: 60px 17px;
+  }
+
+  .abact-heroContent h1 {
+    font-size: 34px;
+  }
+
+  .abact-heroContent p {
+    font-size: 11px;
+  }
+
+  .abact-introHeading h2 {
+    font-size: 32px;
+  }
+
+  .abact-card {
+    min-height: 360px;
+    padding: 19px;
+  }
+
+  .abact-cardContent h3 {
+    font-size: 24px;
+  }
+
+  .abact-items span {
+    padding: 5px 8px;
+    font-size: 8px;
+  }
+
+  .abact-stats strong {
+    font-size: 26px;
+  }
+
+  .abact-stats span {
+    font-size: 8px;
+  }
+
+  .abact-quoteSection blockquote {
+    font-size: 22px;
+  }
+}

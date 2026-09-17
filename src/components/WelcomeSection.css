@@ -1,0 +1,926 @@
+
+
+.welcomeSection {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  padding: 40px 0 92px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8f5ed 0%,
+      #ffffff 48%,
+      #f1f7fa 100%
+    );
+
+  box-sizing: border-box;
+}
+
+
+
+.welcomeSection::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: -330px;
+  top: -230px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(214, 179, 106, 0.22);
+
+  box-shadow:
+    0 0 0 45px rgba(214, 179, 106, 0.035),
+    0 0 0 90px rgba(8, 119, 169, 0.025);
+
+  pointer-events: none;
+}
+
+
+.welcomeSection::after {
+  content: "";
+
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  right: -250px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background: rgba(8, 119, 169, 0.035);
+
+  border: 1px solid rgba(8, 119, 169, 0.08);
+
+  pointer-events: none;
+}
+
+
+.welcomeContainer {
+  width: min(1240px, calc(100% - 90px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  align-items: center;
+
+  gap: 82px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+
+.welcomeVisual {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 480px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* Main image frame */
+
+.welcomeImageBox {
+  width: 88%;
+  height: 440px;
+
+  position: relative;
+
+  z-index: 3;
+
+  border-radius: 26px 136px 36px 136px;
+
+  overflow: hidden;
+
+  background: #071a35;
+
+  border: 7px solid #ffffff;
+
+  box-shadow:
+    0 25px 55px rgba(7, 26, 53, 0.18),
+    0 5px 18px rgba(7, 26, 53, 0.08);
+}
+
+
+/* Gold border behind image */
+
+.welcomeImageBox::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  border-radius: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+.welcomeImageBox img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition: transform 0.6s ease;
+}
+
+
+.welcomeImageBox:hover img {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   GOLD DECORATIVE SHAPE
+   ========================================================= */
+
+.welcomeGoldShape {
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  left: 0;
+  bottom: 3px;
+
+  z-index: 1;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e5c77e,
+      #c69b45
+    );
+
+  transform: rotate(-9deg);
+
+  box-shadow:
+    0 15px 30px rgba(184, 142, 61, 0.16);
+}
+
+
+/* small navy decoration */
+
+.welcomeGoldShape::after {
+  content: "";
+
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  right: -32px;
+  top: -32px;
+
+  border-radius: 50%;
+
+  background: #0877a9;
+
+  border: 8px solid #f8f5ed;
+}
+
+
+/* =========================================================
+   EXPERIENCE CARD
+   ========================================================= */
+
+.welcomeExperienceCard {
+  position: absolute;
+
+  right: -4px;
+  bottom: 24px;
+
+  z-index: 5;
+
+  min-width: 185px;
+
+  padding: 19px 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0b3154
+    );
+
+  border: 1px solid rgba(214, 179, 106, 0.55);
+
+  box-shadow:
+    0 18px 35px rgba(7, 26, 53, 0.23);
+}
+
+
+.welcomeExperienceCard strong {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 40px;
+
+  line-height: 1;
+
+  color: #e0c27e;
+
+  font-weight: 700;
+}
+
+
+.welcomeExperienceCard span {
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.welcomeContent {
+  width: 100%;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.welcomeLabel {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+
+  color: #0877a9;
+}
+
+
+.welcomeLabel::before {
+  content: "";
+
+  width: 34px;
+  height: 2px;
+
+  background: #d6b36a;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.welcomeContent h2 {
+  max-width: 700px;
+
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 42px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+
+  font-weight: 700;
+
+  color: #071a35;
+}
+
+
+.welcomeContent h2 span {
+  display: inline;
+  margin-left: 8px;
+
+  margin-top: 4px;
+
+  color: #0877a9;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+   ========================================================= */
+
+.welcomeMainText,
+.welcomeSecondText {
+  max-width: 650px;
+
+  font-family: Arial, sans-serif;
+
+  color: #61778b;
+
+  font-size: 17px;
+
+  line-height: 1.72;
+
+  font-weight: 400;
+}
+
+
+.welcomeMainText {
+  margin: 25px 0 0;
+}
+
+
+.welcomeSecondText {
+  margin: 12px 0 0;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.welcomeHighlights {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 25px;
+
+  max-width: 650px;
+}
+
+
+.welcomeHighlight {
+  min-height: 70px;
+
+  padding: 13px 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid #dce7ed;
+
+  border-radius: 13px;
+
+  box-shadow:
+    0 7px 20px rgba(7, 26, 53, 0.045);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.welcomeHighlight:hover {
+  transform: translateY(-3px);
+
+  border-color: #c8dce6;
+
+  box-shadow:
+    0 12px 25px rgba(7, 26, 53, 0.08);
+}
+
+
+/* check circle */
+
+.welcomeHighlight > span {
+  width: 31px;
+  height: 31px;
+
+  min-width: 31px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf7fb;
+
+  border: 1px solid #b9dce9;
+
+  color: #0877a9;
+
+  font-size: 16px;
+
+  font-weight: 900;
+}
+
+
+.welcomeHighlight strong {
+  display: block;
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.25;
+
+  color: #071a35;
+
+  font-weight: 800;
+}
+
+
+.welcomeHighlight small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  color: #71879a;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.welcomeButton {
+  margin-top: 28px;
+
+  min-height: 52px;
+
+  padding: 0 23px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  cursor: pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9,
+      #075b85
+    );
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1px;
+
+  box-shadow:
+    0 10px 24px rgba(8, 119, 169, 0.20);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.welcomeButton span {
+  color: #e0c27e;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.welcomeButton:hover {
+  transform: translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0b3154
+    );
+
+  box-shadow:
+    0 15px 30px rgba(7, 26, 53, 0.20);
+}
+
+
+.welcomeButton:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  .welcomeSection {
+    padding: 75px 0 80px;
+  }
+
+  .welcomeContainer {
+    width: calc(100% - 60px);
+
+    gap: 55px;
+  }
+
+  .welcomeContent h2 {
+    font-size: 42px;
+  }
+
+  .welcomeMainText,
+  .welcomeSecondText {
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+  .welcomeImageBox {
+    width: 90%;
+    height: 400px;
+  }
+
+  .welcomeVisual {
+    min-height: 440px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .welcomeSection {
+    padding: 65px 0 70px;
+  }
+
+  .welcomeContainer {
+    width: calc(100% - 50px);
+
+    grid-template-columns: 1fr;
+
+    gap: 65px;
+  }
+
+  .welcomeVisual {
+    width: 100%;
+
+    min-height: 430px;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+  }
+
+  .welcomeImageBox {
+    width: 86%;
+    height: 420px;
+  }
+
+  .welcomeExperienceCard {
+    right: 1%;
+    bottom: 18px;
+  }
+
+  .welcomeContent {
+    max-width: 720px;
+
+    margin: 0 auto;
+  }
+
+  .welcomeContent h2 {
+    font-size: 43px;
+  }
+
+  .welcomeMainText,
+  .welcomeSecondText {
+    max-width: 700px;
+
+    font-size: 17px;
+  }
+
+  .welcomeHighlights {
+    max-width: 700px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .welcomeSection {
+    padding: 52px 0 58px;
+  }
+
+  .welcomeContainer {
+    width: calc(100% - 30px);
+
+    gap: 52px;
+  }
+
+  /* IMAGE */
+
+  .welcomeVisual {
+    min-height: 355px;
+
+    width: 100%;
+  }
+
+  .welcomeImageBox {
+    width: 87%;
+    height: 330px;
+
+    border-width: 5px;
+
+    border-radius: 20px;
+  }
+
+  .welcomeGoldShape {
+    width: 120px;
+    height: 120px;
+
+    left: 0;
+    bottom: 2px;
+
+    border-radius: 20px;
+  }
+
+  .welcomeGoldShape::after {
+    width: 48px;
+    height: 48px;
+
+    right: -22px;
+    top: -22px;
+
+    border-width: 5px;
+  }
+
+  .welcomeExperienceCard {
+    right: -1px;
+    bottom: 15px;
+
+    min-width: 158px;
+
+    padding: 14px 15px;
+
+    gap: 9px;
+
+    border-radius: 13px;
+  }
+
+  .welcomeExperienceCard strong {
+    font-size: 31px;
+  }
+
+  .welcomeExperienceCard span {
+    font-size: 12px;
+  }
+
+
+  /* CONTENT */
+
+  .welcomeLabel {
+    margin-bottom: 15px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.7px;
+
+    gap: 8px;
+  }
+
+  .welcomeLabel::before {
+    width: 25px;
+  }
+
+  .welcomeContent h2 {
+    font-size: 35px;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.6px;
+  }
+
+  .welcomeContent h2 span {
+    margin-top: 3px;
+  }
+
+  .welcomeMainText,
+  .welcomeSecondText {
+    font-size: 16px;
+
+    line-height: 1.65;
+  }
+
+  .welcomeMainText {
+    margin-top: 20px;
+  }
+
+  .welcomeSecondText {
+    margin-top: 10px;
+  }
+
+
+  /* HIGHLIGHTS */
+
+  .welcomeHighlights {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 22px;
+  }
+
+  .welcomeHighlight {
+    min-height: 67px;
+
+    padding: 12px 13px;
+  }
+
+  .welcomeHighlight > span {
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+  }
+
+  .welcomeHighlight strong {
+    font-size: 15px;
+  }
+
+  .welcomeHighlight small {
+    font-size: 13px;
+  }
+
+
+  /* BUTTON */
+
+  .welcomeButton {
+    width: 100%;
+
+    min-height: 54px;
+
+    margin-top: 23px;
+
+    font-size: 15px;
+
+    border-radius: 9px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .welcomeSection {
+    padding: 45px 0 50px;
+  }
+
+  .welcomeContainer {
+    width: calc(100% - 22px);
+  }
+
+  .welcomeVisual {
+    min-height: 315px;
+  }
+
+  .welcomeImageBox {
+    height: 292px;
+  }
+
+  .welcomeGoldShape {
+    width: 105px;
+    height: 105px;
+  }
+
+  .welcomeExperienceCard {
+    min-width: 145px;
+
+    padding: 12px 13px;
+  }
+
+  .welcomeExperienceCard strong {
+    font-size: 28px;
+  }
+
+  .welcomeExperienceCard span {
+    font-size: 11px;
+  }
+
+  .welcomeContent h2 {
+    font-size: 31px;
+  }
+
+  .welcomeMainText,
+  .welcomeSecondText {
+    font-size: 15px;
+
+    line-height: 1.6;
+  }
+
+  .welcomeHighlight strong {
+    font-size: 14px;
+  }
+
+  .welcomeHighlight small {
+    font-size: 12px;
+  }
+}

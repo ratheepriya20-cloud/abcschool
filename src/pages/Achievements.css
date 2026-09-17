@@ -1,0 +1,2035 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap");
+
+/* =========================================================
+   BASE
+========================================================= */
+
+.abach-page {
+  position: relative;
+
+  width: 100%;
+
+  padding: 45px 5%;
+
+  background: #ffffff;
+
+  color: #071a35;
+
+  font-family: "DM Sans", sans-serif;
+
+  overflow: hidden;
+}
+
+.abach-page::before {
+  content: "";
+
+  position: absolute;
+
+  top: -180px;
+  right: -150px;
+
+  width: 380px;
+  height: 380px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 211, 242, 0.13);
+
+  pointer-events: none;
+}
+
+.abach-page::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -180px;
+  left: -150px;
+
+  width: 350px;
+  height: 350px;
+
+  border-radius: 50%;
+
+  background: rgba(226, 187, 85, 0.10);
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.abach-header {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto 32px;
+
+  display: flex;
+margin-top: 50px;
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  z-index: 2;
+}
+
+.abach-heading {
+  max-width: 780px;
+}
+
+.abach-eyebrow {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 10px;
+
+  color: #0d8cc8;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.abach-eyebrow::before {
+  content: "";
+
+  width: 27px;
+  height: 2px;
+
+  background: #e2bb55;
+
+  display: inline-block;
+}
+
+.abach-heading h2 {
+  margin: 0 0 12px;
+  max-width: 1000px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+}
+
+.abach-heading h2 span {
+  color: #0d8cc8;
+
+  position: relative;
+}
+
+
+.abach-heading p {
+  max-width: 730px;
+
+  margin: 0;
+
+  color: #627286;
+
+  font-size: 16px;
+
+  line-height: 1.72;
+}
+
+/* =========================================================
+   HEADER BADGE
+========================================================= */
+
+.abach-header-badge {
+  min-width: 210px;
+
+  padding: 15px 17px;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+
+  border-radius: 13px;
+
+  background: #f7fafc;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  box-shadow:
+    0 10px 30px rgba(7, 26, 53, 0.06);
+}
+
+.abach-badge-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+
+  color: #e2bb55;
+
+  font-size: 17px;
+}
+
+.abach-header-badge strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+.abach-header-badge small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #7a8999;
+
+  font-size: 14px;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.abach-cards {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+
+  z-index: 2;
+}
+
+.abach-card {
+  position: relative;
+
+  min-height: 265px;
+
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(7, 26, 53, 0.08);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 10px 30px rgba(7, 26, 53, 0.055);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.abach-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #071a35,
+      #0d8cc8,
+      #e2bb55
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.abach-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: -55px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(13, 140, 200, 0.12);
+
+  transition: transform 0.4s ease;
+}
+
+.abach-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(13, 140, 200, 0.2);
+
+  box-shadow:
+    0 20px 42px rgba(7, 26, 53, 0.11);
+}
+
+.abach-card:hover::before {
+  transform: scaleX(1);
+}
+
+.abach-card:hover::after {
+  transform: scale(1.5);
+}
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.abach-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.abach-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef8fc;
+
+  color: #0d8cc8;
+
+  font-size: 20px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.abach-card:hover .abach-icon {
+  background: #071a35;
+
+  color: #e2bb55;
+
+  transform: rotate(-5deg);
+}
+
+.abach-card-number {
+  color: #a6b1bd;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+/* =========================================================
+   BIG NUMBER
+========================================================= */
+
+.abach-card-number-main {
+  margin-top: 18px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 39px;
+
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.abach-card h3 {
+  margin: 11px 0 7px;
+
+  color: #071a35;
+
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+.abach-card p {
+  margin: 0;
+
+  color: #718094;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+.abach-card-line {
+  width: 35px;
+  height: 2px;
+
+  margin-top: 17px;
+
+  background: #e2bb55;
+
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.abach-card:hover .abach-card-line {
+  width: 65px;
+}
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.abach-stats {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 25px auto 0;
+
+  padding: 17px 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a2b4f
+    );
+
+  border-radius: 14px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+.abach-stats::before {
+  content: "";
+
+  position: absolute;
+
+  top: -100px;
+  right: 5%;
+
+  width: 220px;
+  height: 220px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+}
+
+.abach-stat {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 8px 14px;
+}
+
+.abach-stat + .abach-stat {
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.abach-stat-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(226, 187, 85, 0.12);
+
+  color: #e2bb55;
+
+  font-size: 19px;
+
+  flex-shrink: 0;
+}
+
+.abach-stat-content strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  line-height: 1.1;
+}
+
+.abach-stat-content span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: rgba(255,255,255,0.65);
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+/* =========================================================
+   BOTTOM MESSAGE
+========================================================= */
+
+.abach-bottom {
+  position: relative;
+
+  max-width: 1200px;
+
+  margin: 25px auto 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  z-index: 2;
+}
+
+.abach-bottom-icon {
+  width: 35px;
+  height: 35px;
+
+  border-radius: 50%;
+
+  background: #fff8df;
+
+  color: #d7aa35;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  flex-shrink: 0;
+}
+
+.abach-bottom span {
+  color: #0d8cc8;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.abach-bottom h3 {
+  margin: 3px 0 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 19px;
+}
+
+.abach-bottom-line {
+  height: 1px;
+
+  flex: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7,26,53,0.15),
+      transparent
+    );
+}
+
+
+
+@media (max-width: 1100px) {
+
+  .abach-page {
+    padding: 48px 4%;
+  }
+
+  .abach-header,
+  .abach-cards,
+  .abach-stats,
+  .abach-bottom {
+    width: 100%;
+  }
+
+  .abach-heading {
+    max-width: 700px;
+  }
+
+  .abach-heading h2 {
+    font-size: 48px;
+    line-height: 1.08;
+  }
+
+  .abach-heading p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .abach-header-badge {
+    min-width: 195px;
+  }
+
+  .abach-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .abach-card {
+    min-height: 250px;
+    padding: 23px;
+  }
+
+  .abach-card-number-main {
+    font-size: 40px;
+  }
+
+  .abach-card h3 {
+    font-size: 20px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .abach-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abach-stat-content strong {
+    font-size: 22px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abach-page {
+    padding: 45px 5%;
+  }
+
+  .abach-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .abach-heading {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .abach-heading h2 {
+    font-size: 44px;
+  }
+
+  .abach-heading p {
+    max-width: 760px;
+    font-size: 17px;
+  }
+
+  .abach-header-badge {
+    width: 100%;
+    max-width: 330px;
+    min-width: 0;
+  }
+
+  .abach-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .abach-card h3 {
+    font-size: 20px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+  }
+
+  .abach-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .abach-page {
+    padding: 44px 5%;
+  }
+
+  .abach-header {
+    margin-bottom: 28px;
+  }
+
+  .abach-eyebrow {
+    font-size: 13px;
+    letter-spacing: 1.8px;
+  }
+
+  .abach-heading h2 {
+    font-size: 41px;
+    line-height: 1.1;
+  }
+
+  .abach-heading p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .abach-header-badge {
+    max-width: 100%;
+    padding: 17px;
+  }
+
+  .abach-badge-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 16px;
+  }
+
+  .abach-header-badge small {
+    font-size: 15px;
+  }
+
+  .abach-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .abach-card {
+    min-height: 0;
+    padding: 25px;
+  }
+
+  .abach-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 21px;
+  }
+
+  .abach-card-number {
+    font-size: 19px;
+  }
+
+  .abach-card-number-main {
+    font-size: 42px;
+  }
+
+  .abach-card h3 {
+    font-size: 22px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .abach-stats {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 22px;
+    padding: 12px 15px;
+  }
+
+  .abach-stat {
+    padding: 16px 10px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 23px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+
+  .abach-bottom {
+    margin-top: 25px;
+    align-items: flex-start;
+  }
+
+  .abach-bottom h3 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .abach-bottom-line {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abach-page {
+    padding: 40px 5%;
+  }
+
+  .abach-heading h2 {
+    font-size: 38px;
+    letter-spacing: -0.6px;
+  }
+
+  .abach-heading p {
+    font-size: 16.5px;
+    line-height: 1.72;
+  }
+
+  .abach-eyebrow {
+    font-size: 12px;
+  }
+
+  .abach-card {
+    padding: 23px;
+  }
+
+  .abach-card-number-main {
+    font-size: 40px;
+  }
+
+  .abach-card h3 {
+    font-size: 21px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+  }
+
+  .abach-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .abach-stat {
+    justify-content: flex-start;
+  }
+
+  .abach-stat + .abach-stat {
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .abach-stat-content strong {
+    font-size: 23px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+
+  .abach-bottom-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .abach-page {
+    padding: 38px 16px;
+  }
+
+  .abach-header {
+    gap: 18px;
+    margin-bottom: 25px;
+  }
+
+  .abach-eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .abach-eyebrow::before {
+    width: 22px;
+  }
+
+  .abach-heading h2 {
+    font-size: 35px;
+    line-height: 1.1;
+  }
+
+  .abach-heading h2 span {
+    white-space: nowrap;
+  }
+
+  .abach-heading p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .abach-header-badge {
+    padding: 15px;
+  }
+
+  .abach-badge-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 15px;
+  }
+
+  .abach-header-badge small {
+    font-size: 14px;
+  }
+
+  .abach-cards {
+    gap: 13px;
+  }
+
+  .abach-card {
+    padding: 21px;
+    border-radius: 15px;
+  }
+
+  .abach-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .abach-card-number {
+    font-size: 18px;
+  }
+
+  .abach-card-number-main {
+    font-size: 38px;
+  }
+
+  .abach-card h3 {
+    font-size: 20px;
+  }
+
+  .abach-card p {
+    font-size: 15.5px;
+    line-height: 1.7;
+  }
+
+  .abach-stats {
+    margin-top: 20px;
+    padding: 10px 13px;
+    border-radius: 13px;
+  }
+
+  .abach-stat {
+    padding: 15px 7px;
+  }
+
+  .abach-stat-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 21px;
+  }
+
+  .abach-stat-content span {
+    font-size: 13px;
+  }
+
+  .abach-bottom {
+    margin-top: 22px;
+    gap: 10px;
+  }
+
+  .abach-bottom-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .abach-bottom span {
+    font-size: 10px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================================
+   412px
+========================================================= */
+
+@media (max-width: 412px) {
+
+  .abach-page {
+    padding: 36px 14px;
+  }
+
+  .abach-heading h2 {
+    font-size: 33px;
+  }
+
+  .abach-heading p {
+    font-size: 16px;
+  }
+
+  .abach-card {
+    padding: 20px;
+  }
+
+  .abach-card-number-main {
+    font-size: 36px;
+  }
+
+  .abach-card h3 {
+    font-size: 19px;
+  }
+
+  .abach-card p {
+    font-size: 15px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 20px;
+  }
+
+  .abach-stat-content span {
+    font-size: 13px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abach-heading h2 {
+    font-size: 31px;
+  }
+
+  .abach-heading p {
+    font-size: 15.5px;
+  }
+
+  .abach-card-number-main {
+    font-size: 35px;
+  }
+
+  .abach-card h3 {
+    font-size: 19px;
+  }
+
+  .abach-card p {
+    font-size: 15px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 20px;
+  }
+
+  .abach-stat-content span {
+    font-size: 12.5px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .abach-page {
+    padding: 34px 12px;
+  }
+
+  .abach-heading h2 {
+    font-size: 29px;
+    line-height: 1.1;
+  }
+
+  .abach-heading p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .abach-header-badge {
+    padding: 14px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 15px;
+  }
+
+  .abach-header-badge small {
+    font-size: 13px;
+  }
+
+  .abach-card {
+    padding: 19px;
+  }
+
+  .abach-card-number-main {
+    font-size: 34px;
+  }
+
+  .abach-card h3 {
+    font-size: 18px;
+  }
+
+  .abach-card p {
+    font-size: 14.5px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 19px;
+  }
+
+  .abach-stat-content span {
+    font-size: 12px;
+  }
+
+  .abach-bottom span {
+    font-size: 9px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   340px
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .abach-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .abach-heading h2 {
+    font-size: 27px;
+  }
+
+  .abach-heading p {
+    font-size: 14.5px;
+  }
+
+  .abach-card-number-main {
+    font-size: 32px;
+  }
+
+  .abach-card h3 {
+    font-size: 17px;
+  }
+
+  .abach-card p {
+    font-size: 14px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 18px;
+  }
+
+  .abach-stat-content span {
+    font-size: 11.5px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .abach-page {
+    padding: 30px 9px;
+  }
+
+  .abach-heading h2 {
+    font-size: 25px;
+  }
+
+  .abach-heading p {
+    font-size: 14px;
+  }
+
+  .abach-card {
+    padding: 17px;
+  }
+
+  .abach-card-number-main {
+    font-size: 30px;
+  }
+
+  .abach-card h3 {
+    font-size: 16px;
+  }
+
+  .abach-card p {
+    font-size: 13.5px;
+  }
+
+  .abach-stat {
+    padding: 13px 5px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 17px;
+  }
+
+  .abach-stat-content span {
+    font-size: 11px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE SAFETY
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .abach-page,
+  .abach-page * {
+    box-sizing: border-box;
+  }
+
+  .abach-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .abach-heading,
+  .abach-heading h2,
+  .abach-heading p,
+  .abach-header-badge,
+  .abach-card,
+  .abach-stats,
+  .abach-bottom {
+    max-width: 100%;
+  }
+
+  .abach-card p,
+  .abach-heading p,
+  .abach-bottom h3 {
+    overflow-wrap: break-word;
+  }
+
+  /* heading span stays attached to heading */
+  .abach-heading h2 span {
+    display: inline;
+    white-space: normal;
+  }
+  .abach-eyebrow{
+    margin-top: 30px;
+}
+
+}
+
+.abach-header {
+  position: relative;
+  z-index: 10;
+}
+
+.abach-header-badge {
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.abach-badge-icon {
+  flex-shrink: 0;
+}
+
+.abach-header-badge strong,
+.abach-header-badge small {
+  display: block;
+}
+
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+.abach-heading h2 {
+  font-size: clamp(48px, 4.5vw, 58px);
+}
+
+.abach-heading p {
+  font-size: 23px !important;
+  line-height: 1.8;
+}
+
+.abach-header-badge {
+  min-width: 230px;
+  padding: 18px;
+}
+
+.abach-header-badge strong {
+  font-size: 20px;
+}
+
+.abach-header-badge small {
+  font-size: 19px;
+}
+
+.abach-card-number-main {
+  font-size: 48px !important;
+}
+
+.abach-card h3 {
+  font-size: 22px;
+}
+
+.abach-card p {
+  font-size: 22px !important;
+}
+
+.abach-stat-content strong {
+  font-size: 24px;
+}
+
+.abach-stat-content span {
+  font-size: 18px !important;
+}
+
+.abach-bottom h3 {
+  font-size: 22px !important;
+}
+
+
+/* =========================================================
+   1100px
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abach-heading h2 {
+    font-size: 48px;
+  }.abach-eyebrow{
+    margin-top: 60px;
+}
+
+  .abach-heading p {
+    font-size: 18px;
+  }
+
+  .abach-header-badge {
+    min-width: 220px;
+  }
+
+  .abach-card-number-main {
+    font-size: 42px;
+  }
+
+  .abach-card h3 {
+    font-size: 21px;
+  }
+
+  .abach-card p {
+    font-size: 17px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 23px;
+  }
+
+  .abach-stat-content span {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abach-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .abach-heading {
+    width: 100%;
+  }
+
+  .abach-heading h2 {
+    font-size: 44px;
+  }
+
+  .abach-heading p {
+    font-size: 18px;
+  }
+
+  .abach-header-badge {
+    width: 100%;
+    max-width: 360px;
+    min-width: 0;
+  }
+
+  .abach-header-badge strong {
+    font-size: 17px;
+  }
+
+  .abach-header-badge small {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .abach-page {
+    padding: 45px 5%;
+  }
+
+  .abach-heading h2 {
+    font-size: 42px;
+    line-height: 1.08;
+  }
+
+  .abach-heading p {
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  /* BADGE */
+
+  .abach-header-badge {
+    width: 100%;
+    max-width: none;
+    padding: 18px;
+    border-radius: 15px;
+  }
+
+  .abach-badge-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 21px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 18px;
+  }
+
+  .abach-header-badge small {
+    font-size: 16px;
+  }
+
+  /* CARD */
+
+  .abach-card {
+    padding: 27px;
+  }
+
+  .abach-card-number-main {
+    font-size: 46px;
+  }
+
+  .abach-card h3 {
+    font-size: 23px;
+  }
+
+  .abach-card p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  /* STATS */
+
+  .abach-stat-content strong {
+    font-size: 25px;
+  }
+
+  .abach-stat-content span {
+    font-size: 15px;
+  }
+
+  /* BOTTOM */
+
+  .abach-bottom h3 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================================
+   600px
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abach-page {
+    padding: 42px 5%;
+  }
+
+  .abach-heading h2 {
+    font-size: 39px;
+  }
+
+  .abach-heading p {
+    font-size: 17px;
+  }
+
+  .abach-header-badge {
+    padding: 17px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 18px;
+  }
+
+  .abach-header-badge small {
+    font-size: 15px;
+  }
+
+  .abach-card-number-main {
+    font-size: 43px;
+  }
+
+  .abach-card h3 {
+    font-size: 22px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 24px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .abach-page {
+    padding: 40px 15px;
+  }
+
+  .abach-heading h2 {
+    font-size: 36px;
+    line-height: 1.08;
+  }
+
+  .abach-heading p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .abach-header-badge {
+    width: 100%;
+    padding: 17px;
+  }
+
+  .abach-badge-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 18px;
+  }
+
+  .abach-header-badge small {
+    font-size: 15px;
+  }
+
+  .abach-card {
+    padding: 22px;
+  }
+
+  .abach-card-number-main {
+    font-size: 42px;
+  }
+
+  .abach-card h3 {
+    font-size: 21px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 23px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   412px
+========================================================= */
+
+@media (max-width: 412px) {
+
+  .abach-page {
+    padding: 38px 13px;
+  }
+
+  .abach-heading h2 {
+    font-size: 34px;
+  }
+
+  .abach-heading p {
+    font-size: 16.5px;
+  }
+
+  /* BADGE BIG + VISIBLE */
+
+  .abach-header-badge {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px 15px;
+  }
+
+  .abach-badge-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 20px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 17px;
+  }
+
+  .abach-header-badge small {
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+  /* CARDS */
+
+  .abach-card-number-main {
+    font-size: 40px;
+  }
+
+  .abach-card h3 {
+    font-size: 21px;
+  }
+
+  .abach-card p {
+    font-size: 16px;
+  }
+
+  /* STATS */
+
+  .abach-stat-content strong {
+    font-size: 22px;
+  }
+
+  .abach-stat-content span {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   390px
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abach-heading h2 {
+    font-size: 32px;
+  }
+
+  .abach-heading p {
+    font-size: 16px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 17px;
+  }
+
+  .abach-header-badge small {
+    font-size: 14px;
+  }
+
+  .abach-card-number-main {
+    font-size: 39px;
+  }
+
+  .abach-card h3 {
+    font-size: 20px;
+  }
+
+  .abach-card p {
+    font-size: 15.5px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 21px;
+  }
+
+  .abach-stat-content span {
+    font-size: 13.5px;
+  }
+}
+
+
+/* =========================================================
+   360px
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .abach-page {
+    padding: 35px 11px;
+  }
+
+  .abach-heading h2 {
+    font-size: 30px;
+  }
+
+  .abach-heading p {
+    font-size: 15.5px;
+  }
+
+  .abach-header-badge {
+    padding: 15px 13px;
+  }
+
+  .abach-badge-icon {
+    width: 47px;
+    height: 47px;
+    min-width: 47px;
+    font-size: 19px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 16px;
+  }
+
+  .abach-header-badge small {
+    font-size: 14px;
+  }
+
+  .abach-card {
+    padding: 20px;
+  }
+
+  .abach-card-number-main {
+    font-size: 37px;
+  }
+
+  .abach-card h3 {
+    font-size: 19px;
+  }
+
+  .abach-card p {
+    font-size: 15px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 20px;
+  }
+
+  .abach-stat-content span {
+    font-size: 13px;
+  }
+
+  .abach-bottom h3 {
+    font-size: 19px;
+  }
+}
+
+
+/* =========================================================
+   340px
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .abach-heading h2 {
+    font-size: 28px;
+  }
+
+  .abach-heading p {
+    font-size: 15px;
+  }
+
+  .abach-header-badge {
+    padding: 14px 11px;
+  }
+
+  .abach-badge-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 18px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 15px;
+  }
+
+  .abach-header-badge small {
+    font-size: 13px;
+  }
+
+  .abach-card-number-main {
+    font-size: 35px;
+  }
+
+  .abach-card h3 {
+    font-size: 18px;
+  }
+
+  .abach-card p {
+    font-size: 14.5px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 19px;
+  }
+
+  .abach-stat-content span {
+    font-size: 12.5px;
+  }
+}
+
+
+/* =========================================================
+   320px
+========================================================= */
+
+@media (max-width: 320px) {
+
+  .abach-page {
+    padding: 30px 9px;
+  }
+
+  .abach-heading h2 {
+    font-size: 26px;
+  }
+
+  .abach-heading p {
+    font-size: 14.5px;
+  }
+
+  .abach-header-badge {
+    padding: 13px 10px;
+    gap: 10px;
+  }
+
+  .abach-badge-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 17px;
+  }
+
+  .abach-header-badge strong {
+    font-size: 14px;
+  }
+
+  .abach-header-badge small {
+    font-size: 12.5px;
+  }
+
+  .abach-card-number-main {
+    font-size: 33px;
+  }
+
+  .abach-card h3 {
+    font-size: 17px;
+  }
+
+  .abach-card p {
+    font-size: 14px;
+  }
+
+  .abach-stat-content strong {
+    font-size: 18px;
+  }
+
+  .abach-stat-content span {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   FINAL BADGE VISIBILITY FIX
+========================================================= */
+
+.abach-header-badge {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.abach-header-badge,
+.abach-badge-icon,
+.abach-header-badge strong,
+.abach-header-badge small {
+  position: relative;
+  z-index: 50;
+}
+
+
+/* NO HORIZONTAL BREAK */
+
+.abach-page {
+  overflow-x: hidden;
+}
+
+.abach-heading h2,
+.abach-heading p,
+.abach-card h3,
+.abach-card p,
+.abach-header-badge,
+.abach-bottom h3 {
+  overflow-wrap: anywhere;
+}
+

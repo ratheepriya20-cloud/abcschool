@@ -1,0 +1,393 @@
+/* =====================================================
+   OUR LEADERSHIP
+===================================================== */
+
+.olPage {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f5ed;
+  color: #071a35;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+
+/* HERO */
+
+.olHero {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 25px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(70, 180, 220, 0.16), transparent 30%),
+    radial-gradient(circle at 85% 75%, rgba(212, 176, 102, 0.15), transparent 30%),
+    #071a35;
+}
+
+.olHeroContent {
+  max-width: 1000px;
+}
+
+.olHeroEyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #e4c77f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.olHero h1 {
+  margin: 0;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.02;
+}
+
+.olHero h1 span {
+  display: inline;
+  margin-left: 8px;
+  color: #68c4e7;
+  margin-top: 7px;
+}
+
+.olHeroContent p {
+  max-width: 700px;
+  margin: 25px auto 0;
+  color: rgba(255,255,255,.78);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.olHeroRule {
+  width: 75px;
+  height: 2px;
+  margin: 28px auto 0;
+  background: #d7b66d;
+}
+
+
+/* MAIN */
+
+.olMain {
+  max-width: 1200px;
+  margin: auto;
+  padding: 45px 25px;
+}
+
+.olIntro {
+  display: grid;
+  
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.olIntro > div > span {
+  color: #1685b5;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.olIntro h2 {
+  margin: 2px 0 0;
+  color: #071a35;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.08;
+}
+
+.olIntro h2 strong {
+  display: inline;
+  margin-left: 8px;
+  color: #0877a9;
+}
+
+.olIntro > p {
+  margin: 0;
+  color: #5c6b7d;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-top: -40px;
+}
+
+
+/* LEADER GRID */
+
+.olLeaderGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.olLeaderCard {
+  position: relative;
+  padding: 28px;
+  background: #fff;
+  border: 1px solid #e8e2d7;
+  border-radius: 19px;
+  box-shadow: 0 15px 40px rgba(7,26,53,.07);
+  transition: .35s ease;
+  overflow: hidden;
+}
+
+.olLeaderCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(7,26,53,.12);
+}
+
+.olLeaderFeatured {
+  border-top: 4px solid #d3ae61;
+}
+
+.olLeaderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.olLeaderTop span {
+  color: #c9a458;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.olLeaderTop i {
+  color: #1685b5;
+  font-style: normal;
+}
+
+.olLeaderAvatar {
+  width: 82px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0;
+  border-radius: 50%;
+  background: #071a35;
+  color: #e3c27b;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  font-weight: 700;
+  box-shadow: 0 0 0 7px #edf6f9;
+}
+
+.olLeaderRole {
+  color: #0877a9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.olLeaderCard h3 {
+  margin: 8px 0 10px;
+  color: #071a35;
+  font-family: "Playfair Display", serif;
+  font-size: 27px;
+}
+
+.olLeaderCard p {
+  margin: 0;
+  color: #637184;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.olLeaderBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 17px;
+  border-top: 1px solid #ebe6dc;
+}
+
+.olLeaderBottom span {
+  color: #7b8795;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.olLeaderBottom b {
+  color: #b58c43;
+  font-size: 18px;
+}
+
+
+/* PHILOSOPHY */
+
+.olPhilosophy {
+  margin-top: 80px;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 60px;
+  border-radius: 22px;
+  background: #071a35;
+}
+
+.olPhilosophyContent > span {
+  color: #dfbd70;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.olPhilosophyContent h2 {
+  margin: 15px 0;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.olPhilosophyContent h2 strong {
+  display: block;
+  color: #68c4e7;
+}
+
+.olPhilosophyContent p {
+  margin: 0;
+  color: rgba(255,255,255,.7);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.olPhilosophyStats {
+  display: grid;
+  gap: 15px;
+}
+
+.olPhilosophyStats div {
+  padding: 18px 20px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+}
+
+.olPhilosophyStats strong {
+  display: block;
+  color: #e1c075;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+}
+
+.olPhilosophyStats span {
+  color: rgba(255,255,255,.7);
+  font-size: 11px;
+}
+
+
+/* CTA */
+
+.olCTA {
+  margin-top: 65px;
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  border-radius: 17px;
+  background: #fff;
+  border: 1px solid #e6dfd2;
+}
+
+.olCTA > div > span {
+  color: #b58b3e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.olCTA h3 {
+  margin: 7px 0 0;
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+
+.olCTA h3 strong {
+  color: #0877a9;
+  margin-left: 5px;
+}
+
+.olCTA button {
+  padding: 13px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: #071a35;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.olCTA button:hover {
+  background: #0877a9;
+}
+
+.olCTA button span {
+  margin-left: 8px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .olIntro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .olLeaderGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .olPhilosophy {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .olHero {
+    min-height: 390px;
+    padding: 70px 18px;
+  }
+
+  .olHero h1 {
+    font-size: 42px;
+  }
+
+  .olMain {
+    padding: 60px 17px;
+  }
+
+  .olLeaderGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .olLeaderCard {
+    padding: 25px;
+  }
+
+  .olPhilosophy {
+    padding: 30px 23px;
+  }
+
+  .olPhilosophyContent h2 {
+    font-size: 32px;
+  }
+
+  .olCTA {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

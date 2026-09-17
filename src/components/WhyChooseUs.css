@@ -1,0 +1,789 @@
+/* =========================================================
+   WHY CHOOSE US
+   NAVY + SKY BLUE + GOLD
+========================================================= */
+
+.whySchoolSection {
+  position: relative;
+
+  width: 100%;
+
+  padding: 85px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7fafc 0%,
+      #ffffff 55%,
+      #f1f8fc 100%
+    );
+}
+
+
+.whySchoolContainer {
+  width: min(1180px, 92%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.92fr;
+
+  align-items: center;
+
+  gap: 75px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.whySchoolContent {
+  max-width: 650px;
+}
+
+
+.whySchoolLabel {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 14px;
+
+  color: #0875a5;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.6px;
+}
+
+
+.whySchoolLabel::before {
+  content: "";
+
+  width: 28px;
+  height: 2px;
+
+  background: #f2c14e;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.whySchoolContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(39px, 4vw, 54px);
+
+  line-height: 1.06;
+
+  letter-spacing: -1.4px;
+}
+
+
+.whySchoolContent h2 span {
+  display: block;
+
+  color: #0877a9;
+}
+
+
+.whySchoolIntro {
+  max-width: 580px;
+
+  margin: 20px 0 25px;
+
+  color: #66778b;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.whyFeatures {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+
+.whyFeature {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  min-height: 62px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #e5edf4;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.whyFeature:hover {
+  transform: translateX(5px);
+
+  border-color: rgba(56, 189, 248, 0.35);
+
+  box-shadow:
+    0 8px 25px rgba(7, 26, 53, 0.07);
+}
+
+
+/* NUMBER */
+
+.whyFeatureNumber {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0c3158
+    );
+
+  color: #f2c14e;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+/* TEXT */
+
+.whyFeatureText {
+  flex: 1;
+}
+
+
+.whyFeatureText h3 {
+  margin: 0 0 2px;
+
+  color: #071a35;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+
+.whyFeatureText p {
+  margin: 0;
+
+  color: #8190a0;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 9px;
+
+  line-height: 1.4;
+}
+
+
+/* ARROW */
+
+.whyFeatureArrow {
+  color: #d6a82e;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.whyFeature:hover .whyFeatureArrow {
+  transform: translateX(4px);
+
+  color: #0877a9;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.whySchoolButton {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  min-height: 47px;
+
+  padding: 0 21px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a35,
+      #0a315a
+    );
+
+  color: #ffffff;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 25px rgba(7, 26, 53, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.whySchoolButton span {
+  color: #f2c14e;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.whySchoolButton:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(7, 26, 53, 0.23);
+}
+
+
+.whySchoolButton:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   IMAGE AREA
+========================================================= */
+
+.whySchoolVisual {
+  position: relative;
+
+  height: 520px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* BLUE GLOW */
+
+.whyImageGlow {
+  position: absolute;
+
+  width: 370px;
+  height: 370px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(56, 189, 248, 0.08);
+
+  filter: blur(2px);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.whyImageFrame {
+  position: relative;
+
+  width: 360px;
+  height: 455px;
+
+  padding: 6px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f2c14e,
+      #d9aa35 20%,
+      #38bdf8 65%,
+      #f2c14e
+    );
+
+  transform: rotate(2deg);
+
+  box-shadow:
+    0 25px 60px rgba(7, 26, 53, 0.20);
+
+  overflow: hidden;
+
+  z-index: 3;
+}
+
+
+.whyImageFrame img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 19px;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+.whyImageFrame:hover img {
+  transform: scale(1.05);
+}
+
+
+.whyImageOverlay {
+  position: absolute;
+
+  inset: 6px;
+
+  z-index: 2;
+
+  border-radius: 19px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(3, 19, 39, 0.30)
+    );
+}
+
+
+/* =========================================================
+   ACHIEVEMENT CARD
+========================================================= */
+
+.whyAchievementCard {
+  position: absolute;
+
+  left: 0;
+  bottom: 43px;
+
+  z-index: 7;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 13px 17px;
+
+  border-radius: 11px;
+
+  background: #071a35;
+
+  color: white;
+
+  box-shadow:
+    0 16px 35px rgba(7, 26, 53, 0.25);
+
+  animation:
+    whyFloat 4s ease-in-out infinite;
+}
+
+
+.whyAchievementIcon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dcae36,
+      #f2c14e
+    );
+
+  color: #071a35;
+
+  font-size: 14px;
+}
+
+
+.whyAchievementCard strong {
+  display: block;
+
+  color: #f2c14e;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+
+.whyAchievementCard span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #b6c7d8;
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+@keyframes whyFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   GOLD CIRCLE
+========================================================= */
+
+.whyGoldCircle {
+  position: absolute;
+
+  right: 5px;
+  top: 45px;
+
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(218, 174, 54, 0.5);
+
+  background:
+    rgba(242, 193, 78, 0.06);
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .whySchoolContainer {
+    gap: 40px;
+  }
+
+
+  .whySchoolContent h2 {
+    font-size: 43px;
+  }
+
+
+  .whyImageFrame {
+    width: 315px;
+    height: 420px;
+  }
+
+
+  .whySchoolVisual {
+    height: 470px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+  .whySchoolSection {
+    padding: 65px 0;
+  }
+
+
+  .whySchoolContainer {
+    width: 91%;
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+
+  .whySchoolContent {
+    max-width: 650px;
+
+    margin: auto;
+
+    text-align: center;
+  }
+
+
+  .whySchoolLabel {
+    justify-content: center;
+  }
+
+
+  .whySchoolContent h2 {
+    font-size: 39px;
+  }
+
+
+  .whySchoolIntro {
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 12px;
+  }
+
+
+  .whyFeatures {
+    text-align: left;
+  }
+
+
+  .whyFeature {
+    min-height: 64px;
+  }
+
+
+  .whySchoolButton {
+    margin-top: 2px;
+  }
+
+
+  .whySchoolVisual {
+    height: 450px;
+  }
+
+
+  .whyImageFrame {
+    width: 310px;
+    height: 405px;
+  }
+
+
+  .whyAchievementCard {
+    left: calc(50% - 180px);
+
+    bottom: 15px;
+  }
+
+
+  .whyGoldCircle {
+    right: calc(50% - 190px);
+
+    top: 25px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .whySchoolSection {
+    padding: 52px 0;
+  }
+
+
+  .whySchoolContainer {
+    gap: 35px;
+  }
+
+
+  .whySchoolContent h2 {
+    font-size: 33px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .whySchoolIntro {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  .whyFeature {
+    min-height: 60px;
+
+    padding: 8px 10px;
+
+    gap: 9px;
+  }
+
+
+  .whyFeatureNumber {
+    width: 30px;
+    height: 30px;
+
+    font-size: 8px;
+  }
+
+
+  .whyFeatureText h3 {
+    font-size: 10px;
+  }
+
+
+  .whyFeatureText p {
+    font-size: 8px;
+  }
+
+
+  .whyFeatureArrow {
+    font-size: 14px;
+  }
+
+
+  .whySchoolVisual {
+    height: 390px;
+  }
+
+
+  .whyImageFrame {
+    width: 275px;
+    height: 350px;
+
+    border-radius: 20px;
+  }
+
+
+  .whyImageFrame img {
+    border-radius: 15px;
+  }
+
+
+  .whyAchievementCard {
+    left: 2px;
+
+    padding: 10px 12px;
+  }
+
+
+  .whyAchievementIcon {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  .whyAchievementCard strong {
+    font-size: 21px;
+  }
+
+
+  .whyGoldCircle {
+    width: 70px;
+    height: 70px;
+
+    right: 0;
+  }
+}

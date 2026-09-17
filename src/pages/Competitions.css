@@ -1,0 +1,918 @@
+
+.abcomp-page {
+  --abcomp-navy: #071a35;
+  --abcomp-navy2: #0c2748;
+  --abcomp-sky: #0877a9;
+  --abcomp-skyLight: #eaf6fa;
+  --abcomp-gold: #c9a86a;
+  --abcomp-goldLight: #ead9ad;
+  --abcomp-cream: #f8f4ea;
+  --abcomp-white: #ffffff;
+  --abcomp-text: #25354a;
+  --abcomp-muted: #667386;
+
+  width: 100%;
+  overflow: hidden;
+  background: var(--abcomp-white);
+  color: var(--abcomp-text);
+  font-family: "Inter", "Poppins", sans-serif;
+}
+
+
+.abcomp-hero {
+  position: relative;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 7%;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(8, 119, 169, 0.28),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 75%,
+      rgba(201, 168, 106, 0.15),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #06172f,
+      #092543 55%,
+      #06172f
+    );
+  color: white;
+  isolation: isolate;
+}
+
+.abcomp-heroGlow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.abcomp-heroGlowOne {
+  width: 180px;
+  height: 180px;
+  left: -70px;
+  top: 70px;
+  border: 1px solid rgba(201, 168, 106, 0.22);
+}
+
+.abcomp-heroGlowTwo {
+  width: 260px;
+  height: 260px;
+  right: -110px;
+  bottom: -130px;
+  border: 1px solid rgba(8, 119, 169, 0.28);
+}
+
+.abcomp-heroPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      #c9a86a 49%,
+      transparent 51%
+    );
+  background-size: 42px 42px;
+  pointer-events: none;
+}
+
+.abcomp-heroContent {
+  position: relative;
+  z-index: 2;
+  width: min(1050px, 100%);
+  text-align: center;
+}
+
+.abcomp-eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  color: var(--abcomp-goldLight);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.abcomp-eyebrow svg {
+  color: var(--abcomp-gold);
+  font-size: 19px;
+}
+
+.abcomp-eyebrow span {
+  width: 55px;
+  height: 1px;
+  background: var(--abcomp-gold);
+}
+
+.abcomp-hero h1 {
+  margin: 0 auto;
+  max-width: 1000px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.05;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.abcomp-hero h1 strong {
+  display: inline;
+  margin-left: 8px;
+  color: var(--abcomp-goldLight);
+  font-weight: 600;
+}
+
+.abcomp-hero p {
+  max-width: 760px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.abcomp-heroBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.abcomp-heroLine {
+  width: 100px;
+  height: 1px;
+  background: rgba(201, 168, 106, 0.55);
+}
+
+.abcomp-heroMini {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--abcomp-goldLight);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.abcomp-heroMini svg {
+  color: var(--abcomp-gold);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.abcomp-intro {
+  padding: 45px 7%;
+  background: var(--abcomp-cream);
+}
+
+.abcomp-introContainer {
+  width: min(1180px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.abcomp-introNumber {
+  padding-top: 8px;
+  border-right: 1px solid rgba(7, 26, 53, 0.16);
+}
+
+.abcomp-introNumber strong {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 52px;
+  line-height: 1;
+  color: var(--abcomp-navy);
+}
+
+.abcomp-introNumber span {
+  display: block;
+  margin-top: 12px;
+  color: var(--abcomp-gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.abcomp-smallTitle {
+  color: var(--abcomp-sky);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.abcomp-introContent h2 {
+  margin: 10px 0 15px;
+  color: var(--abcomp-navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.abcomp-introContent h2 strong {
+  margin-left: 8px;
+  color: var(--abcomp-sky);
+  font-weight: 600;
+}
+
+.abcomp-introContent > p {
+  max-width: 800px;
+  margin: 0;
+  color: var(--abcomp-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.abcomp-introFeatures {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.abcomp-introFeature {
+  min-width: 175px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(7, 26, 53, 0.05);
+}
+
+.abcomp-introFeature > span {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--abcomp-navy);
+  color: var(--abcomp-goldLight);
+}
+
+.abcomp-introFeature strong {
+  display: block;
+  color: var(--abcomp-navy);
+  font-size: 13px;
+}
+
+.abcomp-introFeature small {
+  display: block;
+  margin-top: 3px;
+  color: var(--abcomp-muted);
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.abcomp-gridSection {
+  padding: 45px 7%;
+  background: white;
+}
+
+.abcomp-sectionHeading {
+  width: min(1180px, 100%);
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.abcomp-sectionEyebrow {
+  color: var(--abcomp-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.abcomp-sectionHeading h2 {
+  margin: 8px 0 10px;
+  color: var(--abcomp-navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.abcomp-sectionHeading h2 strong {
+  margin-left: 8px;
+  color: var(--abcomp-sky);
+}
+
+.abcomp-sectionHeading p {
+  max-width: 650px;
+  margin: auto;
+  color: var(--abcomp-muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   COMPETITION GRID
+========================================================= */
+
+.abcomp-grid {
+  width: min(1180px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.abcomp-card {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 300px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(7, 26, 53, 0.10);
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(7, 26, 53, 0.07);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.abcomp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(7, 26, 53, 0.13);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.abcomp-imageBox {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  background: var(--abcomp-navy);
+}
+
+.abcomp-imageBox img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.abcomp-card:hover .abcomp-imageBox img {
+  transform: scale(1.07);
+}
+
+.abcomp-imageOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 26, 53, 0.08),
+      rgba(7, 26, 53, 0.72)
+    );
+}
+
+.abcomp-number {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.abcomp-imageLabel {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 6px 9px;
+  color: white;
+  background: rgba(7, 26, 53, 0.72);
+  border-left: 2px solid var(--abcomp-gold);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(8px);
+}
+
+.abcomp-icon {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--abcomp-gold);
+  color: var(--abcomp-navy);
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.abcomp-cardContent {
+  padding: 27px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.abcomp-cardSubtitle {
+  color: var(--abcomp-gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.abcomp-cardContent h3 {
+  margin: 7px 0 10px;
+  color: var(--abcomp-navy);
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.abcomp-cardLine {
+  width: 45px;
+  height: 2px;
+  margin-bottom: 12px;
+  background: var(--abcomp-sky);
+}
+
+.abcomp-cardContent p {
+  margin: 0;
+  color: var(--abcomp-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.abcomp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.abcomp-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  background: var(--abcomp-skyLight);
+  color: var(--abcomp-navy);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.abcomp-tags svg {
+  color: var(--abcomp-gold);
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.abcomp-benefits {
+  padding: 45px 7%;
+  background: var(--abcomp-cream);
+}
+
+.abcomp-benefitsContainer {
+  width: min(1180px, 100%);
+  margin: auto;
+}
+
+.abcomp-benefitsHeading {
+  max-width: 790px;
+  margin-bottom: 28px;
+}
+
+.abcomp-benefitsHeading > span {
+  color: var(--abcomp-sky);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.abcomp-benefitsHeading h2 {
+  margin: 8px 0 10px;
+  color: var(--abcomp-navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 4vw, 45px);
+  line-height: 1.1;
+}
+
+.abcomp-benefitsHeading h2 strong {
+  margin-left: 7px;
+  color: var(--abcomp-sky);
+}
+
+.abcomp-benefitsHeading p {
+  margin: 0;
+  color: var(--abcomp-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.abcomp-benefitGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.abcomp-benefitCard {
+  padding: 22px;
+  background: white;
+  border: 1px solid rgba(7, 26, 53, 0.08);
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.abcomp-benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(7, 26, 53, 0.08);
+}
+
+.abcomp-benefitTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abcomp-benefitNumber {
+  color: var(--abcomp-gold);
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+}
+
+.abcomp-benefitIcon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--abcomp-navy);
+  color: var(--abcomp-goldLight);
+}
+
+.abcomp-benefitCard h3 {
+  margin: 18px 0 7px;
+  color: var(--abcomp-navy);
+  font-size: 16px;
+}
+
+.abcomp-benefitCard p {
+  margin: 0;
+  color: var(--abcomp-muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.abcomp-statsSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 25px 4%;
+  background: var(--abcomp-navy);
+}
+
+.abcomp-stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0px;
+  text-align: center;
+}
+
+.abcomp-stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 1px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.abcomp-statIcon {
+  margin-bottom: 8px;
+  color: var(--abcomp-gold);
+  font-size: 18px;
+}
+
+.abcomp-stat strong {
+  color: white;
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.abcomp-stat span {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.abcomp-quote {
+  padding: 40px 7%;
+  background: white;
+}
+
+.abcomp-quoteContent {
+  position: relative;
+  width: min(900px, 100%);
+  margin: auto;
+  text-align: center;
+}
+
+.abcomp-quoteIcon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 15px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--abcomp-cream);
+  color: var(--abcomp-gold);
+}
+
+.abcomp-quoteMark {
+  display: block;
+  color: var(--abcomp-gold);
+  font-family: Georgia, serif;
+  font-size: 55px;
+  line-height: 35px;
+}
+
+.abcomp-quote h2 {
+  margin: 5px 0 20px;
+  color: var(--abcomp-navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(24px, 3vw, 36px);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.abcomp-quoteLine {
+  width: 55px;
+  height: 2px;
+  margin: auto;
+  background: var(--abcomp-gold);
+}
+
+.abcomp-quoteAuthor {
+  display: block;
+  margin-top: 12px;
+  color: var(--abcomp-sky);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .abcomp-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .abcomp-benefitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 760px) {
+
+  .abcomp-hero {
+    min-height: 400px;
+    padding: 55px 6%;
+  }
+
+  .abcomp-hero p {
+    font-size: 14px;
+  }
+
+  .abcomp-heroBottom {
+    gap: 10px;
+  }
+
+  .abcomp-heroLine {
+    width: 45px;
+  }
+
+  .abcomp-heroMini {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .abcomp-intro {
+    padding: 40px 6%;
+  }
+
+  .abcomp-introContainer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .abcomp-introNumber {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: none;
+    border-bottom: 1px solid rgba(7, 26, 53, 0.12);
+    padding-bottom: 15px;
+  }
+
+  .abcomp-introNumber strong {
+    font-size: 35px;
+  }
+
+  .abcomp-introNumber span {
+    writing-mode: initial;
+    transform: none;
+  }
+
+  .abcomp-introFeatures {
+    flex-direction: column;
+  }
+
+  .abcomp-introFeature {
+    width: 100%;
+  }
+
+  .abcomp-gridSection {
+    padding: 40px 6%;
+  }
+
+  .abcomp-card {
+    grid-template-columns: 1fr;
+  }
+
+  .abcomp-imageBox {
+    min-height: 250px;
+  }
+
+  .abcomp-cardContent {
+    padding: 22px;
+  }
+
+  .abcomp-benefits {
+    padding: 40px 6%;
+  }
+
+  .abcomp-benefitGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .abcomp-statsSection {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 0;
+  }
+
+  .abcomp-stat:nth-child(2)::after {
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .abcomp-eyebrow {
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    
+  }
+
+  .abcomp-eyebrow span {
+    width: 25px;
+  }
+
+  .abcomp-hero h1 {
+    font-size: 38px;
+  }
+
+  .abcomp-hero p {
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .abcomp-heroMini {
+    font-size: 7px;
+  }
+
+  .abcomp-sectionHeading h2 strong,
+  .abcomp-introContent h2 strong,
+  .abcomp-benefitsHeading h2 strong {
+    display: block;
+    margin: 5px 0 0;
+  }
+
+  .abcomp-benefitGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .abcomp-statsSection {
+    grid-template-columns: 1fr 1fr;
+    padding: 28px 5%;
+  }
+
+  .abcomp-stat strong {
+    font-size: 28px;
+  }
+
+  .abcomp-stat span {
+    font-size: 9px;
+  }
+
+  .abcomp-stat:not(:last-child)::after {
+    height: 65px;
+  }
+
+  .abcomp-quote {
+    padding: 40px 6%;
+  }
+
+
+}
+@media (max-width: 760px) {
+  .abcomp-page {
+    margin-top: 70px !important;
+    padding-top: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .abcomp-page {
+    margin-top: 70px !important;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .abcomp-page {
+    margin-top: 70px !important;
+  }
+}

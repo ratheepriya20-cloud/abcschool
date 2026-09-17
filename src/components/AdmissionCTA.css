@@ -1,0 +1,867 @@
+
+.schoolAdmissionCTA {
+  position: relative;
+  width: 100%;
+  padding: 82px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 5% 15%,
+      rgba(8, 119, 169, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 95% 85%,
+      rgba(224, 194, 126, 0.12),
+      transparent 32%
+    ),
+    #f7fafc;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.admissionGlow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(5px);
+}
+
+.admissionGlowOne {
+  width: 330px;
+  height: 330px;
+  top: -190px;
+  left: -130px;
+  background: rgba(8, 119, 169, 0.09);
+}
+
+.admissionGlowTwo {
+  width: 360px;
+  height: 360px;
+  right: -170px;
+  bottom: -210px;
+  background: rgba(224, 194, 126, 0.14);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.admissionCTAContainer {
+  position: relative;
+  z-index: 2;
+
+  width: min(1220px, 92%);
+  min-height: 390px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+
+  overflow: hidden;
+
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 26px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 70px rgba(7, 26, 53, 0.12),
+    0 5px 18px rgba(7, 26, 53, 0.05);
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.admissionCTAContent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 58px 62px;
+
+  border-right: 1px solid rgba(7, 26, 53, 0.07);
+}
+
+
+/* =========================================================
+   SMALL TITLE
+========================================================= */
+
+.admissionSmallTitle {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
+  margin-bottom: 18px;
+  padding-left: 36px;
+
+  color: #0877a9;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 14px;
+  line-height: 1.3;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.admissionSmallTitle::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 25px;
+  height: 2px;
+
+  transform: translateY(-50%);
+
+  border-radius: 20px;
+
+  background: #d6b36a;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.admissionCTAContent h2 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(43px, 4.4vw, 64px);
+
+  line-height: 1.07;
+
+  font-weight: 800;
+
+  letter-spacing: -1.8px;
+}
+
+.admissionCTAContent h2 span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #0877a9;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.admissionCTAContent > p {
+  max-width: 680px;
+
+  margin: 21px 0 0;
+
+  color: #43576c;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.admissionCTAButtons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 31px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.admissionCTAButtons button {
+  position: relative;
+  z-index: 5;
+
+  min-height: 56px;
+
+  padding: 0 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  border-radius: 10px;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 16px;
+  line-height: 1;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+
+/* =========================================================
+   PRIMARY — APPLY
+========================================================= */
+
+.admissionPrimaryBtn {
+  border: 1px solid #071a35;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 24px rgba(7, 26, 53, 0.17);
+}
+
+.admissionPrimaryBtn:hover {
+  transform: translateY(-3px);
+
+  background: #0877a9;
+
+  border-color: #0877a9;
+
+  box-shadow:
+    0 15px 32px rgba(8, 119, 169, 0.23);
+}
+
+.admissionPrimaryBtn:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SECONDARY — TALK TO SCHOOL
+========================================================= */
+
+.admissionSecondaryBtn {
+  position: relative;
+  z-index: 5;
+
+  min-width: 160px;
+
+  border: 2px solid #0877a9 !important;
+
+  background: #ffffff !important;
+
+  color: #071a35 !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  box-shadow:
+    0 8px 20px rgba(7, 26, 53, 0.08);
+}
+
+.admissionSecondaryBtn:hover {
+  transform: translateY(-3px);
+
+  background: #0877a9 !important;
+
+  border-color: #0877a9 !important;
+
+  color: #ffffff !important;
+
+  box-shadow:
+    0 14px 30px rgba(8, 119, 169, 0.22);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON ARROW
+========================================================= */
+
+.admissionSecondaryBtn span {
+  display: inline-flex !important;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 25px;
+  height: 25px;
+
+  color: #0877a9 !important;
+
+  font-size: 21px !important;
+
+  font-weight: 900;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.admissionSecondaryBtn:hover span {
+  color: #e0c27e !important;
+
+  transform: translate(4px, -3px);
+}
+
+
+/* =========================================================
+   RIGHT INFORMATION PANEL
+========================================================= */
+
+.admissionCTAInfo {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 46px 42px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a35 0%,
+      #092d4e 55%,
+      #0877a9 100%
+    );
+}
+
+
+/* Decorative Circles */
+
+.admissionCTAInfo::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  top: -120px;
+  right: -85px;
+
+  border: 1px solid rgba(224, 194, 126, 0.38);
+
+  border-radius: 50%;
+}
+
+.admissionCTAInfo::after {
+  content: "";
+
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  left: -150px;
+  bottom: -200px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   INFO TOP
+========================================================= */
+
+.admissionInfoTop {
+  position: relative;
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.admissionInfoTop span {
+  color: #7dd3fc;
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.3;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.admissionInfoTop strong {
+  color: #ffffff;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(40px, 4vw, 54px);
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================================
+   INFO LINE
+========================================================= */
+
+.admissionInfoLine {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  height: 1px;
+
+  margin: 28px 0 12px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(224, 194, 126, 0.95),
+      rgba(255, 255, 255, 0.12)
+    );
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+========================================================= */
+
+.admissionHighlights {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 0;
+}
+
+.admissionHighlights > div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.admissionHighlights > div:last-child {
+  border-bottom: none;
+}
+
+.admissionHighlights strong {
+  color: #e0c27e;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 32px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+.admissionHighlights span {
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: "Inter", Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.4;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .schoolAdmissionCTA {
+    padding: 70px 0;
+  }
+
+  .admissionCTAContainer {
+    width: min(94%, 1050px);
+
+    grid-template-columns:
+      minmax(0, 1.2fr)
+      minmax(290px, 0.8fr);
+  }
+
+  .admissionCTAContent {
+    padding: 50px 44px;
+  }
+
+  .admissionCTAContent h2 {
+    font-size: clamp(40px, 5vw, 55px);
+  }
+
+  .admissionCTAInfo {
+    padding: 42px 32px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .schoolAdmissionCTA {
+    padding: 60px 0;
+  }
+
+  .admissionCTAContainer {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .admissionCTAContent {
+    padding: 48px 42px;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(7, 26, 53, 0.08);
+  }
+
+  .admissionCTAInfo {
+    padding: 38px 42px;
+  }
+
+  .admissionHighlights {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0;
+  }
+
+  .admissionHighlights > div {
+    padding: 7px 18px 7px 0;
+
+    border-bottom: none;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .admissionHighlights > div:last-child {
+    padding-left: 18px;
+    border-right: none;
+  }
+
+  .admissionHighlights strong {
+    font-size: 28px;
+  }
+
+  .admissionHighlights span {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .schoolAdmissionCTA {
+    padding: 48px 0;
+  }
+
+  .admissionCTAContainer {
+    width: 94%;
+
+    border-radius: 20px;
+  }
+
+  .admissionCTAContent {
+    padding: 38px 25px 35px;
+  }
+
+  .admissionSmallTitle {
+    margin-bottom: 16px;
+
+    padding-left: 29px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .admissionSmallTitle::before {
+    width: 20px;
+  }
+
+  .admissionCTAContent h2 {
+    font-size: clamp(36px, 10vw, 47px);
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+  .admissionCTAContent h2 span {
+    margin-top: 4px;
+  }
+
+  .admissionCTAContent > p {
+    margin-top: 17px;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+  }
+
+
+  /* Buttons */
+
+  .admissionCTAButtons {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-top: 25px;
+  }
+
+  .admissionCTAButtons button {
+    width: 100% !important;
+
+    min-height: 56px;
+
+    font-size: 16px !important;
+  }
+
+
+  /* Right Panel */
+
+  .admissionCTAInfo {
+    padding: 33px 25px 35px;
+  }
+
+  .admissionInfoTop span {
+    font-size: 11px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .admissionInfoTop strong {
+    font-size: 43px;
+  }
+
+  .admissionInfoLine {
+    margin: 23px 0 8px;
+  }
+
+  .admissionHighlights {
+    grid-template-columns: 1fr;
+  }
+
+  .admissionHighlights > div,
+  .admissionHighlights > div:last-child {
+    padding: 14px 0;
+
+    border-right: none;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .admissionHighlights > div:last-child {
+    border-bottom: none;
+  }
+
+  .admissionHighlights strong {
+    font-size: 30px;
+  }
+
+  .admissionHighlights span {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .schoolAdmissionCTA {
+    padding: 40px 0;
+  }
+
+  .admissionCTAContainer {
+    width: 94%;
+
+    border-radius: 17px;
+  }
+
+  .admissionCTAContent {
+    padding: 32px 20px 29px;
+  }
+
+  .admissionCTAContent h2 {
+    font-size: 36px;
+  }
+
+  .admissionCTAContent > p {
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .admissionCTAButtons {
+    margin-top: 23px;
+  }
+
+  .admissionCTAButtons button {
+    min-height: 54px !important;
+
+    padding: 0 18px;
+
+    font-size: 15px !important;
+  }
+
+  .admissionCTAInfo {
+    padding: 29px 20px 31px;
+  }
+
+  .admissionInfoTop strong {
+    font-size: 39px;
+  }
+
+  .admissionHighlights strong {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .admissionCTAContent {
+    padding: 29px 17px;
+  }
+
+  .admissionSmallTitle {
+    font-size: 9px;
+
+    letter-spacing: 1px;
+  }
+
+  .admissionCTAContent h2 {
+    font-size: 32px;
+  }
+
+  .admissionCTAContent > p {
+    font-size: 15px;
+  }
+
+  .admissionCTAInfo {
+    padding: 27px 17px;
+  }
+
+  .admissionInfoTop strong {
+    font-size: 36px;
+  }
+
+  .admissionHighlights strong {
+    font-size: 27px;
+  }
+}
+
+
+/* =========================================================
+   FOCUS
+========================================================= */
+
+.admissionCTAButtons button:focus-visible {
+  outline: 3px solid rgba(8, 119, 169, 0.35);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admissionCTAButtons button,
+  .admissionSecondaryBtn span {
+    transition: none;
+  }
+
+  .admissionCTAButtons button:hover {
+    transform: none;
+  }
+}
+

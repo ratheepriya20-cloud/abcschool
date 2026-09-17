@@ -1,0 +1,1020 @@
+/* =========================================================
+   AB PUBLIC SCHOOL - SCHOOL INFORMATION / NOTICE PAGE
+   Navy + Sky Blue + Champagne Gold
+========================================================= */
+
+.sipPage {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 30px;
+  background: #f7fbff;
+  color: #071a35;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sipHero {
+  position: relative;
+  width: 100%;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(8, 119, 169, 0.35),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      #071a35 0%,
+      #082b52 48%,
+      #0877a9 100%
+    );
+  overflow: hidden;
+}
+
+.sipHeroGlow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -100px;
+  top: -140px;
+  border-radius: 50%;
+  background: rgba(224, 194, 126, 0.18);
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+.sipHero::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  left: -120px;
+  bottom: -150px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.sipHeroInner {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 70px 0;
+}
+
+.sipHeroContent {
+  max-width: 760px;
+}
+
+.sipEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 17px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(224, 194, 126, 0.55);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f4d993;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.sipEyebrow svg {
+  font-size: 15px;
+}
+
+.sipHero h1 {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.sipHero p {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.sipHeroIcon {
+  width: 125px;
+  height: 125px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(224, 194, 126, 0.65);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0c27e;
+  font-size: 53px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.18),
+    inset 0 0 30px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sipContent {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 75px 0 90px;
+}
+
+.sipToolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 38px;
+}
+
+.sipToolbarTitle {
+  min-width: 0;
+}
+
+.sipMiniLabel {
+  display: block;
+  margin-bottom: 9px;
+  color: #0877a9;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.sipToolbar h2 {
+  margin: 0;
+  color: #071a35;
+  font-size: clamp(29px, 4vw, 42px);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.sipSearch {
+  width: 330px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 18px;
+  border: 1px solid #d8e3ec;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(7, 26, 53, 0.07);
+  transition: 0.25s ease;
+}
+
+.sipSearch:focus-within {
+  border-color: #0877a9;
+  box-shadow: 0 10px 30px rgba(8, 119, 169, 0.14);
+}
+
+.sipSearch svg {
+  flex-shrink: 0;
+  color: #0877a9;
+  font-size: 18px;
+}
+
+.sipSearch input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #071a35;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sipSearch input::placeholder {
+  color: #8290a0;
+  font-weight: 500;
+}
+
+/* =========================================================
+   NOTICE GRID
+========================================================= */
+
+.sipNoticeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* =========================================================
+   NOTICE CARD
+========================================================= */
+
+.sipNoticeCard {
+  position: relative;
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  padding: 27px;
+  border: 1px solid #dce7ef;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.07);
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.sipNoticeCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #071a35,
+    #0877a9,
+    #e0c27e
+  );
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.sipNoticeCard:hover {
+  transform: translateY(-7px);
+  border-color: rgba(8, 119, 169, 0.35);
+  box-shadow: 0 20px 45px rgba(7, 26, 53, 0.14);
+}
+
+.sipNoticeCard:hover::before {
+  opacity: 1;
+}
+
+.sipNoticeCard:focus-visible {
+  outline: 3px solid rgba(8, 119, 169, 0.3);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   IMPORTANT BADGE
+========================================================= */
+
+.sipImportant {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border: 1px solid rgba(224, 194, 126, 0.6);
+  border-radius: 20px;
+  background: #fff8e8;
+  color: #8b691e;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.sipImportant svg {
+  font-size: 10px;
+}
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.sipNoticeTop {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-right: 80px;
+}
+
+.sipNoticeIcon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    #e9f7fc,
+    #d8edf7
+  );
+  color: #0877a9;
+  font-size: 22px;
+}
+
+.sipNoticeMeta {
+  min-width: 0;
+}
+
+.sipNoticeMeta > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #0877a9;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.sipNoticeMeta small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #718094;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.sipNoticeMeta small svg {
+  color: #d1ad58;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.sipNoticeCard h3 {
+  margin: 0 0 13px;
+  color: #071a35;
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 800;
+}
+
+.sipNoticeCard > p {
+  margin: 0;
+  color: #637286;
+  font-size: 15px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* =========================================================
+   READ BUTTON
+========================================================= */
+
+.sipNoticeCard button {
+  width: fit-content;
+  margin-top: auto;
+  padding: 12px 17px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 11px;
+  background: #071a35;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.sipNoticeCard button svg {
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+.sipNoticeCard button:hover {
+  background: #0877a9;
+  transform: translateX(3px);
+  box-shadow: 0 8px 18px rgba(8, 119, 169, 0.2);
+}
+
+.sipNoticeCard button:hover svg {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   NO NOTICE
+========================================================= */
+
+.sipNoNotice {
+  grid-column: 1 / -1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  border: 1px solid #dce7ef;
+  border-radius: 22px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.06);
+}
+
+.sipNoNotice > svg {
+  margin-bottom: 18px;
+  color: #0877a9;
+  font-size: 42px;
+}
+
+.sipNoNotice h3 {
+  margin: 0 0 8px;
+  color: #071a35;
+  font-size: 25px;
+}
+
+.sipNoNotice p {
+  margin: 0;
+  color: #718094;
+  font-size: 16px;
+}
+
+/* =========================================================
+   POPUP OVERLAY
+========================================================= */
+
+.sipNoticeOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: rgba(3, 16, 32, 0.72);
+  backdrop-filter: blur(7px);
+  overflow-y: auto;
+  animation: sipOverlayShow 0.25s ease;
+}
+
+@keyframes sipOverlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.sipNoticeModal {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(224, 194, 126, 0.45);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: sipModalShow 0.3s ease;
+}
+
+@keyframes sipModalShow {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL CLOSE
+========================================================= */
+
+.sipModalClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbe5ed;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #071a35;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(7, 26, 53, 0.1);
+  transition: 0.25s ease;
+}
+
+.sipModalClose:hover {
+  background: #071a35;
+  color: #ffffff;
+  border-color: #071a35;
+  transform: rotate(90deg);
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.sipModalHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 35px 75px 25px 35px;
+  background:
+    linear-gradient(
+      135deg,
+      #071a35 0%,
+      #082b52 55%,
+      #0877a9 100%
+    );
+}
+
+.sipModalIcon {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(224, 194, 126, 0.65);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0c27e;
+  font-size: 24px;
+}
+
+.sipModalHeaderText {
+  min-width: 0;
+}
+
+.sipModalCategory {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #f0d68e;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sipModalHeader h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(23px, 3vw, 31px);
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+/* =========================================================
+   MODAL DATE
+========================================================= */
+
+.sipModalDate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 35px;
+  background: #f8fbfd;
+}
+
+.sipModalDateInfo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #647387;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sipModalDateInfo svg {
+  color: #0877a9;
+}
+
+.sipModalDate strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 20px;
+  background: #fff6df;
+  color: #8b691e;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.sipModalDate strong svg {
+  font-size: 10px;
+}
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.sipModalDivider {
+  width: calc(100% - 70px);
+  height: 1px;
+  margin: 0 auto;
+  background: #e1e9ef;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.sipModalBody {
+  padding: 27px 35px;
+  overflow-y: auto;
+}
+
+.sipModalBody h3 {
+  margin: 0 0 13px;
+  color: #071a35;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.sipModalBody p {
+  margin: 0;
+  color: #536477;
+  font-size: 16px;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.sipModalFooter {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 35px;
+  border-top: 1px solid #e1e9ef;
+  background: #fbfdff;
+}
+
+.sipModalFooter span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #071a35;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.sipModalFooter span svg {
+  color: #d1ad58;
+}
+
+.sipModalFooter button {
+  padding: 11px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: #071a35;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.sipModalFooter button:hover {
+  background: #0877a9;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+  .sipNoticeGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sipHeroInner {
+    width: min(92%, 900px);
+  }
+
+  .sipContent {
+    width: min(92%, 900px);
+  }
+}
+
+/* =========================================================
+   TABLET / SMALL
+========================================================= */
+
+@media (max-width: 800px) {
+  .sipHero {
+    min-height: 350px;
+  }
+
+  .sipHeroInner {
+    gap: 30px;
+    padding: 60px 0;
+  }
+
+  .sipHeroIcon {
+    width: 100px;
+    height: 100px;
+    font-size: 42px;
+    border-radius: 25px;
+  }
+
+  .sipHero p {
+    font-size: 17px;
+  }
+
+  .sipToolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .sipSearch {
+    width: 100%;
+  }
+
+  .sipContent {
+    padding-top: 60px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .sipHero {
+    min-height: auto;
+  }
+
+  .sipHeroInner {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 52px 0 58px;
+  }
+
+  .sipHeroIcon {
+    width: 75px;
+    height: 75px;
+    border-radius: 19px;
+    font-size: 31px;
+    align-self: flex-end;
+  }
+
+  .sipEyebrow {
+    margin-bottom: 16px;
+    padding: 8px 13px;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .sipHero h1 {
+    margin-bottom: 12px;
+    font-size: 42px;
+    letter-spacing: -0.8px;
+  }
+
+  .sipHero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .sipContent {
+    width: 90%;
+    padding: 50px 0 65px;
+  }
+
+  .sipToolbar {
+    margin-bottom: 28px;
+  }
+
+  .sipMiniLabel {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .sipToolbar h2 {
+    font-size: 29px;
+  }
+
+  .sipSearch {
+    height: 54px;
+  }
+
+  .sipNoticeGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sipNoticeCard {
+    min-height: 310px;
+    padding: 23px;
+    border-radius: 19px;
+  }
+
+  .sipImportant {
+    top: 18px;
+    right: 18px;
+  }
+
+  .sipNoticeTop {
+    margin-bottom: 21px;
+  }
+
+  .sipNoticeCard h3 {
+    font-size: 20px;
+  }
+
+  .sipNoticeCard > p {
+    font-size: 15px;
+  }
+
+  .sipNoticeCard button {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  /* POPUP MOBILE */
+
+  .sipNoticeOverlay {
+    align-items: center;
+    padding: 15px;
+  }
+
+  .sipNoticeModal {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: 20px;
+  }
+
+  .sipModalClose {
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .sipModalHeader {
+    gap: 13px;
+    padding: 28px 65px 22px 22px;
+  }
+
+  .sipModalIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    font-size: 19px;
+  }
+
+  .sipModalCategory {
+    font-size: 11px;
+  }
+
+  .sipModalHeader h2 {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .sipModalDate {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 22px;
+  }
+
+  .sipModalDateInfo {
+    font-size: 13px;
+  }
+
+  .sipModalDivider {
+    width: calc(100% - 44px);
+  }
+
+  .sipModalBody {
+    padding: 23px 22px;
+  }
+
+  .sipModalBody h3 {
+    font-size: 18px;
+  }
+
+  .sipModalBody p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .sipModalFooter {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 17px 22px;
+  }
+
+  .sipModalFooter span {
+    font-size: 13px;
+  }
+
+  .sipModalFooter button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .sipHero h1 {
+    font-size: 36px;
+  }
+
+  .sipHero p {
+    font-size: 15px;
+  }
+
+  .sipToolbar h2 {
+    font-size: 26px;
+  }
+
+  .sipNoticeCard {
+    padding: 20px;
+  }
+
+  .sipNoticeCard h3 {
+    font-size: 18px;
+  }
+
+  .sipNoticeCard > p {
+    font-size: 14px;
+  }
+
+  .sipModalHeader {
+    padding-left: 18px;
+    padding-right: 58px;
+  }
+
+  .sipModalBody {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .sipModalFooter {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .sipNoticeCard,
+  .sipNoticeCard button,
+  .sipModalClose,
+  .sipNoticeModal,
+  .sipNoticeOverlay {
+    transition: none;
+    animation: none;
+  }
+}

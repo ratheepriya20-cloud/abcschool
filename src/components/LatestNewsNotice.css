@@ -1,0 +1,1592 @@
+
+
+.latestNewsNotice {
+  position: relative;
+  width: 100%;
+  padding: 78px 0 82px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 0% 10%,
+      rgba(8, 119, 169, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 100% 90%,
+      rgba(214, 179, 106, 0.09),
+      transparent 30%
+    ),
+    #f8fafc;
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.latestNewsNotice::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -250px;
+  right: -170px;
+
+  border: 1px solid rgba(8, 119, 169, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.latestNewsNotice::after {
+  content: "";
+
+  position: absolute;
+
+  width: 470px;
+  height: 470px;
+
+  left: -260px;
+  bottom: -300px;
+
+  border: 1px solid rgba(214, 179, 106, 0.14);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.lnnContainer {
+  position: relative;
+
+  width: min(1280px, 92%);
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   CENTERED
+========================================================= */
+
+.lnnHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-bottom: 48px;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.lnnLabel {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 14px;
+
+  color: #0877a9;
+
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2.8px;
+
+  text-align: center;
+}
+
+.lnnLabel::before {
+  content: "";
+
+  width: 42px;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #d6b36a;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.lnnHeader h2 {
+  width: 100%;
+
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 48px;
+  line-height: 1.12;
+
+  font-weight: 900;
+
+  letter-spacing: -1.2px;
+
+  text-align: center;
+}
+
+.lnnHeader h2 span {
+  color: #0877a9;
+}
+
+
+/* =========================================================
+   MAIN DESCRIPTION
+========================================================= */
+
+.lnnHeader > p {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 14px auto 0;
+
+  color: #667589;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.lnnGrid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 26px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   COMMON NEWS / NOTICE BOX
+========================================================= */
+
+.lnnNewsBox,
+.lnnNoticeBox {
+  position: relative;
+
+  padding: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fbfdff 100%
+    );
+
+  border: 1px solid #dfe7ee;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 18px 50px rgba(7, 26, 53, 0.08),
+    0 3px 12px rgba(7, 26, 53, 0.04);
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   TOP GOLD ACCENT
+========================================================= */
+
+.lnnNewsBox::before,
+.lnnNoticeBox::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 30px;
+
+  width: 80px;
+  height: 4px;
+
+  border-radius: 0 0 8px 8px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d6b36a,
+      #ecd18c
+    );
+}
+
+
+/* =========================================================
+   SOFT BLUE CORNER
+========================================================= */
+
+.lnnNewsBox::after,
+.lnnNoticeBox::after {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  right: -100px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background: rgba(8, 119, 169, 0.05);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   BOX HEADER
+========================================================= */
+
+.lnnBoxHeader {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid #e8edf2;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   BOX HEADER SMALL LABEL
+========================================================= */
+
+.lnnBoxHeader small {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #0877a9;
+
+  font-size: 11px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   NEWS + NOTICE HEADING
+   SAME SIZE
+========================================================= */
+
+.lnnBoxHeader h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 30px;
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   VIEW ALL BUTTON
+========================================================= */
+
+.lnnBoxHeader button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 15px;
+
+  border: 1px solid #d9c184;
+  border-radius: 30px;
+
+  background: #fffdf8;
+
+  color: #071a35;
+
+  font-size: 13px;
+  font-weight: 850;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+  flex-shrink: 0;
+}
+
+.lnnBoxHeader button span {
+  color: #0877a9;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.lnnBoxHeader button:hover {
+  background: #071a35;
+
+  border-color: #071a35;
+
+  color: #ffffff;
+}
+
+.lnnBoxHeader button:hover span {
+  color: #e0c27e;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   LISTS
+========================================================= */
+
+.lnnNewsList,
+.lnnNoticeList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================================================
+   NEWS CARD
+========================================================= */
+
+.lnnNewsCard {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 18px;
+
+  padding: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f7fbfd
+    );
+
+  border: 1px solid #e1e8ee;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 18px rgba(7, 26, 53, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.lnnNewsCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(8, 119, 169, 0.35);
+
+  box-shadow:
+    0 13px 30px rgba(7, 26, 53, 0.1);
+}
+
+
+/* =========================================================
+   DATE BOX
+========================================================= */
+
+.lnnDate {
+  width: 68px;
+  height: 72px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0a4261
+    );
+
+  box-shadow:
+    0 7px 18px rgba(7, 26, 53, 0.16);
+
+  border: 1px solid rgba(214, 179, 106, 0.65);
+}
+
+.lnnDate strong {
+  color: #ffffff;
+
+  font-size: 28px;
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+.lnnDate span {
+  margin-top: 5px;
+
+  color: #e0c27e;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+
+/* =========================================================
+   NEWS CONTENT
+========================================================= */
+
+.lnnNewsContent {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   NEWS TAG
+========================================================= */
+
+.lnnTag {
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: #0877a9;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   NEWS TITLE
+========================================================= */
+
+.lnnNewsContent h4 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 19px;
+
+  line-height: 1.35;
+
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   NEWS DESCRIPTION
+========================================================= */
+
+.lnnNewsContent p {
+  margin: 8px 0 10px;
+
+  color: #657386;
+
+  font-size: 14px;
+
+  line-height: 1.55;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   NEWS READ MORE
+========================================================= */
+
+.lnnNewsContent button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #0877a9;
+
+  font-size: 13px;
+
+  font-weight: 850;
+
+  cursor: pointer;
+}
+
+.lnnNewsContent button span {
+  color: #d09f3f;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.lnnNewsContent button:hover span {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NOTICE CARD
+========================================================= */
+
+.lnnNoticeCard {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f7fbfd
+    );
+
+  border: 1px solid #e1e8ee;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 6px 18px rgba(7, 26, 53, 0.045);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.lnnNoticeCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(8, 119, 169, 0.35);
+
+  box-shadow:
+    0 13px 30px rgba(7, 26, 53, 0.1);
+}
+
+
+/* =========================================================
+   NOTICE ICON
+========================================================= */
+
+.lnnNoticeIcon {
+  width: 68px;
+  height: 72px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0a4261
+    );
+
+  border: 1px solid rgba(214, 179, 106, 0.65);
+
+  color: #e0c27e;
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+  box-shadow:
+    0 7px 18px rgba(7, 26, 53, 0.16);
+}
+
+
+/* =========================================================
+   NOTICE CONTENT
+========================================================= */
+
+.lnnNoticeContent {
+  min-width: 0;
+
+  flex: 1;
+}
+
+
+/* =========================================================
+   NOTICE LABEL
+========================================================= */
+
+.lnnNoticeContent > span {
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: #0877a9;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   NOTICE TITLE
+   SAME AS NEWS
+========================================================= */
+
+.lnnNoticeContent h4 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 19px;
+
+  line-height: 1.35;
+
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   NOTICE DATE
+========================================================= */
+
+.lnnNoticeContent small {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #7a8796;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   NOTICE ARROW
+========================================================= */
+
+.lnnNoticeArrow {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f0f7fa;
+
+  color: #0877a9;
+
+  font-size: 17px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lnnNoticeCard:hover .lnnNoticeArrow {
+  background: #071a35;
+
+  color: #e0c27e;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   NOTICE BUTTON
+========================================================= */
+
+.lnnNoticeButton {
+  width: 100%;
+
+  margin-top: 17px;
+
+  padding: 13px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: 1px solid #d6b36a;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffdf8,
+      #fff9e9
+    );
+
+  color: #071a35;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.lnnNoticeButton span {
+  color: #0877a9;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.lnnNoticeButton:hover {
+  background: #071a35;
+
+  border-color: #071a35;
+
+  color: #ffffff;
+}
+
+.lnnNoticeButton:hover span {
+  color: #e0c27e;
+
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.lnnBottom {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 27px;
+
+  padding: 25px 29px;
+
+  background:
+    linear-gradient(
+      105deg,
+      #071a35 0%,
+      #0a4162 100%
+    );
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 15px 35px rgba(7, 26, 53, 0.16);
+
+  overflow: hidden;
+}
+
+.lnnBottom::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -120px;
+  top: -140px;
+
+  border: 1px solid rgba(224, 194, 126, 0.22);
+
+  border-radius: 50%;
+}
+
+.lnnBottom > div {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.lnnBottom span {
+  color: #e0c27e;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.8px;
+}
+
+.lnnBottom strong {
+  color: #ffffff;
+
+  font-size: 21px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+}
+
+.lnnBottom button {
+  position: relative;
+
+  z-index: 2;
+
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 21px;
+
+  border: 1px solid #e0c27e;
+
+  border-radius: 9px;
+
+  background: #e0c27e;
+
+  color: #071a35;
+
+  font-size: 14px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.lnnBottom button span {
+  color: #071a35;
+
+  font-size: 17px;
+
+  transition: transform 0.3s ease;
+}
+
+.lnnBottom button:hover {
+  background: #ffffff;
+
+  border-color: #ffffff;
+}
+
+.lnnBottom button:hover span {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .latestNewsNotice {
+    padding: 68px 0 72px;
+  }
+
+  .lnnHeader {
+    margin-bottom: 42px;
+  }
+
+  .lnnHeader h2 {
+    font-size: 43px;
+  }
+
+  .lnnHeader > p {
+    font-size: 17px;
+
+    max-width: 700px;
+  }
+
+  .lnnGrid {
+    gap: 18px;
+  }
+
+  .lnnNewsBox,
+  .lnnNoticeBox {
+    padding: 24px;
+  }
+
+  .lnnNewsCard,
+  .lnnNoticeCard {
+    gap: 14px;
+
+    padding: 14px;
+  }
+
+  .lnnDate,
+  .lnnNoticeIcon {
+    width: 60px;
+    height: 66px;
+  }
+
+  .lnnBoxHeader h3 {
+    font-size: 29px;
+  }
+
+  .lnnNewsContent h4,
+  .lnnNoticeContent h4 {
+    font-size: 18px;
+  }
+
+  .lnnNewsContent p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .latestNewsNotice {
+    padding: 60px 0 65px;
+  }
+
+  .lnnContainer {
+    width: 90%;
+  }
+
+  .lnnHeader {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+  }
+
+  .lnnLabel {
+    font-size: 13px;
+
+    letter-spacing: 2.3px;
+
+    text-align: center;
+  }
+
+  .lnnHeader h2 {
+    font-size: 40px;
+
+    line-height: 1.15;
+
+    text-align: center;
+  }
+
+  .lnnHeader > p {
+    max-width: 650px;
+
+    margin-top: 13px;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+    text-align: center;
+  }
+
+  .lnnGrid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .lnnNewsBox,
+  .lnnNoticeBox {
+    padding: 26px;
+  }
+
+  .lnnBoxHeader h3 {
+    font-size: 28px;
+  }
+
+  .lnnNewsContent h4,
+  .lnnNoticeContent h4 {
+    font-size: 18px;
+  }
+
+  .lnnNewsContent p {
+    font-size: 14px;
+  }
+
+  .lnnNoticeContent small {
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .latestNewsNotice {
+    padding: 52px 0 55px;
+  }
+
+  .lnnContainer {
+    width: 91%;
+  }
+
+
+  /* MAIN HEADER */
+
+  .lnnHeader {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+
+
+  .lnnLabel {
+    gap: 8px;
+
+    margin-bottom: 11px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.9px;
+
+    text-align: center;
+  }
+
+  .lnnLabel::before {
+    width: 28px;
+  }
+
+
+  .lnnHeader h2 {
+    width: 100%;
+
+    font-size: 34px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+
+    text-align: center;
+  }
+
+
+  .lnnHeader > p {
+    width: 100%;
+
+    max-width: 520px;
+
+    margin: 11px auto 0;
+
+    font-size: 15px;
+
+    line-height: 1.55;
+
+    text-align: center;
+  }
+
+
+  /* BOXES */
+
+  .lnnNewsBox,
+  .lnnNoticeBox {
+    padding: 20px;
+
+    border-radius: 17px;
+  }
+
+
+  .lnnNewsBox::before,
+  .lnnNoticeBox::before {
+    left: 20px;
+
+    width: 55px;
+  }
+
+
+  /* BOX HEADER */
+
+  .lnnBoxHeader {
+    gap: 12px;
+
+    padding-bottom: 16px;
+
+    margin-bottom: 16px;
+  }
+
+  .lnnBoxHeader small {
+    font-size: 10px;
+
+    letter-spacing: 1.8px;
+  }
+
+
+  /* NEWS + NOTICE SAME */
+
+  .lnnBoxHeader h3 {
+    font-size: 25px;
+
+    line-height: 1.15;
+  }
+
+
+  /* LIST */
+
+  .lnnNewsList,
+  .lnnNoticeList {
+    gap: 11px;
+  }
+
+
+  /* CARDS */
+
+  .lnnNewsCard,
+  .lnnNoticeCard {
+    gap: 13px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+  }
+
+
+  /* ICONS */
+
+  .lnnDate,
+  .lnnNoticeIcon {
+    width: 56px;
+
+    height: 63px;
+
+    border-radius: 9px;
+  }
+
+
+  .lnnDate strong {
+    font-size: 23px;
+  }
+
+  .lnnDate span {
+    font-size: 9px;
+  }
+
+
+  .lnnNoticeIcon {
+    font-size: 19px;
+  }
+
+
+  /* NEWS + NOTICE CARD TITLE SAME */
+
+  .lnnNewsContent h4,
+  .lnnNoticeContent h4 {
+    font-size: 16px;
+
+    line-height: 1.35;
+  }
+
+
+  .lnnTag,
+  .lnnNoticeContent > span {
+    margin-bottom: 5px;
+
+    font-size: 9px;
+  }
+
+
+  .lnnNewsContent p {
+    margin: 6px 0 9px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+
+  .lnnNewsContent button {
+    font-size: 11px;
+  }
+
+
+  .lnnNoticeContent small {
+    margin-top: 6px;
+
+    font-size: 11px;
+  }
+
+
+  .lnnNoticeArrow {
+    width: 29px;
+
+    height: 29px;
+
+    font-size: 14px;
+  }
+
+
+  /* NOTICE BUTTON */
+
+  .lnnNoticeButton {
+    margin-top: 14px;
+
+    padding: 12px 15px;
+
+    font-size: 12px;
+  }
+
+
+  /* BOTTOM CTA */
+
+  .lnnBottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 19px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+  .lnnBottom span {
+    font-size: 9px;
+  }
+
+  .lnnBottom strong {
+    font-size: 17px;
+  }
+
+  .lnnBottom button {
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .latestNewsNotice {
+    padding: 46px 0 50px;
+  }
+
+
+  .lnnContainer {
+    width: 92%;
+  }
+
+
+  /* MAIN HEADER */
+
+  .lnnHeader {
+    margin-bottom: 28px;
+  }
+
+
+  .lnnLabel {
+    font-size: 10px;
+
+    letter-spacing: 1.6px;
+  }
+
+  .lnnLabel::before {
+    width: 24px;
+  }
+
+
+  .lnnHeader h2 {
+    font-size: 31px;
+
+    line-height: 1.15;
+  }
+
+
+  .lnnHeader > p {
+    font-size: 14px;
+
+    line-height: 1.5;
+  }
+
+
+  /* BOXES */
+
+  .lnnNewsBox,
+  .lnnNoticeBox {
+    padding: 17px;
+  }
+
+
+  /* SAME NEWS + NOTICE HEADING */
+
+  .lnnBoxHeader h3 {
+    font-size: 23px;
+  }
+
+
+  .lnnBoxHeader button {
+    padding: 7px 10px;
+
+    font-size: 10px;
+  }
+
+
+  /* CARDS */
+
+  .lnnNewsCard,
+  .lnnNoticeCard {
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+
+  .lnnDate,
+  .lnnNoticeIcon {
+    width: 50px;
+
+    height: 58px;
+  }
+
+
+  .lnnDate strong {
+    font-size: 21px;
+  }
+
+
+  .lnnDate span {
+    font-size: 8px;
+  }
+
+
+  /* EXACT SAME TITLE SIZE */
+
+  .lnnNewsContent h4,
+  .lnnNoticeContent h4 {
+    font-size: 15px;
+
+    line-height: 1.35;
+  }
+
+
+  .lnnNewsContent p {
+    font-size: 12px;
+  }
+
+
+  .lnnNoticeContent small {
+    font-size: 10px;
+  }
+
+
+  .lnnNoticeArrow {
+    width: 27px;
+
+    height: 27px;
+
+    font-size: 13px;
+  }
+
+
+  .lnnNoticeButton {
+    font-size: 11px;
+  }
+
+
+  .lnnBottom strong {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 340px) {
+
+  .lnnContainer {
+    width: 93%;
+  }
+
+
+  .lnnHeader h2 {
+    font-size: 28px;
+  }
+
+
+  .lnnHeader > p {
+    font-size: 13px;
+  }
+
+
+  /* SAME NEWS + NOTICE HEADER */
+
+  .lnnBoxHeader h3 {
+    font-size: 21px;
+  }
+
+
+  /* SAME NEWS + NOTICE CARD TITLE */
+
+  .lnnNewsContent h4,
+  .lnnNoticeContent h4 {
+    font-size: 14px;
+  }
+
+
+  .lnnNewsContent p {
+    font-size: 11.5px;
+  }
+
+
+  .lnnNoticeContent small {
+    font-size: 10px;
+  }
+
+
+  .lnnNewsCard,
+  .lnnNoticeCard {
+    gap: 9px;
+
+    padding: 11px;
+  }
+
+
+  .lnnDate,
+  .lnnNoticeIcon {
+    width: 47px;
+
+    height: 55px;
+  }
+
+
+  .lnnDate strong {
+    font-size: 20px;
+  }
+
+
+  .lnnNoticeIcon {
+    font-size: 17px;
+  }
+}
+

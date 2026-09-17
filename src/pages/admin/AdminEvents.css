@@ -1,0 +1,274 @@
+.adminEventsPage {
+  padding: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #071a35;
+}
+
+.adminEventsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.adminEventsEyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0877a9;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.adminEventsHeader h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.adminEventsHeader p {
+  color: #64748b;
+  font-size: 17px;
+  margin: 10px 0 0;
+}
+
+.adminEventsAdd,
+.adminEventsSubmit {
+  border: 0;
+  background: #071a35;
+  color: white;
+  border-radius: 12px;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adminEventsAdd:hover,
+.adminEventsSubmit:hover {
+  background: #0877a9;
+}
+
+.adminEventsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.adminEventCard {
+  background: white;
+  border: 1px solid #dce6ef;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(7, 26, 53, 0.07);
+}
+
+.adminEventIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #eef8fc;
+  color: #0877a9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.adminEventCard h2 {
+  font-size: 22px;
+  margin: 18px 0;
+}
+
+.adminEventInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.adminEventInfo span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.adminEventInfo svg {
+  color: #0877a9;
+}
+
+.adminEventCard p,
+.adminEventsView p {
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 15px;
+  margin: 18px 0;
+}
+
+.adminEventActions {
+  display: flex;
+  gap: 7px;
+  padding-top: 15px;
+  border-top: 1px solid #e5eaf0;
+}
+
+.adminEventActions button {
+  flex: 1;
+  padding: 10px 5px;
+  border: 1px solid #dce6ef;
+  border-radius: 9px;
+  background: #f8fbfd;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.adminEventActions .danger {
+  color: #b42318;
+}
+
+.adminEventsOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 26, 53, 0.58);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.adminEventsModal,
+.adminEventsView {
+  width: min(620px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: white;
+  border-radius: 22px;
+  padding: 30px;
+  position: relative;
+}
+
+.adminEventsClose {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+.adminEventsModal h2,
+.adminEventsView h2 {
+  font-size: 28px;
+  margin: 0 0 7px;
+}
+
+.adminEventsModal > p {
+  color: #64748b;
+  margin-bottom: 25px;
+}
+
+.adminEventsModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.adminEventsModal label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.adminEventsModal input,
+.adminEventsModal textarea {
+  border: 1px solid #cbd8e3;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 15px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.adminEventsModal input:focus,
+.adminEventsModal textarea:focus {
+  border-color: #0877a9;
+}
+
+.adminEventsModal textarea {
+  resize: vertical;
+}
+
+.adminEventsTwo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.adminEventsSubmit {
+  justify-content: center;
+  width: 100%;
+}
+
+.adminEventsView .adminEventIcon {
+  margin-bottom: 18px;
+}
+
+.adminEventsView h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 1050px) {
+  .adminEventsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .adminEventsPage {
+    padding: 20px 15px;
+  }
+
+  .adminEventsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .adminEventsHeader h1 {
+    font-size: 30px;
+  }
+
+  .adminEventsAdd {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .adminEventsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .adminEventsTwo {
+    grid-template-columns: 1fr;
+  }
+
+  .adminEventsModal,
+  .adminEventsView {
+    padding: 23px 18px;
+  }
+}
