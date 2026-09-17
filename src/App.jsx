@@ -38,7 +38,7 @@ import AdmissionOverview from "./pages/AdmissionOverview";
 import ParentLogin from "./pages/ParentLogin";
 import ParentDashboard from "./pages/ParentDashboard/ParentDashboard";
 import SignIn from "./pages/SignIn";
-import SignUp from "./pages/Signup";
+import SignUp from "./pages/SignUp";
 import Faculty from "./pages/Faculty";
 import Careers from "./pages/Careers";
 import News from "./pages/News";
