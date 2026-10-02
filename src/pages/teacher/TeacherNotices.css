@@ -1,0 +1,153 @@
+.teacherRead-page {
+  width: 100%;
+}
+
+.teacherRead-hero {
+  padding: 31px 34px;
+  margin-bottom: 22px;
+  border-radius: 24px;
+  background: linear-gradient(125deg, #071a35, #0d5276, #0877a9);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacherRead-hero span {
+  color: #e0c27e;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.teacherRead-hero h1 {
+  margin: 7px 0;
+  font-size: 40px;
+}
+
+.teacherRead-hero p {
+  margin: 0;
+  color: #dceaf2;
+  font-size: 15px;
+}
+
+.teacherRead-heroIcon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.11);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+}
+
+.teacherRead-cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.teacherRead-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  border: 1px solid #e2e9f0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 9px 28px rgba(7, 26, 53, 0.045);
+}
+
+.teacherRead-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0877a9, #d6b36a);
+}
+
+.teacherRead-cardTop {
+  margin-bottom: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.teacherRead-cardTop > div {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: #edf7fb;
+  color: #0877a9;
+  display: grid;
+  place-items: center;
+}
+
+.teacherRead-cardTop > span {
+  padding: 6px 10px;
+  border-radius: 30px;
+  background: #f8f2e7;
+  color: #927126;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.teacherRead-card h3 {
+  margin: 0 0 9px;
+  color: #071a35;
+  font-size: 19px;
+}
+
+.teacherRead-card p {
+  margin: 0;
+  color: #718095;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.teacherRead-meta {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #edf1f5;
+}
+
+.teacherRead-meta span {
+  color: #77869a;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.teacherRead-meta svg {
+  color: #d6b36a;
+}
+
+.teacherRead-empty {
+  padding: 50px;
+  border: 1px dashed #cad7e2;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .teacherRead-cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .teacherRead-cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherRead-hero {
+    padding: 23px 18px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 27px;
+  }
+}

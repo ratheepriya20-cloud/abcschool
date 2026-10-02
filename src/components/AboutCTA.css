@@ -1,0 +1,683 @@
+
+
+.abpsModernCTA {
+  width: 100%;
+  padding: 48px 24px;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f4ed 100%
+  );
+}
+
+
+.abpsModernCTAContainer {
+  position: relative;
+
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+
+  padding: 30px 42px 0;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(7, 26, 53, 0.1);
+
+  box-shadow:
+    0 22px 55px rgba(7, 26, 53, 0.09);
+
+  overflow: hidden;
+}
+
+/* Top Gold Line */
+
+.abpsModernCTAContainer::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 210px;
+  height: 4px;
+
+  background: #d6b36a;
+}
+
+/* Bottom Navy Line */
+
+.abpsModernCTAContainer::after {
+  content: "";
+
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 130px;
+  height: 4px;
+
+  background: #071a35;
+}
+
+/* =========================================================
+   TOP LABEL
+========================================================= */
+
+.abpsModernCTALabel {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 13px;
+
+  margin-bottom: 25px;
+
+  color: #0877a9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.abpsModernCTALabelLine {
+  width: 35px;
+  height: 1px;
+
+  background: #d6b36a;
+}
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.abpsModernCTAMain {
+  display: grid;
+
+  grid-template-columns:
+    125px
+    minmax(0, 1fr)
+    150px;
+
+  align-items: center;
+
+  gap: 40px;
+
+  padding-bottom: 30px;
+}
+
+/* =========================================================
+   LEFT 25+
+========================================================= */
+
+.abpsModernCTANumber {
+  min-height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
+  padding-right: 28px;
+
+  border-right: 1px solid
+    rgba(7, 26, 53, 0.12);
+}
+
+.abpsModernCTANumberSmall {
+  color: #0877a9;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.8px;
+}
+
+.abpsModernCTANumber strong {
+  margin-top: 4px;
+
+  color: #071a35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 50px;
+
+  font-weight: 400;
+
+  line-height: 0.95;
+}
+
+.abpsModernCTANumber strong span {
+  color: #d6b36a;
+
+  font-size: 27px;
+}
+
+.abpsModernCTANumberText {
+  margin-top: 7px;
+
+  color: #0877a9;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  line-height: 1.5;
+
+  letter-spacing: 1.5px;
+}
+
+/* =========================================================
+   CENTER CONTENT
+========================================================= */
+
+.abpsModernCTAContent {
+  text-align: center;
+}
+
+.abpsModernCTAEyebrow {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #0877a9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.5px;
+}
+
+/* Main Heading */
+
+.abpsModernCTAContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(43px, 5vw, 62px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1.8px;
+}
+
+.abpsModernCTAContent h2 em {
+  color: #0877a9;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+/* Description */
+
+.abpsModernCTAContent p {
+  width: min(650px, 100%);
+
+  margin: 16px auto 0;
+
+  color: #5d6672;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   CTA BUTTONS
+========================================================= */
+
+.abpsModernCTAActions {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  margin-top: 21px;
+}
+
+.abpsModernCTAPrimary,
+.abpsModernCTASecondary {
+  min-height: 49px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 22px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 750;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.abpsModernCTAPrimary {
+  color: #ffffff;
+
+  background: #071a35;
+
+  border: 1px solid #071a35;
+}
+
+.abpsModernCTAPrimary svg {
+  color: #d6b36a;
+
+  font-size: 11px;
+
+  transition: transform 0.25s ease;
+}
+
+.abpsModernCTAPrimary:hover {
+  background: #0877a9;
+
+  border-color: #0877a9;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(7, 26, 53, 0.16);
+}
+
+.abpsModernCTAPrimary:hover svg {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   TALK TO US / CALL BUTTON
+========================================================= */
+
+.abpsModernCTASecondary {
+  color: #071a35;
+
+  background: #ffffff;
+
+  border: 1px solid
+    rgba(7, 26, 53, 0.18);
+
+  cursor: pointer;
+}
+
+.abpsModernCTASecondary svg {
+  color: #d6b36a;
+
+  font-size: 12px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.abpsModernCTASecondary:hover {
+  color: #0877a9;
+
+  border-color: #0877a9;
+
+  transform: translateY(-2px);
+}
+
+.abpsModernCTASecondary:hover svg {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   RIGHT PROMISE
+========================================================= */
+
+.abpsModernCTAQuote {
+  min-height: 160px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding-left: 26px;
+
+  border-left: 1px solid
+    rgba(7, 26, 53, 0.12);
+}
+
+.abpsModernCTAQuoteIcon {
+  margin-bottom: 10px;
+
+  color: #d6b36a;
+
+  font-size: 19px;
+}
+
+.abpsModernCTAQuote > span {
+  margin-bottom: 9px;
+
+  color: #0877a9;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpsModernCTAQuote p {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.4;
+}
+
+.abpsModernCTAQuoteLine {
+  width: 30px;
+  height: 2px;
+
+  margin-top: 14px;
+
+  background: #d6b36a;
+}
+
+/* =========================================================
+   BOTTOM STRIP
+========================================================= */
+
+.abpsModernCTABottom {
+  min-height: 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+
+  border-top: 1px solid
+    rgba(7, 26, 53, 0.09);
+}
+
+.abpsModernCTABottom span {
+  color: #7a838d;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.7px;
+}
+
+.abpsModernCTABottom i {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: #d6b36a;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .abpsModernCTA {
+    padding: 45px 20px;
+  }
+
+  .abpsModernCTAContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .abpsModernCTAMain {
+    grid-template-columns:
+      100px
+      minmax(0, 1fr)
+      110px;
+
+    gap: 25px;
+  }
+
+  .abpsModernCTAContent h2 {
+    font-size: clamp(38px, 5vw, 52px);
+  }
+
+  .abpsModernCTAContent p {
+    font-size: 15px;
+  }
+
+  .abpsModernCTANumber strong {
+    font-size: 42px;
+  }
+
+  .abpsModernCTAQuote {
+    padding-left: 18px;
+  }
+
+  .abpsModernCTAQuote p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .abpsModernCTA {
+    padding: 38px 14px;
+  }
+
+  .abpsModernCTAContainer {
+    padding: 28px 20px 0;
+  }
+
+  .abpsModernCTAMain {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+
+    padding-bottom: 27px;
+  }
+
+  /* Hide side information */
+
+  .abpsModernCTANumber,
+  .abpsModernCTAQuote {
+    display: none;
+  }
+
+  /* Label */
+
+  .abpsModernCTALabel {
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .abpsModernCTALabelLine {
+    width: 20px;
+  }
+
+  /* Large Mobile Heading */
+
+  .abpsModernCTAContent h2 {
+    font-size: clamp(37px, 9vw, 49px);
+
+    line-height: 1.04;
+
+    letter-spacing: -1px;
+  }
+
+  .abpsModernCTAContent h2 em {
+    display: block;
+
+    margin-top: 4px;
+  }
+
+  /* Description */
+
+  .abpsModernCTAContent p {
+    margin-top: 17px;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+  /* Buttons */
+
+  .abpsModernCTAActions {
+    flex-direction: column;
+
+    width: 100%;
+
+    margin-top: 22px;
+
+    gap: 9px;
+  }
+
+  .abpsModernCTAPrimary,
+  .abpsModernCTASecondary {
+    width: min(100%, 310px);
+
+    min-height: 51px;
+
+    font-size: 13.5px;
+  }
+
+  /* Bottom */
+
+  .abpsModernCTABottom {
+    min-height: 43px;
+
+    gap: 7px;
+  }
+
+  .abpsModernCTABottom span {
+    font-size: 6px;
+
+    letter-spacing: 0.9px;
+  }
+
+  .abpsModernCTABottom i {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 430px) {
+
+  .abpsModernCTA {
+    padding: 32px 10px;
+  }
+
+  .abpsModernCTAContainer {
+    padding: 27px 16px 0;
+  }
+
+  .abpsModernCTALabel {
+    font-size: 7px;
+
+    letter-spacing: 1.4px;
+  }
+
+  .abpsModernCTAContent h2 {
+    font-size: 35px;
+
+    line-height: 1.06;
+  }
+
+  .abpsModernCTAContent p {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+  .abpsModernCTAPrimary,
+  .abpsModernCTASecondary {
+    width: 100%;
+
+    min-height: 51px;
+
+    font-size: 13px;
+  }
+
+  .abpsModernCTABottom {
+    gap: 4px;
+  }
+
+  .abpsModernCTABottom span {
+    font-size: 5.5px;
+
+    letter-spacing: 0.5px;
+  }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .abpsModernCTAContent h2 {
+    font-size: 32px;
+  }
+
+  .abpsModernCTAContent p {
+    font-size: 13.5px;
+  }
+}

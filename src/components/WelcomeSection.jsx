@@ -1,91 +1,280 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
+import {
+  FaGraduationCap,
+  FaUsers,
+  FaHeart,
+  FaArrowRight,
+  FaCrown,
+  FaCheck,
+} from "react-icons/fa";
+
 import "./WelcomeSection.css";
 
-import schoolImage from "../assets/school-image.jpg";
+/* SAME EXISTING IMAGE */
+import schoolImage from "../assets/school-hero-bg.png";
+
 
 const WelcomeSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="welcomeSection">
+    <section className="abWelcomeSection">
 
-      <div className="welcomeContainer">
+      {/* BACKGROUND DECORATION */}
+      <div className="abWelcomeGlow abWelcomeGlowOne"></div>
+      <div className="abWelcomeGlow abWelcomeGlowTwo"></div>
 
-        {/* IMAGE SIDE */}
-        <div className="welcomeVisual">
+      <div className="abWelcomeDots abWelcomeDotsOne"></div>
+      <div className="abWelcomeDots abWelcomeDotsTwo"></div>
 
-          <div className="welcomeImageBox">
+
+      <div className="abWelcomeContainer">
+
+        {/* =================================================
+            LEFT IMAGE
+        ================================================= */}
+
+        <div className="abWelcomeVisual">
+
+          <div className="abWelcomeNavyShape"></div>
+          <div className="abWelcomeGoldShape"></div>
+
+
+          {/* SAME EXISTING IMAGE */}
+
+          <div className="abWelcomeImageFrame">
+
             <img
               src={schoolImage}
-              alt="School students"
+              alt="AB Public School students"
+              className="abWelcomeImage"
             />
+
           </div>
 
-          <div className="welcomeGoldShape"></div>
 
-          <div className="welcomeExperienceCard">
-            <strong>25+</strong>
-            <span>Years of<br />Excellence</span>
+          {/* EXPERIENCE */}
+
+          <div className="abWelcomeExperience">
+
+            <FaCrown />
+
+            <strong>
+              25+
+            </strong>
+
+            <span>
+              Years of
+              <br />
+              Excellence
+            </span>
+
+          </div>
+
+
+          {/* IMAGE BOTTOM INFO */}
+
+          <div className="abWelcomeImageInfo">
+
+            <div className="abWelcomeImageInfoItem">
+
+              <span className="blue">
+                <FaGraduationCap />
+              </span>
+
+              <div>
+                <strong>
+                  Quality
+                </strong>
+
+                <small>
+                  Education
+                </small>
+              </div>
+
+            </div>
+
+
+            <div className="abWelcomeInfoDivider"></div>
+
+
+            <div className="abWelcomeImageInfoItem">
+
+              <span className="sky">
+                <FaUsers />
+              </span>
+
+              <div>
+                <strong>
+                  Bright
+                </strong>
+
+                <small>
+                  Future
+                </small>
+              </div>
+
+            </div>
+
+
+            <div className="abWelcomeInfoDivider"></div>
+
+
+            <div className="abWelcomeImageInfoItem">
+
+              <span className="gold">
+                <FaHeart />
+              </span>
+
+              <div>
+                <strong>
+                  Nurturing
+                </strong>
+
+                <small>
+                  Environment
+                </small>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
 
 
-        {/* CONTENT SIDE */}
-        <div className="welcomeContent">
+        {/* =================================================
+            RIGHT CONTENT
+        ================================================= */}
 
-          <span className="welcomeLabel">
-            ABOUT OUR SCHOOL
-          </span>
+        <div className="abWelcomeContent">
+
+
+          {/* LABEL */}
+
+          <div className="abWelcomeLabel">
+
+            <span className="abWelcomeLabelIcon">
+              <FaGraduationCap />
+            </span>
+
+            <strong>
+              ABOUT OUR SCHOOL
+            </strong>
+
+            <span className="abWelcomeLabelLine"></span>
+
+          </div>
+
+
+          {/* HEADING */}
 
           <h2>
             Where Every Child
-            <span>Discovers Their Potential.</span>
+            <span>
+              Discovers Their Potential.
+            </span>
           </h2>
 
-          <p className="welcomeMainText">
-            Welcome to our school, where education goes beyond textbooks.
-            We create an inspiring environment that encourages students
-            to learn, explore, think creatively and become confident
-            individuals.
+
+          <div className="abWelcomeHeadingLine">
+
+            <span></span>
+
+            <b>✦</b>
+
+          </div>
+
+
+          {/* DESCRIPTION */}
+
+          <p className="abWelcomeMainText">
+            Welcome to our school, where education goes beyond
+            textbooks. We create an inspiring environment that
+            encourages students to learn, explore, think creatively
+            and become confident individuals.
           </p>
 
-          <p className="welcomeSecondText">
-            With experienced educators, modern learning facilities and
-            strong values, we prepare every student for academic success
-            and a bright future.
+
+          <p className="abWelcomeSecondText">
+            With experienced educators, modern learning facilities
+            and strong values, we prepare every student for academic
+            success and a bright future.
           </p>
 
 
-          {/* HIGHLIGHTS */}
-          <div className="welcomeHighlights">
+          {/* =================================================
+              HIGHLIGHTS
+          ================================================= */}
 
-            <div className="welcomeHighlight">
-              <span>✓</span>
-              <div>
-                <strong>Holistic Education</strong>
-                <small>Academic & personal growth</small>
+          <div className="abWelcomeHighlights">
+
+            <div className="abWelcomeHighlight blue">
+
+              <div className="abWelcomeHighlightIcon">
+                <FaGraduationCap />
               </div>
+
+              <div>
+
+                <strong>
+                  Holistic Education
+                </strong>
+
+                <span>
+                  Academic & personal growth
+                </span>
+
+              </div>
+
+              <FaCheck className="abWelcomeCheck" />
+
             </div>
 
-            <div className="welcomeHighlight">
-              <span>✓</span>
-              <div>
-                <strong>Experienced Faculty</strong>
-                <small>Dedicated & caring teachers</small>
+
+            <div className="abWelcomeHighlight gold">
+
+              <div className="abWelcomeHighlightIcon">
+                <FaUsers />
               </div>
+
+              <div>
+
+                <strong>
+                  Experienced Faculty
+                </strong>
+
+                <span>
+                  Dedicated & caring teachers
+                </span>
+
+              </div>
+
+              <FaCheck className="abWelcomeCheck" />
+
             </div>
 
           </div>
 
 
+          {/* BUTTON */}
+
           <button
-            className="welcomeButton"
+            type="button"
+            className="abWelcomeButton"
             onClick={() => navigate("/about")}
           >
-            Discover Our School
-            <span>→</span>
+
+            <span>
+              Discover Our School
+            </span>
+
+            <span className="abWelcomeButtonArrow">
+              <FaArrowRight />
+            </span>
+
           </button>
 
         </div>

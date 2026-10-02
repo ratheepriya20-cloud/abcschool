@@ -1,1112 +1,2039 @@
 /* =========================================================
-   AB PUBLIC SCHOOL - PREMIUM NAVBAR
-   ========================================================= */
+   AB PUBLIC SCHOOL
+   PROFESSIONAL NAVBAR
+========================================================= */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   GLOBAL HORIZONTAL SCROLL FIX
-   ========================================================= */
-
-html,
-body,
-#root {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden !important;
-}
-
-body {
-  min-width: 0;
-  overscroll-behavior-x: none;
-}
-
-/* =========================================================
-   NAVBAR HEADER
-   ========================================================= */
-
-.abpsnav-header {
-  width: 100%;
-  max-width: 100%;
+.abpsProNavbar {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
+
+  width: 100%;
+
+  z-index: 5000;
+
   background: #ffffff;
-  border-bottom: 1px solid rgba(7, 26, 53, 0.10);
+
+  border-bottom: 1px solid rgba(7, 26, 53, 0.09);
+
   box-shadow:
     0 5px 25px rgba(7, 26, 53, 0.07);
-  z-index: 9999;
-  box-sizing: border-box;
+
+  overflow: visible;
 }
 
-/* =========================================================
-   NAVBAR CONTAINER
-   ========================================================= */
 
-.abpsnav-container {
-  width: calc(100% - 40px);
-  max-width: 1500px;
-  min-height: 70px;
+.abpsProNavbarInner {
+  width: min(1440px, 94%);
+
+  min-height: 72px;
+
   margin: 0 auto;
+
   display: flex;
+
   align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  box-sizing: border-box;
+
+  gap: 22px;
+
+  position: relative;
+
+  overflow: visible;
 }
+
 
 /* =========================================================
    BRAND
-   ========================================================= */
+========================================================= */
 
-.abpsnav-brand {
-  display: flex;
-  align-items: center;
-  gap: 11px;
+.abpsProBrand {
   flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
   text-decoration: none;
-  min-width: 0;
-}
 
-/* =========================================================
-   LOGO
-   ========================================================= */
+  height: 70px;
 
-.abpsnav-logo {
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 14px;
-  background:
-    linear-gradient(
-      135deg,
-      #071a35,
-      #0877a9
-    );
-  color: #ffffff;
-  border: 2px solid #d6b36a;
-  font-size: 19px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  box-shadow:
-    0 7px 20px rgba(7, 26, 53, 0.18);
-  user-select: none;
-}
-
-/* =========================================================
-   BRAND TEXT
-   ========================================================= */
-
-.abpsnav-brand-text {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3px;
-}
-
-.abpsnav-brand-text strong {
-  display: block;
-  color: #071a35;
-  font-size: 16px;
-  font-weight: 900;
-  letter-spacing: 0.7px;
-  line-height: 1.15;
-  white-space: nowrap;
-}
-
-.abpsnav-brand-text span {
-  display: block;
-  color: #0877a9;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1.1;
-  white-space: nowrap;
-}
-
-/* =========================================================
-   DESKTOP NAV MENU
-   ========================================================= */
-
-.abpsnav-menu {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
-}
-
-/* =========================================================
-   NORMAL NAV LINKS
-   ========================================================= */
-
-.abpsnav-link,
-.abpsnav-dropdown-trigger {
-  min-height: 44px;
-  padding: 0 9px;
-  border: none;
-  background: transparent;
-  color: #071a35;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 750;
-  line-height: 1;
-  text-decoration: none;
-  white-space: nowrap;
   cursor: pointer;
+
+  overflow: visible;
+}
+
+
+.abpsProNavbarLogo {
+  display: block;
+
+  width: 250px;
+
+  height: 92px;
+
+  max-width: none;
+
+  object-fit: contain;
+
+  object-position: left center;
+
+  transform: scale(1.08);
+
+  transform-origin: left center;
+
   transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-.abpsnav-link:hover,
-.abpsnav-dropdown-trigger:hover {
-  color: #0877a9;
-  background:
-    rgba(8, 119, 169, 0.06);
-  transform: translateY(-1px);
+
+.abpsProBrand:hover
+.abpsProNavbarLogo {
+  transform: scale(1.11);
 }
+
 
 /* =========================================================
-   ACTIVE LINK
-   ========================================================= */
+   DESKTOP NAVIGATION
+========================================================= */
 
-.abpsnav-link-active {
-  color: #0877a9 !important;
-  background:
-    rgba(8, 119, 169, 0.07);
+.abpsProDesktopNav {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1px;
 }
 
-/* =========================================================
-   DROPDOWN WRAPPER
-   ========================================================= */
 
-.abpsnav-dropdown-wrap {
+.abpsProNavLink {
   position: relative;
-  flex-shrink: 0;
+
+  min-height: 45px;
+
+  padding: 10px 10px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #27364a;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  font-family: inherit;
+
+  font-size: 17px;
+
+  font-weight: 650;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease;
 }
 
-/* =========================================================
-   CHEVRON
-   ========================================================= */
 
-.abpsnav-chevron {
-  font-size: 9px;
+.abpsProNavLink::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10px;
+
+  right: 10px;
+
+  bottom: 4px;
+
+  height: 2px;
+
+  border-radius: 50px;
+
+  background: #d6b36a;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
   transition:
     transform 0.25s ease;
 }
 
-.abpsnav-chevron-active {
+
+.abpsProNavLink:hover {
+  color: #0877a9;
+}
+
+
+.abpsProNavLink:hover::after {
+  transform: scaleX(1);
+}
+
+
+.abpsProNavActive {
+  color: #0877a9;
+}
+
+
+.abpsProNavActive::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   CAMPUS LIFE WRAPPER
+========================================================= */
+
+.abpsProCampusWrapper {
+  position: relative;
+}
+
+
+/* =========================================================
+   CAMPUS BUTTON
+========================================================= */
+
+.abpsProCampusButton {
+  gap: 8px;
+}
+
+
+.abpsProCampusButton > svg {
+  font-size: 9px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.abpsProChevronOpen {
   transform: rotate(180deg);
 }
 
-/* =========================================================
-   DESKTOP DROPDOWN BOX
-   ========================================================= */
 
-.abpsnav-dropdown-box {
+/* =========================================================
+   CAMPUS DESKTOP DROPDOWN
+========================================================= */
+
+.abpsProCampusDropdown {
   position: absolute;
-  top: calc(100% + 11px);
+
+  top: calc(100% + 16px);
+
   left: 50%;
-  width: 280px;
-  min-width: 280px;
-  max-width: 280px;
-  padding: 10px;
+
+  width: 820px;
+
+  max-width: 82vw;
+
+  padding: 24px;
+
+  transform: translateX(-50%);
+
   background: #ffffff;
-  border: 1px solid rgba(7, 26, 53, 0.10);
-  border-radius: 15px;
+
+  border: 1px solid rgba(7, 26, 53, 0.1);
+
+  border-radius: 22px;
+
   box-shadow:
-    0 20px 50px rgba(7, 26, 53, 0.17),
-    0 7px 20px rgba(8, 119, 169, 0.08);
-  transform:
-    translateX(-50%)
-    translateY(10px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 10001;
-  box-sizing: border-box;
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    visibility 0.25s ease;
-}
+    0 30px 70px rgba(7, 26, 53, 0.18),
+    0 8px 25px rgba(7, 26, 53, 0.08);
 
-/* =========================================================
-   DROPDOWN OPEN
-   ========================================================= */
+  z-index: 99999;
 
-.abpsnav-dropdown-open
-.abpsnav-dropdown-box {
-  opacity: 1;
-  visibility: visible;
+  animation:
+    abpsCampusDropdownIn 0.22s ease;
+
   pointer-events: auto;
-  transform:
-    translateX(-50%)
-    translateY(0);
 }
 
-/* =========================================================
-   DROPDOWN TOP GOLD / BLUE LINE
-   ========================================================= */
 
-.abpsnav-dropdown-box::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 18px;
-  right: 18px;
-  height: 2px;
-  background:
-    linear-gradient(
-      90deg,
-      #0877a9,
-      #d6b36a
-    );
-  border-radius:
-    0 0 5px 5px;
+@keyframes abpsCampusDropdownIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
 }
 
-/* =========================================================
-   DROPDOWN TOP ARROW
-   ========================================================= */
 
-.abpsnav-dropdown-box::after {
+.abpsProCampusDropdown::before {
   content: "";
+
   position: absolute;
-  top: -6px;
+
+  top: -8px;
+
   left: 50%;
-  width: 11px;
-  height: 11px;
+
+  width: 15px;
+
+  height: 15px;
+
   background: #ffffff;
+
   border-left:
-    1px solid rgba(7, 26, 53, 0.10);
+    1px solid rgba(7, 26, 53, 0.1);
+
   border-top:
-    1px solid rgba(7, 26, 53, 0.10);
+    1px solid rgba(7, 26, 53, 0.1);
+
   transform:
     translateX(-50%)
     rotate(45deg);
 }
 
-/* =========================================================
-   DROPDOWN LINKS
-   ========================================================= */
 
-.abpsnav-dropdown-box a {
+/* =========================================================
+   CAMPUS HEADER
+========================================================= */
+
+.abpsProCampusDropdownHeader {
   width: 100%;
-  min-height: 48px;
-  padding: 10px 13px;
+
+  min-height: 106px;
+
+  padding:
+    2px
+    3px
+    20px;
 
   display: flex;
-  align-items: center;
 
-  /* LINK TEXT STARTING/LEFT SIDE */
-  justify-content: flex-start;
+  align-items: flex-end;
 
-  gap: 10px;
+  justify-content: space-between;
 
-  box-sizing: border-box;
+  gap: 30px;
+
+  border-bottom:
+    1px solid rgba(7, 26, 53, 0.08);
+}
+
+
+.abpsProCampusDropdownHeader
+> div:first-child {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.abpsProCampusEyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0877a9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 1.7px;
+
+  text-transform: uppercase;
+}
+
+
+.abpsProCampusDropdownHeader h3 {
+  margin: 0 0 7px;
+
   color: #071a35;
-  background: transparent;
-  border-radius: 9px;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 14px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
   font-weight: 700;
-  line-height: 1.3;
-  white-space: nowrap;
-  overflow: hidden;
 
-  transition:
-    background 0.22s ease,
-    color 0.22s ease,
-    padding-left 0.22s ease,
-    transform 0.22s ease;
+  line-height: 1.2;
 }
 
-.abpsnav-dropdown-box a:hover {
-  color: #0877a9;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 119, 169, 0.08),
-      rgba(214, 179, 106, 0.10)
-    );
+.abpsProCampusDropdownHeader p {
+  width: 100%;
 
-  padding-left: 17px;
+  max-width: 570px;
+
+  margin: 0;
+
+  color: #737d89;
+
+  font-size: 16px;
+
+  line-height: 1.6;
 }
+
 
 /* =========================================================
-   DROPDOWN LINK TEXT
-   ========================================================= */
+   VIEW ALL
+========================================================= */
 
-.abpsnav-dropdown-box a > span:first-child {
-  margin-left: 0;
-  text-align: left;
-  flex: 0 0 auto;
-}
-
-/* =========================================================
-   DROPDOWN ARROW
-   ========================================================= */
-
-.abpsnav-dropdown-box a > svg {
-  margin-left: auto;
+.abpsProCampusViewAll {
   flex-shrink: 0;
-  color: #0877a9;
-  font-size: 15px;
-  transition:
-    transform 0.2s ease;
-}
 
-.abpsnav-dropdown-box a:hover > svg {
-  transform: translateX(3px);
-}
+  min-width: 112px;
 
-/* =========================================================
-   NAV ACTIONS
-   ========================================================= */
+  height: 40px;
 
-.abpsnav-actions {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-}
+  padding: 0 15px;
 
-/* =========================================================
-   SEARCH AREA
-   ========================================================= */
-
-.abpsnav-search-area {
-  position: relative;
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   SEARCH BUTTON
-   ========================================================= */
-
-.abpsnav-search-btn {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(7, 26, 53, 0.13);
   border-radius: 10px;
-  background: #ffffff;
-  color: #071a35;
-  font-size: 17px;
-  cursor: pointer;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+
   transition:
     background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.abpsnav-search-btn:hover {
-  color: #ffffff;
-  background: #0877a9;
-  border-color: #0877a9;
-  transform: translateY(-1px);
-}
-
-/* =========================================================
-   ACCOUNT BUTTON
-   ========================================================= */
-
-.abpsnav-account-icon {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #d6b36a;
-  border-radius: 50%;
-  background: #071a35;
-  color: #ffffff;
-  font-size: 16px;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow:
-    0 5px 14px rgba(7, 26, 53, 0.15);
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
-
-.abpsnav-account-icon:hover {
-  background: #0877a9;
-  transform: translateY(-2px);
-}
-
-/* =========================================================
-   APPLY BUTTON
-   ========================================================= */
-
-.abpsnav-apply-btn {
-  min-height: 44px;
-  padding: 0 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border: none;
-  border-radius: 10px;
-  background:
-    linear-gradient(
-      135deg,
-      #e0c27e,
-      #d6b36a
-    );
-  color: #071a35;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 850;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
-  box-shadow:
-    0 6px 15px rgba(214, 179, 106, 0.22);
-  transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.abpsnav-apply-btn:hover {
-  transform: translateY(-2px);
+
+.abpsProCampusViewAll:hover {
+  background: #0877a9;
+
+  transform:
+    translateY(-2px);
+
   box-shadow:
-    0 10px 22px rgba(214, 179, 106, 0.30);
+    0 8px 18px rgba(8, 119, 169, 0.18);
 }
+
+
+.abpsProCampusViewAll svg {
+  font-size: 10px;
+}
+
 
 /* =========================================================
-   APPLY ARROW
-   ========================================================= */
+   CAMPUS GRID
+========================================================= */
 
-.abpsnav-apply-btn span {
-  font-size: 17px;
-  transition:
-    transform 0.2s ease;
+.abpsProCampusGrid {
+  width: 100%;
+
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
+
+  gap: 11px;
 }
 
-.abpsnav-apply-btn:hover span {
-  transform: translateX(3px);
-}
 
 /* =========================================================
-   SEARCH PANEL
-   ========================================================= */
+   CAMPUS CARD
+========================================================= */
 
-.abpsnav-search-panel {
-  position: absolute;
-  top: calc(100% + 11px);
-  right: 0;
-  width: 330px;
-  max-width: calc(100vw - 24px);
-  padding: 14px;
-  box-sizing: border-box;
-  background: #ffffff;
+.abpsProCampusCard {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 105px;
+
+  padding: 15px;
+
   border:
-    1px solid rgba(7, 26, 53, 0.10);
-  border-radius: 14px;
-  box-shadow:
-    0 20px 50px rgba(7, 26, 53, 0.17);
-  z-index: 10002;
+    1px solid rgba(7, 26, 53, 0.075);
+
+  border-radius: 15px;
+
+  background: #fafafa;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
+
+.abpsProCampusCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 14px;
+
+  bottom: 14px;
+
+  width: 3px;
+
+  border-radius:
+    0
+    5px
+    5px
+    0;
+
+  background: #d6b36a;
+
+  transform: scaleY(0);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.abpsProCampusCard:hover {
+  background: #ffffff;
+
+  border-color:
+    rgba(8, 119, 169, 0.18);
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(7, 26, 53, 0.09);
+}
+
+
+.abpsProCampusCard:hover::before {
+  transform: scaleY(1);
+}
+
+
+/* =========================================================
+   CAMPUS ICON
+========================================================= */
+
+.abpsProCampusIcon {
+  width: 44px;
+
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  border-radius: 12px;
+
+  background: #edf6fa;
+
+  color: #0877a9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 19px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.abpsProCampusCard:hover
+.abpsProCampusIcon {
+  background: #071a35;
+
+  color: #e0c27e;
+
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   CAMPUS CARD TEXT
+========================================================= */
+
+.abpsProCampusCardText {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.abpsProCampusCardText strong {
+  display: block;
+
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 17px;
+
+  font-weight: 750;
+
+  line-height: 1.35;
+
+  white-space: normal;
+}
+
+
+.abpsProCampusArrow {
+  flex: 0 0 auto;
+
+  color: #0877a9;
+
+  font-size: 9px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.abpsProCampusCard:hover
+.abpsProCampusArrow {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   NAVBAR RIGHT ACTIONS
+========================================================= */
+
+.abpsProNavbarActions {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+/* =========================================================
+   SEARCH + ACCOUNT
+========================================================= */
+
+.abpsProIconButton,
+.abpsProAccountButton {
+  width: 42px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid rgba(7, 26, 53, 0.12);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #071a35;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  font-size: 17px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.abpsProIconButton:hover,
+.abpsProAccountButton:hover {
+  background: #071a35;
+
+  border-color: #071a35;
+
+  color: #e0c27e;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(7, 26, 53, 0.14);
+}
+
+
+/* =========================================================
+   APPLY
+========================================================= */
+
+.abpsProApplyButton {
+  min-height: 42px;
+
+  padding: 0 17px;
+
+  border-radius: 10px;
+
+  background: #0877a9;
+
+  color: #ffffff;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 7px 18px rgba(8, 119, 169, 0.17);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.abpsProApplyButton:hover {
+  background: #071a35;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(7, 26, 53, 0.15);
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.abpsProMobileButton {
+  display: none;
+
+  width: 42px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid rgba(7, 26, 53, 0.12);
+
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #071a35;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
+}
+
+
+.abpsProMobileButton:hover {
+  background: #071a35;
+
+  color: #e0c27e;
+
+  border-color: #071a35;
+}
+
+
+/* =========================================================
+   MOBILE NAV DEFAULT
+========================================================= */
+
+.abpsProMobileNav {
+  display: none;
+}
+
+
+/* =========================================================
+   SEARCH OVERLAY
+========================================================= */
+
+.abpsProSearchOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 20000;
+
+  padding: 30px 20px;
+
+  background:
+    rgba(4, 16, 34, 0.68);
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  overflow-y: auto;
+}
+
+
+.abpsProSearchPanel {
+  width:
+    min(800px, 100%);
+
+  margin:
+    35px auto;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25);
+
+  animation:
+    abpsSearchPanelIn 0.25s ease;
+}
+
+
+@keyframes abpsSearchPanelIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SEARCH HEADER
+========================================================= */
+
+.abpsProSearchHeader {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.abpsProSearchEyebrow {
+  color: #0877a9;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.abpsProSearchHeader h2 {
+  margin: 6px 0;
+
+  color: #071a35;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+
+.abpsProSearchHeader p {
+  margin: 0;
+
+  color: #747d88;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+
+.abpsProSearchClose {
+  width: 42px;
+
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border:
+    1px solid rgba(7, 26, 53, 0.12);
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #071a35;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
+}
+
+
+.abpsProSearchClose:hover {
+  background: #071a35;
+
+  color: #ffffff;
+
+  border-color: #071a35;
+}
+
 
 /* =========================================================
    SEARCH INPUT
-   ========================================================= */
+========================================================= */
 
-.abpsnav-search-panel input {
-  width: 100%;
-  height: 45px;
-  padding: 0 13px;
+.abpsProSearchInputBox {
+  height: 58px;
+
+  margin-top: 24px;
+
+  padding: 0 15px;
+
   border:
-    1px solid rgba(7, 26, 53, 0.15);
-  border-radius: 9px;
-  outline: none;
-  color: #071a35;
-  background: #f8fbfd;
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 600;
-  box-sizing: border-box;
+    1px solid rgba(7, 26, 53, 0.13);
+
+  border-radius: 14px;
+
+  background: #fafafa;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
   transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    0.25s ease;
 }
 
-.abpsnav-search-panel input:focus {
+
+.abpsProSearchInputBox:focus-within {
+  background: #ffffff;
+
   border-color: #0877a9;
+
   box-shadow:
-    0 0 0 3px rgba(8, 119, 169, 0.10);
+    0 0 0 4px rgba(8, 119, 169, 0.08);
 }
+
+
+.abpsProSearchInputBox > svg {
+  color: #0877a9;
+
+  font-size: 17px;
+
+  flex-shrink: 0;
+}
+
+
+.abpsProSearchInputBox input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #071a35;
+
+  font-family: inherit;
+
+  font-size: 15px;
+}
+
+
+.abpsProSearchInputBox input::placeholder {
+  color: #9ca3ad;
+}
+
+
+.abpsProSearchClear {
+  width: 30px;
+
+  height: 30px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #eeeeee;
+
+  color: #66717e;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   SEARCH EMPTY
+========================================================= */
+
+.abpsProSearchEmpty,
+.abpsProNoResults {
+  min-height: 245px;
+
+  padding: 35px 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  text-align: center;
+}
+
+
+.abpsProSearchEmptyIcon,
+.abpsProNoResultsIcon {
+  width: 62px;
+
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: #eef6fa;
+
+  color: #0877a9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 22px;
+
+  margin-bottom: 14px;
+}
+
+
+.abpsProSearchEmpty h3,
+.abpsProNoResults h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 20px;
+}
+
+
+.abpsProSearchEmpty p,
+.abpsProNoResults p {
+  max-width: 500px;
+
+  margin:
+    8px auto 0;
+
+  color: #7b8490;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+}
+
 
 /* =========================================================
    SEARCH RESULTS
-   ========================================================= */
+========================================================= */
 
-.abpsnav-search-results {
-  margin-top: 10px;
+.abpsProSearchResults {
+  margin-top: 23px;
+}
+
+
+.abpsProSearchResultTitle {
+  margin-bottom: 9px;
+
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
 
-.abpsnav-search-results a {
-  padding: 10px 11px;
-  border-radius: 8px;
-  color: #071a35;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
-}
-
-.abpsnav-search-results a:hover {
-  color: #0877a9;
-  background:
-    rgba(8, 119, 169, 0.07);
-}
-
-/* =========================================================
-   MOBILE TOGGLE
-   ========================================================= */
-
-.abpsnav-mobile-toggle {
-  display: none;
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
   align-items: center;
-  justify-content: center;
-  border:
-    1px solid rgba(7, 26, 53, 0.13);
-  border-radius: 10px;
-  background: #ffffff;
+
+  justify-content: space-between;
+}
+
+
+.abpsProSearchResultTitle strong {
   color: #071a35;
-  font-size: 19px;
+
+  font-size: 14px;
+}
+
+
+.abpsProSearchResultTitle span {
+  color: #7a838e;
+
+  font-size: 11px;
+}
+
+
+.abpsProSearchList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+.abpsProSearchResult {
+  width: 100%;
+
+  min-height: 68px;
+
+  padding:
+    10px 12px;
+
+  border:
+    1px solid transparent;
+
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  text-align: left;
+
   cursor: pointer;
+
   transition:
-    background 0.25s ease,
-    color 0.25s ease;
+    background 0.22s ease,
+    border-color 0.22s ease,
+    transform 0.22s ease;
 }
 
-.abpsnav-mobile-toggle:hover {
+
+.abpsProSearchResult:hover {
+  background: #f5f0e3;
+
+  border-color:
+    rgba(214, 179, 106, 0.35);
+
+  transform:
+    translateX(3px);
+}
+
+
+.abpsProSearchResultIcon {
+  width: 37px;
+
+  height: 37px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #eef6fa;
+
+  color: #0877a9;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.abpsProSearchResultContent {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.abpsProSearchResultContent strong {
+  display: block;
+
+  color: #071a35;
+
+  font-size: 13px;
+}
+
+
+.abpsProSearchResultContent small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #7c8490;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+.abpsProSearchResult > svg {
+  color: #0877a9;
+
+  font-size: 10px;
+
+  flex-shrink: 0;
+}
+
+
+.abpsProNoResultsIcon {
+  background: #f8efec;
+
+  color: #9a655b;
+}
+
+
+.abpsProNoResults button {
+  margin-top: 16px;
+
+  min-height: 41px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 9px;
+
   background: #071a35;
+
   color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    0.25s ease;
 }
 
-/* =========================================================
-   MOBILE ACTIONS
-   ========================================================= */
 
-.abpsnav-mobile-actions {
-  display: none;
+.abpsProNoResults button:hover {
+  background: #0877a9;
 }
 
+
 /* =========================================================
-   TABLET
-   ========================================================= */
+   LARGE LAPTOP
+========================================================= */
 
-@media (max-width: 1280px) {
-  .abpsnav-container {
-    width: calc(100% - 34px);
-    gap: 12px;
+@media (max-width: 1350px) {
+
+  .abpsProNavbarInner {
+    width: 95%;
+
+    gap: 14px;
   }
 
-  .abpsnav-link,
-  .abpsnav-dropdown-trigger {
-    padding: 0 7px;
-    font-size: 13px;
+
+  .abpsProNavLink {
+    padding-left: 8px;
+
+    padding-right: 8px;
+
+    font-size: 12px;
   }
 
-  .abpsnav-actions {
-    gap: 6px;
+
+  .abpsProCampusDropdown {
+    width: 790px;
   }
 
-  .abpsnav-apply-btn {
-    padding: 0 13px;
-    font-size: 13px;
+
+  .abpsProCampusDropdownHeader {
+    gap: 20px;
   }
+
 }
 
-/* =========================================================
-   SMALL DESKTOP
-   ========================================================= */
 
-@media (max-width: 1120px) {
-  .abpsnav-brand-text span {
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .abpsProNavbarLogo {
+    width: 225px;
+
+    height: 82px;
+
+    transform:
+      scale(1.06);
+  }
+
+
+  .abpsProBrand:hover
+  .abpsProNavbarLogo {
+    transform:
+      scale(1.09);
+  }
+
+}
+
+
+@media (max-width: 1180px) {
+
+  .abpsProNavLink {
+    padding-left: 6px;
+
+    padding-right: 6px;
+
+    font-size: 11.5px;
+  }
+
+
+  .abpsProCampusDropdown {
+    width: 750px;
+  }
+
+
+  .abpsProApplyButton {
+    padding:
+      0 13px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 1080px) {
+
+  .abpsProDesktopNav {
     display: none;
   }
 
-  .abpsnav-link,
-  .abpsnav-dropdown-trigger {
-    padding: 0 6px;
-    font-size: 12px;
+
+  .abpsProMobileButton {
+    display: flex;
   }
 
-  .abpsnav-logo {
-    width: 48px;
-    height: 48px;
-    flex-basis: 48px;
-  }
 
-  .abpsnav-account-icon,
-  .abpsnav-search-btn {
-    width: 41px;
-    height: 41px;
-    flex-basis: 41px;
-  }
+  .abpsProMobileNav {
+    display: block;
 
-  .abpsnav-apply-btn {
-    min-height: 41px;
-    padding: 0 11px;
-    font-size: 12px;
-  }
-}
+    width: 100%;
 
-/* =========================================================
-   MOBILE / TABLET MENU
-   ========================================================= */
-
-@media (max-width: 1024px) {
-  .abpsnav-header {
-    overflow: visible;
-  }
-
-  .abpsnav-container {
-    width: calc(100% - 28px);
-    min-height: 70px;
-    gap: 8px;
-  }
-
-  /* Hide desktop menu */
-
-  .abpsnav-menu {
-    position: fixed;
-    top: 80px;
-    left: 14px;
-    right: 14px;
-    width: auto;
     max-height:
-      calc(100vh - 94px);
-    padding: 13px;
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 4px;
-    overflow-x: hidden;
-    overflow-y: auto;
+      calc(100vh - 82px);
+
+    padding:
+      10px
+      4%
+      18px;
+
+    border-top:
+      1px solid rgba(7, 26, 53, 0.07);
+
     background: #ffffff;
-    border:
-      1px solid rgba(7, 26, 53, 0.10);
-    border-radius: 16px;
-    box-shadow:
-      0 20px 55px rgba(7, 26, 53, 0.18);
-    z-index: 9998;
-  }
 
-  /* Open menu */
+    overflow-y: auto;
 
-  .abpsnav-menu.abpsnav-menu-open {
-    display: flex;
-  }
+    position: relative;
 
-  /* Normal links */
+    z-index: 7000;
 
-  .abpsnav-link,
-  .abpsnav-dropdown-trigger {
-    width: 100%;
-    min-height: 48px;
-    padding: 0 14px;
-    justify-content: space-between;
-    font-size: 15px;
-    font-weight: 750;
-    text-align: left;
-  }
-
-  .abpsnav-link:hover,
-  .abpsnav-dropdown-trigger:hover {
-    transform: none;
-  }
-
-  /* Dropdown wrapper */
-
-  .abpsnav-dropdown-wrap {
-    width: 100%;
-  }
-
-  /* Mobile dropdown */
-
-  .abpsnav-dropdown-box {
-    position: static;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    margin-top: 3px;
-    padding: 0;
-    background:
-      #f7fafc;
-    border:
-      1px solid rgba(7, 26, 53, 0.08);
-    border-radius: 10px;
-    box-shadow: none;
-    transform: none;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition:
-      max-height 0.3s ease,
-      opacity 0.25s ease,
-      padding 0.25s ease;
-  }
-
-  /* Open mobile dropdown */
-
-  .abpsnav-dropdown-open
-  .abpsnav-dropdown-box {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 700px;
-    padding: 7px;
-    opacity: 1;
-    visibility: visible;
     pointer-events: auto;
-    transform: none;
   }
 
-  /* Mobile dropdown links */
 
-  .abpsnav-dropdown-box a {
+  /* MOBILE NORMAL LINKS */
+
+  .abpsProMobileLink {
     width: 100%;
-    min-height: 46px;
-    padding: 10px 13px;
+
+    min-height: 48px;
+
+    padding:
+      10px 12px;
+
+    border-radius: 10px;
 
     display: flex;
+
     align-items: center;
-    justify-content: flex-start;
+
+    justify-content: space-between;
+
+    color: #071a35;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 650;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+
+    pointer-events: auto;
+  }
+
+
+  .abpsProMobileLink:hover,
+  .abpsProMobileActive {
+    background: #f5f0e3;
+
+    color: #0877a9;
+  }
+
+
+  /* MOBILE CAMPUS WRAPPER */
+
+  .abpsProMobileCampus {
+    position: relative;
+
+    width: 100%;
+
+    pointer-events: auto;
+  }
+
+
+  /* CAMPUS MAIN BUTTON */
+
+  .abpsProMobileCampusButton {
+    border: none;
+
+    font-family: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 2;
+
+    pointer-events: auto;
+
+    touch-action:
+      manipulation;
+  }
+
+
+  .abpsProMobileCampusButton svg {
+    transition:
+      transform 0.25s ease;
+
+    pointer-events: none;
+  }
+
+
+  .abpsProMobileCampusButton span {
+    pointer-events: none;
+  }
+
+
+  /* MOBILE CAMPUS MENU */
+
+  .abpsProMobileCampusMenu {
+    width: 100%;
+
+    margin:
+      0 0 8px;
+
+    padding:
+      5px 0
+      5px 10px;
+
+    border-left:
+      2px solid #d6b36a;
+
+    position: relative;
+
+    z-index: 10;
+
+    pointer-events: auto;
+  }
+
+
+  /* MOBILE CAMPUS ITEM */
+
+  .abpsProMobileCampusItem {
+    width: 100%;
+
+    min-height: 47px;
+
+    padding:
+      8px 10px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
 
     gap: 10px;
 
-    font-size: 14px;
-    white-space: normal;
-    overflow: visible;
+    color: #596574;
+
+    text-decoration: none;
+
+    font-size: 13.5px;
+
+    font-weight: 650;
+
+    position: relative;
+
+    z-index: 11;
+
+    cursor: pointer;
+
+    pointer-events: auto !important;
+
+    touch-action:
+      manipulation;
+
+    -webkit-tap-highlight-color:
+      transparent;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
   }
 
-  .abpsnav-dropdown-box a > span:first-child {
-    margin-left: 0;
-    text-align: left;
+
+  .abpsProMobileCampusItem:hover,
+  .abpsProMobileCampusItem:active {
+    background: #f7f5ef;
+
+    color: #0877a9;
   }
 
-  .abpsnav-dropdown-box a > svg {
-    margin-left: auto;
-    flex-shrink: 0;
+
+  /*
+    IMPORTANT
+    Link ke andar icon/text click ko block nahi karega.
+    Actual click <a> Link ko milega.
+  */
+
+  .abpsProMobileCampusItem
+  > span,
+  .abpsProMobileCampusItem
+  > svg,
+  .abpsProMobileCampusIcon,
+  .abpsProMobileCampusIcon svg {
+    pointer-events: none;
   }
 
-  .abpsnav-dropdown-box a:hover {
-    padding-left: 17px;
-  }
 
-  /* Remove desktop arrow */
+  .abpsProMobileCampusIcon {
+    width: 32px;
 
-  .abpsnav-dropdown-box::before,
-  .abpsnav-dropdown-box::after {
-    display: none;
-  }
+    height: 32px;
 
-  /* Actions */
+    flex:
+      0 0 32px;
 
-  .abpsnav-actions {
-    gap: 5px;
-  }
+    border-radius: 8px;
 
-  /* Hide desktop apply */
+    background: #eef6fa;
 
-  .abpsnav-apply-btn {
-    display: none;
-  }
+    color: #0877a9;
 
-  /* Show mobile toggle */
-
-  .abpsnav-mobile-toggle {
     display: flex;
+
+    align-items: center;
+
+    justify-content: center;
   }
 
-  /* Search */
 
-  .abpsnav-search-panel {
-    position: fixed;
-    top: 80px;
-    left: 14px;
-    right: 14px;
-    width: auto;
-    max-width: none;
-    z-index: 10000;
-  }
-}
+  .abpsProMobileCampusItem
+  > svg:last-child {
+    margin-left: auto;
 
-/* =========================================================
-   TABLET 768
-   ========================================================= */
-
-@media (max-width: 768px) {
-  .abpsnav-container {
-    min-height: 68px;
+    font-size: 9px;
   }
 
-  .abpsnav-logo {
-    width: 46px;
-    height: 46px;
-    flex-basis: 46px;
-    border-radius: 12px;
-    font-size: 17px;
+
+  /* DIVIDER */
+
+  .abpsProMobileDivider {
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+      10px 0;
+
+    background:
+      rgba(7, 26, 53, 0.08);
   }
 
-  .abpsnav-brand-text strong {
+
+  /* MOBILE ACCOUNT + APPLY */
+
+  .abpsProMobileAccountLink,
+  .abpsProMobileApply {
+    width: 100%;
+
+    min-height: 49px;
+
+    margin-bottom: 6px;
+
+    padding:
+      10px 13px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
     font-size: 14px;
-    letter-spacing: 0.5px;
+
+    font-weight: 700;
+
+    pointer-events: auto;
   }
 
-  .abpsnav-search-btn,
-  .abpsnav-account-icon,
-  .abpsnav-mobile-toggle {
-    width: 41px;
-    height: 41px;
-    flex-basis: 41px;
+
+  .abpsProMobileAccountLink {
+    color: #071a35;
+
+    background: #f7f5ef;
   }
 
-  .abpsnav-menu {
-    top: 76px;
-    left: 12px;
-    right: 12px;
-    max-height:
-      calc(100vh - 88px);
+
+  .abpsProMobileAccountLink
+  > svg:first-child {
+    color: #0877a9;
   }
 
-  .abpsnav-search-panel {
-    top: 76px;
-    left: 12px;
-    right: 12px;
+
+  .abpsProMobileAccountLink
+  svg:last-child {
+    margin-left: auto;
+
+    color: #0877a9;
+
+    font-size: 11px;
   }
+
+
+  .abpsProMobileApply {
+    justify-content: space-between;
+
+    background: #0877a9;
+
+    color: #ffffff;
+  }
+
+
+  .abpsProMobileApply svg {
+    font-size: 11px;
+  }
+
 }
 
-/* =========================================================
-   MOBILE 600
-   ========================================================= */
 
-@media (max-width: 600px) {
-  .abpsnav-container {
-    width: calc(100% - 24px);
-    min-height: 66px;
+/* =========================================================
+   TABLET LOGO
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abpsProBrand {
+    height: 64px;
   }
 
-  .abpsnav-brand {
+
+  .abpsProNavbarLogo {
+    width: 205px;
+
+    height: 76px;
+
+    transform:
+      scale(1.05);
+  }
+
+
+  .abpsProBrand:hover
+  .abpsProNavbarLogo {
+    transform:
+      scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .abpsProNavbarInner {
+    width:
+      calc(100% - 20px);
+
+    min-height: 72px;
+
     gap: 8px;
   }
 
-  .abpsnav-logo {
-    width: 43px;
-    height: 43px;
-    flex-basis: 43px;
-    border-radius: 11px;
-    font-size: 16px;
-  }
 
-  .abpsnav-brand-text strong {
-    font-size: 13px;
-  }
+  .abpsProBrand {
+    gap: 8px;
 
-  .abpsnav-search-btn,
-  .abpsnav-account-icon,
-  .abpsnav-mobile-toggle {
-    width: 39px;
-    height: 39px;
-    flex-basis: 39px;
-    border-radius: 9px;
-  }
-
-  .abpsnav-account-icon {
-    border-width: 2px;
-  }
-
-  .abpsnav-menu {
-    top: 74px;
-    left: 10px;
-    right: 10px;
-    padding: 11px;
-    border-radius: 14px;
-  }
-
-  .abpsnav-search-panel {
-    top: 74px;
-    left: 10px;
-    right: 10px;
-    padding: 12px;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE 430
-   ========================================================= */
-
-@media (max-width: 430px) {
-  .abpsnav-container {
-    width: calc(100% - 20px);
-    gap: 5px;
-  }
-
-  .abpsnav-brand {
-    gap: 7px;
     min-width: 0;
   }
 
-  .abpsnav-logo {
-    width: 40px;
-    height: 40px;
-    flex-basis: 40px;
-    border-radius: 10px;
-    font-size: 14px;
+
+  .abpsProApplyButton {
+    display: none;
   }
 
-  .abpsnav-brand-text strong {
+
+  .abpsProNavbarActions {
+    margin-left: auto;
+
+    gap: 5px;
+  }
+
+
+  .abpsProIconButton,
+  .abpsProAccountButton,
+  .abpsProMobileButton {
+    width: 39px;
+
+    height: 39px;
+  }
+
+
+  .abpsProMobileNav {
+    max-height:
+      calc(100vh - 72px);
+  }
+
+
+  /* SEARCH */
+
+  .abpsProSearchOverlay {
+    padding: 12px;
+  }
+
+
+  .abpsProSearchPanel {
+    margin:
+      12px auto;
+
+    padding:
+      21px 17px;
+
+    border-radius: 20px;
+  }
+
+
+  .abpsProSearchHeader h2 {
+    font-size: 25px;
+  }
+
+
+  .abpsProSearchHeader p {
     font-size: 11px;
-    letter-spacing: 0.3px;
   }
 
-  .abpsnav-search-btn,
-  .abpsnav-account-icon,
-  .abpsnav-mobile-toggle {
+
+  .abpsProSearchInputBox {
+    height: 53px;
+
+    margin-top: 19px;
+  }
+
+
+  .abpsProSearchInputBox input {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE LOGO
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abpsProBrand {
+    height: 60px;
+  }
+
+
+  .abpsProNavbarLogo {
+    width: 180px;
+
+    height: 68px;
+
+    transform:
+      scale(1.04);
+  }
+
+
+  .abpsProBrand:hover
+  .abpsProNavbarLogo {
+    transform:
+      scale(1.06);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .abpsProNavbarInner {
+    width:
+      calc(100% - 14px);
+
+    min-height: 68px;
+  }
+
+
+  .abpsProIconButton,
+  .abpsProAccountButton,
+  .abpsProMobileButton {
     width: 36px;
+
     height: 36px;
-    flex-basis: 36px;
-    border-radius: 8px;
-    font-size: 14px;
+
+    font-size: 15px;
   }
 
-  .abpsnav-actions {
+
+  .abpsProNavbarActions {
     gap: 4px;
   }
 
-  .abpsnav-menu {
-    top: 72px;
-    left: 8px;
-    right: 8px;
-    padding: 9px;
+
+  .abpsProMobileNav {
+    max-height:
+      calc(100vh - 68px);
+
+    padding-left: 3%;
+
+    padding-right: 3%;
   }
 
-  .abpsnav-search-panel {
-    top: 72px;
-    left: 8px;
-    right: 8px;
-  }
 
-  .abpsnav-link,
-  .abpsnav-dropdown-trigger {
-    min-height: 46px;
-    padding: 0 12px;
+  .abpsProMobileLink {
     font-size: 14px;
   }
 
-  .abpsnav-dropdown-box a {
+
+  .abpsProMobileCampusItem {
+    min-height: 49px;
+
     font-size: 13px;
-    min-height: 44px;
   }
+
+
+  .abpsProSearchHeader h2 {
+    font-size: 22px;
+  }
+
+
+  .abpsProSearchHeader p {
+    font-size: 11px;
+  }
+
+
+  .abpsProSearchInputBox {
+    height: 51px;
+  }
+
+
+  .abpsProSearchInputBox input {
+    font-size: 12.5px;
+  }
+
+
+  .abpsProSearchResultContent small {
+    display: none;
+  }
+
 }
 
+
 /* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
+   SMALL MOBILE LOGO
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abpsProNavbarLogo {
+    width: 165px;
+
+    height: 64px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
 
 @media (max-width: 360px) {
-  .abpsnav-container {
-    width: calc(100% - 14px);
+
+  .abpsProNavbarLogo {
+    width: 145px;
+
+    height: 60px;
   }
 
-  .abpsnav-brand-text strong {
-    font-size: 10px;
-  }
 
-  .abpsnav-logo {
-    width: 38px;
-    height: 38px;
-    flex-basis: 38px;
-  }
-
-  .abpsnav-search-btn,
-  .abpsnav-account-icon,
-  .abpsnav-mobile-toggle {
+  .abpsProIconButton,
+  .abpsProAccountButton,
+  .abpsProMobileButton {
     width: 34px;
+
     height: 34px;
-    flex-basis: 34px;
   }
 
-  .abpsnav-menu {
-    left: 6px;
-    right: 6px;
-  }
-
-  .abpsnav-search-panel {
-    left: 6px;
-    right: 6px;
-  }
-}
-
-/* =========================================================
-   BODY LOCK WHEN MOBILE MENU IS OPEN
-   ========================================================= */
-
-body.abpsnav-mobile-lock,
-html.abpsnav-mobile-lock {
-  overflow: hidden !important;
-  overscroll-behavior: none;
-}
-
-.abps-page-content {
-  width: 100%;
-  max-width: 100%;
-  padding-top: 70px;
-  overflow-x: hidden;
-}
-
-@media (max-width: 768px) {
-  .abps-page-content {
-    padding-top: 68px;
-  }
-}
-
-@media (max-width: 430px) {
-  .abps-page-content {
-    padding-top: 66px;
-  }
 }

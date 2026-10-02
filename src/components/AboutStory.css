@@ -1,0 +1,883 @@
+/* =========================================================
+   ABPS ABOUT STORY — PREMIUM IMAGE + CARDS
+========================================================= */
+
+.abpsStoryPro {
+  width: 100%;
+  padding: 72px 28px 65px;
+  background: #f7f5ef;
+  overflow: hidden;
+}
+
+.abpsStoryProContainer {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.abpsStoryProTop {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.abpsStoryProLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+
+  color: #0877a9;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 2.2px;
+}
+
+.abpsStoryProLabel span {
+  width: 42px;
+  height: 2px;
+  background: #d6b36a;
+}
+
+.abpsStoryProTopLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(7, 26, 53, 0.13);
+}
+
+.abpsStoryProNumber {
+  color: #071a35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.abpsStoryProLayout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.05fr 0.7fr;
+  gap: 38px;
+  align-items: stretch;
+}
+
+/* =========================================================
+   IMAGE COLUMN
+========================================================= */
+
+.abpsStoryProImageColumn {
+  min-width: 0;
+}
+
+.abpsStoryProImageBox {
+  position: relative;
+
+  width: 100%;
+  height: 505px;
+
+  overflow: hidden;
+  background: #071a35;
+}
+
+/* Gold frame */
+
+.abpsStoryProImageBox::before {
+  content: "";
+
+  position: absolute;
+  z-index: 5;
+
+  top: 12px;
+  left: 12px;
+  right: -11px;
+  bottom: -11px;
+
+  border: 1px solid #d6b36a;
+
+  pointer-events: none;
+}
+
+/* IMAGE */
+
+.abpsStoryProImageBox img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center center;
+
+  image-rendering: auto;
+}
+
+/* Overlay */
+
+.abpsStoryProImageOverlay {
+  position: absolute;
+  z-index: 1;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(7, 26, 53, 0.78) 0%,
+    rgba(7, 26, 53, 0.05) 58%,
+    transparent 100%
+  );
+}
+
+/* Image text */
+
+.abpsStoryProImageText {
+  position: absolute;
+  z-index: 6;
+
+  left: 25px;
+  bottom: 27px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.abpsStoryProImageText span {
+  color: #d6b36a;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.abpsStoryProImageText strong {
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+/* 25 badge */
+
+.abpsStoryProImageCorner {
+  position: absolute;
+  z-index: 7;
+
+  top: 22px;
+  right: 20px;
+
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #d6b36a;
+}
+
+.abpsStoryProImageCorner span {
+  color: #071a35;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.abpsStoryProImageCorner small {
+  margin-top: 3px;
+
+  color: #071a35;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* Image bottom */
+
+.abpsStoryProImageBottom {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  padding: 14px 2px 0;
+}
+
+.abpsStoryProImageBottom span {
+  color: #0877a9;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.abpsStoryProImageBottom p {
+  margin: 0;
+
+  color: #596675;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.abpsStoryProContent {
+  min-width: 0;
+
+  padding: 10px 0;
+}
+
+.abpsStoryProEyebrow {
+  display: block;
+  margin-bottom: 13px;
+
+  color: #0877a9;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.abpsStoryProContent h2 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(45px, 4.4vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+
+.abpsStoryProContent h2 em {
+  display: block;
+
+  color: #0877a9;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.abpsStoryProGoldLine {
+  width: 70px;
+  height: 3px;
+
+  margin: 23px 0 23px;
+
+  background: #d6b36a;
+}
+
+.abpsStoryProLead {
+  margin: 0 0 13px;
+
+  color: #071a35;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.62;
+  font-weight: 600;
+}
+
+.abpsStoryProDescription {
+  margin: 0;
+
+  color: #5d6978;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Button */
+
+.abpsStoryProButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 27px;
+  padding: 14px 20px;
+
+  background: #071a35;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+
+  transition: background 0.25s ease;
+}
+
+.abpsStoryProButton:hover {
+  background: #0877a9;
+}
+
+.abpsStoryProButton svg {
+  color: #d6b36a;
+}
+
+/* =========================================================
+   RIGHT CARDS
+========================================================= */
+
+.abpsStoryProCards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-width: 0;
+}
+
+.abpsStoryProCard {
+  flex: 1;
+
+  padding: 19px 19px 18px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-left: 3px solid #d6b36a;
+}
+
+/* Card top */
+
+.abpsStoryProCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.abpsStoryProCardIcon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #071a35;
+  color: #d6b36a;
+}
+
+.abpsStoryProCardIcon svg {
+  font-size: 14px;
+}
+
+.abpsStoryProCardTop > span {
+  color: #b1b4b8;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.abpsStoryProCard h3 {
+  margin: 17px 0 8px;
+
+  color: #071a35;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.abpsStoryProCardLine {
+  width: 34px;
+  height: 2px;
+
+  margin-bottom: 10px;
+
+  background: #d6b36a;
+}
+
+.abpsStoryProCard p {
+  margin: 0;
+
+  color: #66717f;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.abpsStoryProBottom {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 28px;
+
+  margin-top: 35px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(7, 26, 53, 0.14);
+}
+
+.abpsStoryProBottomTitle {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.abpsStoryProBottomTitle svg {
+  color: #0877a9;
+  font-size: 13px;
+}
+
+.abpsStoryProBottomTitle span {
+  color: #071a35;
+
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
+.abpsStoryProBottom p {
+  margin: 0;
+
+  color: #071a35;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abpsStoryPro {
+    padding: 62px 22px 55px;
+  }
+
+  .abpsStoryProLayout {
+    grid-template-columns: 0.82fr 1fr;
+    gap: 34px;
+  }
+
+  .abpsStoryProCards {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .abpsStoryProCard {
+    min-height: 190px;
+  }
+
+  .abpsStoryProImageBox {
+    height: 470px;
+  }
+
+  .abpsStoryProContent h2 {
+    font-size: 50px;
+  }
+
+  .abpsStoryProLead {
+    font-size: 17px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .abpsStoryPro {
+    padding: 52px 17px 48px;
+  }
+
+  .abpsStoryProTop {
+    margin-bottom: 22px;
+  }
+
+  .abpsStoryProLabel {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    gap: 9px;
+  }
+
+  .abpsStoryProLabel span {
+    width: 27px;
+  }
+
+  .abpsStoryProNumber {
+    font-size: 13px;
+  }
+
+  .abpsStoryProLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  /* IMAGE FIRST */
+
+  .abpsStoryProImageColumn {
+    order: 1;
+  }
+
+  .abpsStoryProImageBox {
+    height: 390px;
+  }
+
+  .abpsStoryProImageText {
+    left: 20px;
+    bottom: 22px;
+  }
+
+  .abpsStoryProImageText strong {
+    font-size: 21px;
+  }
+
+  .abpsStoryProImageCorner {
+    width: 75px;
+    height: 75px;
+    top: 17px;
+    right: 15px;
+  }
+
+  .abpsStoryProImageCorner span {
+    font-size: 29px;
+  }
+
+  /* CONTENT */
+
+  .abpsStoryProContent {
+    order: 2;
+    padding: 0;
+  }
+
+  .abpsStoryProEyebrow {
+    font-size: 11px;
+    letter-spacing: 1.7px;
+  }
+
+  .abpsStoryProContent h2 {
+    font-size: 43px;
+    line-height: 1.04;
+    letter-spacing: -1.2px;
+  }
+
+  .abpsStoryProGoldLine {
+    width: 58px;
+    margin: 18px 0 19px;
+  }
+
+  .abpsStoryProLead {
+    font-size: 18px;
+    line-height: 1.58;
+  }
+
+  .abpsStoryProDescription {
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .abpsStoryProButton {
+    width: 100%;
+    padding: 15px 18px;
+    margin-top: 23px;
+    font-size: 14px;
+  }
+
+  /* CARDS */
+
+  .abpsStoryProCards {
+    order: 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .abpsStoryProCard {
+    padding: 17px;
+  }
+
+  .abpsStoryProCard h3 {
+    font-size: 23px;
+    margin-top: 13px;
+  }
+
+  .abpsStoryProCard p {
+    font-size: 13px;
+  }
+
+  /* BOTTOM */
+
+  .abpsStoryProBottom {
+    grid-template-columns: 1fr;
+    gap: 9px;
+
+    margin-top: 30px;
+  }
+
+  .abpsStoryProBottom p {
+    font-size: 19px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .abpsStoryPro {
+    padding: 45px 14px;
+  }
+
+  .abpsStoryProNumber {
+    display: none;
+  }
+
+  .abpsStoryProImageBox {
+    height: 330px;
+  }
+
+  .abpsStoryProImageText strong {
+    font-size: 19px;
+  }
+
+  .abpsStoryProContent h2 {
+    font-size: 38px;
+  }
+
+  .abpsStoryProLead {
+    font-size: 17px;
+  }
+
+  .abpsStoryProDescription {
+    font-size: 15px;
+  }
+
+  .abpsStoryProCard h3 {
+    font-size: 22px;
+  }
+
+  .abpsStoryProBottom p {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   ABPS STORY CARDS
+   RESPONSIVE BIGGER FONT SIZE
+   PASTE AT END OF CSS
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abpsStoryProCard {
+    min-height: 210px;
+
+    padding: 22px 22px 21px;
+  }
+
+  /* CARD ICON */
+
+  .abpsStoryProCardIcon {
+    width: 43px;
+    height: 43px;
+
+    font-size: 17px;
+  }
+
+  .abpsStoryProCardIcon svg {
+    font-size: 17px;
+  }
+
+  /* CARD NUMBER / SMALL TOP TEXT */
+
+  .abpsStoryProCardTop > span {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+  /* CARD HEADING */
+
+  .abpsStoryProCard h3 {
+    margin: 18px 0 10px;
+
+    font-size: 29px;
+
+    line-height: 1.12;
+  }
+
+  /* GOLD LINE */
+
+  .abpsStoryProCardLine {
+    width: 40px;
+
+    margin-bottom: 12px;
+  }
+
+  /* CARD DESCRIPTION */
+
+  .abpsStoryProCard p {
+    font-size: 15.5px;
+
+    line-height: 1.68;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .abpsStoryProCards {
+    gap: 14px;
+  }
+
+  .abpsStoryProCard {
+    min-height: auto;
+
+    padding: 22px 20px 23px;
+  }
+
+  /* CARD TOP */
+
+  .abpsStoryProCardTop {
+    margin-bottom: 3px;
+  }
+
+  /* ICON */
+
+  .abpsStoryProCardIcon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 18px;
+  }
+
+  .abpsStoryProCardIcon svg {
+    font-size: 18px;
+  }
+
+  /* SMALL NUMBER / LABEL */
+
+  .abpsStoryProCardTop > span {
+    font-size: 12.5px;
+
+    letter-spacing: 1.4px;
+  }
+
+  /* CARD HEADING */
+
+  .abpsStoryProCard h3 {
+    margin: 17px 0 10px;
+
+    font-size: 30px;
+
+    line-height: 1.12;
+  }
+
+  /* LINE */
+
+  .abpsStoryProCardLine {
+    width: 42px;
+
+    height: 2px;
+
+    margin-bottom: 12px;
+  }
+
+  /* CARD PARAGRAPH */
+
+  .abpsStoryProCard p {
+    font-size: 16.5px;
+
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .abpsStoryProCards {
+    gap: 12px;
+  }
+
+  .abpsStoryProCard {
+    padding: 20px 18px 21px;
+  }
+
+  /* ICON */
+
+  .abpsStoryProCardIcon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 17px;
+  }
+
+  .abpsStoryProCardIcon svg {
+    font-size: 17px;
+  }
+
+  /* SMALL LABEL */
+
+  .abpsStoryProCardTop > span {
+    font-size: 12px;
+  }
+
+  /* HEADING */
+
+  .abpsStoryProCard h3 {
+    font-size: 28px;
+
+    line-height: 1.12;
+  }
+
+  /* DESCRIPTION */
+
+  .abpsStoryProCard p {
+    font-size: 16px;
+
+    line-height: 1.68;
+  }
+}

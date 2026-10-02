@@ -1,5 +1,6 @@
-
-import React, { useEffect, useState } from "react";
+import React, {
+  useState,
+} from "react";
 
 import {
   FaTimes,
@@ -16,40 +17,63 @@ import {
 
 import "./InquiryPopup.css";
 
-const InquiryPopup = () => {
-  const [showPopup, setShowPopup] = useState(false);
+import {
+  addInquiry,
+} from "../data/inquiriesData";
 
-  const [showError, setShowError] = useState(false);
-  const [errorTitle, setErrorTitle] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
 
-  const [submitted, setSubmitted] = useState(false);
+const initialForm = {
+  name: "",
+  phone: "",
+  email: "",
+  inquiryType: "",
+  className: "",
+  description: "",
+};
 
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    inquiryType: "",
-    className: "",
-    description: "",
-  });
 
-  // Popup website open hone ke 1 second baad show hoga
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowPopup(true);
-    }, 1000);
+const InquiryPopup = ({
+  onClose,
+}) => {
 
-    return () => clearTimeout(timer);
-  }, []);
+  const [formData, setFormData] =
+    useState(initialForm);
 
-  // Input change
+  const [showError, setShowError] =
+    useState(false);
+
+  const [errorTitle, setErrorTitle] =
+    useState("");
+
+  const [errorMessage, setErrorMessage] =
+    useState("");
+
+  const [submitted, setSubmitted] =
+    useState(false);
+
+  const [isSubmitting, setIsSubmitting] =
+    useState(false);
+
+
+  // ==========================================
+  // INPUT CHANGE
+  // ==========================================
+
   const handleChange = (e) => {
-    const { name, value } = e.target;
 
-    // Phone me sirf numbers aur maximum 10 digits
+    const {
+      name,
+      value,
+    } = e.target;
+
+
+    // Phone - numbers only
     if (name === "phone") {
-      const onlyNumbers = value.replace(/\D/g, "").slice(0, 10);
+
+      const onlyNumbers =
+        value
+          .replace(/\D/g, "")
+          .slice(0, 10);
 
       setFormData((prev) => ({
         ...prev,
@@ -59,258 +83,414 @@ const InquiryPopup = () => {
       return;
     }
 
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
     }));
+
+
+    // Inquiry type change hone par
+    // unnecessary class clear
+    if (
+      name === "inquiryType" &&
+      value !== "New Admission" &&
+      value !== "Existing Student"
+    ) {
+      setFormData((prev) => ({
+        ...prev,
+        inquiryType: value,
+        className: "",
+      }));
+    }
   };
 
-  // Validation error popup
-  const showValidationError = (title, message) => {
+
+  // ==========================================
+  // ERROR POPUP
+  // ==========================================
+
+  const showValidationError = (
+    title,
+    message
+  ) => {
+
     setErrorTitle(title);
     setErrorMessage(message);
     setShowError(true);
   };
 
-  // Form validation
-  const validateForm = () => {
-    const name = formData.name.trim();
-    const phone = formData.phone.trim();
-    const email = formData.email.trim();
-    const description = formData.description.trim();
 
-    // Name
+  // ==========================================
+  // VALIDATION
+  // ==========================================
+
+  const validateForm = () => {
+
+    const name =
+      formData.name.trim();
+
+    const phone =
+      formData.phone.trim();
+
+    const email =
+      formData.email.trim();
+
+    const description =
+      formData.description.trim();
+
+
+    // NAME
     if (!name) {
+
       showValidationError(
         "Name Required",
         "Please enter your name."
       );
+
       return false;
     }
 
+
     if (name.length < 3) {
+
       showValidationError(
         "Invalid Name",
         "Name should contain at least 3 characters."
       );
+
       return false;
     }
 
-    if (!/^[A-Za-z\s.'-]+$/.test(name)) {
+
+    if (
+      !/^[A-Za-z\s.'-]+$/.test(
+        name
+      )
+    ) {
+
       showValidationError(
         "Invalid Name",
         "Please enter a valid name using letters only."
       );
+
       return false;
     }
 
-    // Phone
+
+    // PHONE
     if (!phone) {
+
       showValidationError(
         "Phone Number Required",
         "Please enter your 10-digit phone number."
       );
+
       return false;
     }
 
-    if (!/^[6-9]\d{9}$/.test(phone)) {
+
+    if (
+      !/^[6-9]\d{9}$/.test(
+        phone
+      )
+    ) {
+
       showValidationError(
         "Invalid Phone Number",
         "Please enter a valid 10-digit Indian mobile number."
       );
+
       return false;
     }
 
-    // Inquiry type
+
+    // INQUIRY TYPE
     if (!formData.inquiryType) {
+
       showValidationError(
         "Inquiry Type Required",
         "Please select what you would like to enquire about."
       );
+
       return false;
     }
 
-    // Class only for admission / existing student
+
+    // CLASS
+    const needsClass =
+      formData.inquiryType ===
+        "New Admission" ||
+      formData.inquiryType ===
+        "Existing Student";
+
+
     if (
-      (formData.inquiryType === "New Admission" ||
-        formData.inquiryType === "Existing Student") &&
+      needsClass &&
       !formData.className
     ) {
+
       showValidationError(
         "Class Not Selected",
         "Please select the class related to your inquiry."
       );
+
       return false;
     }
 
-    // Email optional but validate if entered
+
+    // EMAIL OPTIONAL
     if (
       email &&
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+        email
+      )
     ) {
+
       showValidationError(
         "Invalid Email",
         "Please enter a valid email address."
       );
+
       return false;
     }
 
-    // Description
+
+    // DESCRIPTION
     if (!description) {
+
       showValidationError(
         "Description Required",
         "Please briefly describe your inquiry so our team can assist you."
       );
+
       return false;
     }
 
-    if (description.length < 10) {
+
+    if (
+      description.length < 10
+    ) {
+
       showValidationError(
         "Description Too Short",
         "Please provide a little more information about your inquiry."
       );
+
       return false;
     }
+
 
     return true;
   };
 
-  // Submit form
+
+  // ==========================================
+  // SUBMIT
+  // ==========================================
+
   const handleSubmit = (e) => {
+
     e.preventDefault();
 
-    // Validation
+
+    if (isSubmitting) {
+      return;
+    }
+
+
     if (!validateForm()) {
       return;
     }
 
-    /*
-      =========================================
-      SAVE INQUIRY INTO LOCAL STORAGE
-      =========================================
-    */
 
-    // Pehle se saved inquiries get karo
-    const existingInquiries =
-      JSON.parse(localStorage.getItem("schoolInquiries")) || [];
+    setIsSubmitting(true);
 
-    // New inquiry object
-    const newInquiry = {
-      id: `INQ-${Date.now()}`,
 
-      name: formData.name.trim(),
+    try {
 
-      phone: formData.phone.trim(),
+      // --------------------------------------
+      // CENTRAL DATA FILE
+      // --------------------------------------
 
-      email: formData.email.trim(),
+      addInquiry({
+        name:
+          formData.name.trim(),
 
-      inquiryType: formData.inquiryType,
+        phone:
+          formData.phone.trim(),
 
-      className: formData.className,
+        email:
+          formData.email
+            .trim()
+            .toLowerCase(),
 
-      description: formData.description.trim(),
+        inquiryType:
+          formData.inquiryType,
 
-      submittedAt: new Date().toLocaleString("en-IN"),
+        className:
+          formData.className,
 
-      timestamp: Date.now(),
-    };
-
-    // New inquiry ko existing inquiries ke saath add karo
-    const updatedInquiries = [
-      ...existingInquiries,
-      newInquiry,
-    ];
-
-    // Local Storage me save
-    localStorage.setItem(
-      "schoolInquiries",
-      JSON.stringify(updatedInquiries)
-    );
-
-    // Success screen
-    setSubmitted(true);
-
-    // 2.5 second baad popup close
-    setTimeout(() => {
-      setShowPopup(false);
-      setSubmitted(false);
-
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        inquiryType: "",
-        className: "",
-        description: "",
+        description:
+          formData.description.trim(),
       });
-    }, 2500);
+
+
+      // SUCCESS
+      setSubmitted(true);
+
+
+      // Clear form
+      setFormData(initialForm);
+
+
+      // Success screen show karne ke baad close
+      setTimeout(() => {
+
+        setSubmitted(false);
+
+        if (
+          typeof onClose ===
+          "function"
+        ) {
+          onClose();
+        }
+
+      }, 2500);
+
+
+    } catch (error) {
+
+      console.error(
+        "Inquiry submit error:",
+        error
+      );
+
+
+      showValidationError(
+        "Unable to Submit",
+        "Something went wrong while submitting your inquiry. Please try again."
+      );
+
+
+    } finally {
+
+      setIsSubmitting(false);
+
+    }
   };
 
-  // Close main popup
+
+  // ==========================================
+  // CLOSE
+  // ==========================================
+
   const closeMainPopup = () => {
-    setShowPopup(false);
+
     setShowError(false);
+
+    if (
+      typeof onClose ===
+      "function"
+    ) {
+      onClose();
+    }
   };
 
-  // Agar popup show nahi hai
-  if (!showPopup) {
-    return null;
-  }
 
-  // Class field show/hide
+  // ==========================================
+  // CONDITIONAL CLASS FIELD
+  // ==========================================
+
   const showClassField =
-    formData.inquiryType === "New Admission" ||
-    formData.inquiryType === "Existing Student";
+    formData.inquiryType ===
+      "New Admission" ||
+    formData.inquiryType ===
+      "Existing Student";
+
 
   return (
-    <div className="abinq-overlay">
 
-      <div className="abinq-modal">
+    <div
+      className="abinq-overlay"
+      role="presentation"
+    >
 
-        {/* Close Button */}
+      <div
+        className="abinq-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="inquiry-title"
+      >
+
+        {/* ===============================
+            CLOSE
+        =============================== */}
+
         <button
           type="button"
           className="abinq-close"
           onClick={closeMainPopup}
-          aria-label="Close"
+          aria-label="Close inquiry form"
         >
           <FaTimes />
         </button>
 
-        {/* Header */}
+
+        {/* ===============================
+            HEADER
+        =============================== */}
+
         <div className="abinq-top">
 
           <div className="abinq-badge">
             <FaGraduationCap />
           </div>
 
+
           <div>
+
             <span className="abinq-small-title">
               SCHOOL INQUIRY
             </span>
 
-            <h2>How Can We Help?</h2>
+            <h2 id="inquiry-title">
+              How Can We Help?
+            </h2>
+
           </div>
 
         </div>
 
+
         {!submitted ? (
+
           <>
-            {/* Description */}
+
+            {/* DESCRIPTION */}
+
             <p className="abinq-description">
-              Whether you are a parent, student, teacher, staff
-              member, or visitor, share your inquiry and our
-              school team will get in touch with you.
+              Whether you are a parent,
+              student, teacher, staff member,
+              or visitor, share your inquiry
+              and our school team will get in
+              touch with you.
             </p>
 
-            {/* Form */}
+
+            {/* ===========================
+                FORM
+            =========================== */}
+
             <form
               className="abinq-form"
               onSubmit={handleSubmit}
               noValidate
             >
 
-              {/* Name */}
+
+              {/* NAME */}
+
               <div className="abinq-field">
 
                 <FaUser />
@@ -322,11 +502,14 @@ const InquiryPopup = () => {
                   onChange={handleChange}
                   placeholder="Your Name"
                   autoComplete="name"
+                  maxLength={60}
                 />
 
               </div>
 
-              {/* Phone + Email */}
+
+              {/* PHONE + EMAIL */}
+
               <div className="abinq-row">
 
                 <div className="abinq-field">
@@ -341,10 +524,11 @@ const InquiryPopup = () => {
                     placeholder="Phone Number"
                     inputMode="numeric"
                     autoComplete="tel"
-                    maxLength="10"
+                    maxLength={10}
                   />
 
                 </div>
+
 
                 <div className="abinq-field">
 
@@ -355,22 +539,27 @@ const InquiryPopup = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="Email Address"
+                    placeholder="Email Address (Optional)"
                     autoComplete="email"
+                    maxLength={100}
                   />
 
                 </div>
 
               </div>
 
-              {/* Inquiry Type */}
+
+              {/* INQUIRY TYPE */}
+
               <div className="abinq-field">
 
                 <FaBriefcase />
 
                 <select
                   name="inquiryType"
-                  value={formData.inquiryType}
+                  value={
+                    formData.inquiryType
+                  }
                   onChange={handleChange}
                 >
 
@@ -414,15 +603,20 @@ const InquiryPopup = () => {
 
               </div>
 
-              {/* Class */}
+
+              {/* CLASS */}
+
               {showClassField && (
+
                 <div className="abinq-field">
 
                   <FaGraduationCap />
 
                   <select
                     name="className"
-                    value={formData.className}
+                    value={
+                      formData.className
+                    }
                     onChange={handleChange}
                   >
 
@@ -442,157 +636,189 @@ const InquiryPopup = () => {
                       UKG
                     </option>
 
-                    <option value="1">
-                      Class 1
-                    </option>
+                    {Array.from(
+                      { length: 12 },
+                      (_, index) => {
 
-                    <option value="2">
-                      Class 2
-                    </option>
+                        const classNumber =
+                          index + 1;
 
-                    <option value="3">
-                      Class 3
-                    </option>
-
-                    <option value="4">
-                      Class 4
-                    </option>
-
-                    <option value="5">
-                      Class 5
-                    </option>
-
-                    <option value="6">
-                      Class 6
-                    </option>
-
-                    <option value="7">
-                      Class 7
-                    </option>
-
-                    <option value="8">
-                      Class 8
-                    </option>
-
-                    <option value="9">
-                      Class 9
-                    </option>
-
-                    <option value="10">
-                      Class 10
-                    </option>
-
-                    <option value="11">
-                      Class 11
-                    </option>
-
-                    <option value="12">
-                      Class 12
-                    </option>
+                        return (
+                          <option
+                            key={
+                              classNumber
+                            }
+                            value={`Class ${classNumber}`}
+                          >
+                            Class{" "}
+                            {classNumber}
+                          </option>
+                        );
+                      }
+                    )}
 
                   </select>
 
                 </div>
+
               )}
 
-              {/* Description */}
-              <div className="abinq-field abinq-textarea-field">
+
+              {/* DESCRIPTION */}
+
+              <div
+                className="
+                  abinq-field
+                  abinq-textarea-field
+                "
+              >
 
                 <FaCommentDots />
 
                 <textarea
                   name="description"
-                  value={formData.description}
+                  value={
+                    formData.description
+                  }
                   onChange={handleChange}
                   placeholder="Tell us about your inquiry..."
-                  rows="3"
-                  maxLength="500"
+                  rows={4}
+                  maxLength={500}
                 />
+
+                <span className="abinq-character-count">
+                  {
+                    formData
+                      .description
+                      .length
+                  }
+                  /500
+                </span>
 
               </div>
 
-              {/* Submit */}
+
+              {/* SUBMIT */}
+
               <button
                 type="submit"
                 className="abinq-submit"
+                disabled={isSubmitting}
               >
 
-                <span>Send Inquiry</span>
+                <span>
+                  {isSubmitting
+                    ? "Submitting..."
+                    : "Send Inquiry"}
+                </span>
 
-                <FaArrowRight />
+                {!isSubmitting && (
+                  <FaArrowRight />
+                )}
 
               </button>
 
             </form>
 
-            {/* Footer */}
+
+            {/* FOOTER */}
+
             <div className="abinq-footer">
 
-              <span></span>
+              <span />
 
               <p>
-                Our school team will review your inquiry and
-                contact you shortly.
+                Your inquiry will be
+                securely forwarded to
+                our school administration
+                team.
               </p>
 
-              <span></span>
+              <span />
 
             </div>
+
           </>
+
         ) : (
 
-          /* Success */
+          /* =============================
+             SUCCESS
+          ============================= */
+
           <div className="abinq-success">
 
             <div className="abinq-success-icon">
               <FaCheckCircle />
             </div>
 
+            <span className="abinq-success-label">
+              SUBMITTED SUCCESSFULLY
+            </span>
+
             <h3>
-              Inquiry Submitted!
+              Inquiry Received!
             </h3>
 
             <p>
-              Thank you for contacting AB Public School.
-              Our concerned team member will contact you
-              shortly regarding your inquiry.
+              Thank you for contacting
+              AB Public School. Your
+              inquiry has been forwarded
+              to our administration team.
             </p>
 
           </div>
 
         )}
 
-        {/* Error Popup */}
+
+        {/* ===============================
+            ERROR POPUP
+        =============================== */}
+
         {showError && (
 
           <div className="abinq-error-overlay">
 
-            <div className="abinq-error-box">
+            <div
+              className="abinq-error-box"
+              role="alertdialog"
+              aria-modal="true"
+            >
 
               <button
                 type="button"
                 className="abinq-error-close"
-                onClick={() => setShowError(false)}
+                onClick={() =>
+                  setShowError(false)
+                }
+                aria-label="Close error"
               >
                 <FaTimes />
               </button>
+
 
               <div className="abinq-error-icon">
                 <FaExclamationTriangle />
               </div>
 
+
               <h3>
                 {errorTitle}
               </h3>
+
 
               <p>
                 {errorMessage}
               </p>
 
+
               <button
                 type="button"
                 className="abinq-error-btn"
-                onClick={() => setShowError(false)}
+                onClick={() =>
+                  setShowError(false)
+                }
               >
                 Okay
               </button>

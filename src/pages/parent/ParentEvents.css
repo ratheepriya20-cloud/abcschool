@@ -1,0 +1,184 @@
+/* =========================================================
+   PARENT EVENTS
+========================================================= */
+
+.pp-page-hero {
+  margin-bottom: 24px;
+  padding: 30px 32px;
+
+  border: 1px solid rgba(8, 119, 169, 0.12);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eef9fd
+    );
+}
+
+.pp-eyebrow {
+  color: #0877a9;
+
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: 1.4px;
+}
+
+.pp-page-hero h1 {
+  margin: 7px 0 10px;
+
+  color: #071a35;
+
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 46px;
+}
+
+.pp-page-hero p {
+  margin: 0;
+
+  color: #68798a;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.pp-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pp-event-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 24px;
+
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 21px;
+
+  background: #ffffff;
+
+  box-shadow: 0 11px 30px rgba(7, 26, 53, 0.05);
+
+  transition: 0.25s ease;
+}
+
+.pp-event-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 42px rgba(7, 26, 53, 0.09);
+}
+
+.pp-event-number {
+  position: absolute;
+
+  top: 10px;
+  right: 15px;
+
+  color: rgba(7, 26, 53, 0.055);
+
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.pp-event-card-icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 19px;
+
+  border-radius: 15px;
+
+  background: #071a35;
+
+  color: #d6b36a;
+
+  font-size: 20px;
+}
+
+.pp-event-card > span {
+  color: #0877a9;
+
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 1.2px;
+}
+
+.pp-event-card h2 {
+  margin: 8px 0 18px;
+
+  color: #071a35;
+
+  font-size: 22px;
+}
+
+.pp-event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pp-event-info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: 0;
+
+  color: #68798a;
+
+  font-size: 12px;
+}
+
+.pp-event-info svg {
+  color: #0877a9;
+}
+
+.pp-event-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 22px;
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(7, 26, 53, 0.08);
+
+  color: #0877a9;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 1100px) {
+  .pp-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .pp-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-page-hero {
+    padding: 21px 18px;
+  }
+
+  .pp-page-hero h1 {
+    font-size: 32px;
+  }
+
+  .pp-event-card {
+    padding: 19px;
+  }
+}

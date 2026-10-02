@@ -1,15 +1,19 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import {
   FaArrowRight,
   FaBookOpen,
   FaFlask,
   FaLaptop,
   FaUserGraduate,
+  FaAtom,
+  FaQuoteLeft,
 } from "react-icons/fa";
+
 import "./AcademicsSection.css";
 
-import academicImage from "../assets/academic.jpg";
+import academicImage from "../assets/campus-students.jpg";
 
 const AcademicsSection = () => {
   const navigate = useNavigate();
@@ -36,122 +40,193 @@ const AcademicsSection = () => {
   ];
 
   return (
-    <section className="academicShowcase">
-      <div className="academicShowcaseContainer">
+    <section className="abAcademic">
+      {/* BACKGROUND DECORATION */}
+      <div className="abAcademicBgCircle abAcademicBgCircleOne"></div>
+      <div className="abAcademicBgCircle abAcademicBgCircleTwo"></div>
 
-        {/* ================= LEFT CONTENT ================= */}
-        <div className="academicShowcaseContent">
+      <div className="abAcademicContainer">
+        {/* =====================================================
+            LEFT CONTENT
+        ===================================================== */}
+        <div className="abAcademicContent">
+          {/* LABEL */}
+          <div className="abAcademicLabel">
+            <span className="abAcademicLabelLine"></span>
 
-          <div className="academicSectionLabel">
-            <span></span>
+            <div className="abAcademicLabelIcon">
+              <FaBookOpen />
+            </div>
+
             <p>ACADEMICS & LEARNING</p>
+
+            <span className="abAcademicLabelLine"></span>
           </div>
 
-          <h2>
-            Excellence <span>Begins With</span> Learning
+          {/* HEADING */}
+          <h2 className="abAcademicHeading">
+            Excellence
+            <span>Begins With</span>
+            Learning
           </h2>
 
-          <p className="academicShowcaseIntro">
+          <div className="abAcademicHeadingLine"></div>
+
+          {/* DESCRIPTION */}
+          <p className="abAcademicIntro">
             At our school, education goes beyond textbooks. We create an
             engaging environment where students build knowledge, confidence,
             creativity and skills for the future.
           </p>
 
-          {/* Academic Features */}
-          <div className="academicFeatureList">
-
+          {/* ===================================================
+              FEATURE CARDS
+          =================================================== */}
+          <div className="abAcademicFeatures">
             {features.map((feature) => (
-              <div
-                className="academicFeatureItem"
-                key={feature.number}
-              >
-                <div className="academicFeatureNumber">
+              <div className="abAcademicFeature" key={feature.number}>
+                {/* NUMBER */}
+                <div className="abAcademicFeatureNumber">
                   {feature.number}
                 </div>
 
-                <div className="academicFeatureIcon">
+                {/* ICON */}
+                <div className="abAcademicFeatureIcon">
                   {feature.icon}
                 </div>
 
-                <div className="academicFeatureInfo">
+                {/* TEXT */}
+                <div className="abAcademicFeatureText">
                   <h3>{feature.title}</h3>
                   <p>{feature.text}</p>
                 </div>
+
+                {/* ARROW */}
+                <div className="abAcademicFeatureArrow">
+                  <FaArrowRight />
+                </div>
               </div>
             ))}
-
           </div>
 
-          {/* Bottom Area */}
-          <div className="academicShowcaseBottom">
+          {/* ===================================================
+              BOTTOM
+          =================================================== */}
+          <div className="abAcademicBottom">
+            <button
+              type="button"
+              className="abAcademicButton"
+              onClick={() => navigate("/academics")}
+            >
+              <span>Explore Academics</span>
 
-            <div className="academicBottomText">
-              <div className="academicBottomIcon">
+              <b>
+                <FaArrowRight />
+              </b>
+            </button>
+
+            <div className="abAcademicFuture">
+              <div className="abAcademicFutureIcon">
                 <FaBookOpen />
               </div>
 
               <div>
                 <strong>Future Ready Education</strong>
-                <span>Knowledge • Skills • Character</span>
+                <span>KNOWLEDGE • SKILLS • CHARACTER</span>
               </div>
             </div>
-
-            <button
-              className="academicExploreBtn"
-              onClick={() => navigate("/academics")}
-            >
-              Explore Academics
-              <FaArrowRight />
-            </button>
-
           </div>
-
         </div>
 
-        {/* ================= RIGHT VISUAL ================= */}
-        <div className="academicShowcaseVisual">
-
-          <div className="academicImageFrame">
-
-            <div className="academicImageGoldBorder"></div>
-
-            <img
-              src={academicImage}
-              alt="Academic learning at school"
-            />
-
-            <div className="academicImageShade"></div>
-
-            <div className="academicImageContent">
-              <span>LEARN • GROW • LEAD</span>
-              <h3>
-                Education With
-                <br />
-                A Purpose
-              </h3>
-            </div>
-
+        {/* =====================================================
+            RIGHT VISUAL
+        ===================================================== */}
+        <div className="abAcademicVisual">
+          {/* BIG BACK NUMBER */}
+          <div className="abAcademicBigNumber">
+            01
           </div>
 
-          {/* Floating Academic Badge */}
-          <div className="academicFloatingBadge">
-            <div className="academicBadgeIcon">
+          {/* DOT PATTERN */}
+          <div className="abAcademicDots">
+            {Array.from({ length: 12 }).map((_, index) => (
+              <span key={index}></span>
+            ))}
+          </div>
+
+          {/* BACK NAVY SHAPE */}
+          <div className="abAcademicBackShape"></div>
+
+          {/* MAIN IMAGE */}
+          <div className="abAcademicImageFrame">
+            <img
+              src={academicImage}
+              alt="Students learning at AB Public School"
+            />
+
+            <div className="abAcademicImageOverlay"></div>
+
+            {/* IMAGE TEXT */}
+            <div className="abAcademicImageText">
+              <FaQuoteLeft />
+
+              <small>LEARN • GROW • LEAD</small>
+
+              <h3>
+                Education With
+                <span>A Purpose</span>
+              </h3>
+
+              <div className="abAcademicImageTextLine"></div>
+            </div>
+          </div>
+
+          {/* ===================================================
+              SMART LEARNING CARD
+          =================================================== */}
+          <div className="abAcademicSmartCard">
+            <div className="abAcademicSmartIcon">
               <FaLaptop />
             </div>
 
             <div>
               <strong>Smart Learning</strong>
               <span>Modern Education</span>
+              <small>for Brighter Futures</small>
+            </div>
+
+            <i></i>
+          </div>
+
+          {/* ===================================================
+              SCIENCE FLOATING CARD
+          =================================================== */}
+          <div className="abAcademicScience">
+            <div className="abAcademicScienceImage">
+              <img
+                src={academicImage}
+                alt="Practical academic learning"
+              />
+            </div>
+
+            <div className="abAcademicScienceBadge">
+              <FaAtom />
+
+              <span>
+                DISCOVERY
+                <small>CREATIVITY</small>
+                <small>PROGRESS</small>
+              </span>
             </div>
           </div>
 
-          {/* Gold Number */}
-          <div className="academicSideNumber">
-            01
+          {/* SIDE TEXT */}
+          <div className="abAcademicSideWords">
+            <span>LEARN</span>
+            <span>GROW</span>
+            <span>LEAD</span>
           </div>
-
         </div>
-
       </div>
     </section>
   );

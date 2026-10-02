@@ -1,0 +1,987 @@
+/* ======================================================
+   ABPS ACCOUNT AUTH
+====================================================== */
+
+.abpsAccountAuthOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: rgba(3, 15, 31, 0.72);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* ======================================================
+   MODAL
+====================================================== */
+
+.abpsAccountAuthModal {
+  position: relative;
+
+  width: min(980px, 100%);
+  min-height: 610px;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 30px 80px rgba(3, 15, 31, 0.28);
+
+  animation: abpsAccountAuthAppear 0.3s ease;
+}
+
+@keyframes abpsAccountAuthAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ======================================================
+   CLOSE BUTTON
+====================================================== */
+
+.abpsAccountAuthClose {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 5;
+
+  width: 42px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.abpsAccountAuthClose:hover {
+  background: #ffffff;
+  color: #061a35;
+
+  transform: rotate(90deg);
+}
+
+
+/* ======================================================
+   LEFT VISUAL
+====================================================== */
+
+.abpsAccountAuthVisual {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 58px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(231, 110, 96, 0.35),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #061a35 0%,
+      #0a294b 55%,
+      #123c61 100%
+    );
+
+  color: #ffffff;
+}
+
+.abpsAccountAuthVisual::before {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -130px;
+  bottom: -120px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+}
+
+.abpsAccountAuthVisual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  right: 70px;
+  bottom: -85px;
+
+  border: 1px solid rgba(231, 110, 96, 0.35);
+
+  border-radius: 50%;
+}
+
+.abpsAccountAuthVisualIcon {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 28px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+
+  color: #f07f70;
+
+  font-size: 29px;
+}
+
+.abpsAccountAuthVisualLabel {
+  position: relative;
+
+  margin-bottom: 14px;
+
+  color: #f07f70;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.2px;
+}
+
+.abpsAccountAuthVisual h2 {
+  position: relative;
+
+  max-width: 400px;
+
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 4vw, 48px);
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+}
+
+.abpsAccountAuthVisual p {
+  position: relative;
+
+  max-width: 390px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.abpsAccountAuthSecurity {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  width: fit-content;
+
+  margin-top: 45px;
+
+  padding: 14px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.abpsAccountAuthSecurity > svg {
+  color: #f07f70;
+  font-size: 18px;
+}
+
+.abpsAccountAuthSecurity div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.abpsAccountAuthSecurity strong {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.abpsAccountAuthSecurity span {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+}
+
+
+/* ======================================================
+   RIGHT CONTENT
+====================================================== */
+
+.abpsAccountAuthContent {
+  display: flex;
+  align-items: center;
+
+  padding: 58px 64px;
+
+  background: #ffffff;
+}
+
+.abpsAccountAuthPanel {
+  width: 100%;
+  max-width: 510px;
+
+  margin: 0 auto;
+}
+
+.abpsAccountAuthEyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #e76e60;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abpsAccountAuthPanel h1 {
+  margin: 0 0 12px;
+
+  color: #061a35;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 4vw, 44px);
+  line-height: 1.1;
+}
+
+.abpsAccountAuthIntro {
+  max-width: 470px;
+
+  margin: 0 0 34px;
+
+  color: #687486;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ======================================================
+   ACCOUNT TYPE CARDS
+====================================================== */
+
+.abpsAccountTypeGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.abpsAccountTypeCard {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 19px;
+
+  border: 1px solid #e7eaf0;
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.abpsAccountTypeCard:hover {
+  transform: translateY(-2px);
+
+  border-color: #e76e60;
+
+  background: #fffaf9;
+
+  box-shadow:
+    0 12px 30px rgba(6, 26, 53, 0.08);
+}
+
+.abpsAccountTypeIcon {
+  flex: 0 0 48px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #fce8e3;
+
+  color: #e76e60;
+
+  font-size: 19px;
+}
+
+.abpsAccountTypeText {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.abpsAccountTypeText strong {
+  color: #061a35;
+
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.abpsAccountTypeText small {
+  color: #7a8492;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.abpsAccountTypeArrow {
+  color: #9ca5b1;
+
+  transition: 0.25s ease;
+}
+
+.abpsAccountTypeCard:hover .abpsAccountTypeArrow {
+  color: #e76e60;
+  transform: translateX(4px);
+}
+
+
+/* ======================================================
+   NOTE
+====================================================== */
+
+.abpsAccountAuthNote {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-top: 25px;
+  padding: 14px 15px;
+
+  border-radius: 13px;
+
+  background: #f7f8fa;
+
+  color: #687486;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.abpsAccountAuthNote svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #e76e60;
+}
+
+
+/* ======================================================
+   BACK BUTTON
+====================================================== */
+
+.abpsAccountBackButton {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 24px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #6f7b89;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.abpsAccountBackButton:hover {
+  color: #e76e60;
+}
+
+.abpsAccountBackButton svg {
+  font-size: 11px;
+}
+
+
+/* ======================================================
+   FORM
+====================================================== */
+
+.abpsAccountLoginForm {
+  display: flex;
+  flex-direction: column;
+
+  gap: 19px;
+}
+
+.abpsAccountField {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.abpsAccountField label {
+  color: #18283d;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.abpsAccountInputWrap {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 53px;
+
+  border: 1px solid #e1e5eb;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.abpsAccountInputWrap:focus-within {
+  border-color: #e76e60;
+
+  box-shadow:
+    0 0 0 4px rgba(231, 110, 96, 0.09);
+}
+
+.abpsAccountInputWrap > svg {
+  flex-shrink: 0;
+
+  margin-left: 16px;
+
+  color: #9aa4b1;
+
+  font-size: 14px;
+}
+
+.abpsAccountInputWrap input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 15px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #061a35;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+.abpsAccountInputWrap input::placeholder {
+  color: #aab1bb;
+}
+
+.abpsAccountPasswordToggle {
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #9099a6;
+
+  cursor: pointer;
+}
+
+.abpsAccountPasswordToggle:hover {
+  color: #e76e60;
+}
+
+
+/* ======================================================
+   LOGIN BUTTON
+====================================================== */
+
+.abpsAccountLoginButton {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 4px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: #061a35;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.abpsAccountLoginButton:hover:not(:disabled) {
+  background: #e76e60;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(231, 110, 96, 0.2);
+}
+
+.abpsAccountLoginButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* ======================================================
+   MESSAGES
+====================================================== */
+
+.abpsAccountAuthMessage {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 12px 14px;
+
+  border-radius: 11px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.abpsAccountAuthError {
+  background: #fff0ee;
+  color: #b44135;
+}
+
+.abpsAccountAuthSuccess {
+  background: #edf9f2;
+  color: #237447;
+}
+
+.abpsAccountAuthMessage svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+}
+
+
+/* ======================================================
+   CREATE ACCOUNT
+====================================================== */
+
+.abpsAccountCreateBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-top: 24px;
+  padding-top: 21px;
+
+  border-top: 1px solid #edf0f3;
+}
+
+.abpsAccountCreateBox p {
+  margin: 0;
+
+  color: #7b8592;
+
+  font-size: 12px;
+}
+
+.abpsAccountCreateBox button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #e76e60;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.abpsAccountCreateBox button:hover {
+  color: #061a35;
+}
+
+.abpsAccountCreateBox button svg {
+  font-size: 10px;
+}
+
+
+/* ======================================================
+   ADMIN INFO
+====================================================== */
+
+.abpsAdminLoginInfo {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 24px;
+  padding: 14px;
+
+  border-radius: 13px;
+
+  background: #f7f8fa;
+}
+
+.abpsAdminLoginInfo > svg {
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  color: #e76e60;
+}
+
+.abpsAdminLoginInfo div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.abpsAdminLoginInfo strong {
+  color: #18283d;
+
+  font-size: 12px;
+}
+
+.abpsAdminLoginInfo span {
+  color: #7b8592;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* ======================================================
+   TABLET
+====================================================== */
+
+@media (max-width: 850px) {
+  .abpsAccountAuthModal {
+    grid-template-columns: 1fr;
+
+    max-width: 570px;
+
+    min-height: auto;
+
+    max-height: calc(100vh - 35px);
+
+    overflow-y: auto;
+  }
+
+  .abpsAccountAuthVisual {
+    min-height: 230px;
+
+    padding: 35px 38px;
+  }
+
+  .abpsAccountAuthVisualIcon {
+    width: 50px;
+    height: 50px;
+
+    margin-bottom: 18px;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+  }
+
+  .abpsAccountAuthVisual h2 {
+    font-size: 32px;
+  }
+
+  .abpsAccountAuthVisual p {
+    max-width: 500px;
+
+    font-size: 13px;
+  }
+
+  .abpsAccountAuthSecurity {
+    margin-top: 24px;
+  }
+
+  .abpsAccountAuthContent {
+    padding: 38px;
+  }
+}
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width: 600px) {
+  .abpsAccountAuthOverlay {
+    align-items: flex-start;
+
+    padding: 12px;
+  }
+
+  .abpsAccountAuthModal {
+    width: 100%;
+
+    max-height: calc(100vh - 24px);
+
+    border-radius: 20px;
+  }
+
+  .abpsAccountAuthClose {
+    top: 13px;
+    right: 13px;
+
+    width: 36px;
+    height: 36px;
+  }
+
+  .abpsAccountAuthVisual {
+    min-height: 185px;
+
+    padding: 28px 24px;
+  }
+
+  .abpsAccountAuthVisualIcon {
+    width: 43px;
+    height: 43px;
+
+    margin-bottom: 13px;
+
+    border-radius: 12px;
+
+    font-size: 18px;
+  }
+
+  .abpsAccountAuthVisualLabel {
+    margin-bottom: 7px;
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+
+  .abpsAccountAuthVisual h2 {
+    margin-bottom: 10px;
+
+    font-size: 27px;
+  }
+
+  .abpsAccountAuthVisual p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .abpsAccountAuthSecurity {
+    display: none;
+  }
+
+  .abpsAccountAuthContent {
+    padding: 30px 23px 32px;
+  }
+
+  .abpsAccountAuthPanel h1 {
+    font-size: 32px;
+  }
+
+  .abpsAccountAuthIntro {
+    margin-bottom: 25px;
+
+    font-size: 13px;
+  }
+
+  .abpsAccountTypeCard {
+    padding: 16px;
+  }
+
+  .abpsAccountTypeIcon {
+    flex-basis: 43px;
+
+    width: 43px;
+    height: 43px;
+  }
+
+  .abpsAccountTypeText strong {
+    font-size: 14px;
+  }
+
+  .abpsAccountTypeText small {
+    font-size: 11px;
+  }
+
+  .abpsAccountCreateBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .abpsAccountCreateBox p {
+    font-size: 12px;
+  }
+}
+
+
+/* ======================================================
+   SMALL MOBILE
+====================================================== */
+
+@media (max-width: 380px) {
+  .abpsAccountAuthOverlay {
+    padding: 7px;
+  }
+
+  .abpsAccountAuthModal {
+    border-radius: 17px;
+  }
+
+  .abpsAccountAuthVisual {
+    padding: 23px 19px;
+  }
+
+  .abpsAccountAuthVisual h2 {
+    font-size: 24px;
+  }
+
+  .abpsAccountAuthContent {
+    padding: 25px 18px 28px;
+  }
+
+  .abpsAccountAuthPanel h1 {
+    font-size: 29px;
+  }
+
+  .abpsAccountTypeCard {
+    gap: 11px;
+
+    padding: 13px;
+  }
+
+  .abpsAccountTypeArrow {
+    font-size: 12px;
+  }
+}

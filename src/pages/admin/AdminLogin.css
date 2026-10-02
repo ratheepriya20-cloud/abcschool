@@ -1,1026 +1,593 @@
 /* =========================================================
    AB PUBLIC SCHOOL
-   PREMIUM ADMIN LOGIN
-   LIGHT THEME
-   LARGE TYPOGRAPHY
-   FULL RESPONSIVE
+   ADMIN LOGIN
 ========================================================= */
 
-.abadminlogin-page {
-  --admin-navy: #071a35;
-  --admin-navy-light: #102f50;
-  --admin-sky: #0877a9;
-  --admin-sky-light: #19a4d5;
-  --admin-gold: #d6b36a;
-  --admin-gold-light: #eed99c;
-  --admin-cream: #fffdf8;
-  --admin-text: #24364b;
-  --admin-muted: #64748b;
-  --admin-border: #dce5ec;
-
-  position: relative;
+.ab-admin-login-page {
+  --aal-navy: #071a35;
+  --aal-navy-soft: #0b3157;
+  --aal-blue: #0877a9;
+  --aal-gold: #d6b36a;
+  --aal-white: #ffffff;
+  --aal-bg: #f4f7fa;
+  --aal-text: #17283b;
+  --aal-muted: #6b7988;
+  --aal-border: #dfe7ed;
 
   min-height: 100vh;
-  width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
 
-  padding: 45px 25px;
-
-  overflow: hidden;
+  padding: 30px;
 
   background:
     radial-gradient(
-      circle at 8% 18%,
-      rgba(8, 119, 169, 0.13),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 92% 80%,
-      rgba(214, 179, 106, 0.14),
-      transparent 27%
-    ),
-    linear-gradient(
-      135deg,
-      #f8fbfd 0%,
-      #ffffff 48%,
-      #f7f4ec 100%
-    );
-
-  box-sizing: border-box;
-}
-
-
-/* =========================================================
-   BACKGROUND DECORATIONS
-========================================================= */
-
-.abadminlogin-page::before {
-  content: "";
-
-  position: absolute;
-
-  width: 420px;
-  height: 420px;
-
-  left: -210px;
-  top: -170px;
-
-  border: 1px solid rgba(8, 119, 169, 0.12);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-
-.abadminlogin-page::after {
-  content: "";
-
-  position: absolute;
-
-  width: 350px;
-  height: 350px;
-
-  right: -175px;
-  bottom: -170px;
-
-  border: 1px solid rgba(214, 179, 106, 0.22);
-
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   LOGIN CARD
-========================================================= */
-
-.abadminlogin-card {
-  position: relative;
-
-  z-index: 5;
-
-  width: min(100%, 510px);
-
-  padding: 34px 38px 25px;
-
-  border: 1px solid rgba(8, 119, 169, 0.13);
-
-  border-radius: 24px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.98),
-      rgba(255, 253, 248, 0.98)
-    );
-
-  box-shadow:
-    0 25px 70px rgba(7, 26, 53, 0.12),
-    0 5px 20px rgba(8, 119, 169, 0.05);
-
-  box-sizing: border-box;
-
-  overflow: hidden;
-}
-
-
-/* Top gold line */
-
-.abadminlogin-card::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 4px;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--admin-navy),
-      var(--admin-sky),
-      var(--admin-gold)
-    );
-}
-
-
-/* =========================================================
-   BRAND
-========================================================= */
-
-.abadminlogin-brand {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  gap: 13px;
-
-  margin-bottom: 27px;
-}
-
-
-.abadminlogin-logo {
-  width: 57px;
-  height: 57px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  border: 2px solid var(--admin-gold);
-
-  border-radius: 15px;
-
-  background:
-    linear-gradient(
-      145deg,
-      var(--admin-navy),
-      var(--admin-navy-light)
-    );
-
-  color: #ffffff;
-
-  font-size: 21px;
-
-  font-weight: 950;
-
-  letter-spacing: -1px;
-
-  box-shadow:
-    0 10px 25px rgba(7, 26, 53, 0.17);
-}
-
-
-.abadminlogin-brand h1 {
-  margin: 0;
-
-  color: var(--admin-navy);
-
-  font-size: 23px;
-
-  line-height: 1.15;
-
-  font-weight: 950;
-}
-
-
-.abadminlogin-brand p {
-  margin: 4px 0 0;
-
-  color: var(--admin-sky);
-
-  font-size: 13px;
-
-  line-height: 1.3;
-
-  font-weight: 800;
-
-  letter-spacing: 0.7px;
-}
-
-
-/* =========================================================
-   HEADING
-========================================================= */
-
-.abadminlogin-heading {
-  text-align: center;
-
-  margin-bottom: 24px;
-}
-
-
-.abadminlogin-icon {
-  width: 57px;
-  height: 57px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  margin: 0 auto 11px;
-
-  border: 1px solid rgba(8, 119, 169, 0.18);
-
-  border-radius: 16px;
-
-  background:
-    linear-gradient(
-      145deg,
+      circle at 10% 15%,
       rgba(8, 119, 169, 0.11),
-      rgba(214, 179, 106, 0.13)
-    );
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(214, 179, 106, 0.12),
+      transparent 25%
+    ),
+    #f4f7fa;
 
-  color: var(--admin-sky);
-
-  font-size: 25px;
+  font-family:
+    Inter,
+    "DM Sans",
+    sans-serif;
 }
 
-
-.abadminlogin-heading h2 {
-  margin: 0;
-
-  color: var(--admin-navy);
-
-  font-size: 29px;
-
-  line-height: 1.2;
-
-  font-weight: 950;
-
-  letter-spacing: -0.4px;
-}
-
-
-.abadminlogin-heading p {
-  margin: 7px 0 0;
-
-  color: var(--admin-muted);
-
-  font-size: 15px;
-
-  line-height: 1.45;
-
-  font-weight: 600;
-}
-
-
-/* =========================================================
-   ERROR
-========================================================= */
-
-.abadminlogin-error {
-  display: flex;
-
-  align-items: center;
-
-  min-height: 48px;
-
-  margin-bottom: 18px;
-
-  padding: 10px 14px;
-
-  border-left: 4px solid #c0392b;
-
-  border-radius: 9px;
-
-  background: #fff3f1;
-
-  color: #a52d23;
-
-  font-size: 14px;
-
-  line-height: 1.45;
-
-  font-weight: 750;
-
+.ab-admin-login-page * {
   box-sizing: border-box;
-
-  animation: adminErrorShow 0.25s ease;
 }
-
-
-@keyframes adminErrorShow {
-  from {
-    opacity: 0;
-    transform: translateY(-5px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 
 /* =========================================================
-   FORM
+   SHELL
 ========================================================= */
 
-.abadminlogin-field {
-  margin-bottom: 19px;
-}
+.ab-admin-login-shell {
+  width: min(1080px, 100%);
+  min-height: 650px;
 
+  display: grid;
 
-.abadminlogin-field label {
-  display: block;
+  grid-template-columns:
+    0.95fr 1.05fr;
 
-  margin-bottom: 8px;
+  overflow: hidden;
 
-  color: var(--admin-navy);
+  border: 1px solid
+    rgba(7, 26, 53, 0.06);
 
-  font-size: 15px;
-
-  line-height: 1.3;
-
-  font-weight: 850;
-}
-
-
-/* =========================================================
-   INPUT WRAPPER
-========================================================= */
-
-.abadminlogin-input {
-  position: relative;
-
-  width: 100%;
-
-  min-height: 54px;
-
-  display: flex;
-
-  align-items: center;
-
-  border: 1.5px solid var(--admin-border);
-
-  border-radius: 11px;
+  border-radius: 28px;
 
   background: #ffffff;
 
-  box-sizing: border-box;
-
-  transition:
-    border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
-}
-
-
-.abadminlogin-input:focus-within {
-  border-color: var(--admin-sky);
-
   box-shadow:
-    0 0 0 4px rgba(8, 119, 169, 0.09);
-
-  transform: translateY(-1px);
+    0 30px 90px
+    rgba(7, 26, 53, 0.13);
 }
-
-
-/* Left icon */
-
-.abadminlogin-input > svg:first-child {
-  flex-shrink: 0;
-
-  margin-left: 16px;
-
-  color: var(--admin-sky);
-
-  font-size: 18px;
-}
-
-
-/* Input */
-
-.abadminlogin-input input {
-  width: 100%;
-
-  height: 52px;
-
-  min-width: 0;
-
-  padding: 0 14px;
-
-  border: 0;
-
-  outline: none;
-
-  background: transparent;
-
-  color: var(--admin-navy);
-
-  font-family: inherit;
-
-  font-size: 16px;
-
-  font-weight: 650;
-
-  box-sizing: border-box;
-}
-
-
-.abadminlogin-input input::placeholder {
-  color: #8a98a8;
-
-  font-size: 14px;
-
-  font-weight: 550;
-
-  opacity: 1;
-}
-
 
 /* =========================================================
-   PASSWORD EYE
+   LEFT SIDE
 ========================================================= */
 
-.abadminlogin-eye {
-  width: 48px;
-  height: 50px;
+.ab-admin-login-intro {
+  position: relative;
+
+  overflow: hidden;
 
   display: flex;
-
   align-items: center;
-  justify-content: center;
 
-  flex-shrink: 0;
-
-  padding: 0;
-
-  border: 0;
-
-  background: transparent;
-
-  color: #68788a;
-
-  font-size: 17px;
-
-  cursor: pointer;
-
-  transition:
-    color 0.2s ease,
-    transform 0.2s ease;
-}
-
-
-.abadminlogin-eye:hover {
-  color: var(--admin-sky);
-
-  transform: scale(1.08);
-}
-
-
-/* =========================================================
-   SUBMIT BUTTON
-========================================================= */
-
-.abadminlogin-submit {
-  width: 100%;
-
-  min-height: 55px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  gap: 11px;
-
-  margin-top: 5px;
-
-  padding: 0 20px;
-
-  border: 0;
-
-  border-radius: 11px;
+  padding: 55px 48px;
 
   background:
     linear-gradient(
-      105deg,
-      var(--admin-navy),
-      var(--admin-sky)
+      145deg,
+      #071a35 0%,
+      #092846 55%,
+      #0b3b64 100%
     );
 
   color: #ffffff;
+}
 
-  font-family: inherit;
+.ab-admin-login-intro-content {
+  position: relative;
+  z-index: 5;
+}
 
-  font-size: 16px;
+.ab-admin-login-school-logo {
+  width: 68px;
+  height: 68px;
 
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 25px;
+
+  border-radius: 18px;
+
+  background: var(--aal-gold);
+  color: var(--aal-navy);
+
+  font-size: 29px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(0, 0, 0, 0.15);
+}
+
+.ab-admin-login-school-label {
+  color: var(--aal-gold);
+
+  font-size: 11px;
   font-weight: 900;
 
-  letter-spacing: 0.15px;
+  letter-spacing: 1.8px;
+}
+
+.ab-admin-login-intro h1 {
+  margin: 10px 0 18px;
+
+  font-size:
+    clamp(40px, 5vw, 60px);
+
+  line-height: 1.02;
+
+  letter-spacing: -1.5px;
+}
+
+.ab-admin-login-intro-content > p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* FEATURES */
+
+.ab-admin-login-feature-list {
+  display: grid;
+  gap: 10px;
+
+  margin-top: 32px;
+}
+
+.ab-admin-login-feature-list > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 13px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+}
+
+.ab-admin-login-feature-list
+  > div
+  > span {
+  flex: 0 0 40px;
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  background:
+    rgba(214, 179, 106, 0.13);
+
+  color: var(--aal-gold);
+}
+
+.ab-admin-login-feature-list strong {
+  display: block;
+
+  font-size: 12px;
+}
+
+.ab-admin-login-feature-list p {
+  margin: 3px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* DECORATION */
+
+.ab-admin-login-shape {
+  position: absolute;
+
+  border-radius: 50%;
+}
+
+.ab-admin-login-shape.shape-one {
+  width: 300px;
+  height: 300px;
+
+  right: -180px;
+  top: -120px;
+
+  border: 50px solid
+    rgba(214, 179, 106, 0.08);
+}
+
+.ab-admin-login-shape.shape-two {
+  width: 190px;
+  height: 190px;
+
+  left: -120px;
+  bottom: -100px;
+
+  border: 35px solid
+    rgba(8, 119, 169, 0.15);
+}
+
+/* =========================================================
+   FORM AREA
+========================================================= */
+
+.ab-admin-login-form-area {
+  display: grid;
+  place-items: center;
+
+  padding: 50px;
+}
+
+.ab-admin-login-card {
+  width: min(430px, 100%);
+}
+
+.ab-admin-login-icon {
+  width: 55px;
+  height: 55px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: #eaf7fc;
+  color: var(--aal-blue);
+
+  font-size: 22px;
+}
+
+.ab-admin-login-small-label {
+  color: var(--aal-blue);
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.ab-admin-login-card h2 {
+  margin: 6px 0;
+
+  color: var(--aal-navy);
+
+  font-size: 37px;
+
+  letter-spacing: -1px;
+}
+
+.ab-admin-login-description {
+  margin: 0 0 28px;
+
+  color: var(--aal-muted);
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.ab-admin-login-field {
+  margin-bottom: 17px;
+}
+
+.ab-admin-login-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--aal-navy);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ab-admin-login-input {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.ab-admin-login-input > svg {
+  position: absolute;
+
+  left: 15px;
+
+  color: var(--aal-blue);
+
+  font-size: 14px;
+}
+
+.ab-admin-login-input input {
+  width: 100%;
+  height: 52px;
+
+  padding:
+    0 48px 0 43px;
+
+  border: 1px solid
+    var(--aal-border);
+
+  outline: none;
+
+  border-radius: 11px;
+
+  background: #fafcfd;
+
+  color: var(--aal-text);
+
+  font: inherit;
+  font-size: 13px;
+
+  transition: 0.2s ease;
+}
+
+.ab-admin-login-input input:focus {
+  border-color:
+    var(--aal-blue);
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(8, 119, 169, 0.08);
+}
+
+.ab-admin-password-toggle {
+  position: absolute;
+
+  right: 8px;
+
+  width: 37px;
+  height: 37px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+  color: var(--aal-muted);
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   LOGIN BUTTON
+========================================================= */
+
+.ab-admin-login-submit {
+  width: 100%;
+  height: 53px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 23px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background: var(--aal-navy);
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 900;
 
   cursor: pointer;
 
-  box-shadow:
-    0 12px 25px rgba(8, 119, 169, 0.20);
-
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    background 0.25s ease;
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
+.ab-admin-login-submit:hover {
+  background: var(--aal-blue);
 
-.abadminlogin-submit:hover {
-  transform: translateY(-3px);
-
-  background:
-    linear-gradient(
-      105deg,
-      var(--admin-sky),
-      var(--admin-navy)
-    );
-
-  box-shadow:
-    0 16px 30px rgba(8, 119, 169, 0.27);
+  transform:
+    translateY(-1px);
 }
 
+.ab-admin-login-submit:disabled {
+  opacity: 0.65;
 
-.abadminlogin-submit:active {
-  transform: translateY(-1px);
+  cursor: wait;
+
+  transform: none;
 }
-
-
-.abadminlogin-submit svg {
-  font-size: 16px;
-
-  transition:
-    transform 0.25s ease;
-}
-
-
-.abadminlogin-submit:hover svg {
-  transform: translateX(5px);
-}
-
 
 /* =========================================================
-   FOOTER
+   SECURITY
 ========================================================= */
 
-.abadminlogin-footer {
+.ab-admin-login-security {
   display: flex;
+  align-items: flex-start;
+  gap: 9px;
 
+  margin-top: 18px;
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #eef8fc;
+
+  color: var(--aal-muted);
+
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.ab-admin-login-security svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: var(--aal-blue);
+}
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.ab-admin-login-popup {
+  position: fixed;
+
+  z-index: 99999;
+
+  top: 20px;
+  right: 20px;
+
+  max-width: 420px;
+
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 9px;
 
-  gap: 8px;
+  padding: 14px 17px;
 
-  margin-top: 20px;
-  padding-top: 17px;
+  border-radius: 11px;
 
-  border-top: 1px solid #e7edf2;
+  color: #ffffff;
 
-  color: #718092;
-
-  text-align: center;
-}
-
-
-.abadminlogin-footer svg {
-  flex-shrink: 0;
-
-  color: var(--admin-gold);
-
-  font-size: 17px;
-}
-
-
-.abadminlogin-footer span {
   font-size: 12px;
+  font-weight: 800;
 
-  line-height: 1.4;
-
-  font-weight: 650;
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.18);
 }
 
+.ab-admin-login-popup.success {
+  background: #24865c;
+}
+
+.ab-admin-login-popup.error {
+  background: #c74646;
+}
 
 /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 700px) {
-
-  .abadminlogin-page {
-    min-height: 100dvh;
-
-    padding: 35px 20px;
+@media (max-width: 800px) {
+  .ab-admin-login-page {
+    padding: 15px;
   }
 
-  .abadminlogin-card {
-    width: min(100%, 500px);
-
-    padding: 31px 30px 23px;
-
-    border-radius: 21px;
+  .ab-admin-login-shell {
+    grid-template-columns: 1fr;
   }
 
+  .ab-admin-login-intro {
+    min-height: auto;
 
-  .abadminlogin-brand {
-    margin-bottom: 24px;
+    padding: 35px 28px;
   }
 
-
-  .abadminlogin-logo {
-    width: 54px;
-    height: 54px;
-
-    font-size: 20px;
+  .ab-admin-login-intro h1 {
+    font-size: 42px;
   }
 
-
-  .abadminlogin-brand h1 {
-    font-size: 22px;
-  }
-
-
-  .abadminlogin-brand p {
-    font-size: 13px;
-  }
-
-
-  .abadminlogin-heading {
-    margin-bottom: 22px;
-  }
-
-
-  .abadminlogin-icon {
-    width: 54px;
-    height: 54px;
-
-    font-size: 23px;
-  }
-
-
-  .abadminlogin-heading h2 {
-    font-size: 27px;
-  }
-
-
-  .abadminlogin-heading p {
-    font-size: 15px;
-  }
-
-
-  .abadminlogin-field label {
-    font-size: 15px;
-  }
-
-
-  .abadminlogin-input {
-    min-height: 55px;
-  }
-
-
-  .abadminlogin-input input {
-    height: 53px;
-
-    font-size: 16px;
-  }
-
-
-  .abadminlogin-input input::placeholder {
-    font-size: 14px;
-  }
-
-
-  .abadminlogin-submit {
-    min-height: 55px;
-
-    font-size: 16px;
-  }
-
-
-  .abadminlogin-footer span {
-    font-size: 12px;
+  .ab-admin-login-form-area {
+    padding: 40px 25px;
   }
 }
-
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
+  .ab-admin-login-page {
+    padding: 0;
 
-  .abadminlogin-page {
-    align-items: center;
-
-    padding: 25px 14px;
+    background: #ffffff;
   }
 
+  .ab-admin-login-shell {
+    border: 0;
+    border-radius: 0;
 
-  .abadminlogin-card {
-    width: 100%;
-
-    padding: 27px 21px 20px;
-
-    border-radius: 19px;
+    box-shadow: none;
   }
 
-
-  /* BRAND */
-
-  .abadminlogin-brand {
-    gap: 10px;
-
-    margin-bottom: 21px;
+  .ab-admin-login-intro {
+    padding: 30px 20px;
   }
 
+  .ab-admin-login-school-logo {
+    width: 55px;
+    height: 55px;
 
-  .abadminlogin-logo {
-    width: 48px;
-    height: 48px;
-
-    border-radius: 12px;
-
-    font-size: 18px;
-  }
-
-
-  .abadminlogin-brand h1 {
-    font-size: 20px;
-  }
-
-
-  .abadminlogin-brand p {
-    margin-top: 3px;
-
-    font-size: 12px;
-  }
-
-
-  /* HEADING */
-
-  .abadminlogin-heading {
-    margin-bottom: 21px;
-  }
-
-
-  .abadminlogin-icon {
-    width: 51px;
-    height: 51px;
-
-    margin-bottom: 9px;
-
-    border-radius: 14px;
-
-    font-size: 22px;
-  }
-
-
-  .abadminlogin-heading h2 {
-    font-size: 25px;
-
-    letter-spacing: -0.2px;
-  }
-
-
-  .abadminlogin-heading p {
-    margin-top: 6px;
-
-    font-size: 14px;
-  }
-
-
-  /* ERROR */
-
-  .abadminlogin-error {
-    min-height: 47px;
-
-    margin-bottom: 16px;
-
-    padding: 9px 12px;
-
-    font-size: 13px;
-  }
-
-
-  /* FIELDS */
-
-  .abadminlogin-field {
-    margin-bottom: 17px;
-  }
-
-
-  .abadminlogin-field label {
-    margin-bottom: 7px;
-
-    font-size: 15px;
-  }
-
-
-  .abadminlogin-input {
-    min-height: 54px;
-
-    border-radius: 10px;
-  }
-
-
-  .abadminlogin-input > svg:first-child {
-    margin-left: 14px;
-
-    font-size: 17px;
-  }
-
-
-  .abadminlogin-input input {
-    height: 52px;
-
-    padding: 0 11px;
-
-    font-size: 16px;
-  }
-
-
-  .abadminlogin-input input::placeholder {
-    font-size: 13px;
-  }
-
-
-  .abadminlogin-eye {
-    width: 45px;
-    height: 50px;
-
-    font-size: 16px;
-  }
-
-
-  /* BUTTON */
-
-  .abadminlogin-submit {
-    min-height: 54px;
-
-    margin-top: 4px;
-
-    border-radius: 10px;
-
-    font-size: 15px;
-  }
-
-
-  .abadminlogin-submit svg {
-    font-size: 15px;
-  }
-
-
-  /* FOOTER */
-
-  .abadminlogin-footer {
-    gap: 7px;
-
-    margin-top: 17px;
-
-    padding-top: 14px;
-  }
-
-
-  .abadminlogin-footer svg {
-    font-size: 15px;
-  }
-
-
-  .abadminlogin-footer span {
-    font-size: 11px;
-  }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 370px) {
-
-  .abadminlogin-page {
-    padding: 20px 10px;
-  }
-
-
-  .abadminlogin-card {
-    padding: 24px 17px 18px;
-
-    border-radius: 17px;
-  }
-
-
-  .abadminlogin-logo {
-    width: 44px;
-    height: 44px;
-
-    font-size: 17px;
-  }
-
-
-  .abadminlogin-brand h1 {
-    font-size: 18px;
-  }
-
-
-  .abadminlogin-brand p {
-    font-size: 11px;
-  }
-
-
-  .abadminlogin-heading h2 {
     font-size: 23px;
   }
 
+  .ab-admin-login-intro h1 {
+    font-size: 35px;
+  }
 
-  .abadminlogin-heading p {
+  .ab-admin-login-intro-content > p {
     font-size: 13px;
   }
 
-
-  .abadminlogin-field label {
-    font-size: 14px;
+  .ab-admin-login-form-area {
+    padding: 35px 20px;
   }
 
-
-  .abadminlogin-input input {
-    font-size: 15px;
+  .ab-admin-login-card h2 {
+    font-size: 31px;
   }
 
+  .ab-admin-login-popup {
+    left: 12px;
+    right: 12px;
+    top: 12px;
 
-  .abadminlogin-input input::placeholder {
-    font-size: 12px;
-  }
-
-
-  .abadminlogin-submit {
-    min-height: 52px;
-
-    font-size: 14px;
-  }
-
-
-  .abadminlogin-footer span {
-    font-size: 10px;
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-.abadminlogin-submit:focus-visible,
-.abadminlogin-eye:focus-visible,
-.abadminlogin-input input:focus-visible {
-  outline: 3px solid rgba(8, 119, 169, 0.22);
-
-  outline-offset: 2px;
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .abadminlogin-error,
-  .abadminlogin-input,
-  .abadminlogin-submit,
-  .abadminlogin-eye {
-    animation: none;
-
-    transition: none;
+    max-width: none;
   }
 }

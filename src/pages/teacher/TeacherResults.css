@@ -1,0 +1,638 @@
+.teacherRead-page {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.teacherRead-hero {
+  padding: 31px 34px;
+  margin-bottom: 22px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      125deg,
+      #071a35,
+      #0b466c,
+      #0877a9
+    );
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.teacherRead-heroContent {
+  min-width: 0;
+  max-width: 750px;
+}
+
+.teacherRead-hero span,
+.teacherRead-eyebrow {
+  color: #e0c27e;
+
+  font-size: 13px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.teacherRead-hero h1 {
+  margin: 8px 0;
+
+  font-size: clamp(42px, 4.5vw, 54px);
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.7px;
+}
+
+.teacherRead-hero p {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: #dceaf2;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   HERO ICON
+   ========================================================= */
+
+.teacherRead-heroIcon {
+  width: 82px;
+  height: 82px;
+
+  flex: 0 0 82px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.11);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 31px;
+}
+
+
+/* =========================================================
+   TABLE BOX
+   ========================================================= */
+
+.teacherRead-tableBox {
+  width: 100%;
+
+  overflow-x: auto;
+
+  border: 1px solid #e1e9f0;
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 10px 30px rgba(7, 26, 53, 0.05);
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.teacherRead-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+}
+
+
+/* TABLE HEADING */
+
+.teacherRead-table th {
+  padding: 18px 19px;
+
+  background: #f1f7fa;
+
+  color: #40566d;
+
+  text-align: left;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  line-height: 1.4;
+}
+
+
+/* TABLE DATA */
+
+.teacherRead-table td {
+  padding: 19px;
+
+  border-top: 1px solid #edf1f5;
+
+  color: #536377;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+.teacherRead-table td strong {
+  color: #071a35;
+
+  font-size: 16px;
+  font-weight: 850;
+}
+
+
+/* =========================================================
+   GRADE
+   ========================================================= */
+
+.teacherRead-grade {
+  min-width: 43px;
+
+  padding: 8px 12px;
+
+  border-radius: 30px;
+
+  background: #edf7fb;
+
+  color: #0877a9;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   TABLE HOVER
+   ========================================================= */
+
+.teacherRead-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.teacherRead-table tbody tr:hover {
+  background: #f9fcfe;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.teacherRead-empty {
+  padding: 50px 25px;
+
+  border: 1px dashed #cad7e2;
+  border-radius: 20px;
+
+  background: #fff;
+
+  text-align: center;
+}
+
+.teacherRead-emptyIcon {
+  font-size: 30px;
+
+  color: #0877a9;
+
+  margin-bottom: 12px;
+}
+
+.teacherRead-empty h3 {
+  margin: 0;
+
+  color: #071a35;
+
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.teacherRead-empty p {
+  max-width: 500px;
+
+  margin: 8px auto 0;
+
+  color: #66798b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLE SCROLLBAR
+   ========================================================= */
+
+.teacherRead-tableBox::-webkit-scrollbar {
+  height: 7px;
+}
+
+.teacherRead-tableBox::-webkit-scrollbar-track {
+  background: #f2f6f8;
+}
+
+.teacherRead-tableBox::-webkit-scrollbar-thumb {
+  background: #b8cbd7;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .teacherRead-hero {
+    padding: 27px 24px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 42px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 16px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 72px;
+    height: 72px;
+
+    flex-basis: 72px;
+
+    font-size: 27px;
+  }
+
+  .teacherRead-table th {
+    font-size: 13px;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 15px;
+  }
+
+  .teacherRead-grade {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .teacherRead-hero {
+    padding: 23px 18px;
+
+    border-radius: 18px;
+
+    gap: 15px;
+  }
+
+  .teacherRead-hero span,
+  .teacherRead-eyebrow {
+    font-size: 12px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 34px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .teacherRead-heroIcon {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    border-radius: 17px;
+
+    font-size: 23px;
+  }
+
+  .teacherRead-table th {
+    padding: 15px 16px;
+
+    font-size: 13px;
+  }
+
+  .teacherRead-table td {
+    padding: 16px;
+
+    font-size: 14px;
+  }
+
+  .teacherRead-table td strong {
+    font-size: 14px;
+  }
+
+  .teacherRead-grade {
+    font-size: 12px;
+  }
+
+  .teacherRead-empty {
+    padding: 40px 18px;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 23px;
+  }
+
+  .teacherRead-empty p {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .teacherRead-hero {
+    padding: 21px 16px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 31px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 14px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 54px;
+    height: 54px;
+
+    flex-basis: 54px;
+
+    font-size: 21px;
+  }
+
+  .teacherRead-table th {
+    font-size: 12px;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 14px;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 21px;
+  }
+
+  .teacherRead-empty p {
+    font-size: 13px;
+  }
+}
+/* =========================================================
+   TEACHER READ PAGES
+   EXTRA LARGE FONT OVERRIDE
+   ========================================================= */
+
+/* HERO LABEL */
+.teacherRead-hero span,
+.teacherRead-eyebrow {
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+}
+
+/* HERO MAIN HEADING */
+.teacherRead-hero h1 {
+  font-size: clamp(48px, 5vw, 60px);
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+/* HERO DESCRIPTION */
+.teacherRead-hero p {
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+/* HERO ICON */
+.teacherRead-heroIcon {
+  width: 88px;
+  height: 88px;
+  flex: 0 0 88px;
+
+  font-size: 34px;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+/* TABLE HEADINGS */
+.teacherRead-table th {
+  font-size: 17px;
+  font-weight: 900;
+  padding: 19px 20px;
+}
+
+/* TABLE DATA */
+.teacherRead-table td {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* STUDENT NAME / STRONG TEXT */
+.teacherRead-table td strong {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* GRADE */
+.teacherRead-grade {
+  min-width: 48px;
+  padding: 9px 14px;
+
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.teacherRead-emptyIcon {
+  font-size: 35px;
+}
+
+.teacherRead-empty h3 {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.teacherRead-empty p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .teacherRead-hero span,
+  .teacherRead-eyebrow {
+    font-size: 14px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 46px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 18px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 78px;
+    height: 78px;
+    flex-basis: 78px;
+
+    font-size: 30px;
+  }
+
+  .teacherRead-table th {
+    font-size: 16px;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 17px;
+  }
+
+  .teacherRead-grade {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+  .teacherRead-hero {
+    padding: 24px 19px;
+  }
+
+  .teacherRead-hero span,
+  .teacherRead-eyebrow {
+    font-size: 13px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 38px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .teacherRead-heroIcon {
+    width: 62px;
+    height: 62px;
+    flex-basis: 62px;
+
+    font-size: 25px;
+  }
+
+  .teacherRead-table th {
+    font-size: 15px;
+    padding: 17px;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 16px;
+  }
+
+  .teacherRead-table td {
+    padding: 17px;
+  }
+
+  .teacherRead-grade {
+    font-size: 14px;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 27px;
+  }
+
+  .teacherRead-empty p {
+    font-size: 16px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .teacherRead-hero h1 {
+    font-size: 35px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 16px;
+  }
+
+  .teacherRead-table th {
+    font-size: 14px;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 16px;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 25px;
+  }
+
+  .teacherRead-empty p {
+    font-size: 15px;
+  }
+}

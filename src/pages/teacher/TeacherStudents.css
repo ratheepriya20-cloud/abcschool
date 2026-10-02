@@ -1,0 +1,2476 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   TEACHER STUDENTS
+   FULL PREMIUM LIGHT DESIGN
+   ========================================================= */
+
+.tstudents-page {
+  width: 100%;
+  min-height: 100%;
+  color: #294b4a;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.tstudents-hero {
+  position: relative;
+  width: 100%;
+  min-height: 190px;
+  padding: 30px 32px;
+  overflow: hidden;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #e4f5ef 0%,
+      #f5fbf9 56%,
+      #fff5df 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  box-shadow: 0 14px 38px rgba(31, 82, 77, 0.07);
+}
+
+.tstudents-hero::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  right: 100px;
+  top: -150px;
+  border-radius: 50%;
+  border: 1px solid rgba(38, 125, 119, 0.1);
+}
+
+.tstudents-hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -85px;
+  bottom: -130px;
+  border-radius: 50%;
+  background: rgba(225, 190, 110, 0.14);
+}
+
+.tstudents-hero > div:first-child {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  min-width: 0;
+}
+
+.tstudents-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 9px;
+  padding: 6px 11px;
+
+  border: 1px solid #cee6df;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #267d77;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.tstudents-hero h1 {
+  margin: 0;
+  color: #183b3d;
+  font-size: clamp(31px, 3vw, 40px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.8px;
+}
+
+.tstudents-hero p {
+  max-width: 620px;
+  margin: 9px 0 0;
+  color: #708583;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   TEACHER TAGS
+   ========================================================= */
+
+.tstudents-teacher-tags {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tstudents-teacher-tags span {
+  min-height: 31px;
+  padding: 0 11px;
+
+  border: 1px solid #d7e9e4;
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.76);
+
+  color: #55716f;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 8px;
+  font-weight: 750;
+}
+
+.tstudents-teacher-tags svg {
+  color: #3d8e85;
+  font-size: 10px;
+}
+
+/* =========================================================
+   HERO ACTIONS
+   ========================================================= */
+
+.tstudents-hero-actions {
+  position: relative;
+  z-index: 2;
+
+  flex: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.tstudents-refresh-btn,
+.tstudents-add-btn {
+  min-height: 41px;
+  padding: 0 15px;
+
+  border-radius: 11px;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 850;
+
+  transition: 0.22s ease;
+}
+
+.tstudents-refresh-btn {
+  border: 1px solid #d6e7e2;
+  background: rgba(255, 255, 255, 0.88);
+  color: #587371;
+}
+
+.tstudents-refresh-btn:hover {
+  border-color: #b9dcd3;
+  background: #ffffff;
+  color: #267d77;
+  transform: translateY(-2px);
+}
+
+.tstudents-add-btn {
+  border: 1px solid #267d77;
+  background: linear-gradient(135deg, #267d77, #409b91);
+  color: #ffffff;
+  box-shadow: 0 9px 21px rgba(38, 125, 119, 0.18);
+}
+
+.tstudents-add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 13px 26px rgba(38, 125, 119, 0.23);
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.tstudents-stats {
+  width: 100%;
+  margin-top: 17px;
+
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.tstudents-stat {
+  min-width: 0;
+  padding: 15px 16px;
+
+  border: 1px solid #deebe7;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  box-shadow: 0 7px 22px rgba(32, 83, 78, 0.045);
+
+  transition: 0.22s ease;
+}
+
+.tstudents-stat:hover {
+  transform: translateY(-3px);
+  border-color: #cbe3dc;
+  box-shadow: 0 13px 28px rgba(32, 83, 78, 0.075);
+}
+
+.tstudents-stat > div {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+
+  border: 1px solid #d2e9e2;
+  border-radius: 13px;
+
+  background: #e4f5ef;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 15px;
+}
+
+.tstudents-stat:nth-child(2) > div {
+  border-color: #d6e9f0;
+  background: #eaf6fa;
+  color: #47829b;
+}
+
+.tstudents-stat:nth-child(3) > div {
+  border-color: #eee0c1;
+  background: #fff5df;
+  color: #a77931;
+}
+
+.tstudents-stat:nth-child(4) > div {
+  border-color: #e5def1;
+  background: #f5f1fb;
+  color: #77699b;
+}
+
+.tstudents-stat section {
+  min-width: 0;
+}
+
+.tstudents-stat strong {
+  display: block;
+  color: #183b3d;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.tstudents-stat span {
+  display: block;
+  margin-top: 4px;
+  color: #7b908d;
+  font-size: 8px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   SEARCH + FILTER TOOLBAR
+   ========================================================= */
+
+.tstudents-toolbar {
+  width: 100%;
+  margin-top: 17px;
+  padding: 11px;
+
+  border: 1px solid #deebe7;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  box-shadow: 0 7px 22px rgba(32, 83, 78, 0.04);
+}
+
+.tstudents-search {
+  position: relative;
+  min-width: 260px;
+  flex: 1;
+}
+
+.tstudents-search > svg {
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: 13px;
+
+  transform: translateY(-50%);
+
+  color: #75a09a;
+  font-size: 11px;
+  pointer-events: none;
+}
+
+.tstudents-search input {
+  width: 100%;
+  height: 41px;
+
+  padding: 0 13px 0 37px;
+
+  border: 1px solid #dceae6;
+  border-radius: 10px;
+  outline: none;
+
+  background: #f9fcfb;
+  color: #294b4c;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-search input::placeholder {
+  color: #9badaa;
+}
+
+.tstudents-search input:focus {
+  border-color: #8dc9bc;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 158, 145, 0.08);
+}
+
+/* =========================================================
+   FILTER
+   ========================================================= */
+
+.tstudents-filter {
+  position: relative;
+  min-width: 155px;
+}
+
+.tstudents-filter > svg {
+  position: absolute;
+  z-index: 2;
+
+  top: 50%;
+  left: 12px;
+
+  transform: translateY(-50%);
+
+  color: #65968f;
+  font-size: 10px;
+
+  pointer-events: none;
+}
+
+.tstudents-filter select {
+  width: 100%;
+  height: 41px;
+
+  padding: 0 29px 0 34px;
+
+  border: 1px solid #dceae6;
+  border-radius: 10px;
+  outline: none;
+
+  background: #f9fcfb;
+  color: #526f6d;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 750;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-filter select:focus {
+  border-color: #8dc9bc;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 158, 145, 0.08);
+}
+
+/* =========================================================
+   LIST HEADING
+   ========================================================= */
+
+.tstudents-list-heading {
+  width: 100%;
+  margin-top: 25px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tstudents-list-heading > div > span {
+  color: #267d77;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+}
+
+.tstudents-list-heading h2 {
+  margin: 4px 0 0;
+
+  color: #183b3d;
+
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.45px;
+}
+
+.tstudents-list-heading p {
+  margin: 5px 0 0;
+  color: #829492;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   STUDENT GRID
+   ========================================================= */
+
+.tstudents-grid {
+  width: 100%;
+  margin-top: 14px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+/* =========================================================
+   STUDENT CARD
+   ========================================================= */
+
+.tstudents-card {
+  position: relative;
+  min-width: 0;
+  padding: 18px;
+  overflow: hidden;
+
+  border: 1px solid #deebe7;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #ffffff 80%,
+      #f7fcfa 100%
+    );
+
+  box-shadow: 0 8px 25px rgba(32, 83, 78, 0.05);
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.tstudents-card::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 18px;
+
+  width: 50px;
+  height: 3px;
+
+  border-radius: 0 0 8px 8px;
+
+  background: linear-gradient(90deg, #4ba69b, #9bd7cb);
+}
+
+.tstudents-card::after {
+  content: "";
+  position: absolute;
+
+  right: -45px;
+  bottom: -48px;
+
+  width: 105px;
+  height: 105px;
+
+  border-radius: 50%;
+
+  background: rgba(220, 244, 237, 0.33);
+
+  pointer-events: none;
+}
+
+.tstudents-card:hover {
+  transform: translateY(-4px);
+  border-color: #c6e1d9;
+  box-shadow: 0 16px 36px rgba(32, 83, 78, 0.085);
+}
+
+/* =========================================================
+   CARD TOP
+   ========================================================= */
+
+.tstudents-card-top {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tstudents-avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+
+  border: 1px solid #cee7df;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #def3ec, #f3fbf8);
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  box-shadow: 0 6px 15px rgba(38, 125, 119, 0.07);
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.tstudents-status {
+  min-height: 25px;
+  padding: 0 9px;
+
+  border: 1px solid #cfe7dc;
+  border-radius: 30px;
+
+  background: #e8f7ef;
+  color: #28795b;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.tstudents-status i {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.tstudents-status.inactive {
+  border-color: #efd8dc;
+  background: #fff0f2;
+  color: #ca5260;
+}
+
+/* =========================================================
+   CARD MAIN
+   ========================================================= */
+
+.tstudents-card-main {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 14px;
+}
+
+.tstudents-card-label {
+  display: block;
+
+  color: #3f9389;
+
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1.15px;
+}
+
+.tstudents-card-main h3 {
+  margin: 4px 0 0;
+
+  overflow: hidden;
+
+  color: #183b3d;
+
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.25;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tstudents-card-id {
+  margin-top: 6px;
+
+  color: #819391;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.tstudents-card-id svg {
+  color: #4d958d;
+  font-size: 9px;
+}
+
+/* =========================================================
+   CARD DETAILS
+   ========================================================= */
+
+.tstudents-card-details {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 14px;
+  padding-top: 13px;
+
+  border-top: 1px solid #e8f0ed;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.tstudents-card-details > div {
+  min-width: 0;
+
+  padding: 9px 10px;
+
+  border: 1px solid #e5efec;
+  border-radius: 10px;
+
+  background: #f9fcfb;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tstudents-card-details > div > svg {
+  flex: 0 0 auto;
+  color: #4d978e;
+  font-size: 11px;
+}
+
+.tstudents-card-details > div > span {
+  min-width: 0;
+}
+
+.tstudents-card-details small {
+  display: block;
+
+  color: #97a6a4;
+
+  font-size: 6px;
+  font-weight: 850;
+  letter-spacing: 0.4px;
+}
+
+.tstudents-card-details strong {
+  display: block;
+
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: #456360;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.tstudents-contact {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 11px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tstudents-contact span {
+  min-width: 0;
+
+  color: #718784;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  overflow: hidden;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tstudents-contact svg {
+  flex: 0 0 auto;
+  color: #4d978e;
+  font-size: 9px;
+}
+
+/* =========================================================
+   CARD ACTIONS
+   ========================================================= */
+
+.tstudents-card-actions {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 14px;
+  padding-top: 12px;
+
+  border-top: 1px solid #e8f0ed;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tstudents-card-actions button {
+  height: 34px;
+
+  border-radius: 9px;
+  outline: none;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: 850;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-card-actions .view {
+  flex: 1;
+
+  padding: 0 10px;
+
+  border: 1px solid #d3e8e2;
+
+  background: #edf8f4;
+  color: #267d77;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.tstudents-card-actions .view svg:last-child {
+  margin-left: auto;
+  font-size: 7px;
+}
+
+.tstudents-card-actions .view:hover {
+  border-color: #acd5cb;
+  background: #e2f4ee;
+}
+
+.tstudents-card-actions .edit,
+.tstudents-card-actions .trash {
+  width: 34px;
+  flex: 0 0 34px;
+
+  border: 1px solid #dfeae7;
+
+  background: #f8fbfa;
+
+  display: grid;
+  place-items: center;
+}
+
+.tstudents-card-actions .edit {
+  color: #4c8982;
+}
+
+.tstudents-card-actions .edit:hover {
+  border-color: #bcded5;
+  background: #eaf7f2;
+  color: #267d77;
+  transform: translateY(-1px);
+}
+
+.tstudents-card-actions .trash {
+  color: #c65c66;
+}
+
+.tstudents-card-actions .trash:hover {
+  border-color: #efd3d7;
+  background: #fff0f2;
+  color: #d14d5c;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.tstudents-empty {
+  width: 100%;
+  min-height: 290px;
+  margin-top: 15px;
+  padding: 38px 20px;
+
+  border: 1px dashed #cbded8;
+  border-radius: 21px;
+
+  background:
+    radial-gradient(
+      circle at 50% 24%,
+      rgba(220, 244, 237, 0.72),
+      transparent 29%
+    ),
+    linear-gradient(135deg, #f7fcfa, #fffaf0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.tstudents-empty-icon {
+  width: 68px;
+  height: 68px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid #d3e9e2;
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, #def3ec, #f5fbf9);
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 25px;
+
+  box-shadow: 0 11px 25px rgba(38, 125, 119, 0.08);
+}
+
+.tstudents-empty > span {
+  color: #267d77;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.tstudents-empty h2 {
+  margin: 6px 0 0;
+
+  color: #183b3d;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.tstudents-empty p {
+  max-width: 480px;
+
+  margin: 7px 0 0;
+
+  color: #788d8a;
+
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   POPUP
+   ========================================================= */
+
+.tstudents-popup {
+  position: fixed;
+  z-index: 12000;
+
+  top: 22px;
+  right: 22px;
+
+  width: min(355px, calc(100% - 32px));
+  min-height: 52px;
+
+  padding: 12px 14px;
+
+  border: 1px solid #d6e8e2;
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  color: #365957;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  box-shadow: 0 16px 42px rgba(25, 65, 63, 0.16);
+
+  animation: tstudentsPopupIn 0.28s ease;
+}
+
+.tstudents-popup svg {
+  flex: 0 0 auto;
+  font-size: 16px;
+}
+
+.tstudents-popup span {
+  font-size: 9px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.tstudents-popup.success {
+  border-color: #cbe7db;
+  background: #f2fbf6;
+}
+
+.tstudents-popup.success svg {
+  color: #2c8967;
+}
+
+.tstudents-popup.error {
+  border-color: #efd3d7;
+  background: #fff3f4;
+}
+
+.tstudents-popup.error svg {
+  color: #d25361;
+}
+
+@keyframes tstudentsPopupIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.tstudents-modal-overlay {
+  position: fixed;
+  z-index: 10000;
+
+  inset: 0;
+
+  padding: 24px;
+
+  overflow-y: auto;
+
+  background: rgba(20, 52, 53, 0.3);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   ADD / EDIT MODAL
+   ========================================================= */
+
+.tstudents-modal {
+  width: min(800px, 100%);
+  max-height: calc(100vh - 48px);
+
+  overflow-y: auto;
+
+  border: 1px solid #dcebe6;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow: 0 28px 70px rgba(25, 65, 63, 0.21);
+}
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.tstudents-modal-head {
+  position: sticky;
+  z-index: 5;
+
+  top: 0;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e4eeeb;
+
+  background: linear-gradient(
+    135deg,
+    #edf8f4,
+    #fff9eb
+  );
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.tstudents-modal-head > div {
+  min-width: 0;
+}
+
+.tstudents-modal-head > div > span {
+  color: #267d77;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.tstudents-modal-head h2 {
+  margin: 5px 0 0;
+
+  color: #183b3d;
+
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.tstudents-modal-head p {
+  max-width: 520px;
+
+  margin: 6px 0 0;
+
+  color: #758a87;
+
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+.tstudents-modal-close {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  border: 1px solid #d8e8e4;
+  border-radius: 10px;
+  outline: none;
+
+  background: #ffffff;
+  color: #718583;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-modal-close:hover {
+  border-color: #efd0d5;
+  background: #fff0f2;
+  color: #d05260;
+  transform: rotate(5deg);
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.tstudents-form {
+  padding: 21px 22px;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.tstudents-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tstudents-full-field {
+  grid-column: 1 / -1;
+}
+
+.tstudents-field label {
+  color: #486765;
+
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.tstudents-field label sup {
+  margin-left: 2px;
+
+  color: #d65361;
+
+  font-size: 9px;
+}
+
+.tstudents-field input,
+.tstudents-field select,
+.tstudents-field textarea {
+  width: 100%;
+
+  border: 1px solid #dbe9e5;
+  border-radius: 10px;
+  outline: none;
+
+  background: #f9fcfb;
+  color: #294b4c;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-field input,
+.tstudents-field select {
+  height: 41px;
+  padding: 0 11px;
+}
+
+.tstudents-field textarea {
+  min-height: 88px;
+  padding: 11px;
+  resize: vertical;
+}
+
+.tstudents-field input::placeholder,
+.tstudents-field textarea::placeholder {
+  color: #9cacaa;
+}
+
+.tstudents-field input:focus,
+.tstudents-field select:focus,
+.tstudents-field textarea:focus {
+  border-color: #8dc9bc;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 158, 145, 0.08);
+}
+
+/* =========================================================
+   MODAL FOOTER
+   ========================================================= */
+
+.tstudents-modal-footer {
+  padding: 15px 22px 20px;
+
+  border-top: 1px solid #e6efec;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tstudents-cancel,
+.tstudents-save {
+  min-height: 39px;
+  padding: 0 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 850;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-cancel {
+  border: 1px solid #dae8e4;
+
+  background: #f7faf9;
+  color: #627b79;
+}
+
+.tstudents-cancel:hover {
+  background: #edf5f2;
+}
+
+.tstudents-save {
+  border: 1px solid #267d77;
+
+  background: linear-gradient(135deg, #267d77, #409b91);
+  color: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  box-shadow: 0 7px 17px rgba(38, 125, 119, 0.16);
+}
+
+.tstudents-save:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 21px rgba(38, 125, 119, 0.21);
+}
+
+/* =========================================================
+   DELETE MODAL
+   ========================================================= */
+
+.tstudents-delete-modal {
+  width: min(430px, 100%);
+
+  padding: 28px;
+
+  border: 1px solid #eadfe0;
+  border-radius: 21px;
+
+  background: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 26px 68px rgba(30, 62, 61, 0.21);
+}
+
+.tstudents-delete-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 13px;
+
+  border: 1px solid #efd3d7;
+  border-radius: 18px;
+
+  background: #fff0f2;
+  color: #d05260;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 22px;
+}
+
+.tstudents-delete-modal > span {
+  color: #c85460;
+
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+}
+
+.tstudents-delete-modal h2 {
+  margin: 6px 0 0;
+
+  color: #263f40;
+
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.tstudents-delete-modal > p {
+  max-width: 330px;
+
+  margin: 8px auto 0;
+
+  color: #7a8d8a;
+
+  font-size: 9px;
+  line-height: 1.65;
+}
+
+.tstudents-delete-info {
+  margin-top: 16px;
+  padding: 12px;
+
+  border: 1px solid #e4ecea;
+  border-radius: 11px;
+
+  background: #f8fbfa;
+}
+
+.tstudents-delete-info strong {
+  display: block;
+
+  color: #405f5d;
+
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.tstudents-delete-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #829391;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.tstudents-delete-actions {
+  margin-top: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tstudents-delete-actions button {
+  min-height: 38px;
+  padding: 0 15px;
+
+  border: 1px solid #dbe8e5;
+  border-radius: 10px;
+
+  background: #f7faf9;
+  color: #627b79;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 850;
+
+  transition: 0.2s ease;
+}
+
+.tstudents-delete-actions button:hover {
+  background: #edf4f2;
+}
+
+.tstudents-delete-actions .delete {
+  border-color: #d65361;
+
+  background: #d65361;
+  color: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  box-shadow: 0 7px 17px rgba(214, 83, 97, 0.16);
+}
+
+.tstudents-delete-actions .delete:hover {
+  background: #c84957;
+  border-color: #c84957;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MODAL SCROLLBAR
+   ========================================================= */
+
+.tstudents-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tstudents-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tstudents-modal::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cbded8;
+}
+
+/* =========================================================
+   1200PX
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .tstudents-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tstudents-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   900PX
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .tstudents-hero {
+    min-height: 175px;
+    padding: 25px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tstudents-hero-actions {
+    width: 100%;
+  }
+
+  .tstudents-refresh-btn,
+  .tstudents-add-btn {
+    flex: 1;
+  }
+
+  .tstudents-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .tstudents-search {
+    min-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .tstudents-filter {
+    flex: 1;
+    min-width: 180px;
+  }
+}
+
+/* =========================================================
+   700PX
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .tstudents-hero {
+    padding: 21px 18px;
+    border-radius: 19px;
+  }
+
+  .tstudents-hero h1 {
+    font-size: 28px;
+  }
+
+  .tstudents-hero p {
+    font-size: 10px;
+  }
+
+  .tstudents-stats {
+    gap: 9px;
+  }
+
+  .tstudents-stat {
+    padding: 12px;
+  }
+
+  .tstudents-stat > div {
+    width: 39px;
+    height: 39px;
+    flex-basis: 39px;
+  }
+
+  .tstudents-stat strong {
+    font-size: 18px;
+  }
+
+  .tstudents-grid {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .tstudents-list-heading {
+    margin-top: 21px;
+  }
+
+  .tstudents-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .tstudents-modal-overlay {
+    padding: 11px;
+    align-items: flex-start;
+  }
+
+  .tstudents-modal {
+    max-height: calc(100vh - 22px);
+    border-radius: 18px;
+  }
+
+  .tstudents-modal-head {
+    padding: 17px;
+  }
+
+  .tstudents-modal-head h2 {
+    font-size: 19px;
+  }
+
+  .tstudents-form {
+    padding: 17px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tstudents-full-field {
+    grid-column: auto;
+  }
+
+  .tstudents-modal-footer {
+    padding: 14px 17px 17px;
+  }
+}
+
+/* =========================================================
+   520PX
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .tstudents-hero {
+    padding: 19px 15px;
+  }
+
+  .tstudents-teacher-tags {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tstudents-teacher-tags span {
+    width: 100%;
+  }
+
+  .tstudents-hero-actions {
+    flex-direction: column;
+  }
+
+  .tstudents-refresh-btn,
+  .tstudents-add-btn {
+    width: 100%;
+  }
+
+  .tstudents-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tstudents-toolbar {
+    padding: 9px;
+  }
+
+  .tstudents-filter {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .tstudents-list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tstudents-list-heading h2 {
+    font-size: 21px;
+  }
+
+  .tstudents-card-details {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tstudents-card-actions {
+    flex-wrap: wrap;
+  }
+
+  .tstudents-card-actions .view {
+    min-width: calc(100% - 82px);
+  }
+
+  .tstudents-popup {
+    top: 14px;
+    right: 15px;
+    left: 15px;
+    width: auto;
+  }
+
+  .tstudents-modal-footer {
+    flex-direction: column-reverse;
+  }
+
+  .tstudents-cancel,
+  .tstudents-save {
+    width: 100%;
+  }
+
+  .tstudents-delete-modal {
+    padding: 23px 18px;
+  }
+
+  .tstudents-delete-actions {
+    flex-direction: column-reverse;
+  }
+
+  .tstudents-delete-actions button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   380PX
+   ========================================================= */
+
+@media (max-width: 380px) {
+  .tstudents-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .tstudents-card-details {
+    grid-template-columns: 1fr;
+  }
+
+  .tstudents-card {
+    padding: 14px;
+  }
+
+  .tstudents-avatar {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+}
+
+/* =========================================================
+   TEACHER STUDENTS
+   FONT SIZE INCREASE
+   Add this at END of TeacherStudents.css
+   ========================================================= */
+
+/* HERO */
+
+.tstudents-eyebrow {
+  font-size: 12px;
+}
+
+.tstudents-hero h1 {
+  font-size: clamp(38px, 4vw, 48px);
+}
+
+.tstudents-hero p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* TEACHER TAGS */
+
+.tstudents-teacher-tags span {
+  font-size: 12px;
+}
+
+.tstudents-teacher-tags svg {
+  font-size: 13px;
+}
+
+/* HERO BUTTONS */
+
+.tstudents-refresh-btn,
+.tstudents-add-btn {
+  font-size: 13px;
+}
+
+/* =========================
+   STATS
+   ========================= */
+
+.tstudents-stat strong {
+  font-size: 27px;
+}
+
+.tstudents-stat span {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+/* =========================
+   SEARCH + FILTER
+   ========================= */
+
+.tstudents-search input {
+  font-size: 13px;
+}
+
+.tstudents-filter select {
+  font-size: 13px;
+}
+
+/* =========================
+   LIST HEADING
+   ========================= */
+
+.tstudents-list-heading > div > span {
+  font-size: 11px;
+}
+
+.tstudents-list-heading h2 {
+  font-size: 30px;
+}
+
+.tstudents-list-heading p {
+  font-size: 13px;
+}
+
+/* =========================
+   STUDENT CARD
+   ========================= */
+
+.tstudents-avatar {
+  font-size: 21px;
+}
+
+.tstudents-status {
+  font-size: 10px;
+}
+
+.tstudents-card-label {
+  font-size: 10px;
+}
+
+.tstudents-card-main h3 {
+  font-size: 21px;
+}
+
+.tstudents-card-id {
+  font-size: 12px;
+}
+
+.tstudents-card-id svg {
+  font-size: 12px;
+}
+
+/* CARD DETAILS */
+
+.tstudents-card-details small {
+  font-size: 9px;
+}
+
+.tstudents-card-details strong {
+  font-size: 12px;
+}
+
+.tstudents-card-details > div > svg {
+  font-size: 14px;
+}
+
+/* CONTACT */
+
+.tstudents-contact span {
+  font-size: 11px;
+}
+
+.tstudents-contact svg {
+  font-size: 12px;
+}
+
+/* =========================
+   CARD BUTTONS
+   ========================= */
+
+.tstudents-card-actions button {
+  font-size: 11px;
+}
+
+.tstudents-card-actions .edit,
+.tstudents-card-actions .trash {
+  font-size: 13px;
+}
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+.tstudents-empty > span {
+  font-size: 11px;
+}
+
+.tstudents-empty h2 {
+  font-size: 27px;
+}
+
+.tstudents-empty p {
+  font-size: 14px;
+}
+
+/* =========================
+   SUCCESS / ERROR POPUP
+   ========================= */
+
+.tstudents-popup span {
+  font-size: 13px;
+}
+
+/* =========================
+   ADD / EDIT MODAL
+   ========================= */
+
+.tstudents-modal-head > div > span {
+  font-size: 11px;
+}
+
+.tstudents-modal-head h2 {
+  font-size: 28px;
+}
+
+.tstudents-modal-head p {
+  font-size: 13px;
+}
+
+/* FORM LABEL */
+
+.tstudents-field label {
+  font-size: 12px;
+}
+
+.tstudents-field label sup {
+  font-size: 11px;
+}
+
+/* FORM INPUTS */
+
+.tstudents-field input,
+.tstudents-field select,
+.tstudents-field textarea {
+  font-size: 13px;
+}
+
+/* MODAL BUTTONS */
+
+.tstudents-cancel,
+.tstudents-save {
+  font-size: 12px;
+}
+
+/* =========================
+   DELETE MODAL
+   ========================= */
+
+.tstudents-delete-modal > span {
+  font-size: 11px;
+}
+
+.tstudents-delete-modal h2 {
+  font-size: 25px;
+}
+
+.tstudents-delete-modal > p {
+  font-size: 13px;
+}
+
+.tstudents-delete-info strong {
+  font-size: 15px;
+}
+
+.tstudents-delete-info small {
+  font-size: 11px;
+}
+
+.tstudents-delete-actions button {
+  font-size: 12px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .tstudents-eyebrow {
+    font-size: 11px;
+  }
+
+  .tstudents-hero h1 {
+    font-size: 34px;
+  }
+
+  .tstudents-hero p {
+    font-size: 14px;
+  }
+
+  .tstudents-stat strong {
+    font-size: 24px;
+  }
+
+  .tstudents-stat span {
+    font-size: 11px;
+  }
+
+  .tstudents-list-heading h2 {
+    font-size: 27px;
+  }
+
+  .tstudents-card-main h3 {
+    font-size: 20px;
+  }
+
+  .tstudents-card-details strong {
+    font-size: 12px;
+  }
+
+  .tstudents-modal-head h2 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .tstudents-hero h1 {
+    font-size: 30px;
+  }
+
+  .tstudents-hero p {
+    font-size: 13px;
+  }
+
+  .tstudents-teacher-tags span {
+    font-size: 11px;
+  }
+
+  .tstudents-refresh-btn,
+  .tstudents-add-btn {
+    font-size: 12px;
+  }
+
+  .tstudents-stat strong {
+    font-size: 22px;
+  }
+
+  .tstudents-stat span {
+    font-size: 10px;
+  }
+
+  .tstudents-search input,
+  .tstudents-filter select {
+    font-size: 12px;
+  }
+
+  .tstudents-list-heading h2 {
+    font-size: 25px;
+  }
+
+  .tstudents-list-heading p {
+    font-size: 12px;
+  }
+
+  .tstudents-card-main h3 {
+    font-size: 19px;
+  }
+
+  .tstudents-card-id,
+  .tstudents-contact span {
+    font-size: 11px;
+  }
+
+  .tstudents-card-details small {
+    font-size: 8px;
+  }
+
+  .tstudents-card-details strong {
+    font-size: 11px;
+  }
+
+  .tstudents-card-actions button {
+    font-size: 10px;
+  }
+
+  .tstudents-field label {
+    font-size: 11px;
+  }
+
+  .tstudents-field input,
+  .tstudents-field select,
+  .tstudents-field textarea {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TEACHER STUDENTS
+   EXTRA LARGE READABLE FONT OVERRIDE
+   ========================================================= */
+
+/* HERO */
+.tstudents-eyebrow {
+  font-size: 13px;
+}
+
+.tstudents-hero h1 {
+  font-size: clamp(42px, 4.5vw, 54px);
+}
+
+.tstudents-hero p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* TEACHER INFORMATION TAGS */
+.tstudents-teacher-tags span {
+  font-size: 13px;
+}
+
+.tstudents-teacher-tags svg {
+  font-size: 14px;
+}
+
+/* TOP BUTTONS */
+.tstudents-refresh-btn,
+.tstudents-add-btn {
+  font-size: 14px;
+  min-height: 44px;
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.tstudents-stat strong {
+  font-size: 30px;
+}
+
+.tstudents-stat span {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   SEARCH & FILTER
+   ========================================================= */
+
+.tstudents-search input {
+  font-size: 15px;
+  height: 45px;
+}
+
+.tstudents-filter select {
+  font-size: 14px;
+  height: 45px;
+}
+
+/* =========================================================
+   STUDENT LIST HEADING
+   ========================================================= */
+
+.tstudents-list-heading > div > span {
+  font-size: 12px;
+}
+
+.tstudents-list-heading h2 {
+  font-size: 33px;
+}
+
+.tstudents-list-heading p {
+  font-size: 15px;
+}
+
+/* =========================================================
+   STUDENT CARD
+   ========================================================= */
+
+.tstudents-avatar {
+  font-size: 23px;
+}
+
+.tstudents-status {
+  font-size: 11px;
+  min-height: 28px;
+  padding: 0 10px;
+}
+
+.tstudents-card-label {
+  font-size: 11px;
+}
+
+.tstudents-card-main h3 {
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.tstudents-card-id {
+  font-size: 13px;
+}
+
+.tstudents-card-id svg {
+  font-size: 13px;
+}
+
+/* =========================================================
+   STUDENT CARD DETAILS
+   ========================================================= */
+
+.tstudents-card-details small {
+  font-size: 10px;
+}
+
+.tstudents-card-details strong {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.tstudents-card-details > div > svg {
+  font-size: 15px;
+}
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.tstudents-contact span {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tstudents-contact svg {
+  font-size: 13px;
+}
+
+/* =========================================================
+   CARD BUTTONS
+   ========================================================= */
+
+.tstudents-card-actions button {
+  font-size: 12px;
+}
+
+.tstudents-card-actions .view {
+  min-height: 38px;
+}
+
+.tstudents-card-actions .edit,
+.tstudents-card-actions .trash {
+  font-size: 14px;
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.tstudents-empty > span {
+  font-size: 12px;
+}
+
+.tstudents-empty h2 {
+  font-size: 29px;
+}
+
+.tstudents-empty p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   POPUP
+   ========================================================= */
+
+.tstudents-popup span {
+  font-size: 14px;
+}
+
+/* =========================================================
+   ADD / EDIT MODAL
+   ========================================================= */
+
+.tstudents-modal-head > div > span {
+  font-size: 12px;
+}
+
+.tstudents-modal-head h2 {
+  font-size: 30px;
+}
+
+.tstudents-modal-head p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* FORM LABELS */
+.tstudents-field label {
+  font-size: 14px;
+}
+
+.tstudents-field label sup {
+  font-size: 12px;
+}
+
+/* FORM INPUTS */
+.tstudents-field input,
+.tstudents-field select,
+.tstudents-field textarea {
+  font-size: 15px;
+}
+
+.tstudents-field input,
+.tstudents-field select {
+  height: 46px;
+}
+
+/* MODAL BUTTONS */
+.tstudents-cancel,
+.tstudents-save {
+  font-size: 14px;
+  min-height: 43px;
+}
+
+/* =========================================================
+   DELETE MODAL
+   ========================================================= */
+
+.tstudents-delete-modal > span {
+  font-size: 12px;
+}
+
+.tstudents-delete-modal h2 {
+  font-size: 27px;
+}
+
+.tstudents-delete-modal > p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tstudents-delete-info strong {
+  font-size: 16px;
+}
+
+.tstudents-delete-info small {
+  font-size: 12px;
+}
+
+.tstudents-delete-actions button {
+  font-size: 14px;
+  min-height: 42px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .tstudents-eyebrow {
+    font-size: 12px;
+  }
+
+  .tstudents-hero h1 {
+    font-size: 37px;
+  }
+
+  .tstudents-hero p {
+    font-size: 15px;
+  }
+
+  .tstudents-teacher-tags span {
+    font-size: 12px;
+  }
+
+  .tstudents-stat strong {
+    font-size: 27px;
+  }
+
+  .tstudents-stat span {
+    font-size: 12px;
+  }
+
+  .tstudents-search input {
+    font-size: 14px;
+  }
+
+  .tstudents-filter select {
+    font-size: 13px;
+  }
+
+  .tstudents-list-heading h2 {
+    font-size: 30px;
+  }
+
+  .tstudents-list-heading p {
+    font-size: 14px;
+  }
+
+  .tstudents-card-main h3 {
+    font-size: 22px;
+  }
+
+  .tstudents-card-id {
+    font-size: 12px;
+  }
+
+  .tstudents-card-details small {
+    font-size: 9px;
+  }
+
+  .tstudents-card-details strong {
+    font-size: 13px;
+  }
+
+  .tstudents-contact span {
+    font-size: 12px;
+  }
+
+  .tstudents-modal-head h2 {
+    font-size: 27px;
+  }
+
+  .tstudents-modal-head p {
+    font-size: 14px;
+  }
+
+  .tstudents-field label {
+    font-size: 13px;
+  }
+
+  .tstudents-field input,
+  .tstudents-field select,
+  .tstudents-field textarea {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 520px) {
+  .tstudents-hero h1 {
+    font-size: 33px;
+  }
+
+  .tstudents-hero p {
+    font-size: 14px;
+  }
+
+  .tstudents-refresh-btn,
+  .tstudents-add-btn {
+    font-size: 13px;
+  }
+
+  .tstudents-stat strong {
+    font-size: 25px;
+  }
+
+  .tstudents-stat span {
+    font-size: 11px;
+  }
+
+  .tstudents-list-heading h2 {
+    font-size: 28px;
+  }
+
+  .tstudents-list-heading p {
+    font-size: 13px;
+  }
+
+  .tstudents-card-main h3 {
+    font-size: 21px;
+  }
+
+  .tstudents-status {
+    font-size: 10px;
+  }
+
+  .tstudents-card-details strong {
+    font-size: 12px;
+  }
+
+  .tstudents-contact span {
+    font-size: 12px;
+  }
+
+  .tstudents-card-actions button {
+    font-size: 11px;
+  }
+
+  .tstudents-modal-head h2 {
+    font-size: 25px;
+  }
+
+  .tstudents-field label {
+    font-size: 12px;
+  }
+
+  .tstudents-field input,
+  .tstudents-field select,
+  .tstudents-field textarea {
+    font-size: 13px;
+  }
+
+  .tstudents-cancel,
+  .tstudents-save {
+    font-size: 13px;
+  }
+}

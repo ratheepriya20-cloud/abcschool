@@ -1,1176 +1,3046 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 
 
-.proSchoolHero {
+.abHero {
   position: relative;
+
   width: 100%;
-  height: 620px;
+
+  min-height: 760px;
+
+  margin-top: 0;
 
   overflow: hidden;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #f8fbfd;
 
-  color: #ffffff;
-  font-family: "Inter", Arial, sans-serif;
+  font-family:
+    "DM Sans",
+    sans-serif;
 
+  isolation: isolate;
+}
+
+
+.abHero *,
+.abHero *::before,
+.abHero *::after {
   box-sizing: border-box;
 }
 
-.proSchoolHero *,
-.proSchoolHero *::before,
-.proSchoolHero *::after {
-  box-sizing: border-box;
-}
 
 /* =========================================================
-   OVERLAY
+   BACKGROUND
 ========================================================= */
 
-.proSchoolHeroOverlay {
+.abHeroBackground {
   position: absolute;
+
+  z-index: -5;
+
   inset: 0;
 
-  z-index: 1;
+  background-position:
+    center center;
+
+  background-repeat:
+    no-repeat;
+
+  background-size:
+    cover;
+
+  transform: scale(1.01);
+}
+
+
+/* =========================================================
+   LEFT WHITE GRADIENT
+========================================================= */
+
+.abHeroWhiteOverlay {
+  position: absolute;
+
+  z-index: -4;
+
+  inset: 0;
 
   background:
     linear-gradient(
       90deg,
-      rgba(3, 20, 43, 0.96) 0%,
-      rgba(4, 25, 50, 0.87) 38%,
-      rgba(5, 25, 48, 0.52) 68%,
-      rgba(4, 20, 42, 0.76) 100%
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.99) 27%,
+      rgba(255, 255, 255, 0.91) 39%,
+      rgba(255, 255, 255, 0.42) 53%,
+      rgba(255, 255, 255, 0.02) 68%
     );
-}
-
-/* =========================================================
-   MAIN HERO
-========================================================= */
-
-.proSchoolHeroMain {
-  position: relative;
-  z-index: 2;
-
-  width: min(1180px, 92%);
-  height: calc(100% - 88px);
-
-  margin: 0 auto;
-  padding: 35px 0;
-
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 315px;
-
-  align-items: center;
-
-  gap: 42px;
-
-  box-sizing: border-box;
-}
-
-/* =========================================================
-   CONTENT
-========================================================= */
-
-.proSchoolHeroContent {
-  width: 100%;
-  max-width: 720px;
-
-  margin-top: 30px;
-}
-
-.proSchoolHeroBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  max-width: 100%;
-
-  padding: 7px 14px;
-  margin-bottom: 18px;
-
-  border: 1px solid rgba(255, 212, 92, 0.55);
-  border-radius: 50px;
-
-  background: rgba(255, 212, 92, 0.08);
-
-  color: #ffd45c;
-
-  font-size: 12px;
-  line-height: 1.3;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-
-  white-space: nowrap;
-}
-
-.proSchoolHeroContent h1 {
-  margin: 0;
-
-  max-width: 750px;
-
-  color: #ffffff;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: clamp(42px, 4vw, 56px);
-  line-height: 1.08;
-
-  letter-spacing: -1.5px;
-  font-weight: 800;
-}
-
-.proSchoolHeroContent h1 span {
-  color: #ffd45c;
-}
-
-.proSchoolHeroContent p {
-  max-width: 650px;
-
-  margin: 17px 0 23px;
-
-  color: rgba(255, 255, 255, 0.88);
-
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-/* =========================================================
-   HERO BUTTONS
-========================================================= */
-
-.proSchoolHeroActions {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  gap: 12px;
-
-  flex-wrap: wrap;
-}
-
-.proSchoolHeroActions button {
-  min-height: 47px;
-
-  padding: 0 21px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 8px;
-
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 1;
-  font-weight: 800;
-
-  cursor: pointer;
-
-  white-space: nowrap;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-/* PRIMARY */
-
-.proSchoolHeroPrimary {
-  border: 1px solid #ffd45c;
-
-  background: #ffd45c;
-
-  color: #071a35;
-
-  box-shadow:
-    0 8px 22px rgba(255, 212, 92, 0.16);
-}
-
-.proSchoolHeroPrimary span {
-  margin-left: 8px;
-
-  font-size: 18px;
-}
-
-.proSchoolHeroPrimary:hover {
-  transform: translateY(-3px);
-
-  background: #ffe18a;
-  border-color: #ffe18a;
-
-  box-shadow:
-    0 12px 28px rgba(255, 212, 92, 0.24);
-}
-
-/* SECONDARY */
-
-.proSchoolHeroSecondary {
-  border: 1px solid rgba(255, 255, 255, 0.46);
-
-  background: rgba(255, 255, 255, 0.08);
-
-  color: #ffffff;
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.proSchoolHeroSecondary:hover {
-  transform: translateY(-3px);
-
-  background: rgba(255, 255, 255, 0.17);
-
-  border-color: rgba(255, 255, 255, 0.70);
-}
-
-/* =========================================================
-   ADMISSION CARD
-========================================================= */
-
-.proSchoolAdmission {
-  position: relative;
-
-  width: 315px;
-  max-width: 100%;
-
-  padding: 21px;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 17px;
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(7, 26, 53, 0.88),
-      rgba(5, 31, 57, 0.76)
-    );
-
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-
-  box-shadow:
-    0 18px 45px rgba(0, 0, 0, 0.30),
-    0 0 30px rgba(22, 134, 196, 0.08);
-
-  overflow: hidden;
-
-  justify-self: end;
-}
-
-.proSchoolAdmission::before {
-  content: "";
-
-  position: absolute;
-
-  width: 145px;
-  height: 145px;
-
-  top: -75px;
-  right: -65px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 212, 92, 0.18);
-
-  filter: blur(24px);
 
   pointer-events: none;
 }
 
-.proSchoolAdmissionTop {
-  position: relative;
-  z-index: 2;
-
-  display: flex;
-  align-items: center;
-
-  gap: 7px;
-
-  color: #ffd45c;
-
-  font-size: 11px;
-  line-height: 1.3;
-  font-weight: 800;
-
-  letter-spacing: 1.1px;
-}
-
-.proSchoolAdmissionTop span {
-  width: 8px;
-  height: 8px;
-
-  flex: 0 0 8px;
-
-  border-radius: 50%;
-
-  background: #ffd45c;
-
-  box-shadow:
-    0 0 11px rgba(255, 212, 92, 0.85);
-}
-
-.proSchoolSession {
-  position: relative;
-  z-index: 2;
-
-  margin-top: 9px;
-
-  color: #ffffff;
-
-  font-family: "Playfair Display", Georgia, serif;
-
-  font-size: 31px;
-  line-height: 1;
-  font-weight: 800;
-}
-
-.proSchoolAdmission h2 {
-  position: relative;
-  z-index: 2;
-
-  margin: 10px 0 7px;
-
-  color: #ffffff;
-
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: 800;
-}
-
-.proSchoolAdmission p {
-  position: relative;
-  z-index: 2;
-
-  margin: 0 0 14px;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 14px;
-  line-height: 1.5;
-  font-weight: 500;
-}
 
 /* =========================================================
-   ADMISSION INFO
+   RIGHT NAVY DESIGN
 ========================================================= */
 
-.proSchoolAdmissionInfo {
+.abHeroNavyShape {
+  position: absolute;
+
+  z-index: -3;
+
+  top: -120px;
+  right: -200px;
+
+  width: 570px;
+  height: 980px;
+
+  border-radius:
+    50% 0 0 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(3, 38, 72, 0.98),
+      rgba(2, 62, 104, 0.96)
+    );
+
+  transform:
+    rotate(8deg);
+
+  box-shadow:
+    -20px 0 60px
+    rgba(3, 34, 65, 0.16);
+}
+
+
+/* =========================================================
+   GOLD CURVES
+========================================================= */
+
+.abHeroGoldCurve {
+  position: absolute;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  border:
+    3px solid rgba(220, 169, 61, 0.72);
+
+  border-radius: 50%;
+}
+
+
+.abHeroGoldCurveOne {
+  width: 850px;
+  height: 340px;
+
+  right: -160px;
+  bottom: -215px;
+
+  transform:
+    rotate(-8deg);
+}
+
+
+.abHeroGoldCurveTwo {
+  width: 650px;
+  height: 240px;
+
+  right: -170px;
+  bottom: -135px;
+
+  border-color:
+    rgba(255, 216, 127, 0.4);
+
+  transform:
+    rotate(-6deg);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.abHeroContainer {
   position: relative;
-  z-index: 2;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1600px;
+
+  min-height: 655px;
+
+  margin: 0 auto;
+
+  padding:
+    75px 40px 120px;
 
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    minmax(500px, 1fr)
+    minmax(430px, 0.72fr);
 
-  gap: 8px;
+  align-items: center;
 
-  margin-bottom: 14px;
+  gap: 60px;
 }
 
-.proSchoolAdmissionInfo div {
-  min-width: 0;
-
-  padding: 10px;
-
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
-
-  background: rgba(255, 255, 255, 0.09);
-}
-
-.proSchoolAdmissionInfo small {
-  display: block;
-
-  margin-bottom: 4px;
-
-  color: rgba(255, 255, 255, 0.60);
-
-  font-size: 10px;
-  line-height: 1.3;
-  font-weight: 700;
-}
-
-.proSchoolAdmissionInfo strong {
-  display: block;
-
-  color: #ffffff;
-
-  font-size: 12px;
-  line-height: 1.3;
-  font-weight: 800;
-
-  overflow-wrap: anywhere;
-}
 
 /* =========================================================
-   START BUTTON
+   LEFT CONTENT
 ========================================================= */
 
-.proSchoolStart {
-  position: relative;
-  z-index: 3;
-
+.abHeroContent {
   width: 100%;
-  min-height: 42px;
+
+  max-width: 730px;
+}
+
+
+/* =========================================================
+   SCHOOL LABEL
+========================================================= */
+
+.abHeroSchoolLabel {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+
+.abHeroBook {
+  color: #c68b17;
+
+  font-size: 27px;
+
+  line-height: 1;
+}
+
+
+.abHeroSchoolLabel strong {
+  color: #07375f;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  white-space: nowrap;
+}
+
+
+.abHeroLabelLine {
+  position: relative;
+
+  width: 65px;
+  height: 1px;
+
+  margin-left: 4px;
+
+  background:
+    #cf941d;
+}
+
+
+.abHeroLabelLine::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    #cf941d;
+
+  transform:
+    translate(50%, -50%);
+}
+
+
+.abHeroSchoolLabel small {
+  margin-left: 5px;
+
+  color: #49637c;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.abHeroContent h1 {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: #07365e;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 62px;
+
+  font-weight: 700;
+
+  line-height: 0.98;
+
+  letter-spacing: -2.4px;
+}
+
+
+.abHeroContent h1 span {
+  display: block;
+
+  margin-top: 9px;
+
+  color: #c88b18;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.abHeroDescription {
+  max-width: 650px;
+
+  margin:
+    25px 0 0;
+
+  color: #506981;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.abHeroActions {
+  margin-top: 30px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
-  gap: 10px;
+  gap: 15px;
 
-  padding: 0 13px;
+  flex-wrap: wrap;
+}
 
-  border: none;
-  border-radius: 8px;
 
-  background: #ffffff;
+.abHeroActions button {
+  height: 58px;
 
-  color: #071a35;
+  font-family:
+    "DM Sans",
+    sans-serif;
 
-  font-family: inherit;
-
-  font-size: 13px;
-  line-height: 1;
-  font-weight: 850;
+  font-size: 14px;
+  font-weight: 800;
 
   cursor: pointer;
 
   transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
-.proSchoolStart span {
-  flex-shrink: 0;
-
-  font-size: 17px;
-}
-
-.proSchoolStart:hover {
-  transform: translateY(-2px);
-
-  background: #ffd45c;
-
-  box-shadow:
-    0 8px 20px rgba(255, 212, 92, 0.18);
-}
 
 /* =========================================================
-   STATS
+   PRIMARY BUTTON
 ========================================================= */
 
-.proSchoolStats {
-  position: absolute;
+.abHeroPrimaryBtn {
+  min-width: 250px;
 
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding:
+    5px 7px 5px 21px;
 
-  z-index: 5;
+  display: flex;
+  align-items: center;
 
-  height: 88px;
+  gap: 12px;
+
+  border: 0;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1a51f,
+      #b87500
+    );
+
+  box-shadow:
+    0 15px 30px
+    rgba(180, 116, 0, 0.25);
+}
+
+
+.abHeroPrimaryBtn > svg {
+  font-size: 20px;
+}
+
+
+.abHeroPrimaryBtn > span {
+  flex: 1;
+
+  text-align: left;
+}
+
+
+.abHeroPrimaryBtn b {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ae7006;
+
+  background: #ffffff;
+
+  font-size: 14px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.abHeroPrimaryBtn:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 19px 37px
+    rgba(180, 116, 0, 0.32);
+}
+
+
+.abHeroPrimaryBtn:hover b {
+  transform:
+    translateX(3px);
+}
+
+
+/* =========================================================
+   SECONDARY
+========================================================= */
+
+.abHeroSecondaryBtn {
+  min-width: 200px;
+
+  padding:
+    0 25px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: 70px;
+  gap: 20px;
 
-  padding: 0 20px;
+  border:
+    1.5px solid #d2941d;
 
-  background: rgba(4, 20, 43, 0.97);
+  border-radius: 50px;
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  color: #0a3153;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  backdrop-filter:
+    blur(6px);
 }
 
-.proSchoolStats div {
-  min-width: 125px;
+
+.abHeroSecondaryBtn svg {
+  color: #bf8111;
+
+  font-size: 13px;
+}
+
+
+.abHeroSecondaryBtn:hover {
+  transform:
+    translateY(-3px);
+
+  color: #ffffff;
+
+  border-color:
+    #073a63;
+
+  background:
+    #073a63;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.abHeroFeatures {
+  max-width: 680px;
+
+  margin-top: 33px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+
+.abHeroFeature {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.abHeroFeature > span {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #c48713;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fff1d0,
+      #fffaf0
+    );
+
+  font-size: 17px;
+
+  box-shadow:
+    0 5px 15px
+    rgba(177, 122, 16, 0.09);
+}
+
+
+.abHeroFeature div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.abHeroFeature strong {
+  color: #163e60;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1.25;
+}
+
+
+.abHeroFeature small {
+  margin-top: 1px;
+
+  color: #708494;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.abHeroFeatureDivider {
+  width: 1px;
+  height: 34px;
+
+  background:
+    rgba(195, 139, 30, 0.3);
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.abHeroSignature {
+  width: fit-content;
+
+  margin:
+    27px 0 0 95px;
+
+  display: flex;
+  flex-direction: column;
+
+  color: #1d5279;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-style: italic;
+
+  transform:
+    rotate(-4deg);
+}
+
+
+.abHeroSignature span {
+  font-size: 19px;
+}
+
+
+.abHeroSignature strong {
+  margin-left: 15px;
+
+  color: #1a4b70;
+
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.abHeroRight {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 500px;
+}
+
+
+/* =========================================================
+   YEARS BADGE
+========================================================= */
+
+.abHeroYearsBadge {
+  position: absolute;
+
+  top: -5px;
+  right: 35px;
+
+  width: 155px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  gap: 5px;
-
   text-align: center;
+
+  color: #ffffff;
 }
 
-.proSchoolStats strong {
-  color: #ffffff;
 
-  font-family: "Playfair Display", Georgia, serif;
+.abHeroYearsBadge::before,
+.abHeroYearsBadge::after {
+  content: "❧";
+
+  position: absolute;
+
+  top: 42px;
+
+  color: #e1b14e;
+
+  font-size: 40px;
+}
+
+
+.abHeroYearsBadge::before {
+  left: -10px;
+
+  transform:
+    rotate(-45deg);
+}
+
+
+.abHeroYearsBadge::after {
+  right: -10px;
+
+  transform:
+    scaleX(-1)
+    rotate(-45deg);
+}
+
+
+.abHeroYearsBadge > svg {
+  color: #e8b74e;
 
   font-size: 29px;
+}
+
+
+.abHeroYearsBadge strong {
+  margin-top: 3px;
+
+  color: #f1c55f;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 49px;
+
   line-height: 1;
+}
+
+
+.abHeroYearsBadge span {
+  margin-top: 4px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   ADMISSION CARD
+========================================================= */
+
+.abHeroAdmissionCard {
+  position: absolute;
+
+  top: 125px;
+  right: 0;
+
+  width: 390px;
+
+  padding:
+    25px 27px 22px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 26px;
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 24, 49, 0.23);
+
+  backdrop-filter:
+    blur(15px);
+}
+
+
+/* =========================================================
+   ADMISSION TOP
+========================================================= */
+
+.abHeroAdmissionTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+.abHeroAdmissionTitle {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+
+.abHeroAdmissionTitle > span {
+  width: 43px;
+  height: 43px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #b97805;
+
+  background: #fff1d1;
+
+  font-size: 17px;
+}
+
+
+.abHeroAdmissionTitle > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.abHeroAdmissionTitle small {
+  color: #0b416e;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+}
+
+
+.abHeroAdmissionTitle strong {
+  margin-top: 1px;
+
+  color: #07365e;
+
+  font-size: 18px;
   font-weight: 800;
 }
 
-.proSchoolStats span {
-  color: rgba(255, 255, 255, 0.75);
+
+.abHeroOpenBadge {
+  padding:
+    8px 13px;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff5252,
+      #ef2d38
+    );
+
+  font-size: 9px;
+  font-weight: 800;
+
+  box-shadow:
+    0 7px 16px
+    rgba(238, 46, 57, 0.22);
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.abHeroAdmissionCard h2 {
+  margin:
+    21px 0 0;
+
+  color: #07365e;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 33px;
+  font-weight: 700;
+
+  line-height: 1.03;
+}
+
+
+.abHeroAdmissionCard h2 span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #c28717;
+}
+
+
+.abHeroAdmissionCard > p {
+  margin:
+    14px 0 18px;
+
+  color: #64798b;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   ADMISSION INFO
+========================================================= */
+
+.abHeroAdmissionInfo {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+
+.abHeroAdmissionInfo > div {
+  min-height: 61px;
+
+  padding:
+    9px 10px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  border:
+    1px solid rgba(8, 91, 142, 0.08);
+
+  border-radius: 12px;
+
+  background: #f8fbfd;
+
+  box-shadow:
+    0 6px 16px
+    rgba(5, 43, 80, 0.05);
+}
+
+
+.abHeroAdmissionInfo > div > span {
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  color: #07598d;
+
+  background: #e5f5fc;
 
   font-size: 13px;
-  line-height: 1.25;
-  font-weight: 500;
 }
 
-.proSchoolStats i {
-  width: 1px;
-  height: 40px;
 
-  flex: 0 0 1px;
+.abHeroAdmissionInfo > div:last-child > span {
+  color: #b77a09;
 
-  background: rgba(255, 255, 255, 0.22);
+  background: #fff2d3;
 }
+
+
+.abHeroAdmissionInfo div div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.abHeroAdmissionInfo small {
+  color: #7b8d9a;
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+.abHeroAdmissionInfo strong {
+  margin-top: 2px;
+
+  color: #103d60;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
 
 /* =========================================================
-   LARGE LAPTOP
+   START BUTTON
 ========================================================= */
 
-@media (max-width: 1100px) {
-  .proSchoolHero {
-    height: 590px;
+.abHeroStartBtn {
+  width: 100%;
+  min-height: 52px;
+
+  margin-top: 16px;
+
+  padding:
+    5px 6px 5px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 0;
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      100deg,
+      #075486 0%,
+      #06335a 55%,
+      #c48b18 100%
+    );
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 13px 25px
+    rgba(4, 52, 89, 0.2);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.abHeroStartBtn b {
+  width: 41px;
+  height: 41px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #a56b04;
+
+  background: #ffffff;
+
+  font-size: 12px;
+}
+
+
+.abHeroStartBtn:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 17px 30px
+    rgba(4, 52, 89, 0.28);
+}
+
+
+/* =========================================================
+   STATS BAR
+========================================================= */
+
+.abHeroStats {
+  position: absolute;
+
+  z-index: 15;
+
+  left: 50%;
+  bottom: 62px;
+
+  transform:
+    translateX(-50%);
+
+  width:
+    min(1050px, calc(100% - 80px));
+
+  min-height: 92px;
+
+  padding:
+    14px 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr auto 1fr auto 1fr;
+
+  align-items: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.75);
+
+  border-radius: 20px;
+
+  background:
+    rgba(247, 252, 255, 0.94);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 34, 64, 0.16);
+
+  backdrop-filter:
+    blur(14px);
+}
+
+
+/* =========================================================
+   STAT
+========================================================= */
+
+.abHeroStat {
+  display: grid;
+
+  grid-template-columns:
+    48px auto 1fr;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    0 13px;
+}
+
+
+.abHeroStatIcon {
+  width: 46px;
+  height: 46px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #075b90;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4fd,
+      #f4fbff
+    );
+
+  font-size: 19px;
+}
+
+
+.abHeroStatIcon.gold {
+  color: #c68b17;
+
+  background:
+    #fff1ce;
+}
+
+
+.abHeroStat > strong {
+  color: #07365e;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+.abHeroStat > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.abHeroStat b {
+  color: #123f63;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 0.7px;
+}
+
+
+.abHeroStat small {
+  margin-top: 3px;
+
+  color: #778b9b;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+.abHeroStatDivider {
+  width: 1px;
+  height: 45px;
+
+  background:
+    rgba(9, 71, 112, 0.12);
+}
+
+
+/* =========================================================
+   SCROLL
+========================================================= */
+
+.abHeroScroll {
+  position: absolute;
+
+  z-index: 20;
+
+  left: 50%;
+  bottom: 14px;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0;
+
+  border: 0;
+
+  color: #ffffff;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+.abHeroScroll > span {
+  width: 26px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  animation:
+    abHeroScrollMove
+    1.6s ease-in-out infinite;
+}
+
+
+.abHeroScroll small {
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+@keyframes abHeroScrollMove {
+
+  0%,
+  100% {
+    transform:
+      translateY(0);
   }
 
-  .proSchoolHeroMain {
-    width: 94%;
+  50% {
+    transform:
+      translateY(4px);
+  }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1250px) {
+
+  .abHero {
+    min-height: 740px;
+  }
+
+
+  .abHeroContainer {
+    padding:
+      65px 30px 120px;
 
     grid-template-columns:
-      minmax(0, 1fr)
-      300px;
+      minmax(450px, 1fr)
+      minmax(370px, 0.72fr);
 
-    gap: 28px;
+    gap: 35px;
   }
 
-  .proSchoolHeroContent {
-    max-width: 680px;
+
+  .abHeroContent h1 {
+    font-size: 58px;
   }
 
-  .proSchoolHeroContent h1 {
-    font-size: 46px;
+
+  .abHeroAdmissionCard {
+    width: 350px;
   }
 
-  .proSchoolHeroContent p {
-    font-size: 17px;
+
+  .abHeroYearsBadge {
+    right: 25px;
   }
 
-  .proSchoolAdmission {
-    width: 300px;
-    padding: 19px;
+
+  .abHeroStats {
+    width:
+      calc(100% - 50px);
   }
 
-  .proSchoolStats {
-    gap: 50px;
+
+  .abHeroStat {
+    grid-template-columns:
+      40px auto 1fr;
+
+    padding:
+      0 8px;
   }
+
+
+  .abHeroStatIcon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 16px;
+  }
+
+
+  .abHeroStat > strong {
+    font-size: 23px;
+  }
+
 }
 
+
 /* =========================================================
-   TABLET / SMALL LAPTOP
+   TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
-  .proSchoolHero {
-    height: 670px;
+@media (max-width: 950px) {
 
-    background-position: 62% center;
+  .abHero {
+    min-height: auto;
+
+    padding-bottom: 30px;
   }
 
-  .proSchoolHeroOverlay {
+
+  .abHeroBackground {
+    background-position:
+      65% center;
+  }
+
+
+  .abHeroWhiteOverlay {
     background:
       linear-gradient(
-        180deg,
-        rgba(3, 20, 43, 0.95) 0%,
-        rgba(4, 25, 50, 0.87) 48%,
-        rgba(4, 20, 42, 0.98) 100%
+        90deg,
+        rgba(255,255,255,0.98),
+        rgba(255,255,255,0.91)
       );
   }
 
-  .proSchoolHeroMain {
-    width: 92%;
-    height: calc(100% - 82px);
 
-    padding: 28px 0 25px;
+  .abHeroNavyShape {
+    display: none;
+  }
+
+
+  .abHeroContainer {
+    min-height: auto;
+
+    padding:
+      60px 25px 30px;
 
     grid-template-columns: 1fr;
 
-    align-content: center;
-    justify-items: center;
-
-    gap: 22px;
-
-    text-align: center;
+    gap: 40px;
   }
 
-  .proSchoolHeroContent {
-    max-width: 680px;
 
-    margin-top: 0;
+  .abHeroContent {
+    max-width: 700px;
   }
 
-  .proSchoolHeroContent h1 {
-    max-width: 680px;
 
-    font-size: 41px;
-    line-height: 1.1;
+  .abHeroContent h1 {
+    font-size: 58px;
   }
 
-  .proSchoolHeroContent p {
-    max-width: 620px;
 
-    margin: 13px auto 20px;
+  .abHeroRight {
+    min-height: auto;
 
-    font-size: 17px;
-  }
+    display: grid;
 
-  .proSchoolHeroActions {
+    grid-template-columns:
+      auto minmax(0, 420px);
+
+    align-items: start;
     justify-content: center;
+
+    gap: 25px;
   }
 
-  .proSchoolAdmission {
-    width: min(390px, 100%);
 
-    justify-self: center;
+  .abHeroYearsBadge {
+    position: relative;
 
-    padding: 18px;
+    top: auto;
+    right: auto;
 
-    text-align: left;
+    padding: 20px;
+
+    border-radius: 20px;
+
+    color: #ffffff;
+
+    background:
+      #07365e;
   }
 
-  .proSchoolSession {
-    font-size: 30px;
+
+  .abHeroAdmissionCard {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 100%;
   }
 
-  .proSchoolAdmission h2 {
-    font-size: 20px;
+
+  .abHeroStats {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    transform: none;
+
+    width:
+      calc(100% - 50px);
+
+    margin:
+      20px auto 0;
   }
 
-  .proSchoolStats {
-    height: 82px;
 
-    gap: 20px;
-
-    padding: 0 15px;
+  .abHeroScroll {
+    display: none;
   }
 
-  .proSchoolStats div {
-    min-width: 90px;
-  }
-
-  .proSchoolStats strong {
-    font-size: 24px;
-  }
-
-  .proSchoolStats span {
-    font-size: 11px;
-  }
-
-  .proSchoolStats i {
-    height: 32px;
-  }
 }
+
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
-  .proSchoolHero {
-    height: auto;
-    min-height: 780px;
+@media (max-width: 650px) {
 
-    margin-top: 0;
-
-    background-position: 62% center;
+  .abHeroBackground {
+    background-position:
+      60% center;
   }
 
-  .proSchoolHeroOverlay {
+
+  .abHeroWhiteOverlay {
     background:
-      linear-gradient(
-        180deg,
-        rgba(3, 20, 43, 0.96) 0%,
-        rgba(4, 25, 50, 0.90) 48%,
-        rgba(4, 20, 42, 0.99) 100%
-      );
+      rgba(255,255,255,0.91);
   }
 
-  /*
-     Main content gets enough room.
-     Stats are part of hero's bottom area.
-  */
 
-  .proSchoolHeroMain {
-    width: 92%;
-    height: auto;
-    min-height: 695px;
-
-    padding: 38px 0 32px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 24px;
-
-    text-align: center;
+  .abHeroContainer {
+    padding:
+      42px 16px 25px;
   }
 
-  /* =======================================================
-     CONTENT
-  ======================================================= */
 
-  .proSchoolHeroContent {
-    width: 100%;
-    max-width: 520px;
+  /* LABEL */
 
-    margin: 0;
+  .abHeroSchoolLabel {
+    gap: 7px;
+
+    margin-bottom: 17px;
   }
 
-  .proSchoolHeroBadge {
-    margin-bottom: 13px;
 
-    padding: 6px 11px;
+  .abHeroBook {
+    font-size: 21px;
+  }
 
+
+  .abHeroSchoolLabel strong {
     font-size: 10px;
-    letter-spacing: 1.2px;
 
-    white-space: normal;
-    text-align: center;
+    letter-spacing: 2px;
   }
 
-  .proSchoolHeroContent h1 {
-    max-width: 100%;
 
-    font-size: clamp(34px, 9vw, 43px);
-
-    line-height: 1.09;
-
-    letter-spacing: -0.8px;
+  .abHeroLabelLine {
+    width: 28px;
   }
 
-  .proSchoolHeroContent p {
-    width: 100%;
-    max-width: 480px;
 
-    margin: 14px auto 20px;
+  .abHeroSchoolLabel small {
+    font-size: 8px;
 
-    font-size: 16px;
-    line-height: 1.55;
+    letter-spacing: 1px;
   }
 
-  /* =======================================================
-     BUTTONS
-  ======================================================= */
 
-  .proSchoolHeroActions {
-    width: 100%;
+  /* HEADING */
 
-    display: flex;
-    flex-direction: column;
+  .abHeroContent h1 {
+    font-size: 43px;
 
-    align-items: stretch;
-    justify-content: center;
+    line-height: 1.01;
+
+    letter-spacing: -1.4px;
+  }
+
+
+  .abHeroDescription {
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+
+  /* BUTTONS */
+
+  .abHeroActions {
+    margin-top: 23px;
 
     gap: 10px;
   }
 
-  .proSchoolHeroActions button {
+
+  .abHeroActions button {
     width: 100%;
-    min-height: 48px;
 
-    padding: 0 18px;
-
-    font-size: 15px;
+    min-width: 0;
   }
 
-  /* =======================================================
-     ADMISSION CARD
-  ======================================================= */
 
-  .proSchoolAdmission {
+  /* FEATURES */
+
+  .abHeroFeatures {
+    margin-top: 26px;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+
+  .abHeroFeature {
+    min-height: 58px;
+
+    padding: 8px;
+
+    border:
+      1px solid rgba(8, 87, 135, 0.08);
+
+    border-radius: 12px;
+
+    background:
+      rgba(255,255,255,0.72);
+  }
+
+
+  .abHeroFeatureDivider {
+    display: none;
+  }
+
+
+  .abHeroSignature {
+    margin:
+      22px 0 0 25px;
+  }
+
+
+  .abHeroSignature span {
+    font-size: 16px;
+  }
+
+
+  .abHeroSignature strong {
+    font-size: 19px;
+  }
+
+
+  /* RIGHT */
+
+  .abHeroRight {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+
+  .abHeroYearsBadge {
     width: 100%;
-    max-width: 390px;
 
-    padding: 18px;
+    display: grid;
 
-    border-radius: 15px;
+    grid-template-columns:
+      auto auto 1fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+      13px 18px;
 
     text-align: left;
   }
 
-  .proSchoolAdmissionTop {
-    font-size: 10px;
+
+  .abHeroYearsBadge::before,
+  .abHeroYearsBadge::after {
+    display: none;
   }
 
-  .proSchoolSession {
-    margin-top: 8px;
 
+  .abHeroYearsBadge > svg {
+    font-size: 21px;
+  }
+
+
+  .abHeroYearsBadge strong {
+    font-size: 33px;
+  }
+
+
+  .abHeroYearsBadge span {
+    margin: 0;
+
+    font-size: 8px;
+  }
+
+
+  /* ADMISSION */
+
+  .abHeroAdmissionCard {
+    padding:
+      21px 17px;
+
+    border-radius: 20px;
+  }
+
+
+  .abHeroAdmissionCard h2 {
     font-size: 29px;
   }
 
-  .proSchoolAdmission h2 {
-    margin: 9px 0 6px;
 
-    font-size: 20px;
+  /* STATS */
+
+  .abHeroStats {
+    width:
+      calc(100% - 30px);
+
+    padding:
+      15px;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    border-radius: 17px;
   }
 
-  .proSchoolAdmission p {
-    margin-bottom: 12px;
 
-    font-size: 14px;
-    line-height: 1.45;
+  .abHeroStatDivider {
+    display: none;
   }
 
-  .proSchoolAdmissionInfo {
-    gap: 7px;
 
-    margin-bottom: 12px;
+  .abHeroStat {
+    min-height: 75px;
+
+    padding: 8px;
+
+    grid-template-columns:
+      38px 1fr;
+
+    gap: 8px;
+
+    border:
+      1px solid rgba(7, 68, 108, 0.07);
+
+    border-radius: 12px;
+
+    background:
+      rgba(255,255,255,0.65);
   }
 
-  .proSchoolAdmissionInfo div {
-    padding: 9px;
+
+  .abHeroStatIcon {
+    grid-row:
+      1 / 3;
   }
 
-  .proSchoolAdmissionInfo small {
-    font-size: 9px;
+
+  .abHeroStat > strong {
+    font-size: 21px;
   }
 
-  .proSchoolAdmissionInfo strong {
-    font-size: 11px;
+
+  .abHeroStat > div {
+    grid-column: 2;
   }
 
-  .proSchoolStart {
-    min-height: 42px;
 
-    font-size: 13px;
+  .abHeroStat small {
+    white-space: normal;
   }
 
-  /* =======================================================
-     STATS
-  ======================================================= */
-
-  .proSchoolStats {
-    position: absolute;
-
-    height: 85px;
-
-    gap: 0;
-
-    padding: 7px 4px;
-  }
-
-  .proSchoolStats div {
-    min-width: 0;
-
-    width: 33.333%;
-
-    flex: 1;
-
-    gap: 4px;
-  }
-
-  .proSchoolStats strong {
-    font-size: 22px;
-  }
-
-  .proSchoolStats span {
-    max-width: 90px;
-
-    font-size: 10px;
-    line-height: 1.2;
-  }
-
-  .proSchoolStats i {
-    height: 30px;
-  }
 }
+
 
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 480px) {
-  .proSchoolHero {
-    min-height: 810px;
+@media (max-width: 390px) {
 
-    background-position: 64% center;
+  .abHeroContainer {
+    padding-top: 70px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  .proSchoolHeroMain {
-    min-height: 725px;
 
-    width: 92%;
-
-    padding: 30px 0 27px;
-
-    gap: 20px;
+  .abHeroContent h1 {
+    font-size: 38px;
+  }
+  .abHeroContent h1 span {
+    display: inline;
+    margin-left: 9px;
   }
 
-  .proSchoolHeroBadge {
-    max-width: 95%;
 
-    margin-bottom: 11px;
+  .abHeroSchoolLabel small,
+  .abHeroLabelLine {
+    display: none;
+  }
 
+
+  .abHeroAdmissionInfo {
+    grid-template-columns: 1fr;
+  }
+
+
+  .abHeroStats {
+    width:
+      calc(100% - 20px);
+  }
+
+}
+
+/* =========================================
+   STATS - BALANCED FONT SIZE
+========================================= */
+
+/* 1500+, 40+, 98%, 30+ */
+.abHeroStat > strong {
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* STUDENTS, TEACHERS etc. */
+.abHeroStat b {
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+/* Growing Together etc. */
+.abHeroStat small {
+  margin-top: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+
+/* TABLET */
+@media (max-width: 950px) {
+  .abHeroStat > strong {
+    font-size: 25px;
+  }
+
+  .abHeroStat b {
     font-size: 9px;
-    letter-spacing: 1px;
   }
 
-  .proSchoolHeroContent h1 {
-    font-size: 34px;
+  .abHeroStat small {
+    font-size: 8.5px;
+  }
+}
 
-    line-height: 1.1;
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .abHeroStat > strong {
+    font-size: 23px;
   }
 
-  .proSchoolHeroContent p {
-    max-width: 370px;
-
-    margin: 12px auto 17px;
-
-    font-size: 16px;
-    line-height: 1.5;
+  .abHeroStat b {
+    font-size: 9px;
   }
 
-  .proSchoolHeroActions {
-    gap: 9px;
-  }
-
-  .proSchoolHeroActions button {
-    min-height: 47px;
-
-    font-size: 14px;
-  }
-
-  .proSchoolAdmission {
-    max-width: 350px;
-
-    padding: 16px;
-  }
-
-  .proSchoolSession {
-    font-size: 27px;
-  }
-
-  .proSchoolAdmission h2 {
-    font-size: 18px;
-  }
-
-  .proSchoolAdmission p {
-    font-size: 13px;
-  }
-
-  .proSchoolAdmissionInfo div {
-    padding: 8px;
-  }
-
-  .proSchoolAdmissionInfo small {
+  .abHeroStat small {
     font-size: 8px;
-  }
-
-  .proSchoolAdmissionInfo strong {
-    font-size: 10px;
-  }
-
-  .proSchoolStart {
-    min-height: 40px;
-
-    font-size: 12px;
-  }
-
-  .proSchoolStats {
-    height: 78px;
-
-    padding: 6px 2px;
-  }
-
-  .proSchoolStats strong {
-    font-size: 20px;
-  }
-
-  .proSchoolStats span {
-    font-size: 9px;
-  }
-
-  .proSchoolStats i {
-    height: 27px;
+    white-space: normal;
   }
 }
 
 /* =========================================================
-   VERY SMALL MOBILE
+   AB PUBLIC SCHOOL HERO
+   LOW-GOLD / NAVY + SKY BLUE OVERRIDE
+   Paste at END of Hero.css
 ========================================================= */
 
-@media (max-width: 380px) {
-  .proSchoolHero {
-    min-height: 840px;
+:root {
+  --ab-hero-navy: #07365e;
+  --ab-hero-navy-dark: #052b4a;
+  --ab-hero-blue: #0877a9;
+  --ab-hero-blue-dark: #075783;
+  --ab-hero-sky: #58b9dd;
+  --ab-hero-sky-light: #e4f5fb;
+  --ab-hero-cream: #f8fbfd;
+  --ab-hero-white: #ffffff;
+
+  /* Gold only as a tiny accent */
+  --ab-hero-gold: #c9a45b;
+}
+
+
+/* =========================================================
+   REMOVE LARGE GOLD BACKGROUND CURVES
+========================================================= */
+
+.abHeroGoldCurve {
+  border-color: rgba(75, 174, 216, 0.2);
+  border-width: 2px;
+}
+
+.abHeroGoldCurveTwo {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+
+/* =========================================================
+   SCHOOL LABEL
+========================================================= */
+
+.abHeroBook {
+  color: var(--ab-hero-blue);
+}
+
+.abHeroLabelLine {
+  background: var(--ab-hero-sky);
+}
+
+.abHeroLabelLine::after {
+  background: var(--ab-hero-blue);
+}
+
+
+/* =========================================================
+   HERO HEADING
+   Gold heading removed
+========================================================= */
+
+.abHeroContent h1 {
+  color: var(--ab-hero-navy);
+}
+
+.abHeroContent h1 span {
+  color: var(--ab-hero-blue);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.abHeroDescription {
+  color: #526c80;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+   Gold -> premium blue
+========================================================= */
+
+.abHeroPrimaryBtn {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9 0%,
+      #075f8d 48%,
+      #063b64 100%
+    );
+
+  box-shadow:
+    0 15px 30px
+    rgba(5, 82, 126, 0.22);
+}
+
+.abHeroPrimaryBtn b {
+  color: var(--ab-hero-blue);
+  background: #ffffff;
+}
+
+.abHeroPrimaryBtn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #086d9c,
+      #063e68
+    );
+
+  box-shadow:
+    0 19px 37px
+    rgba(4, 67, 105, 0.28);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.abHeroSecondaryBtn {
+  color: var(--ab-hero-navy);
+
+  border-color:
+    rgba(8, 119, 169, 0.35);
+
+  background:
+    rgba(255, 255, 255, 0.86);
+}
+
+.abHeroSecondaryBtn svg {
+  color: var(--ab-hero-blue);
+}
+
+.abHeroSecondaryBtn:hover {
+  color: #ffffff;
+
+  border-color:
+    var(--ab-hero-navy);
+
+  background:
+    var(--ab-hero-navy);
+}
+
+.abHeroSecondaryBtn:hover svg {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   FEATURE ICONS
+   Gold removed
+========================================================= */
+
+.abHeroFeature > span {
+  color: var(--ab-hero-blue);
+
+  background:
+    linear-gradient(
+      145deg,
+      #e1f4fb,
+      #f7fcfe
+    );
+
+  box-shadow:
+    0 5px 15px
+    rgba(8, 119, 169, 0.08);
+}
+
+.abHeroFeatureDivider {
+  background:
+    rgba(8, 119, 169, 0.17);
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.abHeroSignature {
+  color: #1d5279;
+}
+
+.abHeroSignature strong {
+  color: var(--ab-hero-navy);
+}
+
+
+/* =========================================================
+   YEARS BADGE
+   Keep only ONE small gold detail here
+========================================================= */
+
+.abHeroYearsBadge > svg {
+  color: var(--ab-hero-gold);
+}
+
+.abHeroYearsBadge strong {
+  color: #ffffff;
+}
+
+.abHeroYearsBadge::before,
+.abHeroYearsBadge::after {
+  color:
+    rgba(255, 255, 255, 0.36);
+}
+
+
+/* =========================================================
+   ADMISSION CARD
+========================================================= */
+
+.abHeroAdmissionCard {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.75);
+
+  background:
+    rgba(255, 255, 255, 0.96);
+
+  box-shadow:
+    0 30px 70px
+    rgba(0, 31, 59, 0.19);
+}
+
+
+/* admission icon */
+
+.abHeroAdmissionTitle > span {
+  color: var(--ab-hero-blue);
+
+  background:
+    var(--ab-hero-sky-light);
+}
+
+
+/* admission heading */
+
+.abHeroAdmissionCard h2 {
+  color: var(--ab-hero-navy);
+}
+
+.abHeroAdmissionCard h2 span {
+  color: var(--ab-hero-blue);
+}
+
+
+/* =========================================================
+   ADMISSION INFO
+========================================================= */
+
+.abHeroAdmissionInfo > div {
+  border-color:
+    rgba(8, 91, 142, 0.09);
+
+  background:
+    #f6fbfd;
+}
+
+
+/* both icons same blue family */
+
+.abHeroAdmissionInfo > div > span,
+.abHeroAdmissionInfo > div:last-child > span {
+  color: var(--ab-hero-blue);
+
+  background:
+    #e5f5fc;
+}
+
+
+/* =========================================================
+   START APPLICATION BUTTON
+   Remove gold from gradient
+========================================================= */
+
+.abHeroStartBtn {
+  background:
+    linear-gradient(
+      100deg,
+      #0877a9 0%,
+      #07517e 55%,
+      #06365d 100%
+    );
+
+  box-shadow:
+    0 13px 25px
+    rgba(4, 52, 89, 0.2);
+}
+
+.abHeroStartBtn b {
+  color: var(--ab-hero-blue);
+
+  background: #ffffff;
+}
+
+.abHeroStartBtn:hover {
+  background:
+    linear-gradient(
+      100deg,
+      #086d9d,
+      #06375f
+    );
+
+  box-shadow:
+    0 17px 30px
+    rgba(4, 52, 89, 0.28);
+}
+
+
+/* =========================================================
+   STATS BAR
+========================================================= */
+
+.abHeroStats {
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.78);
+
+  background:
+    rgba(247, 252, 255, 0.95);
+
+  box-shadow:
+    0 18px 45px
+    rgba(0, 34, 64, 0.14);
+}
+
+
+/* =========================================================
+   STAT ICONS
+========================================================= */
+
+.abHeroStatIcon {
+  color: var(--ab-hero-blue);
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4fd,
+      #f4fbff
+    );
+}
+
+
+/* even icon with .gold class becomes blue */
+
+.abHeroStatIcon.gold {
+  color: var(--ab-hero-blue);
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4fd,
+      #f4fbff
+    );
+}
+
+
+/* =========================================================
+   STATS TEXT
+   Balanced sizes — no overflow
+========================================================= */
+
+.abHeroStat > strong {
+  color: var(--ab-hero-navy);
+
+  font-size: 27px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.abHeroStat b {
+  color: #123f63;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.5px;
+}
+
+.abHeroStat small {
+  margin-top: 3px;
+
+  color: #778b9b;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  white-space: nowrap;
+}
+
+.abHeroStatDivider {
+  background:
+    rgba(8, 93, 143, 0.12);
+}
+
+
+/* =========================================================
+   NAVY RIGHT SHAPE
+========================================================= */
+
+.abHeroNavyShape {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(3, 38, 72, 0.98),
+      rgba(3, 72, 116, 0.96)
+    );
+
+  box-shadow:
+    -20px 0 60px
+    rgba(3, 34, 65, 0.14);
+}
+
+
+/* =========================================================
+   OPEN BADGE
+   Keep red because it is a status badge
+========================================================= */
+
+.abHeroOpenBadge {
+  background:
+    linear-gradient(
+      135deg,
+      #ef5350,
+      #e53945
+    );
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .abHeroYearsBadge {
+    background:
+      linear-gradient(
+        145deg,
+        #07365e,
+        #07527d
+      );
   }
 
-  .proSchoolHeroMain {
-    min-height: 755px;
-
-    padding-top: 27px;
-
-    gap: 18px;
+  .abHeroYearsBadge strong {
+    color: #ffffff;
   }
 
-  .proSchoolHeroContent h1 {
-    font-size: 31px;
+  .abHeroStat > strong {
+    font-size: 25px;
+  }
+
+  .abHeroStat b {
+    font-size: 9px;
+  }
+
+  .abHeroStat small {
+    font-size: 8.5px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .abHeroFeature {
+    border:
+      1px solid
+      rgba(8, 87, 135, 0.08);
+
+    background:
+      rgba(255, 255, 255, 0.78);
+  }
+
+
+  .abHeroStat {
+    border:
+      1px solid
+      rgba(7, 68, 108, 0.07);
+
+    background:
+      rgba(255, 255, 255, 0.72);
+  }
+
+
+  .abHeroStat > strong {
+    font-size: 23px;
+  }
+
+
+  .abHeroStat b {
+    font-size: 9px;
+  }
+
+
+  .abHeroStat small {
+    font-size: 8px;
+
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   AB PUBLIC SCHOOL HERO
+   RESPONSIVE CARD + STATS BIGGER SIZE
+   PASTE AT VERY END OF Hero.css
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   951px se niche
+========================================================= */
+
+@media (max-width: 950px) {
+
+  /* =========================================
+     ADMISSION CARD
+  ========================================= */
+
+  .abHeroAdmissionCard {
+    width: 100%;
+
+    padding: 28px 26px 26px;
+
+    border-radius: 24px;
+  }
+
+
+  /* TOP ICON */
+
+  .abHeroAdmissionTitle > span {
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    font-size: 21px;
+  }
+
+
+  /* ADMISSION OPEN LABEL */
+
+  .abHeroAdmissionTitle small {
+    font-size: 12px;
+
+    letter-spacing: 1px;
+  }
+
+
+  /* ADMISSION 2026 */
+
+  .abHeroAdmissionTitle strong {
+    margin-top: 3px;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+  }
+
+
+  /* OPEN BADGE */
+
+  .abHeroOpenBadge {
+    padding: 9px 16px;
+
+    font-size: 11px;
+  }
+
+
+  /* MAIN CARD HEADING */
+
+  .abHeroAdmissionCard h2 {
+    margin-top: 23px;
+
+    font-size: 38px;
 
     line-height: 1.08;
   }
 
-  .proSchoolHeroContent p {
+
+  /* DESCRIPTION */
+
+  .abHeroAdmissionCard > p {
+    margin: 16px 0 21px;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+
+
+  /* INFO CARDS */
+
+  .abHeroAdmissionInfo {
+    gap: 12px;
+  }
+
+
+  .abHeroAdmissionInfo > div {
+    min-height: 76px;
+
+    padding: 12px 13px;
+
+    gap: 11px;
+
+    border-radius: 14px;
+  }
+
+
+  /* INFO ICON */
+
+  .abHeroAdmissionInfo > div > span {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    font-size: 17px;
+
+    border-radius: 11px;
+  }
+
+
+  /* SMALL LABEL */
+
+  .abHeroAdmissionInfo small {
+    font-size: 10.5px;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.6px;
+  }
+
+
+  /* INFO VALUE */
+
+  .abHeroAdmissionInfo strong {
+    margin-top: 4px;
+
+    font-size: 14px;
+
+    line-height: 1.35;
+  }
+
+
+  /* START APPLICATION BUTTON */
+
+  .abHeroStartBtn {
+    min-height: 60px;
+
+    margin-top: 20px;
+
+    padding:
+      6px 7px
+      6px 23px;
+
     font-size: 15px;
   }
 
-  .proSchoolHeroActions button {
-    min-height: 45px;
 
-    font-size: 13px;
-  }
+  .abHeroStartBtn b {
+    width: 47px;
+    height: 47px;
 
-  .proSchoolAdmission {
-    max-width: 330px;
-
-    padding: 14px;
-  }
-
-  .proSchoolSession {
-    font-size: 25px;
-  }
-
-  .proSchoolAdmission h2 {
-    font-size: 17px;
-  }
-
-  .proSchoolAdmission p {
-    font-size: 12px;
-  }
-
-  .proSchoolAdmissionInfo {
-    gap: 6px;
-  }
-
-  .proSchoolAdmissionInfo div {
-    padding: 7px;
-  }
-
-  .proSchoolAdmissionInfo small {
-    font-size: 8px;
-  }
-
-  .proSchoolAdmissionInfo strong {
-    font-size: 9px;
-  }
-
-  .proSchoolStart {
-    min-height: 38px;
-
-    padding: 0 11px;
-
-    font-size: 11px;
-  }
-
-  .proSchoolStats {
-    height: 75px;
-  }
-
-  .proSchoolStats strong {
-    font-size: 18px;
-  }
-
-  .proSchoolStats span {
-    font-size: 8px;
-  }
-
-  .proSchoolStats i {
-    height: 25px;
-  }
-}
-
-/* =========================================================
-   EXTRA SMALL DEVICES
-========================================================= */
-
-@media (max-width: 330px) {
-  .proSchoolHero {
-    min-height: 800px;
-  }
-
-  .proSchoolHeroMain {
-    min-height: 775px;
-
-    width: 94%;
-  }
-
-  .proSchoolHeroContent h1 {
-    font-size: 28px;
-  }
-
-  .proSchoolHeroContent p {
     font-size: 14px;
   }
 
-  .proSchoolAdmission {
-    max-width: 310px;
+
+  /* =========================================
+     STATS
+  ========================================= */
+
+  .abHeroStats {
+    min-height: 110px;
+
+    padding: 18px 20px;
+
+    gap: 10px;
+
+    border-radius: 21px;
   }
 
-  .proSchoolAdmissionTop {
-    font-size: 9px;
+
+  .abHeroStat {
+    min-height: 78px;
+
+    padding: 10px 12px;
+
+    gap: 10px;
   }
 
-  .proSchoolSession {
-    font-size: 23px;
+
+  /* STAT ICON */
+
+  .abHeroStatIcon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 20px;
   }
 
-  .proSchoolAdmission h2 {
-    font-size: 16px;
+
+  /* 1500+, 40+, 98% */
+
+  .abHeroStat > strong {
+    font-size: 30px !important;
+
+    line-height: 1;
   }
 
-  .proSchoolAdmission p {
+
+  /* STUDENTS, TEACHERS */
+
+  .abHeroStat b {
+    font-size: 11px !important;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.6px;
+  }
+
+
+  /* Growing Together */
+
+  .abHeroStat small {
+    margin-top: 4px;
+
+    font-size: 10.5px !important;
+
+    line-height: 1.35;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   650px se niche
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* =========================================
+     ADMISSION CARD
+  ========================================= */
+
+  .abHeroAdmissionCard {
+    padding:
+      25px 20px
+      23px;
+
+    border-radius: 22px;
+  }
+
+
+  .abHeroAdmissionTop {
+    gap: 12px;
+  }
+
+
+  /* ICON */
+
+  .abHeroAdmissionTitle > span {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    font-size: 20px;
+  }
+
+
+  /* SMALL TOP LABEL */
+
+  .abHeroAdmissionTitle small {
+    font-size: 11px;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  /* ADMISSION SESSION */
+
+  .abHeroAdmissionTitle strong {
+    font-size: 19px;
+
+    line-height: 1.3;
+  }
+
+
+  /* OPEN */
+
+  .abHeroOpenBadge {
+    padding:
+      9px 14px;
+
+    font-size: 10px;
+  }
+
+
+  /* MAIN HEADING */
+
+  .abHeroAdmissionCard h2 {
+    margin-top: 22px;
+
+    font-size: 35px;
+
+    line-height: 1.08;
+  }
+
+
+  /* DESCRIPTION */
+
+  .abHeroAdmissionCard > p {
+    margin:
+      15px 0 20px;
+
+    font-size: 15.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* INFO GRID */
+
+  .abHeroAdmissionInfo {
+    gap: 11px;
+  }
+
+
+  .abHeroAdmissionInfo > div {
+    min-height: 78px;
+
+    padding:
+      12px 12px;
+
+    gap: 11px;
+
+    border-radius: 14px;
+  }
+
+
+  /* INFO ICON */
+
+  .abHeroAdmissionInfo > div > span {
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    font-size: 18px;
+
+    border-radius: 11px;
+  }
+
+
+  /* INFO LABEL */
+
+  .abHeroAdmissionInfo small {
+    font-size: 10.5px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+  }
+
+
+  /* INFO VALUE */
+
+  .abHeroAdmissionInfo strong {
+    margin-top: 4px;
+
+    font-size: 14.5px;
+
+    line-height: 1.3;
+  }
+
+
+  /* BUTTON */
+
+  .abHeroStartBtn {
+    min-height: 61px;
+
+    margin-top: 20px;
+
+    padding:
+      6px 7px
+      6px 21px;
+
+    font-size: 15.5px;
+  }
+
+
+  .abHeroStartBtn b {
+    width: 48px;
+    height: 48px;
+
+    font-size: 14px;
+  }
+
+
+  /* =========================================
+     YEARS CARD
+  ========================================= */
+
+  .abHeroYearsBadge {
+    min-height: 78px;
+
+    padding:
+      16px 20px;
+
+    gap: 13px;
+  }
+
+
+  .abHeroYearsBadge > svg {
+    font-size: 25px;
+  }
+
+
+  .abHeroYearsBadge strong {
+    font-size: 39px;
+  }
+
+
+  .abHeroYearsBadge span {
+    font-size: 11px;
+
+    line-height: 1.35;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  /* =========================================
+     STATS WRAPPER
+  ========================================= */
+
+  .abHeroStats {
+    width:
+      calc(100% - 24px);
+
+    min-height: 0;
+
+    padding: 15px;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 12px;
+
+    border-radius: 20px;
+  }
+
+
+  /* EACH STAT CARD */
+
+  .abHeroStat {
+    min-height: 100px;
+
+    padding:
+      13px 11px;
+
+    grid-template-columns:
+      46px 1fr;
+
+    grid-template-rows:
+      auto auto;
+
+    gap:
+      5px 10px;
+
+    border-radius: 14px;
+  }
+
+
+  /* STAT ICON */
+
+  .abHeroStatIcon {
+    width: 46px;
+    height: 46px;
+
+    grid-row:
+      1 / 3;
+
+    font-size: 19px;
+  }
+
+
+  /* NUMBER */
+
+  .abHeroStat > strong {
+    font-size: 29px !important;
+
+    line-height: 1;
+
+    align-self: end;
+  }
+
+
+  .abHeroStat > div {
+    grid-column: 2;
+
+    align-self: start;
+  }
+
+
+  /* STUDENTS / TEACHERS */
+
+  .abHeroStat b {
+    font-size: 11px !important;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.4px;
+  }
+
+
+  /* SUB TEXT */
+
+  .abHeroStat small {
+    margin-top: 4px;
+
+    font-size: 10.5px !important;
+
+    line-height: 1.3;
+
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   390px se niche
+========================================================= */
+
+@media (max-width: 390px) {
+
+  /* =========================================
+     ADMISSION CARD
+  ========================================= */
+
+  .abHeroAdmissionCard {
+    padding:
+      23px 17px
+      21px;
+  }
+
+
+  .abHeroAdmissionTitle > span {
+    width: 46px;
+    height: 46px;
+
+    flex:
+      0 0 46px;
+
+    font-size: 19px;
+  }
+
+
+  .abHeroAdmissionTitle small {
+    font-size: 10.5px;
+  }
+
+
+  .abHeroAdmissionTitle strong {
+    font-size: 18px;
+  }
+
+
+  .abHeroOpenBadge {
+    padding:
+      8px 11px;
+
+    font-size: 9.5px;
+  }
+
+
+  .abHeroAdmissionCard h2 {
+    font-size: 33px;
+  }
+
+
+  .abHeroAdmissionCard > p {
+    font-size: 15px;
+  }
+
+
+  /*
+    Aapki existing CSS me 390px par
+    admission info 1 column hoti hai.
+  */
+
+  .abHeroAdmissionInfo > div {
+    min-height: 76px;
+
+    padding:
+      12px 13px;
+  }
+
+
+  .abHeroAdmissionInfo small {
     font-size: 11px;
   }
 
-  .proSchoolStats strong {
-    font-size: 17px;
+
+  .abHeroAdmissionInfo strong {
+    font-size: 15px;
   }
 
-  .proSchoolStats span {
-    font-size: 7px;
+
+  /* =========================================
+     STATS
+  ========================================= */
+
+  .abHeroStats {
+    width:
+      calc(100% - 16px);
+
+    gap: 10px;
+
+    padding: 12px;
+  }
+
+
+  .abHeroStat {
+    min-height: 96px;
+
+    padding:
+      11px 8px;
+
+    grid-template-columns:
+      42px 1fr;
+
+    gap:
+      5px 8px;
+  }
+
+
+  .abHeroStatIcon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 18px;
+  }
+
+
+  .abHeroStat > strong {
+    font-size: 27px !important;
+  }
+
+
+  .abHeroStat b {
+    font-size: 10.5px !important;
+  }
+
+
+  .abHeroStat small {
+    font-size: 10px !important;
+
+    line-height: 1.3;
+  }
+
+
+  .abHeroYearsBadge strong {
+    font-size: 37px;
+  }
+
+
+  .abHeroYearsBadge span {
+    font-size: 10.5px;
   }
 }
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-.proSchoolHeroActions button:focus-visible,
-.proSchoolStart:focus-visible {
-  outline: 3px solid rgba(255, 212, 92, 0.55);
-  outline-offset: 3px;
-}
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  .proSchoolHeroActions button,
-  .proSchoolStart {
-    transition: none;
-  }
-
-  .proSchoolHeroActions button:hover,
-  .proSchoolStart:hover {
-    transform: none;
-  }
-}
-

@@ -3,20 +3,50 @@ import { useNavigate } from "react-router-dom";
 
 import {
   FaFacebookF,
-  FaLinkedinIn,
   FaInstagram,
   FaYoutube,
+  FaLinkedinIn,
+  FaChevronRight,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
+  FaUsers,
+  FaGraduationCap,
   FaArrowRight,
-  FaUserShield,
+  FaArrowUp,
 } from "react-icons/fa";
 
 import "./Footer.css";
 
+/* ================================
+   AB PUBLIC SCHOOL LOGO
+================================ */
+import abLogo from "../assets/ab-logo.png";
+
+/* Existing school image */
+import footerCampus from "../assets/facility-cta.jpg";
+
 const Footer = () => {
   const navigate = useNavigate();
+
+  const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Academics", path: "/academics" },
+    { name: "Facilities", path: "/facilities" },
+    { name: "Gallery", path: "/gallery" },
+    { name: "News & Notices", path: "/news-notices" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const activityLinks = [
+    { name: "Sports", path: "/sports" },
+    { name: "Cultural", path: "/cultural-activities" },
+    { name: "Competitions", path: "/competitions" },
+    { name: "Educational Trips", path: "/educational-trips" },
+  ];
+
+  
 
   const goTo = (path) => {
     navigate(path);
@@ -27,337 +57,253 @@ const Footer = () => {
     });
   };
 
-  const socialLinks = {
-    facebook: "https://www.facebook.com/",
-    linkedin: "https://www.linkedin.com/",
-    instagram: "https://www.instagram.com/",
-    youtube: "https://www.youtube.com/",
-  };
-
   const openSocial = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
-    <footer className="absx-footer">
+    <footer className="abf-footer">
 
-      {/* TOP WAVE */}
-      <div className="absx-footer-wave" aria-hidden="true">
-        <svg
-          viewBox="0 0 1440 150"
-          preserveAspectRatio="none"
-        >
-          <path d="M0,70 C180,135 330,5 520,55 C710,105 820,135 1010,55 C1190,-5 1320,35 1440,75 L1440,150 L0,150 Z" />
-        </svg>
-      </div>
+      {/* EXISTING CAMPUS IMAGE */}
+      <div
+        className="abf-campus-bg"
+        style={{
+          backgroundImage: `url(${footerCampus})`,
+        }}
+      />
 
-      {/* DECORATIVE ELEMENTS */}
-      <span className="absx-footer-star absx-footer-star-one">
-        ✦
-      </span>
+      <div className="abf-container">
 
-      <span className="absx-footer-star absx-footer-star-two">
-        ✧
-      </span>
+        <div className="abf-main">
 
-      <span className="absx-footer-star absx-footer-star-three">
-        ✦
-      </span>
+          {/* =====================================
+              BRAND
+          ===================================== */}
 
-      <span className="absx-footer-circle absx-footer-circle-one"></span>
-      <span className="absx-footer-circle absx-footer-circle-two"></span>
+          <div className="abf-brand">
 
-      {/* MAIN FOOTER */}
-      <div className="absx-footer-main">
+            <div className="abf-brand-top">
 
-        <div className="absx-footer-container">
+              <img
+                src={abLogo}
+                alt="AB Public School Logo"
+                className="abf-logo"
+              />
 
-          {/* ADMISSION CTA */}
-          <div className="absx-footer-cta">
+              <div className="abf-school-name">
 
-            <div className="absx-footer-cta-content">
+                <h2>
+                  AB PUBLIC SCHOOL
+                </h2>
 
-              <span className="absx-footer-cta-label">
-                ADMISSIONS 2026–27
-              </span>
+                <div className="abf-tagline">
+                  <span />
+                  <strong>Nurturing Excellence</strong>
+                  <span />
+                </div>
 
-              <h2>
-                Give Your Child a Brighter
-                <span> Tomorrow.</span>
-              </h2>
-
-              <p>
-                Begin a journey of learning, values, confidence and
-                excellence at AB Public School.
-              </p>
+              </div>
 
             </div>
 
-            <button
-              className="absx-footer-apply-btn"
-              onClick={() => goTo("/admission")}
-            >
-              <span>Apply for Admission</span>
-              <FaArrowRight />
-            </button>
+            <p>
+              A safe, inclusive and inspiring environment
+              where every child can learn, grow and achieve
+              their dreams.
+            </p>
+
+            <div className="abf-socials">
+
+              <button
+                className="facebook"
+                aria-label="Facebook"
+                onClick={() =>
+                  openSocial("https://www.facebook.com/")
+                }
+              >
+                <FaFacebookF />
+              </button>
+
+              <button
+                className="instagram"
+                aria-label="Instagram"
+                onClick={() =>
+                  openSocial("https://www.instagram.com/")
+                }
+              >
+                <FaInstagram />
+              </button>
+
+              <button
+                className="youtube"
+                aria-label="YouTube"
+                onClick={() =>
+                  openSocial("https://www.youtube.com/")
+                }
+              >
+                <FaYoutube />
+              </button>
+
+              <button
+                className="linkedin"
+                aria-label="LinkedIn"
+                onClick={() =>
+                  openSocial("https://www.linkedin.com/")
+                }
+              >
+                <FaLinkedinIn />
+              </button>
+
+            </div>
 
           </div>
 
-          {/* FOOTER GRID */}
-          <div className="absx-footer-grid">
 
-            {/* BRAND */}
-            <div className="absx-footer-brand">
+          {/* =====================================
+              QUICK LINKS
+          ===================================== */}
 
+          <FooterColumn title="Quick Links">
+
+            {quickLinks.map((item) => (
               <button
-                className="absx-footer-logo"
-                onClick={() => goTo("/")}
+                key={item.name}
+                onClick={() => goTo(item.path)}
               >
-
-                <span className="absx-footer-logo-box">
-                  AB
-                </span>
-
-                <span className="absx-footer-logo-text">
-                  <strong>
-                    AB Public School
-                  </strong>
-
-                  <small>
-                    LEARN • GROW • EXCEL
-                  </small>
-                </span>
-
+                {item.name}
+                <FaChevronRight />
               </button>
+            ))}
 
-              <p className="absx-footer-description">
-                Nurturing young minds with knowledge, values,
-                confidence and excellence for a brighter future.
-              </p>
+          </FooterColumn>
 
-              {/* SOCIAL */}
-              <div className="absx-footer-social-title">
-                Connect With Us
-              </div>
 
-              <div className="absx-footer-social">
+          {/* =====================================
+              ACTIVITIES
+          ===================================== */}
 
-                <button
-                  type="button"
-                  className="absx-social-btn"
-                  onClick={() =>
-                    openSocial(socialLinks.facebook)
-                  }
-                  aria-label="Facebook"
-                  title="Facebook"
-                >
-                  <FaFacebookF />
-                </button>
+          <FooterColumn title="Activities">
 
-                <button
-                  type="button"
-                  className="absx-social-btn"
-                  onClick={() =>
-                    openSocial(socialLinks.linkedin)
-                  }
-                  aria-label="LinkedIn"
-                  title="LinkedIn"
-                >
-                  <FaLinkedinIn />
-                </button>
-
-                <button
-                  type="button"
-                  className="absx-social-btn"
-                  onClick={() =>
-                    openSocial(socialLinks.instagram)
-                  }
-                  aria-label="Instagram"
-                  title="Instagram"
-                >
-                  <FaInstagram />
-                </button>
-
-                <button
-                  type="button"
-                  className="absx-social-btn"
-                  onClick={() =>
-                    openSocial(socialLinks.youtube)
-                  }
-                  aria-label="YouTube"
-                  title="YouTube"
-                >
-                  <FaYoutube />
-                </button>
-
-              </div>
-
-            </div>
-
-            {/* EXPLORE */}
-            <div className="absx-footer-column">
-
-              <h3>
-                Explore
-              </h3>
-
-              <div className="absx-footer-link-list">
-
-                <button onClick={() => goTo("/")}>
-                  Home
-                </button>
-
-                <button onClick={() => goTo("/about")}>
-                  About School
-                </button>
-
-                <button onClick={() => goTo("/academics")}>
-                  Academics
-                </button>
-
-                <button onClick={() => goTo("/teachers")}>
-                  Our Teachers
-                </button>
-
-                <button onClick={() => goTo("/gallery")}>
-                  Gallery
-                </button>
-
-              </div>
-
-            </div>
-
-            {/* SCHOOL */}
-            <div className="absx-footer-column">
-
-              <h3>
-                School
-              </h3>
-
-              <div className="absx-footer-link-list">
-
-                <button onClick={() => goTo("/admission")}>
-                  Admissions
-                </button>
-
-                <button onClick={() => goTo("/notices")}>
-                  Notices
-                </button>
-
-                <button onClick={() => goTo("/events")}>
-                  Events
-                </button>
-
-                <button onClick={() => goTo("/contact")}>
-                  Contact Us
-                </button>
-
-              </div>
-
+            {activityLinks.map((item) => (
               <button
-                className="absx-footer-admin"
-                onClick={() => goTo("/admin-login")}
+                key={item.name}
+                onClick={() => goTo(item.path)}
               >
-                <FaUserShield />
-                <span>Admin Login</span>
+                {item.name}
+                <FaChevronRight />
               </button>
+            ))}
+
+          </FooterColumn>
+
+
+          {/* =====================================
+              USEFUL
+          ===================================== */}
+
+
+
+          {/* =====================================
+              RIGHT SIDE
+          ===================================== */}
+
+          <div className="abf-right">
+
+            {/* LOGIN */}
+
+            <div className="abf-login">
+
+              <FooterTitle title="Login Access" />
+
+              <div className="abf-login-row">
+
+                <button
+                  className="abf-login-card parent"
+                  onClick={() => goTo("/parent/signup")}
+                >
+                  <span className="abf-login-icon">
+                    <FaUsers />
+                  </span>
+
+                  <span>
+                    <small>PARENT PORTAL</small>
+                    <strong>Parent Login</strong>
+                  </span>
+
+                  <FaArrowRight className="abf-login-arrow" />
+                </button>
+
+
+                <button
+                  className="abf-login-card student"
+                  onClick={() => goTo("/student/signup")}
+                >
+                  <span className="abf-login-icon">
+                    <FaGraduationCap />
+                  </span>
+
+                  <span>
+                    <small>STUDENT PORTAL</small>
+                    <strong>Student Login</strong>
+                  </span>
+
+                  <FaArrowRight className="abf-login-arrow" />
+                </button>
+
+              </div>
 
             </div>
+
 
             {/* CONTACT */}
-            <div className="absx-footer-contact">
 
-              <h3>
-                Get In Touch
-              </h3>
+            <div className="abf-contact">
 
-              <div className="absx-contact-list">
+              <FooterTitle title="Contact Us" />
 
-                <div className="absx-contact-item">
+              <div className="abf-contact-grid">
 
-                  <span className="absx-contact-icon">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Jagdish+Colony+Ramnagar+Rohtak+Haryana"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span className="abf-contact-icon gold">
                     <FaMapMarkerAlt />
                   </span>
 
-                  <p>
-                    Shiksha Bharti Vidyalaya,
+                  <span>
+                    Jagdish Colony, Ramnagar,
                     <br />
-                    Ram Nagar, Rohtak, Haryana
-                  </p>
+                    Rohtak, Haryana
+                  </span>
+                </a>
 
-                </div>
 
-                <a
-                  className="absx-contact-item absx-contact-link"
-                  href="tel:+911262000000"
-                >
-
-                  <span className="absx-contact-icon">
+                <a href="tel:+911234567890">
+                  <span className="abf-contact-icon navy">
                     <FaPhoneAlt />
                   </span>
 
                   <span>
-                    +91 1262 000 000
+                    +91 12345 67890
+                    <br />
+                    +91 98765 43210
                   </span>
-
                 </a>
 
-                <a
-                  className="absx-contact-item absx-contact-link"
-                  href="mailto:info@school.edu.in"
-                >
 
-                  <span className="absx-contact-icon">
+                <a href="mailto:info@abpublicschool.edu.in">
+                  <span className="abf-contact-icon sky">
                     <FaEnvelope />
                   </span>
 
                   <span>
-                    info@school.edu.in
+                    info@abpublicschool.edu.in
                   </span>
-
                 </a>
 
               </div>
-
-              <button
-                className="absx-footer-contact-btn"
-                onClick={() => goTo("/contact")}
-              >
-                Contact School
-                <FaArrowRight />
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* DIVIDER */}
-          <div className="absx-footer-divider"></div>
-
-          {/* BOTTOM */}
-          <div className="absx-footer-bottom">
-
-            <p>
-              © {new Date().getFullYear()}{" "}
-              <strong>AB Public School</strong>.
-              All Rights Reserved.
-            </p>
-
-            <div className="absx-footer-legal">
-
-              <button
-                onClick={() => goTo("/privacy")}
-              >
-                Privacy Policy
-              </button>
-
-              <span>•</span>
-
-              <button
-                onClick={() => goTo("/terms")}
-              >
-                Terms & Conditions
-              </button>
 
             </div>
 
@@ -367,7 +313,95 @@ const Footer = () => {
 
       </div>
 
+
+      {/* =========================================
+          BOTTOM BAR
+      ========================================= */}
+
+      <div className="abf-bottom">
+
+        <div className="abf-container abf-bottom-inner">
+
+          <p>
+            © 2026 AB Public School. All Rights Reserved.
+          </p>
+
+
+          <div className="abf-bottom-center">
+            <span />
+            <strong>A School for a Brighter Tomorrow</strong>
+            <span />
+          </div>
+
+
+          <div className="abf-bottom-right">
+
+            <button onClick={() => goTo("/privacy-policy")}>
+              Privacy Policy
+            </button>
+
+            <i />
+
+            <button onClick={() => goTo("/terms-conditions")}>
+              Terms & Conditions
+            </button>
+
+            <button
+              className="abf-top"
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                })
+              }
+              aria-label="Back to top"
+            >
+              <FaArrowUp />
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </footer>
+  );
+};
+
+
+/* =========================================
+   REUSABLE COLUMN
+========================================= */
+
+const FooterColumn = ({ title, children }) => {
+  return (
+    <div className="abf-column">
+
+      <FooterTitle title={title} />
+
+      <div className="abf-links">
+        {children}
+      </div>
+
+    </div>
+  );
+};
+
+
+/* =========================================
+   REUSABLE HEADING
+========================================= */
+
+const FooterTitle = ({ title }) => {
+  return (
+    <div className="abf-heading">
+
+      <h3>{title}</h3>
+
+      <span />
+
+    </div>
   );
 };
 

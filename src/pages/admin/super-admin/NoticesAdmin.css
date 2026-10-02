@@ -1,0 +1,1242 @@
+/* NOTICES ADMIN */
+
+.notices-admin-page
+.acp-table tbody td:first-child {
+  max-width: 300px;
+
+  color: #071a35;
+
+  font-weight: 800;
+}
+
+.notices-admin-page
+.acp-table tbody td:nth-child(2) {
+  color: #0877a9;
+
+  font-weight: 700;
+}
+
+.notices-admin-page
+.acp-table tbody td:nth-child(3) {
+  color: #9a752a;
+
+  font-weight: 700;
+}
+
+/* =========================================================
+   ADMIN CRUD TABLES
+   RESPONSIVE + LEFT/RIGHT SCROLL
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) *,
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) *::before,
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-header {
+  width: 100%;
+  min-width: 0;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 26px;
+
+  padding: 29px 31px;
+  margin-bottom: 20px;
+
+  border:
+    1px solid
+    rgba(49, 94, 234, 0.12);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(40, 167, 232, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(
+      120deg,
+      #071a35 0%,
+      #0d2d58 55%,
+      #16457a 100%
+    );
+
+  box-shadow:
+    0 18px 45px
+    rgba(7, 26, 53, 0.13);
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-header > div {
+  min-width: 0;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-header > div > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e5c77f;
+
+  font-size: 14px !important;
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(42px, 4vw, 54px) !important;
+
+  font-weight: 900;
+
+  line-height: 1.05;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-header p {
+  max-width: 760px;
+
+  margin: 9px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.79);
+
+  font-size: 18px !important;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-add {
+  flex: 0 0 auto;
+
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 22px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #efd38f,
+      #d6b36a
+    );
+
+  color: #071a35;
+
+  font-size: 16px !important;
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-toolbar {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  padding: 15px;
+  margin-bottom: 18px;
+
+  border: 1px solid #e0e8f3;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(30, 60, 110, 0.06);
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-search {
+  width: min(650px, 100%);
+  min-width: 0;
+
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 15px;
+
+  border: 1px solid #dce5ef;
+  border-radius: 11px;
+
+  background: #f8fafc;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-search input {
+  width: 100%;
+  min-width: 0;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  color: #2d4665;
+
+  font-size: 17px !important;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-count {
+  white-space: nowrap;
+
+  font-size: 15px !important;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden !important;
+
+  border: 1px solid #e0e8f2;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 38px
+    rgba(31, 61, 115, 0.07);
+}
+
+
+/* =========================================================
+   MAIN FIX - HORIZONTAL SCROLL
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table-scroll {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  display: block !important;
+
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+
+  padding-bottom: 10px;
+
+  -webkit-overflow-scrolling: touch;
+
+  touch-action: pan-x pan-y;
+
+  scrollbar-width: auto;
+
+  scrollbar-color:
+    #6584a1
+    #e8eef4;
+}
+
+
+/* SCROLLBAR */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table-scroll::-webkit-scrollbar {
+  height: 11px;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table-scroll::-webkit-scrollbar-track {
+  background: #e8eef4;
+
+  border-radius: 30px;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table-scroll::-webkit-scrollbar-thumb {
+  background: #6584a1;
+
+  border:
+    2px solid #e8eef4;
+
+  border-radius: 30px;
+}
+
+
+/* =========================================================
+   TABLE COMMON
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table {
+  width: max-content !important;
+
+  table-layout: auto !important;
+
+  border-collapse: collapse !important;
+}
+
+
+/* DIFFERENT TABLE WIDTHS */
+
+.homework-admin-page .acp-table {
+  min-width: 1420px !important;
+}
+
+.results-admin-page .acp-table {
+  min-width: 1150px !important;
+}
+
+.fees-admin-page .acp-table {
+  min-width: 1050px !important;
+}
+
+.notices-admin-page .acp-table {
+  min-width: 900px !important;
+}
+
+.assignments-admin-page .acp-table {
+  min-width: 1250px !important;
+}
+
+
+/* =========================================================
+   TABLE HEADINGS - ONE LINE
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table th {
+  min-width: 120px;
+
+  padding: 15px 17px !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8faff,
+      #f1f5fa
+    );
+
+  color: #526983;
+
+  font-size: 15px !important;
+  font-weight: 900;
+
+  line-height: 1.35;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  vertical-align: middle;
+
+  /* IMPORTANT */
+  white-space: nowrap !important;
+
+  word-break: keep-all !important;
+
+  overflow-wrap: normal !important;
+
+  hyphens: none !important;
+}
+
+
+/* =========================================================
+   TABLE DATA - ONE LINE
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table td {
+  min-width: 120px;
+
+  padding: 16px 17px !important;
+
+  border-bottom:
+    1px solid #edf1f6;
+
+  color: #405372;
+
+  font-size: 16px !important;
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  vertical-align: middle;
+
+  /* IMPORTANT */
+  white-space: nowrap !important;
+
+  word-break: keep-all !important;
+
+  overflow-wrap: normal !important;
+
+  hyphens: none !important;
+}
+
+
+/* FIRST COLUMN */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-table td:first-child {
+  color: #17335f;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   HOMEWORK COLUMN WIDTHS
+========================================================= */
+
+.homework-admin-page
+.acp-table th:nth-child(1),
+.homework-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 240px;
+}
+
+
+.homework-admin-page
+.acp-table th:nth-child(2),
+.homework-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 150px;
+}
+
+
+.homework-admin-page
+.acp-table th:nth-child(5),
+.homework-admin-page
+.acp-table td:nth-child(5) {
+  min-width: 150px;
+}
+
+
+.homework-admin-page
+.acp-table th:nth-child(6),
+.homework-admin-page
+.acp-table td:nth-child(6),
+.homework-admin-page
+.acp-table th:nth-child(7),
+.homework-admin-page
+.acp-table td:nth-child(7) {
+  min-width: 165px;
+}
+
+
+/* =========================================================
+   RESULTS COLUMN WIDTHS
+========================================================= */
+
+.results-admin-page
+.acp-table th:nth-child(1),
+.results-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 160px;
+}
+
+
+.results-admin-page
+.acp-table th:nth-child(2),
+.results-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 180px;
+}
+
+
+.results-admin-page
+.acp-table th:nth-child(5),
+.results-admin-page
+.acp-table td:nth-child(5) {
+  min-width: 150px;
+}
+
+
+.results-admin-page
+.acp-table th:nth-child(7),
+.results-admin-page
+.acp-table td:nth-child(7) {
+  min-width: 190px;
+}
+
+
+/* =========================================================
+   FEES COLUMN WIDTHS
+========================================================= */
+
+.fees-admin-page
+.acp-table th:nth-child(1),
+.fees-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 160px;
+}
+
+
+.fees-admin-page
+.acp-table th:nth-child(2),
+.fees-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 160px;
+}
+
+
+.fees-admin-page
+.acp-table th:nth-child(4),
+.fees-admin-page
+.acp-table td:nth-child(4),
+.fees-admin-page
+.acp-table th:nth-child(6),
+.fees-admin-page
+.acp-table td:nth-child(6) {
+  min-width: 160px;
+}
+
+
+/* =========================================================
+   NOTICES COLUMN WIDTHS
+========================================================= */
+
+.notices-admin-page
+.acp-table th:nth-child(1),
+.notices-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 270px;
+}
+
+
+.notices-admin-page
+.acp-table th:nth-child(2),
+.notices-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 170px;
+}
+
+
+.notices-admin-page
+.acp-table th:nth-child(3),
+.notices-admin-page
+.acp-table td:nth-child(3) {
+  min-width: 180px;
+}
+
+
+.notices-admin-page
+.acp-table th:nth-child(4),
+.notices-admin-page
+.acp-table td:nth-child(4) {
+  min-width: 150px;
+}
+
+
+/* =========================================================
+   ASSIGNMENTS COLUMN WIDTHS
+========================================================= */
+
+.assignments-admin-page
+.acp-table th:nth-child(1),
+.assignments-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 250px;
+}
+
+
+.assignments-admin-page
+.acp-table th:nth-child(2),
+.assignments-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 160px;
+}
+
+
+.assignments-admin-page
+.acp-table th:nth-child(5),
+.assignments-admin-page
+.acp-table td:nth-child(5) {
+  min-width: 150px;
+}
+
+
+.assignments-admin-page
+.acp-table th:nth-child(6),
+.assignments-admin-page
+.acp-table td:nth-child(6),
+.assignments-admin-page
+.acp-table th:nth-child(7),
+.assignments-admin-page
+.acp-table td:nth-child(7) {
+  min-width: 165px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-actions {
+  min-width: 130px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: nowrap !important;
+
+  gap: 7px;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-actions button {
+  width: 38px;
+  height: 38px;
+
+  flex: 0 0 38px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   MODAL FORM FONT
+========================================================= */
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-field > span {
+  font-size: 14px !important;
+}
+
+
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-field input,
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-field select,
+:is(
+  .homework-admin-page,
+  .results-admin-page,
+  .fees-admin-page,
+  .notices-admin-page,
+  .assignments-admin-page
+) .acp-field textarea {
+  font-size: 16px !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header h1 {
+    font-size:
+      42px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header p {
+    font-size:
+      17px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-toolbar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-search {
+    width: 100%;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table-scroll {
+    overflow-x:
+      auto !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table th {
+    font-size:
+      15px !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table td {
+    font-size:
+      16px !important;
+
+    white-space:
+      nowrap !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    padding:
+      22px 17px;
+
+    border-radius: 17px;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header > div > span {
+    font-size:
+      13px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header h1 {
+    font-size:
+      36px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header p {
+    font-size:
+      17px !important;
+
+    line-height: 1.6;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-add {
+    width: 100%;
+
+    font-size:
+      16px !important;
+  }
+
+
+  /* SEARCH */
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-search {
+    min-height: 54px;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-search input {
+    font-size:
+      17px !important;
+  }
+
+
+  /* ===============================================
+     MOBILE LEFT ↔ RIGHT TABLE
+  =============================================== */
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table-scroll {
+    width:
+      100% !important;
+
+    max-width:
+      100% !important;
+
+    display:
+      block !important;
+
+    overflow-x:
+      scroll !important;
+
+    overflow-y:
+      hidden !important;
+
+    padding-bottom:
+      12px;
+
+    -webkit-overflow-scrolling:
+      touch;
+
+    touch-action:
+      pan-x;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table th {
+    padding:
+      15px 16px !important;
+
+    font-size:
+      15px !important;
+
+    white-space:
+      nowrap !important;
+
+    word-break:
+      keep-all !important;
+
+    overflow-wrap:
+      normal !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table td {
+    padding:
+      16px 16px !important;
+
+    font-size:
+      16px !important;
+
+    white-space:
+      nowrap !important;
+
+    word-break:
+      keep-all !important;
+
+    overflow-wrap:
+      normal !important;
+  }
+
+
+  /* MODAL FORM */
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-form {
+    grid-template-columns:
+      1fr !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-field input,
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-field select,
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-field textarea {
+    font-size:
+      17px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header h1 {
+    font-size:
+      34px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-header p {
+    font-size:
+      16.5px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table th {
+    font-size:
+      14.5px !important;
+  }
+
+
+  :is(
+    .homework-admin-page,
+    .results-admin-page,
+    .fees-admin-page,
+    .notices-admin-page,
+    .assignments-admin-page
+  ) .acp-table td {
+    font-size:
+      15.5px !important;
+  }
+}

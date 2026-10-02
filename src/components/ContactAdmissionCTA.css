@@ -1,0 +1,1064 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+  --pct-navy: #071a35;
+  --pct-navy-2: #0a2e51;
+
+  --pct-blue: #0877a9;
+  --pct-sky: #35a6d3;
+
+  --pct-gold: #d6b36a;
+  --pct-gold-light: #efd99b;
+
+  --pct-white: #ffffff;
+
+  --pct-muted:
+    rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.abPremiumContactCTA {
+  width: 100%;
+
+  padding:
+    32px 40px 55px;
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f5faff
+    );
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.abPremiumContactCTAContainer {
+  position: relative;
+
+  width: 100%;
+  max-width: 1420px;
+
+  min-height: 335px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(560px, 1.08fr)
+    minmax(430px, 0.92fr);
+
+  align-items: stretch;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      115deg,
+      #0c416d 0%,
+      #092d50 39%,
+      var(--pct-navy) 75%
+    );
+
+  box-shadow:
+    0 28px 65px
+    rgba(7, 26, 53, 0.17);
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.abPremiumCTACircle {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+}
+
+
+.abPremiumCTACircle.circleOne {
+  width: 280px;
+  height: 280px;
+
+  top: -190px;
+  left: 39%;
+
+  border:
+    48px solid
+    rgba(255, 255, 255, 0.035);
+}
+
+
+.abPremiumCTACircle.circleTwo {
+  width: 170px;
+  height: 170px;
+
+  left: -95px;
+  bottom: -110px;
+
+  background:
+    rgba(214, 179, 106, 0.07);
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.abPremiumCTAContent {
+  position: relative;
+
+  z-index: 5;
+
+  padding:
+    38px 30px 35px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.abPremiumCTALabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 12px;
+}
+
+
+.abPremiumCTALabelIcon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid
+    rgba(214, 179, 106, 0.35);
+
+  border-radius: 12px;
+
+  color:
+    var(--pct-navy);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pct-gold-light),
+      var(--pct-gold)
+    );
+
+  font-size: 16px;
+}
+
+
+.abPremiumCTALabel span,
+.abPremiumCTALabel strong {
+  display: block;
+}
+
+
+.abPremiumCTALabel span {
+  color:
+    var(--pct-gold);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.abPremiumCTALabel strong {
+  margin-top: 2px;
+
+  color:
+    rgba(255, 255, 255, 0.76);
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.abPremiumCTAContent h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(39px, 3.6vw, 52px);
+
+  font-weight: 700;
+
+  line-height: 1.04;
+
+  letter-spacing: -1.4px;
+}
+
+
+.abPremiumCTAContent h2 span {
+  color:
+    var(--pct-gold);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.abPremiumCTADescription {
+  max-width: 610px;
+
+  margin:
+    12px 0 0;
+
+  color:
+    var(--pct-muted);
+
+  font-size: 19px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   POINTS
+========================================================= */
+
+.abPremiumCTAPoints {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    8px 18px;
+
+  margin-top: 15px;
+}
+
+
+.abPremiumCTAPoints > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.abPremiumCheck {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color:
+    var(--pct-navy);
+
+  background:
+    var(--pct-gold);
+
+  font-size: 7px;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.abPremiumCTAActions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+
+/* PRIMARY */
+
+.abPremiumCTAPrimary {
+  min-height: 51px;
+
+  padding:
+    6px 7px 6px 20px;
+
+  border: none;
+
+  border-radius: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  color:
+    var(--pct-navy);
+
+  background:
+    linear-gradient(
+      100deg,
+      #efd998,
+      var(--pct-gold)
+    );
+
+  box-shadow:
+    0 12px 28px
+    rgba(0, 0, 0, 0.17);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+
+.abPremiumCTAPrimary > div {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    var(--pct-navy);
+
+  font-size: 12px;
+
+  transition:
+    transform 0.28s ease;
+}
+
+
+.abPremiumCTAPrimary:hover {
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(0, 0, 0, 0.22);
+}
+
+
+.abPremiumCTAPrimary:hover
+> div {
+  transform:
+    translateX(3px);
+}
+
+
+/* SECONDARY */
+
+.abPremiumCTASecondary {
+  min-height: 51px;
+
+  padding:
+    0 20px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-radius: 27px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.06);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    background 0.28s ease,
+    transform 0.28s ease,
+    border-color 0.28s ease;
+}
+
+
+.abPremiumCTASecondary svg {
+  font-size: 14px;
+
+  transition:
+    transform 0.28s ease;
+}
+
+
+.abPremiumCTASecondary:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(255, 255, 255, 0.4);
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+.abPremiumCTASecondary:hover svg {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   RIGHT VISUAL
+========================================================= */
+
+.abPremiumCTAVisual {
+  position: relative;
+
+  min-height: 335px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.abPremiumCTAImage {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  border-radius:
+    180px 30px
+    30px 180px;
+}
+
+
+.abPremiumCTAImage::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 4;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 120px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--pct-navy),
+      rgba(7, 26, 53, 0)
+    );
+
+  pointer-events: none;
+}
+
+
+.abPremiumCTAImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.7s ease;
+}
+
+
+.abPremiumCTAContainer:hover
+.abPremiumCTAImage img {
+  transform:
+    scale(1.035);
+}
+
+
+/* IMAGE SHADE */
+
+.abPremiumCTAImageShade {
+  position: absolute;
+
+  z-index: 3;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 53, 0.36) 0%,
+      rgba(7, 26, 53, 0.05) 38%,
+      rgba(7, 26, 53, 0.02) 100%
+    );
+}
+
+
+/* GOLD BOTTOM LINE */
+
+.abPremiumCTAImage::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 5;
+
+  left: 90px;
+  right: 28px;
+  bottom: 0;
+
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--pct-gold),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   SESSION BADGE
+========================================================= */
+
+.abPremiumCTASessionBadge {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 22px;
+  right: 22px;
+
+  min-width: 130px;
+
+  padding:
+    10px 13px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.72);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.93);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  box-shadow:
+    0 14px 30px
+    rgba(7, 26, 53, 0.16);
+}
+
+
+.abPremiumCTASessionIcon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pct-blue),
+      var(--pct-navy)
+    );
+
+  font-size: 14px;
+}
+
+
+.abPremiumCTASessionBadge span,
+.abPremiumCTASessionBadge strong {
+  display: block;
+}
+
+
+.abPremiumCTASessionBadge span {
+  color:
+    var(--pct-blue);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.abPremiumCTASessionBadge strong {
+  margin-top: 2px;
+
+  color:
+    var(--pct-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   STUDENT FLOATING CARD
+========================================================= */
+
+.abPremiumCTAStudentCard {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 38px;
+  bottom: 23px;
+
+  min-width: 175px;
+
+  padding:
+    12px 14px;
+
+  display: grid;
+
+  grid-template-columns:
+    38px 1fr;
+
+  align-items: center;
+
+  column-gap: 9px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.23);
+
+  border-radius: 14px;
+
+  background:
+    rgba(7, 26, 53, 0.89);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    0 15px 33px
+    rgba(7, 26, 53, 0.2);
+}
+
+
+.abPremiumCTAStudentCard > div {
+  width: 38px;
+  height: 38px;
+
+  grid-row:
+    1 / 3;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color:
+    var(--pct-navy);
+
+  background:
+    var(--pct-gold);
+
+  font-size: 15px;
+}
+
+
+.abPremiumCTAStudentCard span {
+  color:
+    rgba(255, 255, 255, 0.65);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.abPremiumCTAStudentCard strong {
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.abPremiumCTADots {
+  position: absolute;
+
+  z-index: 6;
+
+  left: 13px;
+  top: 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 4px);
+
+  gap: 7px;
+}
+
+
+.abPremiumCTADots span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(214, 179, 106, 0.7);
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abPremiumContactCTA {
+    padding:
+      28px 30px 48px;
+  }
+
+
+  .abPremiumContactCTAContainer {
+    grid-template-columns:
+      1fr 0.82fr;
+  }
+
+
+  .abPremiumCTAContent {
+    padding:
+      32px 25px 32px 32px;
+  }
+
+
+  .abPremiumCTAContent h2 {
+    font-size: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .abPremiumContactCTA {
+    padding:
+      25px 24px 42px;
+  }
+
+
+  .abPremiumContactCTAContainer {
+    grid-template-columns: 1fr;
+
+    border-radius: 25px;
+  }
+
+
+  .abPremiumCTAContent {
+    padding:
+      30px 27px;
+  }
+
+
+  .abPremiumCTAVisual {
+    min-height: 280px;
+  }
+
+
+  .abPremiumCTAImage {
+    border-radius:
+      25px;
+  }
+
+
+  .abPremiumCTAImage::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+
+    width: 100%;
+    height: 80px;
+
+    background:
+      linear-gradient(
+        180deg,
+        var(--pct-navy),
+        transparent
+      );
+  }
+
+
+  .abPremiumCTAStudentCard {
+    left: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abPremiumContactCTA {
+    padding:
+      20px 16px 35px;
+  }
+
+
+  .abPremiumContactCTAContainer {
+    border-radius: 21px;
+  }
+
+
+  .abPremiumCTAContent {
+    padding:
+      25px 18px;
+  }
+
+
+  .abPremiumCTALabelIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+
+  .abPremiumCTAContent h2 {
+    font-size: 35px;
+  }
+
+
+  .abPremiumCTADescription {
+    font-size: 15px;
+  }
+
+
+  .abPremiumCTAPoints {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 7px;
+  }
+
+
+  .abPremiumCTAActions {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    width: 100%;
+  }
+
+
+  .abPremiumCTAPrimary,
+  .abPremiumCTASecondary {
+    width: 100%;
+
+    min-height: 48px;
+
+    font-size: 15px;
+  }
+
+
+  .abPremiumCTAVisual {
+    min-height: 240px;
+  }
+
+
+  .abPremiumCTASessionBadge {
+    top: 13px;
+    right: 13px;
+  }
+.abPremiumCTAPrimary > div {
+    margin-left: 80px;
+}
+.abPremiumCTASecondary svg {
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+  .abPremiumCTAStudentCard {
+    left: 13px;
+    bottom: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abPremiumContactCTA {
+    padding:
+      18px 12px 30px;
+  }
+
+
+  .abPremiumCTAContent {
+    padding:
+      23px 15px;
+  }
+
+
+  .abPremiumCTAContent h2 {
+    font-size: 31px;
+  }
+
+
+  .abPremiumCTAActions {
+    grid-template-columns: 1fr;
+  }
+
+
+  .abPremiumCTAVisual {
+    min-height: 220px;
+  }
+
+
+  .abPremiumCTASessionBadge {
+    transform:
+      scale(0.9);
+
+    transform-origin:
+      top right;
+  }
+
+}

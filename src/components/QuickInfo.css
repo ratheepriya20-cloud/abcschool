@@ -1,566 +1,1668 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
 /* =========================================================
-   PREMIUM QUICK INFO
    AB PUBLIC SCHOOL
-   ========================================================= */
+   QUICK INFO - PREMIUM EXPLORE SECTION
+========================================================= */
 
-.quickInfoSection {
+:root {
+  --abqi-navy: #072f50;
+  --abqi-navy-dark: #052640;
+  --abqi-blue: #0877a9;
+  --abqi-blue-dark: #07547d;
+  --abqi-sky: #55b9df;
+  --abqi-sky-light: #dff4fc;
+
+  --abqi-gold: #c7a45a;
+
+  --abqi-white: #ffffff;
+  --abqi-cream: #f8f5ed;
+  --abqi-bg: #f7fbfd;
+
+  --abqi-text: #183c58;
+  --abqi-muted: #667d8e;
+
+  --abqi-border: rgba(7, 63, 99, 0.1);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.abpsExploreSection {
+  position: relative;
+
   width: 100%;
-  padding: 34px 0 42px;
-  background: #f4f8fb;
-  position: relative;
+
+  padding: 38px 25px 28px;
+
   overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fbfd 0%,
+      #ffffff 46%,
+      #f6fafc 100%
+    );
+
+  font-family: "DM Sans", sans-serif;
+
+  isolation: isolate;
 }
 
-/* background glow */
-.quickInfoSection::before {
-  content: "";
+
+.abpsExploreSection *,
+.abpsExploreSection *::before,
+.abpsExploreSection *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.abpsExploreGlow {
   position: absolute;
-  width: 420px;
-  height: 420px;
-  top: -280px;
-  left: -180px;
+
+  z-index: -2;
+
   border-radius: 50%;
-  background: rgba(8, 119, 169, 0.07);
+
+  pointer-events: none;
 }
 
-.quickInfoSection::after {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  right: -200px;
-  bottom: -250px;
-  border-radius: 50%;
-  background: rgba(214, 179, 106, 0.10);
+
+.abpsExploreGlowOne {
+  top: -250px;
+  left: -210px;
+
+  width: 560px;
+  height: 560px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(69, 172, 217, 0.14) 0%,
+      rgba(69, 172, 217, 0.04) 48%,
+      transparent 72%
+    );
 }
 
-.quickInfoContainer {
-  width: min(1280px, calc(100% - 70px));
-  margin: auto;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+.abpsExploreGlowTwo {
+  right: -230px;
+  bottom: -270px;
 
+  width: 620px;
+  height: 620px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(7, 72, 113, 0.1) 0%,
+      rgba(7, 72, 113, 0.03) 48%,
+      transparent 72%
+    );
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.abpsExploreContainer {
   position: relative;
+
   z-index: 2;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
 }
 
 
 /* =========================================================
-   CARD
-   ========================================================= */
+   SECTION HEADING
+========================================================= */
 
-.quickInfoCard {
-  min-height: 205px;
-  padding: 21px 21px 20px;
-
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-
-  background: #ffffff;
-
-  border: 1px solid #d8e4ec;
-  border-radius: 20px;
-
-  box-shadow:
-    0 10px 30px rgba(7, 26, 53, 0.07);
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-
-
-/* top premium line */
-.quickInfoCard::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
+.abpsExploreHeading {
   width: 100%;
-  height: 4px;
+  max-width: 1100px;
 
-  background: linear-gradient(
-    90deg,
-    #d6b36a 0%,
-    #d6b36a 25%,
-    #49afd7 65%,
-    #0877a9 100%
-  );
-}
+  margin: 0 auto 24px;
 
-
-/* large decorative circle */
-.quickInfoCard::after {
-  content: "";
-  position: absolute;
-
-  width: 125px;
-  height: 125px;
-
-  right: -68px;
-  bottom: -68px;
-
-  border-radius: 50%;
-
-  background: #edf7fb;
-
-  border: 1px solid rgba(8, 119, 169, 0.06);
-
-  transition: transform 0.4s ease;
-}
-
-
-.quickInfoCard:hover {
-  transform: translateY(-9px);
-
-  border-color: #c4dce8;
-
-  box-shadow:
-    0 22px 45px rgba(7, 26, 53, 0.13);
-}
-
-
-.quickInfoCard:hover::after {
-  transform: scale(1.3);
+  text-align: center;
 }
 
 
 /* =========================================================
-   TOP
-   ========================================================= */
+   EYEBROW
+========================================================= */
 
-.quickCardTop {
-  width: 100%;
-
+.abpsExploreEyebrow {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  position: relative;
-  z-index: 3;
+  gap: 12px;
+
+  margin-bottom: 16px;
 }
 
 
-.quickCardNumber {
-  display: inline-flex;
-  align-items: center;
+.abpsExploreEyebrow > span {
+  width: 52px;
+  height: 1px;
 
-  font-family: Arial, sans-serif;
+  background:
+    rgba(8, 119, 169, 0.45);
+}
+
+
+.abpsExploreEyebrow svg {
+  color: var(--abqi-blue);
+
+  font-size: 18px;
+}
+
+
+.abpsExploreEyebrow strong {
+  color: var(--abqi-navy);
 
   font-size: 12px;
   font-weight: 800;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 
-  color: #8395a6;
+  line-height: 1.2;
 }
 
 
 /* =========================================================
-   ICON
-   ========================================================= */
+   MAIN HEADING
+========================================================= */
 
-.quickCardIcon {
-  width: 48px;
-  height: 48px;
+.abpsExploreHeading h2 {
+  margin: 0;
+
+  color: var(--abqi-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 62px;
+
+  font-weight: 700;
+
+  line-height: 1.04;
+
+  letter-spacing: -1.6px;
+}
+
+
+.abpsExploreHeading h2 em {
+  display: inline;
+margin-left: 9px;
+  margin-top: 5px;
+
+  color: var(--abqi-blue);
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   HEADING DESCRIPTION
+========================================================= */
+
+.abpsExploreHeading > p {
+  max-width: 900px;
+
+  margin: 17px auto 0;
+
+  color: var(--abqi-muted);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MINI VALUES
+========================================================= */
+
+.abpsExploreValues {
+  margin: 0 auto 32px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 14px;
+  gap: 27px;
 
-  background: linear-gradient(
-    145deg,
-    #fffaf0,
-    #f8efd7
-  );
+  flex-wrap: wrap;
+}
 
-  border: 1px solid #e6d19a;
 
-  font-size: 23px;
+.abpsExploreValues span {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #45677f;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.abpsExploreValues svg {
+  color: var(--abqi-blue);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.abpsExploreCards {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD BASE
+========================================================= */
+
+.abpsExploreCard {
+  position: relative;
+
+  min-width: 0;
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--abqi-border);
+
+  border-radius: 30px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  background: var(--abqi-white);
 
   box-shadow:
-    0 7px 18px rgba(214, 179, 106, 0.14);
+    0 13px 30px rgba(8, 48, 76, 0.07),
+    0 3px 10px rgba(8, 48, 76, 0.035);
+
+  transition:
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+
+/* TOP SMALL ACCENT */
+
+.abpsExploreCard::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 20;
+
+  top: 0;
+  left: 35px;
+
+  width: 62px;
+  height: 4px;
+
+  border-radius:
+    0 0 20px 20px;
+
+  background:
+    var(--abqi-sky);
+
+  transition:
+    width 0.4s ease;
+}
+
+
+.abpsExploreCard:hover {
+  transform:
+    translateY(-9px);
+
+  border-color:
+    rgba(8, 119, 169, 0.22);
+
+  box-shadow:
+    0 28px 55px rgba(6, 48, 77, 0.14),
+    0 8px 20px rgba(6, 48, 77, 0.06);
+}
+
+
+.abpsExploreCard:hover::before {
+  width: 105px;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.abpsExploreImage {
+  position: relative;
+
+  width:
+    calc(100% - 18px);
+
+  height: 200px;
+
+  margin:
+    9px 9px 0;
+
+  flex-shrink: 0;
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.abpsExploreImage img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius:
+    23px 23px 76px 23px;
+
+  transition:
+    transform 0.65s
+    cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.4s ease;
+}
+
+
+.abpsExploreCard:hover
+.abpsExploreImage img {
+  transform:
+    scale(1.025);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.abpsExploreImageShade {
+  position: absolute;
+
+  inset: 0;
+
+  border-radius:
+    23px 23px 76px 23px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 31, 53, 0.03) 15%,
+      rgba(4, 31, 53, 0.06) 50%,
+      rgba(3, 32, 54, 0.68) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.abpsExploreNumber {
+  position: absolute;
+
+  z-index: 6;
+
+  top: 18px;
+  left: 18px;
+
+  min-width: 76px;
+  height: 40px;
+
+  padding:
+    0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.38);
+
+  border-radius: 50px;
+
+  color: #ffffff;
+
+  background:
+    rgba(5, 47, 77, 0.72);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    0 7px 17px
+    rgba(0, 30, 51, 0.13);
+}
+
+
+.abpsExploreNumber strong {
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+.abpsExploreNumber span {
+  width: 15px;
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+}
+
+
+/* =========================================================
+   FLOATING ICON
+========================================================= */
+
+.abpsExploreIcon {
+  position: absolute;
+
+  z-index: 12;
+
+  left: 24px;
+  bottom: -19px;
+
+  width: 62px;
+  height: 62px;
+
+  display: grid;
+  place-items: center;
+
+  border:
+    5px solid #ffffff;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--abqi-blue),
+      var(--abqi-blue-dark)
+    );
+
+  font-size: 21px;
+
+  box-shadow:
+    0 12px 25px
+    rgba(5, 72, 111, 0.22);
+
+  transform:
+    rotate(-4deg);
+
+  transition:
+    transform 0.35s ease,
+    border-radius 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.abpsExploreCard:hover
+.abpsExploreIcon {
+  transform:
+    rotate(0deg)
+    translateY(-4px);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 15px 30px
+    rgba(5, 72, 111, 0.28);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.abpsExploreCardContent {
+  position: relative;
+
+  z-index: 5;
+
+  flex: 1;
+
+  padding:
+    44px 25px 23px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.abpsExploreCardContent h3 {
+  margin: 0;
+margin-top: -15px;
+  color: var(--abqi-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 31px;
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.6px;
+}
+
+
+/* =========================================================
+   SMALL LINE
+========================================================= */
+
+.abpsExploreSmallLine {
+  position: relative;
+
+  width: 46px;
+  height: 3px;
+
+  margin:
+    13px 0 13px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    #8ed1ec;
+}
+
+
+.abpsExploreSmallLine::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 16px;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background:
+    var(--abqi-blue);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.abpsExploreCardContent p {
+  margin: 0;
+
+  color: var(--abqi-muted);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.abpsExploreCardBottom {
+  width: 100%;
+
+  min-height: 49px;
+
+  margin-top: auto;
+
+  padding:
+    5px 6px 5px 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  border:
+    1px solid
+    rgba(8, 81, 123, 0.12);
+
+  border-radius: 50px;
+
+  color: #0a456d;
+
+  background:
+    rgba(238, 248, 252, 0.94);
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.abpsExploreCardBottom > span {
+  white-space: nowrap;
+}
+
+
+.abpsExploreCardBottom b {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  background:
+    var(--abqi-blue);
+
+  font-size: 11px;
 
   transition:
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 
-.quickInfoCard:hover .quickCardIcon {
-  transform: rotate(-4deg) scale(1.06);
+.abpsExploreCard:hover
+.abpsExploreCardBottom {
+  color: #ffffff;
 
-  box-shadow:
-    0 10px 22px rgba(214, 179, 106, 0.22);
+  border-color:
+    var(--abqi-blue-dark);
+
+  background:
+    var(--abqi-blue-dark);
+}
+
+
+.abpsExploreCard:hover
+.abpsExploreCardBottom b {
+  color:
+    var(--abqi-blue-dark);
+
+  background: #ffffff;
+
+  transform:
+    rotate(-35deg);
 }
 
 
 /* =========================================================
-   CONTENT
-   ========================================================= */
+   CARD 01 - NAVY
+========================================================= */
 
-.quickCardContent {
-  position: relative;
-  z-index: 3;
+.abpsExploreCard-navy {
+  border-color:
+    rgba(255, 255, 255, 0.07);
 
-  margin-top: 19px;
+  background:
+    linear-gradient(
+      155deg,
+      #07385f 0%,
+      #052e4f 58%,
+      #062741 100%
+    );
 }
 
 
-.quickCardContent h3 {
+.abpsExploreCard-navy::before {
+  background:
+    #61bee3;
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreCardContent h3 {
+  color: #ffffff;
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreCardContent p {
+  color:
+    rgba(255, 255, 255, 0.74);
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreSmallLine {
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreSmallLine::after {
+  background:
+    #68c7ea;
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreIcon {
+  color: #07547d;
+
+  background: #ffffff;
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreCardBottom {
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.15);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreCardBottom b {
+  color: #07385f;
+
+  background: #ffffff;
+}
+
+
+.abpsExploreCard-navy:hover
+.abpsExploreCardBottom {
+  border-color:
+    var(--abqi-blue);
+
+  background:
+    var(--abqi-blue);
+}
+
+
+.abpsExploreCard-navy:hover
+.abpsExploreCardBottom b {
+  color:
+    var(--abqi-blue);
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   CARD 02 - CREAM
+========================================================= */
+
+.abpsExploreCard-cream {
+  background:
+    linear-gradient(
+      150deg,
+      #fffefb 0%,
+      #f8f5ed 100%
+    );
+}
+
+
+.abpsExploreCard-cream::before {
+  background:
+    var(--abqi-gold);
+}
+
+
+.abpsExploreCard-cream
+.abpsExploreIcon {
+  background:
+    linear-gradient(
+      145deg,
+      #176f9b,
+      #0a4d73
+    );
+}
+
+
+.abpsExploreCard-cream
+.abpsExploreSmallLine {
+  background:
+    rgba(8, 119, 169, 0.16);
+}
+
+
+.abpsExploreCard-cream
+.abpsExploreSmallLine::after {
+  background:
+    var(--abqi-gold);
+}
+
+
+/* =========================================================
+   CARD 03 - BLUE
+========================================================= */
+
+.abpsExploreCard-blue {
+  border-color:
+    rgba(255, 255, 255, 0.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      #0879aa 0%,
+      #07648f 50%,
+      #07527b 100%
+    );
+}
+
+
+.abpsExploreCard-blue::before {
+  background:
+    #b4e7f8;
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreCardContent h3 {
+  color: #ffffff;
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreCardContent p {
+  color:
+    rgba(255, 255, 255, 0.8);
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreIcon {
+  color:
+    #07577f;
+
+  background:
+    #ffffff;
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreSmallLine {
+  background:
+    rgba(255, 255, 255, 0.22);
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreSmallLine::after {
+  background:
+    #b9ebfb;
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreCardBottom {
+  color: #ffffff;
+
+  border-color:
+    rgba(255, 255, 255, 0.17);
+
+  background:
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.abpsExploreCard-blue
+.abpsExploreCardBottom b {
+  color:
+    #07658f;
+
+  background:
+    #ffffff;
+}
+
+
+.abpsExploreCard-blue:hover
+.abpsExploreCardBottom {
+  border-color:
+    rgba(255, 255, 255, 0.25);
+
+  background:
+    rgba(255, 255, 255, 0.17);
+}
+
+
+.abpsExploreCard-blue:hover
+.abpsExploreCardBottom b {
+  color:
+    #07547d;
+
+  background:
+    #ffffff;
+}
+
+
+/* =========================================================
+   CARD 04 - WHITE
+========================================================= */
+
+.abpsExploreCard-white {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f5fafc 100%
+    );
+}
+
+
+.abpsExploreCard-white::before {
+  background:
+    var(--abqi-blue);
+}
+
+
+.abpsExploreCard-white
+.abpsExploreIcon {
+  background:
+    linear-gradient(
+      145deg,
+      #0b648f,
+      #073e64
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLES
+========================================================= */
+
+.abpsExploreDecorCircle {
+  position: absolute;
+
+  z-index: 1;
+
+  right: -67px;
+  bottom: -73px;
+
+  width: 170px;
+  height: 170px;
+
+  border:
+    1px solid
+    rgba(75, 173, 213, 0.13);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.abpsExploreDecorCircle::before,
+.abpsExploreDecorCircle::after {
+  content: "";
+
+  position: absolute;
+
+  border:
+    1px solid
+    rgba(75, 173, 213, 0.09);
+
+  border-radius: 50%;
+}
+
+
+.abpsExploreDecorCircle::before {
+  inset: 19px;
+}
+
+
+.abpsExploreDecorCircle::after {
+  inset: 40px;
+}
+
+
+/* DARK CARD CIRCLES */
+
+.abpsExploreCard-navy
+.abpsExploreDecorCircle,
+.abpsExploreCard-blue
+.abpsExploreDecorCircle {
+  border-color:
+    rgba(255, 255, 255, 0.09);
+}
+
+
+.abpsExploreCard-navy
+.abpsExploreDecorCircle::before,
+.abpsExploreCard-navy
+.abpsExploreDecorCircle::after,
+.abpsExploreCard-blue
+.abpsExploreDecorCircle::before,
+.abpsExploreCard-blue
+.abpsExploreDecorCircle::after {
+  border-color:
+    rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   BOTTOM MESSAGE
+========================================================= */
+
+.abpsExploreBottom {
+  margin-top: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+}
+
+
+.abpsExploreBottom > span {
+  width: 65px;
+  height: 1px;
+
+  background:
+    rgba(8, 119, 169, 0.25);
+}
+
+
+.abpsExploreBottom p {
   margin: 0;
 
-  font-family: Georgia, "Times New Roman", serif;
+  color: #718796;
 
-  font-size: 24px;
-  line-height: 1.15;
-
-  font-weight: 700;
-
-  color: #071a35;
-
-  letter-spacing: -0.5px;
-}
-
-
-.quickCardContent p {
-  margin: 7px 0 0;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 16px;
-  line-height: 1.45;
-
-  color: #61778d;
-
-  font-weight: 500;
-}
-
-
-/* =========================================================
-   BUTTON
-   ========================================================= */
-
-.quickCardButton {
-  width: fit-content;
-
-  margin-top: auto;
-  padding: 13px 0 0;
-
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  background: transparent;
-
-  border: none;
-  outline: none;
-
-  cursor: pointer;
-
-  font-family: Arial, sans-serif;
+  font-family:
+    "Playfair Display",
+    serif;
 
   font-size: 14px;
-  font-weight: 800;
-
-  color: #0877a9;
-
-  position: relative;
-  z-index: 5;
-
-  transition:
-    color 0.25s ease,
-    gap 0.25s ease;
+  font-style: italic;
 }
 
 
-.quickCardButton span {
-  color: #d5a83d;
+.abpsExploreBottom strong {
+  margin-left: 5px;
 
-  font-size: 19px;
+  color:
+    var(--abqi-blue);
 
-  transition:
-    transform 0.25s ease;
-}
-
-
-.quickCardButton:hover {
-  color: #071a35;
-  gap: 12px;
-}
-
-
-.quickCardButton:hover span {
-  transform: translateX(4px);
+  font-weight: 700;
 }
 
 
 /* =========================================================
-   CARD HIGHLIGHT
-   ========================================================= */
+   ACCESSIBILITY / FOCUS
+========================================================= */
 
-.quickInfoCard:nth-child(1) {
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #ffffff 78%,
-      #fffdf7 100%
-    );
-}
+.abpsExploreCard:focus-visible {
+  outline:
+    3px solid
+    rgba(8, 119, 169, 0.35);
 
-.quickInfoCard:nth-child(2) {
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #ffffff 78%,
-      #f7fbfd 100%
-    );
-}
-
-.quickInfoCard:nth-child(3) {
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #ffffff 78%,
-      #f8fbfc 100%
-    );
-}
-
-.quickInfoCard:nth-child(4) {
-  background:
-    linear-gradient(
-      145deg,
-      #ffffff 0%,
-      #ffffff 78%,
-      #fffdf8 100%
-    );
+  outline-offset: 4px;
 }
 
 
 /* =========================================================
-   LARGE TABLET
-   ========================================================= */
+   LARGE SCREEN
+========================================================= */
 
-@media (max-width: 1150px) {
+@media (min-width: 1500px) {
 
-  .quickInfoContainer {
-    width: min(94%, 900px);
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
+  .abpsExploreCard {
+    min-height: 510px;
   }
 
-  .quickInfoCard {
-    min-height: 195px;
+
+  .abpsExploreImage {
+    height: 240px;
   }
 
-  .quickCardContent h3 {
-    font-size: 24px;
+
+  .abpsExploreCardContent h3 {
+    font-size: 32px;
   }
 
-  .quickCardContent p {
-    font-size: 16px;
+
+  .abpsExploreCardContent p {
+    font-size: 14px;
   }
+
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .abpsExploreSection {
+    padding:
+      68px 25px 55px;
+  }
+
+
+  .abpsExploreCards {
+    gap: 16px;
+  }
+
+
+  .abpsExploreCard {
+    min-height: 480px;
+
+    border-radius: 25px;
+  }
+
+
+  .abpsExploreImage {
+    height: 210px;
+  }
+
+
+  .abpsExploreImage img,
+  .abpsExploreImageShade {
+    border-radius:
+      19px 19px 66px 19px;
+  }
+
+
+  .abpsExploreCardContent {
+    padding:
+      42px 19px 20px;
+  }
+
+
+  .abpsExploreCardContent h3 {
+    font-size: 27px;
+  }
+
+
+  .abpsExploreCardContent p {
+    font-size: 12.5px;
+
+    line-height: 1.55;
+  }
+
+
+  .abpsExploreCardBottom {
+    min-height: 46px;
+
+    padding-left: 15px;
+  }
+
+
+  .abpsExploreCardBottom b {
+    width: 35px;
+    height: 35px;
+  }
+
 }
 
 
 /* =========================================================
    TABLET
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
 
-  .quickInfoSection {
-    padding: 30px 0 36px;
+  .abpsExploreSection {
+    padding:
+      60px 22px 50px;
   }
 
-  .quickInfoContainer {
-    width: calc(100% - 34px);
 
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 15px;
+  .abpsExploreHeading {
+    margin-bottom: 23px;
   }
 
-  .quickInfoCard {
-    min-height: 190px;
 
-    padding: 19px 18px 18px;
-
-    border-radius: 17px;
+  .abpsExploreHeading h2 {
+    font-size: 48px;
   }
 
-  .quickCardIcon {
-    width: 44px;
-    height: 44px;
 
-    border-radius: 12px;
-
-    font-size: 21px;
-  }
-
-  .quickCardContent {
-    margin-top: 16px;
-  }
-
-  .quickCardContent h3 {
-    font-size: 22px;
-  }
-
-  .quickCardContent p {
+  .abpsExploreHeading > p {
     font-size: 15px;
   }
 
-  .quickCardButton {
+
+  .abpsExploreValues {
+    gap: 15px 24px;
+
+    margin-bottom: 29px;
+  }
+
+
+  .abpsExploreCards {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+
+  .abpsExploreCard {
+    min-height: 495px;
+  }
+
+
+  .abpsExploreImage {
+    height: 235px;
+  }
+
+
+  .abpsExploreCardContent {
+    padding:
+      43px 22px 21px;
+  }
+
+
+  .abpsExploreCardContent h3 {
+    font-size: 30px;
+  }
+
+
+  .abpsExploreCardContent p {
     font-size: 14px;
   }
+
+
+  .abpsExploreCardBottom {
+    min-height: 49px;
+  }
+
 }
 
 
 /* =========================================================
    MOBILE
-   ========================================================= */
+========================================================= */
 
-@media (max-width: 560px) {
+@media (max-width: 600px) {
 
-  .quickInfoSection {
-    padding: 25px 0 30px;
+  .abpsExploreSection {
+    padding:
+      48px 15px 42px;
   }
 
-  .quickInfoContainer {
-    width: calc(100% - 24px);
 
-    grid-template-columns: 1fr;
+  /* EYEBROW */
 
-    gap: 13px;
+  .abpsExploreEyebrow {
+    gap: 8px;
+
+    margin-bottom: 14px;
   }
 
-  .quickInfoCard {
-    min-height: 172px;
 
-    padding: 18px 18px 17px;
-
-    border-radius: 16px;
+  .abpsExploreEyebrow > span {
+    width: 24px;
   }
 
-  .quickCardNumber {
-    font-size: 12px;
-    letter-spacing: 1.6px;
+
+  .abpsExploreEyebrow svg {
+    font-size: 15px;
   }
 
-  .quickCardIcon {
-    width: 43px;
-    height: 43px;
 
-    font-size: 21px;
+  .abpsExploreEyebrow strong {
+    font-size: 9px;
 
-    border-radius: 11px;
+    letter-spacing: 1.7px;
   }
 
-  .quickCardContent {
-    margin-top: 13px;
+
+  /* HEADING */
+
+  .abpsExploreHeading h2 {
+    font-size: 39px;
+
+    line-height: 1.07;
+
+    letter-spacing: -1px;
   }
 
-  .quickCardContent h3 {
-    font-size: 22px;
-    line-height: 1.18;
+
+  .abpsExploreHeading h2 em {
+    margin-top: 4px;
   }
 
-  .quickCardContent p {
-    margin-top: 5px;
 
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  .quickCardButton {
-    padding-top: 10px;
+  .abpsExploreHeading > p {
+    margin-top: 14px;
 
     font-size: 14px;
+
+    line-height: 1.6;
   }
 
-  .quickCardButton span {
-    font-size: 18px;
+
+  /* VALUES */
+
+  .abpsExploreValues {
+    gap: 10px 17px;
+
+    margin-bottom: 25px;
   }
+
+
+  .abpsExploreValues span {
+    font-size: 10px;
+  }
+
+
+  .abpsExploreValues svg {
+    font-size: 10px;
+  }
+
+
+  /* CARDS */
+
+  .abpsExploreCards {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .abpsExploreCard {
+    min-height: 470px;
+
+    border-radius: 23px;
+  }
+
+
+  .abpsExploreCard:hover {
+    transform:
+      translateY(-4px);
+  }
+
+
+  /* IMAGE */
+
+  .abpsExploreImage {
+    width:
+      calc(100% - 14px);
+
+    height: 220px;
+
+    margin:
+      7px 7px 0;
+  }
+
+
+  .abpsExploreImage img,
+  .abpsExploreImageShade {
+    border-radius:
+      18px 18px 62px 18px;
+  }
+
+
+  /* NUMBER */
+
+  .abpsExploreNumber {
+    top: 15px;
+    left: 15px;
+
+    min-width: 70px;
+    height: 37px;
+  }
+
+
+  .abpsExploreNumber strong {
+    font-size: 19px;
+  }
+
+
+  /* ICON */
+
+  .abpsExploreIcon {
+    left: 20px;
+    bottom: -27px;
+
+    width: 58px;
+    height: 58px;
+
+    border-width: 4px;
+
+    border-radius: 18px;
+
+    font-size: 19px;
+  }
+
+
+  /* CONTENT */
+
+  .abpsExploreCardContent {
+    padding:
+      41px 20px 19px;
+  }
+
+
+  .abpsExploreCardContent h3 {
+    font-size: 30px;
+  }
+
+
+  .abpsExploreSmallLine {
+    margin:
+      12px 0;
+  }
+
+
+  .abpsExploreCardContent p {
+    font-size: 13.5px;
+
+    line-height: 1.58;
+  }
+
+
+  /* BUTTON */
+
+  .abpsExploreCardBottom {
+    min-height: 47px;
+
+    font-size: 12px;
+  }
+
+
+  .abpsExploreCardBottom b {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  /* BOTTOM */
+
+  .abpsExploreBottom {
+    margin-top: 27px;
+
+    gap: 10px;
+  }
+
+
+  .abpsExploreBottom > span {
+    width: 25px;
+  }
+
+
+  .abpsExploreBottom p {
+    font-size: 12px;
+
+    text-align: center;
+  }
+
 }
 
 
 /* =========================================================
    SMALL MOBILE
-   ========================================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
-  .quickInfoContainer {
-    width: calc(100% - 18px);
+  .abpsExploreSection {
+    padding:
+      44px 10px 38px;
   }
 
-  .quickInfoCard {
-    min-height: 165px;
 
-    padding: 17px;
+  .abpsExploreHeading h2 {
+    font-size: 34px;
+    max-width: 900px;
   }
 
-  .quickCardIcon {
-    width: 40px;
-    height: 40px;
+  
 
-    font-size: 19px;
+
+  .abpsExploreHeading > p {
+    font-size: 13px;
   }
 
-  .quickCardContent h3 {
-    font-size: 20px;
+
+  .abpsExploreValues {
+    justify-content:
+      flex-start;
+
+    gap: 9px 14px;
   }
 
-  .quickCardContent p {
+
+  .abpsExploreCard {
+    min-height: 455px;
+  }
+
+
+  .abpsExploreImage {
+    height: 205px;
+  }
+
+
+  .abpsExploreCardContent {
+    padding:
+      40px 10px 18px;
+  }
+
+
+  .abpsExploreCardContent h3 {
+    font-size: 28px;
+    margin-top: 5px;
+  }
+
+
+  .abpsExploreCardContent p {
     font-size: 15px;
   }
 
-  .quickCardButton {
-    font-size: 13px;
+
+  .abpsExploreCardBottom {
+    min-height: 44px;
   }
+
 }
 
 
 /* =========================================================
-   TOUCH DEVICES
-   ========================================================= */
+   REDUCE MOTION
+========================================================= */
 
-@media (hover: none) {
+@media (prefers-reduced-motion: reduce) {
 
-  .quickInfoCard:hover {
-    transform: none;
-
-    box-shadow:
-      0 10px 30px rgba(7, 26, 53, 0.07);
+  .abpsExploreCard,
+  .abpsExploreImage img,
+  .abpsExploreIcon,
+  .abpsExploreCardBottom,
+  .abpsExploreCardBottom b {
+    transition: none;
   }
 
-  .quickInfoCard:hover::after {
-    transform: none;
-  }
 
-  .quickInfoCard:hover .quickCardIcon {
+  .abpsExploreCard:hover {
     transform: none;
   }
 
-  .quickCardButton:hover {
-    gap: 8px;
-  }
 
-  .quickCardButton:hover span {
+  .abpsExploreCard:hover
+  .abpsExploreImage img {
     transform: none;
   }
+
 }

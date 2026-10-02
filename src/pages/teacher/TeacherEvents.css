@@ -1,0 +1,829 @@
+/* =========================================================
+   TEACHER EVENTS
+   PREMIUM LIGHT THEME
+   ========================================================= */
+
+.teacherRead-page {
+  width: 100%;
+  min-height: 100%;
+  color: #385456;
+}
+
+/* HERO */
+
+.teacherRead-hero {
+  position: relative;
+  width: 100%;
+  min-height: 170px;
+  padding: 30px 34px;
+  overflow: hidden;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(255, 255, 255, 0.95),
+      transparent 22%
+    ),
+    linear-gradient(
+      135deg,
+      #e5f5ef 0%,
+      #f4faf8 55%,
+      #fff5e1 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  box-shadow:
+    0 14px 35px rgba(36, 98, 92, 0.07);
+}
+
+.teacherRead-hero::before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  right: 105px;
+
+  width: 180px;
+  height: 180px;
+
+  border: 1px solid rgba(38, 125, 119, 0.09);
+  border-radius: 50%;
+}
+
+.teacherRead-hero::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  bottom: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+  background: rgba(238, 194, 105, 0.14);
+}
+
+.teacherRead-heroContent {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  flex: 1;
+}
+
+.teacherRead-eyebrow {
+  display: inline-flex;
+  margin-bottom: 9px;
+  padding: 6px 11px;
+
+  border: 1px solid #cee6df;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.75);
+  color: #267d77;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.teacherRead-hero h1 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: clamp(29px, 3vw, 39px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.9px;
+}
+
+.teacherRead-hero p {
+  max-width: 650px;
+  margin: 9px 0 0;
+
+  color: #6e8584;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.teacherRead-heroIcon {
+  position: relative;
+  z-index: 2;
+
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+
+  border: 1px solid #d5eae3;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #edf9f5
+    );
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 31px;
+
+  box-shadow:
+    0 14px 30px rgba(38, 125, 119, 0.1);
+}
+
+/* EVENT GRID */
+
+.teacherRead-cardGrid {
+  width: 100%;
+  margin-top: 22px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+/* EVENT CARD */
+
+.teacherRead-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 220px;
+
+  padding: 21px;
+  overflow: hidden;
+
+  border: 1px solid #deebe7;
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #ffffff 72%,
+      #f7fbf9 100%
+    );
+
+  box-shadow:
+    0 9px 28px rgba(34, 82, 78, 0.055);
+
+  transition: 0.25s ease;
+}
+
+.teacherRead-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 22px;
+
+  width: 55px;
+  height: 3px;
+
+  border-radius: 0 0 10px 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4ca69b,
+      #a4dbcf
+    );
+}
+
+.teacherRead-card::after {
+  content: "";
+
+  position: absolute;
+  right: -45px;
+  bottom: -55px;
+
+  width: 115px;
+  height: 115px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(223, 244, 237, 0.4);
+
+  pointer-events: none;
+}
+
+.teacherRead-card:hover {
+  border-color: #c8e2da;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(34, 82, 78, 0.09);
+}
+
+/* CARD TOP */
+
+.teacherRead-cardTop {
+  position: relative;
+  z-index: 2;
+
+  margin-bottom: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.teacherRead-cardTop > div {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+
+  border: 1px solid #d5ebe4;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e2f5ee,
+      #f2faf7
+    );
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+}
+
+.teacherRead-cardTop > span {
+  padding: 6px 11px;
+
+  border: 1px solid #efdfbd;
+  border-radius: 30px;
+
+  background: #fff8e9;
+  color: #a97832;
+
+  font-size: 9px;
+  font-weight: 850;
+}
+
+/* CONTENT */
+
+.teacherRead-card h3 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: 18px;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.teacherRead-card > p {
+  position: relative;
+  z-index: 2;
+
+  margin: 9px 0 0;
+
+  color: #738887;
+
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* META */
+
+.teacherRead-meta {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 19px;
+  padding-top: 14px;
+
+  border-top: 1px solid #e9f0ed;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 17px;
+}
+
+.teacherRead-meta span {
+  color: #718684;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.teacherRead-meta svg {
+  color: #4c9a90;
+}
+
+/* EMPTY */
+
+.teacherRead-empty {
+  min-height: 310px;
+
+  margin-top: 22px;
+  padding: 40px 20px;
+
+  border: 1px dashed #cbded8;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f6fcf9,
+      #fffaf1
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.teacherRead-emptyIcon {
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 15px;
+
+  border-radius: 21px;
+
+  background: #e4f5ef;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+}
+
+.teacherRead-empty h3 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.teacherRead-empty p {
+  margin: 7px 0 0;
+
+  color: #778b8a;
+
+  font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .teacherRead-cardGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .teacherRead-hero {
+    min-height: 145px;
+    padding: 22px 19px;
+    border-radius: 20px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 27px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 11px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 62px;
+    height: 62px;
+    flex-basis: 62px;
+
+    border-radius: 18px;
+
+    font-size: 23px;
+  }
+
+  .teacherRead-cardGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .teacherRead-card {
+    min-height: auto;
+    padding: 17px;
+  }
+}
+
+@media (max-width: 390px) {
+  .teacherRead-heroIcon {
+    display: none;
+  }
+}
+
+/* =========================================================
+   TEACHER READ PAGES
+   FINAL LARGE FONT OVERRIDE
+   SAME SIZE AS PRIVATE MESSAGES
+   ========================================================= */
+
+/* =========================
+   HERO
+   ========================= */
+
+.teacherRead-eyebrow,
+.teacherRead-hero > div:first-child > span {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.teacherRead-hero h1 {
+  font-size: clamp(48px, 5vw, 58px) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+}
+
+.teacherRead-hero p {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+}
+
+.teacherRead-heroIcon {
+  width: 88px !important;
+  height: 88px !important;
+  flex: 0 0 88px !important;
+
+  font-size: 34px !important;
+}
+
+
+/* =========================
+   CARDS
+   EVENTS + ASSIGNMENTS
+   ========================= */
+
+.teacherRead-cardTop > span,
+.teacherRead-cardStatus {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+
+  min-height: 32px !important;
+  padding: 0 12px !important;
+}
+
+.teacherRead-cardLabel {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+.teacherRead-card h3 {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+}
+
+.teacherRead-card > p,
+.teacherRead-card p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+
+/* =========================
+   CARD META
+   ========================= */
+
+.teacherRead-meta span {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  line-height: 1.5 !important;
+}
+
+.teacherRead-meta svg {
+  font-size: 14px !important;
+}
+
+
+/* =========================
+   CARD ICON
+   ========================= */
+
+.teacherRead-cardIcon,
+.teacherRead-cardTop > div {
+  width: 54px !important;
+  height: 54px !important;
+  flex: 0 0 54px !important;
+
+  font-size: 20px !important;
+}
+
+
+/* =========================
+   TABLE
+   ATTENDANCE + FEES + RESULTS
+   ========================= */
+
+.teacherRead-table th {
+  padding: 19px 20px !important;
+
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  line-height: 1.4 !important;
+}
+
+.teacherRead-table td {
+  padding: 20px !important;
+
+  font-size: 17px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.5 !important;
+}
+
+.teacherRead-table td strong {
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.teacherRead-status {
+  min-height: 34px !important;
+  padding: 0 13px !important;
+
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+.teacherRead-emptyIcon {
+  width: 78px !important;
+  height: 78px !important;
+
+  font-size: 31px !important;
+}
+
+.teacherRead-empty > svg {
+  font-size: 39px !important;
+}
+
+.teacherRead-empty h3 {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+}
+
+.teacherRead-empty p {
+  max-width: 520px !important;
+
+  font-size: 17px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 14px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 44px !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 18px !important;
+  }
+
+  .teacherRead-heroIcon {
+    width: 76px !important;
+    height: 76px !important;
+    flex: 0 0 76px !important;
+
+    font-size: 29px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 21px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 16px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-table th {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 16px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .teacherRead-hero {
+    padding: 24px 19px !important;
+  }
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .teacherRead-heroIcon {
+    width: 62px !important;
+    height: 62px !important;
+    flex: 0 0 62px !important;
+
+    font-size: 25px !important;
+  }
+
+
+  /* CARDS */
+
+  .teacherRead-cardLabel {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-cardTop > span,
+  .teacherRead-cardStatus {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 20px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-cardIcon,
+  .teacherRead-cardTop > div {
+    width: 49px !important;
+    height: 49px !important;
+    flex: 0 0 49px !important;
+
+    font-size: 18px !important;
+  }
+
+
+  /* TABLE */
+
+  .teacherRead-table th {
+    padding: 16px !important;
+    font-size: 14px !important;
+  }
+
+  .teacherRead-table td {
+    padding: 17px !important;
+    font-size: 16px !important;
+  }
+
+  .teacherRead-table td strong {
+    font-size: 16px !important;
+  }
+
+  .teacherRead-status {
+    font-size: 13px !important;
+  }
+
+
+  /* EMPTY */
+
+  .teacherRead-empty h3 {
+    font-size: 25px !important;
+  }
+
+  .teacherRead-empty p {
+    font-size: 15px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 32px !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 19px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-table th {
+    font-size: 14px !important;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-status {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 23px !important;
+  }
+
+  .teacherRead-empty p {
+    font-size: 15px !important;
+  }
+}

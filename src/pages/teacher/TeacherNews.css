@@ -1,0 +1,1089 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   TEACHER NEWS
+   PREMIUM LIGHT THEME
+   ========================================================= */
+
+.teacherNews-page {
+  width: 100%;
+  min-height: 100%;
+  color: #28484a;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.teacherNews-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 205px;
+
+  padding: 32px 36px;
+
+  overflow: hidden;
+
+  border: 1px solid #dcece7;
+  border-radius: 26px;
+
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(255, 255, 255, 0.95),
+      transparent 23%
+    ),
+    linear-gradient(
+      135deg,
+      #e6f6f0 0%,
+      #f5fbf8 52%,
+      #fff7e7 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  box-shadow:
+    0 14px 38px rgba(31, 90, 84, 0.07);
+}
+
+
+/* HERO DECORATION */
+
+.teacherNews-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 210px;
+  height: 210px;
+
+  top: -110px;
+  right: 125px;
+
+  border: 1px solid
+    rgba(37, 125, 116, 0.09);
+
+  border-radius: 50%;
+}
+
+.teacherNews-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -75px;
+  bottom: -125px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(229, 190, 108, 0.14);
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.teacherNews-heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 680px;
+}
+
+.teacherNews-eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 9px;
+
+  padding: 6px 11px;
+
+  border: 1px solid #cce6de;
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.78);
+
+  color: #247b73;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+.teacherNews-hero h1 {
+  margin: 0;
+
+  color: #153d40;
+
+  font-size:
+    clamp(31px, 3vw, 42px);
+
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.teacherNews-hero p {
+  max-width: 620px;
+
+  margin: 10px 0 0;
+
+  color: #6f8584;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* READ ONLY */
+
+.teacherNews-readOnly {
+  width: fit-content;
+
+  margin-top: 16px;
+
+  padding: 7px 11px;
+
+  border: 1px solid #d7e9e3;
+  border-radius: 10px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  color: #607b79;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.teacherNews-readOnly svg {
+  color: #27847a;
+}
+
+
+/* =========================================================
+   HERO VISUAL
+   ========================================================= */
+
+.teacherNews-heroVisual {
+  position: relative;
+  z-index: 2;
+
+  min-width: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.teacherNews-heroIcon {
+  width: 92px;
+  height: 92px;
+
+  border: 1px solid #d4eae3;
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #eef9f5
+    );
+
+  color: #27847a;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 36px;
+
+  box-shadow:
+    0 15px 32px
+    rgba(38, 125, 119, 0.1);
+
+  transform: rotate(3deg);
+}
+
+.teacherNews-heroIcon svg {
+  transform: rotate(-3deg);
+}
+
+.teacherNews-heroVisual > span {
+  color: #718785;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.6px;
+}
+
+
+/* =========================================================
+   NEWS SECTION HEADING
+   ========================================================= */
+
+.teacherNews-heading {
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.teacherNews-heading > div:first-child {
+  min-width: 0;
+}
+
+.teacherNews-heading
+  > div:first-child
+  > span {
+  color: #27847a;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+.teacherNews-heading h2 {
+  margin: 5px 0 0;
+
+  color: #173f41;
+
+  font-size:
+    clamp(23px, 2.4vw, 31px);
+
+  font-weight: 900;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.6px;
+}
+
+.teacherNews-heading p {
+  max-width: 650px;
+
+  margin: 6px 0 0;
+
+  color: #788d8b;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   NEWS COUNT
+   ========================================================= */
+
+.teacherNews-count {
+  min-width: 110px;
+
+  padding: 12px 18px;
+
+  border: 1px solid #dcebe6;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  box-shadow:
+    0 8px 22px
+    rgba(34, 82, 78, 0.05);
+}
+
+.teacherNews-count strong {
+  color: #27847a;
+
+  font-size: 23px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.teacherNews-count span {
+  margin-top: 5px;
+
+  color: #819492;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NEWS GRID
+   ========================================================= */
+
+.teacherNews-grid {
+  width: 100%;
+
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+}
+
+
+/* =========================================================
+   NEWS CARD
+   ========================================================= */
+
+.teacherNews-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 290px;
+
+  padding: 21px;
+
+  overflow: hidden;
+
+  border: 1px solid #dfece8;
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #ffffff 75%,
+      #f8fcfa 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 9px 28px
+    rgba(34, 82, 78, 0.055);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.teacherNews-card:hover {
+  border-color: #c7e2da;
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 42px
+    rgba(34, 82, 78, 0.09);
+}
+
+
+/* SOFT CARD DECORATION */
+
+.teacherNews-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 125px;
+  height: 125px;
+
+  right: -65px;
+  bottom: -65px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(222, 244, 237, 0.38);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TOP ACCENT
+   ========================================================= */
+
+.teacherNews-cardAccent {
+  position: absolute;
+
+  top: 0;
+  left: 22px;
+
+  width: 58px;
+  height: 3px;
+
+  border-radius:
+    0 0 10px 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #4ba69b,
+      #a3dbcf
+    );
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.teacherNews-cardHeader {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+
+/* CARD ICON */
+
+.teacherNews-cardIcon {
+  width: 46px;
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  border: 1px solid #d3eae3;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1f5ee,
+      #f3faf8
+    );
+
+  color: #27847a;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 7px 18px
+    rgba(38, 125, 119, 0.07);
+}
+
+
+/* CATEGORY */
+
+.teacherNews-category {
+  max-width: 155px;
+
+  padding: 6px 10px;
+
+  overflow: hidden;
+
+  border: 1px solid #efdfbd;
+  border-radius: 30px;
+
+  background: #fff8e9;
+
+  color: #a67731;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 8px;
+  font-weight: 850;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.teacherNews-category svg {
+  flex: 0 0 auto;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.teacherNews-cardContent {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 18px;
+
+  flex: 1;
+}
+
+.teacherNews-cardLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #4c958c;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  letter-spacing: 0.9px;
+}
+
+.teacherNews-cardContent h3 {
+  margin: 0;
+
+  color: #183f41;
+
+  font-size: 18px;
+  font-weight: 850;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.25px;
+}
+
+.teacherNews-cardContent p {
+  margin: 9px 0 0;
+
+  color: #738987;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.75;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   CARD FOOTER
+   ========================================================= */
+
+.teacherNews-cardFooter {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 18px;
+  padding-top: 13px;
+
+  border-top: 1px solid #e9f1ee;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 8px 12px;
+}
+
+.teacherNews-cardFooter span {
+  color: #758987;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.teacherNews-cardFooter svg {
+  color: #4b998f;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   ALTERNATE LIGHT CARD COLORS
+   ========================================================= */
+
+/* SKY */
+
+.teacherNews-card:nth-child(3n + 2)
+  .teacherNews-cardIcon {
+  border-color: #d7eaf2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf6fa,
+      #f6fbfd
+    );
+
+  color: #4b8198;
+}
+
+.teacherNews-card:nth-child(3n + 2)
+  .teacherNews-cardAccent {
+  background:
+    linear-gradient(
+      90deg,
+      #72aac1,
+      #acd7e7
+    );
+}
+
+
+/* GOLD */
+
+.teacherNews-card:nth-child(3n + 3)
+  .teacherNews-cardIcon {
+  border-color: #f0e1c2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff2d9,
+      #fffbf3
+    );
+
+  color: #aa7932;
+}
+
+.teacherNews-card:nth-child(3n + 3)
+  .teacherNews-cardAccent {
+  background:
+    linear-gradient(
+      90deg,
+      #d0a253,
+      #efd69f
+    );
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.teacherNews-empty {
+  width: 100%;
+  min-height: 310px;
+
+  margin-top: 18px;
+
+  padding: 45px 20px;
+
+  border: 1px dashed #cadfd8;
+  border-radius: 23px;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(221, 244, 237, 0.7),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f7fcfa,
+      #fffaf0
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.teacherNews-empty > div {
+  width: 72px;
+  height: 72px;
+
+  margin-bottom: 16px;
+
+  border: 1px solid #d5eae3;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ed,
+      #f4fbf8
+    );
+
+  color: #27847a;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 27px;
+
+  box-shadow:
+    0 12px 28px
+    rgba(38, 125, 119, 0.08);
+}
+
+.teacherNews-empty h3 {
+  margin: 0;
+
+  color: #183f41;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.teacherNews-empty p {
+  max-width: 450px;
+
+  margin: 8px 0 0;
+
+  color: #778c8a;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .teacherNews-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .teacherNews-hero {
+    min-height: auto;
+
+    padding: 24px 20px;
+
+    border-radius: 21px;
+  }
+
+  .teacherNews-hero h1 {
+    font-size: 29px;
+  }
+
+  .teacherNews-hero p {
+    font-size: 11px;
+  }
+
+  .teacherNews-heroIcon {
+    width: 68px;
+    height: 68px;
+
+    border-radius: 19px;
+
+    font-size: 25px;
+  }
+
+  .teacherNews-heroVisual {
+    min-width: auto;
+  }
+
+  .teacherNews-heroVisual > span {
+    display: none;
+  }
+
+  .teacherNews-heading {
+    align-items: flex-start;
+  }
+
+  .teacherNews-heading h2 {
+    font-size: 23px;
+  }
+
+  .teacherNews-grid {
+    grid-template-columns: 1fr;
+
+    gap: 13px;
+  }
+
+  .teacherNews-card {
+    min-height: auto;
+
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .teacherNews-cardContent h3 {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .teacherNews-hero {
+    padding: 22px 17px;
+  }
+
+  .teacherNews-heroVisual {
+    display: none;
+  }
+
+  .teacherNews-eyebrow {
+    font-size: 8px;
+  }
+
+  .teacherNews-hero h1 {
+    font-size: 26px;
+  }
+
+  .teacherNews-readOnly {
+    margin-top: 13px;
+  }
+
+  .teacherNews-heading {
+    margin-top: 22px;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+  .teacherNews-count {
+    width: 100%;
+
+    min-width: 0;
+
+    flex-direction: row;
+
+    gap: 8px;
+  }
+
+  .teacherNews-count span {
+    margin: 0;
+  }
+
+  .teacherNews-cardHeader {
+    align-items: flex-start;
+  }
+
+  .teacherNews-category {
+    max-width: 125px;
+  }
+
+  .teacherNews-cardFooter {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .teacherNews-hero h1 {
+    font-size: 24px;
+  }
+
+  .teacherNews-card {
+    padding: 15px;
+  }
+
+  .teacherNews-cardIcon {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+  .teacherNews-category {
+    max-width: 105px;
+
+    padding: 5px 8px;
+  }
+}
+
+/* =========================================================
+   EXTRA LARGE FONT OVERRIDE - NEWS
+   ========================================================= */
+
+.teacherNews-eyebrow {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNews-hero h1 {
+  font-size: clamp(48px, 5vw, 56px) !important;
+  font-weight: 900 !important;
+}
+
+.teacherNews-hero p {
+  font-size: 20px !important;
+  font-weight: 550 !important;
+  line-height: 1.65 !important;
+}
+
+.teacherNews-readOnly {
+  padding: 9px 13px !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+}
+
+.teacherNews-heroVisual > span {
+  font-size: 13px !important;
+}
+
+.teacherNews-heading > div:first-child > span {
+  font-size: 14px !important;
+}
+
+.teacherNews-heading h2 {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNews-heading p {
+  font-size: 17px !important;
+  line-height: 1.65 !important;
+}
+
+.teacherNews-count strong {
+  font-size: 29px !important;
+}
+
+.teacherNews-count span {
+  font-size: 13px !important;
+}
+
+/* NEWS CARDS */
+
+.teacherNews-category {
+  font-size: 13px !important;
+  padding: 7px 11px !important;
+}
+
+.teacherNews-category svg {
+  font-size: 11px !important;
+}
+
+.teacherNews-cardLabel {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNews-cardContent h3 {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1.4 !important;
+}
+
+.teacherNews-cardContent p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+.teacherNews-cardFooter span {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.teacherNews-cardIcon {
+  width: 53px !important;
+  height: 53px !important;
+  flex: 0 0 53px !important;
+  font-size: 20px !important;
+}
+
+.teacherNews-empty h3 {
+  font-size: 27px !important;
+}
+
+.teacherNews-empty p {
+  font-size: 17px !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .teacherNews-eyebrow {
+    font-size: 13px !important;
+  }
+
+  .teacherNews-hero h1 {
+    font-size: 38px !important;
+  }
+
+  .teacherNews-hero p {
+    font-size: 16px !important;
+  }
+
+  .teacherNews-heading h2 {
+    font-size: 27px !important;
+  }
+
+  .teacherNews-heading p {
+    font-size: 15px !important;
+  }
+
+  .teacherNews-cardContent h3 {
+    font-size: 20px !important;
+  }
+
+  .teacherNews-cardContent p {
+    font-size: 15px !important;
+  }
+
+  .teacherNews-cardFooter span {
+    font-size: 12px !important;
+  }
+}

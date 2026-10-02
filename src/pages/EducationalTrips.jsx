@@ -1,559 +1,832 @@
 import React from "react";
-import "./EducationalTrips.css";
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 import {
-  FaLandmark,
-  FaFlask,
-  FaTree,
-  FaIndustry,
-  FaMapMarkedAlt,
-  FaGraduationCap,
-  FaCompass,
-  FaUsers,
-  FaLightbulb,
+  FaArrowRight,
   FaBookOpen,
+  FaUsers,
+  FaMapMarkerAlt,
+  FaFlask,
+  FaLandmark,
+  FaLeaf,
+  FaIndustry,
+  FaBinoculars,
+  FaSearch,
+  FaLightbulb,
+  FaGraduationCap,
+  FaUserShield,
+  FaClipboardCheck,
+  FaBusAlt,
+  FaPhoneAlt,
   FaCamera,
-  FaGlobeAsia,
+  FaImages,
 } from "react-icons/fa";
 
+import "./EducationalTrips.css";
 
-import historicalImage from "../assets/historical-trips.jpg";
+/* =========================
+   IMAGES
+========================= */
+
+import heroImage from "../assets/trip-hero.jpg";
+
+import learningMain from "../assets/trip-learning-main.jpg";
+import learningSmall1 from "../assets/trip-learning-small-1.jpg";
+import learningSmall2 from "../assets/trip-learning-small-2.jpg";
+
 import scienceImage from "../assets/science-trips.jpg";
+import historyImage from "../assets/historical-trips.jpg";
 import natureImage from "../assets/nature-trips.jpg";
 import industrialImage from "../assets/industrial-trips.jpg";
-import educationalImage from "../assets/educational-tours.jpg";
-import expeditionImage from "../assets/learning-expeditions.jpg";
+
+import safetyImage from "../assets/trip-safety.jpg";
+
+import gallery1 from "../assets/trip-gallery-1.jpg";
+import gallery2 from "../assets/trip-gallery-2.jpg";
+import gallery3 from "../assets/trip-gallery-3.jpg";
+import gallery4 from "../assets/trip-gallery-1.jpg";
+import gallery5 from "../assets/trip-gallery-2.jpg";
+import gallery6 from "../assets/trip-gallery-3.jpg";
+
+import ctaImage from "../assets/trip-cta.jpg";
 
 
-const tripsData = [
+const destinations = [
   {
-    id: 1,
-    number: "01",
-    icon: <FaLandmark />,
-    title: "Historical Places",
-    subtitle: "DISCOVER • EXPLORE • UNDERSTAND",
-    image: historicalImage,
-    description:
-      "Visits to historical places help students connect classroom learning with real stories, heritage and important events from the past.",
-    activities: [
-      "Historical Monuments",
-      "Heritage Sites",
-      "Museums",
-      "Guided Tours",
-    ],
-  },
-
-  {
-    id: 2,
-    number: "02",
-    icon: <FaFlask />,
-    title: "Science Visits",
-    subtitle: "OBSERVE • QUESTION • DISCOVER",
+    id: "01",
+    icon: FaFlask,
+    title: "Science & Discovery",
+    text: "Museums • Science Centres",
+    small: "Experiments • Innovation",
     image: scienceImage,
-    description:
-      "Science-focused trips give students opportunities to observe experiments, technology and scientific concepts in real-world environments.",
-    activities: [
-      "Science Museums",
-      "Science Centres",
-      "Laboratory Visits",
-      "Technology Exhibitions",
-    ],
   },
-
   {
-    id: 3,
-    number: "03",
-    icon: <FaTree />,
-    title: "Nature Trips",
-    subtitle: "EXPLORE • CONNECT • PROTECT",
+    id: "02",
+    icon: FaLandmark,
+    title: "History & Heritage",
+    text: "Monuments • Historical Sites",
+    small: "Culture • Ancient Civilizations",
+    image: historyImage,
+  },
+  {
+    id: "03",
+    icon: FaLeaf,
+    title: "Nature & Environment",
+    text: "Parks • Wildlife Sanctuaries",
+    small: "Nature Centres • Sustainability",
     image: natureImage,
-    description:
-      "Nature trips allow students to explore the environment, understand biodiversity and develop appreciation for the natural world.",
-    activities: [
-      "Nature Walks",
-      "Parks & Gardens",
-      "Wildlife Learning",
-      "Nature Observation",
-    ],
   },
-
   {
-    id: 4,
-    number: "04",
-    icon: <FaIndustry />,
+    id: "04",
+    icon: FaIndustry,
     title: "Industrial Visits",
-    subtitle: "SEE • EXPERIENCE • LEARN",
+    text: "Factories • Production Units",
+    small: "Real World Learning • Career Insights",
     image: industrialImage,
-    description:
-      "Industrial visits introduce students to real workplaces and help them understand how classroom concepts are applied professionally.",
-    activities: [
-      "Industry Tours",
-      "Factory Visits",
-      "Workplace Learning",
-      "Career Awareness",
-    ],
-  },
-
-  {
-    id: 5,
-    number: "05",
-    icon: <FaMapMarkedAlt />,
-    title: "Educational Tours",
-    subtitle: "TRAVEL • EXPERIENCE • GROW",
-    image: educationalImage,
-    description:
-      "Educational tours combine travel with meaningful learning experiences, helping students discover new places and perspectives.",
-    activities: [
-      "School Excursions",
-      "City Visits",
-      "Cultural Experiences",
-      "Group Activities",
-    ],
-  },
-
-  {
-    id: 6,
-    number: "06",
-    icon: <FaGraduationCap />,
-    title: "Learning Expeditions",
-    subtitle: "LEARN • EXPERIENCE • REMEMBER",
-    image: expeditionImage,
-    description:
-      "Special learning expeditions encourage students to step outside the classroom and gain knowledge through direct experiences.",
-    activities: [
-      "Field Studies",
-      "Research Activities",
-      "Observation Tasks",
-      "Experiential Learning",
-    ],
   },
 ];
 
-// =========================================================
-// COMPONENT
-// =========================================================
+
+const journeySteps = [
+  {
+    id: "01",
+    icon: FaBinoculars,
+    title: "Explore",
+    text: "Step into new places and environments.",
+  },
+  {
+    id: "02",
+    icon: FaSearch,
+    title: "Observe",
+    text: "Understand, explore and ask questions.",
+  },
+  {
+    id: "03",
+    icon: FaLightbulb,
+    title: "Discover",
+    text: "Connect classroom learning with real life.",
+  },
+  {
+    id: "04",
+    icon: FaGraduationCap,
+    title: "Learn",
+    text: "Grow with knowledge and new perspectives.",
+  },
+];
+
 
 const EducationalTrips = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <>
-     <Navbar />
-    <div className="abtrip-page">
+    <main className="abtrip-page">
 
-     
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-      <main>
+      <section className="abtrip-hero">
 
-        {/* =================================================
-            HERO
-        ================================================= */}
+        <img
+          src={heroImage}
+          alt="AB Public School educational trip"
+          className="abtrip-hero-bg"
+        />
 
-        <section className="abtrip-hero">
+        <div className="abtrip-hero-overlay" />
 
-          <div className="abtrip-heroGlow abtrip-glowOne"></div>
-          <div className="abtrip-heroGlow abtrip-glowTwo"></div>
-          <div className="abtrip-heroPattern"></div>
+        <div className="abtrip-container abtrip-hero-inner">
 
-          <div className="abtrip-heroContent">
+          <div className="abtrip-hero-content">
 
-            <div className="abtrip-eyebrow">
-              <span></span>
-              <FaCompass />
+            <span className="abtrip-label abtrip-label-light">
               EDUCATIONAL TRIPS
-              <span></span>
-            </div>
+            </span>
 
             <h1>
-              Learn Beyond
-              <strong>The Classroom.</strong>
+              Explore. Experience.
+              <span>Learn.</span>
             </h1>
 
             <p>
-              At AB Public School, educational trips turn learning
-              into memorable experiences. Students explore new
-              places, discover new ideas and understand the world
-              through real-life experiences.
+              Learning becomes more meaningful when students
+              experience the world beyond textbooks and discover
+              knowledge through real-life experiences.
             </p>
 
-            <div className="abtrip-heroBottom">
+            <div className="abtrip-hero-actions">
 
-              <i></i>
+              <button
+                className="abtrip-btn abtrip-btn-gold"
+                onClick={() =>
+                  scrollToSection("tripDestinations")
+                }
+              >
+                Explore Trips
+                <FaArrowRight />
+              </button>
 
-              <span>
-                <FaGlobeAsia />
-                EXPLORE • EXPERIENCE • LEARN
-              </span>
+              <button
+                className="abtrip-btn abtrip-btn-outline"
+                onClick={() =>
+                  scrollToSection("tripJourney")
+                }
+              >
+                Plan Your Journey
+              </button>
 
-              <i></i>
+            </div>
+
+
+            <div className="abtrip-hero-points">
+
+              <article>
+                <span>
+                  <FaBinoculars />
+                </span>
+
+                <div>
+                  <strong>Explore</strong>
+                  <small>New Places</small>
+                </div>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaBookOpen />
+                </span>
+
+                <div>
+                  <strong>Discover</strong>
+                  <small>New Perspectives</small>
+                </div>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaUsers />
+                </span>
+
+                <div>
+                  <strong>Experience</strong>
+                  <small>Real World Learning</small>
+                </div>
+              </article>
 
             </div>
 
           </div>
 
-        </section>
+        </div>
 
 
-        {/* =================================================
-            INTRO
-        ================================================= */}
+        <div className="abtrip-hero-wave" />
 
-        <section className="abtrip-intro">
+      </section>
 
-          <div className="abtrip-introContainer">
 
-            <div className="abtrip-introNumber">
-              <strong>01</strong>
-              <span>STUDENT LIFE</span>
+      {/* =====================================================
+          LEARNING BEYOND BOUNDARIES
+      ===================================================== */}
+
+      <section className="abtrip-learning">
+
+        <div className="abtrip-container abtrip-learning-grid">
+
+          {/* IMAGE COLLAGE */}
+
+          <div className="abtrip-learning-visual">
+
+            <div className="abtrip-learning-main">
+              <img
+                src={learningMain}
+                alt="Students exploring educational destination"
+              />
             </div>
 
-            <div className="abtrip-introContent">
 
-              <span className="abtrip-smallTitle">
-                LEARNING BEYOND BOUNDARIES
-              </span>
-
-              <h2>
-                The World Is
-                <strong>Our Classroom.</strong>
-              </h2>
-
-              <p>
-                Educational trips give students an opportunity to
-                experience learning outside the traditional classroom.
-                Through visits to historical places, science centres,
-                museums, nature spaces and educational destinations,
-                students develop curiosity, observation skills and a
-                better understanding of the world around them.
-              </p>
-
-              <div className="abtrip-introFeatures">
-
-                <div className="abtrip-introFeature">
-                  <span>
-                    <FaBookOpen />
-                  </span>
-
-                  <div>
-                    <strong>Learn</strong>
-                    <small>Real-World Knowledge</small>
-                  </div>
-                </div>
-
-                <div className="abtrip-introFeature">
-                  <span>
-                    <FaCamera />
-                  </span>
-
-                  <div>
-                    <strong>Experience</strong>
-                    <small>Memorable Moments</small>
-                  </div>
-                </div>
-
-                <div className="abtrip-introFeature">
-                  <span>
-                    <FaUsers />
-                  </span>
-
-                  <div>
-                    <strong>Connect</strong>
-                    <small>Team Experiences</small>
-                  </div>
-                </div>
-
-              </div>
-
+            <div className="abtrip-learning-small abtrip-small-one">
+              <img
+                src={learningSmall1}
+                alt="Students learning during trip"
+              />
             </div>
+
+
+            <div className="abtrip-learning-small abtrip-small-two">
+              <img
+                src={learningSmall2}
+                alt="School educational visit"
+              />
+            </div>
+
+
+            <div className="abtrip-paper-plane">
+              ✈
+            </div>
+
+            <div className="abtrip-dotted-path" />
 
           </div>
 
-        </section>
 
+          {/* CONTENT */}
 
-        {/* =================================================
-            TRIPS
-        ================================================= */}
+          <div className="abtrip-learning-content">
 
-        <section className="abtrip-gridSection">
-
-          <div className="abtrip-sectionHeading">
-
-            <span>
-              EXPLORE OUR LEARNING EXPERIENCES
+            <span className="abtrip-label">
+              THE WORLD IS OUR CLASSROOM
             </span>
 
             <h2>
-              Every Journey
-              <strong>Teaches Something.</strong>
+              Learning Beyond
+              <span>Boundaries.</span>
             </h2>
 
             <p>
-              Meaningful journeys help students discover,
-              observe and learn beyond the boundaries of
-              their everyday classroom.
+              Our educational trips give students opportunities
+              to explore new places, understand different
+              cultures, experience real-world learning and
+              develop a broader perspective of life.
+            </p>
+
+
+            <div className="abtrip-learning-cards">
+
+              <article>
+                <span>
+                  <FaGraduationCap />
+                </span>
+
+                <strong>
+                  Real World
+                  <br />
+                  Learning
+                </strong>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaUsers />
+                </span>
+
+                <strong>
+                  Cultural
+                  <br />
+                  Awareness
+                </strong>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaMapMarkerAlt />
+                </span>
+
+                <strong>
+                  Memorable
+                  <br />
+                  Experiences
+                </strong>
+              </article>
+
+            </div>
+
+
+            <div className="abtrip-learning-stats">
+
+              <div>
+                <FaMapMarkerAlt />
+
+                <strong>25+</strong>
+
+                <span>Learning Visits</span>
+              </div>
+
+
+              <div>
+                <FaLandmark />
+
+                <strong>10+</strong>
+
+                <span>Destinations</span>
+              </div>
+
+
+              <div>
+                <FaUsers />
+
+                <strong>100%</strong>
+
+                <span>Guided & Safe</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          DESTINATIONS
+      ===================================================== */}
+
+      <section
+        className="abtrip-destinations"
+        id="tripDestinations"
+      >
+
+        <div className="abtrip-container">
+
+          <div className="abtrip-section-heading">
+
+            <span className="abtrip-label">
+              PLACES THAT INSPIRE LEARNING
+            </span>
+
+            <h2>
+              Educational
+              <span> Destinations.</span>
+            </h2>
+
+            <p>
+              Every destination is carefully selected to make
+              learning exciting, practical and memorable.
             </p>
 
           </div>
 
 
-          <div className="abtrip-grid">
+          <div className="abtrip-destination-grid">
 
-            {tripsData.map((trip) => (
+            {destinations.map((item) => {
+              const Icon = item.icon;
 
-              <article
-                key={trip.id}
-                className="abtrip-card"
-              >
+              return (
+                <article
+                  className="abtrip-destination-card"
+                  key={item.id}
+                >
 
-                {/* IMAGE */}
+                  <div className="abtrip-destination-image">
 
-                <div className="abtrip-imageBox">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                    />
 
-                  <img
-                    src={trip.image}
-                    alt={trip.title}
-                  />
+                    <span className="abtrip-destination-number">
+                      {item.id}
+                    </span>
 
-                  <div className="abtrip-imageOverlay"></div>
-
-                  <span className="abtrip-number">
-                    {trip.number}
-                  </span>
-
-                  <span className="abtrip-imageLabel">
-                    LEARNING EXPERIENCE
-                  </span>
-
-                  <div className="abtrip-icon">
-                    {trip.icon}
-                  </div>
-
-                </div>
-
-
-                {/* CONTENT */}
-
-                <div className="abtrip-cardContent">
-
-                  <span className="abtrip-cardSubtitle">
-                    {trip.subtitle}
-                  </span>
-
-                  <h3>
-                    {trip.title}
-                  </h3>
-
-                  <div className="abtrip-cardLine"></div>
-
-                  <p>
-                    {trip.description}
-                  </p>
-
-
-                  {/* TAGS */}
-
-                  <div className="abtrip-tags">
-
-                    {trip.activities.map((activity) => (
-
-                      <span key={activity}>
-                        <FaLightbulb />
-                        {activity}
-                      </span>
-
-                    ))}
+                    <span className="abtrip-destination-icon">
+                      <Icon />
+                    </span>
 
                   </div>
 
-                </div>
 
-              </article>
+                  <div className="abtrip-destination-content">
 
-            ))}
+                    <h3>
+                      {item.title}
+                    </h3>
+
+                    <p>
+                      {item.text}
+                    </p>
+
+                    <small>
+                      {item.small}
+                    </small>
+
+                  </div>
+
+                </article>
+              );
+            })}
 
           </div>
 
-        </section>
+        </div>
+
+      </section>
 
 
-        {/* =================================================
-            BENEFITS
-        ================================================= */}
+      {/* =====================================================
+          JOURNEY
+      ===================================================== */}
 
-        <section className="abtrip-benefits">
+      <section
+        className="abtrip-journey"
+        id="tripJourney"
+      >
 
-          <div className="abtrip-benefitsContainer">
+        <div className="abtrip-container">
 
-            <div className="abtrip-benefitsHeading">
+          <div className="abtrip-section-heading">
+
+            <span className="abtrip-label">
+              EVERY TRIP HAS A PURPOSE
+            </span>
+
+            <h2>
+              From Curiosity To
+              <span> Real World Knowledge.</span>
+            </h2>
+
+          </div>
+
+
+          <div className="abtrip-journey-track">
+
+            <div className="abtrip-route-line" />
+
+            {journeySteps.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <article
+                  className="abtrip-journey-item"
+                  key={item.id}
+                >
+
+                  <span className="abtrip-journey-id">
+                    {item.id}
+                  </span>
+
+                  <div className="abtrip-journey-icon">
+                    <Icon />
+                  </div>
+
+                  <h3>
+                    {item.title}
+                  </h3>
+
+                  <p>
+                    {item.text}
+                  </p>
+
+                </article>
+              );
+            })}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          SAFETY
+      ===================================================== */}
+
+      <section className="abtrip-safety">
+
+        <div className="abtrip-container abtrip-safety-grid">
+
+          <div className="abtrip-safety-content">
+
+            <span className="abtrip-label abtrip-label-light">
+              SAFE JOURNEYS. MEANINGFUL EXPERIENCES.
+            </span>
+
+            <h2>
+              Student Safety
+              <span>Comes First.</span>
+            </h2>
+
+            <p>
+              Our educational trips are carefully planned with
+              proper supervision, verified destinations and
+              well-organized logistics to ensure a safe,
+              enriching and memorable experience for every
+              student.
+            </p>
+
+
+            <div className="abtrip-safety-points">
+
+              <article>
+                <span>
+                  <FaUserShield />
+                </span>
+
+                <strong>
+                  Teacher
+                  <br />
+                  Supervision
+                </strong>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaClipboardCheck />
+                </span>
+
+                <strong>
+                  Planned
+                  <br />
+                  Itineraries
+                </strong>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaBusAlt />
+                </span>
+
+                <strong>
+                  Safe
+                  <br />
+                  Transportation
+                </strong>
+              </article>
+
+
+              <article>
+                <span>
+                  <FaPhoneAlt />
+                </span>
+
+                <strong>
+                  Parent
+                  <br />
+                  Communication
+                </strong>
+              </article>
+
+            </div>
+
+          </div>
+
+
+          <div className="abtrip-safety-visual">
+
+            <img
+              src={safetyImage}
+              alt="Students boarding school educational trip bus"
+            />
+
+            <div className="abtrip-safety-badge">
+
+              <FaUserShield />
+
+              <strong>
+                STUDENT
+              </strong>
 
               <span>
-                LEARNING THROUGH EXPERIENCE
+                SAFETY FIRST
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          GALLERY
+      ===================================================== */}
+
+      <section className="abtrip-gallery">
+
+        <div className="abtrip-container">
+
+          <div className="abtrip-gallery-header">
+
+            <div>
+
+              <span className="abtrip-label">
+                TRIP MEMORIES
               </span>
 
               <h2>
-                Every Trip
-                <strong>Creates A Lesson.</strong>
+                Moments That
+                <span> Inspire.</span>
               </h2>
 
-              <p>
-                Educational journeys help students become curious,
-                independent and confident learners. Real-world
-                experiences make classroom concepts easier to
-                understand and remember.
-              </p>
+            </div>
+
+
+            <button
+              onClick={() => navigate("/gallery")}
+              className="abtrip-gallery-btn"
+            >
+              Explore More Photos
+              <FaArrowRight />
+            </button>
+
+          </div>
+
+
+          <div className="abtrip-gallery-grid">
+
+            <div className="abtrip-gallery-item gallery-large">
+
+              <img
+                src={gallery1}
+                alt="Educational trip memory"
+              />
+
+              <div className="abtrip-gallery-overlay">
+                <FaCamera />
+                <span>Explore & Discover</span>
+              </div>
 
             </div>
 
 
-            <div className="abtrip-benefitGrid">
+            <div className="abtrip-gallery-item">
 
-              <div className="abtrip-benefitCard">
+              <img
+                src={gallery2}
+                alt="Students educational trip"
+              />
 
-                <div className="abtrip-benefitTop">
-                  <span>01</span>
-                  <FaBookOpen />
-                </div>
-
-                <strong>
-                  Real-World Learning
-                </strong>
-
-                <p>
-                  Students connect academic concepts with
-                  real-world experiences.
-                </p>
-
+              <div className="abtrip-gallery-overlay">
+                <FaCamera />
+                <span>Learn Together</span>
               </div>
 
+            </div>
 
-              <div className="abtrip-benefitCard">
 
-                <div className="abtrip-benefitTop">
-                  <span>02</span>
-                  <FaLightbulb />
-                </div>
+            <div className="abtrip-gallery-item">
 
-                <strong>
-                  Curiosity
-                </strong>
+              <img
+                src={gallery3}
+                alt="Students nature visit"
+              />
 
-                <p>
-                  New environments encourage students to ask
-                  questions and discover new ideas.
-                </p>
-
+              <div className="abtrip-gallery-overlay">
+                <FaCamera />
+                <span>New Experiences</span>
               </div>
 
+            </div>
 
-              <div className="abtrip-benefitCard">
 
-                <div className="abtrip-benefitTop">
-                  <span>03</span>
-                  <FaUsers />
-                </div>
+            <div className="abtrip-gallery-item">
 
-                <strong>
-                  Teamwork
-                </strong>
+              <img
+                src={gallery4}
+                alt="School heritage trip"
+              />
 
-                <p>
-                  Group activities teach cooperation,
-                  communication and responsibility.
-                </p>
-
+              <div className="abtrip-gallery-overlay">
+                <FaCamera />
+                <span>Discover History</span>
               </div>
 
+            </div>
 
-              <div className="abtrip-benefitCard">
 
-                <div className="abtrip-benefitTop">
-                  <span>04</span>
-                  <FaGraduationCap />
-                </div>
+            <div className="abtrip-gallery-item">
 
-                <strong>
-                  Memories
-                </strong>
+              <img
+                src={gallery5}
+                alt="Educational school visit"
+              />
 
-                <p>
-                  Educational experiences create meaningful
-                  memories that students carry with them.
-                </p>
-
+              <div className="abtrip-gallery-overlay">
+                <FaCamera />
+                <span>Explore More</span>
               </div>
+
+            </div>
+
+
+        
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
+
+      <section className="abtrip-cta">
+
+        <img
+          src={ctaImage}
+          alt="Students exploring mountains during educational trip"
+          className="abtrip-cta-bg"
+        />
+
+        <div className="abtrip-cta-overlay" />
+
+
+        <div className="abtrip-container abtrip-cta-inner">
+
+          <div className="abtrip-cta-content">
+
+            <span className="abtrip-label">
+              LEARNING HAS NO BOUNDARIES
+            </span>
+
+            <h2>
+              Let Their Curiosity
+              <span>Lead The Way.</span>
+            </h2>
+
+            <p>
+              Give your child opportunities to discover,
+              experience and learn beyond the classroom.
+            </p>
+
+
+            <div className="abtrip-cta-actions">
+
+              <button
+                className="abtrip-btn abtrip-btn-gold"
+                onClick={() => navigate("/apply")}
+              >
+                Apply For Admission
+                <FaArrowRight />
+              </button>
+
+
+              <button
+                className="abtrip-btn abtrip-btn-white"
+                onClick={() => navigate("/contact")}
+              >
+                Contact School
+              </button>
 
             </div>
 
           </div>
 
-        </section>
+        </div>
 
+      </section>
 
-        {/* =================================================
-            STATS
-        ================================================= */}
-
-        <section className="abtrip-statsSection">
-
-          <div className="abtrip-stat">
-            <strong>6+</strong>
-            <span>Learning Experiences</span>
-          </div>
-
-          <div className="abtrip-stat">
-            <strong>15+</strong>
-            <span>Annual Trips</span>
-          </div>
-
-          <div className="abtrip-stat">
-            <strong>100+</strong>
-            <span>Student Participants</span>
-          </div>
-
-          <div className="abtrip-stat">
-            <strong>10+</strong>
-            <span>Learning Destinations</span>
-          </div>
-
-        </section>
-
-
-        {/* =================================================
-            QUOTE
-        ================================================= */}
-
-        <section className="abtrip-quote">
-
-          <div className="abtrip-quoteIcon">
-            <FaCompass />
-          </div>
-
-          <div className="abtrip-quoteMark">
-            “
-          </div>
-
-          <blockquote>
-            The best lessons are sometimes found
-            outside the classroom.
-          </blockquote>
-
-          <div className="abtrip-quoteLine"></div>
-
-          <span>
-            — AB PUBLIC SCHOOL
-          </span>
-
-        </section>
-
-      </main>
-
-      
-
-    </div>
-    <Footer />
-    </>
+    </main>
   );
 };
 

@@ -1,0 +1,2970 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   TEACHER DASHBOARD
+   PREMIUM LIGHT THEME
+
+   White + Mint + Sky + Cream + Soft Gold + Teal
+   ========================================================= */
+
+:root {
+  --td-white: #ffffff;
+
+  --td-page: #f7faf9;
+  --td-page-2: #fbfcfa;
+
+  --td-mint: #e7f6f0;
+  --td-mint-soft: #f2faf7;
+  --td-mint-medium: #d8eee7;
+
+  --td-sky: #eaf6fb;
+  --td-sky-soft: #f4fbfe;
+  --td-sky-medium: #d8edf5;
+
+  --td-cream: #fff9ed;
+  --td-cream-2: #fff4dd;
+
+  --td-gold: #c89b4d;
+  --td-gold-dark: #a8782d;
+
+  --td-teal: #267d77;
+  --td-teal-dark: #1d6863;
+  --td-teal-soft: #4ba59b;
+
+  --td-heading: #183b3d;
+  --td-text: #385456;
+  --td-muted: #788c8d;
+
+  --td-border: #deebe7;
+  --td-border-2: #e8efec;
+
+  --td-red: #e45766;
+  --td-red-soft: #fff0f2;
+
+  --td-shadow:
+    0 10px 30px rgba(35, 80, 76, 0.06);
+
+  --td-shadow-md:
+    0 15px 38px rgba(35, 80, 76, 0.08);
+
+  --td-shadow-lg:
+    0 22px 55px rgba(35, 80, 76, 0.1);
+
+  --td-sidebar: 292px;
+}
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+.teacherDashLight-page,
+.teacherDashLight-page *,
+.teacherDashLight-page *::before,
+.teacherDashLight-page *::after {
+  box-sizing: border-box;
+}
+
+.teacherDashLight-page {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background:
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(218, 241, 234, 0.55),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fbfa 0%,
+      #f5faf8 48%,
+      #fffaf1 100%
+    );
+
+  color: var(--td-text);
+
+  font-family:
+    Inter,
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  display: flex;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.teacherDashLight-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 1000;
+
+  width: var(--td-sidebar);
+  height: 100vh;
+
+  padding: 22px 17px 18px;
+
+  border-right: 1px solid var(--td-border);
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7fbf9 56%,
+      #f2f9f6 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-shadow:
+    10px 0 35px rgba(31, 78, 74, 0.045);
+
+  scrollbar-width: thin;
+  scrollbar-color: #d6e6e1 transparent;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.teacherDashLight-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.teacherDashLight-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.teacherDashLight-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background: #d6e6e1;
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.teacherDashLight-brand {
+  position: relative;
+
+  min-height: 60px;
+
+  padding-bottom: 17px;
+
+  border-bottom: 1px solid var(--td-border);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.teacherDashLight-brandIcon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  border: 1px solid #d4ebe4;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ed,
+      #effaf6
+    );
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 8px 18px rgba(38, 125, 119, 0.1);
+}
+
+.teacherDashLight-brandText {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.teacherDashLight-brandText strong {
+  color: var(--td-heading);
+
+  font-size: 17px;
+  font-weight: 900;
+
+  line-height: 1.1;
+
+  letter-spacing: -0.2px;
+}
+
+.teacherDashLight-brandText span {
+  color: var(--td-teal);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.25px;
+}
+
+/* =========================================================
+   MOBILE CLOSE
+   ========================================================= */
+
+.teacherDashLight-close {
+  display: none;
+
+  width: 38px;
+  height: 38px;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  border: 1px solid var(--td-border);
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: var(--td-heading);
+
+  cursor: pointer;
+
+  place-items: center;
+
+  font-size: 16px;
+}
+
+/* =========================================================
+   MINI PROFILE
+   ========================================================= */
+
+.teacherDashLight-miniProfile {
+  margin: 18px 0 16px;
+
+  padding: 13px;
+
+  border: 1px solid #dcebe6;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f0faf6,
+      #fffaf0
+    );
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  box-shadow:
+    0 8px 22px rgba(31, 78, 74, 0.045);
+}
+
+.teacherDashLight-avatar {
+  width: 45px;
+  height: 45px;
+
+  flex: 0 0 45px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #62b7aa,
+      #2c837c
+    );
+
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+  font-weight: 900;
+
+  box-shadow:
+    0 8px 18px rgba(38, 125, 119, 0.16);
+}
+
+.teacherDashLight-miniProfile > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherDashLight-miniProfile strong {
+  overflow: hidden;
+
+  color: var(--td-heading);
+
+  font-size: 13px;
+  font-weight: 850;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.teacherDashLight-miniProfile span {
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: var(--td-teal);
+
+  font-size: 10px;
+  font-weight: 750;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.teacherDashLight-miniProfile small {
+  margin-top: 2px;
+
+  color: var(--td-muted);
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   MENU TITLE
+   ========================================================= */
+
+.teacherDashLight-menuTitle {
+  margin:
+    4px 8px 9px;
+
+  color: #92a3a2;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.35px;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.teacherDashLight-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.teacherDashLight-navButton {
+  position: relative;
+
+  width: 100%;
+  min-height: 45px;
+
+  padding: 0 12px;
+
+  border: 1px solid transparent;
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #647b7b;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+  font-weight: 750;
+
+  text-align: left;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.teacherDashLight-navButton > svg {
+  width: 17px;
+
+  flex: 0 0 17px;
+
+  font-size: 16px;
+
+  color: #82a09d;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.teacherDashLight-navButton > span {
+  min-width: 0;
+  flex: 1;
+}
+
+.teacherDashLight-navButton:hover {
+  border-color: #e1eee9;
+
+  background: #f1f9f6;
+
+  color: var(--td-teal);
+
+  transform: translateX(2px);
+}
+
+.teacherDashLight-navButton:hover > svg {
+  color: var(--td-teal);
+
+  transform: scale(1.05);
+}
+
+/* ACTIVE MENU */
+
+.teacherDashLight-navButton.active {
+  border-color: #d1e9e2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #def3ec,
+      #eef9f5
+    );
+
+  color: var(--td-teal-dark);
+
+  box-shadow:
+    0 6px 16px rgba(38, 125, 119, 0.07);
+}
+
+.teacherDashLight-navButton.active::before {
+  position: absolute;
+
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+
+  width: 3px;
+
+  border-radius: 0 10px 10px 0;
+
+  background: var(--td-teal);
+
+  content: "";
+}
+
+.teacherDashLight-navButton.active > svg {
+  color: var(--td-teal);
+}
+
+/* =========================================================
+   MENU NOTIFICATION
+   ========================================================= */
+
+.teacherDashLight-messageCount {
+  min-width: 22px;
+  height: 22px;
+
+  padding: 0 6px;
+
+  border-radius: 20px;
+
+  background: var(--td-red);
+
+  color: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  font-style: normal;
+
+  box-shadow:
+    0 5px 12px rgba(228, 87, 102, 0.2);
+}
+
+.teacherDashLight-notificationDot {
+  width: 8px;
+  height: 8px;
+
+  flex: 0 0 8px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: var(--td-red);
+
+  box-shadow:
+    0 0 0 2px rgba(228, 87, 102, 0.1);
+}
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.teacherDashLight-sidebarBottom {
+  margin-top: auto;
+
+  padding-top: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.teacherDashLight-accessBox {
+  padding: 11px;
+
+  border: 1px solid #e5e7d7;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff9e9,
+      #fffdf7
+    );
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.teacherDashLight-accessBox > svg {
+  width: 33px;
+  height: 33px;
+
+  padding: 8px;
+
+  border-radius: 10px;
+
+  background: #fff0c9;
+
+  color: var(--td-gold-dark);
+}
+
+.teacherDashLight-accessBox > div {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherDashLight-accessBox strong {
+  color: #5b4b31;
+
+  font-size: 10px;
+  font-weight: 850;
+}
+
+.teacherDashLight-accessBox span {
+  margin-top: 2px;
+
+  color: #99886d;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.teacherDashLight-logout {
+  width: 100%;
+  min-height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid #f3dce0;
+  border-radius: 12px;
+
+  background: #fff8f9;
+
+  color: #c84f5d;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 850;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.teacherDashLight-logout:hover {
+  border-color: #efcbd0;
+
+  background: #fff0f2;
+
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.teacherDashLight-main {
+  width:
+    calc(100% - var(--td-sidebar));
+
+  min-width: 0;
+  min-height: 100vh;
+
+  margin-left: var(--td-sidebar);
+}
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.teacherDashLight-topbar {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 500;
+
+  width: 100%;
+  min-height: 76px;
+
+  padding: 0 28px;
+
+  border-bottom: 1px solid var(--td-border-2);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-shadow:
+    0 5px 22px rgba(31, 78, 74, 0.035);
+}
+
+.teacherDashLight-topbarLeft {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.teacherDashLight-topbarLeft > div:last-child {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherDashLight-topbarLeft span {
+  color: var(--td-teal);
+
+  font-size: 9px;
+  font-weight: 850;
+
+  letter-spacing: 0.8px;
+}
+
+.teacherDashLight-topbarLeft h2 {
+  margin: 2px 0 0;
+
+  overflow: hidden;
+
+  color: var(--td-heading);
+
+  font-size: 20px;
+  font-weight: 900;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.45px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.teacherDashLight-menuButton {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+
+  border: 1px solid var(--td-border);
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: var(--td-teal);
+
+  cursor: pointer;
+
+  place-items: center;
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   TOP RIGHT
+   ========================================================= */
+
+.teacherDashLight-topbarRight {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+/* =========================================================
+   BELL
+   ========================================================= */
+
+.teacherDashLight-bell {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  padding: 0;
+
+  border: 1px solid var(--td-border);
+  border-radius: 13px;
+
+  background: #f8fbfa;
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.teacherDashLight-bell:hover {
+  background: var(--td-mint-soft);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--td-shadow);
+}
+
+.teacherDashLight-bellCount {
+  position: absolute;
+
+  top: -6px;
+  right: -6px;
+
+  min-width: 20px;
+  height: 20px;
+
+  padding: 0 5px;
+
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+
+  background: var(--td-red);
+
+  color: #ffffff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8px;
+  font-weight: 900;
+
+  box-shadow:
+    0 5px 12px rgba(228, 87, 102, 0.2);
+}
+
+/* =========================================================
+   TOP USER
+   ========================================================= */
+
+.teacherDashLight-topUser {
+  min-width: 170px;
+
+  padding: 6px 10px 6px 6px;
+
+  border: 1px solid var(--td-border);
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.teacherDashLight-topUser > div {
+  width: 35px;
+  height: 35px;
+
+  flex: 0 0 35px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff4ed,
+      #f1faf7
+    );
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.teacherDashLight-topUser > span {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherDashLight-topUser strong {
+  overflow: hidden;
+
+  color: var(--td-heading);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.teacherDashLight-topUser small {
+  margin-top: 1px;
+
+  color: var(--td-muted);
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.teacherDashLight-content {
+  width: 100%;
+
+  padding: 27px;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   OVERVIEW
+   ========================================================= */
+
+.teacherPortal-home {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.teacherPortal-hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 210px;
+
+  padding: 35px 38px;
+
+  overflow: hidden;
+
+  border: 1px solid #d8eae4;
+  border-radius: 27px;
+
+  background:
+    radial-gradient(
+      circle at 86% 20%,
+      rgba(255, 255, 255, 0.95),
+      transparent 21%
+    ),
+    linear-gradient(
+      135deg,
+      #e4f5ef 0%,
+      #f3faf7 53%,
+      #fff5df 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  box-shadow: var(--td-shadow-md);
+}
+
+.teacherPortal-hero::before {
+  position: absolute;
+
+  top: -80px;
+  right: 90px;
+
+  width: 190px;
+  height: 190px;
+
+  border: 1px solid
+    rgba(38, 125, 119, 0.09);
+
+  border-radius: 50%;
+
+  content: "";
+}
+
+.teacherPortal-hero::after {
+  position: absolute;
+
+  right: -60px;
+  bottom: -100px;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 224, 159, 0.2);
+
+  content: "";
+}
+
+.teacherPortal-hero > div:first-child {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 720px;
+}
+
+.teacherPortal-hero > div:first-child > span {
+  display: inline-flex;
+
+  margin-bottom: 10px;
+
+  padding: 6px 10px;
+
+  border: 1px solid #cae6de;
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  color: var(--td-teal);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.35px;
+}
+
+.teacherPortal-hero h1 {
+  margin: 0;
+
+  color: var(--td-heading);
+
+  font-size:
+    clamp(29px, 3vw, 43px);
+
+  font-weight: 850;
+
+  line-height: 1.1;
+
+  letter-spacing: -1.3px;
+}
+
+.teacherPortal-hero h1 strong {
+  color: var(--td-teal);
+
+  font-weight: 900;
+}
+
+.teacherPortal-hero p {
+  max-width: 650px;
+
+  margin: 12px 0 0;
+
+  color: #637c7c;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+/* HERO ICON */
+
+.teacherPortal-heroIcon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 110px;
+  height: 110px;
+
+  flex: 0 0 110px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.9);
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.88),
+      rgba(238, 249, 245, 0.9)
+    );
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 46px;
+
+  box-shadow:
+    0 18px 38px rgba(38, 125, 119, 0.11);
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.teacherPortal-stats {
+  width: 100%;
+
+  margin-top: 19px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+.teacherPortal-stat {
+  position: relative;
+
+  min-width: 0;
+  min-height: 108px;
+
+  padding: 16px;
+
+  border: 1px solid var(--td-border);
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  color: var(--td-heading);
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  text-align: left;
+
+  box-shadow: var(--td-shadow);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.teacherPortal-stat:hover {
+  border-color: #cde3dd;
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--td-shadow-md);
+}
+
+.teacherPortal-stat > div {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 19px;
+}
+
+/* STAT 1 */
+
+.teacherPortal-stat:nth-child(1) > div {
+  background: #e3f5ef;
+
+  color: #267d77;
+}
+
+/* STAT 2 */
+
+.teacherPortal-stat:nth-child(2) > div {
+  background: #e8f5fb;
+
+  color: #397e9f;
+}
+
+/* STAT 3 */
+
+.teacherPortal-stat:nth-child(3) > div {
+  background: #fff3dc;
+
+  color: #ad792e;
+}
+
+/* STAT 4 */
+
+.teacherPortal-stat:nth-child(4) > div {
+  background: #f8ebf0;
+
+  color: #a05c77;
+}
+
+.teacherPortal-stat > section {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherPortal-stat > section strong {
+  color: var(--td-heading);
+
+  font-size: 25px;
+  font-weight: 900;
+
+  line-height: 1;
+}
+
+.teacherPortal-stat > section span {
+  margin-top: 6px;
+
+  color: var(--td-muted);
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+.teacherPortal-stat.has-alert {
+  border-color: #f0d6da;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #fff9fa
+    );
+}
+
+.teacherPortal-statAlert {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--td-red);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(228, 87, 102, 0.09);
+}
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.teacherPortal-sectionHeading {
+  margin-top: 34px;
+}
+
+.teacherPortal-sectionHeading > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--td-teal);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+.teacherPortal-sectionHeading h2 {
+  margin: 0;
+
+  color: var(--td-heading);
+
+  font-size:
+    clamp(23px, 2.3vw, 31px);
+
+  font-weight: 900;
+
+  line-height: 1.15;
+
+  letter-spacing: -0.7px;
+}
+
+.teacherPortal-sectionHeading p {
+  margin: 7px 0 0;
+
+  color: var(--td-muted);
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   QUICK ACCESS
+   ========================================================= */
+
+.teacherPortal-accessGrid {
+  width: 100%;
+
+  margin-top: 17px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.teacherPortal-accessGrid > button {
+  position: relative;
+
+  min-width: 0;
+  min-height: 108px;
+
+  padding: 15px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--td-border);
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  color: var(--td-heading);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  text-align: left;
+
+  box-shadow:
+    0 7px 22px rgba(31, 78, 74, 0.045);
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.teacherPortal-accessGrid > button:hover {
+  border-color: #cfe5df;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f4faf8
+    );
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--td-shadow-md);
+}
+
+/* ICON */
+
+.teacherPortal-accessGrid > button > div {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  border-radius: 13px;
+
+  background: #e7f6f1;
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+}
+
+/* DIFFERENT SOFT COLORS */
+
+.teacherPortal-accessGrid
+  > button:nth-child(2)
+  > div {
+  background: #eaf6fb;
+  color: #397f9e;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(3)
+  > div {
+  background: #fff3dd;
+  color: #ac782f;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(4)
+  > div {
+  background: #f4edf8;
+  color: #84669b;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(5)
+  > div {
+  background: #fff0e8;
+  color: #ba7253;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(6)
+  > div {
+  background: #eaf5ef;
+  color: #478368;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(7)
+  > div {
+  background: #edf2fb;
+  color: #647ea7;
+}
+
+.teacherPortal-accessGrid
+  > button:nth-child(8)
+  > div {
+  background: #f9edf1;
+  color: #9e6276;
+}
+
+/* TEXT */
+
+.teacherPortal-accessGrid > button > section {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > section
+  > strong {
+  color: var(--td-heading);
+
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > section
+  > span {
+  margin-top: 4px;
+
+  overflow: hidden;
+
+  color: var(--td-muted);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > svg {
+  flex: 0 0 auto;
+
+  color: #a5b6b4;
+
+  font-size: 11px;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.teacherPortal-accessGrid
+  > button:hover
+  > svg {
+  color: var(--td-teal);
+
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   MOBILE OVERLAY
+   ========================================================= */
+
+.teacherDashLight-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 900;
+
+  padding: 0;
+
+  border: 0;
+
+  background:
+    rgba(23, 54, 55, 0.28);
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   COMMON TEACHER READ PAGES
+
+   Attendance / Assignments / Results / Fees /
+   Notices / News / Events
+   ========================================================= */
+
+.teacherRead-page {
+  width: 100%;
+}
+
+/* =========================================================
+   READ PAGE HERO
+   ========================================================= */
+
+.teacherRead-hero {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 150px;
+
+  padding: 27px 30px;
+
+  overflow: hidden;
+
+  border: 1px solid #d8eae4;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e7f6f1 0%,
+      #f6fbf9 58%,
+      #fff7e7 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  box-shadow: var(--td-shadow);
+}
+
+.teacherRead-hero::after {
+  position: absolute;
+
+  right: -45px;
+  bottom: -70px;
+
+  width: 170px;
+  height: 170px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 220, 147, 0.17);
+
+  content: "";
+}
+
+.teacherRead-heroContent {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 0;
+
+  flex: 1;
+}
+
+.teacherRead-eyebrow {
+  display: inline-flex;
+
+  margin-bottom: 7px;
+
+  color: var(--td-teal);
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.3px;
+}
+
+.teacherRead-hero h1 {
+  margin: 0;
+
+  color: var(--td-heading);
+
+  font-size:
+    clamp(26px, 3vw, 37px);
+
+  font-weight: 900;
+
+  line-height: 1.12;
+
+  letter-spacing: -0.8px;
+}
+
+.teacherRead-hero p {
+  max-width: 650px;
+
+  margin: 8px 0 0;
+
+  color: var(--td-muted);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+.teacherRead-heroIcon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 75px;
+  height: 75px;
+
+  flex: 0 0 75px;
+
+  border: 1px solid #d8ebe5;
+  border-radius: 21px;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 29px;
+
+  box-shadow:
+    0 12px 28px rgba(38, 125, 119, 0.09);
+}
+
+/* =========================================================
+   TABLE BOX
+   ========================================================= */
+
+.teacherRead-tableBox {
+  width: 100%;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--td-border);
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow: var(--td-shadow);
+}
+
+.teacherRead-tableScroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.teacherRead-table {
+  width: 100%;
+
+  min-width: 680px;
+
+  border-collapse: collapse;
+}
+
+.teacherRead-table th {
+  padding: 14px 17px;
+
+  border-bottom: 1px solid var(--td-border);
+
+  background: #f2f9f6;
+
+  color: #55716f;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 0.6px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+}
+
+.teacherRead-table td {
+  padding: 15px 17px;
+
+  border-bottom: 1px solid #edf2f0;
+
+  color: #59706f;
+
+  font-size: 11px;
+  font-weight: 550;
+
+  vertical-align: middle;
+}
+
+.teacherRead-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.teacherRead-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.teacherRead-table tbody tr:hover {
+  background: #f8fcfa;
+}
+
+.teacherRead-table td strong {
+  color: var(--td-heading);
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.teacherRead-status,
+.teacherRead-grade,
+.teacherRead-cardStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 26px;
+
+  padding: 0 9px;
+
+  border-radius: 30px;
+
+  background: #edf7f3;
+
+  color: var(--td-teal);
+
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.teacherRead-status.present,
+.teacherRead-status.paid,
+.teacherRead-status.active {
+  background: #e4f6ee;
+
+  color: #25815f;
+}
+
+.teacherRead-status.absent,
+.teacherRead-status.overdue {
+  background: #fff0f2;
+
+  color: #d65261;
+}
+
+.teacherRead-status.late,
+.teacherRead-status.pending {
+  background: #fff4df;
+
+  color: #b27b2f;
+}
+
+.teacherRead-grade {
+  min-width: 38px;
+
+  background: #eaf6fb;
+
+  color: #397d9b;
+}
+
+.teacherRead-marks {
+  color: var(--td-heading);
+
+  font-weight: 800;
+}
+
+.teacherRead-marks small {
+  color: var(--td-muted);
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.teacherRead-cardGrid {
+  width: 100%;
+
+  margin-top: 18px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.teacherRead-card {
+  min-width: 0;
+
+  padding: 18px;
+
+  border: 1px solid var(--td-border);
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(31, 78, 74, 0.05);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.teacherRead-card:hover {
+  border-color: #cde3dc;
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--td-shadow-md);
+}
+
+.teacherRead-cardTop {
+  margin-bottom: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.teacherRead-cardTop > div,
+.teacherRead-cardIcon {
+  width: 40px;
+  height: 40px;
+
+  flex: 0 0 40px;
+
+  border-radius: 12px;
+
+  background: #e5f5ef;
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 15px;
+}
+
+.teacherRead-cardTop > span {
+  padding: 5px 9px;
+
+  border-radius: 30px;
+
+  background: #f1f8f5;
+
+  color: var(--td-teal);
+
+  font-size: 8px;
+  font-weight: 850;
+}
+
+.teacherRead-card > small,
+.teacherRead-cardLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--td-teal);
+
+  font-size: 8px;
+  font-weight: 850;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+.teacherRead-card h3 {
+  margin: 0;
+
+  color: var(--td-heading);
+
+  font-size: 16px;
+  font-weight: 850;
+
+  line-height: 1.3;
+}
+
+.teacherRead-card p {
+  margin: 8px 0 0;
+
+  color: var(--td-muted);
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+.teacherRead-meta {
+  margin-top: 16px;
+  padding-top: 12px;
+
+  border-top: 1px solid #edf2f0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 15px;
+}
+
+.teacherRead-meta span {
+  color: #718886;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 9px;
+  font-weight: 650;
+}
+
+.teacherRead-meta svg {
+  color: var(--td-teal);
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.teacherRead-empty {
+  width: 100%;
+
+  min-height: 320px;
+
+  margin-top: 18px;
+
+  padding: 35px 20px;
+
+  border: 1px dashed #cfe4dd;
+  border-radius: 21px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fbf8,
+      #fffaf1
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.teacherRead-emptyIcon {
+  width: 67px;
+  height: 67px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #d7ebe4;
+  border-radius: 20px;
+
+  background: #e6f6f0;
+
+  color: var(--td-teal);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 10px 25px rgba(38, 125, 119, 0.08);
+}
+
+.teacherRead-empty h3 {
+  margin: 0;
+
+  color: var(--td-heading);
+
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.teacherRead-empty p {
+  max-width: 470px;
+
+  margin: 7px 0 0;
+
+  color: var(--td-muted);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1180px) {
+  :root {
+    --td-sidebar: 265px;
+  }
+
+  .teacherPortal-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .teacherPortal-accessGrid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .teacherRead-cardGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET / MOBILE SIDEBAR
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .teacherDashLight-sidebar {
+    width: 285px;
+
+    transform:
+      translateX(-105%);
+
+    box-shadow:
+      15px 0 45px
+      rgba(26, 65, 63, 0.13);
+  }
+
+  .teacherDashLight-sidebar.open {
+    transform:
+      translateX(0);
+  }
+
+  .teacherDashLight-close {
+    display: grid;
+  }
+
+  .teacherDashLight-main {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+  .teacherDashLight-menuButton {
+    display: grid;
+  }
+
+  .teacherDashLight-topbar {
+    min-height: 70px;
+
+    padding:
+      0 18px;
+  }
+
+  .teacherDashLight-content {
+    padding: 20px;
+  }
+
+  .teacherPortal-hero {
+    padding: 29px;
+
+    min-height: 190px;
+  }
+
+  .teacherPortal-heroIcon {
+    width: 90px;
+    height: 90px;
+
+    flex-basis: 90px;
+
+    border-radius: 25px;
+
+    font-size: 37px;
+  }
+
+  .teacherPortal-accessGrid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .teacherDashLight-topbar {
+    padding:
+      0 12px;
+  }
+
+  .teacherDashLight-topbarLeft {
+    gap: 9px;
+  }
+
+  .teacherDashLight-topbarLeft span {
+    font-size: 7px;
+  }
+
+  .teacherDashLight-topbarLeft h2 {
+    font-size: 16px;
+  }
+
+  .teacherDashLight-topUser {
+    min-width: 0;
+
+    padding: 4px;
+  }
+
+  .teacherDashLight-topUser > span {
+    display: none;
+  }
+
+  .teacherDashLight-topUser > div {
+    width: 34px;
+    height: 34px;
+
+    flex-basis: 34px;
+  }
+
+  .teacherDashLight-bell {
+    width: 38px;
+    height: 38px;
+
+    flex-basis: 38px;
+  }
+
+  .teacherDashLight-content {
+    padding: 14px;
+  }
+
+  /* HERO */
+
+  .teacherPortal-hero {
+    min-height: auto;
+
+    padding: 24px 20px;
+
+    border-radius: 21px;
+  }
+
+  .teacherPortal-hero h1 {
+    font-size: 28px;
+  }
+
+  .teacherPortal-hero p {
+    font-size: 11px;
+  }
+
+  .teacherPortal-heroIcon {
+    display: none;
+  }
+
+  /* STATS */
+
+  .teacherPortal-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 9px;
+  }
+
+  .teacherPortal-stat {
+    min-height: 92px;
+
+    padding: 12px;
+
+    border-radius: 16px;
+
+    gap: 9px;
+  }
+
+  .teacherPortal-stat > div {
+    width: 40px;
+    height: 40px;
+
+    flex-basis: 40px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+  }
+
+  .teacherPortal-stat
+    > section
+    strong {
+    font-size: 21px;
+  }
+
+  .teacherPortal-stat
+    > section
+    span {
+    font-size: 8px;
+  }
+
+  /* HEADING */
+
+  .teacherPortal-sectionHeading {
+    margin-top: 27px;
+  }
+
+  .teacherPortal-sectionHeading h2 {
+    font-size: 23px;
+  }
+
+  /* ACCESS */
+
+  .teacherPortal-accessGrid {
+    gap: 9px;
+  }
+
+  .teacherPortal-accessGrid
+    > button {
+    min-height: 95px;
+
+    padding: 12px;
+
+    border-radius: 16px;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > div {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+
+    font-size: 15px;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > strong {
+    font-size: 10px;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > span {
+    font-size: 8px;
+  }
+
+  /* READ HERO */
+
+  .teacherRead-hero {
+    min-height: 135px;
+
+    padding: 22px 19px;
+
+    border-radius: 19px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 27px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 10px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 60px;
+    height: 60px;
+
+    flex-basis: 60px;
+
+    border-radius: 17px;
+
+    font-size: 23px;
+  }
+
+  /* CARDS */
+
+  .teacherRead-cardGrid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .teacherRead-card {
+    padding: 15px;
+
+    border-radius: 17px;
+  }
+
+  /* EMPTY */
+
+  .teacherRead-empty {
+    min-height: 270px;
+
+    padding: 30px 15px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+  .teacherDashLight-sidebar {
+    width: 88%;
+    max-width: 290px;
+  }
+
+  .teacherDashLight-content {
+    padding: 11px;
+  }
+
+  .teacherPortal-hero {
+    padding: 21px 17px;
+
+    border-radius: 18px;
+  }
+
+  .teacherPortal-hero h1 {
+    font-size: 25px;
+  }
+
+  .teacherPortal-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teacherPortal-stat {
+    min-height: 88px;
+
+    padding: 10px;
+  }
+
+  .teacherPortal-stat > div {
+    width: 36px;
+    height: 36px;
+
+    flex-basis: 36px;
+  }
+
+  .teacherPortal-accessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherPortal-accessGrid
+    > button {
+    min-height: 80px;
+  }
+
+  .teacherRead-hero {
+    padding: 19px 16px;
+  }
+
+  .teacherRead-heroIcon {
+    display: none;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================
+   TEACHER DASHBOARD
+   LARGE FONT + HIDE SCROLLBARS
+   FINAL OVERRIDE
+   ========================================================= */
+
+
+/* =========================================================
+   HIDE ALL VISIBLE SCROLLBARS
+   SCROLLING WILL STILL WORK
+   ========================================================= */
+
+.teacherDashLight-page,
+.teacherDashLight-sidebar,
+.teacherDashLight-main,
+.teacherDashLight-content,
+.teacherDashLight-nav,
+.teacherRead-tableBox,
+.teacherRead-tableScroll {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.teacherDashLight-page::-webkit-scrollbar,
+.teacherDashLight-sidebar::-webkit-scrollbar,
+.teacherDashLight-main::-webkit-scrollbar,
+.teacherDashLight-content::-webkit-scrollbar,
+.teacherDashLight-nav::-webkit-scrollbar,
+.teacherRead-tableBox::-webkit-scrollbar,
+.teacherRead-tableScroll::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+
+/* sidebar scroll hoga but bar nahi dikhega */
+.teacherDashLight-sidebar {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+   ========================================================= */
+
+.teacherDashLight-brandText strong {
+  font-size: 20px !important;
+  font-weight: 900 !important;
+}
+
+.teacherDashLight-brandText span {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.2px !important;
+}
+
+.teacherDashLight-brandIcon {
+  font-size: 23px !important;
+}
+
+
+/* =========================================================
+   SIDEBAR PROFILE
+   ========================================================= */
+
+.teacherDashLight-miniProfile strong {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.teacherDashLight-miniProfile span {
+  font-size: 12px !important;
+  font-weight: 750 !important;
+}
+
+.teacherDashLight-miniProfile small {
+  font-size: 11px !important;
+  font-weight: 650 !important;
+}
+
+.teacherDashLight-avatar {
+  font-size: 19px !important;
+}
+
+
+/* =========================================================
+   MENU TITLE
+   ========================================================= */
+
+.teacherDashLight-menuTitle {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.3px !important;
+}
+
+
+/* =========================================================
+   SIDEBAR NAVIGATION
+   ========================================================= */
+
+.teacherDashLight-navButton {
+  min-height: 49px !important;
+
+  padding: 0 13px !important;
+
+  font-size: 14px !important;
+  font-weight: 800 !important;
+
+  gap: 12px !important;
+}
+
+.teacherDashLight-navButton > svg {
+  width: 18px !important;
+  flex: 0 0 18px !important;
+
+  font-size: 18px !important;
+}
+
+.teacherDashLight-messageCount {
+  min-width: 24px !important;
+  height: 24px !important;
+
+  font-size: 11px !important;
+}
+
+
+/* =========================================================
+   ACCESS BOX
+   ========================================================= */
+
+.teacherDashLight-accessBox strong {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.teacherDashLight-accessBox span {
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.teacherDashLight-logout {
+  min-height: 46px !important;
+
+  font-size: 14px !important;
+  font-weight: 850 !important;
+}
+
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.teacherDashLight-topbarLeft span {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+}
+
+.teacherDashLight-topbarLeft h2 {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+}
+
+
+/* =========================================================
+   TOP USER
+   ========================================================= */
+
+.teacherDashLight-topUser strong {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.teacherDashLight-topUser small {
+  font-size: 11px !important;
+}
+
+.teacherDashLight-topUser > div {
+  font-size: 15px !important;
+}
+
+
+/* =========================================================
+   NOTIFICATION BELL
+   ========================================================= */
+
+.teacherDashLight-bell {
+  font-size: 18px !important;
+}
+
+.teacherDashLight-bellCount {
+  min-width: 22px !important;
+  height: 22px !important;
+
+  font-size: 10px !important;
+}
+
+
+/* =========================================================
+   DASHBOARD HERO
+   ========================================================= */
+
+.teacherPortal-hero > div:first-child > span {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.3px !important;
+}
+
+.teacherPortal-hero h1 {
+  font-size: clamp(44px, 4.5vw, 56px) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+}
+
+.teacherPortal-hero p {
+  max-width: 720px !important;
+
+  font-size: 18px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   DASHBOARD STATS
+   ========================================================= */
+
+.teacherPortal-stat > section strong {
+  font-size: 31px !important;
+  font-weight: 900 !important;
+}
+
+.teacherPortal-stat > section span {
+  margin-top: 7px !important;
+
+  font-size: 14px !important;
+  font-weight: 750 !important;
+}
+
+.teacherPortal-stat > div {
+  width: 54px !important;
+  height: 54px !important;
+
+  flex: 0 0 54px !important;
+
+  font-size: 21px !important;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.teacherPortal-sectionHeading > span {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.3px !important;
+}
+
+.teacherPortal-sectionHeading h2 {
+  font-size: clamp(30px, 3vw, 38px) !important;
+  font-weight: 900 !important;
+}
+
+.teacherPortal-sectionHeading p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   QUICK ACCESS CARDS
+   ========================================================= */
+
+.teacherPortal-accessGrid > button {
+  min-height: 118px !important;
+  padding: 17px !important;
+}
+
+.teacherPortal-accessGrid > button > div {
+  width: 50px !important;
+  height: 50px !important;
+
+  flex: 0 0 50px !important;
+
+  font-size: 19px !important;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > section
+  > strong {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > section
+  > span {
+  margin-top: 5px !important;
+
+  font-size: 12px !important;
+  font-weight: 600 !important;
+
+  line-height: 1.45 !important;
+}
+
+.teacherPortal-accessGrid
+  > button
+  > svg {
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .teacherDashLight-brandText strong {
+    font-size: 19px !important;
+  }
+
+  .teacherDashLight-navButton {
+    font-size: 14px !important;
+  }
+
+  .teacherDashLight-topbarLeft h2 {
+    font-size: 22px !important;
+  }
+
+  .teacherPortal-hero h1 {
+    font-size: 42px !important;
+  }
+
+  .teacherPortal-hero p {
+    font-size: 17px !important;
+  }
+
+  .teacherPortal-stat > section strong {
+    font-size: 29px !important;
+  }
+
+  .teacherPortal-stat > section span {
+    font-size: 13px !important;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > strong {
+    font-size: 14px !important;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > span {
+    font-size: 12px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+  /* TOPBAR */
+
+  .teacherDashLight-topbarLeft span {
+    font-size: 10px !important;
+  }
+
+  .teacherDashLight-topbarLeft h2 {
+    font-size: 19px !important;
+  }
+
+
+  /* SIDEBAR */
+
+  .teacherDashLight-brandText strong {
+    font-size: 19px !important;
+  }
+
+  .teacherDashLight-brandText span {
+    font-size: 10px !important;
+  }
+
+  .teacherDashLight-miniProfile strong {
+    font-size: 14px !important;
+  }
+
+  .teacherDashLight-miniProfile span {
+    font-size: 12px !important;
+  }
+
+  .teacherDashLight-miniProfile small {
+    font-size: 10px !important;
+  }
+
+  .teacherDashLight-menuTitle {
+    font-size: 10px !important;
+  }
+
+  .teacherDashLight-navButton {
+    min-height: 47px !important;
+
+    font-size: 14px !important;
+  }
+
+  .teacherDashLight-logout {
+    font-size: 13px !important;
+  }
+
+
+  /* HERO */
+
+  .teacherPortal-hero > div:first-child > span {
+    font-size: 12px !important;
+  }
+
+  .teacherPortal-hero h1 {
+    font-size: 34px !important;
+  }
+
+  .teacherPortal-hero p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+
+  /* STATS */
+
+  .teacherPortal-stat > section strong {
+    font-size: 26px !important;
+  }
+
+  .teacherPortal-stat > section span {
+    font-size: 12px !important;
+  }
+
+
+  /* SECTION */
+
+  .teacherPortal-sectionHeading > span {
+    font-size: 11px !important;
+  }
+
+  .teacherPortal-sectionHeading h2 {
+    font-size: 27px !important;
+  }
+
+  .teacherPortal-sectionHeading p {
+    font-size: 14px !important;
+  }
+
+
+  /* QUICK ACCESS */
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > strong {
+    font-size: 13px !important;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > span {
+    font-size: 11px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  .teacherPortal-hero h1 {
+    font-size: 31px !important;
+  }
+
+  .teacherPortal-hero p {
+    font-size: 14px !important;
+  }
+
+  .teacherPortal-stats {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .teacherPortal-stat > section strong {
+    font-size: 24px !important;
+  }
+
+  .teacherPortal-stat > section span {
+    font-size: 11px !important;
+  }
+
+  .teacherPortal-accessGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > strong {
+    font-size: 14px !important;
+  }
+
+  .teacherPortal-accessGrid
+    > button
+    > section
+    > span {
+    font-size: 12px !important;
+  }
+}

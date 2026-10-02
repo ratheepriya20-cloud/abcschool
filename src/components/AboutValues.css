@@ -1,0 +1,471 @@
+/* =========================================================
+   ABPS VALUES — COMPACT PREMIUM DESIGN
+   ========================================================= */
+
+.abpsValuesCompact {
+  width: 100%;
+  background: #f7f5ef;
+  padding: 25px 0 80px;
+  overflow: hidden;
+}
+
+.abpsValuesCompactContainer {
+  width: min(1240px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.abpsValuesCompactHeader {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 50px;
+}
+
+.abpsValuesCompactLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  color: #0877a9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.8px;
+  margin-bottom: 17px;
+}
+
+.abpsValuesCompactLabel span {
+  width: 38px;
+  height: 2px;
+  background: #d6b36a;
+}
+
+.abpsValuesCompactHeader h2 {
+  margin: 0;
+  color: #071a35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -1.8px;
+}
+
+.abpsValuesCompactHeader h2 em {
+  color: #0877a9;
+  font-style: italic;
+}
+
+.abpsValuesCompactHeader p {
+  max-width: 920px;
+  margin: 17px auto 0;
+  color: #65717d;
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.abpsValuesCompactGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.abpsValuesCompactCard {
+  position: relative;
+  min-height: 300px;
+  padding: 27px 28px 30px;
+  background: #ffffff;
+  border: 1px solid rgba(7, 26, 53, 0.09);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+/* GOLD TOP LINE */
+
+.abpsValuesCompactCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #d6b36a;
+}
+
+
+/* CARD TOP */
+
+.abpsValuesCompactTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.abpsValuesCompactNumber {
+  color: #d6b36a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+}
+
+.abpsValuesCompactIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #071a35;
+  color: #d6b36a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+
+/* CARD CONTENT */
+
+.abpsValuesCompactSmall {
+  display: block;
+  margin-bottom: 7px;
+  color: #0877a9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.abpsValuesCompactContent h3 {
+  margin: 0;
+  color: #071a35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.abpsValuesCompactLine {
+  width: 42px;
+  height: 2px;
+  background: #d6b36a;
+  margin: 15px 0 15px;
+}
+
+.abpsValuesCompactContent p {
+  margin: 0;
+  color: #68737e;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .abpsValuesCompact {
+    padding: 10px 0;
+  }
+
+  .abpsValuesCompactContainer {
+    width: calc(100% - 20px);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .abpsValuesCompactHeader {
+    margin-bottom: 35px;
+  }
+
+  .abpsValuesCompactLabel {
+    font-size: 13px;
+    letter-spacing: 2.2px;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .abpsValuesCompactLabel span {
+    width: 32px;
+  }
+
+  .abpsValuesCompactHeader h2 {
+    font-size: 50px;
+    line-height: 1.06;
+    letter-spacing: -1.2px;
+  }
+
+  .abpsValuesCompactHeader p {
+    max-width: 680px;
+    margin-top: 15px;
+
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  .abpsValuesCompactGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .abpsValuesCompactCard {
+    min-height: auto;
+
+    padding: 22px 20px 24px;
+  }
+
+  .abpsValuesCompactTop {
+    margin-bottom: 20px;
+  }
+
+  .abpsValuesCompactNumber {
+    font-size: 22px;
+  }
+
+  .abpsValuesCompactIcon {
+    width: 55px;
+    height: 55px;
+
+    font-size: 21px;
+  }
+
+  .abpsValuesCompactSmall {
+    margin-bottom: 8px;
+
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+
+  .abpsValuesCompactContent h3 {
+    font-size: 38px;
+    line-height: 1.08;
+  }
+
+  .abpsValuesCompactLine {
+    width: 45px;
+
+    margin: 13px 0;
+  }
+
+  .abpsValuesCompactContent p {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .abpsValuesCompact {
+    padding: 10px 0;
+  }
+
+  .abpsValuesCompactContainer {
+    width: calc(100% - 20px);
+
+    margin: 0 auto;
+
+    padding: 0;
+  }
+
+  .abpsValuesCompactHeader {
+    margin-bottom: 28px;
+
+    padding: 0;
+  }
+
+  /* LABEL */
+
+  .abpsValuesCompactLabel {
+    gap: 8px;
+
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    letter-spacing: 1.6px;
+  }
+
+  .abpsValuesCompactLabel span {
+    width: 27px;
+  }
+
+  /* MAIN HEADING */
+
+  .abpsValuesCompactHeader h2 {
+    font-size: 45px;
+
+    line-height: 1.07;
+
+    letter-spacing: -1px;
+  }
+
+  /* DESCRIPTION */
+
+  .abpsValuesCompactHeader p {
+    max-width: 100%;
+
+    margin-top: 14px;
+
+    font-size: 17px;
+
+    line-height: 1.65;
+  }
+
+  /* GRID */
+
+  .abpsValuesCompactGrid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+  /* CARD */
+
+  .abpsValuesCompactCard {
+    min-height: auto;
+
+    padding: 20px 18px 22px;
+
+    border-radius: 4px;
+  }
+
+  .abpsValuesCompactTop {
+    margin-bottom: 18px;
+  }
+
+  /* NUMBER */
+
+  .abpsValuesCompactNumber {
+    font-size: 21px;
+  }
+
+  /* ICON */
+
+  .abpsValuesCompactIcon {
+    width: 54px;
+    height: 54px;
+
+    font-size: 20px;
+  }
+
+  /* SMALL LABEL */
+
+  .abpsValuesCompactSmall {
+    margin-bottom: 7px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.6px;
+  }
+
+  /* CARD HEADING */
+
+  .abpsValuesCompactContent h3 {
+    font-size: 36px;
+
+    line-height: 1.08;
+  }
+
+  /* GOLD LINE */
+
+  .abpsValuesCompactLine {
+    width: 44px;
+
+    margin: 12px 0;
+  }
+
+  /* CARD DESCRIPTION */
+
+  .abpsValuesCompactContent p {
+    font-size: 17px;
+
+    line-height: 1.68;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .abpsValuesCompact {
+    padding: 8px 0;
+  }
+
+  .abpsValuesCompactContainer {
+    width: calc(100% - 16px);
+
+    padding: 0;
+  }
+
+  .abpsValuesCompactHeader {
+    margin-bottom: 24px;
+
+    padding: 0;
+  }
+
+  .abpsValuesCompactLabel {
+    font-size: 11.5px;
+  }
+
+  /* MAIN HEADING */
+
+  .abpsValuesCompactHeader h2 {
+    font-size: 41px;
+
+    line-height: 1.08;
+  }
+
+  .abpsValuesCompactHeader p {
+    font-size: 16.5px;
+
+    line-height: 1.62;
+  }
+
+  /* CARD */
+
+  .abpsValuesCompactCard {
+    padding: 18px 16px 20px;
+  }
+
+  .abpsValuesCompactTop {
+    margin-bottom: 16px;
+  }
+
+  .abpsValuesCompactNumber {
+    font-size: 20px;
+  }
+
+  .abpsValuesCompactIcon {
+    width: 50px;
+    height: 50px;
+
+    font-size: 19px;
+  }
+
+  .abpsValuesCompactSmall {
+    font-size: 11.5px;
+  }
+
+  .abpsValuesCompactContent h3 {
+    font-size: 34px;
+  }
+
+  .abpsValuesCompactContent p {
+    font-size: 16.5px;
+
+    line-height: 1.65;
+  }
+}

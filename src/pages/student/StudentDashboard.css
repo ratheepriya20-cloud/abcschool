@@ -1,0 +1,926 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   STUDENT DASHBOARD
+   PREMIUM LIGHT PORTAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.studentDash-page {
+  --stu-teal: #267d77;
+  --stu-teal-dark: #183b3d;
+  --stu-mint: #e5f5ef;
+  --stu-sky: #eaf6fb;
+  --stu-cream: #fff6e5;
+  --stu-gold: #d9ad5b;
+  --stu-text: #385456;
+  --stu-muted: #758987;
+  --stu-border: #dceae6;
+  --stu-white: #ffffff;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7fbfa 0%,
+      #fbfcfc 55%,
+      #fffdf9 100%
+    );
+
+  color: var(--stu-text);
+
+  display: flex;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HIDE SCROLLBARS
+   scrolling still works
+   ========================================================= */
+
+.studentDash-page,
+.studentDash-sidebar,
+.studentDash-main,
+.studentDash-content,
+.studentDash-nav {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.studentDash-page::-webkit-scrollbar,
+.studentDash-sidebar::-webkit-scrollbar,
+.studentDash-main::-webkit-scrollbar,
+.studentDash-content::-webkit-scrollbar,
+.studentDash-nav::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.studentDash-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  width: 270px;
+  padding: 17px 15px;
+
+  border-right: 1px solid #dceae6;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7fbf9 70%,
+      #fffaf0 100%
+    );
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  box-shadow:
+    8px 0 30px rgba(34, 82, 78, 0.045);
+}
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.studentDash-brand {
+  min-height: 66px;
+  padding: 5px 5px 14px;
+
+  border-bottom: 1px solid #e5efec;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.studentDash-brandIcon {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #4da79c
+    );
+
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 21px;
+
+  box-shadow:
+    0 9px 20px rgba(38, 125, 119, 0.2);
+}
+
+.studentDash-brandText {
+  min-width: 0;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.studentDash-brandText strong {
+  color: #183b3d;
+
+  font-size: 19px !important;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.studentDash-brandText span {
+  margin-top: 4px;
+
+  color: #267d77;
+
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 1.15px;
+}
+
+.studentDash-close {
+  display: none;
+
+  border: 0;
+  background: transparent;
+  color: #607b79;
+
+  font-size: 19px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   MINI PROFILE
+   ========================================================= */
+
+.studentDash-miniProfile {
+  margin-top: 15px;
+  padding: 14px;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f7f2,
+      #ffffff
+    );
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.studentDash-avatar {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 19px;
+  font-weight: 900;
+
+  box-shadow:
+    0 6px 18px rgba(38, 125, 119, 0.1);
+}
+
+.studentDash-miniInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.studentDash-miniInfo strong {
+  overflow: hidden;
+
+  color: #183b3d;
+
+  font-size: 15px !important;
+  font-weight: 900;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.studentDash-miniInfo span {
+  margin-top: 3px;
+
+  color: #4e7571;
+
+  font-size: 12px !important;
+  font-weight: 750;
+}
+
+.studentDash-miniInfo small {
+  margin-top: 3px;
+
+  color: #839593;
+
+  font-size: 10px !important;
+  font-weight: 650;
+}
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.studentDash-menuTitle {
+  margin: 21px 9px 8px;
+
+  color: #879896;
+
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 1.25px;
+}
+
+.studentDash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  overflow-y: visible;
+}
+
+.studentDash-navButton {
+  position: relative;
+
+  width: 100%;
+  min-height: 47px;
+  padding: 0 11px;
+
+  border: 1px solid transparent;
+  border-radius: 13px;
+
+  background: transparent;
+  color: #5b7372;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-align: left;
+
+  font-size: 14px !important;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.studentDash-navButton:hover {
+  border-color: #dbeae6;
+
+  background: #f0f8f5;
+  color: #267d77;
+}
+
+.studentDash-navButton.active {
+  border-color: #cce4dd;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e5f5ef,
+      #f6fbf9
+    );
+
+  color: #267d77;
+
+  box-shadow:
+    0 7px 18px rgba(38, 125, 119, 0.07);
+}
+
+.studentDash-navIcon {
+  width: 29px;
+  flex: 0 0 29px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 16px;
+}
+
+.studentDash-navLabel {
+  min-width: 0;
+  flex: 1;
+}
+
+.studentDash-navArrow {
+  color: #a7b5b3;
+
+  font-size: 10px;
+
+  transition: 0.2s ease;
+}
+
+.studentDash-navButton.active
+.studentDash-navArrow,
+.studentDash-navButton:hover
+.studentDash-navArrow {
+  color: #267d77;
+
+  transform: translateX(2px);
+}
+
+/* NOTIFICATION DOT */
+
+.studentDash-notificationDot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #df5262;
+
+  box-shadow:
+    0 0 0 3px rgba(223, 82, 98, 0.1);
+}
+
+/* =========================================================
+   SIDEBAR BOTTOM
+   ========================================================= */
+
+.studentDash-sidebarBottom {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.studentDash-logout {
+  width: 100%;
+  min-height: 45px;
+
+  border: 1px solid #f0dadd;
+  border-radius: 13px;
+
+  background: #fff7f8;
+  color: #c24d5c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  font-size: 14px !important;
+  font-weight: 850;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.studentDash-logout:hover {
+  background: #c94e5e;
+  border-color: #c94e5e;
+  color: #ffffff;
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.studentDash-main {
+  width: calc(100% - 270px);
+  min-width: 0;
+  min-height: 100vh;
+
+  margin-left: 270px;
+}
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+
+.studentDash-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+
+  width: 100%;
+  min-height: 76px;
+  padding: 11px 26px;
+
+  border-bottom: 1px solid rgba(218, 233, 228, 0.9);
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  box-shadow:
+    0 5px 22px rgba(34, 82, 78, 0.035);
+}
+
+.studentDash-topbarLeft,
+.studentDash-topbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.studentDash-topbarLeft {
+  min-width: 0;
+  gap: 12px;
+}
+
+.studentDash-pageHeading {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.studentDash-pageHeading > span {
+  color: #267d77;
+
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 1.15px;
+}
+
+.studentDash-pageHeading h2 {
+  margin: 3px 0 0;
+
+  color: #183b3d;
+
+  font-size: 23px !important;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.studentDash-menuButton {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #dbe9e5;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #267d77;
+
+  place-items: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   TOPBAR RIGHT
+   ========================================================= */
+
+.studentDash-topbarRight {
+  gap: 12px;
+}
+
+/* BELL */
+
+.studentDash-bell {
+  position: relative;
+
+  width: 45px;
+  height: 45px;
+
+  padding: 0;
+
+  border: 1px solid #d8e9e4;
+  border-radius: 14px;
+
+  background: #f5faf8;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.studentDash-bell:hover {
+  border-color: #bcded5;
+
+  background: #e9f7f2;
+
+  transform: translateY(-2px);
+}
+
+.studentDash-bellDot {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+
+  background: #df5262;
+}
+
+.studentDash-bellCount {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+
+  min-width: 23px;
+  height: 23px;
+  padding: 0 5px;
+
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+
+  background: #df5262;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px !important;
+  font-weight: 900;
+}
+
+/* =========================================================
+   TOP USER
+   ========================================================= */
+
+.studentDash-topUser {
+  min-height: 48px;
+  padding: 5px 9px 5px 5px;
+
+  border: 1px solid #e0ece8;
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.studentDash-topAvatar {
+  width: 37px;
+  height: 37px;
+  flex: 0 0 37px;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #57aa9f
+    );
+
+  color: #ffffff;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.studentDash-topUser > span {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.studentDash-topUser strong {
+  max-width: 150px;
+  overflow: hidden;
+
+  color: #183b3d;
+
+  font-size: 13px !important;
+  font-weight: 900;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.studentDash-topUser small {
+  margin-top: 2px;
+
+  color: #879896;
+
+  font-size: 10px !important;
+  font-weight: 650;
+}
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.studentDash-content {
+  width: 100%;
+  max-width: 1600px;
+
+  margin: 0 auto;
+  padding: 25px 26px 40px;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   COMMON STUDENT HERO
+   Assignment / Attendance / Results etc.
+   ========================================================= */
+
+.studentDash-content .stuHero {
+  width: 100%;
+}
+
+.studentDash-content .stuHero > span {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+.studentDash-content .stuHero h1 {
+  font-size: clamp(45px, 4.6vw, 56px) !important;
+  font-weight: 900 !important;
+}
+
+.studentDash-content .stuHero p {
+  font-size: 18px !important;
+  line-height: 1.65 !important;
+}
+
+/* =========================================================
+   COMMON STUDENT CARDS
+   ========================================================= */
+
+.studentDash-content .stuCard h3 {
+  font-size: 23px !important;
+  font-weight: 900 !important;
+}
+
+.studentDash-content .stuCard > p {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+.studentDash-content .stuStatus {
+  font-size: 12px !important;
+}
+
+.studentDash-content .stuMeta small {
+  font-size: 11px !important;
+}
+
+.studentDash-content .stuMeta strong {
+  font-size: 14px !important;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.studentDash-content .stuEmpty h3 {
+  font-size: 27px !important;
+}
+
+.studentDash-content .stuEmpty p {
+  font-size: 16px !important;
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.studentDash-overlay {
+  display: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1050px) {
+  .studentDash-sidebar {
+    width: 250px;
+  }
+
+  .studentDash-main {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+  }
+
+  .studentDash-content {
+    padding:
+      22px 20px 35px;
+  }
+}
+
+/* =========================================================
+   MOBILE SIDEBAR
+   ========================================================= */
+
+@media (max-width: 850px) {
+  .studentDash-sidebar {
+    width: min(300px, 86vw);
+
+    transform: translateX(-105%);
+
+    transition:
+      transform 0.28s ease;
+  }
+
+  .studentDash-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .studentDash-main {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .studentDash-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+
+    border: 0;
+
+    background: rgba(24, 59, 61, 0.28);
+
+    display: block;
+
+    backdrop-filter: blur(2px);
+  }
+
+  .studentDash-close {
+    display: grid;
+    place-items: center;
+  }
+
+  .studentDash-menuButton {
+    display: grid;
+  }
+
+  .studentDash-topbar {
+    padding: 10px 18px;
+  }
+
+  .studentDash-pageHeading h2 {
+    font-size: 21px !important;
+  }
+
+  .studentDash-content {
+    padding:
+      20px 18px 32px;
+  }
+
+  .studentDash-content .stuHero h1 {
+    font-size: 40px !important;
+  }
+
+  .studentDash-content .stuHero p {
+    font-size: 16px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 620px) {
+  .studentDash-topbar {
+    min-height: 69px;
+    padding: 9px 13px;
+  }
+
+  .studentDash-topbarRight {
+    gap: 8px;
+  }
+
+  .studentDash-pageHeading > span {
+    font-size: 9px !important;
+  }
+
+  .studentDash-pageHeading h2 {
+    font-size: 18px !important;
+  }
+
+  .studentDash-topUser > span {
+    display: none;
+  }
+
+  .studentDash-topUser {
+    min-height: auto;
+    padding: 4px;
+  }
+
+  .studentDash-topAvatar {
+    width: 37px;
+    height: 37px;
+  }
+
+  .studentDash-content {
+    padding:
+      17px 13px 28px;
+  }
+
+  .studentDash-content .stuHero h1 {
+    font-size: 34px !important;
+  }
+
+  .studentDash-content .stuHero p {
+    font-size: 15px !important;
+  }
+
+  .studentDash-content .stuHero > span {
+    font-size: 12px !important;
+  }
+
+  .studentDash-content .stuCard h3 {
+    font-size: 21px !important;
+  }
+
+  .studentDash-content .stuCard > p {
+    font-size: 14px !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .studentDash-topbar {
+    gap: 7px;
+  }
+
+  .studentDash-pageHeading > span {
+    display: none;
+  }
+
+  .studentDash-pageHeading h2 {
+    margin: 0;
+
+    font-size: 17px !important;
+  }
+
+  .studentDash-menuButton,
+  .studentDash-bell {
+    width: 40px;
+    height: 40px;
+  }
+
+  .studentDash-content {
+    padding:
+      14px 11px 25px;
+  }
+
+  .studentDash-content .stuHero h1 {
+    font-size: 31px !important;
+  }
+}

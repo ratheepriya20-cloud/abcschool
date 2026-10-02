@@ -13,8 +13,6 @@ import {
   FaBalanceScale,
 } from "react-icons/fa";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 import "./TermsConditions.css";
 
@@ -22,7 +20,7 @@ const TermsConditions = () => {
   return (
     <div className="abterms-page">
 
-      <Navbar />
+     
 
       {/* =====================================================
           HERO
@@ -618,7 +616,6 @@ const TermsConditions = () => {
       </section>
 
 
-      <Footer />
 
     </div>
   );

@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import QuickInfo from "../components/QuickInfo";
 import WelcomeSection from "../components/WelcomeSection";
@@ -9,14 +8,11 @@ import AcademicsSection from "../components/AcademicsSection";
 
 import Testimonials from "../components/Testimonial";
 import AdmissionCTA from "../components/AdmissionCTA";
-import LatestNewsNotice from "../components/LatestNewsNotice";
-import Gallery from "../components/Gallery";
-import Footer from "../components/Footer";
 
 function Home(){
     return(
         <>
-        <Navbar />
+        
         <Hero />
         <QuickInfo />
         <WelcomeSection />
@@ -26,10 +22,9 @@ function Home(){
         <AcademicsSection />
         
         <Testimonials />
-        <LatestNewsNotice />
-        <Gallery />
+      
         <AdmissionCTA />
-        <Footer />
+        
         </>
     );
 }

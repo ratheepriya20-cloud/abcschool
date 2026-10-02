@@ -1,0 +1,959 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+  --loc-navy: #071a35;
+  --loc-blue: #0877a9;
+  --loc-sky: #35a6d3;
+
+  --loc-gold: #d6b36a;
+  --loc-gold-light: #f0db9d;
+
+  --loc-white: #ffffff;
+  --loc-cream: #fbfaf6;
+
+  --loc-text: #283946;
+  --loc-muted: #6c7c88;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.abLocation {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    65px 40px 70px;
+
+  overflow: hidden;
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7fbfe 52%,
+      #edf7fc 100%
+    );
+}
+
+
+.abLocationContainer {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   BACKGROUND SHAPES
+========================================================= */
+
+.abLocationShape {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+
+.abLocationShape.shapeOne {
+  width: 420px;
+  height: 420px;
+
+  right: -270px;
+  top: -220px;
+
+  border-radius: 50%;
+
+  border:
+    70px solid
+    rgba(8, 119, 169, 0.05);
+}
+
+
+.abLocationShape.shapeTwo {
+  width: 330px;
+  height: 330px;
+
+  left: -230px;
+  bottom: -230px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(214, 179, 106, 0.06);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.abLocationHeading {
+  max-width: 850px;
+
+  margin-bottom: 34px;
+}
+
+
+.abLocationLabel {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 8px;
+
+  color: var(--loc-blue);
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2.7px;
+}
+
+
+.abLocationLabel i {
+  width: 48px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--loc-blue),
+      transparent
+    );
+}
+
+
+.abLocationHeading h2 {
+  margin: 0;
+
+  color: var(--loc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(43px, 4vw, 59px);
+
+  font-weight: 700;
+
+  line-height: 1.06;
+
+  letter-spacing: -1.5px;
+}
+
+
+.abLocationHeading h2 span {
+  color: var(--loc-gold);
+}
+
+
+.abLocationHeading p {
+  max-width: 720px;
+
+  margin:
+    12px 0 0;
+
+  color: var(--loc-muted);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.abLocationGrid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(350px, 0.72fr)
+    minmax(600px, 1.35fr);
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   LEFT INFORMATION
+========================================================= */
+
+.abLocationInfo {
+  min-height: 520px;
+
+  padding: 25px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.14);
+
+  border-radius: 25px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  box-shadow:
+    0 20px 50px
+    rgba(7, 26, 53, 0.07);
+}
+
+
+/* =========================================================
+   SCHOOL BADGE
+========================================================= */
+
+.abLocationSchoolBadge {
+  padding:
+    4px 4px 19px;
+
+  margin-bottom: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border-bottom:
+    1px solid
+    rgba(7, 26, 53, 0.08);
+}
+
+
+.abLocationSchoolIcon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  font-size: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--loc-blue),
+      var(--loc-navy)
+    );
+
+  box-shadow:
+    0 10px 23px
+    rgba(7, 26, 53, 0.15);
+}
+
+
+.abLocationSchoolBadge span,
+.abLocationSchoolBadge strong {
+  display: block;
+}
+
+
+.abLocationSchoolBadge span {
+  color: var(--loc-blue);
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+
+.abLocationSchoolBadge strong {
+  margin-top: 3px;
+
+  color: var(--loc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   INFO CARDS
+========================================================= */
+
+.abLocationInfoCard {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 95px;
+
+  padding:
+    15px 4px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  border: none;
+
+  border-bottom:
+    1px solid
+    rgba(7, 26, 53, 0.08);
+
+  background: transparent;
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  text-align: left;
+}
+
+
+button.abLocationInfoCard {
+  cursor: pointer;
+}
+
+
+.abLocationInfoCard.clickable {
+  transition:
+    padding-left 0.25s ease,
+    background 0.25s ease,
+    border-radius 0.25s ease;
+}
+
+
+.abLocationInfoCard.clickable:hover {
+  padding-left: 10px;
+
+  border-radius: 14px;
+
+  background:
+    #f6fbfe;
+}
+
+
+/* =========================================================
+   INFO ICON
+========================================================= */
+
+.abLocationInfoIcon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-size: 17px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(7, 26, 53, 0.1);
+}
+
+
+.abLocationInfoIcon.gold {
+  color: var(--loc-navy);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--loc-gold-light),
+      var(--loc-gold)
+    );
+}
+
+
+.abLocationInfoIcon.navy {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--loc-blue),
+      var(--loc-navy)
+    );
+}
+
+
+.abLocationInfoIcon.blue {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--loc-sky),
+      var(--loc-blue)
+    );
+}
+
+
+/* =========================================================
+   INFO CONTENT
+========================================================= */
+
+.abLocationInfoContent {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.abLocationInfoContent span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #b48738;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+
+.abLocationInfoContent h3 {
+  margin:
+    0 0 4px;
+
+  color: var(--loc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.abLocationInfoContent p {
+  margin: 0;
+
+  color: var(--loc-muted);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   INFO ARROW
+========================================================= */
+
+.abLocationArrow {
+  width: 31px;
+  height: 31px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--loc-blue);
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   DIRECTIONS BUTTON
+========================================================= */
+
+.abLocationDirectionsBtn {
+  width: 100%;
+
+  min-height: 52px;
+
+  margin-top: auto;
+
+  padding:
+    10px 20px;
+
+  border: none;
+
+  border-radius: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--loc-blue),
+      var(--loc-navy)
+    );
+
+  box-shadow:
+    0 12px 26px
+    rgba(7, 26, 53, 0.16);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.abLocationDirectionsBtn:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(7, 26, 53, 0.21);
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.abLocationMap {
+  position: relative;
+
+  min-height: 520px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.14);
+
+  border-radius: 25px;
+
+  background: #dcecf3;
+
+  box-shadow:
+    0 20px 55px
+    rgba(7, 26, 53, 0.1);
+}
+
+
+.abLocationMap iframe {
+  width: 100%;
+  height: 100%;
+
+  min-height: 520px;
+
+  display: block;
+
+  border: none;
+}
+
+
+/* =========================================================
+   MAP BADGE
+========================================================= */
+
+.abLocationMapBadge {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 18px;
+  left: 18px;
+
+  min-width: 235px;
+
+  padding:
+    12px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(7, 26, 53, 0.15);
+}
+
+
+.abLocationMapBadgeIcon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--loc-blue),
+      var(--loc-navy)
+    );
+}
+
+
+.abLocationMapBadge span,
+.abLocationMapBadge strong,
+.abLocationMapBadge small {
+  display: block;
+}
+
+
+.abLocationMapBadge span {
+  color: var(--loc-blue);
+
+  font-size: 7px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.abLocationMapBadge strong {
+  margin-top: 2px;
+
+  color: var(--loc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 16px;
+}
+
+
+.abLocationMapBadge small {
+  margin-top: 2px;
+
+  color: var(--loc-muted);
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MAP BUTTON
+========================================================= */
+
+.abLocationMapButton {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 18px;
+  bottom: 18px;
+
+  min-height: 44px;
+
+  padding:
+    0 17px;
+
+  border: none;
+
+  border-radius: 22px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  background:
+    rgba(7, 26, 53, 0.94);
+
+  box-shadow:
+    0 12px 30px
+    rgba(7, 26, 53, 0.25);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .abLocation {
+    padding:
+      55px 25px 60px;
+  }
+
+
+  .abLocationGrid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+
+  .abLocationInfo {
+    min-height: auto;
+  }
+
+
+  .abLocationMap {
+    min-height: 450px;
+  }
+
+
+  .abLocationMap iframe {
+    min-height: 450px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abLocation {
+    padding:
+      45px 16px 50px;
+  }
+
+
+  .abLocationHeading {
+    margin-bottom: 25px;
+  }
+
+
+  .abLocationHeading h2 {
+    font-size: 39px;
+  }
+
+
+  .abLocationHeading p {
+    font-size: 12px;
+  }
+
+
+  .abLocationInfo {
+    padding:
+      18px 14px;
+
+    border-radius: 20px;
+  }
+
+
+  .abLocationInfoCard {
+    min-height: 82px;
+
+    padding:
+      12px 2px;
+  }
+
+
+  .abLocationInfoIcon {
+    width: 44px;
+    height: 44px;
+
+    font-size: 15px;
+  }
+
+
+  .abLocationInfoContent h3 {
+    font-size: 18px;
+  }
+
+
+  .abLocationInfoContent p {
+    font-size: 10px;
+  }
+
+
+  .abLocationDirectionsBtn {
+    min-height: 49px;
+
+    margin-top: 16px;
+
+    font-size: 12px;
+  }
+
+
+  .abLocationMap {
+    min-height: 370px;
+
+    border-radius: 20px;
+  }
+
+
+  .abLocationMap iframe {
+    min-height: 370px;
+  }
+
+
+  .abLocationMapBadge {
+    top: 12px;
+    left: 12px;
+
+    min-width: 205px;
+
+    padding:
+      9px 10px;
+  }
+
+
+  .abLocationMapBadgeIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+
+  .abLocationMapBadge strong {
+    font-size: 14px;
+  }
+
+
+  .abLocationMapButton {
+    right: 12px;
+    bottom: 12px;
+
+    min-height: 40px;
+
+    padding:
+      0 13px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abLocation {
+    padding:
+      40px 12px 45px;
+  }
+
+
+  .abLocationHeading h2 {
+    font-size: 35px;
+  }
+
+
+  .abLocationMap {
+    min-height: 330px;
+  }
+
+
+  .abLocationMap iframe {
+    min-height: 330px;
+  }
+
+
+  .abLocationMapBadge {
+    max-width: 190px;
+  }
+
+
+  .abLocationMapButton {
+    max-width: 175px;
+
+    text-align: center;
+  }
+
+}

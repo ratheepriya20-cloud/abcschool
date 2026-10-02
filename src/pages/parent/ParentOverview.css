@@ -1,0 +1,1811 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   PARENT OVERVIEW
+   RESPONSIVE PREMIUM CSS
+========================================================= */
+
+.pp-page {
+  --pp-navy: #071f3d;
+  --pp-navy-2: #0b3159;
+  --pp-blue: #0877a9;
+  --pp-sky: #eaf7fc;
+
+  --pp-gold: #d6b36a;
+  --pp-gold-dark: #a97924;
+  --pp-gold-soft: #fff4d8;
+
+  --pp-white: #ffffff;
+  --pp-soft: #f5f9fc;
+  --pp-cream: #fffaf1;
+
+  --pp-text: #233c53;
+  --pp-muted: #68798a;
+
+  --pp-border:
+    rgba(7, 31, 61, 0.1);
+
+  --pp-shadow:
+    0 10px 28px
+    rgba(7, 31, 61, 0.07);
+
+  width: 100%;
+  max-width: 100%;
+
+  min-width: 0;
+
+  padding: 28px;
+
+  overflow-x: hidden;
+
+  color: var(--pp-text);
+
+  background:
+    #f5f8fb;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+
+.pp-page *,
+.pp-page *::before,
+.pp-page *::after {
+  box-sizing: border-box;
+}
+
+
+.pp-page button {
+  font-family: inherit;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pp-overview-hero {
+  width: 100%;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(290px, 0.38fr);
+
+  align-items: stretch;
+
+  gap: 20px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--pp-border);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 90% 5%,
+      rgba(8, 119, 169, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #f2f9fd 65%,
+      #fff8e8
+    );
+
+  box-shadow:
+    var(--pp-shadow);
+}
+
+
+/* =========================================================
+   HERO LEFT
+========================================================= */
+
+.pp-overview-hero-content {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+
+.pp-eyebrow {
+  display: inline-flex;
+
+  width: fit-content;
+
+  margin-bottom: 10px;
+
+  color:
+    var(--pp-gold-dark);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+}
+
+
+.pp-overview-hero-content h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  color:
+    var(--pp-navy);
+
+  font-size:
+    clamp(38px, 4vw, 54px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+}
+
+
+.pp-overview-hero-content > p {
+  max-width: 760px;
+
+  margin:
+    12px 0 18px;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   HERO TAGS
+========================================================= */
+
+.pp-hero-tags {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+
+.pp-hero-tags > span {
+  max-width: 100%;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    9px 13px;
+
+  border:
+    1px solid
+    rgba(7, 31, 61, 0.1);
+
+  border-radius: 30px;
+
+  color:
+    var(--pp-navy);
+
+  background:
+    rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-hero-tags svg {
+  flex: 0 0 auto;
+
+  color:
+    var(--pp-blue);
+}
+
+
+/* =========================================================
+   STUDENT PROFILE
+========================================================= */
+
+.pp-overview-student {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    22px 18px;
+
+  border:
+    1px solid
+    rgba(7, 31, 61, 0.08);
+
+  border-radius: 18px;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  text-align: center;
+}
+
+
+.pp-big-avatar {
+  width: 72px;
+
+  height: 72px;
+
+  display: grid;
+
+  place-items: center;
+
+  margin-bottom: 11px;
+
+  border-radius: 50%;
+
+  color:
+    var(--pp-navy);
+
+  background:
+    var(--pp-gold-soft);
+
+  font-size: 29px;
+}
+
+
+.pp-overview-student > span {
+  color:
+    var(--pp-gold-dark);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.pp-overview-student h2 {
+  width: 100%;
+
+  margin:
+    5px 0;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 26px;
+
+  line-height: 1.15;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-overview-student > p {
+  margin:
+    0 0 9px;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 16px;
+}
+
+
+/* =========================================================
+   IMPORTANT ACTIVE STATUS FIX
+   FULL WIDTH NAHI LEGA
+========================================================= */
+
+.pp-overview-student > strong {
+  width: fit-content !important;
+
+  max-width: 100%;
+
+  align-self: center;
+
+  display: inline-flex !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 auto;
+
+  margin: 0;
+
+  padding:
+    7px 13px;
+
+  border:
+    1px solid
+    #b9e3ca;
+
+  border-radius: 30px;
+
+  color:
+    #197441;
+
+  background:
+    #eaf8f0;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+  position: static !important;
+
+  inset: auto !important;
+
+  transform: none !important;
+
+  overflow: visible !important;
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.pp-stat-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+
+.pp-stat-card {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 125px;
+
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    54px minmax(0, 1fr) 30px;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding:
+    18px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--pp-border);
+
+  border-radius: 17px;
+
+  color:
+    inherit;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    var(--pp-shadow);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.pp-stat-card:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(7, 31, 61, 0.11);
+}
+
+
+.pp-stat-icon {
+  width: 52px;
+
+  height: 52px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 14px;
+
+  color:
+    var(--pp-blue);
+
+  background:
+    var(--pp-sky);
+
+  font-size: 21px;
+}
+
+
+.pp-stat-card > div {
+  min-width: 0;
+}
+
+
+.pp-stat-card strong {
+  display: block;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 27px;
+
+  line-height: 1.05;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-stat-card h3 {
+  margin:
+    4px 0 2px;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 17px;
+
+  line-height: 1.25;
+}
+
+
+.pp-stat-card p {
+  margin: 0;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 15px;
+
+  line-height: 1.4;
+}
+
+
+.pp-stat-arrow {
+  justify-self: end;
+
+  color:
+    var(--pp-gold-dark);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.pp-overview-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 18px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.pp-card {
+  min-width: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  padding:
+    21px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--pp-border);
+
+  border-radius: 18px;
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    var(--pp-shadow);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.pp-card-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  padding-bottom: 14px;
+
+  border-bottom:
+    1px solid
+    var(--pp-border);
+}
+
+
+.pp-card-header > div {
+  min-width: 0;
+}
+
+
+.pp-card-header span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color:
+    var(--pp-gold-dark);
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.pp-card-header h2 {
+  margin: 0;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 25px;
+
+  line-height: 1.15;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-card-header > button {
+  width: 46px;
+
+  height: 46px;
+
+  flex: 0 0 46px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  color:
+    var(--pp-navy);
+
+  background:
+    var(--pp-gold-soft);
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LIST
+========================================================= */
+
+.pp-list {
+  display: grid;
+
+  gap: 9px;
+}
+
+
+.pp-list-row {
+  width: 100%;
+
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    44px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    11px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(7, 31, 61, 0.07);
+
+  border-radius: 12px;
+
+  background:
+    #fafcff;
+}
+
+
+.pp-list-icon {
+  width: 43px;
+
+  height: 43px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  color:
+    var(--pp-blue);
+
+  background:
+    var(--pp-sky);
+
+  font-size: 17px;
+}
+
+
+.pp-list-icon.gold {
+  color:
+    var(--pp-navy);
+
+  background:
+    var(--pp-gold-soft);
+}
+
+
+.pp-list-content {
+  min-width: 0;
+}
+
+
+.pp-list-content strong {
+  display: block;
+
+  max-width: 100%;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 16px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+
+.pp-list-content p {
+  margin:
+    3px 0 0;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.pp-status,
+.pp-category {
+  width: fit-content;
+
+  max-width: 130px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    6px 9px;
+
+  border-radius: 25px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-status.success {
+  color:
+    #197441;
+
+  background:
+    #eaf8f0;
+}
+
+
+.pp-status.warning {
+  color:
+    #9a6513;
+
+  background:
+    #fff3d4;
+}
+
+
+.pp-category {
+  color:
+    var(--pp-blue);
+
+  background:
+    var(--pp-sky);
+}
+
+
+/* =========================================================
+   FEE MINI
+========================================================= */
+
+.pp-fee-mini-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 9px;
+}
+
+
+.pp-fee-mini {
+  min-width: 0;
+
+  padding:
+    15px 12px;
+
+  border:
+    1px solid
+    var(--pp-border);
+
+  border-radius: 13px;
+
+  background:
+    #fafcff;
+}
+
+
+.pp-fee-mini > span {
+  display: block;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-fee-mini > strong {
+  display: block;
+
+  margin:
+    6px 0;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 22px;
+
+  line-height: 1.1;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-fee-mini > p {
+  width: fit-content;
+
+  max-width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin: 0;
+
+  padding:
+    5px 8px;
+
+  border-radius: 25px;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.pp-fee-mini > p.paid {
+  color:
+    #197441;
+
+  background:
+    #eaf8f0;
+}
+
+
+.pp-fee-mini > p.pending {
+  color:
+    #a26810;
+
+  background:
+    #fff3d6;
+}
+
+
+/* =========================================================
+   EVENTS
+========================================================= */
+
+.pp-event-mini-list {
+  display: grid;
+
+  gap: 9px;
+}
+
+
+.pp-event-mini {
+  min-width: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    45px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    11px;
+
+  border:
+    1px solid
+    var(--pp-border);
+
+  border-radius: 12px;
+
+  background:
+    #fafcff;
+}
+
+
+.pp-event-date {
+  width: 44px;
+
+  height: 44px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 11px;
+
+  color:
+    var(--pp-navy);
+
+  background:
+    var(--pp-gold-soft);
+
+  font-size: 17px;
+}
+
+
+.pp-event-mini > div:last-child {
+  min-width: 0;
+}
+
+
+.pp-event-mini strong {
+  display: block;
+
+  color:
+    var(--pp-navy);
+
+  font-size: 16px;
+
+  line-height: 1.3;
+
+  overflow-wrap: anywhere;
+}
+
+
+.pp-event-mini p {
+  margin:
+    3px 0;
+
+  color:
+    var(--pp-muted);
+
+  font-size: 15px;
+}
+
+
+.pp-event-mini span {
+  display: block;
+
+  color:
+    var(--pp-blue);
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .pp-page {
+    padding: 22px;
+  }
+
+
+  .pp-overview-hero {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(250px, 0.42fr);
+
+    gap: 15px;
+  }
+
+
+  .pp-stat-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .pp-overview-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .pp-fee-mini-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .pp-page {
+    padding: 18px;
+  }
+
+
+  /* HERO */
+
+  .pp-overview-hero {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 24px;
+  }
+
+
+  .pp-overview-hero-content h1 {
+    font-size: 42px;
+  }
+
+
+  .pp-overview-hero-content > p {
+    max-width: 100%;
+
+    font-size: 18px;
+  }
+
+
+  .pp-overview-student {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      65px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    column-gap: 14px;
+
+    padding:
+      17px;
+
+    text-align: left;
+  }
+
+
+  .pp-big-avatar {
+    grid-row:
+      1 / 5;
+
+    width: 62px;
+
+    height: 62px;
+
+    margin: 0;
+
+    font-size: 25px;
+  }
+
+
+  .pp-overview-student > span {
+    align-self: end;
+  }
+
+
+  .pp-overview-student h2 {
+    margin:
+      2px 0;
+
+    font-size: 25px;
+  }
+
+
+  .pp-overview-student > p {
+    margin: 0;
+
+    font-size: 16px;
+  }
+
+
+  /* ACTIVE BADGE */
+
+  .pp-overview-student > strong {
+    grid-column: 3;
+
+    grid-row:
+      1 / 5;
+
+    align-self: center;
+
+    justify-self: end;
+
+    width: fit-content !important;
+
+    max-width: 100px;
+  }
+
+
+  /* MAIN GRID */
+
+  .pp-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .pp-card {
+    padding: 20px;
+  }
+
+
+  .pp-card-header h2 {
+    font-size: 25px;
+  }
+
+
+  /* FEE */
+
+  .pp-fee-mini-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .pp-page {
+    width: 100%;
+
+    padding:
+      14px;
+
+    overflow-x: hidden;
+  }
+
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .pp-overview-hero {
+    width: 100%;
+
+    padding:
+      21px 17px;
+
+    border-radius: 17px;
+  }
+
+
+  .pp-eyebrow {
+    font-size: 13px;
+  }
+
+
+  .pp-overview-hero-content h1 {
+    width: 100%;
+
+    font-size:
+      clamp(34px, 9vw, 42px);
+
+    line-height: 1.1;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  .pp-overview-hero-content > p {
+    width: 100%;
+
+    margin:
+      10px 0 16px;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+  }
+
+
+  .pp-hero-tags {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+
+  .pp-hero-tags > span {
+    width: 100%;
+
+    justify-content: flex-start;
+
+    font-size: 15px;
+
+    white-space: normal;
+  }
+
+
+  /* =======================================================
+     STUDENT PROFILE
+  ======================================================= */
+
+  .pp-overview-student {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+      58px minmax(0, 1fr);
+
+    column-gap: 12px;
+
+    row-gap: 3px;
+
+    align-items: center;
+
+    padding:
+      15px;
+
+    overflow: visible;
+  }
+
+
+  .pp-big-avatar {
+    width: 56px;
+
+    height: 56px;
+
+    grid-column: 1;
+
+    grid-row:
+      1 / 5;
+
+    font-size: 23px;
+  }
+
+
+  .pp-overview-student > span {
+    grid-column: 2;
+
+    font-size: 12px;
+  }
+
+
+  .pp-overview-student h2 {
+    grid-column: 2;
+
+    margin: 0;
+
+    font-size: 23px;
+
+    line-height: 1.15;
+  }
+
+
+  .pp-overview-student > p {
+    grid-column: 2;
+
+    margin: 0;
+
+    font-size: 16px;
+  }
+
+
+  /* VERY IMPORTANT:
+     ACTIVE AB CONTENT KE PICHE NAHI JAYEGA */
+
+  .pp-overview-student > strong {
+    grid-column: 2 !important;
+
+    grid-row: auto !important;
+
+    justify-self: start !important;
+
+    align-self: start !important;
+
+    width: fit-content !important;
+
+    min-width: 0 !important;
+
+    max-width: max-content !important;
+
+    height: auto !important;
+
+    margin-top: 5px !important;
+
+    padding:
+      6px 11px !important;
+
+    position: static !important;
+
+    display: inline-flex !important;
+
+    float: none !important;
+
+    transform: none !important;
+
+    white-space: nowrap !important;
+
+    font-size: 14px !important;
+
+    z-index: auto !important;
+  }
+
+
+  /* =======================================================
+     STATS
+  ======================================================= */
+
+  .pp-stat-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-top: 12px;
+  }
+
+
+  .pp-stat-card {
+    min-height: 105px;
+
+    grid-template-columns:
+      50px minmax(0, 1fr) 25px;
+
+    gap: 11px;
+
+    padding:
+      15px;
+  }
+
+
+  .pp-stat-icon {
+    width: 48px;
+
+    height: 48px;
+
+    font-size: 20px;
+  }
+
+
+  .pp-stat-card strong {
+    font-size: 27px;
+  }
+
+
+  .pp-stat-card h3 {
+    font-size: 18px;
+  }
+
+
+  .pp-stat-card p {
+    font-size: 16px;
+  }
+
+
+  /* =======================================================
+     MAIN CARDS
+  ======================================================= */
+
+  .pp-overview-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 12px;
+  }
+
+
+  .pp-card {
+    width: 100%;
+
+    min-width: 0;
+
+    padding:
+      17px;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+  }
+
+
+  /* HEADER */
+
+  .pp-card-header {
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 14px;
+  }
+
+
+  .pp-card-header span {
+    font-size: 12px;
+  }
+
+
+  .pp-card-header h2 {
+    font-size: 24px;
+
+    line-height: 1.15;
+  }
+
+
+  .pp-card-header > button {
+    width: 43px;
+
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+
+  /* =======================================================
+     LIST ROWS
+  ======================================================= */
+
+  .pp-list-row {
+    grid-template-columns:
+      42px minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 10px;
+
+    padding:
+      12px;
+
+    overflow: visible;
+  }
+
+
+  .pp-list-icon {
+    width: 41px;
+
+    height: 41px;
+  }
+
+
+  .pp-list-content strong {
+    font-size: 16px;
+
+    line-height: 1.4;
+  }
+
+
+  .pp-list-content p {
+    font-size: 15px;
+  }
+
+
+  /* STATUS / CATEGORY MOVE BELOW CONTENT */
+
+  .pp-status,
+  .pp-category {
+    grid-column: 2;
+
+    justify-self: start;
+
+    width: fit-content;
+
+    max-width: 100%;
+
+    margin-top: 5px;
+
+    padding:
+      6px 9px;
+
+    font-size: 13px;
+
+    white-space: normal;
+  }
+
+
+  /* =======================================================
+     FEES
+  ======================================================= */
+
+  .pp-fee-mini-grid {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .pp-fee-mini {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+
+    align-items: center;
+
+    column-gap: 12px;
+
+    padding:
+      13px;
+  }
+
+
+  .pp-fee-mini > span {
+    font-size: 16px;
+  }
+
+
+  .pp-fee-mini > strong {
+    justify-self: end;
+
+    margin: 0;
+
+    font-size: 22px;
+  }
+
+
+  .pp-fee-mini > p {
+    grid-column:
+      1 / -1;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+  }
+
+
+  /* =======================================================
+     EVENTS
+  ======================================================= */
+
+  .pp-event-mini {
+    grid-template-columns:
+      43px minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      12px;
+  }
+
+
+  .pp-event-date {
+    width: 42px;
+
+    height: 42px;
+  }
+
+
+  .pp-event-mini strong {
+    font-size: 17px;
+  }
+
+
+  .pp-event-mini p {
+    font-size: 15px;
+  }
+
+
+  .pp-event-mini span {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .pp-page {
+    padding:
+      10px;
+  }
+
+
+  .pp-overview-hero {
+    padding:
+      18px 14px;
+  }
+
+
+  .pp-overview-hero-content h1 {
+    font-size: 34px;
+  }
+
+
+  .pp-overview-hero-content > p {
+    font-size: 16.5px;
+  }
+
+
+  .pp-hero-tags > span {
+    font-size: 14px;
+  }
+
+
+  /* STUDENT */
+
+  .pp-overview-student {
+    grid-template-columns:
+      52px minmax(0, 1fr);
+
+    padding:
+      13px;
+  }
+
+
+  .pp-big-avatar {
+    width: 50px;
+
+    height: 50px;
+
+    font-size: 21px;
+  }
+
+
+  .pp-overview-student h2 {
+    font-size: 21px;
+  }
+
+
+  .pp-overview-student > p {
+    font-size: 15px;
+  }
+
+
+  .pp-overview-student > strong {
+    font-size: 13.5px !important;
+  }
+
+
+  /* STATS */
+
+  .pp-stat-card {
+    min-height: 100px;
+
+    padding:
+      13px;
+  }
+
+
+  .pp-stat-card strong {
+    font-size: 25px;
+  }
+
+
+  .pp-stat-card h3 {
+    font-size: 17px;
+  }
+
+
+  .pp-stat-card p {
+    font-size: 15px;
+  }
+
+
+  /* CARDS */
+
+  .pp-card {
+    padding:
+      14px;
+  }
+
+
+  .pp-card-header h2 {
+    font-size: 22px;
+  }
+
+
+  .pp-list-content strong {
+    font-size: 16px;
+  }
+
+
+  .pp-list-content p {
+    font-size: 15px;
+  }
+
+
+  .pp-status,
+  .pp-category {
+    font-size: 12.5px;
+  }
+
+
+  .pp-fee-mini > span {
+    font-size: 15px;
+  }
+
+
+  .pp-fee-mini > strong {
+    font-size: 20px;
+  }
+
+
+  .pp-event-mini strong {
+    font-size: 16px;
+  }
+
+
+  .pp-event-mini p,
+  .pp-event-mini span {
+    font-size: 15px;
+  }
+
+}

@@ -1,990 +1,1828 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
 
-
-.simpleTestimonials {
-  position: relative;
-  width: 100%;
-  padding: 78px 0 82px;
-  overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 7% 12%,
-      rgba(8, 119, 169, 0.09),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 93% 88%,
-      rgba(214, 179, 106, 0.10),
-      transparent 30%
-    ),
-    #f7fafc;
-}
 
 /* =========================================================
-   DECORATIVE GLOW
+   AB PUBLIC SCHOOL
+   PREMIUM TESTIMONIALS
 ========================================================= */
 
-.simpleTestimonials::before {
-  content: "";
-  position: absolute;
-  width: 430px;
-  height: 430px;
-  top: -250px;
-  left: -190px;
-  border: 1px solid rgba(8, 119, 169, 0.12);
-  border-radius: 50%;
-  pointer-events: none;
+.abpsTestimonials {
+  position: relative;
+
+  width: 100%;
+
+  padding: 45px 0 45px;
+
+  overflow: hidden;
+
+  color: #173b59;
+
+  background:
+    radial-gradient(
+      circle at 5% 15%,
+      rgba(41, 166, 220, 0.1),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 95% 80%,
+      rgba(214, 171, 80, 0.13),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #fafdff 0%,
+      #ffffff 42%,
+      #fffaf0 100%
+    );
+
+  font-family:
+    "DM Sans",
+    sans-serif;
 }
 
-.simpleTestimonials::after {
-  content: "";
-  position: absolute;
-  width: 520px;
-  height: 520px;
-  right: -300px;
-  bottom: -330px;
-  border: 1px solid rgba(214, 179, 106, 0.15);
-  border-radius: 50%;
-  pointer-events: none;
+
+.abpsTestimonials *,
+.abpsTestimonials *::before,
+.abpsTestimonials *::after {
+  box-sizing: border-box;
 }
 
-.simpleTestimonialsGlow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(4px);
-}
-
-.simpleTestimonialsGlowOne {
-  width: 220px;
-  height: 220px;
-  top: 28%;
-  left: -110px;
-  background: rgba(8, 119, 169, 0.05);
-}
-
-.simpleTestimonialsGlowTwo {
-  width: 250px;
-  height: 250px;
-  right: -120px;
-  top: 20%;
-  background: rgba(214, 179, 106, 0.07);
-}
 
 /* =========================================================
    CONTAINER
 ========================================================= */
 
-.simpleTestimonialsContainer {
+.abpsTestimonialsContainer {
   position: relative;
-  z-index: 2;
+
+  z-index: 5;
+
   width: 100%;
+
   margin: 0 auto;
 }
+
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.abpsTestimonialsGlow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(5px);
+}
+
+
+.abpsTestimonialsGlowOne {
+  width: 360px;
+  height: 360px;
+
+  top: -190px;
+  left: -170px;
+
+  background:
+    rgba(8, 119, 169, 0.08);
+}
+
+
+.abpsTestimonialsGlowTwo {
+  width: 400px;
+  height: 400px;
+
+  right: -210px;
+  bottom: -220px;
+
+  background:
+    rgba(214, 171, 80, 0.11);
+}
+
+
+/* =========================================================
+   SUBTLE PATTERN
+========================================================= */
+
+.abpsTestimonialsPattern {
+  position: absolute;
+
+  inset: 0;
+
+  opacity: 0.45;
+
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      rgba(7, 58, 101, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    26px 26px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent
+    );
+}
+
 
 /* =========================================================
    HEADER
 ========================================================= */
 
-.simpleTestimonialsHeader {
-  width: min(900px, 92%);
-  margin: 0 auto 30px;
+.abpsTestimonialsHeader {
+  width: calc(100% - 90px);
+  max-width: 1050px;
+
+  margin:
+    0 auto 42px;
+
+  padding:
+    0 20px;
+
   text-align: center;
 }
 
-.simpleTestimonialsLabel {
-  display: inline-flex;
+
+.abpsTestimonialsLabel {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+
+  gap: 10px;
+
   margin-bottom: 13px;
 
   color: #0877a9;
 
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 900;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
 }
 
-.simpleTestimonialsLabel::before,
-.simpleTestimonialsLabel::after {
-  content: "";
-  width: 42px;
+
+.abpsTestimonialsLabel span {
+  width: 30px;
   height: 2px;
-  border-radius: 20px;
-  background: #d6b36a;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #d6a94d,
+      #f0cb76
+    );
 }
 
-.simpleTestimonialsHeader h2 {
+
+.abpsTestimonialsHeader h2 {
   margin: 0;
 
-  color: #071a35;
+  color: #062f57;
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(38px, 4.2vw, 54px);
-  line-height: 1.12;
-  font-weight: 800;
-  letter-spacing: -1.2px;
-}
+  font-family:
+    "Playfair Display",
+    serif;
 
-.simpleTestimonialsHeader h2 span {
-  color: #0877a9;
-}
+  font-size:
+    clamp(39px, 4vw, 57px);
 
-.simpleTestimonialsHeader p {
-  max-width: 700px;
-  margin: 15px auto 0;
-
-  color: #52657a;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.65;
-  font-weight: 500;
-}
-
-/* =========================================================
-   CONTROLS
-========================================================= */
-
-.simpleTestimonialsControls {
-  width: min(1200px, 92%);
-  margin: 0 auto 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.simpleTestimonialsHint {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-
-  color: #64748b;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
   font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.4px;
 }
 
-.simpleTestimonialsMouseIcon {
-  width: 31px;
-  height: 31px;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(8, 119, 169, 0.22);
-  border-radius: 50%;
-
-  background: #ffffff;
-  color: #0877a9;
-
-  font-size: 16px;
-  box-shadow: 0 5px 15px rgba(7, 26, 53, 0.07);
+.abpsTestimonialsHeader h2 span {
+  color: #c58a18;
 }
 
-.simpleTestimonialsArrows {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+
+.abpsTestimonialsHeader p {
+  max-width: 890px;
+
+  margin:
+    17px auto 0;
+
+  color: #657b8d;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.7;
 }
 
-.simpleTestimonialsArrows button {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(7, 26, 53, 0.12);
-  border-radius: 50%;
-
-  background: #ffffff;
-  color: #071a35;
-
-  font-size: 14px;
-
-  cursor: pointer;
-
-  box-shadow: 0 7px 18px rgba(7, 26, 53, 0.08);
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.simpleTestimonialsArrows button:hover {
-  transform: translateY(-3px);
-  border-color: #0877a9;
-  background: #0877a9;
-  color: #ffffff;
-}
 
 /* =========================================================
-   MAIN SLIDER
+   MARQUEE
 ========================================================= */
 
-.simpleTestimonialsSlider {
+.abpsTestimonialsMarquee {
   position: relative;
+
   width: 100%;
 
   display: flex;
   flex-direction: column;
+
   gap: 18px;
 
   overflow: hidden;
+}
+
+
+/* =========================================================
+   SIDE FADE
+========================================================= */
+
+.abpsTestimonialFade {
+  position: absolute;
+
+  z-index: 20;
+
+  top: 0;
+  bottom: 0;
+
+  width: 90px;
+
+  pointer-events: none;
+}
+
+
+.abpsFadeLeft {
+  left: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #fafdff 5%,
+      rgba(250, 253, 255, 0)
+    );
+}
+
+
+.abpsFadeRight {
+  right: 0;
+
+  background:
+    linear-gradient(
+      270deg,
+      #fffaf2 5%,
+      rgba(255, 250, 242, 0)
+    );
+}
+
+
+/* =========================================================
+   ROW
+========================================================= */
+
+.abpsTestimonialsRow {
+  width: 100%;
+
+  overflow-x: auto;
+  overflow-y: visible;
 
   cursor: grab;
 
+  /*
+    VERY IMPORTANT:
+    vertical page scrolling remains normal.
+    User upar/neeche scroll kar sakta hai.
+  */
+
   touch-action: pan-y;
-
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 4%,
-    #000 96%,
-    transparent 100%
-  );
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    #000 4%,
-    #000 96%,
-    transparent 100%
-  );
-}
-
-.simpleTestimonialsDragging {
-  cursor: grabbing;
-}
-
-/* =========================================================
-   ROW SCROLLER
-========================================================= */
-
-.simpleTestimonialsRowScroller {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
 
   scrollbar-width: none;
 
   -ms-overflow-style: none;
 }
 
-.simpleTestimonialsRowScroller::-webkit-scrollbar {
+
+.abpsTestimonialsRow::-webkit-scrollbar {
   display: none;
 }
+
+
+.abpsTestimonialsRow.isDragging {
+  cursor: grabbing;
+}
+
 
 /* =========================================================
    TRACK
 ========================================================= */
 
-.simpleTestimonialsTrack {
-  display: flex;
+.abpsTestimonialsTrack {
   width: max-content;
-  gap: 20px;
+
+  display: flex;
+  align-items: stretch;
+
+  gap: 18px;
+
+  padding:
+    5px 9px;
 
   will-change: transform;
-
-  padding: 5px 0;
-
-  animation-play-state: running;
 }
 
-/*
-   AUTO ANIMATION
-*/
 
-.simpleTrackLeft {
-  animation: simpleMoveLeft 38s linear infinite;
+/* =========================================================
+   ROW 1 — LEFT TO RIGHT
+========================================================= */
+
+.abpsTrackToRight {
+  animation:
+    abpsMoveRight 48s linear infinite;
 }
 
-.simpleTrackRight {
-  animation: simpleMoveRight 38s linear infinite;
+
+/* =========================================================
+   ROW 2 — RIGHT TO LEFT
+========================================================= */
+
+.abpsTrackToLeft {
+  animation:
+    abpsMoveLeft 48s linear infinite;
 }
 
-/*
-   Hover pauses only the current row
-*/
 
-.simpleTestimonialsRowScroller:hover .simpleTestimonialsTrack {
+/* =========================================================
+   PAUSE ONLY HOVERED ROW
+========================================================= */
+
+.abpsTestimonialsRow:hover
+.abpsTestimonialsTrack {
   animation-play-state: paused;
 }
 
-/*
-   Dragging stops animation
-*/
 
-.simpleTestimonialsDragging .simpleTestimonialsTrack {
-  animation-play-state: paused !important;
+.abpsTestimonialsRow.isDragging
+.abpsTestimonialsTrack {
+  animation-play-state: paused;
 }
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes abpsMoveLeft {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(calc(-50% - 9px));
+  }
+
+}
+
+
+@keyframes abpsMoveRight {
+
+  from {
+    transform:
+      translateX(calc(-50% - 9px));
+  }
+
+  to {
+    transform:
+      translateX(0);
+  }
+
+}
+
 
 /* =========================================================
    CARD
 ========================================================= */
 
-.simpleTestimonialCard {
+.abpsTestimonialCard {
   position: relative;
 
-  flex: 0 0 390px;
-  min-height: 205px;
+  flex:
+    0 0 390px;
 
-  padding: 25px 25px 23px;
+  min-height: 225px;
+
+  padding:
+    25px 25px 23px;
 
   overflow: hidden;
 
-  border: 1px solid rgba(7, 26, 53, 0.10);
-  border-radius: 18px;
+  border:
+    1px solid rgba(7, 72, 117, 0.1);
 
-  background: #ffffff;
+  border-radius: 21px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
 
   box-shadow:
-    0 12px 35px rgba(7, 26, 53, 0.08),
-    0 2px 8px rgba(7, 26, 53, 0.04);
+    0 10px 30px rgba(6, 47, 87, 0.07);
 
   transition:
     transform 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
-.simpleTestimonialCard::before {
+
+.abpsTestimonialCard::before {
   content: "";
 
   position: absolute;
+
   top: 0;
-  left: 24px;
+  left: 0;
 
-  width: 72px;
-  height: 3px;
+  width: 100%;
+  height: 4px;
 
-  border-radius: 0 0 8px 8px;
+  opacity: 0;
 
-  background: linear-gradient(
-    90deg,
-    #d6b36a,
-    #e9cf8d
-  );
+  background:
+    linear-gradient(
+      90deg,
+      #0877a9,
+      #50b9e5,
+      #d7a43b
+    );
+
+  transition:
+    opacity 0.3s ease;
 }
 
-.simpleTestimonialCard::after {
-  content: "";
+
+.abpsTestimonialCard::after {
+  content: "“";
 
   position: absolute;
 
-  width: 150px;
-  height: 150px;
+  right: 18px;
+  bottom: -36px;
 
-  right: -85px;
-  bottom: -90px;
+  color:
+    rgba(8, 119, 169, 0.035);
 
-  border-radius: 50%;
+  font-family:
+    "Playfair Display",
+    serif;
 
-  background: rgba(8, 119, 169, 0.06);
+  font-size: 150px;
+  font-weight: 800;
+
+  line-height: 1;
 
   pointer-events: none;
 }
 
-.simpleTestimonialCard:hover {
-  transform: translateY(-6px);
 
-  border-color: rgba(8, 119, 169, 0.22);
+.abpsTestimonialCard:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(8, 119, 169, 0.18);
 
   box-shadow:
-    0 20px 45px rgba(7, 26, 53, 0.12),
-    0 0 0 1px rgba(8, 119, 169, 0.04);
+    0 17px 40px rgba(6, 47, 87, 0.11);
 }
+
+
+.abpsTestimonialCard:hover::before {
+  opacity: 1;
+}
+
 
 /* =========================================================
    CARD TOP
 ========================================================= */
 
-.simpleTestimonialTop {
+.abpsTestimonialCardTop {
   position: relative;
+
   z-index: 2;
 
-  display: flex;
+  display: grid;
+
+  grid-template-columns:
+    50px minmax(0, 1fr) 36px;
+
   align-items: center;
 
-  gap: 13px;
+  gap: 12px;
 }
 
-.simpleTestimonialAvatar {
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.abpsTestimonialAvatar {
   width: 50px;
   height: 50px;
 
-  flex-shrink: 0;
+  display: grid;
+  place-items: center;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border:
+    3px solid #ffffff;
 
-  border: 2px solid #d6b36a;
-  border-radius: 50%;
-
-  background: linear-gradient(
-    135deg,
-    #0877a9,
-    #071a35
-  );
+  border-radius: 15px;
 
   color: #ffffff;
 
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 900;
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9,
+      #06456f
+    );
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 16px;
+  font-weight: 700;
 
   box-shadow:
-    0 0 0 4px rgba(214, 179, 106, 0.08),
-    0 7px 18px rgba(7, 26, 53, 0.12);
+    0 7px 16px rgba(8, 119, 169, 0.2);
 }
 
-.simpleTestimonialInfo {
+
+/* =========================================================
+   PERSON
+========================================================= */
+
+.abpsTestimonialPerson {
   min-width: 0;
 }
 
-.simpleTestimonialInfo h3 {
+
+.abpsTestimonialPerson h3 {
+  margin:
+    0 0 3px;
+
+  color: #092f50;
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+.abpsTestimonialPerson p {
   margin: 0;
 
-  color: #071a35;
+  overflow: hidden;
 
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.3;
-  font-weight: 800;
+  color: #84939f;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.4;
 
   white-space: nowrap;
+
+  text-overflow: ellipsis;
 }
 
-.simpleTestimonialInfo p {
-  margin: 5px 0 0;
 
-  color: #64748b;
+/* =========================================================
+   QUOTE
+========================================================= */
 
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1.35;
-  font-weight: 600;
+.abpsTestimonialQuote {
+  width: 36px;
+  height: 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+
+  color: #c48a19;
+
+  background: #fff5dd;
+
+  font-size: 14px;
 }
 
-.simpleTestimonialQuoteIcon {
-  width: 37px;
-  height: 37px;
-
-  margin-left: auto;
-
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid rgba(214, 179, 106, 0.30);
-  border-radius: 50%;
-
-  background: rgba(224, 194, 126, 0.10);
-
-  color: #b38a36;
-
-  font-size: 13px;
-}
 
 /* =========================================================
    STARS
 ========================================================= */
 
-.simpleTestimonialStars {
+.abpsTestimonialStars {
   position: relative;
+
   z-index: 2;
+
+  margin-top: 17px;
 
   display: flex;
-  gap: 4px;
 
-  margin-top: 15px;
-}
+  gap: 3px;
 
-.simpleTestimonialStars svg {
-  color: #d6a94c;
+  color: #e3a51d;
 
   font-size: 12px;
-
-  filter: drop-shadow(
-    0 2px 4px rgba(214, 179, 106, 0.20)
-  );
 }
 
+
 /* =========================================================
-   TEXT
+   TESTIMONIAL TEXT
 ========================================================= */
 
-.simpleTestimonialText {
+.abpsTestimonialText {
   position: relative;
+
   z-index: 2;
 
-  max-width: 350px;
+  margin:
+    13px 0 0;
 
-  margin: 10px 0 0;
+  color: #49677d;
 
-  color: #405267;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 13.5px;
   font-weight: 500;
+
+  line-height: 1.7;
 }
 
+
 /* =========================================================
-   BOTTOM BAR
+   SMALL LINE
 ========================================================= */
 
-.simpleTestimonialsBottom {
-  width: min(1200px, 92%);
-  margin: 24px auto 0;
+.abpsTestimonialCardLine {
+  width: 37px;
+  height: 3px;
+
+  margin-top: 17px;
+
+  border-radius: 50px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0877a9,
+      #d6a94d
+    );
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.abpsTestimonialsBottom {
+  width: calc(100% - 80px);
+  max-width: 1450px;
+
+  margin:
+    34px auto 0;
+
+  padding-top: 24px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
 
-  padding: 17px 21px;
+  gap: 30px;
 
-  border: 1px solid rgba(7, 26, 53, 0.08);
-  border-radius: 13px;
-
-  background: #ffffff;
-
-  box-shadow: 0 10px 28px rgba(7, 26, 53, 0.06);
+  border-top:
+    1px solid rgba(6, 47, 87, 0.09);
 }
 
-.simpleTestimonialsBottom > div:first-child strong {
-  display: block;
 
-  color: #071a35;
+/* =========================================================
+   TRUST
+========================================================= */
 
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.simpleTestimonialsBottom > div:first-child span {
-  display: block;
-
-  margin-top: 3px;
-
-  color: #64748b;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.simpleTestimonialsBottomBadge {
+.abpsTestimonialsTrust {
   display: flex;
   align-items: center;
-  gap: 10px;
+
+  gap: 12px;
+}
+
+
+.abpsTrustIcon {
+  width: 43px;
+  height: 43px;
 
   flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 13px;
+
+  color: #c68c1d;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0c9,
+      #fff8e9
+    );
+
+  font-size: 16px;
 }
 
-.simpleTestimonialsBottomBadge span {
-  color: #d6a94c;
+
+.abpsTestimonialsTrust > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.abpsTestimonialsTrust strong {
+  color: #073557;
 
   font-size: 14px;
-  letter-spacing: 2px;
-}
-
-.simpleTestimonialsBottomBadge strong {
-  color: #0877a9;
-
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 13px;
   font-weight: 800;
 }
 
-/* =========================================================
-   ANIMATION
-========================================================= */
 
-@keyframes simpleMoveLeft {
-  from {
-    transform: translateX(-50%);
-  }
+.abpsTestimonialsTrust span {
+  color: #7d8f9d;
 
-  to {
-    transform: translateX(0);
-  }
+  font-size: 11px;
+  font-weight: 500;
 }
 
-@keyframes simpleMoveRight {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
 
 /* =========================================================
-   LARGE TABLET
+   RATING
 ========================================================= */
 
-@media (max-width: 1100px) {
-  .simpleTestimonials {
-    padding: 68px 0 72px;
+.abpsTestimonialsRating {
+  padding:
+    10px 14px;
+
+  display: grid;
+
+  grid-template-columns:
+    auto auto 30px;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border:
+    1px solid rgba(6, 47, 87, 0.08);
+
+  border-radius: 14px;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+}
+
+
+.abpsRatingStars {
+  display: flex;
+
+  gap: 2px;
+
+  color: #dca019;
+
+  font-size: 10px;
+}
+
+
+.abpsTestimonialsRating > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.abpsTestimonialsRating strong {
+  color: #073557;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+
+.abpsTestimonialsRating span {
+  margin-top: 1px;
+
+  color: #8a99a4;
+
+  font-size: 8px;
+  font-weight: 600;
+}
+
+
+.abpsRatingShield {
+  color: #0877a9;
+
+  font-size: 19px;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .abpsTestimonials {
+    padding:
+      65px 0 55px;
   }
 
-  .simpleTestimonialsHeader h2 {
-    font-size: 42px;
+
+  .abpsTestimonialsHeader {
+    width:
+      calc(100% - 50px);
   }
 
-  .simpleTestimonialsHeader p {
-    font-size: 17px;
+
+  .abpsTestimonialsBottom {
+    width:
+      calc(100% - 50px);
   }
 
-  .simpleTestimonialCard {
+
+  .abpsTestimonialCard {
     flex-basis: 360px;
+
+    min-height: 220px;
   }
 
-  .simpleTestimonialsTrack {
-    gap: 18px;
-  }
 }
+
 
 /* =========================================================
    TABLET
 ========================================================= */
 
 @media (max-width: 800px) {
-  .simpleTestimonials {
-    padding: 60px 0 65px;
+
+  .abpsTestimonials {
+    padding:
+      55px 0 48px;
   }
 
-  .simpleTestimonialsHeader {
-    margin-bottom: 27px;
+
+  .abpsTestimonialsHeader {
+    width:
+      calc(100% - 32px);
+
+    margin-bottom: 32px;
   }
 
-  .simpleTestimonialsLabel {
-    font-size: 11px;
-    letter-spacing: 2px;
+
+  .abpsTestimonialsHeader h2 {
+    font-size: 39px;
   }
 
-  .simpleTestimonialsHeader h2 {
-    font-size: 35px;
+
+  .abpsTestimonialCard {
+    flex-basis: 335px;
+
+    min-height: 215px;
+
+    padding:
+      22px;
   }
 
-  .simpleTestimonialsHeader p {
-    font-size: 16px;
-    line-height: 1.6;
+
+  .abpsTestimonialFade {
+    width: 40px;
   }
 
-  .simpleTestimonialsControls {
-    margin-bottom: 16px;
+
+  .abpsTestimonialsBottom {
+    width:
+      calc(100% - 32px);
+
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 17px;
   }
 
-  .simpleTestimonialsHint {
-    font-size: 12px;
-  }
-
-  .simpleTestimonialsArrows button {
-    width: 39px;
-    height: 39px;
-  }
-
-  .simpleTestimonialCard {
-    flex-basis: 340px;
-    min-height: 195px;
-    padding: 22px;
-  }
-
-  .simpleTestimonialInfo h3 {
-    font-size: 16px;
-  }
-
-  .simpleTestimonialInfo p {
-    font-size: 11px;
-  }
-
-  .simpleTestimonialText {
-    font-size: 14px;
-  }
-
-  .simpleTestimonialsTrack {
-    animation-duration: 34s;
-  }
 }
+
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
-  .simpleTestimonials {
-    padding: 52px 0 58px;
+@media (max-width: 560px) {
+
+  .abpsTestimonials {
+    padding:
+      45px 0 40px;
   }
 
-  .simpleTestimonialsHeader {
-    width: 91%;
-    margin-bottom: 24px;
+
+  .abpsTestimonialsHeader {
+    width: 100%;
+
+    padding:
+      0 16px;
+
+    margin-bottom: 27px;
   }
 
-  .simpleTestimonialsLabel {
-    gap: 7px;
-    margin-bottom: 10px;
 
+  .abpsTestimonialsLabel {
     font-size: 9px;
+
     letter-spacing: 1.4px;
   }
 
-  .simpleTestimonialsLabel::before,
-  .simpleTestimonialsLabel::after {
-    width: 25px;
+
+  .abpsTestimonialsLabel span {
+    width: 20px;
   }
 
-  .simpleTestimonialsHeader h2 {
-    font-size: 29px;
-    line-height: 1.18;
-    letter-spacing: -0.5px;
+
+  .abpsTestimonialsHeader h2 {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
   }
 
-  .simpleTestimonialsHeader p {
-    max-width: 370px;
-    margin-top: 10px;
 
-    font-size: 14px;
-    line-height: 1.55;
+  .abpsTestimonialsHeader p {
+    margin-top: 13px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
   }
 
-  .simpleTestimonialsControls {
-    width: 91%;
-    margin-bottom: 13px;
-  }
 
-  .simpleTestimonialsHint {
-    font-size: 11px;
-  }
-
-  .simpleTestimonialsMouseIcon {
-    width: 27px;
-    height: 27px;
-    font-size: 14px;
-  }
-
-  .simpleTestimonialsArrows {
-    gap: 6px;
-  }
-
-  .simpleTestimonialsArrows button {
-    width: 36px;
-    height: 36px;
-    font-size: 12px;
-  }
-
-  .simpleTestimonialsSlider {
-    gap: 14px;
-
-    mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      #000 3%,
-      #000 97%,
-      transparent 100%
-    );
-
-    -webkit-mask-image: linear-gradient(
-      to right,
-      transparent 0%,
-      #000 3%,
-      #000 97%,
-      transparent 100%
-    );
-  }
-
-  .simpleTestimonialsTrack {
+  .abpsTestimonialsMarquee {
     gap: 13px;
   }
 
-  .simpleTrackLeft,
-  .simpleTrackRight {
-    animation-duration: 29s;
+
+  .abpsTestimonialsTrack {
+    gap: 12px;
+
+    padding:
+      4px 6px;
   }
 
-  .simpleTestimonialCard {
-    flex-basis: 305px;
-    min-height: 190px;
-    padding: 20px;
-    border-radius: 16px;
+
+  .abpsTestimonialCard {
+    flex-basis:
+      min(310px, 83vw);
+
+    min-height: 205px;
+
+    padding:
+      19px;
+
+    border-radius: 17px;
   }
 
-  .simpleTestimonialCard::before {
-    left: 20px;
-    width: 55px;
+
+  .abpsTestimonialCardTop {
+    grid-template-columns:
+      44px minmax(0, 1fr) 32px;
+
+    gap: 9px;
   }
 
-  .simpleTestimonialAvatar {
+
+  .abpsTestimonialAvatar {
     width: 44px;
     height: 44px;
-    font-size: 11px;
-  }
 
-  .simpleTestimonialInfo h3 {
+    border-radius: 12px;
+
     font-size: 14px;
   }
 
-  .simpleTestimonialInfo p {
-    margin-top: 4px;
-    font-size: 10px;
+
+  .abpsTestimonialPerson h3 {
+    font-size: 15px;
   }
 
-  .simpleTestimonialQuoteIcon {
-    width: 31px;
-    height: 31px;
-    font-size: 10px;
+
+  .abpsTestimonialPerson p {
+    font-size: 8.5px;
   }
 
-  .simpleTestimonialStars {
-    margin-top: 13px;
-  }
 
-  .simpleTestimonialStars svg {
-    font-size: 10px;
-  }
+  .abpsTestimonialQuote {
+    width: 32px;
+    height: 32px;
 
-  .simpleTestimonialText {
-    max-width: 270px;
-    margin-top: 8px;
-
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  .simpleTestimonialsBottom {
-    width: 91%;
-    margin-top: 20px;
-
-    padding: 15px 16px;
-
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .simpleTestimonialsBottom > div:first-child strong {
-    font-size: 17px;
-  }
-
-  .simpleTestimonialsBottom > div:first-child span {
     font-size: 12px;
-    line-height: 1.45;
   }
 
-  .simpleTestimonialsBottomBadge {
+
+  .abpsTestimonialStars {
+    margin-top: 14px;
+
+    font-size: 10px;
+  }
+
+
+  .abpsTestimonialText {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+
+  .abpsTestimonialFade {
+    width: 20px;
+  }
+
+
+  .abpsTestimonialsBottom {
+    width:
+      calc(100% - 30px);
+
+    margin-top: 26px;
+
+    padding-top: 18px;
+  }
+
+
+  .abpsTestimonialsRating {
     width: 100%;
-    justify-content: space-between;
+
+    grid-template-columns:
+      auto 1fr auto;
   }
+
+
+  .abpsTrackToRight,
+  .abpsTrackToLeft {
+    animation-duration: 38s;
+  }
+
 }
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-  .simpleTestimonials {
-    padding: 45px 0 50px;
-  }
-
-  .simpleTestimonialsHeader h2 {
-    font-size: 26px;
-  }
-
-  .simpleTestimonialsHeader p {
-    font-size: 13px;
-  }
-
-  .simpleTestimonialsHint {
-    font-size: 10px;
-  }
-
-  .simpleTestimonialsArrows button {
-    width: 34px;
-    height: 34px;
-  }
-
-  .simpleTestimonialCard {
-    flex-basis: 280px;
-    min-height: 182px;
-    padding: 18px;
-  }
-
-  .simpleTestimonialAvatar {
-    width: 42px;
-    height: 42px;
-  }
-
-  .simpleTestimonialInfo h3 {
-    font-size: 13px;
-  }
-
-  .simpleTestimonialInfo p {
-    font-size: 9px;
-  }
-
-  .simpleTestimonialText {
-    font-size: 12px;
-  }
-}
-
-/* =========================================================
-   VERY SMALL DEVICES
-========================================================= */
-
-@media (max-width: 340px) {
-  .simpleTestimonialsHeader h2 {
-    font-size: 23px;
-  }
-
-  .simpleTestimonialsHeader p {
-    font-size: 12px;
-  }
-
-  .simpleTestimonialsHint {
-    display: none;
-  }
-
-  .simpleTestimonialCard {
-    flex-basis: 260px;
-  }
-
-  .simpleTestimonialText {
-    font-size: 11.5px;
-  }
-}
 
 /* =========================================================
    ACCESSIBILITY
 ========================================================= */
 
-.simpleTestimonialsArrows button:focus-visible {
-  outline: 3px solid rgba(8, 119, 169, 0.25);
-  outline-offset: 3px;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .simpleTestimonialsTrack {
+
+  .abpsTrackToRight,
+  .abpsTrackToLeft {
     animation: none;
   }
 
-  .simpleTestimonialCard,
-  .simpleTestimonialsArrows button {
-    transition: none;
+}
+
+/* =========================================================
+   AB PUBLIC SCHOOL TESTIMONIALS
+   RESPONSIVE BIGGER SIZE + H2 TWO LINES
+   PASTE AT VERY END OF Testimonials.css
+========================================================= */
+
+
+/* =========================================================
+   MAIN HEADING - ALWAYS 2 LINES
+========================================================= */
+
+.abpsTestimonialsHeader h2 span {
+  display: block;
+  margin-top: 5px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+  .abpsTestimonials {
+    padding:
+      65px 0 58px;
+  }
+
+
+  /* ===============================
+     HEADER
+  =============================== */
+
+  .abpsTestimonialsHeader {
+    width:
+      calc(100% - 30px);
+
+    max-width: 760px;
+
+    margin-bottom: 38px;
+
+    padding:
+      0 18px;
+  }
+
+
+  .abpsTestimonialsLabel {
+    gap: 11px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+
+    letter-spacing: 1.8px;
+  }
+
+
+  .abpsTestimonialsLabel span {
+    width: 32px;
+  }
+
+
+  /* MAIN H2 */
+
+  .abpsTestimonialsHeader h2 {
+    font-size: 46px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1.1px;
+  }
+
+
+  .abpsTestimonialsHeader h2 span {
+    display: block;
+
+    margin-top: 5px;
+  }
+
+
+  .abpsTestimonialsHeader p {
+    max-width: 680px;
+
+    margin-top: 17px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ===============================
+     MARQUEE
+  =============================== */
+
+  .abpsTestimonialsMarquee {
+    gap: 17px;
+  }
+
+
+  .abpsTestimonialsTrack {
+    gap: 16px;
+  }
+
+
+  /* ===============================
+     TESTIMONIAL CARD
+  =============================== */
+
+  .abpsTestimonialCard {
+    flex-basis: 390px;
+
+    min-height: 260px;
+
+    padding:
+      25px 24px 24px;
+
+    border-radius: 21px;
+  }
+
+
+  .abpsTestimonialCardTop {
+    grid-template-columns:
+      55px minmax(0, 1fr) 40px;
+
+    gap: 13px;
+  }
+
+
+  /* AVATAR */
+
+  .abpsTestimonialAvatar {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    font-size: 17px;
+  }
+
+
+  /* NAME */
+
+  .abpsTestimonialPerson h3 {
+    margin-bottom: 5px;
+
+    font-size: 19px;
+
+    line-height: 1.25;
+  }
+
+
+  /* PARENT / CLASS DETAILS */
+
+  .abpsTestimonialPerson p {
+    font-size: 12px;
+
+    line-height: 1.45;
+  }
+
+
+  /* QUOTE BOX */
+
+  .abpsTestimonialQuote {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+  }
+
+
+  /* STARS */
+
+  .abpsTestimonialStars {
+    margin-top: 19px;
+
+    gap: 4px;
+
+    font-size: 14px;
+  }
+
+
+  /* REVIEW TEXT */
+
+  .abpsTestimonialText {
+    margin-top: 14px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  .abpsTestimonialCardLine {
+    width: 44px;
+
+    height: 3px;
+
+    margin-top: 19px;
+  }
+
+
+  /* ===============================
+     BOTTOM
+  =============================== */
+
+  .abpsTestimonialsBottom {
+    width:
+      calc(100% - 34px);
+
+    margin-top: 36px;
+
+    padding-top: 26px;
+
+    gap: 20px;
+  }
+
+
+  /* TRUST ICON */
+
+  .abpsTrustIcon {
+    width: 50px;
+    height: 50px;
+
+    flex:
+      0 0 50px;
+
+    border-radius: 14px;
+
+    font-size: 19px;
+  }
+
+
+  .abpsTestimonialsTrust {
+    gap: 14px;
+  }
+
+
+  .abpsTestimonialsTrust strong {
+    font-size: 16px;
+  }
+
+
+  .abpsTestimonialsTrust span {
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+
+
+  /* RATING CARD */
+
+  .abpsTestimonialsRating {
+    min-height: 60px;
+
+    padding:
+      12px 16px;
+
+    gap: 13px;
+
+    border-radius: 15px;
+  }
+
+
+  .abpsRatingStars {
+    gap: 3px;
+
+    font-size: 13px;
+  }
+
+
+  .abpsTestimonialsRating strong {
+    font-size: 14px;
+  }
+
+
+  .abpsTestimonialsRating span {
+    margin-top: 3px;
+
+    font-size: 11px;
+  }
+
+
+  .abpsRatingShield {
+    font-size: 23px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 560px) {
+
+  .abpsTestimonials {
+    padding:
+      55px 0 48px;
+  }
+
+
+  /* ===============================
+     HEADER
+  =============================== */
+
+  .abpsTestimonialsHeader {
+    width: 100%;
+
+    padding:
+      0 18px;
+
+    margin-bottom: 33px;
+  }
+
+
+  .abpsTestimonialsLabel {
+    gap: 8px;
+
+    margin-bottom: 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .abpsTestimonialsLabel span {
+    width: 25px;
+  }
+
+
+  /* =================================
+     MAIN H2 - EXACTLY TWO LINES
+  ================================= */
+
+  .abpsTestimonialsHeader h2 {
+    max-width: 500px;
+
+    margin:
+      0 auto;
+
+    font-size: 40px;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.9px;
+  }
+
+
+  .abpsTestimonialsHeader h2 span {
+    display: block;
+
+    margin-top: 5px;
+  }
+
+
+  /* DESCRIPTION */
+
+  .abpsTestimonialsHeader p {
+    max-width: 470px;
+
+    margin:
+      16px auto 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* ===============================
+     MARQUEE
+  =============================== */
+
+  .abpsTestimonialsMarquee {
+    gap: 15px;
+  }
+
+
+  .abpsTestimonialsTrack {
+    gap: 14px;
+
+    padding:
+      5px 7px;
+  }
+
+
+  /* ===============================
+     CARD
+  =============================== */
+
+  .abpsTestimonialCard {
+    flex-basis:
+      min(355px, 88vw);
+
+    min-height: 265px;
+
+    padding:
+      23px 21px 22px;
+
+    border-radius: 20px;
+  }
+
+
+  .abpsTestimonialCardTop {
+    grid-template-columns:
+      52px minmax(0, 1fr) 38px;
+
+    gap: 12px;
+  }
+
+
+  /* AVATAR */
+
+  .abpsTestimonialAvatar {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 14px;
+
+    font-size: 17px;
+  }
+
+
+  /* NAME */
+
+  .abpsTestimonialPerson h3 {
+    margin:
+      0 0 4px;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+  }
+
+
+  /* PERSON DETAILS */
+
+  .abpsTestimonialPerson p {
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  /* QUOTE */
+
+  .abpsTestimonialQuote {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+  }
+
+
+  /* STARS */
+
+  .abpsTestimonialStars {
+    margin-top: 18px;
+
+    gap: 4px;
+
+    font-size: 13px;
+  }
+
+
+  /* REVIEW */
+
+  .abpsTestimonialText {
+    margin-top: 13px;
+
+    font-size: 14.5px;
+
+    line-height: 1.68;
+  }
+
+
+  .abpsTestimonialCardLine {
+    width: 43px;
+
+    margin-top: 18px;
+  }
+
+
+  /* ===============================
+     BOTTOM TRUST
+  =============================== */
+
+  .abpsTestimonialsBottom {
+    width:
+      calc(100% - 32px);
+
+    margin-top: 32px;
+
+    padding-top: 22px;
+
+    gap: 18px;
+  }
+
+
+  .abpsTestimonialsTrust {
+    width: 100%;
+
+    gap: 13px;
+  }
+
+
+  .abpsTrustIcon {
+    width: 50px;
+    height: 50px;
+
+    flex:
+      0 0 50px;
+
+    border-radius: 14px;
+
+    font-size: 19px;
+  }
+
+
+  .abpsTestimonialsTrust strong {
+    font-size: 16px;
+
+    line-height: 1.3;
+  }
+
+
+  .abpsTestimonialsTrust span {
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+  }
+
+
+  /* ===============================
+     RATING
+  =============================== */
+
+  .abpsTestimonialsRating {
+    width: 100%;
+
+    min-height: 65px;
+
+    padding:
+      13px 15px;
+
+    grid-template-columns:
+      auto 1fr auto;
+
+    gap: 12px;
+
+    border-radius: 15px;
+  }
+
+
+  .abpsRatingStars {
+    gap: 3px;
+
+    font-size: 13px;
+  }
+
+
+  .abpsTestimonialsRating strong {
+    font-size: 14px;
+  }
+
+
+  .abpsTestimonialsRating span {
+    margin-top: 3px;
+
+    font-size: 11px;
+  }
+
+
+  .abpsRatingShield {
+    font-size: 24px;
+  }
+
+
+  .abpsTestimonialFade {
+    width: 15px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abpsTestimonials {
+    padding:
+      50px 0 44px;
+  }
+
+
+  .abpsTestimonialsHeader {
+    padding:
+      0 14px;
+  }
+
+
+  /* H2 */
+
+  .abpsTestimonialsHeader h2 {
+    font-size: 33.5px;
+
+    line-height: 1.09;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .abpsTestimonialsHeader h2 span {
+    display: inline;
+
+    margin-top: 4px;
+  }
+
+
+  .abpsTestimonialsHeader p {
+    font-size: 14.5px;
+
+    line-height: 1.65;
+  }
+
+
+  /* CARD */
+
+  .abpsTestimonialCard {
+    flex-basis:
+      min(340px, 91vw);
+
+    min-height: 260px;
+
+    padding:
+      21px 18px;
+  }
+
+
+  .abpsTestimonialCardTop {
+    grid-template-columns:
+      49px minmax(0, 1fr) 36px;
+
+    gap: 10px;
+  }
+
+
+  .abpsTestimonialAvatar {
+    width: 49px;
+    height: 49px;
+
+    font-size: 16px;
+  }
+
+
+  .abpsTestimonialPerson h3 {
+    font-size: 17px;
+  }
+
+
+  .abpsTestimonialPerson p {
+    font-size: 11.5px;
+  }
+
+
+  .abpsTestimonialQuote {
+    width: 36px;
+    height: 36px;
+
+    font-size: 14px;
+  }
+
+
+  .abpsTestimonialStars {
+    font-size: 12.5px;
+  }
+
+
+  .abpsTestimonialText {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  /* BOTTOM */
+
+  .abpsTestimonialsTrust strong {
+    font-size: 15.5px;
+  }
+
+
+  .abpsTestimonialsTrust span {
+    font-size: 12.5px;
+  }
+
+
+  .abpsTestimonialsRating strong {
+    font-size: 13.5px;
+  }
+
+
+  .abpsTestimonialsRating span {
+    font-size: 10.5px;
   }
 }

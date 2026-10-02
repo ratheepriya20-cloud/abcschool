@@ -1,28 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap");
+
+
 /* =========================================================
-   EDUCATIONAL TRIPS
+   ROOT
 ========================================================= */
 
 .abtrip-page {
-  --abtrip-navy: #071a35;
-  --abtrip-navy2: #0b2748;
-  --abtrip-sky: #0877a9;
-  --abtrip-skyLight: #eaf6fa;
-  --abtrip-gold: #c9a86a;
-  --abtrip-goldLight: #ead9ad;
-  --abtrip-cream: #f8f4ea;
-  --abtrip-white: #ffffff;
-  --abtrip-text: #24364b;
-  --abtrip-muted: #687588;
+  --trip-navy: #062c53;
+  --trip-dark: #031e3a;
+  --trip-blue: #0877a9;
+
+  --trip-gold: #e4ae47;
+  --trip-gold-light: #ffdc88;
+
+  --trip-cream: #fffaf0;
+  --trip-soft: #f5f8fa;
+
+  --trip-white: #ffffff;
+
+  --trip-text: #263d55;
+  --trip-muted: #657486;
 
   width: 100%;
-  overflow: hidden;
-  background: #fff;
-  color: var(--abtrip-text);
 
-  font-family:
-    "Inter",
-    "Poppins",
-    sans-serif;
+  overflow: hidden;
+
+  color: var(--trip-text);
+
+  background: #ffffff;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+
+.abtrip-page *,
+.abtrip-page *::before,
+.abtrip-page *::after {
+  box-sizing: border-box;
+}
+
+
+.abtrip-page button {
+  font-family: inherit;
+}
+
+
+.abtrip-page img {
+  display: block;
+
+  max-width: 100%;
+}
+
+
+.abtrip-container {
+  width: min(1480px, calc(100% - 80px));
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.abtrip-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 8px 15px;
+
+  border-radius: 50px;
+
+  color: #7c5514;
+
+  background: #f8d77f;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  letter-spacing: 1.2px;
+}
+
+
+.abtrip-label-light {
+  color: var(--trip-navy);
+
+  background: var(--trip-gold-light);
+}
+
+
+.abtrip-btn {
+  min-height: 59px;
+
+  padding: 0 27px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  border-radius: 50px;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+
+.abtrip-btn:hover {
+  transform: translateY(-3px);
+}
+
+
+.abtrip-btn-gold {
+  border: 0;
+
+  color: var(--trip-navy);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe096,
+      #e8ac3e
+    );
+
+  box-shadow:
+    0 12px 30px rgba(228, 174, 71, 0.22);
+}
+
+
+.abtrip-btn-outline {
+  border:
+    1.5px solid rgba(255, 255, 255, 0.72);
+
+  color: white;
+
+  background:
+    rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(7px);
+}
+
+
+.abtrip-btn-white {
+  border:
+    1.5px solid var(--trip-navy);
+
+  color: var(--trip-navy);
+
+  background:
+    rgba(255, 255, 255, 0.7);
 }
 
 
@@ -32,946 +173,1371 @@
 
 .abtrip-hero {
   position: relative;
-  min-height: 550px;
+
+  min-height: 650px;
+
+  padding: 95px 0 60px;
 
   display: flex;
+
   align-items: center;
-  justify-content: center;
 
-  padding: 65px 7%;
+  isolation: isolate;
 
-  background:
-    radial-gradient(
-      circle at 12% 25%,
-      rgba(8, 119, 169, 0.25),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 88% 80%,
-      rgba(201, 168, 106, 0.16),
-      transparent 30%
-    ),
-    linear-gradient(
-      135deg,
-      #06172f,
-      #0b2949,
-      #06172f
-    );
+  overflow: hidden;
 
-  color: white;
+  background: var(--trip-dark);
 }
 
-.abtrip-heroGlow {
+
+.abtrip-hero-bg {
   position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
 
-.abtrip-glowOne {
-  width: 180px;
-  height: 180px;
-  left: -80px;
-  top: 60px;
-  border: 1px solid rgba(201, 168, 106, 0.25);
-}
+  z-index: -5;
 
-.abtrip-glowTwo {
-  width: 250px;
-  height: 250px;
-  right: -100px;
-  bottom: -130px;
-  border: 1px solid rgba(8, 119, 169, 0.28);
-}
-
-.abtrip-heroPattern {
-  position: absolute;
   inset: 0;
 
-  opacity: 0.055;
-
-  background-image:
-    linear-gradient(
-      45deg,
-      transparent 48%,
-      #c9a86a 49%,
-      transparent 51%
-    );
-
-  background-size: 40px 40px;
-}
-
-.abtrip-heroContent {
-  position: relative;
-  z-index: 2;
-
-  width: min(1050px, 100%);
-
-  text-align: center;
-}
-
-.abtrip-eyebrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 13px;
-
-  margin-bottom: 20px;
-
-  color: var(--abtrip-goldLight);
-
-  font-size: 11px;
-  font-weight: 800;
-
-  letter-spacing: 3px;
-}
-
-.abtrip-eyebrow span {
-  width: 55px;
-  height: 1px;
-
-  background: var(--abtrip-gold);
-}
-
-.abtrip-eyebrow svg {
-  color: var(--abtrip-gold);
-  font-size: 18px;
-}
-
-.abtrip-hero h1 {
-  margin: 0;
-
-  color: white;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(42px, 5vw, 68px);
-
-  line-height: 1.04;
-
-  font-weight: 500;
-
-  letter-spacing: -1.5px;
-}
-
-.abtrip-hero h1 strong {
-  display: inline;
-  margin-left: 8px;
-
-  color: var(--abtrip-goldLight);
-
-  font-weight: 600;
-}
-
-.abtrip-hero p {
-  width: min(760px, 100%);
-
-  margin: 23px auto 0;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-.abtrip-heroBottom {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 18px;
-
-  margin-top: 28px;
-}
-
-.abtrip-heroBottom i {
-  display: block;
-
-  width: 90px;
-  height: 1px;
-
-  background: rgba(201, 168, 106, 0.55);
-}
-
-.abtrip-heroBottom span {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  color: var(--abtrip-goldLight);
-
-  font-size: 10px;
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-.abtrip-heroBottom svg {
-  color: var(--abtrip-gold);
-}
-
-
-/* =========================================================
-   INTRO
-========================================================= */
-
-.abtrip-intro {
-  padding: 45px 7%;
-
-  background: var(--abtrip-cream);
-}
-
-.abtrip-introContainer {
-  width: min(1180px, 100%);
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: 115px 1fr;
-
-  gap: 45px;
-}
-
-.abtrip-introNumber {
-  padding-top: 4px;
-
-  border-right: 1px solid rgba(7, 26, 53, 0.15);
-}
-
-.abtrip-introNumber strong {
-  display: block;
-
-  color: var(--abtrip-navy);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 50px;
-
-  line-height: 1;
-}
-
-.abtrip-introNumber span {
-  display: block;
-
-  margin-top: 12px;
-
-  color: var(--abtrip-gold);
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-
-  writing-mode: vertical-rl;
-
-  transform: rotate(180deg);
-}
-
-.abtrip-smallTitle {
-  color: var(--abtrip-sky);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2.3px;
-}
-
-.abtrip-introContent h2 {
-  margin: 9px 0 14px;
-
-  color: var(--abtrip-navy);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(31px, 4vw, 47px);
-
-  line-height: 1.1;
-
-  font-weight: 500;
-
-  white-space: nowrap;
-}
-
-.abtrip-introContent h2 strong {
-  margin-left: 9px;
-
-  color: var(--abtrip-sky);
-
-  font-weight: 600;
-}
-
-.abtrip-introContent > p {
-  max-width: 820px;
-
-  margin: 0;
-
-  color: var(--abtrip-muted);
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
-
-.abtrip-introFeatures {
-  display: flex;
-
-  gap: 14px;
-
-  margin-top: 23px;
-}
-
-.abtrip-introFeature {
-  min-width: 175px;
-
-  display: flex;
-  align-items: center;
-
-  gap: 11px;
-
-  padding: 12px 14px;
-
-  background: white;
-
-  border: 1px solid rgba(7, 26, 53, 0.08);
-
-  border-radius: 9px;
-
-  box-shadow: 0 8px 22px rgba(7, 26, 53, 0.05);
-}
-
-.abtrip-introFeature > span {
-  width: 37px;
-  height: 37px;
-
-  flex-shrink: 0;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 8px;
-
-  background: var(--abtrip-navy);
-
-  color: var(--abtrip-goldLight);
-}
-
-.abtrip-introFeature strong {
-  display: block;
-
-  color: var(--abtrip-navy);
-
-  font-size: 12px;
-}
-
-.abtrip-introFeature small {
-  display: block;
-
-  margin-top: 3px;
-
-  color: var(--abtrip-muted);
-
-  font-size: 9px;
-}
-
-
-/* =========================================================
-   GRID SECTION
-========================================================= */
-
-.abtrip-gridSection {
-  padding: 45px 7%;
-
-  background: white;
-}
-
-.abtrip-sectionHeading {
-  width: min(1100px, 100%);
-
-  margin: 0 auto 30px;
-
-  text-align: center;
-}
-
-.abtrip-sectionHeading > span {
-  color: var(--abtrip-gold);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2.5px;
-}
-
-.abtrip-sectionHeading h2 {
-  margin: 8px 0 10px;
-
-  color: var(--abtrip-navy);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(31px, 4vw, 47px);
-
-  line-height: 1.1;
-
-  font-weight: 500;
-
-  white-space: nowrap;
-}
-
-.abtrip-sectionHeading h2 strong {
-  margin-left: 8px;
-
-  color: var(--abtrip-sky);
-
-  font-weight: 600;
-}
-
-.abtrip-sectionHeading p {
-  max-width: 650px;
-
-  margin: auto;
-
-  color: var(--abtrip-muted);
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   GRID
-========================================================= */
-
-.abtrip-grid {
-  width: min(1180px, 100%);
-
-  margin: auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 24px;
-}
-
-
-/* =========================================================
-   CARD
-========================================================= */
-
-.abtrip-card {
-  display: grid;
-
-  grid-template-columns: 43% 57%;
-
-  min-height: 285px;
-
-  overflow: hidden;
-
-  background: white;
-
-  border: 1px solid rgba(7, 26, 53, 0.10);
-
-  border-radius: 15px;
-
-  box-shadow: 0 10px 32px rgba(7, 26, 53, 0.07);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.abtrip-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 18px 42px rgba(7, 26, 53, 0.12);
-}
-
-
-/* =========================================================
-   IMAGE
-========================================================= */
-
-.abtrip-imageBox {
-  position: relative;
-
-  min-height: 285px;
-
-  overflow: hidden;
-
-  background: var(--abtrip-navy);
-}
-
-.abtrip-imageBox img {
   width: 100%;
-  height: 100%;
 
-  display: block;
+  height: 100%;
 
   object-fit: cover;
 
-  transition: transform 0.55s ease;
+  object-position: center;
 }
 
-.abtrip-card:hover .abtrip-imageBox img {
-  transform: scale(1.07);
-}
 
-.abtrip-imageOverlay {
+.abtrip-hero-overlay {
   position: absolute;
+
+  z-index: -4;
+
   inset: 0;
 
   background:
     linear-gradient(
-      180deg,
-      rgba(7, 26, 53, 0.04),
-      rgba(7, 26, 53, 0.75)
+      90deg,
+      rgba(3, 30, 58, 0.99) 0%,
+      rgba(4, 40, 75, 0.95) 37%,
+      rgba(4, 40, 75, 0.68) 58%,
+      rgba(4, 40, 75, 0.1) 100%
     );
 }
 
-.abtrip-number {
-  position: absolute;
 
-  top: 15px;
-  left: 15px;
+.abtrip-hero-inner {
+  position: relative;
+
+  z-index: 3;
+}
+
+
+.abtrip-hero-content {
+  max-width: 800px;
+}
+
+
+.abtrip-hero h1 {
+  max-width: 850px;
+
+  margin: 20px 0 20px;
 
   color: white;
 
   font-family: "Playfair Display", serif;
 
-  font-size: 25px;
+  font-size:64px;
 
-  font-weight: 600;
-}
+  font-weight: 700;
 
-.abtrip-imageLabel {
-  position: absolute;
+  line-height: 0.95;
 
-  left: 15px;
-  bottom: 15px;
-
-  padding: 6px 8px;
-
-  color: white;
-
-  background: rgba(7, 26, 53, 0.72);
-
-  border-left: 2px solid var(--abtrip-gold);
-
-  font-size: 7px;
-
-  font-weight: 800;
-
-  letter-spacing: 1.3px;
-
-  backdrop-filter: blur(8px);
-}
-
-.abtrip-icon {
-  position: absolute;
-
-  right: 15px;
-  bottom: 15px;
-
-  width: 45px;
-  height: 45px;
-
-  display: grid;
-  place-items: center;
-
-  border-radius: 50%;
-
-  background: var(--abtrip-gold);
-
-  color: var(--abtrip-navy);
-
-  font-size: 17px;
-
-  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.22);
+  letter-spacing: -2.5px;
 }
 
 
-/* =========================================================
-   CONTENT
-========================================================= */
-
-.abtrip-cardContent {
-  padding: 24px 23px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.abtrip-hero h1 span {
+  display: inline;
+margin-left: 9px;
+  color: var(--trip-gold-light);
 }
 
-.abtrip-cardSubtitle {
-  color: var(--abtrip-gold);
 
-  font-size: 8px;
+.abtrip-hero-content > p {
+  max-width: 700px;
 
-  font-weight: 800;
-
-  letter-spacing: 1.4px;
-}
-
-.abtrip-cardContent h3 {
-  margin: 7px 0 9px;
-
-  color: var(--abtrip-navy);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 25px;
-
-  line-height: 1.1;
-}
-
-.abtrip-cardLine {
-  width: 42px;
-  height: 2px;
-
-  margin-bottom: 11px;
-
-  background: var(--abtrip-sky);
-}
-
-.abtrip-cardContent p {
   margin: 0;
 
-  color: var(--abtrip-muted);
+  color: rgba(255, 255, 255, 0.9);
 
-  font-size: 12px;
+  font-size: 21px;
 
   line-height: 1.65;
+
+  font-weight: 500;
 }
 
 
-/* =========================================================
-   TAGS
-========================================================= */
+.abtrip-hero-actions {
+  margin-top: 30px;
 
-.abtrip-tags {
   display: flex;
 
   flex-wrap: wrap;
 
-  gap: 6px;
-
-  margin-top: 15px;
-}
-
-.abtrip-tags span {
-  display: inline-flex;
-  align-items: center;
-
-  gap: 5px;
-
-  padding: 6px 8px;
-
-  border-radius: 5px;
-
-  background: var(--abtrip-skyLight);
-
-  color: var(--abtrip-navy);
-
-  font-size: 8px;
-
-  font-weight: 700;
-}
-
-.abtrip-tags svg {
-  color: var(--abtrip-gold);
-
-  font-size: 7px;
+  gap: 13px;
 }
 
 
-/* =========================================================
-   BENEFITS
-========================================================= */
+/* HERO POINTS */
 
-.abtrip-benefits {
-  padding: 45px 7%;
+.abtrip-hero-points {
+  margin-top: 48px;
 
-  background: var(--abtrip-cream);
-}
-
-.abtrip-benefitsContainer {
-  width: min(1180px, 100%);
-
-  margin: auto;
-}
-
-.abtrip-benefitsHeading {
-  max-width: 720px;
-
-  margin-bottom: 27px;
-}
-
-.abtrip-benefitsHeading > span {
-  color: var(--abtrip-sky);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2px;
-}
-
-.abtrip-benefitsHeading h2 {
-  margin: 8px 0 10px;
-
-  color: var(--abtrip-navy);
-
-  font-family: "Playfair Display", serif;
-
-  font-size: clamp(30px, 4vw, 45px);
-
-  line-height: 1.1;
-
-  font-weight: 500;
-
-  white-space: nowrap;
-}
-
-.abtrip-benefitsHeading h2 strong {
-  margin-left: 7px;
-
-  color: var(--abtrip-sky);
-
-  font-weight: 600;
-}
-
-.abtrip-benefitsHeading p {
-  margin: 0;
-
-  color: var(--abtrip-muted);
-
-  font-size: 13px;
-
-  line-height: 1.7;
-}
-
-.abtrip-benefitGrid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
-  gap: 17px;
+  gap: 20px;
 }
 
-.abtrip-benefitCard {
-  padding: 20px;
 
-  background: white;
-
-  border: 1px solid rgba(7, 26, 53, 0.08);
-
-  border-radius: 11px;
-
-  transition: 0.3s ease;
-}
-
-.abtrip-benefitCard:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 30px rgba(7, 26, 53, 0.08);
-}
-
-.abtrip-benefitTop {
+.abtrip-hero-points article {
   display: flex;
 
   align-items: center;
 
-  justify-content: space-between;
-
-  margin-bottom: 16px;
+  gap: 13px;
 }
 
-.abtrip-benefitTop span {
-  color: var(--abtrip-gold);
 
-  font-family: "Playfair Display", serif;
+.abtrip-hero-points article > span {
+  width: 53px;
 
-  font-size: 19px;
+  height: 53px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--trip-gold-light);
+
+  border:
+    1px solid rgba(255, 220, 136, 0.6);
+
+  background:
+    rgba(255, 255, 255, 0.07);
+
+  font-size: 21px;
 }
 
-.abtrip-benefitTop svg {
-  width: 38px;
-  height: 38px;
 
-  padding: 10px;
-
-  border-radius: 8px;
-
-  background: var(--abtrip-navy);
-
-  color: var(--abtrip-goldLight);
-}
-
-.abtrip-benefitCard > strong {
+.abtrip-hero-points strong {
   display: block;
 
-  color: var(--abtrip-navy);
+  color: white;
+
+  font-size: 16px;
+
+  text-transform: uppercase;
+}
+
+
+.abtrip-hero-points small {
+  display: block;
+
+  margin-top: 2px;
+
+  color: rgba(255, 255, 255, 0.7);
 
   font-size: 15px;
 }
 
-.abtrip-benefitCard p {
-  margin: 7px 0 0;
 
-  color: var(--abtrip-muted);
+/* CURVED HERO BOTTOM */
 
-  font-size: 11px;
+.abtrip-hero-wave {
+  position: absolute;
+
+  z-index: 5;
+
+  left: -5%;
+
+  bottom: -90px;
+
+  width: 110%;
+
+  height: 125px;
+
+  border-top:
+    6px solid var(--trip-gold);
+
+  border-radius: 50% 50% 0 0;
+
+  background: white;
+
+  transform: rotate(-1deg);
+}
+
+
+/* =========================================================
+   LEARNING
+========================================================= */
+
+.abtrip-learning {
+  position: relative;
+
+  padding: 20px 0 70px;
+
+  background:
+    radial-gradient(
+      circle at 8% 30%,
+      rgba(228, 174, 71, 0.1),
+      transparent 22%
+    ),
+    white;
+}
+
+
+.abtrip-learning-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* IMAGE COLLAGE */
+
+.abtrip-learning-visual {
+  position: relative;
+
+  min-height: 540px;
+}
+
+
+.abtrip-learning-main {
+  position: absolute;
+
+  left: 0;
+
+  top: 80px;
+
+  width: 70%;
+
+  height: 390px;
+
+  padding: 8px;
+
+  overflow: hidden;
+
+  border-radius: 60px 22px 60px 22px;
+
+  background: white;
+
+  transform: rotate(-4deg);
+
+  box-shadow:
+    0 25px 50px rgba(6, 44, 83, 0.15);
+}
+
+
+.abtrip-learning-main img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 52px 17px 52px 17px;
+}
+
+
+.abtrip-learning-small {
+  position: absolute;
+
+  width: 39%;
+
+  height: 210px;
+
+  padding: 7px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: white;
+
+  box-shadow:
+    0 18px 40px rgba(6, 44, 83, 0.15);
+}
+
+
+.abtrip-learning-small img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 21px;
+}
+
+
+.abtrip-small-one {
+  right: 0;
+
+  top: 0;
+
+  transform: rotate(4deg);
+}
+
+
+.abtrip-small-two {
+  right: 2%;
+
+  bottom: 0;
+
+  transform: rotate(3deg);
+}
+
+
+.abtrip-paper-plane {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 35%;
+
+  top: 225px;
+
+  color: var(--trip-blue);
+
+  font-size: 47px;
+
+  transform: rotate(-20deg);
+}
+
+
+.abtrip-dotted-path {
+  position: absolute;
+
+  right: 22%;
+
+  top: 260px;
+
+  width: 160px;
+
+  height: 90px;
+
+  border-top:
+    3px dashed rgba(8, 119, 169, 0.4);
+
+  border-radius: 50%;
+
+  transform: rotate(12deg);
+}
+
+
+/* LEARNING CONTENT */
+
+.abtrip-learning-content h2 {
+  margin: 18px 0;
+
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(53px, 4.8vw, 72px);
+
+  line-height: 1;
+
+  letter-spacing: -1.7px;
+}
+
+
+.abtrip-learning-content h2 span {
+  display: block;
+
+  color: #c88b24;
+}
+
+
+.abtrip-learning-content > p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--trip-muted);
+
+  font-size: 20px;
+
+  line-height: 1.68;
+}
+
+
+/* LEARNING CARDS */
+
+.abtrip-learning-cards {
+  margin-top: 29px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 13px;
+}
+
+
+.abtrip-learning-cards article {
+  min-height: 135px;
+
+  padding: 18px 12px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  border:
+    1px solid rgba(6, 44, 83, 0.09);
+
+  border-radius: 15px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 25px rgba(6, 44, 83, 0.07);
+}
+
+
+.abtrip-learning-cards span {
+  margin-bottom: 8px;
+
+  color: var(--trip-navy);
+
+  font-size: 27px;
+}
+
+
+.abtrip-learning-cards strong {
+  color: var(--trip-navy);
+
+  font-size: 15px;
+
+  line-height: 1.3;
+}
+
+
+/* STATS */
+
+.abtrip-learning-stats {
+  margin-top: 17px;
+
+  padding: 19px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff1c7,
+      #ffe4a2
+    );
+}
+
+
+.abtrip-learning-stats > div {
+  display: grid;
+
+  grid-template-columns: auto auto;
+
+  align-items: center;
+
+  justify-content: center;
+
+  column-gap: 9px;
+
+  text-align: left;
+
+  border-right:
+    1px solid rgba(6, 44, 83, 0.12);
+}
+
+
+.abtrip-learning-stats > div:last-child {
+  border-right: 0;
+}
+
+
+.abtrip-learning-stats svg {
+  grid-row: 1 / 3;
+
+  color: var(--trip-navy);
+
+  font-size: 27px;
+}
+
+
+.abtrip-learning-stats strong {
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 29px;
+
+  line-height: 1;
+}
+
+
+.abtrip-learning-stats span {
+  color: #506174;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.abtrip-section-heading {
+  max-width: 1150px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+
+.abtrip-section-heading h2 {
+  margin: 15px 0 0;
+
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 58px;
+
+  line-height: 1.02;
+
+  letter-spacing: -1.5px;
+}
+
+
+.abtrip-section-heading h2 span {
+  color: #c88b24;
+}
+
+
+.abtrip-section-heading > p {
+  max-width: 860px;
+
+  margin: 15px auto 0;
+
+  color: var(--trip-muted);
+
+  font-size: 19px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   DESTINATIONS
+========================================================= */
+
+.abtrip-destinations {
+  position: relative;
+
+  padding: 40px 0 55px;
+
+  background: var(--trip-cream);
+}
+
+
+.abtrip-destination-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+
+.abtrip-destination-card {
+  overflow: hidden;
+
+  border:
+    1px solid rgba(6, 44, 83, 0.09);
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 13px 35px rgba(6, 44, 83, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+.abtrip-destination-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 23px 45px rgba(6, 44, 83, 0.14);
+}
+
+
+.abtrip-destination-image {
+  position: relative;
+
+  height: 250px;
+
+  overflow: hidden;
+}
+
+
+.abtrip-destination-image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+.abtrip-destination-card:hover img {
+  transform: scale(1.07);
+}
+
+
+.abtrip-destination-number {
+  position: absolute;
+
+  left: 15px;
+
+  top: 15px;
+
+  width: 57px;
+
+  height: 57px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    4px solid white;
+
+  border-radius: 50%;
+
+  color: white;
+
+  background: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+
+.abtrip-destination-icon {
+  position: absolute;
+
+  right: 16px;
+
+  bottom: 14px;
+
+  width: 52px;
+
+  height: 52px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  color: var(--trip-navy);
+
+  background: var(--trip-gold-light);
+
+  font-size: 20px;
+}
+
+
+.abtrip-destination-content {
+  min-height: 160px;
+
+  padding: 20px 17px 22px;
+
+  text-align: center;
+}
+
+
+.abtrip-destination-content h3 {
+  margin: 0 0 7px;
+
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+
+  line-height: 1.15;
+}
+
+
+.abtrip-destination-content p {
+  margin: 0;
+
+  color: #344c64;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.abtrip-destination-content small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--trip-muted);
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.abtrip-journey {
+  position: relative;
+
+  padding: 45px 0 60px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+
+.abtrip-journey-track {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px;
+}
+
+
+.abtrip-route-line {
+  position: absolute;
+
+  left: 8%;
+
+  right: 8%;
+
+  top: 71px;
+
+  height: 80px;
+
+  border-top:
+    3px dashed rgba(8, 119, 169, 0.45);
+
+  border-radius: 50%;
+}
+
+
+.abtrip-journey-item {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+
+.abtrip-journey-id {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #b47b1e;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.abtrip-journey-icon {
+  width: 86px;
+
+  height: 86px;
+
+  margin: 0 auto 15px;
+
+  display: grid;
+
+  place-items: center;
+
+  border:
+    7px solid #fff5dc;
+
+  border-radius: 50%;
+
+  color: var(--trip-navy);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffd878,
+      #e5aa3f
+    );
+
+  font-size: 31px;
+
+  box-shadow:
+    0 12px 25px rgba(228, 174, 71, 0.25);
+}
+
+
+.abtrip-journey-item h3 {
+  margin: 0 0 7px;
+
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 24px;
+}
+
+
+.abtrip-journey-item p {
+  max-width: 220px;
+
+  margin: 0 auto;
+
+  color: var(--trip-muted);
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.abtrip-safety {
+  position: relative;
+
+  overflow: hidden;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      120deg,
+      #031f3c,
+      #063967
+    );
+}
+
+
+.abtrip-safety-grid {
+  min-height: 430px;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: stretch;
+}
+
+
+.abtrip-safety-content {
+  padding: 70px 60px 70px 0;
+}
+
+
+.abtrip-safety-content h2 {
+  margin: 18px 0;
+
+  color: white;
+
+  font-family: "Playfair Display", serif;
+
+  font-size:62px;
+
+  line-height: 1;
+}
+
+
+.abtrip-safety-content h2 span {
+  display: inline;
+  margin-left: 9px;
+
+  color: var(--trip-gold-light);
+}
+
+
+.abtrip-safety-content > p {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-size: 19px;
 
   line-height: 1.65;
 }
 
 
-/* =========================================================
-   STATS
-========================================================= */
+.abtrip-safety-points {
+  margin-top: 29px;
 
-.abtrip-statsSection {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  padding: 34px 7%;
-
-  background: var(--abtrip-navy);
+  gap: 14px;
 }
 
-.abtrip-stat {
-  position: relative;
 
+.abtrip-safety-points article {
   display: flex;
-  flex-direction: column;
 
   align-items: center;
 
-  text-align: center;
-
-  padding: 5px 20px;
-}
-
-.abtrip-stat:not(:last-child)::after {
-  content: "";
-
-  position: absolute;
-
-  right: 0;
-  top: 3px;
-
-  width: 1px;
-  height: 65px;
-
-  background: rgba(255, 255, 255, 0.13);
-}
-
-.abtrip-stat strong {
-  color: white;
-
-  font-family: "Playfair Display", serif;
-
-  font-size: 33px;
-
-  line-height: 1;
-}
-
-.abtrip-stat span {
-  margin-top: 6px;
-
-  color: rgba(255, 255, 255, 0.65);
-
-  font-size: 10px;
+  gap: 10px;
 }
 
 
-/* =========================================================
-   QUOTE
-========================================================= */
+.abtrip-safety-points span {
+  width: 51px;
 
-.abtrip-quote {
-  padding: 45px 7%;
+  height: 51px;
 
-  text-align: center;
-
-  background: white;
-}
-
-.abtrip-quoteIcon {
-  width: 43px;
-  height: 43px;
-
-  margin: auto;
+  flex-shrink: 0;
 
   display: grid;
+
   place-items: center;
 
   border-radius: 50%;
 
-  background: var(--abtrip-cream);
+  color: var(--trip-navy);
 
-  color: var(--abtrip-gold);
+  background: var(--trip-gold-light);
+
+  font-size: 20px;
 }
 
-.abtrip-quoteMark {
-  margin-top: 5px;
 
-  color: var(--abtrip-gold);
+.abtrip-safety-points strong {
+  color: white;
 
-  font-family: Georgia, serif;
+  font-size: 13px;
 
-  font-size: 50px;
-
-  line-height: 35px;
+  line-height: 1.25;
 }
 
-.abtrip-quote blockquote {
-  max-width: 750px;
 
-  margin: 5px auto 17px;
+/* SAFETY IMAGE */
 
-  color: var(--abtrip-navy);
+.abtrip-safety-visual {
+  position: relative;
+
+  min-height: 430px;
+}
+
+
+.abtrip-safety-visual::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #063967 0%,
+      rgba(6, 57, 103, 0.15) 45%,
+      transparent 100%
+    );
+}
+
+
+.abtrip-safety-visual img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.abtrip-safety-badge {
+  position: absolute;
+
+  z-index: 5;
+
+  right: 30px;
+
+  top: 50%;
+
+  width: 145px;
+
+  height: 145px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border:
+    5px solid #ffe39d;
+
+  border-radius: 50%;
+
+  color: var(--trip-navy);
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe69f,
+      #e7ab3e
+    );
+
+  text-align: center;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+.abtrip-safety-badge svg {
+  margin-bottom: 5px;
+
+  font-size: 32px;
+}
+
+
+.abtrip-safety-badge strong {
+  font-size: 13px;
+}
+
+
+.abtrip-safety-badge span {
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.abtrip-gallery {
+  padding: 45px 0;
+
+  background: #fffdf8;
+}
+
+
+.abtrip-gallery-header {
+  margin-bottom: 30px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+.abtrip-gallery-header h2 {
+  margin: 13px 0 0;
+
+  color: var(--trip-navy);
 
   font-family: "Playfair Display", serif;
 
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: clamp(49px, 4.2vw, 66px);
 
-  line-height: 1.35;
-
-  font-weight: 500;
+  line-height: 1;
 }
 
-.abtrip-quoteLine {
-  width: 50px;
-  height: 2px;
 
-  margin: auto;
-
-  background: var(--abtrip-gold);
+.abtrip-gallery-header h2 span {
+  color: #c88b24;
 }
 
-.abtrip-quote > span {
-  display: block;
 
-  margin-top: 10px;
+.abtrip-gallery-btn {
+  min-height: 50px;
 
-  color: var(--abtrip-sky);
+  padding: 0 22px;
 
-  font-size: 9px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: 0;
+
+  border-radius: 50px;
+
+  color: white;
+
+  background: var(--trip-navy);
+
+  font-size: 14px;
 
   font-weight: 800;
 
-  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+
+/* BENTO */
+
+.abtrip-gallery-grid {
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr 1fr;
+
+  grid-template-rows: 220px 220px;
+
+  gap: 12px;
+}
+
+
+.abtrip-gallery-item {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+}
+
+
+.abtrip-gallery-item img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+
+.abtrip-gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+
+.gallery-large {
+  grid-row: span 2;
+}
+
+
+.gallery-wide {
+  grid-column: span 1;
+}
+
+
+.abtrip-gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 9px;
+
+  opacity: 0;
+
+  color: white;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(3, 30, 58, 0.88)
+    );
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  transition: opacity 0.3s ease;
+}
+
+
+.abtrip-gallery-item:hover
+.abtrip-gallery-overlay {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.abtrip-cta {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  isolation: isolate;
+
+  overflow: hidden;
+}
+
+
+.abtrip-cta-bg {
+  position: absolute;
+
+  z-index: -3;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.abtrip-cta-overlay {
+  position: absolute;
+
+  z-index: -2;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 250, 240, 0.97) 0%,
+      rgba(255, 250, 240, 0.93) 42%,
+      rgba(255, 250, 240, 0.3) 68%,
+      transparent 100%
+    );
+}
+
+
+.abtrip-cta-content {
+  max-width: 800px;
+
+  padding: 50px 0;
+}
+
+
+.abtrip-cta-content h2 {
+  margin: 18px 0;
+
+  color: var(--trip-navy);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(54px, 5vw, 78px);
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+
+.abtrip-cta-content h2 span {
+  display: block;
+
+  color: #c88b24;
+}
+
+
+.abtrip-cta-content > p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #53677b;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+}
+
+
+.abtrip-cta-actions {
+  margin-top: 28px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
 }
 
 
@@ -981,12 +1547,46 @@
 
 @media (max-width: 1050px) {
 
-  .abtrip-grid {
+  .abtrip-container {
+    width: calc(100% - 50px);
+  }
+
+
+  .abtrip-learning-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .abtrip-learning-visual {
+    max-width: 760px;
+
+    width: 100%;
+
+    margin: auto;
+  }
+
+
+  .abtrip-destination-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .abtrip-safety-grid {
     grid-template-columns: 1fr;
   }
 
-  .abtrip-benefitGrid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .abtrip-safety-content {
+    padding:
+      70px 0 50px;
+  }
+
+
+  .abtrip-safety-visual {
+    min-height: 400px;
   }
 
 }
@@ -996,101 +1596,459 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 760px) {
+@media (max-width: 700px) {
+
+  .abtrip-container {
+    width: calc(100% - 28px);
+  }
+
+
+  /* HERO */
 
   .abtrip-hero {
-    min-height: 390px;
+    min-height: 740px;
 
-    padding: 55px 6%;
-    margin-top: 60px;
+    padding:
+      100px 0 95px;
   }
 
-  .abtrip-intro {
-    padding: 40px 6%;
+
+  .abtrip-hero-bg {
+    object-position: 63% center;
   }
 
-  .abtrip-introContainer {
-    grid-template-columns: 1fr;
 
-    gap: 20px;
+  .abtrip-hero-overlay {
+    background:
+      linear-gradient(
+        rgba(3, 30, 58, 0.82),
+        rgba(3, 30, 58, 0.92)
+      );
   }
 
-  .abtrip-introNumber {
+
+  .abtrip-hero h1 {
+    font-size: 38px;
+
+    line-height: 1;
+  }
+
+
+  .abtrip-hero-content > p {
+    font-size: 18px;
+
+    line-height: 1.6;
+  }
+
+
+  .abtrip-hero-actions {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+
+  .abtrip-btn {
+    min-height: 55px;
+
+    padding: 0 12px;
+
+    font-size: 14px;
+  }
+
+
+  .abtrip-hero-points {
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 7px;
+  }
+
+
+  .abtrip-hero-points article {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 6px;
+  }
+
+
+  .abtrip-hero-points article > span {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+
+  .abtrip-hero-points strong {
+    font-size: 12px;
+  }
+
+
+  .abtrip-hero-points small {
+    font-size: 10px;
+  }
+
+
+  /* LEARNING */
+
+  .abtrip-learning {
+    padding:
+      95px 0 75px;
+  }
+
+
+  .abtrip-learning-visual {
+    min-height: 405px;
+  }
+
+
+  .abtrip-learning-main {
+    top: 65px;
+
+    width: 69%;
+
+    height: 290px;
+
+    border-radius:
+      38px 15px 38px 15px;
+  }
+
+
+  .abtrip-learning-main img {
+    border-radius:
+      31px 11px 31px 11px;
+  }
+
+
+  .abtrip-learning-small {
+    width: 39%;
+
+    height: 145px;
+
+    border-radius: 18px;
+  }
+
+
+  .abtrip-learning-small img {
+    border-radius: 12px;
+  }
+
+
+  .abtrip-paper-plane {
+    right: 32%;
+
+    top: 195px;
+
+    font-size: 34px;
+  }
+
+
+  .abtrip-learning-content h2 {
+    font-size:
+      clamp(43px, 11vw, 54px);
+  }
+
+
+  .abtrip-learning-content > p {
+    font-size: 18px;
+  }
+
+
+  .abtrip-learning-cards {
+    gap: 8px;
+  }
+
+
+  .abtrip-learning-cards article {
+    min-height: 125px;
+
+    padding: 14px 7px;
+  }
+
+
+  .abtrip-learning-cards span {
+    font-size: 24px;
+  }
+
+
+  .abtrip-learning-cards strong {
+    font-size: 13px;
+  }
+
+
+  .abtrip-learning-stats {
+    padding: 15px 7px;
+  }
+
+
+  .abtrip-learning-stats > div {
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    gap: 15px;
+    gap: 2px;
 
-    padding-bottom: 14px;
-
-    border-right: none;
-
-    border-bottom: 1px solid rgba(7, 26, 53, 0.13);
+    text-align: center;
   }
 
-  .abtrip-introNumber strong {
-    font-size: 35px;
+
+  .abtrip-learning-stats svg {
+    font-size: 21px;
   }
 
-  .abtrip-introNumber span {
-    writing-mode: initial;
 
-    transform: none;
-
-    margin-top: 0;
+  .abtrip-learning-stats strong {
+    font-size: 25px;
   }
 
-  .abtrip-introContent h2 {
-    white-space: normal;
+
+  .abtrip-learning-stats span {
+    font-size: 10px;
   }
 
-  .abtrip-introFeatures {
+
+  /* HEADING */
+
+  .abtrip-section-heading h2 {
+    font-size:
+      clamp(42px, 10vw, 52px);
+  }
+
+
+  .abtrip-section-heading > p {
+    font-size: 18px;
+  }
+
+
+  /* DESTINATIONS */
+
+  .abtrip-destinations {
+    padding:
+      75px 0;
+  }
+
+
+  .abtrip-destination-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+
+  .abtrip-destination-image {
+    height: 180px;
+  }
+
+
+  .abtrip-destination-number {
+    width: 46px;
+
+    height: 46px;
+
+    font-size: 16px;
+  }
+
+
+  .abtrip-destination-icon {
+    width: 42px;
+
+    height: 42px;
+
+    font-size: 17px;
+  }
+
+
+  .abtrip-destination-content {
+    min-height: 150px;
+
+    padding:
+      17px 10px;
+  }
+
+
+  .abtrip-destination-content h3 {
+    font-size: 20px;
+  }
+
+
+  .abtrip-destination-content p {
+    font-size: 13px;
+  }
+
+
+  .abtrip-destination-content small {
+    font-size: 11px;
+  }
+
+
+  /* JOURNEY */
+
+  .abtrip-journey {
+    padding:
+      75px 0;
+  }
+
+
+  .abtrip-journey-track {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap:
+      35px 15px;
+  }
+
+
+  .abtrip-route-line {
+    display: none;
+  }
+
+
+  .abtrip-journey-icon {
+    width: 72px;
+
+    height: 72px;
+
+    font-size: 26px;
+  }
+
+
+  .abtrip-journey-item h3 {
+    font-size: 22px;
+  }
+
+
+  .abtrip-journey-item p {
+    font-size: 14px;
+  }
+
+
+  /* SAFETY */
+
+  .abtrip-safety-content h2 {
+    font-size:
+      clamp(43px, 10vw, 54px);
+  }
+
+
+  .abtrip-safety-content > p {
+    font-size: 18px;
+  }
+
+
+  .abtrip-safety-points {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  .abtrip-safety-points strong {
+    font-size: 14px;
+  }
+
+
+  .abtrip-safety-visual {
+    min-height: 330px;
+  }
+
+
+  .abtrip-safety-badge {
+    right: 15px;
+
+    width: 115px;
+
+    height: 115px;
+  }
+
+
+  /* GALLERY */
+
+  .abtrip-gallery {
+    padding:
+      75px 0;
+  }
+
+
+  .abtrip-gallery-header {
+    align-items: flex-start;
+
     flex-direction: column;
   }
 
-  .abtrip-introFeature {
-    width: 100%;
+
+  .abtrip-gallery-header h2 {
+    font-size:
+      clamp(42px, 10vw, 53px);
   }
 
-  .abtrip-gridSection {
-    padding: 40px 6%;
+
+  .abtrip-gallery-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    grid-template-rows:
+      230px 160px 160px;
   }
 
-  .abtrip-sectionHeading h2 {
-    white-space: normal;
+
+  .gallery-large {
+    grid-column: span 2;
+
+    grid-row: auto;
   }
 
-  .abtrip-card {
-    grid-template-columns: 1fr;
+
+  .abtrip-gallery-overlay {
+    opacity: 1;
+
+    padding: 13px;
+
+    font-size: 12px;
   }
 
-  .abtrip-imageBox {
-    min-height: 250px;
+
+  /* CTA */
+
+  .abtrip-cta {
+    min-height: 620px;
   }
 
-  .abtrip-cardContent {
-    padding: 22px;
+
+  .abtrip-cta-bg {
+    object-position: 63% center;
   }
 
-  .abtrip-benefits {
-    padding: 40px 6%;
+
+  .abtrip-cta-overlay {
+    background:
+      rgba(255, 250, 240, 0.85);
   }
 
-  .abtrip-benefitsHeading h2 {
-    white-space: normal;
+
+  .abtrip-cta-content h2 {
+    font-size:
+      clamp(44px, 11vw, 57px);
+
+    line-height: 1.02;
   }
 
-  .abtrip-statsSection {
-    grid-template-columns: 1fr 1fr;
 
-    padding: 28px 5%;
-
-    gap: 18px 0;
+  .abtrip-cta-content > p {
+    font-size: 18px;
   }
 
-  .abtrip-stat:nth-child(2)::after {
-    display: none;
+
+  .abtrip-cta-actions {
+    display: grid;
+
+    grid-template-columns:
+      1fr 1fr;
   }
 
 }
@@ -1100,76 +2058,78 @@
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 420px) {
 
-  .abtrip-eyebrow {
-    gap: 7px;
-
-    font-size: 8px;
-
-    letter-spacing: 1.4px;
-  }
-
-  .abtrip-eyebrow span {
-    width: 25px;
-  }
-
-  .abtrip-hero h1 {
-    font-size: 38px;
-  }
-
-  .abtrip-hero p {
-    font-size: 13px;
-
-    line-height: 1.65;
-  }
-
-  .abtrip-heroBottom {
-    gap: 8px;
-  }
-
-  .abtrip-heroBottom i {
-    width: 35px;
-  }
-
-  .abtrip-heroBottom span {
-    font-size: 7px;
-
-    letter-spacing: 1px;
-  }
-
-  .abtrip-sectionHeading h2,
-  .abtrip-introContent h2,
-  .abtrip-benefitsHeading h2 {
-    font-size: 32px;
-  }
-
-  .abtrip-sectionHeading h2 strong,
-  .abtrip-introContent h2 strong,
-  .abtrip-benefitsHeading h2 strong {
-    display: block;
-
-    margin: 5px 0 0;
-  }
-
-  .abtrip-benefitGrid {
+  .abtrip-hero-actions {
     grid-template-columns: 1fr;
   }
 
-  .abtrip-statsSection {
-    grid-template-columns: 1fr 1fr;
+
+  .abtrip-learning-cards {
+    grid-template-columns: 1fr;
   }
 
-  .abtrip-stat strong {
-    font-size: 27px;
+
+  .abtrip-learning-cards article {
+    min-height: 105px;
+
+    flex-direction: row;
+
+    gap: 15px;
+
+    text-align: left;
   }
 
-  .abtrip-stat span {
-    font-size: 8px;
+
+  .abtrip-learning-cards span {
+    margin: 0;
   }
 
-  .abtrip-quote {
-    padding: 40px 6%;
+
+  .abtrip-destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .abtrip-destination-image {
+    height: 230px;
+  }
+
+
+  .abtrip-journey-track {
+    grid-template-columns: 1fr;
+  }
+
+
+  .abtrip-safety-points {
+    grid-template-columns: 1fr;
+  }
+
+
+  .abtrip-gallery-grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    grid-template-rows: none;
+  }
+
+
+  .gallery-large,
+  .gallery-wide {
+    grid-column: auto;
+
+    grid-row: auto;
+  }
+
+
+  .abtrip-gallery-item {
+    height: 230px;
+  }
+
+
+  .abtrip-cta-actions {
+    grid-template-columns: 1fr;
   }
 
 }

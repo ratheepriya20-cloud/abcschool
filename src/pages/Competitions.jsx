@@ -1,576 +1,636 @@
 import React from "react";
-import "./Competitions.css";
+import { useNavigate } from "react-router-dom";
 
 import {
-  FaBrain,
-  FaMicrophone,
-  FaPenNib,
-  FaPalette,
-  FaFlask,
+  FaArrowRight,
   FaTrophy,
-  FaStar,
-  FaLightbulb,
-  FaBullseye,
   FaUsers,
-  FaAward,
-  FaBookOpen,
+  FaLightbulb,
+  FaStar,
+  FaBrain,
+  FaChartLine,
+  FaUserGraduate,
   FaMedal,
+  FaCheck,
 } from "react-icons/fa";
 
-// =========================================================
-// IMAGES
-// =========================================================
+import "./Competitions.css";
 
-import quizImage from "../assets/quizcompetition.jpg";
-import debateImage from "../assets/debatecompetition.jpg";
-import writingImage from "../assets/writingcompetition.jpg";
-import artImage from "../assets/artcompetition.jpg";
-import scienceImage from "../assets/sciencecompetition.jpg";
-import interschoolImage from "../assets/interschoolcompetition.jpg";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import heroImage from "../assets/competition-hero.jpg";
+import aboutMain from "../assets/competition-about-main.jpg";
+import aboutDebate from "../assets/competition-about-debate.jpg";
+import aboutCultural from "../assets/competition-about-cultural.jpg";
+import journeyImage from "../assets/competition-journey.jpg";
+import achievementImage from "../assets/competition-achievement.jpg";
+import ctaImage from "../assets/competition-cta.jpg";
 
-// =========================================================
-// COMPETITIONS DATA
-// =========================================================
-
-const competitionsData = [
+const skills = [
   {
-    id: 1,
-    number: "01",
-    icon: <FaBrain />,
-    title: "Quiz Competitions",
-    subtitle: "KNOWLEDGE • SPEED • CONFIDENCE",
-    image: quizImage,
-    description:
-      "Quiz competitions encourage students to expand their knowledge, think quickly and develop confidence.",
-    activities: [
-      "General Knowledge",
-      "Science Quiz",
-      "Current Affairs",
-      "Inter-House Quiz",
-    ],
+    icon: FaBrain,
+    title: "Boost Confidence",
+    text: "Express ideas fearlessly.",
   },
-
   {
-    id: 2,
-    number: "02",
-    icon: <FaMicrophone />,
-    title: "Debate & Speech",
-    subtitle: "THINK • SPEAK • EXPRESS",
-    image: debateImage,
-    description:
-      "Debate and speech competitions improve public speaking, communication and critical thinking skills.",
-    activities: [
-      "English Debate",
-      "Hindi Debate",
-      "Speech Competition",
-      "Extempore",
-    ],
+    icon: FaLightbulb,
+    title: "Develop New Skills",
+    text: "Learn beyond classrooms.",
   },
-
   {
-    id: 3,
-    number: "03",
-    icon: <FaPenNib />,
-    title: "Writing Competitions",
-    subtitle: "IMAGINE • WRITE • INSPIRE",
-    image: writingImage,
-    description:
-      "Creative writing gives students an opportunity to express their imagination, ideas and thoughts.",
-    activities: [
-      "Essay Writing",
-      "Story Writing",
-      "Poetry Writing",
-      "Creative Writing",
-    ],
+    icon: FaUsers,
+    title: "Encourage Teamwork",
+    text: "Collaborate and support others.",
   },
-
   {
-    id: 4,
-    number: "04",
-    icon: <FaPalette />,
-    title: "Art Competitions",
-    subtitle: "CREATE • DESIGN • EXPRESS",
-    image: artImage,
-    description:
-      "Art competitions encourage creativity, imagination and visual expression through artistic activities.",
-    activities: [
-      "Drawing",
-      "Painting",
-      "Poster Making",
-      "Rangoli",
-    ],
+    icon: FaChartLine,
+    title: "Improve Critical Thinking",
+    text: "Find solutions and think creatively.",
   },
-
   {
-    id: 5,
-    number: "05",
-    icon: <FaFlask />,
-    title: "Science Competitions",
-    subtitle: "DISCOVER • EXPERIMENT • INNOVATE",
-    image: scienceImage,
-    description:
-      "Science competitions allow students to explore concepts, conduct experiments and present innovative ideas.",
-    activities: [
-      "Science Exhibition",
-      "Model Making",
-      "Innovation Challenge",
-      "Science Projects",
-    ],
-  },
-
-  {
-    id: 6,
-    number: "06",
-    icon: <FaTrophy />,
-    title: "Inter-School Competitions",
-    subtitle: "PARTICIPATE • PERFORM • ACHIEVE",
-    image: interschoolImage,
-    description:
-      "Students represent the school in various inter-school events and gain valuable competitive experience.",
-    activities: [
-      "Inter-School Quiz",
-      "Debate Events",
-      "Cultural Events",
-      "Academic Challenges",
-    ],
+    icon: FaStar,
+    title: "Gain Recognition",
+    text: "Celebrate talent and achievements.",
   },
 ];
 
-// =========================================================
-// BENEFITS
-// =========================================================
-
-const benefitsData = [
+const journey = [
   {
-    icon: <FaAward />,
     number: "01",
-    title: "Build Confidence",
-    description:
-      "Competitions help students overcome hesitation and develop self-confidence.",
+    icon: FaUserGraduate,
+    title: "Participate",
+    text: "Step forward and take part.",
   },
-
   {
-    icon: <FaLightbulb />,
     number: "02",
-    title: "Develop Creativity",
-    description:
-      "Students learn to think differently and present innovative ideas.",
+    icon: FaChartLine,
+    title: "Learn",
+    text: "Gain new skills and knowledge.",
   },
-
   {
-    icon: <FaBullseye />,
     number: "03",
-    title: "Goal Oriented",
-    description:
-      "Participation teaches students to set goals and work consistently.",
+    icon: FaUsers,
+    title: "Compete",
+    text: "Showcase talent at various levels.",
   },
-
   {
-    icon: <FaUsers />,
     number: "04",
-    title: "Healthy Competition",
-    description:
-      "Students learn teamwork, sportsmanship and respect for others.",
+    icon: FaTrophy,
+    title: "Achieve",
+    text: "Win accolades and recognition.",
   },
 ];
-
-// =========================================================
-// COMPONENT
-// =========================================================
 
 const Competitions = () => {
+  const navigate = useNavigate();
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
-    <>
-    <Navbar />
     <main className="abcomp-page">
 
-      {/* =================================================
+      {/* =====================================================
           HERO
-      ================================================= */}
-
+      ===================================================== */}
       <section className="abcomp-hero">
 
-        <div className="abcomp-heroGlow abcomp-heroGlowOne"></div>
-        <div className="abcomp-heroGlow abcomp-heroGlowTwo"></div>
-        <div className="abcomp-heroPattern"></div>
+        <img
+          src={heroImage}
+          alt="Students participating in school competitions"
+          className="abcomp-hero-bg"
+        />
 
-        <div className="abcomp-heroContent">
+        <div className="abcomp-hero-overlay" />
 
-          <div className="abcomp-eyebrow">
-            <span></span>
-            <FaTrophy />
-            ACTIVITIES • COMPETITIONS
-            <span></span>
-          </div>
+        <div className="abcomp-hero-gold-wave wave-one" />
+        <div className="abcomp-hero-gold-wave wave-two" />
 
-          <h1>
-            Compete. Learn.
-            <strong>Achieve Excellence.</strong>
-          </h1>
+        <div className="abcomp-container abcomp-hero-inner">
 
-          <p>
-            At AB Public School, competitions provide students with a
-            platform to discover their abilities, develop confidence and
-            achieve excellence through creativity, knowledge and
-            performance.
-          </p>
+          <div className="abcomp-hero-content">
 
-          <div className="abcomp-heroBottom">
+            <div className="abcomp-breadcrumb">
+              <button onClick={() => navigate("/")}>
+                Home
+              </button>
 
-            <div className="abcomp-heroLine"></div>
+              <span>/</span>
 
-            <div className="abcomp-heroMini">
-              <FaMedal />
-              <span>LEARN • PARTICIPATE • ACHIEVE</span>
+              <button onClick={() => navigate("/campus-life")}>
+                Activities
+              </button>
+
+              <span>/</span>
+
+              <strong>Competitions</strong>
             </div>
 
-            <div className="abcomp-heroLine"></div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      {/* =================================================
-          INTRO
-      ================================================= */}
-
-      <section className="abcomp-intro">
-
-        <div className="abcomp-introContainer">
-
-          <div className="abcomp-introNumber">
-            <strong>01</strong>
-            <span>STUDENT LIFE</span>
-          </div>
-
-          <div className="abcomp-introContent">
-
-            <span className="abcomp-smallTitle">
-              BEYOND THE CLASSROOM
+            <span className="abcomp-label abcomp-label-light">
+              EXPLORE • COMPETE • GROW
             </span>
 
-            <h2>
-              Inspiring Students To
-              <strong>Challenge Themselves.</strong>
-            </h2>
+            <h1>
+              Discover Your Potential
+              <span>Through Competitions.</span>
+            </h1>
 
             <p>
-              We believe competitions are an important part of a
-              student's overall development. They encourage students
-              to explore their talents, improve their skills and learn
-              valuable lessons through participation.
+              Our competitions provide students with opportunities
+              to explore new skills, showcase their talents and
+              develop confidence for a brighter future.
             </p>
 
-            <div className="abcomp-introFeatures">
+            <div className="abcomp-hero-buttons">
 
-              <div className="abcomp-introFeature">
-                <span>
-                  <FaBrain />
-                </span>
-
-                <div>
-                  <strong>Think Better</strong>
-                  <small>Critical Thinking</small>
-                </div>
-              </div>
-
-              <div className="abcomp-introFeature">
-                <span>
-                  <FaUsers />
-                </span>
-
-                <div>
-                  <strong>Work Together</strong>
-                  <small>Team Spirit</small>
-                </div>
-              </div>
-
-              <div className="abcomp-introFeature">
-                <span>
-                  <FaTrophy />
-                </span>
-
-                <div>
-                  <strong>Achieve More</strong>
-                  <small>Excellence</small>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          COMPETITIONS
-      ================================================= */}
-
-      <section className="abcomp-gridSection">
-
-        <div className="abcomp-sectionHeading">
-
-          <span className="abcomp-sectionEyebrow">
-            OUR COMPETITIONS
-          </span>
-
-          <h2>
-            Opportunities To
-            <strong>Learn & Perform.</strong>
-          </h2>
-
-          <p>
-            Students participate in a variety of academic, creative and
-            inter-school competitions throughout the year.
-          </p>
-
-        </div>
-
-
-        <div className="abcomp-grid">
-
-          {competitionsData.map((competition) => (
-
-            <article
-              className="abcomp-card"
-              key={competition.id}
-            >
-
-              {/* IMAGE */}
-
-              <div className="abcomp-imageBox">
-
-                <img
-                  src={competition.image}
-                  alt={competition.title}
-                />
-
-                <div className="abcomp-imageOverlay"></div>
-
-                <span className="abcomp-number">
-                  {competition.number}
-                </span>
-
-                <span className="abcomp-imageLabel">
-                  STUDENT COMPETITION
-                </span>
-
-                <div className="abcomp-icon">
-                  {competition.icon}
-                </div>
-
-              </div>
-
-
-              {/* CONTENT */}
-
-              <div className="abcomp-cardContent">
-
-                <span className="abcomp-cardSubtitle">
-                  {competition.subtitle}
-                </span>
-
-                <h3>
-                  {competition.title}
-                </h3>
-
-                <div className="abcomp-cardLine"></div>
-
-                <p>
-                  {competition.description}
-                </p>
-
-
-                {/* TAGS */}
-
-                <div className="abcomp-tags">
-
-                  {competition.activities.map(
-                    (activity, index) => (
-
-                      <span key={index}>
-                        <FaStar />
-                        {activity}
-                      </span>
-
-                    )
-                  )}
-
-                </div>
-
-              </div>
-
-            </article>
-
-          ))}
-
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          BENEFITS
-      ================================================= */}
-
-      <section className="abcomp-benefits">
-
-        <div className="abcomp-benefitsContainer">
-
-          <div className="abcomp-benefitsHeading">
-
-            <span>
-              WHY COMPETITIONS MATTER
-            </span>
-
-            <h2>
-              Building Skills For
-              <strong>Future Success.</strong>
-            </h2>
-
-            <p>
-              Every competition provides students with valuable
-              experiences that contribute to academic and personal
-              development.
-            </p>
-
-          </div>
-
-
-          <div className="abcomp-benefitGrid">
-
-            {benefitsData.map((benefit) => (
-
-              <div
-                className="abcomp-benefitCard"
-                key={benefit.number}
+              <button
+                className="abcomp-btn abcomp-btn-gold"
+                onClick={() => scrollToSection("competitionAbout")}
               >
+                Explore Competitions
+                <FaArrowRight />
+              </button>
 
-                <div className="abcomp-benefitTop">
+              <button
+                className="abcomp-btn abcomp-btn-outline-light"
+                onClick={() => navigate("/apply")}
+              >
+                Apply For Admission
+              </button>
 
-                  <span className="abcomp-benefitNumber">
-                    {benefit.number}
+            </div>
+
+            <div className="abcomp-hero-benefits">
+
+              <div>
+                <span><FaTrophy /></span>
+                <strong>New Skills</strong>
+              </div>
+
+              <div>
+                <span><FaUsers /></span>
+                <strong>Confidence</strong>
+              </div>
+
+              <div>
+                <span><FaLightbulb /></span>
+                <strong>Critical Thinking</strong>
+              </div>
+
+              <div>
+                <span><FaUsers /></span>
+                <strong>Teamwork</strong>
+              </div>
+
+              <div>
+                <span><FaStar /></span>
+                <strong>Recognition</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          MORE THAN JUST WINNING
+      ===================================================== */}
+      <section
+        className="abcomp-about"
+        id="competitionAbout"
+      >
+
+        <div className="abcomp-container abcomp-about-grid">
+
+          {/* CONTENT */}
+          <div className="abcomp-about-content">
+
+            <span className="abcomp-label">
+              ABOUT COMPETITIONS
+            </span>
+
+            <h2>
+              More Than
+              <span>Just Winning.</span>
+            </h2>
+
+            <p>
+              Competitions go beyond trophies. They encourage
+              curiosity, creativity and collaboration, helping
+              students learn, grow and become confident individuals
+              ready for real-world challenges.
+            </p>
+
+            <div className="abcomp-about-checks">
+
+              <div>
+                <FaCheck />
+                <span>Develop confidence through participation</span>
+              </div>
+
+              <div>
+                <FaCheck />
+                <span>Discover individual strengths and talents</span>
+              </div>
+
+              <div>
+                <FaCheck />
+                <span>Learn through healthy competition</span>
+              </div>
+
+            </div>
+
+
+            <div className="abcomp-about-stats">
+
+              <div>
+                <strong>15+</strong>
+                <span>Inter-House</span>
+                <small>Competitions</small>
+              </div>
+
+              <div>
+                <strong>10+</strong>
+                <span>State Level</span>
+                <small>Participations</small>
+              </div>
+
+              <div>
+                <strong>5+</strong>
+                <span>National Level</span>
+                <small>Achievements</small>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* IMAGE COMPOSITION */}
+          <div className="abcomp-about-visual">
+
+            <div className="abcomp-about-main-image">
+              <img
+                src={aboutMain}
+                alt="Student science competition"
+              />
+            </div>
+
+            <div className="abcomp-about-small top">
+              <img
+                src={aboutDebate}
+                alt="Student debate competition"
+              />
+            </div>
+
+            <div className="abcomp-about-small bottom">
+              <img
+                src={aboutCultural}
+                alt="Student cultural competition"
+              />
+            </div>
+
+            <div className="abcomp-about-trophy">
+              <FaTrophy />
+            </div>
+
+            <div className="abcomp-about-note">
+              Explore
+              <span>Compete</span>
+              Grow
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          BUILDING SKILLS — NO IMAGES
+      ===================================================== */}
+      <section className="abcomp-skills">
+
+        <div className="abcomp-skills-lines" />
+
+        <div className="abcomp-container">
+
+          <div className="abcomp-heading center">
+
+            <span className="abcomp-label">
+              WHY COMPETITIONS
+            </span>
+
+            <h2>
+              Building Skills
+              <span> For Life.</span>
+            </h2>
+
+            <p>
+              Competitions help students step outside their comfort
+              zone and develop qualities that last a lifetime.
+            </p>
+
+          </div>
+
+
+          <div className="abcomp-skills-row">
+
+            {skills.map((skill, index) => {
+              const Icon = skill.icon;
+
+              return (
+                <article
+                  className="abcomp-skill"
+                  key={skill.title}
+                >
+
+                  <span className="abcomp-skill-number">
+                    0{index + 1}
                   </span>
 
-                  <div className="abcomp-benefitIcon">
-                    {benefit.icon}
+                  <div className="abcomp-skill-circle">
+
+                    <div className="abcomp-skill-icon">
+                      <Icon />
+                    </div>
+
+                    <h3>{skill.title}</h3>
+
+                    <p>{skill.text}</p>
+
                   </div>
 
-                </div>
+                </article>
+              );
+            })}
 
-                <h3>
-                  {benefit.title}
-                </h3>
+          </div>
 
-                <p>
-                  {benefit.description}
-                </p>
+        </div>
 
+      </section>
+
+
+      {/* =====================================================
+          JOURNEY
+      ===================================================== */}
+      <section className="abcomp-journey">
+
+        <div className="abcomp-container abcomp-journey-grid">
+
+          <div className="abcomp-journey-image">
+
+            <div className="abcomp-journey-frame" />
+
+            <img
+              src={journeyImage}
+              alt="Student participating in a school competition"
+            />
+
+            <div className="abcomp-journey-card">
+              <FaTrophy />
+
+              <div>
+                <strong>A Platform</strong>
+                <span>For Bright Ideas</span>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div className="abcomp-journey-content">
+
+            <span className="abcomp-label">
+              OUR COMPETITION JOURNEY
+            </span>
+
+            <h2>
+              From Participation
+              <span>To Excellence.</span>
+            </h2>
+
+            <p>
+              Students actively participate in inter-house,
+              inter-school and wider competitions across academics,
+              arts, sports and creative activities.
+            </p>
+
+
+            <div className="abcomp-journey-steps">
+
+              {journey.map((step) => {
+                const Icon = step.icon;
+
+                return (
+                  <article
+                    className="abcomp-journey-step"
+                    key={step.number}
+                  >
+
+                    <div className="abcomp-step-icon">
+                      <Icon />
+                    </div>
+
+                    <span>{step.number}</span>
+
+                    <h3>{step.title}</h3>
+
+                    <p>{step.text}</p>
+
+                  </article>
+                );
+              })}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          ACHIEVEMENTS
+      ===================================================== */}
+      <section className="abcomp-achievement">
+
+        <div className="abcomp-container abcomp-achievement-grid">
+
+          <div className="abcomp-achievement-content">
+
+            <span className="abcomp-label">
+              STUDENT ACHIEVEMENTS
+            </span>
+
+            <h2>
+              Turning Efforts
+              <span>Into Success.</span>
+            </h2>
+
+            <p>
+              Our students participate in competitions at different
+              levels, gaining valuable experience, recognition and
+              opportunities to grow.
+            </p>
+
+
+            <div className="abcomp-achievement-stats">
+
+              <article>
+                <FaTrophy />
+                <strong>50+</strong>
+                <span>Awards Won</span>
+                <small>Last Year</small>
+              </article>
+
+              <article>
+                <FaStar />
+                <strong>25+</strong>
+                <span>Students</span>
+                <small>Recognized</small>
+              </article>
+
+              <article>
+                <FaUsers />
+                <strong>10+</strong>
+                <span>Inter-School</span>
+                <small>Competitions</small>
+              </article>
+
+              <article>
+                <FaMedal />
+                <strong>5+</strong>
+                <span>State & National</span>
+                <small>Participations</small>
+              </article>
+
+            </div>
+
+          </div>
+
+
+          <div className="abcomp-achievement-image">
+
+            <div className="abcomp-achievement-outline" />
+
+            <img
+              src={achievementImage}
+              alt="Competition winners with trophies"
+            />
+
+            <div className="abcomp-achievement-floating">
+              <FaTrophy />
+
+              <div>
+                <strong>Celebrate</strong>
+                <span>Every Achievement</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          CTA
+      ===================================================== */}
+      <section className="abcomp-cta">
+
+        <img
+          src={ctaImage}
+          alt="Student competition winner"
+          className="abcomp-cta-bg"
+        />
+
+        <div className="abcomp-cta-overlay" />
+
+        <div className="abcomp-cta-wave wave-a" />
+        <div className="abcomp-cta-wave wave-b" />
+
+        <div className="abcomp-container abcomp-cta-inner">
+
+          <div className="abcomp-cta-content">
+
+            <span className="abcomp-label abcomp-label-light">
+              PARTICIPATE • LEARN • ACHIEVE
+            </span>
+
+            <h2>
+              Every Challenge
+              <span>Creates A Brighter You.</span>
+            </h2>
+
+            <p>
+              Encourage your child to take part in exciting
+              competitions and become part of a vibrant learning
+              community.
+            </p>
+
+
+            <div className="abcomp-cta-buttons">
+
+              <button
+                className="abcomp-btn abcomp-btn-gold"
+                onClick={() => navigate("/apply")}
+              >
+                Apply For Admission
+                <FaArrowRight />
+              </button>
+
+              <button
+                className="abcomp-btn abcomp-btn-outline-light"
+                onClick={() => navigate("/contact")}
+              >
+                Contact School
+              </button>
+
+            </div>
+
+
+            <div className="abcomp-cta-features">
+
+              <div>
+                <FaLightbulb />
+                <span>New Opportunities</span>
               </div>
 
-            ))}
+              <div>
+                <FaUsers />
+                <span>Skill Development</span>
+              </div>
+
+              <div>
+                <FaTrophy />
+                <span>Recognition</span>
+              </div>
+
+              <div>
+                <FaStar />
+                <span>Confident Future</span>
+              </div>
+
+            </div>
 
           </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          STATS
-      ================================================= */}
-
-      <section className="abcomp-statsSection">
-
-        <div className="abcomp-stat">
-
-          <div className="abcomp-statIcon">
-            <FaTrophy />
-          </div>
-
-          <strong>25+</strong>
-          <span>Annual Competitions</span>
-
-        </div>
-
-
-        <div className="abcomp-stat">
-
-          <div className="abcomp-statIcon">
-            <FaUsers />
-          </div>
-
-          <strong>500+</strong>
-          <span>Student Participants</span>
-
-        </div>
-
-
-        <div className="abcomp-stat">
-
-          <div className="abcomp-statIcon">
-            <FaMedal />
-          </div>
-
-          <strong>50+</strong>
-          <span>Awards & Certificates</span>
-
-        </div>
-
-
-        <div className="abcomp-stat">
-
-          <div className="abcomp-statIcon">
-            <FaBookOpen />
-          </div>
-
-          <strong>10+</strong>
-          <span>Inter-School Events</span>
-
-        </div>
-
-      </section>
-
-
-      {/* =================================================
-          QUOTE
-      ================================================= */}
-
-      <section className="abcomp-quote">
-
-        <div className="abcomp-quoteContent">
-
-
-          <span className="abcomp-quoteMark">
-            “
-          </span>
-
-          <h2>
-            Winning is rewarding, but the greatest achievement is
-            learning, growing and having the courage to participate.
-          </h2>
-
-          <div className="abcomp-quoteLine"></div>
-
-          <span className="abcomp-quoteAuthor">
-            — AB PUBLIC SCHOOL
-          </span>
 
         </div>
 
       </section>
 
     </main>
-<Footer />
-    </>
   );
 };
 

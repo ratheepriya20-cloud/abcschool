@@ -1,79 +1,298 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import {
+  FaGraduationCap,
+  FaBookOpen,
+  FaBuilding,
+  FaUsers,
+  FaArrowRight,
+  FaCheckCircle,
+} from "react-icons/fa";
+
 import "./QuickInfo.css";
 
-const QuickInfo = () => {
-  const navigate = useNavigate();
+/* =========================================================
+   EXISTING PROJECT / GALLERY IMAGES
+   Koi new image add nahi karni
+========================================================= */
 
-  const cards = [
+import admissionImage from "../assets/trip-gallery-1.jpg";
+import academicImage from "../assets/cultural-gallery-1.jpg";
+import campusImage from "../assets/sports-gallery-1.jpg";
+import facultyImage from "../assets/cultural-team-cta.jpg";
+
+
+const QuickInfo = () => {
+
+  const quickInfoData = [
     {
       number: "01",
-      title: "Admissions Open",
-      text: "Apply for 2026–27",
-      button: "Apply Now",
-      path: "/admission",
-      icon: "🎓",
+      title: "Admissions",
+
+      description:
+        "Explore eligibility, admission requirements, important dates and the complete application process.",
+
+      link: "/admission",
+
+      icon: <FaGraduationCap />,
+
+      image: admissionImage,
+
+      theme: "navy",
     },
+
     {
       number: "02",
-      title: "Academic Excellence",
-      text: "Learn. Grow. Achieve.",
-      button: "Explore",
-      path: "/academics",
-      icon: "📚",
+      title: "Academics",
+
+      description:
+        "Discover a thoughtful learning environment that builds knowledge, confidence and curiosity.",
+
+      link: "/academics",
+
+      icon: <FaBookOpen />,
+
+      image: academicImage,
+
+      theme: "cream",
     },
+
     {
       number: "03",
-      title: "Expert Faculty",
-      text: "Experienced & Caring Teachers",
-      button: "Meet Faculty",
-      path: "/faculty",
-      icon: "👩‍🏫",
+      title: "Campus Life",
+
+      description:
+        "Experience sports, clubs, cultural activities, competitions and memorable school experiences.",
+
+      link: "/campus-life",
+
+      icon: <FaBuilding />,
+
+      image: campusImage,
+
+      theme: "blue",
     },
+
     {
       number: "04",
-      title: "Modern Campus",
-      text: "Safe & Smart Learning Spaces",
-      button: "View Campus",
-      path: "/facilities",
-      icon: "🏫",
+      title: "Our Faculty",
+
+      description:
+        "Meet dedicated educators who guide, encourage and inspire every student to grow.",
+
+      link: "/faculty",
+
+      icon: <FaUsers />,
+
+      image: facultyImage,
+
+      theme: "white",
     },
   ];
 
+
   return (
-    <section className="quickInfoSection">
-      <div className="quickInfoContainer">
+    <section className="abpsExploreSection">
 
-        {cards.map((card) => (
-          <div className="quickInfoCard" key={card.number}>
+      {/* =====================================================
+          DECORATION
+      ===================================================== */}
 
-            <div className="quickCardTop">
-              <span className="quickCardNumber">
-                {card.number}
-              </span>
+      <div className="abpsExploreGlow abpsExploreGlowOne"></div>
 
-              <span className="quickCardIcon">
-                {card.icon}
-              </span>
-            </div>
+      <div className="abpsExploreGlow abpsExploreGlowTwo"></div>
 
-            <div className="quickCardContent">
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-            </div>
 
-            <button
-              className="quickCardButton"
-              onClick={() => navigate(card.path)}
-            >
-              {card.button}
-              <span>→</span>
-            </button>
+      <div className="abpsExploreContainer">
+
+
+        {/* ===================================================
+            HEADING
+        =================================================== */}
+
+        <div className="abpsExploreHeading">
+
+          <div className="abpsExploreEyebrow">
+
+            <span></span>
+
+            <FaGraduationCap />
+
+            <strong>
+              EXPLORE AB PUBLIC SCHOOL
+            </strong>
+
+            <span></span>
 
           </div>
-        ))}
+
+
+          <h2>
+            Everything your child needs
+
+            <em>
+              to learn, grow & thrive.
+            </em>
+          </h2>
+
+
+          <p>
+            Discover the people, places and opportunities that
+            make everyday life at AB Public School meaningful.
+          </p>
+
+        </div>
+
+
+        {/* ===================================================
+            MINI VALUES
+        =================================================== */}
+
+        <div className="abpsExploreValues">
+
+          <span>
+            <FaCheckCircle />
+            Knowledge
+          </span>
+
+          <span>
+            <FaCheckCircle />
+            Character
+          </span>
+
+          <span>
+            <FaCheckCircle />
+            Confidence
+          </span>
+
+          <span>
+            <FaCheckCircle />
+            Bright Futures
+          </span>
+
+        </div>
+
+
+        {/* ===================================================
+            CARDS
+        =================================================== */}
+
+        <div className="abpsExploreCards">
+
+          {quickInfoData.map((item) => (
+
+            <Link
+              to={item.link}
+              key={item.number}
+              className={`
+                abpsExploreCard
+                abpsExploreCard-${item.theme}
+              `}
+            >
+
+              {/* =============================================
+                  IMAGE
+              ============================================= */}
+
+              <div className="abpsExploreImage">
+
+                <img
+                  src={item.image}
+                  alt={item.title}
+                />
+
+                <div className="abpsExploreImageShade"></div>
+
+
+                {/* NUMBER */}
+
+                <div className="abpsExploreNumber">
+
+                  <strong>
+                    {item.number}
+                  </strong>
+
+                  <span></span>
+
+                </div>
+
+
+                {/* ICON */}
+
+                <div className="abpsExploreIcon">
+                  {item.icon}
+                </div>
+
+              </div>
+
+
+              {/* =============================================
+                  CONTENT
+              ============================================= */}
+
+              <div className="abpsExploreCardContent">
+
+                <h3>
+                  {item.title}
+                </h3>
+
+
+                <span className="abpsExploreSmallLine"></span>
+
+
+                <p>
+                  {item.description}
+                </p>
+
+
+                <div className="abpsExploreCardBottom">
+
+                  <span>
+                    Explore
+                  </span>
+
+                  <b>
+                    <FaArrowRight />
+                  </b>
+
+                </div>
+
+              </div>
+
+
+              {/* DECORATIVE CIRCLE */}
+
+              <div className="abpsExploreDecorCircle"></div>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+
+        {/* ===================================================
+            BOTTOM MESSAGE
+        =================================================== */}
+
+        <div className="abpsExploreBottom">
+
+          <span></span>
+
+          <p>
+            More opportunities.
+            <strong>
+              Brighter futures.
+            </strong>
+          </p>
+
+          <span></span>
+
+        </div>
 
       </div>
+
     </section>
   );
 };

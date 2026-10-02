@@ -1,0 +1,786 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   PARENT LOGIN
+========================================================= */
+
+.plogin-page,
+.plogin-page * {
+  box-sizing: border-box;
+}
+
+.plogin-page {
+  --pl-navy: #071a35;
+  --pl-blue: #0877a9;
+  --pl-gold: #d6b36a;
+
+  --pl-white: #ffffff;
+  --pl-bg: #f4f8fb;
+
+  --pl-text: #172b3f;
+  --pl-muted: #68798a;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  background:
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(8, 119, 169, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 90%,
+      rgba(214, 179, 106, 0.13),
+      transparent 25%
+    ),
+    var(--pl-bg);
+
+  font-family:
+    "Inter",
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+
+/* HOME */
+
+.plogin-home {
+  position: fixed;
+
+  top: 23px;
+  left: 25px;
+
+  z-index: 30;
+
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.1);
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: var(--pl-navy);
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  box-shadow:
+    0 8px 24px
+    rgba(7, 26, 53, 0.06);
+}
+
+
+/* WRAPPER */
+
+.plogin-wrapper {
+  width: min(1160px, 100%);
+
+  min-height: 670px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(430px, 0.9fr);
+
+  overflow: hidden;
+
+  border-radius: 31px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 28px 80px
+    rgba(7, 26, 53, 0.14);
+}
+
+
+/* LEFT */
+
+.plogin-info {
+  display: flex;
+  flex-direction: column;
+
+  padding: 54px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(214, 179, 106, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0b3157
+    );
+
+  color: #ffffff;
+}
+
+
+.plogin-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.plogin-brand > span {
+  width: 51px;
+  height: 51px;
+
+  flex: 0 0 51px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: var(--pl-gold);
+
+  color: var(--pl-navy);
+
+  font-size: 23px;
+}
+
+
+.plogin-brand small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.plogin-brand strong {
+  color: #ffffff;
+
+  font-size: 19px;
+}
+
+
+.plogin-info-content {
+  margin: auto 0;
+}
+
+
+.plogin-label {
+  color: var(--pl-gold);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.plogin-info h1 {
+  margin: 11px 0 20px;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(46px, 4.8vw, 64px);
+
+  line-height: 1;
+}
+
+
+.plogin-info h1 em {
+  color: var(--pl-gold);
+
+  font-style: normal;
+}
+
+
+.plogin-info-content > p {
+  max-width: 510px;
+
+  margin: 0 0 28px;
+
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* FEATURES */
+
+.plogin-features {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+
+.plogin-features > div {
+  min-height: 43px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 13px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+
+  border-radius: 50px;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+.plogin-features svg {
+  color: var(--pl-gold);
+}
+
+
+.plogin-secure {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.53);
+
+  font-size: 11px;
+}
+
+
+.plogin-secure svg {
+  color: var(--pl-gold);
+}
+
+
+/* FORM */
+
+.plogin-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+
+.plogin-card {
+  width: 100%;
+  max-width: 430px;
+}
+
+
+.plogin-icon {
+  width: 61px;
+  height: 61px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 19px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pl-navy),
+      var(--pl-blue)
+    );
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  box-shadow:
+    0 14px 30px
+    rgba(8, 119, 169, 0.18);
+}
+
+
+.plogin-card-label {
+  color: var(--pl-blue);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.plogin-card h2 {
+  margin: 6px 0 9px;
+
+  color: var(--pl-navy);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 40px;
+}
+
+
+.plogin-description {
+  margin: 0 0 27px;
+
+  color: var(--pl-muted);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* FIELD */
+
+.plogin-field {
+  margin-bottom: 17px;
+}
+
+
+.plogin-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--pl-navy);
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+.plogin-input {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 16px;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.13);
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+
+.plogin-input:focus-within {
+  border-color:
+    var(--pl-blue);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(8, 119, 169, 0.07);
+}
+
+
+.plogin-input > svg {
+  flex: 0 0 auto;
+
+  color: var(--pl-blue);
+
+  font-size: 15px;
+}
+
+
+.plogin-input input {
+  width: 100%;
+  min-width: 0;
+
+  height: 52px;
+
+  padding: 0 13px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--pl-navy);
+
+  font-size: 14px;
+}
+
+
+.plogin-input input::placeholder {
+  color: #99a6b2;
+}
+
+
+.plogin-input button {
+  width: 48px;
+  height: 52px;
+
+  flex: 0 0 48px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #748493;
+
+  cursor: pointer;
+}
+
+
+.plogin-input button:hover {
+  color: var(--pl-blue);
+}
+
+
+/* LOGIN BUTTON */
+
+.plogin-submit {
+  width: 100%;
+  min-height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 6px;
+
+  border: 0;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pl-navy),
+      var(--pl-blue)
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 13px 27px
+    rgba(8, 119, 169, 0.18);
+
+  transition: 0.2s ease;
+}
+
+
+.plogin-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+
+.plogin-submit:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+/* CREATE */
+
+.plogin-create {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 20px;
+
+  color: var(--pl-muted);
+
+  font-size: 12px;
+}
+
+
+.plogin-create button {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--pl-blue);
+
+  cursor: pointer;
+
+  font-weight: 800;
+}
+
+
+/* NOTE */
+
+.plogin-note {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin-top: 19px;
+  padding-top: 17px;
+
+  border-top:
+    1px solid
+    rgba(7, 26, 53, 0.09);
+}
+
+
+.plogin-note svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #b89243;
+}
+
+
+.plogin-note p {
+  margin: 0;
+
+  color: var(--pl-muted);
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+
+/* POPUP */
+
+.plogin-popup {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 9999;
+
+  width:
+    min(
+      400px,
+      calc(100% - 30px)
+    );
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 55px
+    rgba(7, 26, 53, 0.18);
+}
+
+
+.plogin-popup-icon {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+}
+
+
+.plogin-popup.success {
+  border-left:
+    4px solid #198d52;
+}
+
+
+.plogin-popup.success
+.plogin-popup-icon {
+  background: #e8f8ee;
+
+  color: #198d52;
+}
+
+
+.plogin-popup.error {
+  border-left:
+    4px solid #ce4545;
+}
+
+
+.plogin-popup.error
+.plogin-popup-icon {
+  background: #fff0f0;
+
+  color: #ce4545;
+}
+
+
+.plogin-popup strong {
+  display: block;
+
+  color: var(--pl-navy);
+
+  font-size: 13px;
+}
+
+
+.plogin-popup p {
+  margin: 3px 0 0;
+
+  color: var(--pl-muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* TABLET */
+
+@media (max-width: 850px) {
+
+  .plogin-page {
+    padding:
+      85px 20px 30px;
+  }
+
+
+  .plogin-wrapper {
+    max-width: 650px;
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .plogin-info {
+    min-height: 480px;
+
+    padding: 38px;
+  }
+
+
+  .plogin-form-side {
+    padding: 40px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .plogin-page {
+    padding:
+      75px 12px 20px;
+  }
+
+
+  .plogin-home {
+    top: 14px;
+    left: 13px;
+  }
+
+
+  .plogin-wrapper {
+    border-radius: 20px;
+  }
+
+
+  .plogin-info {
+    min-height: 430px;
+
+    padding: 27px 20px;
+  }
+
+
+  .plogin-info h1 {
+    font-size: 39px;
+  }
+
+
+  .plogin-form-side {
+    padding: 30px 20px;
+  }
+
+
+  .plogin-card h2 {
+    font-size: 33px;
+  }
+
+
+  .plogin-create {
+    flex-direction: column;
+  }
+
+
+  .plogin-popup {
+    top: 12px;
+    right: 14px;
+    left: 14px;
+
+    width: auto;
+  }
+
+}

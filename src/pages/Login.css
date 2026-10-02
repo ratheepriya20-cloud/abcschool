@@ -1,0 +1,165 @@
+.abps-login-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(8, 119, 169, 0.14),
+      transparent 30%
+    ),
+    #f6f9fc;
+
+  font-family: "Inter", sans-serif;
+}
+
+.abps-login-card {
+  width: min(480px, 100%);
+
+  padding: 46px;
+
+  background: #ffffff;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.1);
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(7, 26, 53, 0.12);
+}
+
+.abps-login-label {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: #0877a9;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.abps-login-card h1 {
+  margin: 0 0 10px;
+
+  color: #071a35;
+
+  font-size: 40px;
+  line-height: 1.1;
+}
+
+.abps-login-card > p {
+  margin-bottom: 30px;
+
+  color: #667085;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.abps-login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.abps-login-card label {
+  margin:
+    15px 0 8px;
+
+  color: #071a35;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.abps-login-card input {
+  width: 100%;
+
+  padding: 15px 17px;
+
+  border:
+    1px solid
+    #dce3ea;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 16px;
+
+  transition: 0.25s;
+}
+
+.abps-login-card input:focus {
+  border-color: #0877a9;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(8, 119, 169, 0.1);
+}
+
+.abps-login-card button {
+  margin-top: 25px;
+
+  padding: 16px;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: #071a35;
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.abps-login-card button:hover {
+  background: #0877a9;
+
+  transform:
+    translateY(-2px);
+}
+
+.abps-login-error {
+  padding: 13px 15px;
+
+  margin-bottom: 8px;
+
+  border-radius: 10px;
+
+  background: #fff0f0;
+
+  color: #b42318;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .abps-login-card {
+    padding: 30px 22px;
+    border-radius: 20px;
+  }
+
+  .abps-login-card h1 {
+    font-size: 32px;
+  }
+
+  .abps-login-card > p {
+    font-size: 16px;
+  }
+}

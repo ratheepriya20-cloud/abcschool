@@ -11,16 +11,13 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
 import "./PrivacyPolicy.css";
 
 const PrivacyPolicy = () => {
   return (
     <div className="abprivacy-page">
 
-      <Navbar />
+    
 
       {/* =====================================================
           HERO
@@ -557,7 +554,6 @@ const PrivacyPolicy = () => {
       </section>
 
 
-      <Footer />
 
     </div>
   );

@@ -1,0 +1,25 @@
+/* EVENTS ADMIN */
+
+.events-admin-page
+.acp-table tbody td:first-child {
+  color: #071a35;
+
+  font-weight: 800;
+}
+
+.events-admin-page
+.acp-table tbody td:nth-child(2) {
+  color: #0877a9;
+
+  font-weight: 800;
+}
+
+.events-admin-page
+.acp-table tbody td:nth-child(3) {
+  color: #667085;
+}
+
+.events-admin-page
+.acp-table tbody tr:hover {
+  background: #f9fcfd;
+}

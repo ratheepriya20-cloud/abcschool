@@ -1,0 +1,1162 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   PARENT ↔ TEACHER CHAT
+   PREMIUM LIGHT THEME
+========================================================= */
+
+.parentChat-page,
+.parentChat-page * {
+  box-sizing: border-box;
+}
+
+.parentChat-page {
+  width: 100%;
+  color: #294849;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.parentChat-hero {
+  min-height: 190px;
+  padding: 32px 36px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  border: 1px solid #dcece8;
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #eff9f6 58%,
+      #eaf6fb 100%
+    );
+
+  box-shadow:
+    0 14px 38px
+    rgba(22, 67, 68, 0.07);
+}
+
+.parentChat-hero::after {
+  content: "";
+  position: absolute;
+
+  width: 270px;
+  height: 270px;
+
+  right: -85px;
+  top: -105px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(38, 125, 119, 0.07);
+}
+
+.parentChat-heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+}
+
+.parentChat-eyebrow {
+  color: #267d77;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.parentChat-hero h2 {
+  margin: 7px 0 10px;
+
+  color: #183b3d;
+
+  font-size: clamp(
+    31px,
+    4vw,
+    43px
+  );
+
+  line-height: 1.12;
+  font-weight: 900;
+}
+
+.parentChat-hero p {
+  max-width: 690px;
+
+  margin: 0;
+
+  color: #728685;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.parentChat-heroIcon {
+  width: 88px;
+  height: 88px;
+
+  flex: 0 0 88px;
+
+  position: relative;
+  z-index: 2;
+
+  border-radius: 27px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #55aaa3
+    );
+
+  color: #ffffff;
+
+  font-size: 35px;
+
+  box-shadow:
+    0 17px 32px
+    rgba(38, 125, 119, 0.2);
+}
+
+/* =========================================================
+   STUDENT BAR
+========================================================= */
+
+.parentChat-studentBar {
+  margin-top: 18px;
+  padding: 14px 18px;
+
+  border: 1px solid #dcebe8;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow:
+    0 8px 22px
+    rgba(24, 70, 71, 0.045);
+}
+
+.parentChat-studentIcon {
+  width: 47px;
+  height: 47px;
+
+  flex: 0 0 47px;
+
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  background: #e9f6f3;
+  color: #267d77;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.parentChat-studentBar > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.parentChat-studentBar span {
+  color: #7b9996;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.parentChat-studentBar strong {
+  margin-top: 2px;
+
+  color: #183b3d;
+
+  font-size: 16px;
+  font-weight: 850;
+}
+
+.parentChat-studentBar p {
+  margin: 2px 0 0;
+
+  color: #7d8f8d;
+
+  font-size: 12px;
+  font-weight: 650;
+}
+
+/* =========================================================
+   CHAT LAYOUT
+========================================================= */
+
+.parentChat-layout {
+  width: 100%;
+  height: 650px;
+
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: 330px minmax(0, 1fr);
+
+  overflow: hidden;
+
+  border: 1px solid #dce9e7;
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 14px 38px
+    rgba(22, 67, 68, 0.07);
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.parentChat-sidebar {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  border-right: 1px solid #e2edeb;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7fbfa
+    );
+}
+
+.parentChat-sidebarHeader {
+  min-height: 85px;
+
+  padding: 18px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e2edeb;
+}
+
+.parentChat-sidebarHeader span {
+  color: #267d77;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  letter-spacing: 1.2px;
+}
+
+.parentChat-sidebarHeader h3 {
+  margin: 4px 0 0;
+
+  color: #183b3d;
+
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.parentChat-teacherCount {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 11px;
+
+  display: grid;
+  place-items: center;
+
+  background: #eaf6f3;
+
+  color: #267d77 !important;
+
+  font-size: 12px !important;
+  letter-spacing: 0 !important;
+}
+
+/* =========================================================
+   TEACHER LIST
+========================================================= */
+
+.parentChat-teacherList {
+  flex: 1;
+  min-height: 0;
+
+  padding: 10px;
+
+  overflow-y: auto;
+
+  scrollbar-width: none;
+}
+
+.parentChat-teacherList::-webkit-scrollbar {
+  display: none;
+}
+
+.parentChat-teacher {
+  width: 100%;
+  min-height: 82px;
+
+  position: relative;
+
+  margin-bottom: 6px;
+  padding: 11px;
+
+  border: 1px solid transparent;
+  border-radius: 16px;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: inherit;
+
+  cursor: pointer;
+  text-align: left;
+
+  transition: 0.2s ease;
+}
+
+.parentChat-teacher:hover {
+  background: #f0f8f6;
+  border-color: #deece9;
+}
+
+.parentChat-teacher.active {
+  background:
+    linear-gradient(
+      135deg,
+      #e8f6f2,
+      #f4fbf9
+    );
+
+  border-color: #cce5e0;
+}
+
+.parentChat-teacherAvatar {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  border-radius: 15px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #55aaa3
+    );
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.parentChat-teacherInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.parentChat-teacherNameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 7px;
+}
+
+.parentChat-teacherNameRow strong {
+  min-width: 0;
+
+  color: #183b3d;
+
+  font-size: 14px;
+  font-weight: 850;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parentChat-teacherNameRow small {
+  flex: 0 0 auto;
+
+  color: #91a19f;
+
+  font-size: 9px;
+}
+
+.parentChat-teacherInfo > span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #718986;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.parentChat-teacherInfo p {
+  margin: 5px 0 0;
+
+  color: #8b9a98;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parentChat-teacherInfo p.has-unread {
+  color: #315d59;
+  font-weight: 800;
+}
+
+.parentChat-unread {
+  min-width: 23px;
+  height: 23px;
+
+  padding: 0 5px;
+
+  border-radius: 20px;
+
+  display: grid;
+  place-items: center;
+
+  background: #df5b54;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   EMPTY TEACHERS
+========================================================= */
+
+.parentChat-emptyTeachers {
+  min-height: 300px;
+
+  padding: 30px 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.parentChat-emptyTeachers > svg {
+  color: #87aaa6;
+
+  font-size: 35px;
+}
+
+.parentChat-emptyTeachers h4 {
+  margin: 13px 0 5px;
+
+  color: #183b3d;
+
+  font-size: 16px;
+}
+
+.parentChat-emptyTeachers p {
+  max-width: 220px;
+
+  margin: 0;
+
+  color: #849593;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   CONVERSATION
+========================================================= */
+
+.parentChat-conversation {
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fbfefd 0%,
+      #f7fbfa 100%
+    );
+}
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.parentChat-welcome {
+  flex: 1;
+
+  padding: 35px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.parentChat-welcomeIcon {
+  width: 83px;
+  height: 83px;
+
+  margin-bottom: 16px;
+
+  border-radius: 26px;
+
+  display: grid;
+  place-items: center;
+
+  background: #eaf6f3;
+
+  color: #267d77;
+
+  font-size: 33px;
+}
+
+.parentChat-welcome > span {
+  color: #267d77;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.parentChat-welcome h3 {
+  margin: 7px 0;
+
+  color: #183b3d;
+
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.parentChat-welcome p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: #7a8e8c;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CHAT HEADER
+========================================================= */
+
+.parentChat-chatHeader {
+  min-height: 85px;
+
+  padding: 14px 19px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border-bottom: 1px solid #e1ecea;
+}
+
+.parentChat-back {
+  display: none;
+
+  width: 39px;
+  height: 39px;
+
+  border: 1px solid #dbe9e6;
+  border-radius: 11px;
+
+  background: #ffffff;
+
+  color: #267d77;
+
+  cursor: pointer;
+}
+
+.parentChat-chatAvatar {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  border-radius: 15px;
+
+  display: grid;
+  place-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #55aaa3
+    );
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.parentChat-chatTeacher {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.parentChat-chatTeacher strong {
+  color: #183b3d;
+
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.parentChat-chatTeacher span {
+  margin-top: 3px;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #79908d;
+
+  font-size: 10px;
+  font-weight: 650;
+}
+
+.parentChat-chatTeacher i {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #46a67b;
+}
+
+.parentChat-secureLabel {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #6f8b87;
+
+  font-size: 10px;
+  font-weight: 750;
+}
+
+/* =========================================================
+   MESSAGES AREA
+========================================================= */
+
+.parentChat-messages {
+  flex: 1;
+  min-height: 0;
+
+  padding: 22px 24px;
+
+  overflow-y: auto;
+
+  scrollbar-width: none;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(38, 125, 119, 0.04),
+      transparent 30%
+    );
+}
+
+.parentChat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================================================
+   DATE DIVIDER
+========================================================= */
+
+.parentChat-dateDivider {
+  margin: 11px 0 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parentChat-dateDivider span {
+  padding: 5px 11px;
+
+  border: 1px solid #e0ebe9;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #8a9a98;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MESSAGE ROW
+========================================================= */
+
+.parentChat-messageRow {
+  width: 100%;
+
+  margin-bottom: 13px;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 8px;
+}
+
+.parentChat-messageRow.parent {
+  justify-content: flex-end;
+}
+
+.parentChat-messageRow.teacher {
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   TEACHER MESSAGE AVATAR
+========================================================= */
+
+.parentChat-messageAvatar {
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  border-radius: 10px;
+
+  display: grid;
+  place-items: center;
+
+  background: #e7f5f1;
+
+  color: #267d77;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+/* =========================================================
+   MESSAGE BUBBLE
+========================================================= */
+
+.parentChat-messageBubble {
+  max-width: min(70%, 620px);
+
+  padding: 11px 14px;
+
+  border-radius: 17px;
+}
+
+.parentChat-messageBubble.teacher {
+  border: 1px solid #dfeae8;
+
+  border-bottom-left-radius: 5px;
+
+  background: #ffffff;
+
+  color: #334e4d;
+
+  box-shadow:
+    0 5px 16px
+    rgba(26, 70, 70, 0.045);
+}
+
+.parentChat-messageBubble.parent {
+  border-bottom-right-radius: 5px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #348e87
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 18px
+    rgba(38, 125, 119, 0.16);
+}
+
+.parentChat-messageSender {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #267d77;
+
+  font-size: 14px;
+  font-weight: 850;
+}
+
+.parentChat-messageBubble p {
+  margin: 0;
+
+  color: inherit;
+
+  font-size: 16px;
+  line-height: 1.55;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.parentChat-messageMeta {
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 5px;
+
+  font-size: 8px;
+}
+
+.parentChat-messageBubble.teacher
+.parentChat-messageMeta {
+  color: #9aa8a6;
+}
+
+.parentChat-messageBubble.parent
+.parentChat-messageMeta {
+  color:
+    rgba(255, 255, 255, 0.76);
+}
+
+/* =========================================================
+   NO MESSAGES
+========================================================= */
+
+.parentChat-noMessages {
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.parentChat-noMessages > svg {
+  color: #8bb0ac;
+
+  font-size: 31px;
+}
+
+.parentChat-noMessages h4 {
+  margin: 11px 0 4px;
+
+  color: #183b3d;
+
+  font-size: 17px;
+}
+
+.parentChat-noMessages p {
+  margin: 0;
+
+  color: #859693;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   COMPOSE
+========================================================= */
+
+.parentChat-compose {
+  min-height: 83px;
+
+  padding: 13px 17px;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 10px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e0ebe9;
+}
+
+.parentChat-inputWrap {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.parentChat-inputWrap textarea {
+  width: 100%;
+  min-height: 48px;
+  max-height: 110px;
+
+  padding: 13px 15px;
+
+  resize: none;
+
+  outline: none;
+
+  border: 1px solid #d7e6e3;
+  border-radius: 15px;
+
+  background: #f8fbfa;
+
+  color: #294849;
+
+  font-size: 15px;
+  line-height: 1.5;
+
+  transition: 0.2s ease;
+}
+
+.parentChat-inputWrap textarea:focus {
+  background: #ffffff;
+
+  border-color: #86beb8;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(38, 125, 119, 0.08);
+}
+
+.parentChat-inputWrap textarea::placeholder {
+  color: #9baaa8;
+}
+
+.parentChat-send {
+  min-width: 102px;
+  height: 48px;
+
+  padding: 0 17px;
+
+  border: 0;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #267d77,
+      #348e87
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 850;
+
+  box-shadow:
+    0 8px 19px
+    rgba(38, 125, 119, 0.18);
+}
+
+.parentChat-send:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+  .parentChat-layout {
+    grid-template-columns:
+      290px minmax(0, 1fr);
+  }
+
+  .parentChat-messageBubble {
+    max-width: 78%;
+  }
+}
+
+@media (max-width: 760px) {
+  .parentChat-hero {
+    min-height: auto;
+
+    padding: 25px 22px;
+
+    border-radius: 22px;
+  }
+
+  .parentChat-hero h2 {
+    font-size: 29px;
+  }
+
+  .parentChat-hero p {
+    font-size: 19px;
+  }
+
+  .parentChat-heroIcon {
+    display: none;
+  }
+
+  .parentChat-layout {
+    height: 620px;
+
+    position: relative;
+
+    display: block;
+  }
+
+  .parentChat-sidebar {
+    width: 100%;
+    height: 100%;
+
+    border-right: 0;
+  }
+
+  .parentChat-sidebar.mobile-hidden {
+    display: none;
+  }
+
+  .parentChat-conversation {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .parentChat-conversation.mobile-open {
+    display: flex;
+  }
+
+  .parentChat-back {
+    display: grid;
+    place-items: center;
+  }
+
+  .parentChat-messages {
+    padding: 18px 14px;
+  }
+
+  .parentChat-messageBubble {
+    max-width: 83%;
+  }
+
+  .parentChat-secureLabel {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .parentChat-studentBar {
+    padding: 12px;
+  }
+
+  .parentChat-layout {
+    height: 590px;
+
+    border-radius: 19px;
+  }
+
+  .parentChat-sidebarHeader {
+    min-height: 75px;
+
+    padding: 15px;
+  }
+
+  .parentChat-chatHeader {
+    min-height: 74px;
+
+    padding: 11px;
+  }
+
+  .parentChat-chatAvatar {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+  }
+
+  .parentChat-messageBubble {
+    max-width: 88%;
+
+    padding: 10px 12px;
+  }
+
+  .parentChat-compose {
+    min-height: 72px;
+
+    padding: 10px;
+  }
+
+  .parentChat-send {
+    min-width: 48px;
+    width: 48px;
+
+    padding: 0;
+  }
+
+  .parentChat-send span {
+    display: none;
+  }
+}

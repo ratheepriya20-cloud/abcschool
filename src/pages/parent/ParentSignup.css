@@ -1,0 +1,815 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   PARENT SIGNUP
+========================================================= */
+
+.psign-page,
+.psign-page * {
+  box-sizing: border-box;
+}
+
+.psign-page {
+  --ps-navy: #071a35;
+  --ps-navy-light: #0b3157;
+
+  --ps-blue: #0877a9;
+  --ps-blue-light: #17a0d2;
+
+  --ps-gold: #d6b36a;
+
+  --ps-white: #ffffff;
+  --ps-bg: #f4f8fb;
+
+  --ps-text: #172b3f;
+  --ps-muted: #68798a;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  background:
+    radial-gradient(
+      circle at 8% 10%,
+      rgba(8, 119, 169, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 90%,
+      rgba(214, 179, 106, 0.14),
+      transparent 25%
+    ),
+    var(--ps-bg);
+
+  font-family:
+    "Inter",
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+
+/* =========================================================
+   HOME
+========================================================= */
+
+.psign-home {
+  position: fixed;
+
+  top: 22px;
+  left: 25px;
+
+  z-index: 30;
+
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.1);
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  color: var(--ps-navy);
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 750;
+
+  box-shadow:
+    0 8px 24px
+    rgba(7, 26, 53, 0.06);
+}
+
+
+/* =========================================================
+   WRAPPER
+========================================================= */
+
+.psign-wrapper {
+  width: min(1240px, 100%);
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.88fr)
+    minmax(520px, 1.12fr);
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.07);
+
+  border-radius: 32px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 28px 80px
+    rgba(7, 26, 53, 0.14);
+}
+
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.psign-info {
+  min-height: 750px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 52px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(214, 179, 106, 0.18),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 5% 90%,
+      rgba(8, 119, 169, 0.28),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0b3157
+    );
+
+  color: #ffffff;
+}
+
+
+/* BRAND */
+
+.psign-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.psign-brand > span {
+  width: 51px;
+  height: 51px;
+
+  flex: 0 0 51px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: var(--ps-gold);
+
+  color: var(--ps-navy);
+
+  font-size: 23px;
+}
+
+
+.psign-brand small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.psign-brand strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 19px;
+}
+
+
+/* CONTENT */
+
+.psign-info-content {
+  margin: auto 0;
+}
+
+
+.psign-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--ps-gold);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.psign-info h1 {
+  margin: 0 0 20px;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(43px, 4vw, 59px);
+
+  line-height: 1.04;
+  font-weight: 800;
+}
+
+
+.psign-info h1 em {
+  color: var(--ps-gold);
+
+  font-style: normal;
+}
+
+
+.psign-info-content > p {
+  max-width: 500px;
+
+  margin: 0 0 28px;
+
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+.psign-points {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+.psign-points > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+
+  font-size: 13px;
+}
+
+
+.psign-points svg {
+  color: var(--ps-gold);
+}
+
+
+.psign-security {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  font-size: 11px;
+}
+
+
+.psign-security svg {
+  color: var(--ps-gold);
+}
+
+
+/* =========================================================
+   FORM SIDE
+========================================================= */
+
+.psign-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 42px 55px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #fbfdff
+    );
+}
+
+
+.psign-card {
+  width: 100%;
+  max-width: 580px;
+}
+
+
+.psign-icon {
+  width: 59px;
+  height: 59px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--ps-navy),
+      var(--ps-blue)
+    );
+
+  color: #ffffff;
+
+  font-size: 24px;
+
+  box-shadow:
+    0 13px 28px
+    rgba(8, 119, 169, 0.17);
+}
+
+
+.psign-card-label {
+  color: var(--ps-blue);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.psign-card h2 {
+  margin: 6px 0 8px;
+
+  color: var(--ps-navy);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 39px;
+  line-height: 1.1;
+}
+
+
+.psign-description {
+  margin: 0 0 23px;
+
+  color: var(--ps-muted);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.psign-field {
+  margin-bottom: 14px;
+}
+
+
+.psign-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--ps-navy);
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+
+.psign-two {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+
+.psign-input {
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 15px;
+
+  border:
+    1px solid
+    rgba(7, 26, 53, 0.13);
+
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.psign-input:focus-within {
+  border-color:
+    var(--ps-blue);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(8, 119, 169, 0.07);
+}
+
+
+.psign-input > svg {
+  flex: 0 0 auto;
+
+  color: var(--ps-blue);
+
+  font-size: 15px;
+}
+
+
+.psign-input input {
+  width: 100%;
+  min-width: 0;
+
+  height: 49px;
+
+  padding: 0 12px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--ps-navy);
+
+  font-size: 13px;
+  font-weight: 550;
+}
+
+
+.psign-input input::placeholder {
+  color: #99a6b2;
+
+  font-weight: 450;
+}
+
+
+.psign-input button {
+  width: 46px;
+  height: 49px;
+
+  flex: 0 0 46px;
+
+  display: grid;
+  place-items: center;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #718190;
+
+  cursor: pointer;
+}
+
+
+.psign-input button:hover {
+  color: var(--ps-blue);
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.psign-submit {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 7px;
+
+  border: 0;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--ps-navy),
+      var(--ps-blue)
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 13px 27px
+    rgba(8, 119, 169, 0.17);
+
+  transition: 0.2s ease;
+}
+
+
+.psign-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 17px 34px
+    rgba(8, 119, 169, 0.23);
+}
+
+
+.psign-submit:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOGIN LINK
+========================================================= */
+
+.psign-login-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  margin-top: 19px;
+
+  color: var(--ps-muted);
+
+  font-size: 12px;
+}
+
+
+.psign-login-link button {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--ps-blue);
+
+  cursor: pointer;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.psign-popup {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 9999;
+
+  width:
+    min(
+      400px,
+      calc(100% - 30px)
+    );
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 55px
+    rgba(7, 26, 53, 0.18);
+}
+
+
+.psign-popup > span {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+}
+
+
+.psign-popup.success {
+  border-left:
+    4px solid #198d52;
+}
+
+
+.psign-popup.success > span {
+  background: #e8f8ee;
+
+  color: #198d52;
+}
+
+
+.psign-popup.error {
+  border-left:
+    4px solid #ce4545;
+}
+
+
+.psign-popup.error > span {
+  background: #fff0f0;
+
+  color: #ce4545;
+}
+
+
+.psign-popup strong {
+  display: block;
+
+  color: var(--ps-navy);
+
+  font-size: 13px;
+}
+
+
+.psign-popup p {
+  margin: 3px 0 0;
+
+  color: var(--ps-muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .psign-page {
+    padding:
+      85px 20px 30px;
+  }
+
+
+  .psign-wrapper {
+    max-width: 700px;
+
+    grid-template-columns: 1fr;
+  }
+
+
+  .psign-info {
+    min-height: 480px;
+
+    padding: 38px;
+  }
+
+
+  .psign-form-side {
+    padding: 42px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .psign-page {
+    padding:
+      75px 12px 20px;
+  }
+
+
+  .psign-home {
+    top: 14px;
+    left: 13px;
+  }
+
+
+  .psign-wrapper {
+    border-radius: 20px;
+  }
+
+
+  .psign-info {
+    min-height: 460px;
+
+    padding: 27px 20px;
+  }
+
+
+  .psign-info h1 {
+    font-size: 36px;
+  }
+
+
+  .psign-info-content > p {
+    font-size: 14px;
+  }
+
+
+  .psign-form-side {
+    padding: 30px 19px;
+  }
+
+
+  .psign-card h2 {
+    font-size: 33px;
+  }
+
+
+  .psign-two {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+
+  .psign-login-link {
+    flex-direction: column;
+  }
+
+
+  .psign-popup {
+    top: 12px;
+    right: 14px;
+    left: 14px;
+
+    width: auto;
+  }
+
+}

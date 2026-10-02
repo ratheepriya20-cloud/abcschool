@@ -1,0 +1,1648 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   PARENT ATTENDANCE
+   FULL RESPONSIVE CSS
+========================================================= */
+
+.pp-page {
+  --ppa-navy: #071a35;
+  --ppa-navy-soft: #0b3159;
+  --ppa-blue: #0877a9;
+  --ppa-sky: #eaf7fc;
+  --ppa-sky-soft: #f4fbfe;
+
+  --ppa-gold: #d6b36a;
+  --ppa-gold-dark: #a87824;
+  --ppa-gold-soft: #fff3d7;
+
+  --ppa-white: #ffffff;
+  --ppa-text: #30485e;
+  --ppa-muted: #68798a;
+
+  --ppa-border:
+    rgba(7, 26, 53, 0.09);
+
+  --ppa-shadow:
+    0 10px 28px rgba(7, 26, 53, 0.06);
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+
+  font-family:
+    "DM Sans",
+    Arial,
+    sans-serif;
+}
+
+
+.pp-page *,
+.pp-page *::before,
+.pp-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HERO
+========================================================= */
+
+.pp-page-hero {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  margin-bottom: 22px;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.13);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(214, 179, 106, 0.22),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(8, 119, 169, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7fcfe 48%,
+      #edf8fc 100%
+    );
+
+  box-shadow:
+    0 14px 35px
+    rgba(7, 26, 53, 0.06);
+}
+
+
+/* DECORATIVE LINE */
+
+.pp-page-hero::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 6px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      var(--ppa-gold),
+      var(--ppa-blue)
+    );
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.pp-eyebrow {
+  display: block;
+
+  width: fit-content;
+
+  margin-bottom: 8px;
+
+  color:
+    var(--ppa-blue);
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================================
+   HERO HEADING
+========================================================= */
+
+.pp-page-hero h1 {
+  width: 100%;
+
+  margin:
+    0 0 10px;
+
+  color:
+    var(--ppa-navy);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(43px, 4vw, 56px);
+
+  font-weight: 700;
+
+  line-height: 1.06;
+
+  letter-spacing: -1px;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.pp-page-hero p {
+  width: 100%;
+  max-width: 820px;
+
+  margin: 0;
+
+  color:
+    var(--ppa-muted);
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   SUMMARY GRID
+========================================================= */
+
+.pp-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   SUMMARY CARD
+========================================================= */
+
+.pp-summary-card {
+  width: 100%;
+
+  min-width: 0;
+
+  min-height: 135px;
+
+  display: grid;
+
+  grid-template-columns:
+    60px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    20px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--ppa-border);
+
+  border-radius: 18px;
+
+  background:
+    var(--ppa-white);
+
+  box-shadow:
+    var(--ppa-shadow);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.pp-summary-card:hover {
+  transform:
+    translateY(-4px);
+
+  border-color:
+    rgba(8, 119, 169, 0.22);
+
+  box-shadow:
+    0 17px 35px
+    rgba(7, 26, 53, 0.1);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.pp-summary-card > span {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 16px;
+
+  color:
+    var(--ppa-blue);
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf8fc,
+      #dff3fa
+    );
+
+  font-size: 24px;
+
+  box-shadow:
+    inset 0 0 0 1px
+    rgba(8, 119, 169, 0.05);
+}
+
+
+/* DIFFERENT CARD FEEL */
+
+.pp-summary-card:nth-child(2) > span {
+  color: #198251;
+
+  background: #eaf8ef;
+}
+
+
+.pp-summary-card:nth-child(3) > span {
+  color: #cc4d52;
+
+  background: #fff0f0;
+}
+
+
+.pp-summary-card:nth-child(4) > span {
+  color:
+    var(--ppa-gold-dark);
+
+  background:
+    var(--ppa-gold-soft);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.pp-summary-card > div {
+  width: 100%;
+
+  min-width: 0;
+}
+
+
+/* NUMBER */
+
+.pp-summary-card strong {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  color:
+    var(--ppa-navy);
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* CARD TITLE */
+
+.pp-summary-card p {
+  width: 100%;
+  max-width: 100%;
+
+  margin:
+    7px 0 0;
+
+  color:
+    var(--ppa-muted);
+
+  font-size: 17px;
+
+  font-weight: 650;
+
+  line-height: 1.35;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+
+  word-break: normal;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.pp-table-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  padding:
+    25px;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--ppa-border);
+
+  border-radius: 20px;
+
+  background:
+    var(--ppa-white);
+
+  box-shadow:
+    0 12px 32px
+    rgba(7, 26, 53, 0.05);
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.pp-section-heading {
+  width: 100%;
+
+  margin-bottom: 22px;
+}
+
+
+.pp-section-heading > span {
+  display: block;
+
+  width: fit-content;
+
+  margin-bottom: 5px;
+
+  color:
+    var(--ppa-blue);
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1.4;
+
+  letter-spacing: 1.4px;
+}
+
+
+.pp-section-heading h2 {
+  width: 100%;
+
+  margin:
+    0 0 7px;
+
+  color:
+    var(--ppa-navy);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+
+.pp-section-heading p {
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0;
+
+  color:
+    var(--ppa-muted);
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  line-height: 1.6;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.pp-table-wrap {
+  width: 100%;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 3px;
+
+  border-radius: 12px;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #b9cfdb #edf4f7;
+}
+
+
+.pp-table-wrap::-webkit-scrollbar {
+  height: 7px;
+}
+
+
+.pp-table-wrap::-webkit-scrollbar-track {
+  border-radius: 20px;
+
+  background:
+    #edf4f7;
+}
+
+
+.pp-table-wrap::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+
+  background:
+    #b9cfdb;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.pp-table {
+  width: 100%;
+
+  min-width: 760px;
+
+  border-collapse: collapse;
+
+  border-spacing: 0;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.pp-table thead {
+  width: 100%;
+}
+
+
+.pp-table th {
+  padding:
+    15px 16px;
+
+  color:
+    #ffffff;
+
+  background:
+    var(--ppa-navy);
+
+  font-size: 15px;
+
+  font-weight: 750;
+
+  line-height: 1.4;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+
+.pp-table th:first-child {
+  border-radius:
+    11px 0 0 11px;
+}
+
+
+.pp-table th:last-child {
+  border-radius:
+    0 11px 11px 0;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.pp-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+.pp-table tbody tr:hover {
+  background:
+    #f8fcfe;
+}
+
+
+.pp-table td {
+  padding:
+    17px 16px;
+
+  border-bottom:
+    1px solid
+    rgba(7, 26, 53, 0.08);
+
+  color:
+    #35495d;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  vertical-align: middle;
+}
+
+
+.pp-table td strong {
+  color:
+    var(--ppa-navy);
+
+  font-size: 17px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   ATTENDANCE PERCENTAGE
+========================================================= */
+
+.pp-percentage {
+  min-width: 68px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding:
+    8px 12px;
+
+  border-radius: 50px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  white-space: nowrap;
+}
+
+
+.pp-percentage.good {
+  color: #16804a;
+
+  background:
+    #e9f8ef;
+}
+
+
+.pp-percentage.average {
+  color: #9b6706;
+
+  background:
+    #fff4dd;
+}
+
+
+/* =========================================================
+   LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .pp-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 13px;
+  }
+
+
+  .pp-summary-card {
+    min-height: 125px;
+
+    grid-template-columns:
+      58px minmax(0, 1fr);
+  }
+
+
+  .pp-summary-card strong {
+    font-size: 31px;
+  }
+
+
+  .pp-summary-card p {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* HERO */
+
+  .pp-page-hero {
+    margin-bottom: 18px;
+
+    padding:
+      26px 24px;
+
+    border-radius: 19px;
+  }
+
+
+  .pp-eyebrow {
+    font-size: 14px;
+  }
+
+
+  .pp-page-hero h1 {
+    font-size:
+      clamp(40px, 6vw, 48px);
+  }
+
+
+  .pp-page-hero p {
+    max-width: 100%;
+
+    font-size: 18px;
+
+    line-height: 1.65;
+  }
+
+
+  /* SUMMARY */
+
+  .pp-summary-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .pp-summary-card {
+    min-height: 120px;
+
+    grid-template-columns:
+      56px minmax(0, 1fr);
+
+    gap: 13px;
+
+    padding:
+      18px;
+  }
+
+
+  .pp-summary-card > span {
+    width: 54px;
+    height: 54px;
+
+    min-width: 54px;
+
+    font-size: 22px;
+  }
+
+
+  .pp-summary-card strong {
+    font-size: 30px;
+  }
+
+
+  .pp-summary-card p {
+    font-size: 17px;
+  }
+
+
+  /* TABLE */
+
+  .pp-table-card {
+    padding:
+      21px;
+  }
+
+
+  .pp-section-heading > span {
+    font-size: 14px;
+  }
+
+
+  .pp-section-heading h2 {
+    font-size: 31px;
+  }
+
+
+  .pp-section-heading p {
+    font-size: 17px;
+  }
+
+
+  .pp-table th {
+    font-size: 15px;
+  }
+
+
+  .pp-table td {
+    font-size: 16px;
+  }
+
+
+  .pp-table td strong {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* =======================================================
+     HERO
+  ======================================================= */
+
+  .pp-page-hero {
+    width: 100%;
+
+    margin-bottom: 15px;
+
+    padding:
+      21px 17px;
+
+    border-radius: 16px;
+  }
+
+
+  .pp-page-hero::before {
+    width: 4px;
+  }
+
+
+  .pp-eyebrow {
+    margin-bottom: 7px;
+
+    font-size: 13px;
+
+    letter-spacing: 1.2px;
+  }
+
+
+  .pp-page-hero h1 {
+    width: 100%;
+
+    margin-bottom: 9px;
+
+    font-size:
+      clamp(35px, 10vw, 42px);
+
+    line-height: 1.08;
+  }
+
+
+  .pp-page-hero p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.62;
+  }
+
+
+  /* =======================================================
+     SUMMARY GRID
+     ONE CARD PER ROW
+  ======================================================= */
+
+  .pp-summary-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* =======================================================
+     SUMMARY CARD
+  ======================================================= */
+
+  .pp-summary-card {
+    width: 100%;
+
+    min-width: 0;
+    min-height: 105px;
+
+    grid-template-columns:
+      58px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding:
+      15px 16px;
+
+    border-radius: 15px;
+  }
+
+
+  .pp-summary-card > span {
+    width: 56px;
+    height: 56px;
+
+    min-width: 56px;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+  }
+
+
+  .pp-summary-card > div {
+    min-width: 0;
+
+    width: 100%;
+  }
+
+
+  .pp-summary-card strong {
+    width: 100%;
+
+    font-size: 30px;
+
+    line-height: 1;
+  }
+
+
+  .pp-summary-card p {
+    width: 100%;
+
+    margin-top: 6px;
+
+    font-size: 17px;
+
+    line-height: 1.35;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =======================================================
+     TABLE CARD
+  ======================================================= */
+
+  .pp-table-card {
+    width: 100%;
+    max-width: 100%;
+
+    padding:
+      17px 14px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+  }
+
+
+  .pp-section-heading {
+    margin-bottom: 17px;
+  }
+
+
+  .pp-section-heading > span {
+    font-size: 13px;
+  }
+
+
+  .pp-section-heading h2 {
+    margin:
+      4px 0 7px;
+
+    font-size: 29px;
+
+    line-height: 1.15;
+  }
+
+
+  .pp-section-heading p {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+  }
+
+
+  /* =======================================================
+     TABLE
+  ======================================================= */
+
+  .pp-table-wrap {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 6px;
+  }
+
+
+  .pp-table {
+    min-width: 700px;
+  }
+
+
+  .pp-table th {
+    padding:
+      14px 15px;
+
+    font-size: 15px;
+  }
+
+
+  .pp-table td {
+    padding:
+      15px;
+
+    font-size: 16px;
+  }
+
+
+  .pp-table td strong {
+    font-size: 17px;
+  }
+
+
+  .pp-percentage {
+    min-width: 66px;
+
+    padding:
+      7px 11px;
+
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .pp-page-hero {
+    padding:
+      18px 14px;
+  }
+
+
+  .pp-eyebrow {
+    font-size: 12.5px;
+  }
+
+
+  .pp-page-hero h1 {
+    font-size: 34px;
+  }
+
+
+  .pp-page-hero p {
+    font-size: 16.5px;
+  }
+
+
+  /* SUMMARY CARD */
+
+  .pp-summary-card {
+    min-height: 100px;
+
+    grid-template-columns:
+      53px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding:
+      14px;
+  }
+
+
+  .pp-summary-card > span {
+    width: 51px;
+    height: 51px;
+
+    min-width: 51px;
+
+    font-size: 21px;
+  }
+
+
+  .pp-summary-card strong {
+    font-size: 28px;
+  }
+
+
+  .pp-summary-card p {
+    font-size: 16.5px;
+  }
+
+
+  /* TABLE HEADING */
+
+  .pp-section-heading > span {
+    font-size: 12.5px;
+  }
+
+
+  .pp-section-heading h2 {
+    font-size: 27px;
+  }
+
+
+  .pp-section-heading p {
+    font-size: 16.5px;
+  }
+
+
+  /* TABLE */
+
+  .pp-table-card {
+    padding:
+      15px 11px;
+  }
+
+
+  .pp-table th {
+    font-size: 14.5px;
+  }
+
+
+  .pp-table td {
+    font-size: 15.5px;
+  }
+
+
+  .pp-table td strong {
+    font-size: 16.5px;
+  }
+
+
+  .pp-percentage {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .pp-page-hero {
+    padding:
+      17px 12px;
+  }
+
+
+  .pp-page-hero h1 {
+    font-size: 32px;
+  }
+
+
+  .pp-page-hero p {
+    font-size: 16px;
+  }
+
+
+  .pp-summary-card {
+    grid-template-columns:
+      49px minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding:
+      13px 12px;
+  }
+
+
+  .pp-summary-card > span {
+    width: 48px;
+    height: 48px;
+
+    min-width: 48px;
+
+    font-size: 20px;
+  }
+
+
+  .pp-summary-card strong {
+    font-size: 27px;
+  }
+
+
+  .pp-summary-card p {
+    font-size: 16px;
+  }
+
+
+  .pp-section-heading h2 {
+    font-size: 26px;
+  }
+
+
+  .pp-section-heading p {
+    font-size: 16px;
+  }
+
+}
+
+/* =========================================================
+   PARENT ATTENDANCE HERO
+   FINAL VERTICAL RESPONSIVE FIX
+   PASTE AT VERY END
+========================================================= */
+
+.pp-page-hero {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+
+  gap: 0 !important;
+
+  position: relative !important;
+
+  margin: 0 0 22px !important;
+
+  padding: 30px 32px !important;
+
+  overflow: hidden !important;
+
+  border: 1px solid rgba(8, 119, 169, 0.13) !important;
+  border-radius: 22px !important;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(214, 179, 106, 0.2),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #eef9fd
+    ) !important;
+
+  box-shadow:
+    0 14px 35px
+    rgba(7, 26, 53, 0.06) !important;
+
+  text-align: left !important;
+}
+
+
+/* LEFT DECOR LINE */
+
+.pp-page-hero::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 5px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #d6b36a,
+      #0877a9
+    );
+}
+
+
+/* =========================================================
+   1. LABEL FIRST
+========================================================= */
+
+.pp-page-hero > .pp-eyebrow {
+  width: fit-content !important;
+  max-width: 100% !important;
+
+  display: block !important;
+
+  order: 1 !important;
+
+  margin: 0 0 9px !important;
+
+  padding: 0 !important;
+
+  color: #0877a9 !important;
+
+  font-size: 15px !important;
+  font-weight: 800 !important;
+
+  line-height: 1.35 !important;
+
+  letter-spacing: 1.5px !important;
+
+  text-align: left !important;
+
+  white-space: normal !important;
+
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+}
+
+
+/* =========================================================
+   2. TITLE LABEL KE NICHE
+========================================================= */
+
+.pp-page-hero > h1 {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+
+  display: block !important;
+
+  order: 2 !important;
+
+  margin: 0 0 11px !important;
+
+  padding: 0 !important;
+
+  color: #071a35 !important;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif !important;
+
+  font-size: clamp(
+    42px,
+    4vw,
+    55px
+  ) !important;
+
+  font-weight: 700 !important;
+
+  line-height: 1.08 !important;
+
+  letter-spacing: -1px !important;
+
+  text-align: left !important;
+
+  white-space: normal !important;
+
+  /* IMPORTANT:
+     Student Attendance ko
+     letter-letter break nahi karega */
+  word-break: normal !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
+}
+
+
+/* =========================================================
+   3. DESCRIPTION TITLE KE NICHE
+========================================================= */
+
+.pp-page-hero > p {
+  width: 100% !important;
+  max-width: 780px !important;
+  min-width: 0 !important;
+
+  display: block !important;
+
+  order: 3 !important;
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  color: #68798a !important;
+
+  font-size: 18px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.65 !important;
+
+  text-align: left !important;
+
+  white-space: normal !important;
+
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .pp-page-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    padding: 25px 23px !important;
+
+    border-radius: 19px !important;
+  }
+
+
+  .pp-page-hero > .pp-eyebrow {
+    display: block !important;
+
+    width: fit-content !important;
+
+    font-size: 14px !important;
+
+    margin-bottom: 8px !important;
+  }
+
+
+  .pp-page-hero > h1 {
+    display: block !important;
+
+    width: 100% !important;
+
+    font-size: 42px !important;
+
+    line-height: 1.08 !important;
+
+    margin-bottom: 10px !important;
+
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+
+
+  .pp-page-hero > p {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.65 !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .pp-page-hero {
+    width: 100% !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+
+    padding:
+      21px 18px !important;
+
+    margin-bottom: 16px !important;
+
+    border-radius: 17px !important;
+  }
+
+
+  /* LABEL */
+
+  .pp-page-hero > .pp-eyebrow {
+    width: fit-content !important;
+
+    display: block !important;
+
+    margin:
+      0 0 8px !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.35 !important;
+
+    letter-spacing: 1.3px !important;
+
+    word-break: normal !important;
+  }
+
+
+  /* TITLE */
+
+  .pp-page-hero > h1 {
+    width: 100% !important;
+
+    display: block !important;
+
+    margin:
+      0 0 10px !important;
+
+    font-size:
+      clamp(
+        34px,
+        9vw,
+        41px
+      ) !important;
+
+    line-height: 1.08 !important;
+
+    letter-spacing: -0.7px !important;
+
+    white-space: normal !important;
+
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+  }
+
+
+  /* DESCRIPTION */
+
+  .pp-page-hero > p {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    display: block !important;
+
+    margin: 0 !important;
+
+    font-size: 17px !important;
+
+    line-height: 1.62 !important;
+
+    white-space: normal !important;
+
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .pp-page-hero {
+    padding:
+      19px 15px !important;
+  }
+
+
+  .pp-page-hero > .pp-eyebrow {
+    font-size: 12.5px !important;
+  }
+
+
+  .pp-page-hero > h1 {
+    font-size: 34px !important;
+
+    line-height: 1.1 !important;
+  }
+
+
+  .pp-page-hero > p {
+    font-size: 16.5px !important;
+
+    line-height: 1.6 !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+  .pp-page-hero {
+    padding:
+      17px 13px !important;
+  }
+
+
+  .pp-page-hero > h1 {
+    font-size: 31px !important;
+  }
+
+
+  .pp-page-hero > p {
+    font-size: 16px !important;
+  }
+
+}

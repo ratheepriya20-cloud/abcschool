@@ -1,0 +1,1125 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   TEACHER NOTIFICATIONS
+   PREMIUM LIGHT THEME
+   White + Mint + Sky + Cream + Soft Gold
+   ========================================================= */
+
+.teacherNotify-page {
+  width: 100%;
+  min-height: 100%;
+  color: #385456;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.teacherNotify-hero {
+  position: relative;
+  width: 100%;
+  min-height: 190px;
+  padding: 30px 34px;
+  overflow: hidden;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 25px;
+
+  background:
+    radial-gradient(
+      circle at 86% 18%,
+      rgba(255, 255, 255, 0.95),
+      transparent 23%
+    ),
+    linear-gradient(
+      135deg,
+      #e5f5ef 0%,
+      #f5fbf9 55%,
+      #fff6e4 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  box-shadow:
+    0 14px 38px rgba(32, 83, 78, 0.07);
+}
+
+.teacherNotify-hero::before {
+  content: "";
+  position: absolute;
+
+  top: -100px;
+  right: 120px;
+
+  width: 210px;
+  height: 210px;
+
+  border: 1px solid rgba(36, 125, 120, 0.09);
+  border-radius: 50%;
+}
+
+.teacherNotify-hero::after {
+  content: "";
+  position: absolute;
+
+  right: -65px;
+  bottom: -120px;
+
+  width: 235px;
+  height: 235px;
+
+  border-radius: 50%;
+
+  background: rgba(226, 188, 108, 0.14);
+}
+
+.teacherNotify-hero > div:first-child {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.teacherNotify-hero > div:first-child > span {
+  display: inline-flex;
+
+  margin-bottom: 9px;
+  padding: 6px 11px;
+
+  border: 1px solid #cee6df;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.78);
+
+  color: #267d77;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.teacherNotify-hero h1 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: clamp(30px, 3vw, 40px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.9px;
+}
+
+.teacherNotify-hero p {
+  max-width: 620px;
+
+  margin: 10px 0 0;
+
+  color: #708684;
+
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BIG BELL
+   ========================================================= */
+
+.teacherNotify-heroRight {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacherNotify-bellBig {
+  position: relative;
+
+  width: 86px;
+  height: 86px;
+
+  border: 1px solid #d5eae3;
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff,
+      #edf9f5
+    );
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 31px;
+
+  box-shadow:
+    0 14px 30px rgba(38, 125, 119, 0.1);
+}
+
+.teacherNotify-bellBig strong {
+  position: absolute;
+
+  top: -8px;
+  right: -8px;
+
+  min-width: 27px;
+  height: 27px;
+
+  padding: 0 7px;
+
+  border: 3px solid #f5fbf9;
+  border-radius: 30px;
+
+  background: #e45b67;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  font-weight: 900;
+
+  box-shadow:
+    0 5px 12px rgba(228, 91, 103, 0.22);
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+   ========================================================= */
+
+.teacherNotify-summary {
+  width: 100%;
+
+  margin-top: 19px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.teacherNotify-summaryCard {
+  min-width: 0;
+
+  padding: 17px 18px;
+
+  border: 1px solid #deebe7;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  box-shadow:
+    0 8px 24px rgba(32, 83, 78, 0.05);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.teacherNotify-summaryCard:hover {
+  transform: translateY(-3px);
+
+  border-color: #cce3dc;
+
+  box-shadow:
+    0 14px 30px rgba(32, 83, 78, 0.075);
+}
+
+.teacherNotify-summaryIcon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  border: 1px solid #d4ebe3;
+  border-radius: 14px;
+
+  background: #e5f6f0;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+}
+
+.teacherNotify-summaryCard:nth-child(2)
+.teacherNotify-summaryIcon {
+  border-color: #d8eaf2;
+  background: #eaf6fb;
+  color: #43809c;
+}
+
+.teacherNotify-summaryCard:nth-child(3)
+.teacherNotify-summaryIcon {
+  border-color: #efdfbd;
+  background: #fff5df;
+  color: #ae7b30;
+}
+
+.teacherNotify-summaryCard section {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.teacherNotify-summaryCard strong {
+  color: #183b3d;
+
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.teacherNotify-summaryCard section span {
+  margin-top: 5px;
+
+  color: #788d8b;
+
+  font-size: 9px;
+  font-weight: 750;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.teacherNotify-heading {
+  width: 100%;
+
+  margin-top: 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.teacherNotify-heading > div {
+  min-width: 0;
+}
+
+.teacherNotify-heading > div > span {
+  color: #267d77;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.teacherNotify-heading h2 {
+  margin: 5px 0 0;
+
+  color: #183b3d;
+
+  font-size: clamp(22px, 2.3vw, 30px);
+  font-weight: 900;
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+}
+
+.teacherNotify-heading p {
+  margin: 6px 0 0;
+
+  color: #7a8e8c;
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+
+/* MARK READ BUTTON */
+
+.teacherNotify-heading button {
+  min-height: 39px;
+
+  padding: 0 15px;
+
+  border: 1px solid #cfe5de;
+  border-radius: 11px;
+
+  outline: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4f5ef,
+      #f3faf7
+    );
+
+  color: #247b74;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+
+  font-size: 9px;
+  font-weight: 850;
+
+  transition: 0.2s ease;
+}
+
+.teacherNotify-heading button:hover {
+  border-color: #acd6cb;
+
+  background: #dff3ec;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NOTIFICATION LIST
+   ========================================================= */
+
+.teacherNotify-list {
+  width: 100%;
+
+  margin-top: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   NOTIFICATION ITEM
+   ========================================================= */
+
+.teacherNotify-item {
+  position: relative;
+
+  width: 100%;
+
+  padding: 16px 17px;
+
+  overflow: hidden;
+
+  border: 1px solid #e0ece8;
+  border-radius: 17px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font-family: inherit;
+
+  box-shadow:
+    0 6px 20px rgba(32, 83, 78, 0.04);
+
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.teacherNotify-item:hover {
+  transform: translateY(-2px);
+
+  border-color: #cce3dc;
+
+  box-shadow:
+    0 12px 28px rgba(32, 83, 78, 0.075);
+}
+
+
+/* UNREAD */
+
+.teacherNotify-item.unread {
+  border-color: #c8e4db;
+
+  background:
+    linear-gradient(
+      90deg,
+      #f0faf6 0%,
+      #ffffff 42%
+    );
+}
+
+.teacherNotify-item.unread::before {
+  content: "";
+
+  position: absolute;
+
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+
+  width: 3px;
+
+  border-radius: 0 6px 6px 0;
+
+  background: #48a99e;
+}
+
+
+/* MESSAGE NOTIFICATION */
+
+.teacherNotify-item.message.unread {
+  background:
+    linear-gradient(
+      90deg,
+      #edf8fc 0%,
+      #ffffff 42%
+    );
+
+  border-color: #cfe5ee;
+}
+
+.teacherNotify-item.message.unread::before {
+  background: #64a8c3;
+}
+
+
+/* =========================================================
+   ITEM ICON
+   ========================================================= */
+
+.teacherNotify-itemIcon {
+  width: 47px;
+  height: 47px;
+
+  flex: 0 0 47px;
+
+  border: 1px solid #d5eae3;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4f5ef,
+      #f3faf7
+    );
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 17px;
+}
+
+.teacherNotify-itemIcon.messageIcon {
+  border-color: #d6eaf2;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f6fb,
+      #f6fbfd
+    );
+
+  color: #47839c;
+}
+
+
+/* =========================================================
+   ITEM CONTENT
+   ========================================================= */
+
+.teacherNotify-itemContent {
+  min-width: 0;
+  flex: 1;
+}
+
+.teacherNotify-itemTitle {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.teacherNotify-itemTitle strong {
+  max-width: 100%;
+
+  color: #234749;
+
+  font-size: 12px;
+  font-weight: 850;
+
+  line-height: 1.35;
+}
+
+
+/* UNREAD DOT */
+
+.teacherNotify-itemTitle i {
+  width: 7px;
+  height: 7px;
+
+  flex: 0 0 7px;
+
+  border-radius: 50%;
+
+  background: #e45b67;
+
+  box-shadow:
+    0 0 0 3px rgba(228, 91, 103, 0.1);
+}
+
+
+/* NEW COUNT */
+
+.teacherNotify-itemTitle b {
+  padding: 4px 7px;
+
+  border: 1px solid #f1d9dc;
+  border-radius: 30px;
+
+  background: #fff0f2;
+  color: #d55361;
+
+  font-size: 7px;
+  font-weight: 900;
+
+  white-space: nowrap;
+}
+
+.teacherNotify-itemContent > p {
+  margin: 6px 0 0;
+
+  color: #718684;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.6;
+
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   META
+   ========================================================= */
+
+.teacherNotify-meta {
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 7px 13px;
+}
+
+.teacherNotify-meta span {
+  color: #849694;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.teacherNotify-meta svg {
+  color: #599a92;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   ARROW
+   ========================================================= */
+
+.teacherNotify-arrow {
+  width: 31px;
+  height: 31px;
+
+  flex: 0 0 31px;
+
+  border: 1px solid #e0ebe8;
+  border-radius: 10px;
+
+  background: #f8fbfa;
+
+  color: #879997;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 10px;
+
+  transition: 0.2s ease;
+}
+
+.teacherNotify-item:hover
+.teacherNotify-arrow {
+  border-color: #cce3dc;
+
+  background: #eaf7f2;
+
+  color: #267d77;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.teacherNotify-empty {
+  width: 100%;
+  min-height: 310px;
+
+  margin-top: 17px;
+  padding: 42px 20px;
+
+  border: 1px dashed #cbded8;
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 50% 28%,
+      rgba(220, 244, 236, 0.7),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f7fcfa,
+      #fffaf1
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.teacherNotify-empty > div {
+  width: 72px;
+  height: 72px;
+
+  margin-bottom: 15px;
+
+  border: 1px solid #d4e9e3;
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e1f5ee,
+      #f4fbf8
+    );
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+
+  box-shadow:
+    0 12px 28px rgba(38, 125, 119, 0.08);
+}
+
+.teacherNotify-empty h3 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.teacherNotify-empty p {
+  max-width: 450px;
+
+  margin: 7px 0 0;
+
+  color: #788c8a;
+
+  font-size: 10px;
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .teacherNotify-summary {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .teacherNotify-summaryCard {
+    padding: 14px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .teacherNotify-hero {
+    min-height: 150px;
+
+    padding: 22px 19px;
+
+    border-radius: 20px;
+  }
+
+  .teacherNotify-hero h1 {
+    font-size: 28px;
+  }
+
+  .teacherNotify-hero p {
+    font-size: 10px;
+  }
+
+  .teacherNotify-bellBig {
+    width: 64px;
+    height: 64px;
+
+    border-radius: 18px;
+
+    font-size: 23px;
+  }
+
+  .teacherNotify-bellBig strong {
+    min-width: 23px;
+    height: 23px;
+
+    top: -7px;
+    right: -7px;
+
+    font-size: 8px;
+  }
+
+  .teacherNotify-summary {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .teacherNotify-summaryCard {
+    padding: 13px 15px;
+  }
+
+  .teacherNotify-summaryIcon {
+    width: 43px;
+    height: 43px;
+
+    flex-basis: 43px;
+  }
+
+  .teacherNotify-summaryCard strong {
+    font-size: 20px;
+  }
+
+  .teacherNotify-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .teacherNotify-heading button {
+    width: 100%;
+  }
+
+  .teacherNotify-item {
+    padding: 14px;
+
+    gap: 11px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .teacherNotify-hero {
+    padding: 20px 16px;
+  }
+
+  .teacherNotify-heroRight {
+    display: none;
+  }
+
+  .teacherNotify-hero h1 {
+    font-size: 26px;
+  }
+
+  .teacherNotify-heading {
+    margin-top: 23px;
+  }
+
+  .teacherNotify-heading h2 {
+    font-size: 22px;
+  }
+
+  .teacherNotify-item {
+    align-items: flex-start;
+
+    border-radius: 15px;
+  }
+
+  .teacherNotify-itemIcon {
+    width: 42px;
+    height: 42px;
+
+    flex-basis: 42px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+  }
+
+  .teacherNotify-itemTitle strong {
+    font-size: 11px;
+  }
+
+  .teacherNotify-arrow {
+    width: 27px;
+    height: 27px;
+
+    flex-basis: 27px;
+  }
+
+  .teacherNotify-meta {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 5px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .teacherNotify-item {
+    padding: 12px 10px;
+  }
+
+  .teacherNotify-arrow {
+    display: none;
+  }
+
+  
+}
+
+/* =========================================================
+   EXTRA LARGE FONT OVERRIDE - NOTIFICATIONS
+   SAME SCALE AS PRIVATE MESSAGES
+   ========================================================= */
+
+.teacherNotify-hero > div:first-child > span {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNotify-hero h1 {
+  font-size: clamp(48px, 5vw, 56px) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+}
+
+.teacherNotify-hero p {
+  font-size: 20px !important;
+  font-weight: 550 !important;
+  line-height: 1.65 !important;
+}
+
+.teacherNotify-bellBig {
+  width: 92px !important;
+  height: 92px !important;
+  font-size: 35px !important;
+}
+
+.teacherNotify-bellBig strong {
+  min-width: 30px !important;
+  height: 30px !important;
+  font-size: 12px !important;
+}
+
+/* SUMMARY CARDS */
+
+.teacherNotify-summaryCard strong {
+  font-size: 29px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNotify-summaryCard section span {
+  font-size: 15px !important;
+  font-weight: 750 !important;
+}
+
+.teacherNotify-summaryIcon {
+  width: 55px !important;
+  height: 55px !important;
+  flex: 0 0 55px !important;
+  font-size: 20px !important;
+}
+
+/* SECTION HEADING */
+
+.teacherNotify-heading > div > span {
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNotify-heading h2 {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+}
+
+.teacherNotify-heading p {
+  font-size: 17px !important;
+  line-height: 1.6 !important;
+}
+
+.teacherNotify-heading button {
+  min-height: 45px !important;
+  padding: 0 17px !important;
+  font-size: 14px !important;
+  font-weight: 850 !important;
+}
+
+/* NOTIFICATION ITEMS */
+
+.teacherNotify-item {
+  padding: 19px 20px !important;
+  gap: 16px !important;
+}
+
+.teacherNotify-itemIcon {
+  width: 55px !important;
+  height: 55px !important;
+  flex: 0 0 55px !important;
+  font-size: 20px !important;
+}
+
+.teacherNotify-itemTitle strong {
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  line-height: 1.4 !important;
+}
+
+.teacherNotify-itemContent p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+}
+
+.teacherNotify-meta,
+.teacherNotify-meta span {
+  font-size: 13px !important;
+  font-weight: 650 !important;
+}
+
+.teacherNotify-itemTitle i {
+  width: 9px !important;
+  height: 9px !important;
+  flex-basis: 9px !important;
+}
+
+.teacherNotify-arrow {
+  font-size: 16px !important;
+}
+
+/* EMPTY */
+
+.teacherNotify-empty h3 {
+  font-size: 27px !important;
+}
+
+.teacherNotify-empty p {
+  font-size: 17px !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .teacherNotify-hero h1 {
+    font-size: 38px !important;
+  }
+
+  .teacherNotify-hero p {
+    font-size: 16px !important;
+  }
+
+  .teacherNotify-hero > div:first-child > span {
+    font-size: 13px !important;
+  }
+
+  .teacherNotify-summaryCard strong {
+    font-size: 25px !important;
+  }
+
+  .teacherNotify-summaryCard section span {
+    font-size: 14px !important;
+  }
+
+  .teacherNotify-heading h2 {
+    font-size: 27px !important;
+  }
+
+  .teacherNotify-heading p {
+    font-size: 15px !important;
+  }
+
+  .teacherNotify-itemTitle strong {
+    font-size: 16px !important;
+  }
+
+  .teacherNotify-itemContent p {
+    font-size: 15px !important;
+  }
+}

@@ -1,0 +1,669 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   ADMISSION POPUP
+   Wider + Navbar ke niche + Responsive
+========================================================= */
+
+
+/* =========================================================
+   1. POPUP OVERLAY
+========================================================= */
+
+.admission-popup-wrapper {
+  position: fixed;
+
+  /* Navbar ko cover nahi karega */
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 20px;
+
+  background: rgba(3, 20, 38, 0.48);
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  overflow: hidden;
+
+  animation: admissionOverlayIn 0.3s ease;
+}
+
+
+/* =========================================================
+   2. POPUP CARD
+========================================================= */
+
+.admission-popup-card {
+  position: relative;
+
+  /*
+    Popup width yaha se control hogi.
+    650px desktop par achhi wide rahegi.
+  */
+  width: min(650px, 92vw);
+
+  /*
+    Navbar ke niche available screen se
+    popup bahar nahi jayega.
+  */
+  max-height: calc(100vh - 110px);
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: transparent;
+
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.34);
+
+  animation: admissionPopupIn 0.4s ease;
+}
+
+
+/* =========================================================
+   3. ADMISSION IMAGE
+========================================================= */
+
+.admission-popup-image {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+
+  /*
+    Natural image ratio maintain rahega.
+  */
+  height: auto;
+
+  max-height: calc(100vh - 110px);
+
+  object-fit: contain;
+
+  object-position: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 18px;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  -webkit-user-drag: none;
+}
+
+
+/* =========================================================
+   4. CLOSE BUTTON
+========================================================= */
+
+.admission-close-btn {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 50;
+
+  width: 43px;
+  height: 43px;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border:
+    2px solid rgba(255, 255, 255, 0.82);
+
+  border-radius: 50%;
+
+  outline: none;
+
+  color: #ffffff;
+
+  background:
+    rgba(4, 39, 72, 0.92);
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  box-shadow:
+    0 7px 20px rgba(0, 0, 0, 0.22);
+
+  transition:
+    transform 0.22s ease,
+    background 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.admission-close-btn:hover {
+  transform: scale(1.08);
+
+  background: #062f57;
+
+  box-shadow:
+    0 9px 24px rgba(0, 0, 0, 0.28);
+}
+
+
+.admission-close-btn:active {
+  transform: scale(0.96);
+}
+
+
+.admission-close-btn:focus-visible {
+  outline:
+    3px solid rgba(243, 205, 118, 0.75);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   5. INQUIRY BUTTON
+========================================================= */
+
+.admission-inquiry-btn {
+  position: absolute;
+
+  left: 49.6%;
+  bottom: 28.7px !important;
+
+  z-index: 50;
+
+  transform: translateX(-50%);
+
+  min-width: 190px !important;
+  min-height: 53px;
+
+  margin: 0;
+
+  padding: 10px 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50px;
+
+  outline: none;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877a9 0%,
+      #075d89 45%,
+      #062f57 100%
+    );
+
+  font-size: 14px;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.7px;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  box-shadow:
+    0 12px 28px rgba(3, 35, 63, 0.3);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.admission-inquiry-btn svg {
+  flex-shrink: 0;
+
+  font-size: 15px;
+}
+
+
+.admission-inquiry-btn:hover {
+  transform:
+    translateX(-50%)
+    translateY(-3px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0b8fc7 0%,
+      #0877a9 45%,
+      #062f57 100%
+    );
+
+  box-shadow:
+    0 17px 34px rgba(3, 35, 63, 0.36);
+}
+
+
+.admission-inquiry-btn:active {
+  transform:
+    translateX(-50%)
+    translateY(0)
+    scale(0.98);
+}
+
+
+.admission-inquiry-btn:focus-visible {
+  outline:
+    3px solid rgba(243, 205, 118, 0.8);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   6. OPEN ANIMATIONS
+========================================================= */
+
+@keyframes admissionOverlayIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes admissionPopupIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   7. LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+  .admission-popup-card {
+    /*
+      Large desktop par thoda aur wide
+    */
+    width: min(680px, 90vw);
+  }
+
+}
+
+
+/* =========================================================
+   8. NORMAL LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .admission-popup-wrapper {
+    top: 78px;
+
+    padding: 14px 18px;
+  }
+
+
+  .admission-popup-card {
+    width: min(620px, 91vw);
+
+    max-height:
+      calc(100vh - 105px);
+  }
+
+
+  .admission-popup-image {
+    max-height:
+      calc(100vh - 105px);
+  }
+
+}
+
+
+/* =========================================================
+   9. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admission-popup-wrapper {
+    /*
+      Tablet navbar
+    */
+    top: 72px;
+
+    padding: 13px;
+  }
+
+
+  .admission-popup-card {
+    width: min(560px, 93vw);
+
+    max-height:
+      calc(100vh - 98px);
+
+    border-radius: 16px;
+  }
+
+
+  .admission-popup-image {
+    max-height:
+      calc(100vh - 98px);
+
+    border-radius: 16px;
+  }
+
+
+  .admission-close-btn {
+    top: 12px;
+    right: 12px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+
+  .admission-inquiry-btn {
+    bottom: 20px;
+
+    min-width: 210px;
+    min-height: 49px;
+
+    padding: 11px 18px;
+
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   10. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .admission-popup-wrapper {
+    /*
+      Mobile navbar ke niche
+    */
+    top: 65px;
+
+    padding: 10px;
+  }
+
+
+  .admission-popup-card {
+    width: 95vw;
+
+    max-height:
+      calc(100vh - 85px);
+
+    border-radius: 14px;
+  }
+
+
+  .admission-popup-image {
+    width: 100%;
+
+    max-height:
+      calc(100vh - 85px);
+
+    border-radius: 14px;
+  }
+
+
+  .admission-close-btn {
+    top: 10px;
+    right: 10px;
+
+    width: 37px;
+    height: 37px;
+
+    border-width: 1.5px;
+
+    font-size: 15px;
+  }
+
+
+  .admission-inquiry-btn {
+    bottom: 16px;
+
+    min-width: 190px;
+    min-height: 45px;
+
+    padding: 10px 15px;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .admission-inquiry-btn svg {
+    font-size: 13px;
+  }
+
+}
+
+
+/* =========================================================
+   11. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .admission-popup-wrapper {
+    top: 62px;
+
+    padding: 8px;
+  }
+
+
+  .admission-popup-card {
+    width: 96vw;
+
+    max-height:
+      calc(100vh - 78px);
+
+    border-radius: 12px;
+  }
+
+
+  .admission-popup-image {
+    max-height:
+      calc(100vh - 78px);
+
+    border-radius: 12px;
+  }
+
+
+  .admission-close-btn {
+    top: 8px;
+    right: 8px;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+
+  .admission-inquiry-btn {
+    bottom: 12px;
+
+    min-width: 175px;
+    min-height: 42px;
+
+    padding: 9px 13px;
+
+    gap: 7px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   12. VERY SHORT SCREEN
+   Laptop ki height kam ho to popup crop nahi hoga
+========================================================= */
+
+@media (max-height: 700px) and (min-width: 601px) {
+
+  .admission-popup-wrapper {
+    top: 72px;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+
+  .admission-popup-card {
+    width: min(570px, 90vw);
+
+    max-height:
+      calc(100vh - 88px);
+  }
+
+
+  .admission-popup-image {
+    max-height:
+      calc(100vh - 88px);
+  }
+
+
+  .admission-inquiry-btn {
+    bottom: 16px;
+
+    min-height: 46px;
+  }
+
+}
+
+
+/* =========================================================
+   13. EXTRA SHORT SCREEN
+========================================================= */
+
+@media (max-height: 580px) and (min-width: 601px) {
+
+  .admission-popup-wrapper {
+    align-items: center;
+  }
+
+
+  .admission-popup-card {
+    width: min(500px, 88vw);
+
+    max-height:
+      calc(100vh - 82px);
+  }
+
+
+  .admission-popup-image {
+    max-height:
+      calc(100vh - 82px);
+  }
+
+
+  .admission-close-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .admission-inquiry-btn {
+    bottom: 12px;
+
+    min-width: 190px;
+    min-height: 42px;
+
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   14. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admission-popup-wrapper,
+  .admission-popup-card {
+    animation: none;
+  }
+
+
+  .admission-close-btn,
+  .admission-inquiry-btn {
+    transition: none;
+  }
+
+}

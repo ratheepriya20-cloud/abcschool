@@ -1,0 +1,191 @@
+.stuPage {
+  width: 100%;
+}
+
+.stuPage > .stuHero.small {
+  padding: 31px 34px;
+
+  margin-bottom: 24px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      125deg,
+      #071a35,
+      #0a557b
+    );
+
+  color: #ffffff;
+}
+
+.stuHero.small > span {
+  color: #e0c27e;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+.stuHero.small h1 {
+  margin: 7px 0;
+
+  font-size: clamp(
+    28px,
+    4vw,
+    39px
+  );
+}
+
+.stuHero.small p {
+  margin: 0;
+
+  color: #d8e6ef;
+
+  font-size: 16px;
+}
+
+.stuPage > .stuCards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 19px;
+}
+
+.stuCards .stuCard {
+  position: relative;
+
+  padding: 25px;
+
+  border:
+    1px solid #e3eaf1;
+
+  border-radius: 21px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(7, 26, 53, 0.055);
+
+  transition: 0.25s ease;
+}
+
+.stuCards .stuCard:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 17px 40px
+    rgba(7, 26, 53, 0.1);
+}
+
+.stuCardTop {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  color: #718096;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.stuStatus {
+  padding: 6px 11px;
+
+  border-radius: 30px;
+
+  background: #edf3f7;
+
+  color: #526477;
+
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.stuStatus.paid {
+  background: #e7f8ef;
+  color: #148453;
+}
+
+.stuStatus.pending {
+  background: #fff6df;
+  color: #9b6d0b;
+}
+
+.stuStatus.overdue {
+  background: #ffedef;
+  color: #ca3546;
+}
+
+.stuCards .stuCard h3 {
+  margin: 21px 0 5px;
+
+  color: #071a35;
+
+  font-size: 20px;
+}
+
+.stuAmount {
+  display: block;
+
+  margin: 16px 0;
+
+  color: #0877a9;
+
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.stuCards .stuCard p {
+  margin: 0;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid #edf1f4;
+
+  color: #748296;
+
+  font-size: 13px;
+}
+
+.stuPage > .stuEmpty {
+  padding: 55px 20px;
+
+  border:
+    1px dashed #ccd7e2;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #748296;
+
+  text-align: center;
+
+  font-weight: 750;
+}
+
+@media (max-width: 1000px) {
+  .stuPage > .stuCards {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stuPage > .stuHero.small {
+    padding: 25px 20px;
+  }
+
+  .stuPage > .stuCards {
+    grid-template-columns: 1fr;
+  }
+}

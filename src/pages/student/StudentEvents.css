@@ -1,0 +1,452 @@
+.studentEvents-page {
+  width: 100%;
+  color: #385456;
+}
+
+/* HERO */
+
+.studentEvents-hero {
+  position: relative;
+
+  min-height: 195px;
+  padding: 34px 38px;
+  overflow: hidden;
+
+  border: 1px solid #d7eae4;
+  border-radius: 27px;
+
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(255,255,255,.95),
+      transparent 22%
+    ),
+    linear-gradient(
+      135deg,
+      #e4f5ef,
+      #f4faf8 55%,
+      #fff4df
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+
+  box-shadow: 0 15px 38px rgba(35,80,76,.07);
+}
+
+.studentEvents-hero::after {
+  content: "";
+  position: absolute;
+
+  right: -65px;
+  bottom: -110px;
+
+  width: 230px;
+  height: 230px;
+
+  border-radius: 50%;
+  background: rgba(231,192,107,.16);
+}
+
+.studentEvents-heroContent {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+}
+
+.studentEvents-heroContent > span {
+  display: inline-flex;
+
+  padding: 7px 13px;
+  margin-bottom: 10px;
+
+  border: 1px solid #cce5de;
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.75);
+  color: #267d77;
+
+  font-size: 14px !important;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+}
+
+.studentEvents-hero h1 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: clamp(46px, 5vw, 58px) !important;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.studentEvents-hero p {
+  max-width: 720px;
+  margin: 12px 0 0;
+
+  color: #637d7c;
+
+  font-size: 19px !important;
+  line-height: 1.65;
+}
+
+.studentEvents-heroIcon {
+  position: relative;
+  z-index: 2;
+
+  width: 92px;
+  height: 92px;
+  flex: 0 0 92px;
+
+  border: 1px solid #d4e9e2;
+  border-radius: 25px;
+
+  background: rgba(255,255,255,.85);
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 36px !important;
+
+  box-shadow: 0 15px 32px rgba(38,125,119,.1);
+}
+
+/* HEADING */
+
+.studentEvents-heading {
+  margin-top: 29px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.studentEvents-heading > div:first-child > span {
+  color: #267d77;
+
+  font-size: 13px !important;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.studentEvents-heading h2 {
+  margin: 6px 0 0;
+
+  color: #183b3d;
+
+  font-size: 34px !important;
+  font-weight: 900;
+}
+
+.studentEvents-heading p {
+  margin: 7px 0 0;
+
+  color: #748987;
+
+  font-size: 16px !important;
+}
+
+.studentEvents-count {
+  min-width: 125px;
+  padding: 14px 18px;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.studentEvents-count strong {
+  display: block;
+
+  color: #267d77;
+
+  font-size: 30px !important;
+  font-weight: 900;
+}
+
+.studentEvents-count span {
+  color: #778b89;
+
+  font-size: 12px !important;
+  font-weight: 750;
+}
+
+/* GRID */
+
+.studentEvents-grid {
+  margin-top: 19px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 17px;
+}
+
+.studentEvents-card {
+  position: relative;
+
+  min-width: 0;
+  padding: 23px;
+  overflow: hidden;
+
+  border: 1px solid #deebe7;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow: 0 10px 29px rgba(34,82,78,.055);
+
+  transition: .25s ease;
+}
+
+.studentEvents-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 23px;
+
+  width: 60px;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #459d92,
+    #a2d9cd
+  );
+
+  border-radius: 0 0 10px 10px;
+}
+
+.studentEvents-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #c6e1d9;
+
+  box-shadow: 0 18px 40px rgba(34,82,78,.09);
+}
+
+.studentEvents-cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.studentEvents-icon {
+  width: 53px;
+  height: 53px;
+
+  border-radius: 16px;
+
+  background: #e4f5ef;
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 20px !important;
+}
+
+.studentEvents-category {
+  padding: 8px 13px;
+
+  border: 1px solid #efdfbd;
+  border-radius: 30px;
+
+  background: #fff8e9;
+  color: #9d702d;
+
+  font-size: 13px !important;
+  font-weight: 850;
+}
+
+.studentEvents-card h3 {
+  margin: 18px 0 0;
+
+  color: #183b3d;
+
+  font-size: 23px !important;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+.studentEvents-card > p {
+  margin: 9px 0 0;
+
+  color: #718684;
+
+  font-size: 16px !important;
+  line-height: 1.7;
+}
+
+/* META */
+
+.studentEvents-meta {
+  margin-top: 19px;
+  padding-top: 15px;
+
+  border-top: 1px solid #e8f0ed;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.studentEvents-meta > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #267d77;
+}
+
+.studentEvents-meta > span > span {
+  display: flex;
+  flex-direction: column;
+}
+
+.studentEvents-meta small {
+  color: #849795;
+margin-left: 5px;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.studentEvents-meta strong {
+  color: #385456;
+margin-left: 5px;
+
+  font-size: 18px !important;
+  font-weight: 850;
+  margin-top: 5px;
+}
+
+.studentEvents-location {
+  margin-top: 14px;
+  padding: 11px 13px;
+
+  border-radius: 12px;
+
+  background: #f3faf7;
+  color: #557a76;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px !important;
+  font-weight: 750;
+}
+
+/* EMPTY */
+
+.studentEvents-empty {
+  min-height: 310px;
+  margin-top: 22px;
+  padding: 35px;
+
+  border: 1px dashed #cbded8;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5fbf8,
+      #fffaf1
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.studentEvents-empty > svg {
+  color: #267d77;
+
+  font-size: 40px !important;
+}
+
+.studentEvents-empty h3 {
+  margin: 14px 0 0;
+
+  color: #183b3d;
+
+  font-size: 27px !important;
+  font-weight: 900;
+}
+
+.studentEvents-empty p {
+  margin: 7px 0 0;
+
+  color: #778b8a;
+
+  font-size: 16px !important;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+  .studentEvents-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .studentEvents-hero {
+    min-height: auto;
+    padding: 24px 20px;
+  }
+
+  .studentEvents-heroContent > span {
+    font-size: 12px !important;
+  }
+
+  .studentEvents-hero h1 {
+    font-size: 34px !important;
+  }
+
+  .studentEvents-hero p {
+    font-size: 19px !important;
+  }
+
+  .studentEvents-heroIcon {
+    display: none;
+  }
+
+  .studentEvents-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .studentEvents-heading h2 {
+    font-size: 28px !important;
+  }
+
+  .studentEvents-heading p {
+    font-size: 19px !important;
+  }
+
+  .studentEvents-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .studentEvents-card h3 {
+    font-size: 22px !important;
+  }
+
+  .studentEvents-card > p {
+    font-size: 19px !important;
+  }
+}

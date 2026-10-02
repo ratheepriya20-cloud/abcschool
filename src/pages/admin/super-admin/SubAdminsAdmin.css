@@ -1,0 +1,1614 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   SUB ADMINS MANAGEMENT
+   RESPONSIVE + HORIZONTAL TABLE SCROLL
+========================================================= */
+
+.subadmins-admin-page {
+  --subadmin-navy: #071a35;
+  --subadmin-blue: #315eea;
+  --subadmin-sky: #28a7e8;
+  --subadmin-gold: #d6b36a;
+
+  --subadmin-text: #354d69;
+  --subadmin-muted: #687b93;
+
+  --subadmin-border: #e0e8f2;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+}
+
+
+.subadmins-admin-page *,
+.subadmins-admin-page *::before,
+.subadmins-admin-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.subadmins-admin-page .acp-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.subadmins-admin-page .acp-header {
+  width: 100%;
+  min-width: 0;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  margin-bottom: 20px;
+
+  padding:
+    30px 32px;
+
+  border:
+    1px solid
+    rgba(49, 94, 234, 0.12);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(40, 167, 232, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(
+      120deg,
+      #071a35 0%,
+      #0d2d58 55%,
+      #16457a 100%
+    );
+
+  box-shadow:
+    0 18px 45px
+    rgba(7, 26, 53, 0.14);
+}
+
+
+.subadmins-admin-page
+.acp-header::after {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  right: -70px;
+  top: -90px;
+
+  border:
+    32px solid
+    rgba(255, 255, 255, 0.05);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+.subadmins-admin-page
+.acp-header > div {
+  min-width: 0;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* LABEL */
+
+.subadmins-admin-page
+.acp-header > div > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e5c77f;
+
+  font-size: 14px !important;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+}
+
+
+/* TITLE */
+
+.subadmins-admin-page
+.acp-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(
+      42px,
+      4vw,
+      54px
+    ) !important;
+
+  font-weight: 900;
+
+  line-height: 1.05;
+
+  letter-spacing: -1px;
+}
+
+
+/* DESCRIPTION */
+
+.subadmins-admin-page
+.acp-header p {
+  max-width: 760px;
+
+  margin:
+    10px 0 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.79
+    );
+
+  font-size: 18px !important;
+
+  font-weight: 500;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+========================================================= */
+
+.subadmins-admin-page
+.acp-add {
+  position: relative;
+
+  z-index: 3;
+
+  flex: 0 0 auto;
+
+  min-height: 52px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding:
+    0 22px;
+
+  border: 0;
+
+  border-radius: 12px;
+
+  color: #071a35;
+
+  background:
+    linear-gradient(
+      135deg,
+      #efd38f,
+      #d6b36a
+    );
+
+  font-size: 16px !important;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 25px
+    rgba(214, 179, 106, 0.25);
+}
+
+
+/* =========================================================
+   TOOLBAR
+========================================================= */
+
+.subadmins-admin-page
+.acp-toolbar {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  padding: 15px;
+
+  border:
+    1px solid
+    #e0e8f3;
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(30, 60, 110, 0.06);
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.subadmins-admin-page
+.acp-search {
+  width:
+    min(
+      650px,
+      100%
+    );
+
+  min-width: 0;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding:
+    0 16px;
+
+  border:
+    1px solid
+    #dce5ef;
+
+  border-radius: 12px;
+
+  background: #f7fafc;
+
+  color: #0877a9;
+}
+
+
+.subadmins-admin-page
+.acp-search svg {
+  flex: 0 0 auto;
+
+  font-size: 18px;
+}
+
+
+.subadmins-admin-page
+.acp-search input {
+  width: 100%;
+
+  min-width: 0;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  color: #263f5c;
+
+  font-size: 17px !important;
+
+  font-weight: 600;
+}
+
+
+.subadmins-admin-page
+.acp-search input::placeholder {
+  color: #8a9aab;
+}
+
+
+/* =========================================================
+   RECORD COUNT
+========================================================= */
+
+.subadmins-admin-page
+.acp-count {
+  flex: 0 0 auto;
+
+  min-height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding:
+    0 15px;
+
+  border:
+    1px solid
+    #ead8ae;
+
+  border-radius: 10px;
+
+  color: #875d18;
+
+  background: #fff7e8;
+
+  font-size: 15px !important;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   TABLE CARD
+========================================================= */
+
+.subadmins-admin-page
+.acp-table-card {
+  width: 100%;
+
+  max-width: 100%;
+
+  min-width: 0;
+
+  overflow: hidden !important;
+
+  border:
+    1px solid
+    var(--subadmin-border);
+
+  border-radius: 19px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 40px
+    rgba(31, 61, 115, 0.07);
+}
+
+
+/* =========================================================
+   IMPORTANT
+   LEFT ↔ RIGHT SCROLL
+========================================================= */
+
+.subadmins-admin-page
+.acp-table-scroll {
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  min-width: 0 !important;
+
+  display: block !important;
+
+  overflow-x:
+    auto !important;
+
+  overflow-y:
+    hidden !important;
+
+  padding-bottom: 10px;
+
+  -webkit-overflow-scrolling:
+    touch;
+
+  touch-action:
+    pan-x pan-y;
+
+  scrollbar-width: auto;
+
+  scrollbar-color:
+    #6686a3
+    #e8eef4;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.subadmins-admin-page
+.acp-table-scroll::-webkit-scrollbar {
+  height: 11px;
+}
+
+
+.subadmins-admin-page
+.acp-table-scroll::-webkit-scrollbar-track {
+  margin:
+    0 8px;
+
+  border-radius: 30px;
+
+  background:
+    #e8eef4;
+}
+
+
+.subadmins-admin-page
+.acp-table-scroll::-webkit-scrollbar-thumb {
+  border:
+    2px solid
+    #e8eef4;
+
+  border-radius: 30px;
+
+  background:
+    #6686a3;
+}
+
+
+.subadmins-admin-page
+.acp-table-scroll::-webkit-scrollbar-thumb:hover {
+  background:
+    #486b8b;
+}
+
+
+/* =========================================================
+   TABLE
+   SCREEN KE HISAB SE COMPRESS NAHI HOGI
+========================================================= */
+
+.subadmins-admin-page
+.acp-table {
+  width:
+    max-content !important;
+
+  min-width:
+    1250px !important;
+
+  table-layout:
+    auto !important;
+
+  border-collapse:
+    collapse !important;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.subadmins-admin-page
+.acp-table th {
+  height: 58px;
+
+  padding:
+    15px 17px !important;
+
+  color: #526983;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f8faff,
+      #f1f5fa
+    );
+
+  font-size: 15px !important;
+
+  font-weight: 900;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.2px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  vertical-align: middle;
+
+  /* FULL WORD EK LINE ME */
+
+  white-space:
+    nowrap !important;
+
+  word-break:
+    keep-all !important;
+
+  overflow-wrap:
+    normal !important;
+
+  hyphens:
+    none !important;
+}
+
+
+/* =========================================================
+   TABLE DATA
+========================================================= */
+
+.subadmins-admin-page
+.acp-table td {
+  height: 68px;
+
+  padding:
+    16px 17px !important;
+
+  border-bottom:
+    1px solid
+    #edf1f6;
+
+  color: #405372;
+
+  font-size: 16px !important;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  vertical-align: middle;
+
+  /* DATA EK LINE ME */
+
+  white-space:
+    nowrap !important;
+
+  word-break:
+    keep-all !important;
+
+  overflow-wrap:
+    normal !important;
+
+  hyphens:
+    none !important;
+}
+
+
+.subadmins-admin-page
+.acp-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+.subadmins-admin-page
+.acp-table tbody tr:hover {
+  background: #f7f9ff;
+}
+
+
+/* =========================================================
+   COLUMN WIDTHS
+========================================================= */
+
+
+/* ADMIN NAME */
+
+.subadmins-admin-page
+.acp-table th:nth-child(1),
+.subadmins-admin-page
+.acp-table td:nth-child(1) {
+  min-width: 190px;
+}
+
+
+/* EMAIL ADDRESS */
+
+.subadmins-admin-page
+.acp-table th:nth-child(2),
+.subadmins-admin-page
+.acp-table td:nth-child(2) {
+  min-width: 250px;
+}
+
+
+/* MOBILE NUMBER */
+
+.subadmins-admin-page
+.acp-table th:nth-child(3),
+.subadmins-admin-page
+.acp-table td:nth-child(3) {
+  min-width: 175px;
+}
+
+
+/* DESIGNATION */
+
+.subadmins-admin-page
+.acp-table th:nth-child(4),
+.subadmins-admin-page
+.acp-table td:nth-child(4) {
+  min-width: 180px;
+}
+
+
+/* DEPARTMENT */
+
+.subadmins-admin-page
+.acp-table th:nth-child(5),
+.subadmins-admin-page
+.acp-table td:nth-child(5) {
+  min-width: 190px;
+}
+
+
+/* STATUS */
+
+.subadmins-admin-page
+.acp-table th:nth-child(6),
+.subadmins-admin-page
+.acp-table td:nth-child(6) {
+  min-width: 125px;
+}
+
+
+/* ACTIONS */
+
+.subadmins-admin-page
+.acp-table th:nth-child(7),
+.subadmins-admin-page
+.acp-table td:nth-child(7) {
+  min-width: 155px;
+
+  text-align: center;
+}
+
+
+/* FIRST COLUMN BOLD */
+
+.subadmins-admin-page
+.acp-table td:first-child {
+  color: #17335f;
+
+  font-size: 16px !important;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.subadmins-admin-page
+.acp-actions {
+  min-width: 130px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap:
+    nowrap !important;
+
+  gap: 7px;
+}
+
+
+.subadmins-admin-page
+.acp-actions button {
+  width: 38px;
+
+  height: 38px;
+
+  flex:
+    0 0 38px;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 0;
+
+  border:
+    1px solid transparent;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+
+/* VIEW */
+
+.subadmins-admin-page
+.acp-actions .view {
+  color: #315eea;
+
+  border-color:
+    #d7e2ff;
+
+  background:
+    #edf2ff;
+}
+
+
+/* EDIT */
+
+.subadmins-admin-page
+.acp-actions .edit {
+  color: #138a62;
+
+  border-color:
+    #cfeee2;
+
+  background:
+    #e5f8f0;
+}
+
+
+/* DELETE */
+
+.subadmins-admin-page
+.acp-actions .delete {
+  color: #df3e59;
+
+  border-color:
+    #ffd4dc;
+
+  background:
+    #ffe8ec;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.subadmins-admin-page
+.acp-overlay {
+  position: fixed;
+
+  z-index: 9999;
+
+  inset: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  padding: 20px;
+
+  overflow-y: auto;
+
+  background:
+    rgba(4, 17, 39, 0.72);
+
+  backdrop-filter:
+    blur(7px);
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.subadmins-admin-page
+.acp-modal {
+  width:
+    min(
+      850px,
+      calc(100% - 20px)
+    );
+
+  max-height: 90vh;
+
+  position: relative;
+
+  overflow-y: auto;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.8);
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px
+    rgba(4, 17, 39, 0.3);
+}
+
+
+/* CLOSE */
+
+.subadmins-admin-page
+.acp-close {
+  width: 42px;
+
+  height: 42px;
+
+  position: absolute;
+
+  top: 16px;
+
+  right: 16px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 0;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background: #071a35;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+
+/* MODAL LABEL */
+
+.subadmins-admin-page
+.acp-modal-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #315eea;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.4px;
+}
+
+
+.subadmins-admin-page
+.acp-modal > h2 {
+  margin:
+    0 0 22px;
+
+  color: #071a35;
+
+  font-size: 31px;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.subadmins-admin-page
+.acp-form {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 17px;
+}
+
+
+.subadmins-admin-page
+.acp-field {
+  min-width: 0;
+}
+
+
+.subadmins-admin-page
+.acp-field.full {
+  grid-column:
+    1 / -1;
+}
+
+
+.subadmins-admin-page
+.acp-field > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #233c64;
+
+  font-size: 14px !important;
+
+  font-weight: 900;
+}
+
+
+.subadmins-admin-page
+.acp-field input,
+.subadmins-admin-page
+.acp-field select,
+.subadmins-admin-page
+.acp-field textarea {
+  width: 100%;
+
+  min-height: 51px;
+
+  padding:
+    0 14px;
+
+  border:
+    1px solid
+    #dce5f0;
+
+  border-radius: 11px;
+
+  outline: none;
+
+  color: #213a61;
+
+  background: #f9fbfe;
+
+  font-size: 16px !important;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+========================================================= */
+
+.subadmins-admin-page
+.acp-save {
+  min-height: 51px;
+
+  grid-column:
+    1 / -1;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  justify-self: start;
+
+  padding:
+    0 23px;
+
+  border: 0;
+
+  border-radius: 11px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #315eea,
+      #7058e8
+    );
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   DETAILS VIEW
+========================================================= */
+
+.subadmins-admin-page
+.acp-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap: 13px;
+}
+
+
+.subadmins-admin-page
+.acp-details > div {
+  min-width: 0;
+
+  padding: 16px;
+
+  border:
+    1px solid
+    #e3eaf4;
+
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7f9fd
+    );
+}
+
+
+.subadmins-admin-page
+.acp-details > div > span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #7b899f;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+}
+
+
+.subadmins-admin-page
+.acp-details > div > strong {
+  display: block;
+
+  color: #1c365e;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  line-height: 1.55;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .subadmins-admin-page
+  .acp-header {
+    padding:
+      26px 22px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header > div > span {
+    font-size:
+      14px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header h1 {
+    font-size:
+      42px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header p {
+    font-size:
+      17px !important;
+  }
+
+
+  /* TOOLBAR */
+
+  .subadmins-admin-page
+  .acp-toolbar {
+    flex-direction:
+      column;
+
+    align-items:
+      stretch;
+  }
+
+
+  .subadmins-admin-page
+  .acp-search {
+    width: 100%;
+  }
+
+
+  .subadmins-admin-page
+  .acp-count {
+    width:
+      fit-content;
+  }
+
+
+  /* TABLE SCROLL */
+
+  .subadmins-admin-page
+  .acp-table-scroll {
+    overflow-x:
+      auto !important;
+
+    overflow-y:
+      hidden !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table {
+    width:
+      max-content !important;
+
+    min-width:
+      1250px !important;
+
+    table-layout:
+      auto !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table th {
+    font-size:
+      15px !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table td {
+    font-size:
+      16px !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  /* HEADER */
+
+  .subadmins-admin-page
+  .acp-header {
+    flex-direction:
+      column;
+
+    align-items:
+      flex-start;
+
+    gap: 18px;
+
+    padding:
+      22px 17px;
+
+    border-radius:
+      17px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header > div > span {
+    font-size:
+      13px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header h1 {
+    font-size:
+      36px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header p {
+    font-size:
+      17px !important;
+
+    line-height:
+      1.6;
+  }
+
+
+  .subadmins-admin-page
+  .acp-add {
+    width: 100%;
+
+    font-size:
+      16px !important;
+  }
+
+
+  /* TOOLBAR */
+
+  .subadmins-admin-page
+  .acp-toolbar {
+    padding: 12px;
+
+    border-radius: 14px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-search {
+    min-height: 54px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-search input {
+    font-size:
+      17px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-count {
+    font-size:
+      15px !important;
+  }
+
+
+  /* =======================================================
+     TABLE CARD
+  ======================================================= */
+
+  .subadmins-admin-page
+  .acp-table-card {
+    width:
+      100% !important;
+
+    max-width:
+      100% !important;
+
+    min-width:
+      0 !important;
+
+    overflow:
+      hidden !important;
+
+    border-radius:
+      15px;
+  }
+
+
+  /* =======================================================
+     LEFT ↔ RIGHT HORIZONTAL SCROLL
+  ======================================================= */
+
+  .subadmins-admin-page
+  .acp-table-scroll {
+    width:
+      100% !important;
+
+    max-width:
+      100% !important;
+
+    min-width:
+      0 !important;
+
+    display:
+      block !important;
+
+    overflow-x:
+      scroll !important;
+
+    overflow-y:
+      hidden !important;
+
+    padding-bottom:
+      12px;
+
+    -webkit-overflow-scrolling:
+      touch;
+
+    touch-action:
+      pan-x;
+  }
+
+
+  /* =======================================================
+     TABLE COMPRESS NAHI HOGI
+  ======================================================= */
+
+  .subadmins-admin-page
+  .acp-table {
+    width:
+      max-content !important;
+
+    min-width:
+      1250px !important;
+
+    table-layout:
+      auto !important;
+  }
+
+
+  /* =======================================================
+     HEADER FULL WORDS ONE LINE
+  ======================================================= */
+
+  .subadmins-admin-page
+  .acp-table th {
+    padding:
+      15px 16px !important;
+
+    font-size:
+      15px !important;
+
+    line-height:
+      1.35;
+
+    white-space:
+      nowrap !important;
+
+    word-break:
+      keep-all !important;
+
+    overflow-wrap:
+      normal !important;
+
+    hyphens:
+      none !important;
+  }
+
+
+  /* =======================================================
+     DATA FULL WORDS ONE LINE
+  ======================================================= */
+
+  .subadmins-admin-page
+  .acp-table td {
+    padding:
+      16px 16px !important;
+
+    font-size:
+      16px !important;
+
+    line-height:
+      1.45;
+
+    white-space:
+      nowrap !important;
+
+    word-break:
+      keep-all !important;
+
+    overflow-wrap:
+      normal !important;
+
+    hyphens:
+      none !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table td:first-child {
+    font-size:
+      16px !important;
+
+    font-weight: 900;
+  }
+
+
+  /* ACTIONS */
+
+  .subadmins-admin-page
+  .acp-actions {
+    flex-wrap:
+      nowrap !important;
+  }
+
+
+  /* MODAL */
+
+  .subadmins-admin-page
+  .acp-modal {
+    width:
+      calc(100% - 20px);
+
+    padding:
+      22px 16px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-modal > h2 {
+    font-size:
+      28px;
+  }
+
+
+  /* FORM */
+
+  .subadmins-admin-page
+  .acp-form {
+    grid-template-columns:
+      1fr;
+
+    gap: 14px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-field.full {
+    grid-column:
+      auto;
+  }
+
+
+  .subadmins-admin-page
+  .acp-field > span {
+    font-size:
+      15px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-field input,
+  .subadmins-admin-page
+  .acp-field select,
+  .subadmins-admin-page
+  .acp-field textarea {
+    font-size:
+      17px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-save {
+    width: 100%;
+
+    justify-self:
+      stretch;
+
+    font-size:
+      16px;
+  }
+
+
+  /* DETAILS */
+
+  .subadmins-admin-page
+  .acp-details {
+    grid-template-columns:
+      1fr;
+  }
+
+
+  .subadmins-admin-page
+  .acp-details > div > span {
+    font-size:
+      13px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-details > div > strong {
+    font-size:
+      17px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .subadmins-admin-page
+  .acp-header h1 {
+    font-size:
+      34px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-header p {
+    font-size:
+      16.5px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-search input {
+    font-size:
+      16.5px !important;
+  }
+
+
+  /* TABLE */
+
+  .subadmins-admin-page
+  .acp-table-scroll {
+    overflow-x:
+      scroll !important;
+
+    padding-bottom:
+      12px;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table {
+    min-width:
+      1250px !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table th {
+    font-size:
+      14.5px !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+
+  .subadmins-admin-page
+  .acp-table td {
+    font-size:
+      15.5px !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+}

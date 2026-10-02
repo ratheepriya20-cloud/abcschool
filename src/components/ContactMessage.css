@@ -1,0 +1,1237 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+  --cc-navy: #071a35;
+  --cc-navy-light: #0b3159;
+
+  --cc-blue: #0877a9;
+  --cc-sky: #35a6d3;
+
+  --cc-gold: #d6b36a;
+
+  --cc-white: #ffffff;
+
+  --cc-text: #263746;
+  --cc-muted: #6d7c88;
+
+  --cc-border:
+    rgba(8, 119, 169, 0.16);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.abContactConnect {
+  position: relative;
+
+  width: 100%;
+
+  padding:
+    62px 40px 70px;
+
+  overflow: hidden;
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  background:
+    radial-gradient(
+      circle at 96% 5%,
+      rgba(53, 166, 211, 0.1),
+      transparent 26%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f8fcfe 48%,
+      #edf8fd 100%
+    );
+}
+
+
+.abContactConnectContainer {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1450px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.abContactConnectDecor {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+
+.abContactConnectDecor.decorOne {
+  width: 400px;
+  height: 400px;
+
+  top: -300px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  border:
+    65px solid
+    rgba(8, 119, 169, 0.045);
+}
+
+
+.abContactConnectDecor.decorTwo {
+  width: 300px;
+  height: 300px;
+
+  left: -220px;
+  bottom: -220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(214, 179, 106, 0.055);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
+.abContactConnectHeading {
+  width: 100%;
+  max-width: 1200px;
+
+  margin:
+    0 auto 34px;
+
+  text-align: center;
+}
+
+
+/* SMALL LABEL */
+
+.abContactConnectLabel {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 9px;
+
+  color: var(--cc-blue);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+
+.abContactConnectLabel i {
+  display: block;
+
+  width: 44px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--cc-gold)
+    );
+}
+
+
+.abContactConnectLabel i:last-child {
+  transform:
+    rotate(180deg);
+}
+
+
+/* MAIN TITLE */
+
+.abContactConnectHeading h2 {
+  margin: 0;
+
+  color: var(--cc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size:
+    clamp(46px, 4.7vw, 66px);
+
+  font-weight: 700;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.7px;
+}
+
+
+.abContactConnectHeading h2 span {
+  color: var(--cc-gold);
+}
+
+
+/* DESCRIPTION */
+
+.abContactConnectHeading p {
+  max-width: 1400px !important;
+
+  margin:
+    13px auto 0;
+
+  color: var(--cc-muted);
+
+  font-size: 19px;
+  font-weight: 500;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TWO EQUAL COLUMNS
+========================================================= */
+
+.abContactConnectGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  align-items: stretch;
+
+  gap: 28px;
+}
+
+
+/* =========================================================
+   BOTH BOXES SAME HEIGHT
+========================================================= */
+
+.abContactEnquiryCard,
+.abContactMapCard {
+  min-width: 0;
+
+  height: 485px;
+
+  border-radius: 26px;
+
+  box-shadow:
+    0 22px 55px
+    rgba(7, 26, 53, 0.09);
+}
+
+
+/* =========================================================
+   LEFT FORM CARD
+========================================================= */
+
+.abContactEnquiryCard {
+  position: relative;
+
+  padding:
+    28px 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.15);
+
+  background:
+    rgba(255, 255, 255, 0.98);
+}
+
+
+.abContactEnquiryCard::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 35px;
+
+  width: 105px;
+  height: 4px;
+
+  border-radius:
+    0 0 10px 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--cc-blue),
+      var(--cc-sky)
+    );
+}
+
+
+/* =========================================================
+   FORM HEADER
+========================================================= */
+
+.abContactFormHeader {
+  margin-bottom: 18px;
+}
+
+
+.abContactFormHeader > span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--cc-blue);
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+
+.abContactFormHeader h3 {
+  margin: 0;
+
+  color: var(--cc-navy);
+
+  font-family:
+    "Playfair Display",
+    serif;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  line-height: 1.15;
+}
+
+
+.abContactFormHeader p {
+  margin:
+    6px 0 0;
+
+  color: var(--cc-muted);
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.abContactEnquiryCard form {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+/* =========================================================
+   TWO FIELDS PER ROW
+========================================================= */
+
+.abContactFormRow {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 11px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.abContactField {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  min-height: 52px;
+
+  display: flex;
+
+  align-items: center;
+
+  border:
+    1.4px solid
+    var(--cc-border);
+
+  border-radius: 12px;
+
+  background: #fbfdff;
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.abContactField:hover {
+  border-color:
+    rgba(8, 119, 169, 0.34);
+}
+
+
+.abContactField:focus-within {
+  border-color:
+    var(--cc-blue);
+
+  background:
+    #ffffff;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(8, 119, 169, 0.065);
+}
+
+
+/* ICON */
+
+.abContactField > svg {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 15px;
+
+  color: var(--cc-blue);
+
+  font-size: 14px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INPUT / SELECT
+========================================================= */
+
+.abContactField input,
+.abContactField select,
+.abContactField textarea {
+  width: 100%;
+
+  min-width: 0;
+
+  border: none;
+
+  outline: none;
+
+  background:
+    transparent;
+
+  color:
+    var(--cc-navy);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+.abContactField input,
+.abContactField select {
+  height: 50px;
+
+  padding:
+    0 13px
+    0 43px;
+}
+
+
+.abContactField input::placeholder,
+.abContactField textarea::placeholder {
+  color: #8998a4;
+
+  opacity: 1;
+
+  font-weight: 500;
+}
+
+
+.abContactField select {
+  color: #788894;
+
+  cursor: pointer;
+
+  padding-right: 31px;
+
+  text-overflow: ellipsis;
+}
+
+
+.abContactField select option {
+  color: var(--cc-navy);
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.abContactTextarea {
+  min-height: 108px;
+
+  align-items: flex-start;
+}
+
+
+.abContactTextarea > svg {
+  top: 16px;
+}
+
+
+.abContactTextarea textarea {
+  width: 100%;
+
+  height: 106px;
+  min-height: 106px;
+
+  padding:
+    14px 14px
+    28px 43px;
+
+  resize: none;
+
+  line-height: 1.5;
+}
+
+
+/* COUNTER */
+
+.abMessageCounter {
+  position: absolute;
+
+  right: 12px;
+  bottom: 7px;
+
+  color: #8998a4;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.abContactSubmit {
+  width: 100%;
+  min-height: 51px;
+
+  margin-top: auto;
+
+  padding:
+    9px 20px;
+
+  border: none;
+
+  border-radius: 27px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      100deg,
+      var(--cc-blue),
+      var(--cc-navy)
+    );
+
+  box-shadow:
+    0 12px 27px
+    rgba(7, 26, 53, 0.17);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.abContactSubmit:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 17px 35px
+    rgba(7, 26, 53, 0.22);
+}
+
+
+.abContactSubmit svg:last-child {
+  transition:
+    transform 0.25s ease;
+}
+
+
+.abContactSubmit:hover
+svg:last-child {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   RIGHT FULL MAP
+========================================================= */
+
+.abContactMapCard {
+  position: relative;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.14);
+
+  background:
+    #dcecf4;
+}
+
+
+/* MAP */
+
+.abContactMapCard iframe {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  border: none;
+}
+
+
+/* SUBTLE BORDER */
+
+.abContactMapCard::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.5);
+
+  border-radius: inherit;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GET DIRECTIONS BUTTON
+========================================================= */
+
+.abContactMapDirectionBtn {
+  position: absolute;
+
+  z-index: 6;
+
+  right: 18px;
+  bottom: 18px;
+
+  min-height: 46px;
+
+  padding:
+    0 17px;
+
+  border: none;
+
+  border-radius: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  background:
+    rgba(7, 26, 53, 0.94);
+
+  box-shadow:
+    0 13px 30px
+    rgba(7, 26, 53, 0.25);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+
+  font-family:
+    "DM Sans",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+
+.abContactMapDirectionBtn:hover {
+  transform:
+    translateY(-2px);
+
+  background:
+    var(--cc-blue);
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE MAP PIN
+========================================================= */
+
+.abContactMapPin {
+  position: absolute;
+
+  z-index: 5;
+
+  top: 18px;
+  right: 18px;
+
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cc-gold),
+      #b88734
+    );
+
+  box-shadow:
+    0 10px 25px
+    rgba(7, 26, 53, 0.19);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR
+========================================================= */
+
+.abContactSuccess {
+  position: fixed;
+
+  z-index: 999999;
+
+  right: 25px;
+  bottom: 25px;
+
+  width:
+    min(
+      420px,
+      calc(100vw - 30px)
+    );
+
+  padding: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  border:
+    1px solid
+    rgba(8, 119, 169, 0.18);
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 24px 60px
+    rgba(7, 26, 53, 0.2);
+
+  animation:
+    contactPopupIn
+    0.35s ease;
+}
+
+
+@keyframes contactPopupIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+.abContactSuccessIcon {
+  width: 41px;
+  height: 41px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cc-blue),
+      var(--cc-navy)
+    );
+}
+
+
+.abContactSuccess.error
+.abContactSuccessIcon {
+  background:
+    linear-gradient(
+      135deg,
+      #e45b5b,
+      #a92424
+    );
+}
+
+
+.abContactSuccess > div:nth-child(2) {
+  flex: 1;
+}
+
+
+.abContactSuccess strong,
+.abContactSuccess span {
+  display: block;
+}
+
+
+.abContactSuccess strong {
+  color: var(--cc-navy);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+
+.abContactSuccess.error strong {
+  color: #a92424;
+}
+
+
+.abContactSuccess span {
+  margin-top: 3px;
+
+  color: var(--cc-muted);
+
+  font-size: 10px;
+
+  line-height: 1.45;
+}
+
+
+.abContactSuccess > button {
+  width: 29px;
+  height: 29px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #788791;
+
+  background:
+    #f1f5f7;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .abContactConnect {
+    padding:
+      55px 28px 60px;
+  }
+
+
+  .abContactConnectGrid {
+    gap: 22px;
+  }
+
+
+  .abContactEnquiryCard {
+    padding:
+      25px 23px;
+  }
+
+
+  .abContactEnquiryCard,
+  .abContactMapCard {
+    height: 470px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .abContactConnect {
+    padding:
+      50px 24px 55px;
+  }
+
+
+  .abContactConnectHeading {
+    margin-bottom: 27px;
+  }
+
+
+  .abContactConnectHeading h2 {
+    font-size:
+      clamp(42px, 7vw, 56px);
+  }
+
+
+  .abContactConnectGrid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+
+  .abContactEnquiryCard,
+  .abContactMapCard {
+    width: 100%;
+
+    height: auto;
+  }
+
+
+  .abContactEnquiryCard {
+    min-height: 455px;
+  }
+
+
+  .abContactMapCard {
+    min-height: 430px;
+  }
+
+
+  .abContactMapCard iframe {
+    min-height: 430px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .abContactConnect {
+    padding:
+      42px 16px 48px;
+  }
+
+
+  /* HEADING */
+
+  .abContactConnectHeading {
+    margin-bottom: 23px;
+  }
+
+
+  .abContactConnectLabel {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    gap: 8px;
+  }
+
+
+  .abContactConnectLabel i {
+    width: 25px;
+  }
+
+
+  .abContactConnectHeading h2 {
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .abContactConnectHeading p {
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+
+  /* FORM */
+
+  .abContactEnquiryCard {
+    min-height: auto;
+
+    padding:
+      21px 15px;
+
+    border-radius: 20px;
+  }
+
+
+  .abContactFormHeader h3 {
+    font-size: 26px;
+  }
+
+
+  .abContactFormHeader p {
+    font-size: 11px;
+  }
+
+
+  .abContactFormRow {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .abContactEnquiryCard form {
+    gap: 10px;
+  }
+
+
+  .abContactField {
+    min-height: 49px;
+  }
+
+
+  .abContactField input,
+  .abContactField select {
+    height: 47px;
+
+    font-size: 15px;
+  }
+
+
+  /* MESSAGE */
+
+  .abContactTextarea {
+    min-height: 98px;
+  }
+
+
+  .abContactTextarea textarea {
+    height: 96px;
+    min-height: 96px;
+
+    font-size: 16px;
+  }
+
+
+  /* SUBMIT */
+
+  .abContactSubmit {
+    min-height: 49px;
+
+    font-size: 12px;
+  }
+
+
+  /* MAP */
+
+  .abContactMapCard {
+    min-height: 350px;
+
+    border-radius: 20px;
+  }
+
+
+  .abContactMapCard iframe {
+    min-height: 350px;
+  }
+
+
+  .abContactMapDirectionBtn {
+    right: 12px;
+    bottom: 12px;
+
+    min-height: 42px;
+
+    padding:
+      0 14px;
+
+    font-size: 10px;
+  }
+
+
+  .abContactMapPin {
+    top: 12px;
+    right: 12px;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 14px;
+  }
+
+
+  /* POPUP */
+
+  .abContactSuccess {
+    left: 13px;
+    right: 13px;
+    bottom: 13px;
+
+    width: auto;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .abContactConnect {
+    padding:
+      37px 12px 42px;
+  }
+
+
+  .abContactConnectHeading h2 {
+    font-size: 34px;
+  }
+
+
+  .abContactEnquiryCard {
+    padding:
+      19px 12px;
+  }
+
+
+  .abContactFormHeader h3 {
+    font-size: 24px;
+  }
+
+.abContactConnectContainer p{
+  font-size: 17px;
+}
+  .abContactMapCard,
+  .abContactMapCard iframe {
+    min-height: 320px;
+  }
+
+}

@@ -1,0 +1,661 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   STUDENT SIGNUP
+========================================================= */
+
+.ssign-page,
+.ssign-page * {
+  box-sizing: border-box;
+}
+
+.ssign-page {
+  --navy: #071a35;
+  --blue: #0877a9;
+  --gold: #d6b36a;
+  --white: #ffffff;
+  --text: #172b3f;
+  --muted: #68798a;
+  --bg: #f4f8fb;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 35px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(8, 119, 169, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(214, 179, 106, 0.14),
+      transparent 25%
+    ),
+    var(--bg);
+
+  font-family:
+    "Inter",
+    "DM Sans",
+    sans-serif;
+}
+
+
+/* HOME */
+
+.ssign-home {
+  position: fixed;
+
+  top: 22px;
+  left: 25px;
+
+  z-index: 20;
+
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 0 15px;
+
+  border: 1px solid rgba(7, 26, 53, 0.1);
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: var(--navy);
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+/* WRAPPER */
+
+.ssign-wrapper {
+  width: min(1200px, 100%);
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(480px, 1.1fr);
+
+  overflow: hidden;
+
+  border-radius: 31px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 28px 80px
+    rgba(7, 26, 53, 0.14);
+}
+
+
+/* LEFT */
+
+.ssign-info {
+  position: relative;
+
+  min-height: 730px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(214, 179, 106, 0.18),
+      transparent 27%
+    ),
+    linear-gradient(
+      145deg,
+      #071a35,
+      #0b3157
+    );
+
+  color: #ffffff;
+}
+
+
+.ssign-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.ssign-brand > span {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 15px;
+
+  background: var(--gold);
+
+  color: var(--navy);
+
+  font-size: 22px;
+}
+
+
+.ssign-brand small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: rgba(255,255,255,.58);
+
+  font-size: 10px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.ssign-brand strong {
+  color: #ffffff;
+
+  font-size: 18px;
+}
+
+
+.ssign-info-content {
+  margin: auto 0;
+}
+
+
+.ssign-label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.4px;
+}
+
+
+.ssign-info h1 {
+  margin: 0 0 20px;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: clamp(44px, 4vw, 60px);
+  line-height: 1.05;
+}
+
+
+.ssign-info h1 em {
+  color: var(--gold);
+
+  font-style: normal;
+}
+
+
+.ssign-info-content > p {
+  max-width: 480px;
+
+  margin: 0 0 27px;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+.ssign-points {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+
+.ssign-points > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 13px;
+}
+
+
+.ssign-points svg {
+  color: var(--gold);
+}
+
+
+.ssign-security {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 11px;
+}
+
+
+/* FORM */
+
+.ssign-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 45px 55px;
+}
+
+
+.ssign-card {
+  width: 100%;
+  max-width: 550px;
+}
+
+
+.ssign-icon {
+  width: 58px;
+  height: 58px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 17px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--blue)
+    );
+
+  color: #ffffff;
+
+  font-size: 23px;
+}
+
+
+.ssign-card-label {
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 850;
+
+  letter-spacing: 1.3px;
+}
+
+
+.ssign-card h2 {
+  margin: 6px 0 8px;
+
+  color: var(--navy);
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size: 39px;
+}
+
+
+.ssign-description {
+  margin: 0 0 23px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+
+/* FIELDS */
+
+.ssign-field {
+  margin-bottom: 15px;
+}
+
+
+.ssign-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--navy);
+
+  font-size: 12px;
+  font-weight: 750;
+}
+
+
+.ssign-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+
+.ssign-input {
+  min-height: 51px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 15px;
+
+  border: 1px solid rgba(7,26,53,.13);
+  border-radius: 13px;
+
+  background: #ffffff;
+
+  transition: .2s ease;
+}
+
+
+.ssign-input:focus-within {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(8,119,169,.07);
+}
+
+
+.ssign-input > svg {
+  flex: 0 0 auto;
+
+  color: var(--blue);
+
+  font-size: 15px;
+}
+
+
+.ssign-input input {
+  width: 100%;
+  min-width: 0;
+
+  height: 49px;
+
+  padding: 0 12px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: var(--navy);
+
+  font-size: 13px;
+}
+
+
+.ssign-input button {
+  width: 46px;
+  height: 49px;
+
+  flex: 0 0 46px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #738393;
+
+  cursor: pointer;
+}
+
+
+/* SUBMIT */
+
+.ssign-submit {
+  width: 100%;
+  min-height: 53px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  margin-top: 6px;
+
+  border: 0;
+  border-radius: 13px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--navy),
+      var(--blue)
+    );
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+.ssign-submit:disabled {
+  opacity: .65;
+
+  cursor: not-allowed;
+}
+
+
+/* LOGIN */
+
+.ssign-login-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  margin-top: 18px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+}
+
+
+.ssign-login-link button {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blue);
+
+  cursor: pointer;
+
+  font-weight: 800;
+}
+
+
+/* POPUP */
+
+.ssign-popup {
+  position: fixed;
+
+  top: 20px;
+  right: 20px;
+
+  z-index: 9999;
+
+  width: min(390px, calc(100% - 30px));
+
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 20px 55px
+    rgba(7,26,53,.18);
+}
+
+
+.ssign-popup > span {
+  width: 35px;
+  height: 35px;
+
+  flex: 0 0 35px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 10px;
+}
+
+
+.ssign-popup.success {
+  border-left: 4px solid #198d52;
+}
+
+
+.ssign-popup.success > span {
+  background: #e8f8ee;
+
+  color: #198d52;
+}
+
+
+.ssign-popup.error {
+  border-left: 4px solid #ce4545;
+}
+
+
+.ssign-popup.error > span {
+  background: #fff0f0;
+
+  color: #ce4545;
+}
+
+
+.ssign-popup strong {
+  display: block;
+
+  color: var(--navy);
+
+  font-size: 13px;
+}
+
+
+.ssign-popup p {
+  margin: 3px 0 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+  .ssign-page {
+    padding:
+      85px 20px 30px;
+  }
+
+  .ssign-wrapper {
+    max-width: 680px;
+
+    grid-template-columns: 1fr;
+  }
+
+  .ssign-info {
+    min-height: 470px;
+
+    padding: 37px;
+  }
+
+  .ssign-form-side {
+    padding: 40px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .ssign-page {
+    padding:
+      75px 12px 20px;
+  }
+
+  .ssign-home {
+    top: 14px;
+    left: 13px;
+  }
+
+  .ssign-wrapper {
+    border-radius: 20px;
+  }
+
+  .ssign-info {
+    min-height: 440px;
+
+    padding: 26px 20px;
+  }
+
+  .ssign-info h1 {
+    font-size: 37px;
+  }
+
+  .ssign-form-side {
+    padding: 29px 19px;
+  }
+
+  .ssign-card h2 {
+    font-size: 32px;
+  }
+
+  .ssign-two {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .ssign-popup {
+    top: 12px;
+    right: 14px;
+    left: 14px;
+
+    width: auto;
+  }
+
+}

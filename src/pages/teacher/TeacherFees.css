@@ -1,0 +1,777 @@
+/* =========================================================
+   TEACHER FEES
+   PREMIUM LIGHT THEME
+   ========================================================= */
+
+.teacherRead-page {
+  width: 100%;
+  min-height: 100%;
+
+  color: #385456;
+}
+
+/* HERO */
+
+.teacherRead-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 170px;
+
+  padding: 30px 34px;
+  overflow: hidden;
+
+  border: 1px solid #d9ebe5;
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(255, 255, 255, 0.95),
+      transparent 22%
+    ),
+    linear-gradient(
+      135deg,
+      #e5f5ef 0%,
+      #f4faf8 55%,
+      #fff5e1 100%
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  box-shadow:
+    0 14px 35px rgba(36, 98, 92, 0.07);
+}
+
+.teacherRead-hero::after {
+  content: "";
+
+  position: absolute;
+  right: -65px;
+  bottom: -100px;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(232, 193, 112, 0.15);
+}
+
+.teacherRead-heroContent {
+  position: relative;
+  z-index: 2;
+
+  min-width: 0;
+  flex: 1;
+}
+
+.teacherRead-eyebrow {
+  display: inline-flex;
+
+  margin-bottom: 9px;
+  padding: 6px 11px;
+
+  border: 1px solid #cee6df;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #267d77;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+}
+
+.teacherRead-hero h1 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: clamp(29px, 3vw, 39px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.teacherRead-hero p {
+  max-width: 700px;
+
+  margin: 9px 0 0;
+
+  color: #6e8584;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.teacherRead-heroIcon {
+  position: relative;
+  z-index: 2;
+
+  width: 82px;
+  height: 82px;
+  flex: 0 0 82px;
+
+  border: 1px solid #d5eae3;
+  border-radius: 23px;
+
+  background: #ffffff;
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 31px;
+
+  box-shadow:
+    0 14px 30px rgba(38, 125, 119, 0.1);
+}
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.teacherRead-tableBox {
+  width: 100%;
+
+  margin-top: 22px;
+
+  overflow-x: auto;
+
+  border: 1px solid #deebe7;
+  border-radius: 21px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(34, 82, 78, 0.055);
+}
+
+/* TABLE */
+
+.teacherRead-table {
+  width: 100%;
+  min-width: 680px;
+
+  border-collapse: collapse;
+}
+
+/* HEADER */
+
+.teacherRead-table thead {
+  background:
+    linear-gradient(
+      90deg,
+      #edf8f4,
+      #f7fbf9
+    );
+}
+
+.teacherRead-table th {
+  padding: 17px 20px;
+
+  border-bottom: 1px solid #dcebe6;
+
+  color: #4f6e6d;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 0.55px;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* CELLS */
+
+.teacherRead-table td {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #edf2f0;
+
+  color: #637a79;
+
+  font-size: 12px;
+  font-weight: 550;
+
+  vertical-align: middle;
+}
+
+.teacherRead-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.teacherRead-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+.teacherRead-table tbody tr:hover {
+  background: #f8fcfa;
+}
+
+.teacherRead-table td strong {
+  color: #183b3d;
+
+  font-size: 12px;
+  font-weight: 850;
+}
+
+/* AMOUNT */
+
+.teacherRead-table td:nth-child(3) {
+  color: #183b3d;
+
+  font-weight: 850;
+}
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.teacherRead-status {
+  min-width: 70px;
+  min-height: 29px;
+
+  padding: 0 11px;
+
+  border: 1px solid #dcebe6;
+  border-radius: 30px;
+
+  background: #f1f8f5;
+
+  color: #267d77;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* PAID */
+
+.teacherRead-status.paid {
+  border-color: #cde8dc;
+
+  background: #e6f7ef;
+
+  color: #257b59;
+}
+
+/* PENDING */
+
+.teacherRead-status.pending {
+  border-color: #f0ddb5;
+
+  background: #fff6e3;
+
+  color: #aa762b;
+}
+
+/* OVERDUE */
+
+.teacherRead-status.overdue,
+.teacherRead-status.unpaid {
+  border-color: #f2d6da;
+
+  background: #fff0f2;
+
+  color: #d14e5d;
+}
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.teacherRead-empty {
+  width: 100%;
+  min-height: 310px;
+
+  margin-top: 22px;
+  padding: 40px 20px;
+
+  border: 1px dashed #cbded8;
+  border-radius: 23px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f6fcf9,
+      #fffaf1
+    );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.teacherRead-emptyIcon {
+  width: 70px;
+  height: 70px;
+
+  margin-bottom: 15px;
+
+  border-radius: 21px;
+
+  background: #e4f5ef;
+
+  color: #267d77;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+}
+
+.teacherRead-empty h3 {
+  margin: 0;
+
+  color: #183b3d;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.teacherRead-empty p {
+  margin: 7px 0 0;
+
+  color: #778b8a;
+
+  font-size: 11px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .teacherRead-hero {
+    min-height: 145px;
+
+    padding: 22px 19px;
+
+    border-radius: 20px;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 27px;
+  }
+
+  .teacherRead-hero p {
+    font-size: 10px;
+  }
+
+  .teacherRead-heroIcon {
+    width: 62px;
+    height: 62px;
+
+    flex-basis: 62px;
+
+    border-radius: 18px;
+
+    font-size: 23px;
+  }
+
+  .teacherRead-table th,
+  .teacherRead-table td {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 390px) {
+  .teacherRead-heroIcon {
+    display: none;
+  }
+}
+
+/* =========================================================
+   TEACHER READ PAGES
+   FINAL LARGE FONT OVERRIDE
+   SAME SIZE AS PRIVATE MESSAGES
+   ========================================================= */
+
+/* =========================
+   HERO
+   ========================= */
+
+.teacherRead-eyebrow,
+.teacherRead-hero > div:first-child > span {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.teacherRead-hero h1 {
+  font-size: clamp(48px, 5vw, 58px) !important;
+  font-weight: 900 !important;
+  line-height: 1.08 !important;
+}
+
+.teacherRead-hero p {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+}
+
+.teacherRead-heroIcon {
+  width: 88px !important;
+  height: 88px !important;
+  flex: 0 0 88px !important;
+
+  font-size: 34px !important;
+}
+
+
+/* =========================
+   CARDS
+   EVENTS + ASSIGNMENTS
+   ========================= */
+
+.teacherRead-cardTop > span,
+.teacherRead-cardStatus {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+
+  min-height: 32px !important;
+  padding: 0 12px !important;
+}
+
+.teacherRead-cardLabel {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px !important;
+}
+
+.teacherRead-card h3 {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  line-height: 1.35 !important;
+}
+
+.teacherRead-card > p,
+.teacherRead-card p {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+
+/* =========================
+   CARD META
+   ========================= */
+
+.teacherRead-meta span {
+  font-size: 14px !important;
+  font-weight: 650 !important;
+  line-height: 1.5 !important;
+}
+
+.teacherRead-meta svg {
+  font-size: 14px !important;
+}
+
+
+/* =========================
+   CARD ICON
+   ========================= */
+
+.teacherRead-cardIcon,
+.teacherRead-cardTop > div {
+  width: 54px !important;
+  height: 54px !important;
+  flex: 0 0 54px !important;
+
+  font-size: 20px !important;
+}
+
+
+/* =========================
+   TABLE
+   ATTENDANCE + FEES + RESULTS
+   ========================= */
+
+.teacherRead-table th {
+  padding: 19px 20px !important;
+
+  font-size: 16px !important;
+  font-weight: 900 !important;
+
+  line-height: 1.4 !important;
+}
+
+.teacherRead-table td {
+  padding: 20px !important;
+
+  font-size: 17px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.5 !important;
+}
+
+.teacherRead-table td strong {
+  font-size: 17px !important;
+  font-weight: 900 !important;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.teacherRead-status {
+  min-height: 34px !important;
+  padding: 0 13px !important;
+
+  font-size: 14px !important;
+  font-weight: 900 !important;
+}
+
+
+/* =========================
+   EMPTY STATE
+   ========================= */
+
+.teacherRead-emptyIcon {
+  width: 78px !important;
+  height: 78px !important;
+
+  font-size: 31px !important;
+}
+
+.teacherRead-empty > svg {
+  font-size: 39px !important;
+}
+
+.teacherRead-empty h3 {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+}
+
+.teacherRead-empty p {
+  max-width: 520px !important;
+
+  font-size: 17px !important;
+  font-weight: 500 !important;
+
+  line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 14px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 44px !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 18px !important;
+  }
+
+  .teacherRead-heroIcon {
+    width: 76px !important;
+    height: 76px !important;
+    flex: 0 0 76px !important;
+
+    font-size: 29px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 21px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 16px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-table th {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 16px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .teacherRead-hero {
+    padding: 24px 19px !important;
+  }
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  .teacherRead-heroIcon {
+    width: 62px !important;
+    height: 62px !important;
+    flex: 0 0 62px !important;
+
+    font-size: 25px !important;
+  }
+
+
+  /* CARDS */
+
+  .teacherRead-cardLabel {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-cardTop > span,
+  .teacherRead-cardStatus {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 20px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 13px !important;
+  }
+
+  .teacherRead-cardIcon,
+  .teacherRead-cardTop > div {
+    width: 49px !important;
+    height: 49px !important;
+    flex: 0 0 49px !important;
+
+    font-size: 18px !important;
+  }
+
+
+  /* TABLE */
+
+  .teacherRead-table th {
+    padding: 16px !important;
+    font-size: 14px !important;
+  }
+
+  .teacherRead-table td {
+    padding: 17px !important;
+    font-size: 16px !important;
+  }
+
+  .teacherRead-table td strong {
+    font-size: 16px !important;
+  }
+
+  .teacherRead-status {
+    font-size: 13px !important;
+  }
+
+
+  /* EMPTY */
+
+  .teacherRead-empty h3 {
+    font-size: 25px !important;
+  }
+
+  .teacherRead-empty p {
+    font-size: 15px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .teacherRead-eyebrow,
+  .teacherRead-hero > div:first-child > span {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-hero h1 {
+    font-size: 32px !important;
+  }
+
+  .teacherRead-hero p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-card h3 {
+    font-size: 19px !important;
+  }
+
+  .teacherRead-card > p,
+  .teacherRead-card p {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-meta span {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-table th {
+    font-size: 14px !important;
+  }
+
+  .teacherRead-table td,
+  .teacherRead-table td strong {
+    font-size: 15px !important;
+  }
+
+  .teacherRead-status {
+    font-size: 12px !important;
+  }
+
+  .teacherRead-empty h3 {
+    font-size: 23px !important;
+  }
+
+  .teacherRead-empty p {
+    font-size: 15px !important;
+  }
+}

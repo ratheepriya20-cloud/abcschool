@@ -1,0 +1,2116 @@
+/* =========================================================
+   AB PUBLIC SCHOOL
+   WEBSITE INQUIRIES
+   PREMIUM SUPER ADMIN DESIGN
+   NO HORIZONTAL TABLE SCROLL
+   ========================================================= */
+
+.sai-page {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  padding: 0;
+  margin: 0;
+
+  overflow-x: hidden;
+
+  color: #142b50;
+
+  font-family:
+    "Inter",
+    "DM Sans",
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+.sai-page *,
+.sai-page *::before,
+.sai-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sai-header {
+  position: relative;
+
+  width: 100%;
+  min-height: 205px;
+
+  padding: 34px 36px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(49, 94, 234, 0.12);
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(40, 167, 232, 0.25),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 72% 110%,
+      rgba(214, 179, 106, 0.15),
+      transparent 27%
+    ),
+    linear-gradient(
+      125deg,
+      #071a35 0%,
+      #0b2d50 53%,
+      #15527d 100%
+    );
+
+  box-shadow:
+    0 18px 45px
+    rgba(7, 26, 53, 0.13);
+}
+
+
+.sai-header::before {
+  content: "";
+
+  position: absolute;
+
+  width: 190px;
+  height: 190px;
+
+  right: -55px;
+  top: -80px;
+
+  border-radius: 50%;
+
+  border: 34px solid
+    rgba(255, 255, 255, 0.045);
+}
+
+
+.sai-header::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+
+  right: 135px;
+  bottom: -55px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.04);
+}
+
+
+.sai-header > div {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   HEADER LABEL
+   ========================================================= */
+
+.sai-label {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+
+  color: #e6c577;
+
+  font-size: 14px;
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.sai-label::before {
+  content: "";
+
+  width: 32px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #e6c577,
+      #f2d895
+    );
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.sai-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    "Playfair Display",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(42px, 4vw, 60px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+.sai-header p {
+  max-width: 720px;
+
+  margin: 13px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.78);
+
+  font-size: 18px;
+
+  line-height: 1.65;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.sai-stats {
+  width: 100%;
+
+  margin: 22px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* =========================================================
+   STAT CARD
+   ========================================================= */
+
+.sai-stat-card {
+  position: relative;
+
+  min-width: 0;
+  min-height: 135px;
+
+  padding: 21px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  overflow: hidden;
+
+  border:
+    1px solid #e0e8f2;
+
+  border-radius: 19px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f6f8ff
+    );
+
+  box-shadow:
+    0 12px 32px
+    rgba(31, 61, 115, 0.07);
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+
+.sai-stat-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 38px
+    rgba(31, 61, 115, 0.12);
+}
+
+
+.sai-stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 95px;
+  height: 95px;
+
+  right: -42px;
+  top: -42px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(49, 94, 234, 0.05);
+}
+
+
+/* =========================================================
+   STAT ICON
+   ========================================================= */
+
+.sai-stat-icon {
+  position: relative;
+  z-index: 2;
+
+  flex: 0 0 57px;
+
+  width: 57px;
+  height: 57px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 17px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #315eea,
+      #7258e8
+    );
+
+  font-size: 23px;
+
+  box-shadow:
+    0 10px 22px
+    rgba(49, 94, 234, 0.2);
+}
+
+
+.sai-stat-card:nth-child(2)
+.sai-stat-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #29a6e8,
+      #315eea
+    );
+}
+
+
+.sai-stat-card:nth-child(3)
+.sai-stat-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #e4b859,
+      #ca8c24
+    );
+}
+
+
+.sai-stat-card:nth-child(4)
+.sai-stat-icon {
+  background:
+    linear-gradient(
+      135deg,
+      #2ab67b,
+      #178a5c
+    );
+}
+
+
+/* =========================================================
+   STAT TEXT
+   ========================================================= */
+
+.sai-stat-card > div:last-child {
+  position: relative;
+  z-index: 2;
+
+  min-width: 0;
+}
+
+
+.sai-stat-card span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #71819a;
+
+  font-size: 15px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+}
+
+
+.sai-stat-card strong {
+  display: block;
+
+  color: #10264d;
+
+  font-size:
+    clamp(30px, 2.5vw, 39px);
+
+  line-height: 1;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.sai-toolbar {
+  width: 100%;
+
+  margin-bottom: 18px;
+
+  padding: 15px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(190px, 250px);
+
+  gap: 13px;
+
+  border:
+    1px solid #e0e8f2;
+
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(31, 61, 115, 0.055);
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.sai-search,
+.sai-filter {
+  position: relative;
+
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+
+.sai-search > svg,
+.sai-filter > svg {
+  position: absolute;
+
+  left: 15px;
+
+  z-index: 2;
+
+  color: #7184a0;
+
+  font-size: 16px;
+
+  pointer-events: none;
+}
+
+
+.sai-search input,
+.sai-filter select {
+  width: 100%;
+  min-width: 0;
+
+  height: 51px;
+
+  padding:
+    0 15px 0 44px;
+
+  border:
+    1px solid #dce5f0;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  color: #213b62;
+
+  background: #f8faff;
+
+  font-family: inherit;
+
+  font-size: 15px;
+
+  font-weight: 650;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.sai-search input::placeholder {
+  color: #95a2b5;
+}
+
+
+.sai-search input:focus,
+.sai-filter select:focus {
+  border-color: #315eea;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(49, 94, 234, 0.08);
+}
+
+
+/* =========================================================
+   TABLE CARD
+   ========================================================= */
+
+.sai-table-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow: hidden;
+
+  border:
+    1px solid #dfe7f1;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 16px 40px
+    rgba(31, 61, 115, 0.07);
+}
+
+
+/*
+   IMPORTANT:
+   NO SIDE SCROLL
+*/
+
+.sai-table-scroll {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: hidden !important;
+  overflow-y: visible;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.sai-table {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  min-width: 0 !important;
+
+  table-layout: fixed;
+
+  border-collapse: collapse;
+}
+
+
+/* COLUMN WIDTHS */
+
+.sai-table th:nth-child(1),
+.sai-table td:nth-child(1) {
+  width: 17%;
+}
+
+
+.sai-table th:nth-child(2),
+.sai-table td:nth-child(2) {
+  width: 21%;
+}
+
+
+.sai-table th:nth-child(3),
+.sai-table td:nth-child(3) {
+  width: 14%;
+}
+
+
+.sai-table th:nth-child(4),
+.sai-table td:nth-child(4) {
+  width: 9%;
+}
+
+
+.sai-table th:nth-child(5),
+.sai-table td:nth-child(5) {
+  width: 14%;
+}
+
+
+.sai-table th:nth-child(6),
+.sai-table td:nth-child(6) {
+  width: 14%;
+}
+
+
+.sai-table th:nth-child(7),
+.sai-table td:nth-child(7) {
+  width: 11%;
+}
+
+
+/* =========================================================
+   TABLE HEAD
+   ========================================================= */
+
+.sai-table th {
+  padding:
+    16px 9px;
+
+  border-bottom:
+    1px solid #e4eaf2;
+
+  color: #5d6f8b;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fbfe,
+      #f2f6fb
+    );
+
+  font-size: 12px;
+
+  line-height: 1.35;
+
+  font-weight: 900;
+
+  letter-spacing: 0.3px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  white-space: normal;
+
+  overflow-wrap: anywhere;
+
+  word-break: normal;
+}
+
+
+/* =========================================================
+   TABLE BODY
+   ========================================================= */
+
+.sai-table td {
+  padding:
+    17px 9px;
+
+  border-bottom:
+    1px solid #edf1f6;
+
+  color: #435675;
+
+  background: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  vertical-align: middle;
+
+  white-space: normal !important;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+
+.sai-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+.sai-table tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+.sai-table tbody tr:hover td {
+  background: #f8faff;
+}
+
+
+/* =========================================================
+   PERSON
+   ========================================================= */
+
+.sai-person {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.sai-avatar {
+  flex: 0 0 39px;
+
+  width: 39px;
+  height: 39px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 11px;
+
+  color: #315eea;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eaf0ff,
+      #f1edff
+    );
+
+  font-size: 15px;
+}
+
+
+.sai-person > div:last-child {
+  min-width: 0;
+}
+
+
+.sai-person strong {
+  display: block;
+
+  color: #18345d;
+
+  font-size: 14px;
+
+  line-height: 1.35;
+
+  font-weight: 900;
+
+  overflow-wrap: anywhere;
+}
+
+
+.sai-person small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #8a98ab;
+
+  font-size: 10px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.sai-contact {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+
+.sai-contact span {
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 6px;
+
+  color: #506582;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  font-weight: 650;
+
+  overflow-wrap: anywhere;
+
+  word-break: break-word;
+}
+
+
+.sai-contact svg {
+  flex: 0 0 auto;
+
+  margin-top: 2px;
+
+  color: #315eea;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   INQUIRY TYPE
+   ========================================================= */
+
+.sai-type {
+  display: inline-block;
+
+  max-width: 100%;
+
+  padding:
+    7px 9px;
+
+  border-radius: 8px;
+
+  color: #315eea;
+
+  background: #edf2ff;
+
+  font-size: 11px;
+
+  line-height: 1.35;
+
+  font-weight: 850;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.sai-date {
+  display: block;
+
+  color: #63738d;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  font-weight: 700;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   STATUS SELECT
+   ========================================================= */
+
+.sai-status {
+  width: 100%;
+  max-width: 115px;
+
+  min-height: 37px;
+
+  padding:
+    0 6px;
+
+  border:
+    1px solid transparent;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+
+.sai-status-new {
+  color: #315eea;
+
+  border-color: #dce5ff;
+
+  background: #edf2ff;
+}
+
+
+.sai-status-contacted {
+  color: #a56d12;
+
+  border-color: #f4dfad;
+
+  background: #fff3d7;
+}
+
+
+.sai-status-closed {
+  color: #118159;
+
+  border-color: #cceede;
+
+  background: #e1f8ee;
+}
+
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
+.sai-actions {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  flex-wrap: wrap;
+}
+
+
+.sai-view-btn,
+.sai-delete-btn {
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  font-size: 13px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.sai-view-btn {
+  color: #315eea;
+
+  background: #eaf0ff;
+}
+
+
+.sai-delete-btn {
+  color: #dc4059;
+
+  background: #ffe8ec;
+}
+
+
+.sai-view-btn:hover,
+.sai-delete-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+.sai-view-btn:hover {
+  box-shadow:
+    0 7px 15px
+    rgba(49, 94, 234, 0.15);
+}
+
+
+.sai-delete-btn:hover {
+  box-shadow:
+    0 7px 15px
+    rgba(220, 64, 89, 0.14);
+}
+
+
+/* =========================================================
+   EMPTY
+   ========================================================= */
+
+.sai-empty {
+  height: 230px;
+
+  padding: 35px !important;
+
+  color: #8391a5 !important;
+
+  text-align: center !important;
+}
+
+
+.sai-empty > svg {
+  margin-bottom: 12px;
+
+  color: #a9b5c6;
+
+  font-size: 36px;
+}
+
+
+.sai-empty h3 {
+  margin:
+    0 0 6px;
+
+  color: #263f65;
+
+  font-size: 19px;
+
+  font-weight: 900;
+}
+
+
+.sai-empty p {
+  margin: 0;
+
+  color: #8794a8;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+   ========================================================= */
+
+.sai-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow-y: auto;
+
+  background:
+    rgba(4, 16, 37, 0.72);
+
+  backdrop-filter: blur(7px);
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.sai-modal {
+  position: relative;
+
+  width:
+    min(760px, 100%);
+
+  max-height:
+    calc(100vh - 40px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.75);
+
+  border-radius: 23px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 90px
+    rgba(4, 16, 37, 0.3);
+}
+
+
+/* =========================================================
+   MODAL CLOSE
+   ========================================================= */
+
+.sai-modal-close {
+  position: absolute;
+
+  z-index: 10;
+
+  top: 17px;
+  right: 17px;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.17);
+
+  border-radius: 12px;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   MODAL HEADER
+   ========================================================= */
+
+.sai-modal-head {
+  position: relative;
+
+  padding:
+    29px 75px 27px 28px;
+
+  overflow: hidden;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(40, 167, 232, 0.25),
+      transparent 30%
+    ),
+    linear-gradient(
+      125deg,
+      #071a35,
+      #0e3761
+    );
+}
+
+
+.sai-modal-head span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #e5c477;
+
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.6px;
+}
+
+
+.sai-modal-head h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(28px, 3vw, 36px);
+
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  overflow-wrap: anywhere;
+}
+
+
+.sai-modal-head p {
+  margin:
+    8px 0 0;
+
+  color:
+    rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   DETAILS GRID
+   ========================================================= */
+
+.sai-detail-grid {
+  padding:
+    24px 24px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 13px;
+}
+
+
+.sai-detail {
+  min-width: 0;
+
+  min-height: 87px;
+
+  padding: 15px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border:
+    1px solid #e1e8f2;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f7f9fd
+    );
+}
+
+
+.sai-detail > svg {
+  flex: 0 0 39px;
+
+  width: 39px;
+  height: 39px;
+
+  padding: 10px;
+
+  border-radius: 11px;
+
+  color: #315eea;
+
+  background: #eaf0ff;
+}
+
+
+.sai-detail > div {
+  min-width: 0;
+}
+
+
+.sai-detail span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8190a5;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+
+.sai-detail strong {
+  display: block;
+
+  color: #1d385f;
+
+  font-size: 15px;
+
+  line-height: 1.45;
+
+  font-weight: 850;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   INQUIRY TYPE DETAIL
+   ========================================================= */
+
+.sai-detail-section {
+  margin:
+    14px 24px 0;
+
+  padding: 16px;
+
+  border:
+    1px solid #e1e8f2;
+
+  border-radius: 14px;
+
+  background: #f8faff;
+}
+
+
+.sai-detail-section span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #8290a4;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.6px;
+
+  text-transform: uppercase;
+}
+
+
+.sai-detail-section strong {
+  color: #1d385f;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  font-weight: 900;
+}
+
+
+/* =========================================================
+   MESSAGE BOX
+   ========================================================= */
+
+.sai-message-box {
+  margin:
+    14px 24px 0;
+
+  padding: 18px;
+
+  border:
+    1px solid #dfe7f2;
+
+  border-radius: 15px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f8faff,
+      #f4f8fd
+    );
+}
+
+
+.sai-message-box > div {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  color: #315eea;
+}
+
+
+.sai-message-box > div svg {
+  font-size: 16px;
+}
+
+
+.sai-message-box > div span {
+  font-size: 12px;
+
+  font-weight: 900;
+
+  letter-spacing: 0.5px;
+
+  text-transform: uppercase;
+}
+
+
+.sai-message-box p {
+  margin: 0;
+
+  color: #435a7b;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  font-weight: 600;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   MODAL STATUS
+   ========================================================= */
+
+.sai-modal-status {
+  padding:
+    20px 24px 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 18px;
+}
+
+
+.sai-modal-status label {
+  color: #263f65;
+
+  font-size: 15px;
+
+  font-weight: 900;
+}
+
+
+.sai-modal-status select {
+  min-width: 180px;
+  min-height: 47px;
+
+  padding:
+    0 13px;
+
+  border:
+    1px solid #d9e3ef;
+
+  border-radius: 11px;
+
+  outline: 0;
+
+  color: #213b62;
+
+  background: #f8faff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   LAPTOP
+   ========================================================= */
+
+@media (max-width: 1250px) {
+
+  .sai-header {
+    min-height: 190px;
+
+    padding: 30px;
+  }
+
+
+  .sai-header h1 {
+    font-size: 46px;
+  }
+
+
+  .sai-stats {
+    gap: 12px;
+  }
+
+
+  .sai-stat-card {
+    min-height: 125px;
+
+    padding: 17px;
+
+    gap: 12px;
+  }
+
+
+  .sai-stat-icon {
+    flex-basis: 49px;
+
+    width: 49px;
+    height: 49px;
+
+    font-size: 19px;
+  }
+
+
+  .sai-stat-card span {
+    font-size: 14px;
+  }
+
+
+  .sai-stat-card strong {
+    font-size: 31px;
+  }
+
+
+  /* Keep all 7 columns inside available width */
+
+  .sai-table th {
+    padding:
+      14px 7px;
+
+    font-size: 11px;
+  }
+
+
+  .sai-table td {
+    padding:
+      15px 7px;
+
+    font-size: 12px;
+  }
+
+
+  .sai-person strong {
+    font-size: 13px;
+  }
+
+
+  .sai-contact span {
+    font-size: 11px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   Instead of side scroll, convert rows to cards
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .sai-header {
+    min-height: 180px;
+
+    padding: 27px 23px;
+
+    border-radius: 19px;
+  }
+
+
+  .sai-header h1 {
+    font-size: 41px;
+  }
+
+
+  .sai-header p {
+    font-size: 17px;
+  }
+
+
+  .sai-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .sai-stat-card {
+    min-height: 125px;
+  }
+
+
+  .sai-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+
+  /*
+     NO TABLE HORIZONTAL SCROLL.
+     Each row becomes a card.
+  */
+
+  .sai-table-scroll {
+    overflow: visible !important;
+  }
+
+
+  .sai-table,
+  .sai-table tbody,
+  .sai-table tr,
+  .sai-table td {
+    display: block;
+
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+
+  .sai-table thead {
+    display: none;
+  }
+
+
+  .sai-table {
+    padding: 13px;
+
+    background: #f5f8fc;
+  }
+
+
+  .sai-table tbody {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+
+  .sai-table tbody tr {
+    min-width: 0;
+
+    padding: 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    border:
+      1px solid #dfe7f2;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 8px 22px
+      rgba(31, 61, 115, 0.06);
+  }
+
+
+  .sai-table tbody tr:hover td {
+    background: transparent;
+  }
+
+
+  .sai-table td {
+    position: relative;
+
+    min-height: 51px;
+
+    padding:
+      12px 0 12px 39%;
+
+    border-bottom:
+      1px solid #edf1f6;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+  }
+
+
+  .sai-table td:last-child {
+    border-bottom: 0;
+  }
+
+
+  .sai-table td::before {
+    position: absolute;
+
+    left: 0;
+    top: 13px;
+
+    width: 35%;
+
+    color: #7a899f;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    font-weight: 900;
+
+    letter-spacing: 0.4px;
+
+    text-transform: uppercase;
+  }
+
+
+  .sai-table td:nth-child(1)::before {
+    content: "Parent / Visitor";
+  }
+
+
+  .sai-table td:nth-child(2)::before {
+    content: "Contact";
+  }
+
+
+  .sai-table td:nth-child(3)::before {
+    content: "Inquiry";
+  }
+
+
+  .sai-table td:nth-child(4)::before {
+    content: "Class";
+  }
+
+
+  .sai-table td:nth-child(5)::before {
+    content: "Submitted";
+  }
+
+
+  .sai-table td:nth-child(6)::before {
+    content: "Status";
+  }
+
+
+  .sai-table td:nth-child(7)::before {
+    content: "Action";
+  }
+
+
+  .sai-actions {
+    justify-content: flex-start;
+  }
+
+
+  .sai-status {
+    max-width: 150px;
+  }
+
+
+  /*
+     Empty state must not become normal card cells
+  */
+
+  .sai-empty {
+    width: 100% !important;
+
+    padding: 35px !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .sai-page {
+    overflow-x: hidden;
+  }
+
+
+  /* HEADER */
+
+  .sai-header {
+    min-height: auto;
+
+    padding:
+      26px 19px;
+
+    border-radius: 17px;
+  }
+
+
+  .sai-label {
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .sai-header h1 {
+    font-size:
+      clamp(34px, 10vw, 41px);
+
+    line-height: 1.08;
+  }
+
+
+  .sai-header p {
+    margin-top: 10px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+
+  /* STATS */
+
+  .sai-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    margin: 16px 0;
+  }
+
+
+  .sai-stat-card {
+    min-height: 132px;
+
+    padding: 16px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    border-radius: 15px;
+  }
+
+
+  .sai-stat-icon {
+    flex-basis: 46px;
+
+    width: 46px;
+    height: 46px;
+
+    font-size: 18px;
+  }
+
+
+  .sai-stat-card span {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+  }
+
+
+  .sai-stat-card strong {
+    font-size: 30px;
+  }
+
+
+  /* TOOLBAR */
+
+  .sai-toolbar {
+    margin-bottom: 14px;
+
+    padding: 10px;
+
+    gap: 9px;
+
+    border-radius: 14px;
+  }
+
+
+  .sai-search input,
+  .sai-filter select {
+    height: 52px;
+
+    font-size: 16px;
+  }
+
+
+  /* TABLE CARD */
+
+  .sai-table-card {
+    border-radius: 15px;
+  }
+
+
+  .sai-table {
+    padding: 10px;
+  }
+
+
+  .sai-table tbody {
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+
+  .sai-table tbody tr {
+    padding: 15px;
+
+    border-radius: 14px;
+  }
+
+
+  .sai-table td {
+    min-height: 53px;
+
+    padding:
+      12px 0 12px 38%;
+
+    font-size: 14px;
+  }
+
+
+  .sai-table td::before {
+    width: 34%;
+
+    font-size: 10px;
+  }
+
+
+  .sai-person strong {
+    font-size: 15px;
+  }
+
+
+  .sai-person small {
+    font-size: 11px;
+  }
+
+
+  .sai-contact span {
+    font-size: 13px;
+  }
+
+
+  .sai-type,
+  .sai-date {
+    font-size: 13px;
+  }
+
+
+  .sai-status {
+    min-height: 39px;
+
+    font-size: 13px;
+  }
+
+
+  .sai-view-btn,
+  .sai-delete-btn {
+    width: 39px;
+    height: 39px;
+
+    flex-basis: 39px;
+
+    font-size: 14px;
+  }
+
+
+  /* MODAL */
+
+  .sai-modal-overlay {
+    padding: 12px;
+  }
+
+
+  .sai-modal {
+    max-height:
+      calc(100vh - 24px);
+
+    border-radius: 18px;
+  }
+
+
+  .sai-modal-head {
+    padding:
+      25px 62px 23px 18px;
+  }
+
+
+  .sai-modal-head h2 {
+    font-size: 28px;
+  }
+
+
+  .sai-modal-head p {
+    font-size: 14px;
+  }
+
+
+  .sai-modal-close {
+    top: 13px;
+    right: 13px;
+
+    width: 39px;
+    height: 39px;
+  }
+
+
+  .sai-detail-grid {
+    padding:
+      17px 17px 0;
+
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .sai-detail {
+    min-height: 82px;
+
+    padding: 14px;
+  }
+
+
+  .sai-detail span {
+    font-size: 11px;
+  }
+
+
+  .sai-detail strong {
+    font-size: 15px;
+  }
+
+
+  .sai-detail-section,
+  .sai-message-box {
+    margin:
+      11px 17px 0;
+  }
+
+
+  .sai-message-box p {
+    font-size: 15px;
+  }
+
+
+  .sai-modal-status {
+    padding:
+      18px 17px 21px;
+
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+
+  .sai-modal-status label {
+    font-size: 15px;
+  }
+
+
+  .sai-modal-status select {
+    width: 100%;
+
+    min-width: 0;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .sai-stats {
+    grid-template-columns: 1fr;
+  }
+
+
+  .sai-stat-card {
+    min-height: 115px;
+
+    flex-direction: row;
+
+    align-items: center;
+  }
+
+
+  .sai-header h1 {
+    font-size: 33px;
+  }
+
+
+  .sai-table td {
+    padding-left: 40%;
+  }
+
+
+  .sai-table td::before {
+    width: 36%;
+  }
+
+}

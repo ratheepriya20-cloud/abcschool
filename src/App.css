@@ -1,0 +1,75 @@
+/* =========================================================
+   GLOBAL FULL WIDTH FIX
+   Entire Website
+   ========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 100%;
+}
+
+
+/* VITE DEFAULT ROOT WIDTH REMOVE */
+
+#root {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: initial !important;
+}
+
+
+/* GLOBAL BOX SIZING */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Main website elements */
+
+main,
+header,
+footer,
+nav {
+  max-width: none;
+}
+
+
+/* Images responsive */
+
+img {
+  max-width: 100%;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  
+}

@@ -2,294 +2,762 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
+  FaArrowRight,
+  FaTrophy,
+  FaUsers,
+  FaStar,
+  FaChartLine,
   FaFutbol,
   FaBasketballBall,
   FaRunning,
   FaTableTennis,
-  FaDumbbell,
-  FaUsers,
-  FaBrain,
-  FaTrophy,
-  FaArrowRight,
+  FaHeartbeat,
+  FaMedal,
+  FaImage,
+  FaGraduationCap,
+  FaPlay,
 } from "react-icons/fa";
-
-import { GiShuttlecock, GiCricketBat } from "react-icons/gi";
-
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 import "./Sports.css";
 
-import footballImage from "../assets/football.jpg";
-import basketballImage from "../assets/basketball.jpg";
-import badmintonImage from "../assets/badminton.jpg";
-import athleticsImage from "../assets/athletics.jpg";
-import cricketImage from "../assets/cricket.jpg";
-import tableTennisImage from "../assets/table-tennis.jpg";
+/* =========================================================
+   FACILITY IMAGES
+========================================================= */
 
-const sportsData = [
+import footballImg from "../assets/facility-football.jpg";
+import cricketImg from "../assets/facility-cricket.jpg";
+import basketballImg from "../assets/facility-basketball.jpg";
+import badmintonImg from "../assets/facility-badminton.jpg";
+import athleticsImg from "../assets/facility-atheletic.jpg";
+import indoorImg from "../assets/sports-indoor.jpg";
+
+/* ACHIEVEMENT */
+
+import achievementImg from "../assets/sports-achievement.jpg";
+
+/* GALLERY */
+
+import gallery1 from "../assets/sports-gallery-1.jpg";
+import gallery2 from "../assets/sports-gallery-2.jpg";
+import gallery3 from "../assets/sports-gallery-3.jpg";
+import gallery4 from "../assets/sports-gallery-4.jpg";
+import gallery5 from "../assets/facility-badminton.jpg";
+import gallery6 from "../assets/sports-indoor.jpg";
+
+/* HERO + CTA */
+
+import studentImg from "../assets/sports-student.jpg";
+import teamCtaImg from "../assets/sports-team-cta.jpg";
+
+
+/* =========================================================
+   FACILITIES DATA
+========================================================= */
+
+const sportsFacilities = [
   {
     id: 1,
-    number: "01",
     title: "Football",
-    subtitle: "TEAMWORK • DISCIPLINE • VICTORY",
-    icon: FaFutbol,
-    image: footballImage,
-    description:
-      "Football helps students develop stamina, coordination and teamwork while teaching them the importance of discipline, confidence and sportsmanship.",
-    points: [
-      "Regular practice sessions",
-      "Inter-school tournaments",
-      "Professional coaching",
-    ],
+    text: "Builds teamwork, stamina and confidence.",
+    image: footballImg,
+    icon: <FaFutbol />,
+    theme: "football",
   },
   {
     id: 2,
-    number: "02",
-    title: "Basketball",
-    subtitle: "SPEED • SKILL • TEAM SPIRIT",
-    icon: FaBasketballBall,
-    image: basketballImage,
-    description:
-      "Basketball improves agility, focus and decision-making skills while encouraging students to work together and enjoy healthy competition.",
-    points: [
-      "Skill development training",
-      "Friendly matches",
-      "Team tournaments",
-    ],
+    title: "Cricket",
+    text: "Develops focus, technique and strategy.",
+    image: cricketImg,
+    icon: <FaTrophy />,
+    theme: "cricket",
   },
   {
     id: 3,
-    number: "03",
-    title: "Badminton",
-    subtitle: "FOCUS • AGILITY • FITNESS",
-    icon: GiShuttlecock,
-    image: badmintonImage,
-    description:
-      "Badminton develops reflexes, coordination and concentration while keeping students active, energetic and physically fit.",
-    points: [
-      "Professional coaching",
-      "Singles & doubles practice",
-      "Inter-school matches",
-    ],
+    title: "Basketball",
+    text: "Enhances agility, coordination and team spirit.",
+    image: basketballImg,
+    icon: <FaBasketballBall />,
+    theme: "basketball",
   },
   {
     id: 4,
-    number: "04",
-    title: "Athletics",
-    subtitle: "SPEED • ENDURANCE • DETERMINATION",
-    icon: FaRunning,
-    image: athleticsImage,
-    description:
-      "Athletics helps students build endurance, speed and determination through running, fitness activities and track events.",
-    points: [
-      "Track training",
-      "Running events",
-      "Fitness development",
-    ],
+    title: "Badminton",
+    text: "Improves reflexes, speed and concentration.",
+    image: badmintonImg,
+    icon: <FaTableTennis />,
+    theme: "badminton",
   },
   {
     id: 5,
-    number: "05",
-    title: "Cricket",
-    subtitle: "SKILL • PATIENCE • TEAMWORK",
-    icon: GiCricketBat,
-    image: cricketImage,
-    description:
-      "Cricket teaches patience, concentration and teamwork while giving students opportunities to develop batting, bowling and fielding skills.",
-    points: [
-      "Batting practice",
-      "Bowling sessions",
-      "Inter-house matches",
-    ],
+    title: "Athletics",
+    text: "Builds endurance, discipline and self-motivation.",
+    image: athleticsImg,
+    icon: <FaRunning />,
+    theme: "athletics",
   },
   {
     id: 6,
-    number: "06",
-    title: "Table Tennis",
-    subtitle: "REFLEX • PRECISION • FOCUS",
-    icon: FaTableTennis,
-    image: tableTennisImage,
-    description:
-      "Table tennis develops quick reflexes, hand-eye coordination and concentration through fast-paced and skill-focused training.",
-    points: [
-      "Regular practice",
-      "Singles & doubles",
-      "School competitions",
-    ],
+    title: "Indoor Games",
+    text: "Encourages focus, precision and mental sharpness.",
+    image: indoorImg,
+    icon: <FaTableTennis />,
+    theme: "indoor",
   },
 ];
+
+
+/* =========================================================
+   WHY SPORTS DATA
+========================================================= */
+
+const sportsBenefits = [
+  {
+    id: "01",
+    title: "Physical Fitness",
+    text: "Stronger bodies for brighter futures.",
+    icon: <FaHeartbeat />,
+    theme: "fitness",
+  },
+  {
+    id: "02",
+    title: "Teamwork",
+    text: "Learning to work together and support each other.",
+    icon: <FaUsers />,
+    theme: "teamwork",
+  },
+  {
+    id: "03",
+    title: "Discipline",
+    text: "Building consistent habits and focus.",
+    icon: <FaMedal />,
+    theme: "discipline",
+  },
+  {
+    id: "04",
+    title: "Confidence",
+    text: "Believing in oneself and taking on new challenges.",
+    icon: <FaStar />,
+    theme: "confidence",
+  },
+];
+
+
+/* =========================================================
+   GALLERY DATA
+========================================================= */
+
+const galleryItems = [
+  {
+    id: 1,
+    image: gallery1,
+    title: "Football",
+  },
+  {
+    id: 2,
+    image: gallery2,
+    title: "Cricket",
+  },
+  {
+    id: 3,
+    image: gallery3,
+    title: "Basketball",
+  },
+  {
+    id: 4,
+    image: gallery4,
+    title: "Athletics",
+  },
+  {
+    id: 5,
+    image: gallery5,
+    title: "Badminton",
+  },
+  {
+    id: 6,
+    image: gallery6,
+    title: "Indoor Games",
+  },
+];
+
 
 const Sports = () => {
   const navigate = useNavigate();
 
+  const scrollToSection = (id) => {
+    document
+      .getElementById(id)
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
   return (
-    <>
-      <Navbar />
+    <main className="abpsSportXPage">
 
-      <main className="absport-page">
-       
+      {/* =====================================================
+          HERO
+      ===================================================== */}
 
-        <section className="absport-intro">
-          <div className="absport-introContent">
-            <span className="absport-introLabel">
-              OUR SPORTS
-            </span>
+      <section className="abpsSportXHero">
+
+        <span className="abpsSportXHeroCircle abpsSportXHeroCircleOne"></span>
+        <span className="abpsSportXHeroCircle abpsSportXHeroCircleTwo"></span>
+
+        <div className="abpsSportXHeroDots abpsSportXHeroDotsOne"></div>
+        <div className="abpsSportXHeroDots abpsSportXHeroDotsTwo"></div>
+
+        <div className="abpsSportXHeroShell">
+
+          {/* LEFT */}
+
+          <div className="abpsSportXHeroContent">
+
+            <div className="abpsSportXBreadcrumb">
+
+              <button onClick={() => navigate("/")}>
+                Home
+              </button>
+
+              <span>›</span>
+
+              <button onClick={() => navigate("/campus-life")}>
+                Campus Life
+              </button>
+
+              <span>›</span>
+
+              <strong>
+                Sports
+              </strong>
+
+            </div>
+
+
+            <div className="abpsSportXEyebrow">
+              <i></i>
+              SPORTS AT AB PUBLIC SCHOOL
+            </div>
+
+
+            <h1>
+              Play Today.
+              <span>
+                Grow Stronger
+              </span>
+              <strong>
+                Tomorrow.
+              </strong>
+            </h1>
+
+
+            <p>
+              At AB Public School, sports build confidence,
+              discipline and teamwork. We encourage every student
+              to stay active, explore their potential and develop
+              skills for life.
+            </p>
+
+
+            <div className="abpsSportXHeroButtons">
+
+              <button
+                className="abpsSportXGoldBtn"
+                onClick={() =>
+                  scrollToSection("abpsSportXFacilities")
+                }
+              >
+                Explore Our Facilities
+                <FaArrowRight />
+              </button>
+
+
+              <button
+                className="abpsSportXLightBtn"
+                onClick={() =>
+                  scrollToSection("abpsSportXGallery")
+                }
+              >
+                View Gallery
+
+                <span>
+                  <FaPlay />
+                </span>
+              </button>
+
+            </div>
+
+          </div>
+
+
+          {/* RIGHT IMAGE */}
+
+          <div className="abpsSportXHeroVisual">
+
+            <div className="abpsSportXHeroImageFrame">
+
+              <img
+                src={studentImg}
+                alt="AB Public School sports student"
+              />
+
+              <div className="abpsSportXHeroImageShade"></div>
+
+            </div>
+
+
+            
+
+
+            <div className="abpsSportXHeroHighlights">
+
+              <div>
+                <FaTrophy />
+                <span>
+                  <strong>Discipline</strong>
+                  In Action
+                </span>
+              </div>
+
+              <div>
+                <FaUsers />
+                <span>
+                  <strong>Stronger</strong>
+                  Together
+                </span>
+              </div>
+
+              <div>
+                <FaChartLine />
+                <span>
+                  <strong>Healthier</strong>
+                  Happier Lives
+                </span>
+              </div>
+
+              <div>
+                <FaStar />
+                <span>
+                  <strong>Champions</strong>
+                  Beyond The Game
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div className="abpsSportXHeroWave abpsSportXHeroWaveOne"></div>
+        <div className="abpsSportXHeroWave abpsSportXHeroWaveTwo"></div>
+
+      </section>
+
+
+      {/* =====================================================
+          FACILITIES
+      ===================================================== */}
+
+      <section
+        className="abpsSportXFacilities"
+        id="abpsSportXFacilities"
+      >
+
+        <div className="abpsSportXContainer">
+
+          <header className="abpsSportXSectionHead">
+
+            <div className="abpsSportXSectionLabel">
+              <span></span>
+              OUR SPORTS FACILITIES
+            </div>
 
             <h2>
-              More Than
-              <span> Just Games</span>
+              Explore Our Sports Facilities.
             </h2>
 
             <p>
-              We offer a wide range of sports to help students
-              stay active, build confidence and develop lifelong
-              skills.
+              Modern infrastructure, professional guidance and
+              a safe environment help every student discover
+              their potential.
             </p>
 
-            <div className="absport-introLine"></div>
+          </header>
+
+
+          <div className="abpsSportXFacilityGrid">
+
+            {sportsFacilities.map((sport) => (
+
+              <article
+                className="abpsSportXFacilityCard"
+                key={sport.id}
+              >
+
+                <div className="abpsSportXFacilityImage">
+
+                  <img
+                    src={sport.image}
+                    alt={sport.title}
+                  />
+
+                </div>
+
+
+                <div className="abpsSportXFacilityBody">
+
+                  <span
+                    className={`abpsSportXFacilityIcon ${sport.theme}`}
+                  >
+                    {sport.icon}
+                  </span>
+
+                  <h3>
+                    {sport.title}
+                  </h3>
+
+                  <p>
+                    {sport.text}
+                  </p>
+
+                </div>
+
+              </article>
+
+            ))}
+
           </div>
-        </section>
 
-        <section className="absport-sportsSection">
-          <div className="absport-sportsContainer">
-            {sportsData.map((sport, index) => {
-              const SportIcon = sport.icon;
+        </div>
 
-              return (
-                <article
-                  className={`absport-sportRow ${
-                    index % 2 !== 0
-                      ? "absport-reverse"
-                      : ""
-                  }`}
-                  key={sport.id}
-                >
-                  <div className="absport-imageBox">
-                    <img
-                      src={sport.image}
-                      alt={`${sport.title} at AB Public School`}
-                    />
+      </section>
 
-                    <div className="absport-imageOverlay"></div>
 
-                    <div className="absport-imageNumber">
-                      {sport.number}
-                    </div>
+      {/* =====================================================
+          WHY SPORTS
+      ===================================================== */}
 
-                    <div className="absport-imageIcon">
-                      <SportIcon />
-                    </div>
-                  </div>
+      <section className="abpsSportXWhy">
 
-                  <div className="absport-sportContent">
-                    <span className="absport-sportSubtitle">
-                      {sport.subtitle}
-                    </span>
+        <div className="abpsSportXContainer">
 
-                    <h3>{sport.title}</h3>
+          <div className="abpsSportXWhyHeading">
 
-                    <p>{sport.description}</p>
+            <div className="abpsSportXSectionLabel abpsSportXLeftLabel">
+              <span></span>
+              WHY SPORTS MATTER
+            </div>
 
-                    <ul>
-                      {sport.points.map((point, pointIndex) => (
-                        <li key={pointIndex}>
-                          <span>✓</span>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
+            <h2>
+              Beyond The Game.
+              <strong>
+                Skills For Life.
+              </strong>
+            </h2>
 
-                    <button
-                      onClick={() =>
-                        navigate(`/sports/${sport.id}`)
-                      }
-                    >
-                      Learn More
-                      <FaArrowRight />
-                    </button>
-                  </div>
-                </article>
-              );
-            })}
+            <p>
+              Sports help students develop important life skills
+              that contribute to their overall growth, both on
+              and off the field.
+            </p>
+
           </div>
-        </section>
 
-        <section className="absport-why">
-          <div className="absport-whyContainer">
-            <div className="absport-whyText">
-              <span>WHY SPORTS?</span>
+
+          <div className="abpsSportXBenefitGrid">
+
+            {sportsBenefits.map((benefit) => (
+
+              <article
+                className={`abpsSportXBenefitCard ${benefit.theme}`}
+                key={benefit.id}
+              >
+
+                <span className="abpsSportXBenefitIcon">
+                  {benefit.icon}
+                </span>
+
+                <strong className="abpsSportXBenefitNumber">
+                  {benefit.id}
+                </strong>
+
+                <h3>
+                  {benefit.title}
+                </h3>
+
+                <p>
+                  {benefit.text}
+                </p>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          ACHIEVEMENTS
+      ===================================================== */}
+
+      <section
+        className="abpsSportXAchievement"
+        id="abpsSportXAchievement"
+      >
+
+        <div className="abpsSportXContainer">
+
+          <div className="abpsSportXAchievementGrid">
+
+            {/* CONTENT */}
+
+            <div className="abpsSportXAchievementContent">
+
+              <div className="abpsSportXDarkLabel">
+                <span></span>
+                OUR ACHIEVEMENTS
+              </div>
 
               <h2>
-                Building Champions
-                On And Off The Field
+                Effort Today.
+                <strong>
+                  Achievement Tomorrow.
+                </strong>
               </h2>
 
               <p>
-                Sports at AB Public School go beyond
-                competition. They build character,
-                confidence and a healthier future
-                for every student.
+                Our students have brought pride to the school
+                through their outstanding performances at
+                inter-school, district and state-level competitions.
               </p>
 
-              <button
-                onClick={() => navigate("/contact")}
-              >
-                Join Our Sports Programme
-                <FaArrowRight />
-              </button>
-            </div>
 
-            <div className="absport-benefits">
-              <div className="absport-benefit">
-                <div>
-                  <FaDumbbell />
-                </div>
-                <span>Better</span>
-                <strong>Fitness</strong>
-              </div>
+              <div className="abpsSportXAchievementStats">
 
-              <div className="absport-benefit">
-                <div>
-                  <FaUsers />
-                </div>
-                <span>Stronger</span>
-                <strong>Teamwork</strong>
-              </div>
-
-              <div className="absport-benefit">
-                <div>
-                  <FaBrain />
-                </div>
-                <span>Improved</span>
-                <strong>Focus</strong>
-              </div>
-
-              <div className="absport-benefit">
                 <div>
                   <FaTrophy />
+
+                  <strong>
+                    50+
+                  </strong>
+
+                  <span>
+                    Awards Won
+                  </span>
                 </div>
-                <span>Lifelong</span>
-                <strong>Skills</strong>
+
+
+                <div>
+                  <FaUsers />
+
+                  <strong>
+                    200+
+                  </strong>
+
+                  <span>
+                    Students Participated
+                  </span>
+                </div>
+
+
+                <div>
+                  <FaMedal />
+
+                  <strong>
+                    10+
+                  </strong>
+
+                  <span>
+                    Inter-School Events
+                  </span>
+                </div>
+
               </div>
+
             </div>
 
-            <div className="absport-quote">
-              <span>“</span>
+
+            {/* IMAGE */}
+
+            <div className="abpsSportXAchievementVisual">
+
+              <div className="abpsSportXAchievementRing"></div>
+
+              <div className="abpsSportXAchievementImage">
+
+                <img
+                  src={achievementImg}
+                  alt="AB Public School sports achievement"
+                />
+
+              </div>
+
+
+              <div className="abpsSportXChampionText">
+                Champions
+                <span>Are Built</span>
+                Here
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          GALLERY
+      ===================================================== */}
+
+      <section
+        className="abpsSportXGallery"
+        id="abpsSportXGallery"
+      >
+
+        <div className="abpsSportXContainer">
+
+          <header className="abpsSportXGalleryHead">
+
+            <div>
+
+              <div className="abpsSportXSectionLabel abpsSportXLeftLabel">
+                <span></span>
+                SPORTS GALLERY
+              </div>
+
+              <h2>
+                Moments Of Energy.
+                <strong>
+                  Spirit. Success.
+                </strong>
+              </h2>
 
               <p>
-                Sports do not build character.
-                They reveal it.
+                A glimpse into the energy, teamwork and excitement
+                that define sports at our school.
               </p>
 
-              <small>— Heywood Broun</small>
             </div>
-          </div>
-        </section>
-      </main>
 
-      <Footer />
-    </>
+
+            <button
+              onClick={() => navigate("/gallery")}
+            >
+              View Full Gallery
+              <FaArrowRight />
+            </button>
+
+          </header>
+
+
+          <div className="abpsSportXGalleryGrid">
+
+            {galleryItems.map((item) => (
+
+              <article
+                className="abpsSportXGalleryCard"
+                key={item.id}
+              >
+
+                <img
+                  src={item.image}
+                  alt={item.title}
+                />
+
+                <div>
+                  <strong>
+                    {item.title}
+                  </strong>
+                </div>
+
+              </article>
+
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          FINAL CTA
+      ===================================================== */}
+
+      <section className="abpsSportXFinal">
+
+        <img
+          src={teamCtaImg}
+          alt="AB Public School sports team"
+        />
+
+        <div className="abpsSportXFinalOverlay"></div>
+
+        <div className="abpsSportXFinalCurve"></div>
+
+
+        <div className="abpsSportXContainer">
+
+          <div className="abpsSportXFinalContent">
+
+            <div className="abpsSportXDarkLabel">
+              <span></span>
+              JOIN OUR SPORTS COMMUNITY
+            </div>
+
+            <h2>
+              Be A Part Of A
+              <strong>
+                Healthier, Happier
+              </strong>
+              And Stronger Tomorrow.
+            </h2>
+
+            <p>
+              At AB Public School, we believe in the power of sports
+              to shape confident, disciplined and well-rounded
+              individuals.
+            </p>
+
+
+            <div className="abpsSportXFinalButtons">
+
+              <button
+                className="abpsSportXGoldBtn"
+                onClick={() => navigate("/contact")}
+              >
+                Get In Touch
+                <FaArrowRight />
+              </button>
+
+
+              <button
+                className="abpsSportXFinalOutline"
+                onClick={() => navigate("/apply")}
+              >
+                Apply Now
+                <FaGraduationCap />
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 };
 

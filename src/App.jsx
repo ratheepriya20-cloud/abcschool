@@ -1,111 +1,541 @@
-import { Routes, Route } from "react-router-dom";
+import React, {
+  useState,
+} from "react";
+
+import {
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
+import "./App.css";
+
+import Navbar from "./components/Navbar";
+import ScrollTop from "./components/ScrollTop";
+import Footer from "./components/Footer";
+import AdmissionPopup from "./components/AdmissionPopup";
+import InquiryPopup from "./components/InquiryPopup";
+import ProtectedRoute from "./components/ProtectedRoute";
+import ParentLogin from "./pages/parent/ParentLogin";
+import ParentDashboard from "./pages/parent/ParentDashboard";
+import ParentSignup from "./pages/parent/ParentSignup";
 import Home from "./pages/Home";
-import GalleryPage from "./pages/GalleryPage";
-import NoticePage from "./pages/NoticePage";
-import AboutSchool from "./pages/AboutSchool";
-import VisionMission from "./pages/VisionMission";
-import OurLeadership from "./pages/OurLeadership";
-import WhyChooseUs from "./pages/WhyChooseUs";
+import Admission from "./pages/Admission";
+import Academics from "./pages/Academics";
+import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
-import Facilities from "./pages/Facilities";
-import Activities from "./pages/Activities";
+import About from "./pages/About";
+import ApplyForm from "./pages/ApplyForm";
+import CampusLife from "./pages/CampusLife";
 import Sports from "./pages/Sports";
-import Cultural from "./pages/Cultural";
+import Gallery from "./pages/Gallery";
+import Facilities from "./pages/Facilities";
+import CulturalActivities from "./pages/CulturalActivities";
 import Competitions from "./pages/Competitions";
 import EducationalTrips from "./pages/EducationalTrips";
-import SportsDetail from "./pages/SportsDetail";
-import ApplyForm from "./pages/ApplyForm";
-import Eligibility from "./pages/Eligibility";
-import FeeStructure from "./pages/FeeStructure";
-import PrePrimary from "./pages/PrePrimary";
-import Academics from "./pages/Academics";
-import Curriculum from "./pages/Curriculum";
-import Examination from "./pages/Examination";
-import SeniorSecondary from "./pages/SeniorSecondary";
-import Middle from "./pages/Middle";
-import Primary from "./pages/Primary";
-import ImportantDates from "./pages/ImportantDates";
-import Prospectus from "./pages/Prospectus";
-import Achievements from "./pages/Achievements";
+import NewsNotices from "./pages/NewsNotices";
+import ClientDashboard from "./pages/client/ClientDashboard";
+import AdminLogin from "./pages/admin/AdminLogin";
+import SuperAdminDashboard from "./pages/admin/super-admin/SuperAdminDashboard";
+import SubAdminDashboard from "./pages/admin/sub-admin/SubAdminDashboard";
+import TeacherLogin from "./pages/teacher/TeacherLogin";
+import TeacherDashboard from "./pages/teacher/TeacherDashboard";
+import StudentSignup from "./pages/student/StudentSignup";
+import StudentLogin from "./pages/student/StudentLogin";
+import StudentDashboard from "./pages/student/StudentDashboard";
+import ParentProtectedRoute from "./components/ParentProtectedRoute";
+import StudentProtectedRoute from "./components/StudentProtectedRoute";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Teachers from "./pages/Teachers";
-import Events from "./pages/Events";
-import ScrollToTop from "./components/ScrollTop";
-import InquiryPopup from "./components/InquiryPopup";
-import Results from "./pages/Results";
-import AdmissionOverview from "./pages/AdmissionOverview";
-import ParentLogin from "./pages/ParentLogin";
-import ParentDashboard from "./pages/ParentDashboard/ParentDashboard";
-import SignIn from "./pages/SignIn";
-import SignUp from "./pages/SignUp";
-import Faculty from "./pages/Faculty";
-import Careers from "./pages/Careers";
-import News from "./pages/News";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import AdminLogin from "./pages/admin/AdminLogin";
+
+function AppLayout() {
+
+  const location =
+    useLocation();
 
 
-function App() {
+
+  const [
+    showInquiryPopup,
+    setShowInquiryPopup,
+  ] = useState(false);
+
+
+  // =======================================================
+  // CURRENT PATH
+  // =======================================================
+
+  const currentPath =
+    location.pathname;
+
+
+  // =======================================================
+  // PORTAL AREA CHECK
+  // =======================================================
+
+  const isAdminArea =
+    currentPath.startsWith(
+      "/admin"
+    );
+
+  const isParentArea =
+    currentPath.startsWith(
+      "/parent"
+    );
+
+  const isTeacherArea =
+    currentPath.startsWith(
+      "/teacher"
+    );
+
+  const isStudentArea =
+    currentPath.startsWith(
+      "/student"
+    );
+
+  const isClientArea =
+    currentPath.startsWith(
+      "/client"
+    );
+
+
+  // Admin login bhi portal area
+  // maana jayega taaki Navbar/Footer
+  // login page par na aaye.
+
+  const isAdminLoginPage =
+    currentPath === "/login";
+
+
+  const isPortalArea =
+    isAdminArea ||
+    isParentArea ||
+    isTeacherArea ||
+    isStudentArea ||
+    isClientArea ||
+    isAdminLoginPage;
+
+
+  // =======================================================
+  // HOME CHECK
+  // =======================================================
+
+  const isHomePage =
+    currentPath === "/";
+
+
+  // =======================================================
+  // OPEN INQUIRY
+  // =======================================================
+
+  const openInquiryPopup =
+    () => {
+
+      setShowInquiryPopup(
+        true
+      );
+
+    };
+
+
+  // =======================================================
+  // CLOSE INQUIRY
+  // =======================================================
+
+  const closeInquiryPopup =
+    () => {
+
+      setShowInquiryPopup(
+        false
+      );
+
+    };
+
+
+  // =======================================================
+  // RENDER
+  // =======================================================
+
   return (
     <>
-    <ScrollToTop />
-      
-    <Routes>
-        
-      
-      <Route path="/" element={ <>
-      <Home />
-      <InquiryPopup />
-      </> }/>
-      <Route path="/admin-login" element={<AdminLogin />}/>
-      <Route path="/faculty" element={<Faculty />} />
-      <Route path="/news" element={<News />} />
-      <Route path="/careers" element={<Careers />} />
-      <Route path="/parent-login" element={<ParentLogin/>} />
-      <Route path="/parent-dashboard" element={<ParentDashboard/>} />
-      <Route path="/events" element={<Events />} />
-      <Route path="/teachers" element={<Teachers />} />
-      <Route path="/privacy" element={<PrivacyPolicy />} />
-      <Route path="/terms" element={<TermsConditions />} />
-      <Route path="/achievements" element={<Achievements />} />
-      <Route path="/admission" element={<AdmissionOverview />} />
-      <Route path="/about" element={<AboutSchool />} />
-      <Route path="/facilities" element={<Facilities />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/notices" element={<NoticePage />} />
-      <Route path="/vision-mission" element={<VisionMission />} />
-      <Route path="/leadership" element={<OurLeadership />} />
-      <Route path="/why-us" element={<WhyChooseUs />} />
-      <Route path="/activities" element={<Activities />} />
-      <Route path="/sports" element={<Sports />} />
-      <Route path="/cultural" element={<Cultural />} />
-      <Route path="/competitions" element={<Competitions />} />
-      <Route path="/trips" element={<EducationalTrips />} />
-      <Route path="/sports/:id" element={<SportsDetail />}/>
-      <Route path="/apply" element={<ApplyForm />}/>
-      <Route path="/admission/eligibility" element={<Eligibility />}/>
-      <Route path="/admission/fees" element={<FeeStructure />}/>
-      <Route path="/academics" element={<Academics />}/>
-      <Route path="/academics/pre-primary" element={<PrePrimary />}/>
-      <Route path="/academics/primary" element={<Primary />}/>
-      <Route path="/academics/middle" element={<Middle />}/>
-      <Route path="/academics/senior-secondary" element={<SeniorSecondary />}/>
-      <Route path="/academics/curriculum" element={<Curriculum />}/>
-      <Route path="/academics/examination" element={<Examination />}/>
-      <Route path="/admission/dates" element={<ImportantDates />}/>
-      <Route path="/admission/prospectus" element={<Prospectus />}/>
-      <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/results" element={<Results />} />
-      <Route path="/admin" element={<AdminDashboard />} />
-   
+
+      <ScrollTop />
 
 
-    </Routes>
+      {/* =================================================
+          PUBLIC NAVBAR
+      ================================================= */}
+
+      {!isPortalArea && (
+        <Navbar />
+      )}
+
+
+      {/* =================================================
+          HOME ADMISSION POPUP
+      ================================================= */}
+
+      {!isPortalArea &&
+        isHomePage && (
+
+          <AdmissionPopup
+            onInquiryClick={
+              openInquiryPopup
+            }
+          />
+
+        )}
+
+
+      {/* =================================================
+          INQUIRY POPUP
+      ================================================= */}
+
+      {!isPortalArea &&
+        showInquiryPopup && (
+
+          <InquiryPopup
+            onClose={
+              closeInquiryPopup
+            }
+          />
+
+        )}
+
+
+      {/* =================================================
+          ROUTES
+      ================================================= */}
+
+      <Routes>
+
+
+        {/* =================================================
+            PUBLIC WEBSITE
+        ================================================= */}
+
+
+        {/* HOME */}
+
+        <Route
+          path="/"
+          element={
+            <Home />
+          }
+        />
+
+
+        {/* ABOUT */}
+
+        <Route
+          path="/about"
+          element={
+            <About />
+          }
+        />
+
+
+        {/* ADMISSION */}
+
+        <Route
+          path="/admission"
+          element={
+            <Admission />
+          }
+        />
+
+
+        {/* ACADEMICS */}
+
+        <Route
+          path="/academics"
+          element={
+            <Academics />
+          }
+        />
+
+        <Route
+          path="/privacy-policy"
+          element={
+            <PrivacyPolicy />
+          }
+        />
+
+        {/* FACULTY */}
+
+        <Route
+          path="/faculty"
+          element={
+            <Faculty />
+          }
+        />
+
+
+        {/* APPLY */}
+
+        <Route
+          path="/apply"
+          element={
+            <ApplyForm />
+          }
+        />
+
+
+        {/* CONTACT */}
+
+        <Route
+          path="/contact"
+          element={
+            <Contact />
+          }
+        />
+
+
+        {/* CAMPUS LIFE */}
+
+        <Route
+          path="/campus-life"
+          element={
+            <CampusLife />
+          }
+        />
+
+
+        {/* SPORTS */}
+
+        <Route
+          path="/sports"
+          element={
+            <Sports />
+          }
+        />
+
+
+        {/* CULTURAL ACTIVITIES */}
+
+        <Route
+          path="/cultural-activities"
+          element={
+            <CulturalActivities />
+          }
+        />
+
+
+        {/* COMPETITIONS */}
+
+        <Route
+          path="/competitions"
+          element={
+            <Competitions />
+          }
+        />
+
+
+        {/* EDUCATIONAL TRIPS */}
+
+        <Route
+          path="/educational-trips"
+          element={
+            <EducationalTrips />
+          }
+        />
+ <Route
+          path="/terms-conditions"
+          element={
+            <TermsConditions />
+          }
+        />
+
+
+        {/* NEWS & NOTICES */}
+
+        <Route
+          path="/news-notices"
+          element={
+            <NewsNotices />
+          }
+        />
+
+
+        {/* GALLERY */}
+
+        <Route
+          path="/gallery"
+          element={
+            <Gallery />
+          }
+        />
+
+
+        {/* FACILITIES */}
+
+        <Route
+          path="/facilities"
+          element={
+            <Facilities />
+          }
+        />
+
+{/* =========================
+    STUDENT PORTAL
+========================= */}
+
+<Route
+  path="/student/signup"
+  element={<StudentSignup />}
+/>
+
+<Route
+  path="/student/login"
+  element={<StudentLogin />}
+/>
+
+<Route
+  path="/student/dashboard"
+  element={
+    <StudentProtectedRoute>
+      <StudentDashboard />
+    </StudentProtectedRoute>
+  }
+/>
+
+        <Route
+          path="/login"
+          element={
+            <AdminLogin />
+          }
+        />
+
+ {/* =========================
+    PARENT PORTAL
+========================= */}
+
+<Route
+  path="/parent/signup"
+  element={<ParentSignup />}
+/>
+
+<Route
+  path="/parent/login"
+  element={<ParentLogin />}
+/>
+
+<Route path="/parent/dashboard" element={
+    <ParentProtectedRoute>
+      <ParentDashboard />
+    </ParentProtectedRoute> } />
+
+
+       {/* ===============================
+    SUPER ADMIN
+================================ */}
+
+<Route
+  path="/admin/super"
+  element={
+    <ProtectedRoute
+      allowedRoles={[
+        "super-admin",
+      ]}
+    >
+      <SuperAdminDashboard />
+    </ProtectedRoute>
+  }
+/>
+
+
+{/* ===============================
+    SUB ADMIN
+================================ */}
+
+<Route
+  path="/admin/sub"
+  element={
+    <ProtectedRoute
+      allowedRoles={[
+        "sub-admin",
+      ]}
+    >
+      <SubAdminDashboard />
+    </ProtectedRoute>
+  }
+/>
+
+        {/* =================================================
+            TEACHER LOGIN
+        ================================================= */}
+
+        <Route
+          path="/teacher/login"
+          element={
+            <TeacherLogin />
+          }
+        />
+
+
+        {/* =================================================
+            TEACHER DASHBOARD
+
+            LOGIN REQUIRED
+        ================================================= */}
+
+        <Route
+          path="/teacher/dashboard"
+          element={
+
+            <ProtectedRoute
+              allowedRoles={[
+                "teacher",
+              ]}
+            >
+
+              <TeacherDashboard />
+
+            </ProtectedRoute>
+
+          }
+        />
+
+
+        {/* =================================================
+            CLIENT
+        ================================================= */}
+
+        <Route
+          path="/client/dashboard"
+          element={
+            <ClientDashboard />
+          }
+        />
+
+
+      </Routes>
+
+
+      {/* =================================================
+          PUBLIC FOOTER
+      ================================================= */}
+
+      {!isPortalArea && (
+        <Footer />
+      )}
+
     </>
   );
 }
+
+
+// =========================================================
+// APP
+// =========================================================
+
+function App() {
+
+  return (
+    <AppLayout />
+  );
+
+}
+
 
 export default App;
