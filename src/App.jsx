@@ -1,4 +1,6 @@
 import React, {
+  lazy,
+  Suspense,
   useState,
 } from "react";
 
@@ -10,50 +12,222 @@ import {
 
 import "./App.css";
 
+/* =========================================================
+   COMMON COMPONENTS
+========================================================= */
+
 import Navbar from "./components/Navbar";
 import ScrollTop from "./components/ScrollTop";
 import Footer from "./components/Footer";
+
 import AdmissionPopup from "./components/AdmissionPopup";
 import InquiryPopup from "./components/InquiryPopup";
+
 import ProtectedRoute from "./components/ProtectedRoute";
-import ParentLogin from "./pages/parent/ParentLogin";
-import ParentDashboard from "./pages/parent/ParentDashboard";
-import ParentSignup from "./pages/parent/ParentSignup";
-import Home from "./pages/Home";
-import Admission from "./pages/Admission";
-import Academics from "./pages/Academics";
-import Faculty from "./pages/Faculty";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
-import ApplyForm from "./pages/ApplyForm";
-import CampusLife from "./pages/CampusLife";
-import Sports from "./pages/Sports";
-import Gallery from "./pages/Gallery";
-import Facilities from "./pages/Facilities";
-import CulturalActivities from "./pages/CulturalActivities";
-import Competitions from "./pages/Competitions";
-import EducationalTrips from "./pages/EducationalTrips";
-import NewsNotices from "./pages/NewsNotices";
-import ClientDashboard from "./pages/client/ClientDashboard";
-import AdminLogin from "./pages/admin/AdminLogin";
-import SuperAdminDashboard from "./pages/admin/super-admin/SuperAdminDashboard";
-import SubAdminDashboard from "./pages/admin/sub-admin/SubAdminDashboard";
-import TeacherLogin from "./pages/teacher/TeacherLogin";
-import TeacherDashboard from "./pages/teacher/TeacherDashboard";
-import StudentSignup from "./pages/student/StudentSignup";
-import StudentLogin from "./pages/student/StudentLogin";
-import StudentDashboard from "./pages/student/StudentDashboard";
 import ParentProtectedRoute from "./components/ParentProtectedRoute";
 import StudentProtectedRoute from "./components/StudentProtectedRoute";
-import TermsConditions from "./pages/TermsConditions";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
+
+
+/* =========================================================
+   PUBLIC PAGES - LAZY LOADING
+========================================================= */
+
+const Home = lazy(() =>
+  import("./pages/Home")
+);
+
+const Admission = lazy(() =>
+  import("./pages/Admission")
+);
+
+const Academics = lazy(() =>
+  import("./pages/Academics")
+);
+
+const Faculty = lazy(() =>
+  import("./pages/Faculty")
+);
+
+const Contact = lazy(() =>
+  import("./pages/Contact")
+);
+
+const About = lazy(() =>
+  import("./pages/About")
+);
+
+const ApplyForm = lazy(() =>
+  import("./pages/ApplyForm")
+);
+
+const CampusLife = lazy(() =>
+  import("./pages/CampusLife")
+);
+
+const Sports = lazy(() =>
+  import("./pages/Sports")
+);
+
+const Gallery = lazy(() =>
+  import("./pages/Gallery")
+);
+
+const Facilities = lazy(() =>
+  import("./pages/Facilities")
+);
+
+const CulturalActivities = lazy(() =>
+  import("./pages/CulturalActivities")
+);
+
+const Competitions = lazy(() =>
+  import("./pages/Competitions")
+);
+
+const EducationalTrips = lazy(() =>
+  import("./pages/EducationalTrips")
+);
+
+const NewsNotices = lazy(() =>
+  import("./pages/NewsNotices")
+);
+
+const TermsConditions = lazy(() =>
+  import("./pages/TermsConditions")
+);
+
+const PrivacyPolicy = lazy(() =>
+  import("./pages/PrivacyPolicy")
+);
+
+
+/* =========================================================
+   ADMIN - LAZY LOADING
+========================================================= */
+
+const AdminLogin = lazy(() =>
+  import("./pages/admin/AdminLogin")
+);
+
+const SuperAdminDashboard = lazy(() =>
+  import(
+    "./pages/admin/super-admin/SuperAdminDashboard"
+  )
+);
+
+const SubAdminDashboard = lazy(() =>
+  import(
+    "./pages/admin/sub-admin/SubAdminDashboard"
+  )
+);
+
+
+/* =========================================================
+   PARENT - LAZY LOADING
+========================================================= */
+
+const ParentLogin = lazy(() =>
+  import("./pages/parent/ParentLogin")
+);
+
+const ParentSignup = lazy(() =>
+  import("./pages/parent/ParentSignup")
+);
+
+const ParentDashboard = lazy(() =>
+  import("./pages/parent/ParentDashboard")
+);
+
+
+/* =========================================================
+   STUDENT - LAZY LOADING
+========================================================= */
+
+const StudentSignup = lazy(() =>
+  import("./pages/student/StudentSignup")
+);
+
+const StudentLogin = lazy(() =>
+  import("./pages/student/StudentLogin")
+);
+
+const StudentDashboard = lazy(() =>
+  import("./pages/student/StudentDashboard")
+);
+
+
+/* =========================================================
+   TEACHER - LAZY LOADING
+========================================================= */
+
+const TeacherLogin = lazy(() =>
+  import("./pages/teacher/TeacherLogin")
+);
+
+const TeacherDashboard = lazy(() =>
+  import("./pages/teacher/TeacherDashboard")
+);
+
+
+/* =========================================================
+   CLIENT - LAZY LOADING
+========================================================= */
+
+const ClientDashboard = lazy(() =>
+  import("./pages/client/ClientDashboard")
+);
+
+
+/* =========================================================
+   PAGE LOADER
+========================================================= */
+
+const PageLoader = () => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        minHeight: "65vh",
+
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+
+        gap: "14px",
+
+        background: "#ffffff",
+        color: "#071a35",
+      }}
+    >
+      <div
+        className="app-loading-spinner"
+      />
+
+      <p
+        style={{
+          margin: 0,
+          fontSize: "17px",
+          fontWeight: "700",
+        }}
+      >
+        Loading...
+      </p>
+    </div>
+  );
+};
+
+
+/* =========================================================
+   APP LAYOUT
+========================================================= */
 
 function AppLayout() {
+  const location = useLocation();
 
-  const location =
-    useLocation();
-
-
+  /* =======================================================
+     INQUIRY POPUP
+  ======================================================= */
 
   const [
     showInquiryPopup,
@@ -61,17 +235,17 @@ function AppLayout() {
   ] = useState(false);
 
 
-  // =======================================================
-  // CURRENT PATH
-  // =======================================================
+  /* =======================================================
+     CURRENT PATH
+  ======================================================= */
 
   const currentPath =
     location.pathname;
 
 
-  // =======================================================
-  // PORTAL AREA CHECK
-  // =======================================================
+  /* =======================================================
+     PORTAL AREA CHECK
+  ======================================================= */
 
   const isAdminArea =
     currentPath.startsWith(
@@ -99,9 +273,8 @@ function AppLayout() {
     );
 
 
-  // Admin login bhi portal area
-  // maana jayega taaki Navbar/Footer
-  // login page par na aaye.
+  /* Admin login par website
+     Navbar/Footer nahi chahiye */
 
   const isAdminLoginPage =
     currentPath === "/login";
@@ -116,405 +289,435 @@ function AppLayout() {
     isAdminLoginPage;
 
 
-  // =======================================================
-  // HOME CHECK
-  // =======================================================
+  /* =======================================================
+     HOME PAGE CHECK
+  ======================================================= */
 
   const isHomePage =
     currentPath === "/";
 
 
-  // =======================================================
-  // OPEN INQUIRY
-  // =======================================================
+  /* =======================================================
+     OPEN INQUIRY POPUP
+  ======================================================= */
 
-  const openInquiryPopup =
-    () => {
-
-      setShowInquiryPopup(
-        true
-      );
-
-    };
+  const openInquiryPopup = () => {
+    setShowInquiryPopup(true);
+  };
 
 
-  // =======================================================
-  // CLOSE INQUIRY
-  // =======================================================
+  /* =======================================================
+     CLOSE INQUIRY POPUP
+  ======================================================= */
 
-  const closeInquiryPopup =
-    () => {
-
-      setShowInquiryPopup(
-        false
-      );
-
-    };
+  const closeInquiryPopup = () => {
+    setShowInquiryPopup(false);
+  };
 
 
-  // =======================================================
-  // RENDER
-  // =======================================================
+  /* =======================================================
+     RENDER
+  ======================================================= */
 
   return (
     <>
-
       <ScrollTop />
 
 
-      {/* =================================================
+      {/* =====================================================
           PUBLIC NAVBAR
-      ================================================= */}
+      ===================================================== */}
 
       {!isPortalArea && (
         <Navbar />
       )}
 
 
-      {/* =================================================
+      {/* =====================================================
           HOME ADMISSION POPUP
-      ================================================= */}
+      ===================================================== */}
 
       {!isPortalArea &&
         isHomePage && (
-
           <AdmissionPopup
             onInquiryClick={
               openInquiryPopup
             }
           />
-
         )}
 
 
-      {/* =================================================
+      {/* =====================================================
           INQUIRY POPUP
-      ================================================= */}
+      ===================================================== */}
 
       {!isPortalArea &&
         showInquiryPopup && (
-
           <InquiryPopup
             onClose={
               closeInquiryPopup
             }
           />
-
         )}
 
 
-      {/* =================================================
-          ROUTES
-      ================================================= */}
+      {/* =====================================================
+          LAZY ROUTES
+      ===================================================== */}
 
-      <Routes>
+      <Suspense
+        fallback={
+          <PageLoader />
+        }
+      >
+        <Routes>
 
+          {/* =================================================
+              PUBLIC WEBSITE
+          ================================================= */}
 
-        {/* =================================================
-            PUBLIC WEBSITE
-        ================================================= */}
 
+          {/* HOME */}
 
-        {/* HOME */}
+          <Route
+            path="/"
+            element={
+              <Home />
+            }
+          />
 
-        <Route
-          path="/"
-          element={
-            <Home />
-          }
-        />
 
+          {/* ABOUT */}
 
-        {/* ABOUT */}
+          <Route
+            path="/about"
+            element={
+              <About />
+            }
+          />
 
-        <Route
-          path="/about"
-          element={
-            <About />
-          }
-        />
 
+          {/* ADMISSION */}
 
-        {/* ADMISSION */}
+          <Route
+            path="/admission"
+            element={
+              <Admission />
+            }
+          />
 
-        <Route
-          path="/admission"
-          element={
-            <Admission />
-          }
-        />
 
+          {/* ACADEMICS */}
 
-        {/* ACADEMICS */}
+          <Route
+            path="/academics"
+            element={
+              <Academics />
+            }
+          />
 
-        <Route
-          path="/academics"
-          element={
-            <Academics />
-          }
-        />
 
-        <Route
-          path="/privacy-policy"
-          element={
-            <PrivacyPolicy />
-          }
-        />
+          {/* PRIVACY POLICY */}
 
-        {/* FACULTY */}
+          <Route
+            path="/privacy-policy"
+            element={
+              <PrivacyPolicy />
+            }
+          />
 
-        <Route
-          path="/faculty"
-          element={
-            <Faculty />
-          }
-        />
 
+          {/* FACULTY */}
 
-        {/* APPLY */}
+          <Route
+            path="/faculty"
+            element={
+              <Faculty />
+            }
+          />
 
-        <Route
-          path="/apply"
-          element={
-            <ApplyForm />
-          }
-        />
 
+          {/* APPLY */}
 
-        {/* CONTACT */}
+          <Route
+            path="/apply"
+            element={
+              <ApplyForm />
+            }
+          />
 
-        <Route
-          path="/contact"
-          element={
-            <Contact />
-          }
-        />
 
+          {/* CONTACT */}
 
-        {/* CAMPUS LIFE */}
+          <Route
+            path="/contact"
+            element={
+              <Contact />
+            }
+          />
 
-        <Route
-          path="/campus-life"
-          element={
-            <CampusLife />
-          }
-        />
 
+          {/* CAMPUS LIFE */}
 
-        {/* SPORTS */}
+          <Route
+            path="/campus-life"
+            element={
+              <CampusLife />
+            }
+          />
 
-        <Route
-          path="/sports"
-          element={
-            <Sports />
-          }
-        />
-
-
-        {/* CULTURAL ACTIVITIES */}
-
-        <Route
-          path="/cultural-activities"
-          element={
-            <CulturalActivities />
-          }
-        />
-
-
-        {/* COMPETITIONS */}
-
-        <Route
-          path="/competitions"
-          element={
-            <Competitions />
-          }
-        />
-
-
-        {/* EDUCATIONAL TRIPS */}
-
-        <Route
-          path="/educational-trips"
-          element={
-            <EducationalTrips />
-          }
-        />
- <Route
-          path="/terms-conditions"
-          element={
-            <TermsConditions />
-          }
-        />
-
-
-        {/* NEWS & NOTICES */}
-
-        <Route
-          path="/news-notices"
-          element={
-            <NewsNotices />
-          }
-        />
-
-
-        {/* GALLERY */}
-
-        <Route
-          path="/gallery"
-          element={
-            <Gallery />
-          }
-        />
-
-
-        {/* FACILITIES */}
-
-        <Route
-          path="/facilities"
-          element={
-            <Facilities />
-          }
-        />
-
-{/* =========================
-    STUDENT PORTAL
-========================= */}
-
-<Route
-  path="/student/signup"
-  element={<StudentSignup />}
-/>
-
-<Route
-  path="/student/login"
-  element={<StudentLogin />}
-/>
-
-<Route
-  path="/student/dashboard"
-  element={
-    <StudentProtectedRoute>
-      <StudentDashboard />
-    </StudentProtectedRoute>
-  }
-/>
-
-        <Route
-          path="/login"
-          element={
-            <AdminLogin />
-          }
-        />
-
- {/* =========================
-    PARENT PORTAL
-========================= */}
-
-<Route
-  path="/parent/signup"
-  element={<ParentSignup />}
-/>
-
-<Route
-  path="/parent/login"
-  element={<ParentLogin />}
-/>
-
-<Route path="/parent/dashboard" element={
-    <ParentProtectedRoute>
-      <ParentDashboard />
-    </ParentProtectedRoute> } />
-
-
-       {/* ===============================
-    SUPER ADMIN
-================================ */}
-
-<Route
-  path="/admin/super"
-  element={
-    <ProtectedRoute
-      allowedRoles={[
-        "super-admin",
-      ]}
-    >
-      <SuperAdminDashboard />
-    </ProtectedRoute>
-  }
-/>
-
-
-{/* ===============================
-    SUB ADMIN
-================================ */}
-
-<Route
-  path="/admin/sub"
-  element={
-    <ProtectedRoute
-      allowedRoles={[
-        "sub-admin",
-      ]}
-    >
-      <SubAdminDashboard />
-    </ProtectedRoute>
-  }
-/>
-
-        {/* =================================================
-            TEACHER LOGIN
-        ================================================= */}
-
-        <Route
-          path="/teacher/login"
-          element={
-            <TeacherLogin />
-          }
-        />
-
-
-        {/* =================================================
-            TEACHER DASHBOARD
-
-            LOGIN REQUIRED
-        ================================================= */}
-
-        <Route
-          path="/teacher/dashboard"
-          element={
-
-            <ProtectedRoute
-              allowedRoles={[
-                "teacher",
-              ]}
-            >
-
-              <TeacherDashboard />
-
-            </ProtectedRoute>
-
-          }
-        />
-
-
-        {/* =================================================
-            CLIENT
-        ================================================= */}
-
-        <Route
-          path="/client/dashboard"
-          element={
-            <ClientDashboard />
-          }
-        />
-
-
-      </Routes>
-
-
-      {/* =================================================
+
+          {/* SPORTS */}
+
+          <Route
+            path="/sports"
+            element={
+              <Sports />
+            }
+          />
+
+
+          {/* CULTURAL ACTIVITIES */}
+
+          <Route
+            path="/cultural-activities"
+            element={
+              <CulturalActivities />
+            }
+          />
+
+
+          {/* COMPETITIONS */}
+
+          <Route
+            path="/competitions"
+            element={
+              <Competitions />
+            }
+          />
+
+
+          {/* EDUCATIONAL TRIPS */}
+
+          <Route
+            path="/educational-trips"
+            element={
+              <EducationalTrips />
+            }
+          />
+
+
+          {/* TERMS CONDITIONS */}
+
+          <Route
+            path="/terms-conditions"
+            element={
+              <TermsConditions />
+            }
+          />
+
+
+          {/* NEWS & NOTICES */}
+
+          <Route
+            path="/news-notices"
+            element={
+              <NewsNotices />
+            }
+          />
+
+
+          {/* GALLERY */}
+
+          <Route
+            path="/gallery"
+            element={
+              <Gallery />
+            }
+          />
+
+
+          {/* FACILITIES */}
+
+          <Route
+            path="/facilities"
+            element={
+              <Facilities />
+            }
+          />
+
+
+          {/* =================================================
+              STUDENT PORTAL
+          ================================================= */}
+
+
+          {/* STUDENT SIGNUP */}
+
+          <Route
+            path="/student/signup"
+            element={
+              <StudentSignup />
+            }
+          />
+
+
+          {/* STUDENT LOGIN */}
+
+          <Route
+            path="/student/login"
+            element={
+              <StudentLogin />
+            }
+          />
+
+
+          {/* STUDENT DASHBOARD */}
+
+          <Route
+            path="/student/dashboard"
+            element={
+              <StudentProtectedRoute>
+                <StudentDashboard />
+              </StudentProtectedRoute>
+            }
+          />
+
+
+          {/* =================================================
+              ADMIN LOGIN
+          ================================================= */}
+
+          <Route
+            path="/login"
+            element={
+              <AdminLogin />
+            }
+          />
+
+
+          {/* =================================================
+              PARENT PORTAL
+          ================================================= */}
+
+
+          {/* PARENT SIGNUP */}
+
+          <Route
+            path="/parent/signup"
+            element={
+              <ParentSignup />
+            }
+          />
+
+
+          {/* PARENT LOGIN */}
+
+          <Route
+            path="/parent/login"
+            element={
+              <ParentLogin />
+            }
+          />
+
+
+          {/* PARENT DASHBOARD */}
+
+          <Route
+            path="/parent/dashboard"
+            element={
+              <ParentProtectedRoute>
+                <ParentDashboard />
+              </ParentProtectedRoute>
+            }
+          />
+
+
+          {/* =================================================
+              SUPER ADMIN
+          ================================================= */}
+
+          <Route
+            path="/admin/super"
+            element={
+              <ProtectedRoute
+                allowedRoles={[
+                  "super-admin",
+                ]}
+              >
+                <SuperAdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+
+          {/* =================================================
+              SUB ADMIN
+          ================================================= */}
+
+          <Route
+            path="/admin/sub"
+            element={
+              <ProtectedRoute
+                allowedRoles={[
+                  "sub-admin",
+                ]}
+              >
+                <SubAdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+
+          {/* =================================================
+              TEACHER PORTAL
+          ================================================= */}
+
+
+          {/* TEACHER LOGIN */}
+
+          <Route
+            path="/teacher/login"
+            element={
+              <TeacherLogin />
+            }
+          />
+
+
+          {/* TEACHER DASHBOARD */}
+
+          <Route
+            path="/teacher/dashboard"
+            element={
+              <ProtectedRoute
+                allowedRoles={[
+                  "teacher",
+                ]}
+              >
+                <TeacherDashboard />
+              </ProtectedRoute>
+            }
+          />
+
+
+          {/* =================================================
+              CLIENT DASHBOARD
+          ================================================= */}
+
+          <Route
+            path="/client/dashboard"
+            element={
+              <ClientDashboard />
+            }
+          />
+
+        </Routes>
+      </Suspense>
+
+
+      {/* =====================================================
           PUBLIC FOOTER
-      ================================================= */}
+      ===================================================== */}
 
       {!isPortalArea && (
         <Footer />
@@ -525,17 +728,14 @@ function AppLayout() {
 }
 
 
-// =========================================================
-// APP
-// =========================================================
+/* =========================================================
+   MAIN APP
+========================================================= */
 
 function App() {
-
   return (
     <AppLayout />
   );
-
 }
-
 
 export default App;

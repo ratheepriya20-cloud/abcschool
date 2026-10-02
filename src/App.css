@@ -73,3 +73,27 @@ img {
 
   
 }
+
+/* =========================================================
+   APP LAZY LOADER
+========================================================= */
+
+.app-loading-spinner {
+  width: 48px;
+  height: 48px;
+
+  border: 4px solid #dbe8f1;
+  border-top-color: #0877a9;
+
+  border-radius: 50%;
+
+  animation:
+    appLoadingSpin 0.8s
+    linear infinite;
+}
+
+@keyframes appLoadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
