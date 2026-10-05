@@ -46,7 +46,7 @@ import technologyImage from "../assets/technology-learning.jpg";
 
 import footballImage from "../assets/sports-football.jpg";
 import cricketImage from "../assets/sports-cricket.jpg";
-import basketballImage from "../assets/sports-basketball.jpg";
+import basketballImage from "../assets/sports-Basketball.jpg";
 import badmintonImage from "../assets/sports-badminton.jpg";
 import athleticsImage from "../assets/sports-athletics.jpg";
 import indoorImage from "../assets/sports-indoor.jpg";
