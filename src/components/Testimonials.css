@@ -141,7 +141,7 @@
 
 .abpsTestimonialsHeader {
   width: calc(100% - 90px);
-  max-width: 1050px;
+  max-width: 1250px;
 
   margin:
     0 auto 42px;
@@ -212,14 +212,14 @@
 
 
 .abpsTestimonialsHeader p {
-  max-width: 890px;
+  max-width: 1390px;
 
   margin:
     17px auto 0;
 
   color: #657b8d;
 
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
 
   line-height: 1.7;
@@ -1122,7 +1122,7 @@
 ========================================================= */
 
 .abpsTestimonialsHeader h2 span {
-  display: block;
+  display: inline;
   margin-top: 5px;
 }
 

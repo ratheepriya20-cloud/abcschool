@@ -6,37 +6,32 @@ import React, {
 } from "react";
 
 import {
-  FaUserGraduate,
-  FaSearch,
-  FaFilter,
-  FaPlus,
-  FaEye,
+  FaCalendarAlt,
+  FaCheckCircle,
+  FaChevronRight,
   FaEdit,
-  FaTrash,
-  FaUsers,
+  FaEnvelope,
+  FaExclamationTriangle,
+  FaEye,
+  FaFilter,
   FaGraduationCap,
   FaIdCard,
   FaPhoneAlt,
-  FaEnvelope,
-  FaTimes,
   FaSave,
-  FaCheckCircle,
-  FaExclamationTriangle,
-  FaChevronRight,
-  FaVenusMars,
-  FaCalendarAlt,
+  FaSearch,
   FaSyncAlt,
+  FaTimes,
+  FaUserGraduate,
+  FaUsers,
+  FaVenusMars,
 } from "react-icons/fa";
 
 import "./TeacherStudents.css";
 
-import TeacherStudentDetails
-  from "./TeacherStudentDetails";
+import TeacherStudentDetails from "./TeacherStudentDetails";
 
 import {
-  addStudent,
   updateStudent,
-  deleteStudent,
 } from "../../data/studentsData";
 
 import {
@@ -61,7 +56,55 @@ import {
 
 
 /* =========================================================
-   TEACHER STUDENTS
+   EDIT FORM
+
+   IMPORTANT:
+   Teacher sirf ye 3 fields edit kar sakta hai:
+   1. Class
+   2. Section
+   3. Mobile / Phone
+========================================================= */
+
+const EMPTY_EDIT_FORM = {
+  className: "",
+  section: "",
+  mobile: "",
+};
+
+
+/* =========================================================
+   HELPERS
+========================================================= */
+
+const normalize = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase();
+
+
+const normalizeClass = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/^class\s*/i, "")
+    .trim();
+
+
+const safeArray = (value) =>
+  Array.isArray(value)
+    ? value
+    : [];
+
+
+const getStudentId = (student) =>
+  student?.studentId ||
+  student?.id ||
+  student?.admissionNo ||
+  "";
+
+
+/* =========================================================
+   COMPONENT
 ========================================================= */
 
 const TeacherStudents = ({
@@ -75,20 +118,30 @@ const TeacherStudents = ({
      RELATED DATA
   ======================================================= */
 
-  const [parents, setParents] =
-    useState([]);
+  const [
+    parents,
+    setParents,
+  ] = useState([]);
 
-  const [attendance, setAttendance] =
-    useState([]);
+  const [
+    attendance,
+    setAttendance,
+  ] = useState([]);
 
-  const [results, setResults] =
-    useState([]);
+  const [
+    results,
+    setResults,
+  ] = useState([]);
 
-  const [fees, setFees] =
-    useState([]);
+  const [
+    fees,
+    setFees,
+  ] = useState([]);
 
-  const [assignments, setAssignments] =
-    useState([]);
+  const [
+    assignments,
+    setAssignments,
+  ] = useState([]);
 
 
   /* =======================================================
@@ -100,109 +153,92 @@ const TeacherStudents = ({
     setSelectedStudent,
   ] = useState(null);
 
-  const [search, setSearch] =
-    useState("");
+
+  const [
+    search,
+    setSearch,
+  ] = useState("");
+
 
   const [
     classFilter,
     setClassFilter,
   ] = useState("All");
 
-  /*
-    IMPORTANT:
-    Default All rakha hai.
-
-    Screenshot me Inactive select tha,
-    jiski wajah se Active students
-    hide ho sakte the.
-  */
 
   const [
     statusFilter,
     setStatusFilter,
   ] = useState("All");
 
+
+  /* =======================================================
+     EDIT MODAL
+  ======================================================= */
+
   const [
     formOpen,
     setFormOpen,
   ] = useState(false);
+
 
   const [
     editingStudent,
     setEditingStudent,
   ] = useState(null);
 
-  const [
-    deleteStudentData,
-    setDeleteStudentData,
-  ] = useState(null);
-
-  const [popup, setPopup] =
-    useState({
-      show: false,
-      type: "",
-      message: "",
-    });
-
-
-  /* =======================================================
-     FORM
-  ======================================================= */
-
-  const emptyForm = {
-    name: "",
-    admissionNo: "",
-    className: "",
-    section: "",
-    rollNo: "",
-    gender: "",
-    dob: "",
-    bloodGroup: "",
-    mobile: "",
-    email: "",
-    parentId: "",
-    address: "",
-    city: "",
-    state: "",
-    pincode: "",
-    status: "Active",
-  };
 
   const [
     formData,
     setFormData,
-  ] = useState(emptyForm);
+  ] = useState(
+    EMPTY_EDIT_FORM
+  );
 
 
   /* =======================================================
-     HELPERS
+     POPUP
   ======================================================= */
 
-  const safeArray = (value) =>
-    Array.isArray(value)
-      ? value
-      : [];
+  const [
+    popup,
+    setPopup,
+  ] = useState({
+    show: false,
+    type: "",
+    message: "",
+  });
 
 
-  const normalize = (value) =>
-    String(value ?? "")
-      .trim()
-      .toLowerCase();
+  const showPopup = useCallback(
+    (
+      type,
+      message
+    ) => {
+
+      setPopup({
+        show: true,
+        type,
+        message,
+      });
 
 
-  const normalizeClass = (value) =>
-    String(value ?? "")
-      .trim()
-      .toLowerCase()
-      .replace(/^class\s*/i, "")
-      .trim();
+      window.setTimeout(
+        () => {
 
+          setPopup({
+            show: false,
+            type: "",
+            message: "",
+          });
 
-  const getStudentId = (student) =>
-    student?.studentId ||
-    student?.id ||
-    student?.admissionNo ||
-    "";
+        },
+        3000
+      );
+
+    },
+    []
+  );
 
 
   /* =======================================================
@@ -220,11 +256,13 @@ const TeacherStudents = ({
           )
         );
 
+
         setAttendance(
           safeArray(
             getAttendance?.()
           )
         );
+
 
         setResults(
           safeArray(
@@ -232,11 +270,13 @@ const TeacherStudents = ({
           )
         );
 
+
         setFees(
           safeArray(
             getFees?.()
           )
         );
+
 
         setAssignments(
           safeArray(
@@ -265,19 +305,20 @@ const TeacherStudents = ({
     loadRelatedData();
 
 
-    const handleUpdate = () => {
+    const handleDataUpdate = () => {
       loadRelatedData();
     };
 
 
     window.addEventListener(
       "abpsDataUpdated",
-      handleUpdate
+      handleDataUpdate
     );
+
 
     window.addEventListener(
       "storage",
-      handleUpdate
+      handleDataUpdate
     );
 
 
@@ -285,42 +326,187 @@ const TeacherStudents = ({
 
       window.removeEventListener(
         "abpsDataUpdated",
-        handleUpdate
+        handleDataUpdate
       );
+
 
       window.removeEventListener(
         "storage",
-        handleUpdate
+        handleDataUpdate
       );
 
     };
 
-  }, [loadRelatedData]);
+  }, [
+    loadRelatedData,
+  ]);
 
 
   /* =======================================================
      TEACHER STUDENTS
-
-     IMPORTANT:
-     Dashboard already teacher.classes
-     ke according students filter karke
-     "students" prop me bhej raha hai.
-
-     Yahan dobara filter NAHI karenge.
   ======================================================= */
 
   const teacherStudents =
-    useMemo(() => {
-
-      return Array.isArray(students)
-        ? students
-        : [];
-
-    }, [students]);
+    useMemo(
+      () =>
+        Array.isArray(students)
+          ? students
+          : [],
+      [
+        students,
+      ]
+    );
 
 
   /* =======================================================
-     AVAILABLE CLASSES
+     TEACHER ASSIGNED CLASSES
+  ======================================================= */
+
+  const teacherClasses =
+    useMemo(() => {
+
+      if (
+        !Array.isArray(
+          teacher?.classes
+        )
+      ) {
+        return [];
+      }
+
+
+      return teacher.classes
+        .map(
+          (item) => {
+
+            /*
+              Agar classes array me simple string hai:
+
+              ["10", "11"]
+
+              tab bhi handle hoga.
+            */
+
+            if (
+              typeof item ===
+              "string"
+            ) {
+
+              return {
+                className:
+                  item.trim(),
+                section: "",
+              };
+
+            }
+
+
+            /*
+              Agar format hai:
+
+              {
+                className: "10",
+                section: "A"
+              }
+            */
+
+            return {
+
+              className:
+                String(
+                  item?.className ||
+                  item?.class ||
+                  ""
+                ).trim(),
+
+              section:
+                String(
+                  item?.section ||
+                  ""
+                ).trim(),
+
+            };
+
+          }
+        )
+        .filter(
+          (item) =>
+            item.className
+        );
+
+    }, [
+      teacher,
+    ]);
+
+
+  /* =======================================================
+     EDITABLE CLASS OPTIONS
+  ======================================================= */
+
+  const editableClassOptions =
+    useMemo(() => {
+
+      const names =
+        teacherClasses
+          .map(
+            (item) =>
+              item.className
+          )
+          .filter(Boolean);
+
+
+      return [
+        ...new Set(names),
+      ];
+
+    }, [
+      teacherClasses,
+    ]);
+
+
+  /* =======================================================
+     EDITABLE SECTION OPTIONS
+  ======================================================= */
+
+  const editableSectionOptions =
+    useMemo(() => {
+
+      if (
+        !formData.className
+      ) {
+        return [];
+      }
+
+
+      const sections =
+        teacherClasses
+          .filter(
+            (item) =>
+              normalizeClass(
+                item.className
+              ) ===
+              normalizeClass(
+                formData.className
+              )
+          )
+          .map(
+            (item) =>
+              item.section
+          )
+          .filter(Boolean);
+
+
+      return [
+        ...new Set(sections),
+      ];
+
+    }, [
+      teacherClasses,
+      formData.className,
+    ]);
+
+
+  /* =======================================================
+     AVAILABLE CLASSES FOR FILTER
   ======================================================= */
 
   const availableClasses =
@@ -342,7 +528,9 @@ const TeacherStudents = ({
         ...new Set(classes),
       ];
 
-    }, [teacherStudents]);
+    }, [
+      teacherStudents,
+    ]);
 
 
   /* =======================================================
@@ -369,6 +557,7 @@ const TeacherStudents = ({
               student?.section,
               student?.email,
               student?.mobile,
+              student?.phone,
             ].some(
               (value) =>
                 normalize(
@@ -380,7 +569,8 @@ const TeacherStudents = ({
 
 
           const matchesClass =
-            classFilter === "All" ||
+            classFilter ===
+              "All" ||
             normalizeClass(
               student?.className
             ) ===
@@ -390,10 +580,11 @@ const TeacherStudents = ({
 
 
           const matchesStatus =
-            statusFilter === "All" ||
+            statusFilter ===
+              "All" ||
             normalize(
               student?.status ||
-                "Active"
+              "Active"
             ) ===
               normalize(
                 statusFilter
@@ -422,203 +613,128 @@ const TeacherStudents = ({
   ======================================================= */
 
   const activeCount =
-    teacherStudents.filter(
-      (student) =>
-        normalize(
-          student?.status ||
-            "Active"
-        ) === "active"
-    ).length;
+    useMemo(
+      () =>
+        teacherStudents.filter(
+          (student) =>
+            normalize(
+              student?.status ||
+              "Active"
+            ) ===
+            "active"
+        ).length,
+      [
+        teacherStudents,
+      ]
+    );
 
 
   const maleCount =
-    teacherStudents.filter(
-      (student) =>
-        normalize(
-          student?.gender
-        ) === "male"
-    ).length;
+    useMemo(
+      () =>
+        teacherStudents.filter(
+          (student) =>
+            normalize(
+              student?.gender
+            ) ===
+            "male"
+        ).length,
+      [
+        teacherStudents,
+      ]
+    );
 
 
   const femaleCount =
-    teacherStudents.filter(
-      (student) =>
-        normalize(
-          student?.gender
-        ) === "female"
-    ).length;
-
-
-  /* =======================================================
-     POPUP
-  ======================================================= */
-
-  const showPopup = (
-    type,
-    message
-  ) => {
-
-    setPopup({
-      show: true,
-      type,
-      message,
-    });
-
-
-    window.setTimeout(() => {
-
-      setPopup({
-        show: false,
-        type: "",
-        message: "",
-      });
-
-    }, 3000);
-
-  };
-
-
-  /* =======================================================
-     FORM CHANGE
-  ======================================================= */
-
-  const handleChange = (event) => {
-
-    const {
-      name,
-      value,
-    } = event.target;
-
-
-    setFormData(
-      (previous) => ({
-        ...previous,
-        [name]: value,
-      })
+    useMemo(
+      () =>
+        teacherStudents.filter(
+          (student) =>
+            normalize(
+              student?.gender
+            ) ===
+            "female"
+        ).length,
+      [
+        teacherStudents,
+      ]
     );
 
-  };
-
 
   /* =======================================================
-     CHECK TEACHER CLASS ACCESS
+     CHECK CLASS ACCESS
   ======================================================= */
 
-  const canTeacherManageClass = (
-    className,
-    section
-  ) => {
+  const canTeacherManageClass =
+    useCallback(
+      (
+        className,
+        section
+      ) => {
 
-    const teacherClasses =
-      Array.isArray(
-        teacher?.classes
-      )
-        ? teacher.classes
-        : [];
-
-
-    if (
-      teacherClasses.length === 0
-    ) {
-      return false;
-    }
+        if (
+          !teacherClasses.length
+        ) {
+          return false;
+        }
 
 
-    return teacherClasses.some(
-      (assigned) => {
+        return teacherClasses.some(
+          (assigned) => {
 
-        const classMatches =
-          normalizeClass(
-            assigned?.className ||
-              assigned?.class
-          ) ===
-          normalizeClass(
-            className
-          );
-
-
-        const assignedSection =
-          normalize(
-            assigned?.section
-          );
+            const classMatches =
+              normalizeClass(
+                assigned.className
+              ) ===
+              normalizeClass(
+                className
+              );
 
 
-        const sectionMatches =
-          !assignedSection ||
-          assignedSection ===
-            normalize(section);
+            const assignedSection =
+              normalize(
+                assigned.section
+              );
 
 
-        return (
-          classMatches &&
-          sectionMatches
+            const requestedSection =
+              normalize(
+                section
+              );
+
+
+            /*
+              Agar teacher ke assigned record me
+              section blank hai to us class ke
+              kisi bhi section ko allow karenge.
+
+              Agar section assigned hai to same
+              section hi allow hoga.
+            */
+
+            const sectionMatches =
+              !assignedSection ||
+              assignedSection ===
+                requestedSection;
+
+
+            return (
+              classMatches &&
+              sectionMatches
+            );
+
+          }
         );
 
-      }
+      },
+      [
+        teacherClasses,
+      ]
     );
 
-  };
-
 
   /* =======================================================
-     ADD STUDENT
-  ======================================================= */
-
-  const openAddStudent = () => {
-
-    setEditingStudent(null);
-
-
-    const teacherClasses =
-      Array.isArray(
-        teacher?.classes
-      )
-        ? teacher.classes
-        : [];
-
-
-    let defaultClass = "";
-    let defaultSection = "";
-
-
-    if (
-      teacherClasses.length === 1
-    ) {
-
-      defaultClass =
-        teacherClasses[0]
-          ?.className ||
-        teacherClasses[0]
-          ?.class ||
-        "";
-
-
-      defaultSection =
-        teacherClasses[0]
-          ?.section ||
-        "";
-
-    }
-
-
-    setFormData({
-      ...emptyForm,
-
-      className:
-        defaultClass,
-
-      section:
-        defaultSection,
-    });
-
-
-    setFormOpen(true);
-
-  };
-
-
-  /* =======================================================
-     EDIT STUDENT
+     OPEN EDIT
   ======================================================= */
 
   const openEditStudent = (
@@ -630,58 +746,25 @@ const TeacherStudents = ({
     );
 
 
+    /*
+      IMPORTANT:
+      Sirf allowed fields form me load honge.
+    */
+
     setFormData({
 
-      name:
-        student?.name || "",
-
-      admissionNo:
-        student?.admissionNo || "",
-
       className:
-        student?.className || "",
+        student?.className ||
+        "",
 
       section:
-        student?.section || "",
-
-      rollNo:
-        student?.rollNo || "",
-
-      gender:
-        student?.gender || "",
-
-      dob:
-        student?.dob || "",
-
-      bloodGroup:
-        student?.bloodGroup || "",
+        student?.section ||
+        "",
 
       mobile:
         student?.mobile ||
         student?.phone ||
         "",
-
-      email:
-        student?.email || "",
-
-      parentId:
-        student?.parentId || "",
-
-      address:
-        student?.address || "",
-
-      city:
-        student?.city || "",
-
-      state:
-        student?.state || "",
-
-      pincode:
-        student?.pincode || "",
-
-      status:
-        student?.status ||
-        "Active",
 
     });
 
@@ -692,201 +775,343 @@ const TeacherStudents = ({
 
 
   /* =======================================================
-     SAVE STUDENT
+     CLOSE EDIT
+  ======================================================= */
+
+  const closeEditStudent = () => {
+
+    setFormOpen(false);
+
+    setEditingStudent(
+      null
+    );
+
+    setFormData(
+      EMPTY_EDIT_FORM
+    );
+
+  };
+
+
+  /* =======================================================
+     FORM CHANGE
+  ======================================================= */
+
+  const handleChange = (
+    event
+  ) => {
+
+    const {
+      name,
+      value,
+    } = event.target;
+
+
+    setFormData(
+      (previous) => {
+
+        /*
+          Agar class change hoti hai
+          to section reset / auto select hoga.
+        */
+
+        if (
+          name ===
+          "className"
+        ) {
+
+          const matchingSections =
+            teacherClasses
+              .filter(
+                (item) =>
+                  normalizeClass(
+                    item.className
+                  ) ===
+                  normalizeClass(
+                    value
+                  )
+              )
+              .map(
+                (item) =>
+                  item.section
+              )
+              .filter(Boolean);
+
+
+          return {
+
+            ...previous,
+
+            className:
+              value,
+
+            section:
+              matchingSections.length ===
+              1
+                ? matchingSections[0]
+                : matchingSections.includes(
+                    previous.section
+                  )
+                ? previous.section
+                : "",
+
+          };
+
+        }
+
+
+        return {
+
+          ...previous,
+
+          [name]:
+            value,
+
+        };
+
+      }
+    );
+
+  };
+
+
+  /* =======================================================
+     SECURE UPDATE
+  ======================================================= */
+
+  const saveAllowedStudentChanges =
+    useCallback(
+      (
+        student,
+        changes
+      ) => {
+
+        const className =
+          String(
+            changes?.className ??
+            ""
+          ).trim();
+
+
+        const section =
+          String(
+            changes?.section ??
+            ""
+          ).trim();
+
+
+        const mobile =
+          String(
+            changes?.mobile ??
+            ""
+          ).trim();
+
+
+        if (
+          !className
+        ) {
+
+          return {
+
+            ok: false,
+
+            message:
+              "Class is required.",
+
+          };
+
+        }
+
+
+        /*
+          Teacher sirf apni assigned
+          class / section me student
+          ko manage kar sakta hai.
+        */
+
+        if (
+          !canTeacherManageClass(
+            className,
+            section
+          )
+        ) {
+
+          return {
+
+            ok: false,
+
+            message:
+              "You can only assign students to your assigned class and section.",
+
+          };
+
+        }
+
+
+        const id =
+          getStudentId(
+            student
+          );
+
+
+        if (
+          !id
+        ) {
+
+          return {
+
+            ok: false,
+
+            message:
+              "Student ID not found.",
+
+          };
+
+        }
+
+
+        /*
+          ===================================================
+          MOST IMPORTANT SECURITY PART
+
+          Teacher se sirf ye 3 fields
+          database/storage ko jayengi.
+
+          Even agar frontend/devtools se
+          name/email/status bhejne ki try ho,
+          wo yahan ignore ho jayega.
+          ===================================================
+        */
+
+        const allowedChanges = {
+
+          className,
+
+          section,
+
+          mobile,
+
+        };
+
+
+        try {
+
+          updateStudent(
+            id,
+            allowedChanges
+          );
+
+
+          /*
+            Details page open ho to
+            selected student bhi update karo.
+          */
+
+          if (
+            selectedStudent &&
+            getStudentId(
+              selectedStudent
+            ) === id
+          ) {
+
+            setSelectedStudent(
+              (previous) => ({
+
+                ...previous,
+
+                ...allowedChanges,
+
+              })
+            );
+
+          }
+
+
+          return {
+
+            ok: true,
+
+            changes:
+              allowedChanges,
+
+          };
+
+        } catch (error) {
+
+          console.error(
+            "Student update error:",
+            error
+          );
+
+
+          return {
+
+            ok: false,
+
+            message:
+              "Unable to update student.",
+
+          };
+
+        }
+
+      },
+      [
+        canTeacherManageClass,
+        selectedStudent,
+      ]
+    );
+
+
+  /* =======================================================
+     SAVE FROM MAIN PAGE
   ======================================================= */
 
   const handleSaveStudent = () => {
 
     if (
-      !formData.name.trim()
+      !editingStudent
     ) {
-
-      showPopup(
-        "error",
-        "Student name is required."
-      );
-
       return;
     }
+
+
+    const result =
+      saveAllowedStudentChanges(
+        editingStudent,
+        formData
+      );
 
 
     if (
-      !formData.admissionNo.trim()
+      !result.ok
     ) {
 
       showPopup(
         "error",
-        "Admission number is required."
+        result.message
       );
 
       return;
-    }
-
-
-    if (
-      !formData.className.trim()
-    ) {
-
-      showPopup(
-        "error",
-        "Class is required."
-      );
-
-      return;
-    }
-
-
-    if (
-      !canTeacherManageClass(
-        formData.className,
-        formData.section
-      )
-    ) {
-
-      showPopup(
-        "error",
-        "You can only manage students from your assigned class and section."
-      );
-
-      return;
-    }
-
-
-    try {
-
-      if (editingStudent) {
-
-        updateStudent(
-          getStudentId(
-            editingStudent
-          ),
-          {
-            ...editingStudent,
-            ...formData,
-          }
-        );
-
-
-        showPopup(
-          "success",
-          "Student updated successfully."
-        );
-
-      } else {
-
-        addStudent({
-          ...formData,
-        });
-
-
-        showPopup(
-          "success",
-          "Student added successfully."
-        );
-
-      }
-
-
-      setFormOpen(false);
-
-      setEditingStudent(null);
-
-      setFormData(
-        emptyForm
-      );
-
-
-      loadRelatedData();
-
-    } catch (error) {
-
-      console.error(
-        "Student save error:",
-        error
-      );
-
-
-      showPopup(
-        "error",
-        "Unable to save student."
-      );
 
     }
+
+
+    showPopup(
+      "success",
+      "Student updated successfully."
+    );
+
+
+    closeEditStudent();
+
+    loadRelatedData();
 
   };
 
 
   /* =======================================================
-     DELETE STUDENT
-  ======================================================= */
-
-  const confirmDelete = () => {
-
-    if (
-      !deleteStudentData
-    ) {
-      return;
-    }
-
-
-    try {
-
-      deleteStudent(
-        getStudentId(
-          deleteStudentData
-        )
-      );
-
-
-      if (
-        getStudentId(
-          selectedStudent
-        ) ===
-        getStudentId(
-          deleteStudentData
-        )
-      ) {
-
-        setSelectedStudent(
-          null
-        );
-
-      }
-
-
-      setDeleteStudentData(
-        null
-      );
-
-
-      showPopup(
-        "success",
-        "Student deleted successfully."
-      );
-
-
-      loadRelatedData();
-
-    } catch (error) {
-
-      console.error(
-        "Student delete error:",
-        error
-      );
-
-
-      showPopup(
-        "error",
-        "Unable to delete student."
-      );
-
-    }
-
-  };
-
-
-  /* =======================================================
-     SELECTED STUDENT RELATED DATA
+     SELECTED STUDENT DATA
   ======================================================= */
 
   const selectedStudentId =
@@ -894,6 +1119,10 @@ const TeacherStudents = ({
       selectedStudent
     );
 
+
+  /* =======================================================
+     PARENT
+  ======================================================= */
 
   const selectedParent =
     useMemo(() => {
@@ -905,48 +1134,43 @@ const TeacherStudents = ({
       }
 
 
-      /*
-        First:
-        student.parentId -> parent.id
-      */
-
       const byParentId =
         parents.find(
           (parent) =>
             String(
               parent?.id ||
-                parent?.parentId ||
-                ""
+              parent?.parentId ||
+              ""
             ) ===
             String(
               selectedStudent?.parentId ||
-                ""
+              ""
             )
         );
 
 
-      if (byParentId) {
+      if (
+        byParentId
+      ) {
         return byParentId;
       }
 
 
-      /*
-        Fallback:
-        parent.studentId
-      */
-
       return (
+
         parents.find(
           (parent) =>
             String(
               parent?.studentId ||
-                ""
+              ""
             ) ===
             String(
-              selectedStudentId
+              selectedStudentId ||
+              ""
             )
         ) ||
         null
+
       );
 
     }, [
@@ -956,66 +1180,85 @@ const TeacherStudents = ({
     ]);
 
 
-  const studentAttendance =
-    useMemo(() => {
+  /* =======================================================
+     ATTENDANCE
+  ======================================================= */
 
-      return attendance.filter(
-        (item) =>
-          String(
-            item?.studentId ||
+  const studentAttendance =
+    useMemo(
+      () =>
+        attendance.filter(
+          (item) =>
+            String(
+              item?.studentId ||
               item?.id ||
               ""
-          ) ===
-          String(
-            selectedStudentId
-          )
-      );
+            ) ===
+            String(
+              selectedStudentId ||
+              ""
+            )
+        ),
+      [
+        attendance,
+        selectedStudentId,
+      ]
+    );
 
-    }, [
-      attendance,
-      selectedStudentId,
-    ]);
 
+  /* =======================================================
+     RESULTS
+  ======================================================= */
 
   const studentResults =
-    useMemo(() => {
-
-      return results.filter(
-        (item) =>
-          String(
-            item?.studentId ||
+    useMemo(
+      () =>
+        results.filter(
+          (item) =>
+            String(
+              item?.studentId ||
               ""
-          ) ===
-          String(
-            selectedStudentId
-          )
-      );
+            ) ===
+            String(
+              selectedStudentId ||
+              ""
+            )
+        ),
+      [
+        results,
+        selectedStudentId,
+      ]
+    );
 
-    }, [
-      results,
-      selectedStudentId,
-    ]);
 
+  /* =======================================================
+     FEES
+  ======================================================= */
 
   const studentFees =
-    useMemo(() => {
-
-      return fees.filter(
-        (item) =>
-          String(
-            item?.studentId ||
+    useMemo(
+      () =>
+        fees.filter(
+          (item) =>
+            String(
+              item?.studentId ||
               ""
-          ) ===
-          String(
-            selectedStudentId
-          )
-      );
+            ) ===
+            String(
+              selectedStudentId ||
+              ""
+            )
+        ),
+      [
+        fees,
+        selectedStudentId,
+      ]
+    );
 
-    }, [
-      fees,
-      selectedStudentId,
-    ]);
 
+  /* =======================================================
+     ASSIGNMENTS
+  ======================================================= */
 
   const studentAssignments =
     useMemo(() => {
@@ -1031,7 +1274,7 @@ const TeacherStudents = ({
         (item) => {
 
           /*
-            Student specific
+            Student specific assignment
           */
 
           if (
@@ -1043,7 +1286,8 @@ const TeacherStudents = ({
                 item.studentId
               ) ===
               String(
-                selectedStudentId
+                selectedStudentId ||
+                ""
               )
             );
 
@@ -1051,7 +1295,7 @@ const TeacherStudents = ({
 
 
           /*
-            Class specific
+            Class specific assignment
           */
 
           const classMatches =
@@ -1090,10 +1334,12 @@ const TeacherStudents = ({
 
 
   /* =======================================================
-     STUDENT DETAILS PAGE
+     DETAILS PAGE
   ======================================================= */
 
-  if (selectedStudent) {
+  if (
+    selectedStudent
+  ) {
 
     return (
 
@@ -1123,43 +1369,49 @@ const TeacherStudents = ({
           studentAssignments
         }
 
+
         onBack={() =>
           setSelectedStudent(
             null
           )
         }
 
+
+        /*
+          Details page se bhi sirf
+          allowed fields save hongi.
+        */
+
         onUpdate={(
-          id,
+          _id,
           changes
         ) => {
 
-          updateStudent(
-            id,
-            changes
-          );
+          const result =
+            saveAllowedStudentChanges(
+              selectedStudent,
+              changes
+            );
 
 
-          setSelectedStudent(
-            (previous) => ({
-              ...previous,
-              ...changes,
-            })
-          );
+          if (
+            result.ok
+          ) {
+
+            showPopup(
+              "success",
+              "Student updated successfully."
+            );
+
+            loadRelatedData();
+
+          }
 
 
-          showPopup(
-            "success",
-            "Student updated successfully."
-          );
+          return result;
 
         }}
 
-        onDelete={() =>
-          setDeleteStudentData(
-            selectedStudent
-          )
-        }
 
         onMessageStudent={() => {
 
@@ -1175,6 +1427,7 @@ const TeacherStudents = ({
 
         }}
 
+
         onMessageParent={() => {
 
           if (
@@ -1186,6 +1439,42 @@ const TeacherStudents = ({
             );
 
           }
+
+        }}
+
+
+        classOptions={
+          editableClassOptions
+        }
+
+
+        sectionOptionsForClass={(
+          className
+        ) => {
+
+          const sections =
+            teacherClasses
+              .filter(
+                (item) =>
+                  normalizeClass(
+                    item.className
+                  ) ===
+                  normalizeClass(
+                    className
+                  )
+              )
+              .map(
+                (item) =>
+                  item.section
+              )
+              .filter(Boolean);
+
+
+          return [
+            ...new Set(
+              sections
+            ),
+          ];
 
         }}
 
@@ -1248,30 +1537,38 @@ const TeacherStudents = ({
             STUDENT MANAGEMENT
           </span>
 
+
           <h1>
             My Students
           </h1>
 
+
           <p>
-            View and manage students
-            assigned to your class and
-            section.
+            View assigned students.
+            Teachers can edit only class,
+            section and phone number.
           </p>
+
 
           <div className="tstudents-teacher-tags">
 
             <span>
+
               <FaGraduationCap />
 
               {teacher?.name ||
                 "Teacher"}
+
             </span>
 
+
             <span>
+
               <FaIdCard />
 
               {teacher?.employeeId ||
                 "Employee"}
+
             </span>
 
           </div>
@@ -1282,31 +1579,20 @@ const TeacherStudents = ({
         <div className="tstudents-hero-actions">
 
           <button
+
             type="button"
+
             className="tstudents-refresh-btn"
+
             onClick={
               loadRelatedData
             }
+
           >
 
             <FaSyncAlt />
 
             Refresh
-
-          </button>
-
-
-          <button
-            type="button"
-            className="tstudents-add-btn"
-            onClick={
-              openAddStudent
-            }
-          >
-
-            <FaPlus />
-
-            Add Student
 
           </button>
 
@@ -1321,37 +1607,66 @@ const TeacherStudents = ({
 
       <section className="tstudents-stats">
 
+
         <StudentStat
-          icon={FaUsers}
+
+          icon={
+            FaUsers
+          }
+
           value={
             teacherStudents.length
           }
+
           label="My Students"
+
         />
 
+
         <StudentStat
-          icon={FaCheckCircle}
+
+          icon={
+            FaCheckCircle
+          }
+
           value={
             activeCount
           }
+
           label="Active Students"
+
         />
 
+
         <StudentStat
-          icon={FaUserGraduate}
+
+          icon={
+            FaUserGraduate
+          }
+
           value={
             maleCount
           }
+
           label="Male Students"
+
         />
 
+
         <StudentStat
-          icon={FaGraduationCap}
+
+          icon={
+            FaGraduationCap
+          }
+
           value={
             femaleCount
           }
+
           label="Female Students"
+
         />
+
 
       </section>
 
@@ -1367,15 +1682,25 @@ const TeacherStudents = ({
 
           <FaSearch />
 
+
           <input
+
             type="text"
-            value={search}
-            onChange={(event) =>
+
+            value={
+              search
+            }
+
+            onChange={(
+              event
+            ) =>
               setSearch(
                 event.target.value
               )
             }
+
             placeholder="Search by name, admission no., roll no..."
+
           />
 
         </div>
@@ -1385,23 +1710,32 @@ const TeacherStudents = ({
 
           <FaFilter />
 
+
           <select
+
             value={
               classFilter
             }
-            onChange={(event) =>
+
+            onChange={(
+              event
+            ) =>
               setClassFilter(
                 event.target.value
               )
             }
+
           >
 
             <option value="All">
               All Classes
             </option>
 
+
             {availableClasses.map(
-              (className) => (
+              (
+                className
+              ) => (
 
                 <option
                   key={
@@ -1428,15 +1762,21 @@ const TeacherStudents = ({
 
           <FaCheckCircle />
 
+
           <select
+
             value={
               statusFilter
             }
-            onChange={(event) =>
+
+            onChange={(
+              event
+            ) =>
               setStatusFilter(
                 event.target.value
               )
             }
+
           >
 
             <option value="All">
@@ -1455,6 +1795,7 @@ const TeacherStudents = ({
 
         </div>
 
+
       </section>
 
 
@@ -1470,23 +1811,26 @@ const TeacherStudents = ({
             ASSIGNED STUDENTS
           </span>
 
+
           <h2>
             Student Records
           </h2>
 
+
           <p>
 
-            {
-              filteredStudents.length
-            }{" "}
+            {filteredStudents.length}
+
+            {" "}
 
             student
-            {
-              filteredStudents.length !==
-              1
-                ? "s"
-                : ""
-            }{" "}
+
+            {filteredStudents.length !==
+            1
+              ? "s"
+              : ""}
+
+            {" "}
 
             found
 
@@ -1507,7 +1851,9 @@ const TeacherStudents = ({
         <section className="tstudents-grid">
 
           {filteredStudents.map(
-            (student) => (
+            (
+              student
+            ) => (
 
               <StudentCard
 
@@ -1533,12 +1879,6 @@ const TeacherStudents = ({
                   )
                 }
 
-                onDelete={() =>
-                  setDeleteStudentData(
-                    student
-                  )
-                }
-
               />
 
             )
@@ -1550,17 +1890,23 @@ const TeacherStudents = ({
 
         <div className="tstudents-empty">
 
+
           <div className="tstudents-empty-icon">
+
             <FaUserGraduate />
+
           </div>
+
 
           <span>
             STUDENT RECORDS
           </span>
 
+
           <h2>
             No Students Found
           </h2>
+
 
           <p>
 
@@ -1571,64 +1917,70 @@ const TeacherStudents = ({
 
           </p>
 
+
         </div>
 
       )}
 
 
       {/* ===================================================
-          ADD / EDIT MODAL
+          EDIT MODAL
+
+          ONLY:
+          CLASS
+          SECTION
+          PHONE
       =================================================== */}
 
-      {formOpen && (
+      {formOpen &&
+        editingStudent && (
 
         <div className="tstudents-modal-overlay">
+
 
           <div className="tstudents-modal">
 
 
             <div className="tstudents-modal-head">
 
+
               <div>
 
                 <span>
-
-                  {editingStudent
-                    ? "UPDATE STUDENT"
-                    : "NEW STUDENT"}
-
+                  UPDATE STUDENT
                 </span>
 
+
                 <h2>
-
-                  {editingStudent
-                    ? "Edit Student Details"
-                    : "Add Student"}
-
+                  Edit Class, Section & Phone
                 </h2>
 
+
                 <p>
-                  Manage student
-                  information for your
-                  assigned class.
+                  Only these three fields
+                  can be changed by a
+                  teacher.
                 </p>
 
               </div>
 
 
               <button
+
                 type="button"
+
                 className="tstudents-modal-close"
-                onClick={() =>
-                  setFormOpen(
-                    false
-                  )
+
+                onClick={
+                  closeEditStudent
                 }
+
               >
 
                 <FaTimes />
 
               </button>
+
 
             </div>
 
@@ -1636,266 +1988,146 @@ const TeacherStudents = ({
             <div className="tstudents-form">
 
 
-              <FormInput
-                label="Student Name"
-                name="name"
-                value={
-                  formData.name
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Enter student name"
-                required
-              />
+              {/* CLASS */}
 
+              <FormSelect
 
-              <FormInput
-                label="Admission No."
-                name="admissionNo"
-                value={
-                  formData.admissionNo
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="e.g. ABPS-2026-0142"
-                required
-              />
-
-
-              <FormInput
                 label="Class"
+
                 name="className"
+
                 value={
                   formData.className
                 }
+
                 onChange={
                   handleChange
                 }
-                placeholder="e.g. Class 10"
+
+                options={
+                  editableClassOptions
+                }
+
                 required
+
               />
 
 
-              <FormInput
-                label="Section"
-                name="section"
-                value={
-                  formData.section
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="e.g. A"
-              />
+              {/* SECTION */}
 
+              {editableSectionOptions.length >
+              0 ? (
 
-              <FormInput
-                label="Roll Number"
-                name="rollNo"
-                value={
-                  formData.rollNo
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Roll no."
-              />
+                <FormSelect
 
+                  label="Section"
 
-              <FormSelect
-                label="Gender"
-                name="gender"
-                value={
-                  formData.gender
-                }
-                onChange={
-                  handleChange
-                }
-                options={[
-                  "Male",
-                  "Female",
-                  "Other",
-                ]}
-              />
+                  name="section"
 
-
-              <FormInput
-                label="Date of Birth"
-                type="date"
-                name="dob"
-                value={
-                  formData.dob
-                }
-                onChange={
-                  handleChange
-                }
-              />
-
-
-              <FormInput
-                label="Blood Group"
-                name="bloodGroup"
-                value={
-                  formData.bloodGroup
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="e.g. B+"
-              />
-
-
-              <FormInput
-                label="Mobile"
-                name="mobile"
-                value={
-                  formData.mobile
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Mobile number"
-              />
-
-
-              <FormInput
-                label="Email"
-                type="email"
-                name="email"
-                value={
-                  formData.email
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Student email"
-              />
-
-
-              <FormInput
-                label="Parent ID"
-                name="parentId"
-                value={
-                  formData.parentId
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Linked parent ID"
-              />
-
-
-              <FormSelect
-                label="Status"
-                name="status"
-                value={
-                  formData.status
-                }
-                onChange={
-                  handleChange
-                }
-                options={[
-                  "Active",
-                  "Inactive",
-                ]}
-              />
-
-
-              <div className="tstudents-field tstudents-full-field">
-
-                <label>
-                  Address
-                </label>
-
-                <textarea
-                  name="address"
                   value={
-                    formData.address
+                    formData.section
                   }
+
                   onChange={
                     handleChange
                   }
-                  placeholder="Enter residential address"
+
+                  options={
+                    editableSectionOptions
+                  }
+
                 />
 
-              </div>
+              ) : (
 
+                <FormInput
+
+                  label="Section"
+
+                  name="section"
+
+                  value={
+                    formData.section
+                  }
+
+                  onChange={
+                    handleChange
+                  }
+
+                  placeholder="e.g. A"
+
+                />
+
+              )}
+
+
+              {/* PHONE */}
 
               <FormInput
-                label="City"
-                name="city"
+
+                label="Phone Number"
+
+                name="mobile"
+
+                type="tel"
+
                 value={
-                  formData.city
+                  formData.mobile
                 }
+
                 onChange={
                   handleChange
                 }
-                placeholder="City"
+
+                placeholder="Phone number"
+
               />
 
-
-              <FormInput
-                label="State"
-                name="state"
-                value={
-                  formData.state
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="State"
-              />
-
-
-              <FormInput
-                label="Pincode"
-                name="pincode"
-                value={
-                  formData.pincode
-                }
-                onChange={
-                  handleChange
-                }
-                placeholder="Pincode"
-              />
 
             </div>
 
 
             <div className="tstudents-modal-footer">
 
+
               <button
+
                 type="button"
+
                 className="tstudents-cancel"
-                onClick={() =>
-                  setFormOpen(
-                    false
-                  )
+
+                onClick={
+                  closeEditStudent
                 }
+
               >
+
                 Cancel
+
               </button>
 
 
               <button
+
                 type="button"
+
                 className="tstudents-save"
+
                 onClick={
                   handleSaveStudent
                 }
+
               >
 
                 <FaSave />
 
-                {editingStudent
-                  ? "Update Student"
-                  : "Add Student"}
+                Update Student
 
               </button>
 
+
             </div>
+
 
           </div>
 
@@ -1903,105 +2135,6 @@ const TeacherStudents = ({
 
       )}
 
-
-      {/* ===================================================
-          DELETE MODAL
-      =================================================== */}
-
-      {deleteStudentData && (
-
-        <div className="tstudents-modal-overlay">
-
-          <div className="tstudents-delete-modal">
-
-
-            <div className="tstudents-delete-icon">
-              <FaTrash />
-            </div>
-
-
-            <span>
-              DELETE STUDENT
-            </span>
-
-
-            <h2>
-
-              Delete{" "}
-              {
-                deleteStudentData.name
-              }?
-
-            </h2>
-
-
-            <p>
-              This will remove the
-              student from the shared
-              school student records.
-            </p>
-
-
-            <div className="tstudents-delete-info">
-
-              <strong>
-
-                {
-                  deleteStudentData.admissionNo
-                }
-
-              </strong>
-
-              <small>
-
-                {
-                  deleteStudentData.className
-                }
-
-                {deleteStudentData.section
-                  ? ` - ${deleteStudentData.section}`
-                  : ""}
-
-              </small>
-
-            </div>
-
-
-            <div className="tstudents-delete-actions">
-
-              <button
-                type="button"
-                onClick={() =>
-                  setDeleteStudentData(
-                    null
-                  )
-                }
-              >
-                Cancel
-              </button>
-
-
-              <button
-                type="button"
-                className="delete"
-                onClick={
-                  confirmDelete
-                }
-              >
-
-                <FaTrash />
-
-                Delete Student
-
-              </button>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      )}
 
     </div>
 
@@ -2018,7 +2151,6 @@ const StudentCard = ({
   student,
   onView,
   onEdit,
-  onDelete,
 }) => {
 
   const initial =
@@ -2030,10 +2162,17 @@ const StudentCard = ({
 
 
   const active =
-    normalizeValue(
+    normalize(
       student?.status ||
-        "Active"
-    ) === "active";
+      "Active"
+    ) ===
+    "active";
+
+
+  const mobile =
+    student?.mobile ||
+    student?.phone ||
+    "";
 
 
   return (
@@ -2043,8 +2182,11 @@ const StudentCard = ({
 
       <div className="tstudents-card-top">
 
+
         <div className="tstudents-avatar">
+
           {initial}
+
         </div>
 
 
@@ -2063,19 +2205,27 @@ const StudentCard = ({
 
         </div>
 
+
       </div>
 
 
       <div className="tstudents-card-main">
 
+
         <span className="tstudents-card-label">
+
           STUDENT
+
         </span>
 
+
         <h3>
+
           {student?.name ||
             "Student"}
+
         </h3>
+
 
         <div className="tstudents-card-id">
 
@@ -2085,6 +2235,7 @@ const StudentCard = ({
             "No Admission ID"}
 
         </div>
+
 
       </div>
 
@@ -2129,8 +2280,10 @@ const StudentCard = ({
             </small>
 
             <strong>
+
               {student?.rollNo ||
                 "—"}
+
             </strong>
 
           </span>
@@ -2149,8 +2302,10 @@ const StudentCard = ({
             </small>
 
             <strong>
+
               {student?.gender ||
                 "—"}
+
             </strong>
 
           </span>
@@ -2169,29 +2324,33 @@ const StudentCard = ({
             </small>
 
             <strong>
+
               {student?.dob ||
                 "—"}
+
             </strong>
 
           </span>
 
         </div>
 
+
       </div>
 
 
-      {(student?.mobile ||
+      {(mobile ||
         student?.email) && (
 
         <div className="tstudents-contact">
 
-          {student?.mobile && (
+
+          {mobile && (
 
             <span>
 
               <FaPhoneAlt />
 
-              {student.mobile}
+              {mobile}
 
             </span>
 
@@ -2210,6 +2369,7 @@ const StudentCard = ({
 
           )}
 
+
         </div>
 
       )}
@@ -2217,12 +2377,17 @@ const StudentCard = ({
 
       <div className="tstudents-card-actions">
 
+
         <button
+
           type="button"
+
           className="view"
+
           onClick={
             onView
           }
+
         >
 
           <FaEye />
@@ -2235,12 +2400,17 @@ const StudentCard = ({
 
 
         <button
+
           type="button"
+
           className="edit"
-          title="Edit Student"
+
+          title="Edit Class, Section & Phone"
+
           onClick={
             onEdit
           }
+
         >
 
           <FaEdit />
@@ -2248,20 +2418,8 @@ const StudentCard = ({
         </button>
 
 
-        <button
-          type="button"
-          className="trash"
-          title="Delete Student"
-          onClick={
-            onDelete
-          }
-        >
-
-          <FaTrash />
-
-        </button>
-
       </div>
+
 
     </article>
 
@@ -2271,19 +2429,7 @@ const StudentCard = ({
 
 
 /* =========================================================
-   NORMALIZE HELPER FOR CHILD COMPONENT
-========================================================= */
-
-const normalizeValue = (
-  value
-) =>
-  String(value ?? "")
-    .trim()
-    .toLowerCase();
-
-
-/* =========================================================
-   STUDENT STAT
+   STAT CARD
 ========================================================= */
 
 const StudentStat = ({
@@ -2295,17 +2441,25 @@ const StudentStat = ({
   <div className="tstudents-stat">
 
     <div>
+
       <Icon />
+
     </div>
+
 
     <section>
 
       <strong>
+
         {value}
+
       </strong>
 
+
       <span>
+
         {label}
+
       </span>
 
     </section>
@@ -2316,7 +2470,7 @@ const StudentStat = ({
 
 
 /* =========================================================
-   FORM INPUT
+   INPUT
 ========================================================= */
 
 const FormInput = ({
@@ -2337,6 +2491,7 @@ const FormInput = ({
 
     </label>
 
+
     <input
       {...props}
     />
@@ -2347,31 +2502,44 @@ const FormInput = ({
 
 
 /* =========================================================
-   FORM SELECT
+   SELECT
 ========================================================= */
 
 const FormSelect = ({
   label,
   options = [],
+  required,
   ...props
 }) => (
 
   <div className="tstudents-field">
 
     <label>
+
       {label}
+
+      {required && (
+        <sup>*</sup>
+      )}
+
     </label>
+
 
     <select
       {...props}
     >
 
       <option value="">
+
         Select {label}
+
       </option>
 
+
       {options.map(
-        (option) => (
+        (
+          option
+        ) => (
 
           <option
             key={
@@ -2381,11 +2549,14 @@ const FormSelect = ({
               option
             }
           >
+
             {option}
+
           </option>
 
         )
       )}
+
 
     </select>
 
